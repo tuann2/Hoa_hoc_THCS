@@ -5,43 +5,716 @@
   "title": "Mối quan hệ giữa các hợp chất vô cơ",
   "order": 9,
   "description": "Liên hệ oxit – axit – bazơ – muối, chuỗi phản ứng và nhận biết tổng hợp.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a9-l1",
       "title": "Sơ đồ mối quan hệ oxit – axit – bazơ – muối",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Sơ đồ chuyển hoá giữa bốn loại hợp chất vô cơ và các phản ứng minh hoạ cho từng mũi tên.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a9-l1-c1",
+          "heading": "Sơ đồ chuyển hoá tổng quát",
+          "body": "Hai nhánh chuyển hoá chính:\n- Kim loại -> oxit bazơ -> bazơ -> muối. Ví dụ: Ca -> CaO -> Ca(OH)2 -> CaCO3.\n- Phi kim -> oxit axit -> axit -> muối. Ví dụ: S -> SO2 -> H2SO3 -> Na2SO3.\nMuối là điểm gặp nhau của hai nhánh; từ muối có thể quay lại bazơ, axit hoặc oxit."
+        },
+        {
+          "id": "a9-l1-c2",
+          "heading": "Các phản ứng minh hoạ từng mũi tên",
+          "body": "Oxit bazơ + axit: CuO + 2HCl -> CuCl2 + H2O\nOxit axit + kiềm: CO2 + 2NaOH -> Na2CO3 + H2O\nKiềm + muối: 2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4\nAxit + muối: 2HCl + CaCO3 -> CaCl2 + H2O + CO2\nBazơ không tan -> oxit: Cu(OH)2 -> CuO + H2O (nhiệt phân)"
+        },
+        {
+          "id": "a9-l1-c3",
+          "heading": "Điều kiện của phản ứng trao đổi",
+          "body": "Phản ứng trao đổi trong dung dịch chỉ xảy ra khi sản phẩm có ít nhất một trong ba dấu hiệu:\n- Chất kết tủa (BaSO4, AgCl, CaCO3, Cu(OH)2...).\n- Chất khí (CO2, SO2, H2S...).\n- Nước (phản ứng trung hoà).\nNếu không có dấu hiệu nào, phản ứng không xảy ra (ví dụ NaCl + KOH)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a9-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để chuyển CaO thành Ca(OH)2 cần cho CaO tác dụng với chất nào?",
+          "options": ["H2O", "HCl", "CO2", "NaOH"],
+          "answer": 0,
+          "explanation": "B1. CaO là oxit bazơ tan được trong nước. B2. CaO + H2O -> Ca(OH)2."
+        },
+        {
+          "id": "a9-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để chuyển Cu(OH)2 thành CuO ta dùng cách nào?",
+          "options": [
+            "nhiệt phân",
+            "cho tác dụng với nước",
+            "cho tác dụng với NaOH",
+            "điện phân"
+          ],
+          "answer": 0,
+          "explanation": "B1. Bazơ không tan bị nhiệt phân huỷ thành oxit và nước. B2. Cu(OH)2 -> CuO + H2O."
+        },
+        {
+          "id": "a9-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phản ứng viết đúng.",
+          "options": [
+            "CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4",
+            "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+            "NaCl + KOH -> NaOH + KCl",
+            "CaCO3 + NaOH -> Ca(OH)2 + Na2CO3"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. CuSO4 + NaOH tạo kết tủa Cu(OH)2 nên xảy ra. B2. Na2CO3 + HCl sinh khí CO2 nên xảy ra. B3. NaCl + KOH không có kết tủa/khí/nước nên không xảy ra. B4. CaCO3 là chất không tan, không phản ứng với dung dịch kiềm."
+        },
+        {
+          "id": "a9-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Để chuyển SO3 thành H2SO4 cần cho SO3 tác dụng với chất gì?",
+          "answer": "H2O",
+          "acceptedAnswers": ["nước", "nuoc"],
+          "placeholder": "Nhập tên hoặc công thức",
+          "explanation": "B1. Oxit axit tác dụng với nước tạo axit. B2. SO3 + H2O -> H2SO4."
+        },
+        {
+          "id": "a9-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dãy chuyển hoá nào sau đây viết đúng?",
+          "options": [
+            "S -> SO2 -> H2SO3",
+            "S -> H2SO3 -> SO2",
+            "SO2 -> S -> H2SO3",
+            "H2SO3 -> S -> SO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đốt S trong oxi tạo SO2. B2. SO2 tan trong nước tạo H2SO3. B3. Vậy thứ tự đúng là S -> SO2 -> H2SO3."
+        },
+        {
+          "id": "a9-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trong chuỗi Ca -> CaO -> Ca(OH)2 -> CaCO3, phản ứng cuối cùng cần dùng chất nào?",
+          "options": ["CO2", "HCl", "NaCl", "H2O"],
+          "answer": 0,
+          "explanation": "B1. Ca(OH)2 là kiềm nên tác dụng với oxit axit. B2. Ca(OH)2 + CO2 -> CaCO3 + H2O."
+        },
+        {
+          "id": "a9-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Để chuyển Fe2O3 thành FeCl3 ta cho Fe2O3 tác dụng với",
+          "options": [
+            "dung dịch HCl",
+            "dung dịch NaCl",
+            "khí Cl2",
+            "dung dịch NaOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. Fe2O3 là oxit bazơ nên tác dụng với axit. B2. Fe2O3 + 6HCl -> 2FeCl3 + 3H2O."
+        },
+        {
+          "id": "a9-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Từ CuO có thể điều chế trực tiếp (bằng một phản ứng) những chất nào sau đây?",
+          "options": ["CuCl2", "CuSO4", "Cu", "Cu(OH)2"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. CuO + 2HCl -> CuCl2 + H2O. B2. CuO + H2SO4 -> CuSO4 + H2O. B3. CuO + H2 -> Cu + H2O (khử bằng H2 nung nóng). B4. Cu(OH)2 không điều chế trực tiếp từ CuO vì CuO không tan trong nước; phải qua muối trung gian."
+        },
+        {
+          "id": "a9-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan 0,10 mol Na2O vào nước dư. Số mol NaOH thu được là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Na2O + H2O -> 2NaOH. B2. nNaOH = 2 x 0,10 = 0,20 mol."
+        },
+        {
+          "id": "a9-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Al + H2SO4 -> Al2(SO4)3 + H2.",
+          "left": ["Al", "H2SO4"],
+          "right": ["Al2(SO4)3", "H2"],
+          "answer": [2, 3, 1, 3],
+          "explanation": "B1. Muối Al2(SO4)3 chứa 2Al và 3 gốc SO4 nên cần 2Al và 3H2SO4. B2. Sáu nguyên tử H tạo 3H2. B3. Kiểm tra: hai vế đều có 2Al, 3S, 12O, 6H."
+        },
+        {
+          "id": "a9-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Chất X thoả mãn: X tác dụng với dung dịch HCl sinh khí; X tác dụng với dung dịch Ca(OH)2 tạo kết tủa trắng. X là chất nào?",
+          "options": ["Na2CO3", "NaCl", "NaOH", "Na2SO4"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 (sinh khí). B2. Na2CO3 + Ca(OH)2 -> CaCO3 + 2NaOH (kết tủa trắng). B3. NaCl, NaOH, Na2SO4 không sinh khí với HCl nên loại."
+        },
+        {
+          "id": "a9-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nung hoàn toàn 20 g CaCO3, lấy chất rắn hoà tan vào nước dư được dung dịch X. Dẫn 0,10 mol CO2 vào X. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "10",
+          "acceptedAnswers": ["10 g", "10g"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 20 / 100 = 0,20 mol nên sau nung và hoà tan có 0,20 mol Ca(OH)2. B2. nOH- = 0,40 mol; T = 0,40 / 0,10 = 4 >= 2 nên kiềm dư, toàn bộ CO2 tạo kết tủa. B3. nCaCO3 = nCO2 = 0,10 mol, tức m = 10 g."
+        },
+        {
+          "id": "a9-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Fe2(SO4)3 + NaOH -> Fe(OH)3 + Na2SO4.",
+          "left": ["Fe2(SO4)3", "NaOH"],
+          "right": ["Fe(OH)3", "Na2SO4"],
+          "answer": [1, 6, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe2(SO4)3 chứa 2Fe tạo 2Fe(OH)3, cần 6 nhóm OH tức 6NaOH. B2. 6Na kết hợp 3 gốc SO4 tạo 3Na2SO4. B3. Kiểm tra: hai vế đều có 2Fe, 3S, 6Na, 6H, 18O."
+        }
+      ]
     },
     {
       "id": "a9-l2",
       "title": "Chuỗi phản ứng vô cơ; điều chế nhiều bước",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Cách viết chuỗi phản ứng và lập sơ đồ điều chế một chất qua nhiều bước từ nguyên liệu quen thuộc.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a9-l2-c1",
+          "heading": "Cách làm bài chuỗi phản ứng",
+          "body": "B1. Xác định loại chất của từng mắt xích (oxit, axit, bazơ hay muối).\nB2. Với mỗi mũi tên, chọn phản ứng đặc trưng phù hợp (dựa vào sơ đồ mối quan hệ).\nB3. Viết và cân bằng từng PTHH, ghi rõ điều kiện (nhiệt độ, xúc tác, điện phân) nếu có."
+        },
+        {
+          "id": "a9-l2-c2",
+          "heading": "Ví dụ chuỗi đầy đủ",
+          "body": "Chuỗi: S -> SO2 -> SO3 -> H2SO4 -> Na2SO4 -> BaSO4\n1) S + O2 -> SO2 (đốt cháy)\n2) 2SO2 + O2 -> 2SO3 (xúc tác V2O5, 450 độ C)\n3) SO3 + H2O -> H2SO4\n4) H2SO4 + 2NaOH -> Na2SO4 + 2H2O\n5) Na2SO4 + BaCl2 -> BaSO4 + 2NaCl"
+        },
+        {
+          "id": "a9-l2-c3",
+          "heading": "Điều chế nhiều bước từ nguyên liệu",
+          "body": "Các nguyên liệu quen thuộc: đá vôi CaCO3, muối ăn NaCl, lưu huỳnh S, quặng pirit FeS2, nước và không khí.\nVí dụ: từ NaCl điều chế NaOH bằng điện phân dung dịch bão hoà có màng ngăn; từ đá vôi điều chế vôi tôi qua hai bước nung rồi tôi vôi.\nKhi trình bày phải viết đủ PTHH của từng bước."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a9-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phản ứng SO2 -> SO3 cần điều kiện nào?",
+          "options": [
+            "xúc tác V2O5 và nhiệt độ",
+            "ánh sáng mặt trời",
+            "màng ngăn điện phân",
+            "nước lạnh"
+          ],
+          "answer": 0,
+          "explanation": "B1. 2SO2 + O2 -> 2SO3 xảy ra ở khoảng 450 độ C. B2. Phản ứng cần xúc tác V2O5 mới đạt hiệu suất cao."
+        },
+        {
+          "id": "a9-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong chuỗi S -> SO2 -> SO3 -> H2SO4, có bao nhiêu phản ứng hoá hợp?",
+          "options": ["3", "1", "2", "0"],
+          "answer": 0,
+          "explanation": "B1. S + O2 -> SO2 là hoá hợp. B2. 2SO2 + O2 -> 2SO3 là hoá hợp. B3. SO3 + H2O -> H2SO4 cũng là hoá hợp. Vậy cả 3 phản ứng đều là hoá hợp."
+        },
+        {
+          "id": "a9-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Từ CaCO3 có thể điều chế trực tiếp (một phản ứng) những chất nào?",
+          "options": ["CaO", "CO2", "CaCl2", "Ca(OH)2"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Nung CaCO3 -> CaO + CO2, thu được cả CaO và CO2. B2. CaCO3 + 2HCl -> CaCl2 + H2O + CO2. B3. Ca(OH)2 phải điều chế qua trung gian CaO rồi mới tôi với nước."
+        },
+        {
+          "id": "a9-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nhỏ dung dịch BaCl2 vào dung dịch Na2SO4 thu được kết tủa trắng gì? (ghi công thức)",
+          "answer": "BaSO4",
+          "acceptedAnswers": ["bari sunfat"],
+          "placeholder": "Nhập công thức kết tủa",
+          "explanation": "B1. Na2SO4 + BaCl2 -> BaSO4 + 2NaCl. B2. BaSO4 là kết tủa trắng không tan trong axit."
+        },
+        {
+          "id": "a9-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong công nghiệp, NaOH được điều chế từ NaCl bằng phương pháp nào?",
+          "options": [
+            "điện phân dung dịch bão hoà có màng ngăn",
+            "nung nóng chảy NaCl",
+            "cho NaCl tác dụng với nước",
+            "cho NaCl tác dụng với KOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. 2NaCl + 2H2O -> 2NaOH + H2 + Cl2 (điện phân dung dịch có màng ngăn). B2. NaCl không tác dụng trực tiếp với nước hay KOH."
+        },
+        {
+          "id": "a9-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Để thực hiện chuỗi Fe -> FeCl2 -> Fe(OH)2, hai phản ứng lần lượt dùng các chất nào?",
+          "options": [
+            "dung dịch HCl rồi dung dịch NaOH",
+            "dung dịch NaOH rồi dung dịch HCl",
+            "khí Cl2 rồi nước",
+            "dung dịch NaCl rồi dung dịch KOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. Fe + 2HCl -> FeCl2 + H2. B2. FeCl2 + 2NaOH -> Fe(OH)2 + 2NaCl. B3. Lưu ý Fe + Cl2 tạo FeCl3 (sắt III) chứ không phải FeCl2."
+        },
+        {
+          "id": "a9-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Để điều chế Cu(OH)2 từ CuO cần ít nhất bao nhiêu phản ứng?",
+          "options": ["2", "1", "3", "4"],
+          "answer": 0,
+          "explanation": "B1. CuO không tan trong nước nên không tạo trực tiếp Cu(OH)2. B2. Cần 2 bước: CuO + 2HCl -> CuCl2 + H2O, rồi CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl."
+        },
+        {
+          "id": "a9-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các PTHH viết đúng trong chuỗi biến hoá của canxi.",
+          "options": [
+            "CaO + H2O -> Ca(OH)2",
+            "Ca(OH)2 + CO2 -> CaCO3 + H2O",
+            "CaCO3 -> CaO + CO2",
+            "CaCO3 + H2O -> Ca(OH)2 + CO2"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phản ứng đầu là tôi vôi, tạo đá vôi từ nước vôi trong và nung vôi — đều đúng. B2. CaCO3 không tác dụng với nước ở điều kiện thường nên phản ứng cuối sai."
+        },
+        {
+          "id": "a9-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 0,10 mol S rồi oxi hoá hết SO2 thành SO3, hoà tan vào nước. Số mol H2SO4 thu được là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. S -> SO2 -> SO3 -> H2SO4, mỗi bước tỉ lệ mol 1 : 1 theo S. B2. Bảo toàn nguyên tố S: nH2SO4 = nS = 0,10 mol."
+        },
+        {
+          "id": "a9-l2-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Na2SO4 + BaCl2 -> BaSO4 + NaCl.",
+          "left": ["Na2SO4", "BaCl2"],
+          "right": ["BaSO4", "NaCl"],
+          "answer": [1, 1, 1, 2],
+          "explanation": "B1. Ba và gốc SO4 ghép thành BaSO4 hệ số 1. B2. Còn 2Na và 2Cl tạo 2NaCl."
+        },
+        {
+          "id": "a9-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Từ quặng pirit FeS2, nước và không khí, cần ít nhất bao nhiêu phản ứng để điều chế H2SO4?",
+          "options": ["3", "2", "4", "5"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. 4FeS2 + 11O2 -> 2Fe2O3 + 8SO2. B2. 2SO2 + O2 -> 2SO3 (xúc tác V2O5). B3. SO3 + H2O -> H2SO4. Vậy tối thiểu 3 phản ứng."
+        },
+        {
+          "id": "a9-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Đốt hoàn toàn 12 g FeS2, chuyển toàn bộ SO2 thành SO3 rồi thành H2SO4. Khối lượng H2SO4 lớn nhất thu được là bao nhiêu gam?",
+          "answer": "19,6",
+          "acceptedAnswers": ["19.6"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nFeS2 = 12 / 120 = 0,10 mol. B2. Bảo toàn nguyên tố S: nH2SO4 = 2 x nFeS2 = 0,20 mol. B3. m = 0,20 x 98 = 19,6 g."
+        },
+        {
+          "id": "a9-l2-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CuCl2 + NaOH -> Cu(OH)2 + NaCl.",
+          "left": ["CuCl2", "NaOH"],
+          "right": ["Cu(OH)2", "NaCl"],
+          "answer": [1, 2, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cu(OH)2 chứa 2 nhóm OH nên cần 2NaOH. B2. 2Na kết hợp 2Cl tạo 2NaCl. B3. Kiểm tra: hai vế đều có 1Cu, 2Cl, 2Na, 2O, 2H."
+        }
+      ]
     },
     {
       "id": "a9-l3",
       "title": "Nâng cao: nhận biết – tách – tinh chế chất vô cơ",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Thuốc thử đặc trưng cho từng ion, quy trình trình bày bài nhận biết và kĩ thuật tách, tinh chế.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a9-l3-c1",
+          "heading": "Thuốc thử đặc trưng thường dùng",
+          "body": "- Quỳ tím: axit hoá đỏ, kiềm hoá xanh, muối trung hoà không đổi màu.\n- Dung dịch BaCl2: nhận gốc sunfat (=SO4) qua kết tủa trắng BaSO4.\n- Dung dịch AgNO3: nhận gốc clorua (-Cl) qua kết tủa trắng AgCl.\n- Dung dịch HCl: nhận gốc cacbonat (=CO3) qua sủi bọt khí CO2.\n- Dung dịch kiềm: nhận muối đồng (kết tủa xanh Cu(OH)2), muối sắt(III) (kết tủa nâu đỏ Fe(OH)3)."
+        },
+        {
+          "id": "a9-l3-c2",
+          "heading": "Quy trình trình bày bài nhận biết",
+          "body": "B1. Trích mỗi chất một ít làm mẫu thử, đánh số.\nB2. Chọn thuốc thử cho hiện tượng khác nhau giữa các mẫu.\nB3. Nêu rõ hiện tượng từng mẫu (kết tủa, khí, đổi màu).\nB4. Viết PTHH của các phản ứng đã dùng.\nNếu đề giới hạn thuốc thử, tận dụng các chất đã nhận ra làm thuốc thử tiếp theo."
+        },
+        {
+          "id": "a9-l3-c3",
+          "heading": "Tách và tinh chế",
+          "body": "Nguyên tắc: dùng phản ứng chọn lọc để loại tạp chất hoặc chuyển chất cần tách sang dạng dễ tách (kết tủa, khí), sau đó tái tạo chất ban đầu.\nVí dụ: tinh chế NaCl có lẫn Na2CO3 — thêm HCl dư (Na2CO3 phản ứng hết sinh CO2), cô cạn dung dịch được NaCl khan (HCl dư bay hơi).\nTách bột Cu khỏi hỗn hợp với Fe: hoà tan bằng HCl dư, Fe tan hết, lọc lấy Cu không phản ứng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a9-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để phân biệt dung dịch H2SO4 và dung dịch NaCl ta dùng",
+          "options": [
+            "quỳ tím",
+            "nước cất",
+            "dung dịch NaCl",
+            "phenolphtalein"
+          ],
+          "answer": 0,
+          "explanation": "B1. H2SO4 là axit làm quỳ tím hoá đỏ. B2. NaCl là muối trung hoà, quỳ tím không đổi màu."
+        },
+        {
+          "id": "a9-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Thuốc thử dùng để nhận ra gốc sunfat (=SO4) trong dung dịch là",
+          "options": [
+            "dung dịch BaCl2",
+            "quỳ tím",
+            "dung dịch NaOH",
+            "nước vôi trong"
+          ],
+          "answer": 0,
+          "explanation": "B1. Gốc SO4 kết hợp với Ba2+ tạo kết tủa trắng BaSO4 không tan trong axit. B2. Vì vậy BaCl2 (hoặc Ba(OH)2, Ba(NO3)2) là thuốc thử đặc trưng."
+        },
+        {
+          "id": "a9-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các mô tả hiện tượng đúng khi nhỏ dung dịch NaOH vào từng dung dịch.",
+          "options": [
+            "vào CuSO4: xuất hiện kết tủa xanh",
+            "vào FeCl3: xuất hiện kết tủa nâu đỏ",
+            "vào NaCl: không có hiện tượng",
+            "vào HCl: xuất hiện kết tủa trắng"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. 2NaOH + CuSO4 -> Cu(OH)2 xanh + Na2SO4. B2. 3NaOH + FeCl3 -> Fe(OH)3 nâu đỏ + 3NaCl. B3. NaCl không phản ứng. B4. NaOH + HCl chỉ tạo muối tan và nước, không có kết tủa."
+        },
+        {
+          "id": "a9-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nhỏ dung dịch HCl vào muối cacbonat thấy hiện tượng gì?",
+          "answer": "sủi bọt khí",
+          "acceptedAnswers": [
+            "có khí thoát ra",
+            "khí thoát ra",
+            "sui bot khi",
+            "sủi bọt"
+          ],
+          "placeholder": "Nhập hiện tượng",
+          "explanation": "B1. Muối cacbonat tác dụng với axit sinh khí CO2. B2. Ví dụ: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 (sủi bọt khí không màu)."
+        },
+        {
+          "id": "a9-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để nhận ra dung dịch chứa gốc clorua (-Cl) ta dùng thuốc thử nào?",
+          "options": [
+            "dung dịch AgNO3",
+            "dung dịch BaCl2",
+            "quỳ tím",
+            "dung dịch H2SO4"
+          ],
+          "answer": 0,
+          "explanation": "B1. Ag+ kết hợp Cl- tạo kết tủa trắng AgCl. B2. Ví dụ: NaCl + AgNO3 -> AgCl + NaNO3."
+        },
+        {
+          "id": "a9-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Chỉ dùng một thuốc thử nào để phân biệt hai dung dịch Na2SO4 và NaCl?",
+          "options": [
+            "dung dịch BaCl2",
+            "quỳ tím",
+            "phenolphtalein",
+            "dung dịch NaOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. BaCl2 + Na2SO4 -> BaSO4 kết tủa trắng. B2. BaCl2 không phản ứng với NaCl. B3. Cả hai muối đều trung hoà nên quỳ tím và phenolphtalein không phân biệt được."
+        },
+        {
+          "id": "a9-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Chỉ dùng quỳ tím có thể phân biệt được ba dung dịch nào sau đây?",
+          "options": [
+            "HCl, NaOH, NaCl",
+            "NaCl, KCl, Na2SO4",
+            "NaOH, KOH, Ba(OH)2",
+            "HCl, H2SO4, HNO3"
+          ],
+          "answer": 0,
+          "explanation": "B1. HCl làm quỳ hoá đỏ, NaOH làm quỳ hoá xanh, NaCl không đổi màu — ba hiện tượng khác nhau. B2. Các nhóm còn lại gồm các chất cùng loại nên quỳ tím cho hiện tượng giống nhau, không phân biệt được."
+        },
+        {
+          "id": "a9-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Để tinh chế NaCl có lẫn Na2CO3, ta thực hiện những bước nào?",
+          "options": [
+            "thêm dung dịch HCl dư",
+            "cô cạn dung dịch",
+            "thêm dung dịch NaOH dư",
+            "thêm dung dịch AgNO3 dư"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. HCl dư phản ứng hết Na2CO3: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. B2. Cô cạn: HCl dư bay hơi, thu NaCl khan tinh khiết. B3. NaOH không loại được Na2CO3; AgNO3 làm mất cả NaCl."
+        },
+        {
+          "id": "a9-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nhỏ BaCl2 dư vào dung dịch Na2SO4 thu được 23,3 g kết tủa. Số mol Na2SO4 trong dung dịch là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nBaSO4 = 23,3 / 233 = 0,10 mol. B2. Na2SO4 + BaCl2 -> BaSO4 + 2NaCl tỉ lệ 1 : 1 nên nNa2SO4 = 0,10 mol."
+        },
+        {
+          "id": "a9-l3-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhận biết gốc clorua: NaCl + AgNO3 -> AgCl + NaNO3.",
+          "left": ["NaCl", "AgNO3"],
+          "right": ["AgCl", "NaNO3"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Ag đổi chỗ cho Na theo tỉ lệ 1 : 1. B2. Các hệ số đều bằng 1; kết tủa trắng là AgCl."
+        },
+        {
+          "id": "a9-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Có ba dung dịch mất nhãn: HCl, Na2SO4, NaOH. Thứ tự thuốc thử nào sau đây nhận biết được cả ba?",
+          "options": [
+            "quỳ tím",
+            "chỉ dung dịch BaCl2",
+            "chỉ dung dịch AgNO3",
+            "chỉ nước cất"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Quỳ tím: HCl hoá đỏ, NaOH hoá xanh, Na2SO4 không đổi màu — nhận được cả ba ngay. B2. BaCl2 chỉ nhận ra Na2SO4, không phân biệt HCl với NaOH; AgNO3 và nước cất không đủ phân biệt."
+        },
+        {
+          "id": "a9-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Để tách bột Cu ra khỏi hỗn hợp bột Cu và Fe, ta ngâm hỗn hợp vào dung dịch nào (dư)? (ghi công thức)",
+          "answer": "HCl",
+          "acceptedAnswers": [
+            "hcl dư",
+            "axit clohidric",
+            "h2so4 loãng",
+            "h2so4"
+          ],
+          "placeholder": "Nhập công thức dung dịch",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe đứng trước H nên tan trong HCl dư: Fe + 2HCl -> FeCl2 + H2. B2. Cu đứng sau H, không phản ứng với HCl (hoặc H2SO4 loãng). B3. Lọc lấy chất rắn còn lại là Cu tinh khiết."
+        },
+        {
+          "id": "a9-l3-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhận biết muối sắt(III): FeCl3 + NaOH -> Fe(OH)3 + NaCl.",
+          "left": ["FeCl3", "NaOH"],
+          "right": ["Fe(OH)3", "NaCl"],
+          "answer": [1, 3, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe(OH)3 chứa 3 nhóm OH nên cần 3NaOH. B2. 3Na kết hợp 3Cl tạo 3NaCl. B3. Kết tủa Fe(OH)3 màu nâu đỏ là dấu hiệu của muối sắt(III)."
+        }
+      ]
     },
     {
       "id": "a9-l4",
       "title": "Nâng cao: bài tập tổng hợp 4 loại hợp chất",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Chiến lược giải bài tổng hợp: bảo toàn khối lượng, bảo toàn nguyên tố và đánh giá chất dư.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a9-l4-c1",
+          "heading": "Chiến lược giải bài tổng hợp",
+          "body": "B1. Tóm tắt đề bằng sơ đồ: chất đầu -> phản ứng -> sản phẩm, kèm số liệu.\nB2. Đổi hết dữ kiện về số mol.\nB3. Viết PTHH theo đúng thứ tự phản ứng xảy ra; xác định chất hết, chất dư.\nB4. Tính theo chất hết, kiểm tra lại bằng bảo toàn khối lượng."
+        },
+        {
+          "id": "a9-l4-c2",
+          "heading": "Các định luật bảo toàn",
+          "body": "- Bảo toàn khối lượng: tổng khối lượng chất tham gia = tổng khối lượng sản phẩm.\n- Bảo toàn nguyên tố: số mol mỗi nguyên tố không đổi qua các phản ứng (dùng để tính nhanh chuỗi nhiều bước).\n- Tăng giảm khối lượng: ví dụ oxit + axit, khối lượng muối tăng so với oxit do O bị thay bằng gốc axit."
+        },
+        {
+          "id": "a9-l4-c3",
+          "heading": "Dạng điển hình trong đề HSG",
+          "body": "- Hỗn hợp oxit/muối + axit: lập hệ phương trình theo khối lượng và số mol khí hoặc axit.\n- Muối + kiềm có kết tủa: chú ý kiềm dư có thể hoà tan kết tủa lưỡng tính.\n- Cho từ từ axit vào muối cacbonat: phản ứng xảy ra hai giai đoạn, giai đoạn đầu chưa có khí."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a9-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Theo định luật bảo toàn khối lượng, tổng khối lượng các chất tham gia phản ứng bằng",
+          "options": [
+            "tổng khối lượng các sản phẩm",
+            "khối lượng chất kết tủa",
+            "khối lượng chất khí",
+            "một nửa tổng khối lượng sản phẩm"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong phản ứng hoá học, các nguyên tử được bảo toàn, chỉ sắp xếp lại. B2. Vì vậy tổng khối lượng chất tham gia bằng tổng khối lượng sản phẩm."
+        },
+        {
+          "id": "a9-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi CuO tác dụng với dung dịch H2SO4, khối lượng muối lớn hơn khối lượng oxit vì nguyên tử O của oxit bị thay bằng",
+          "options": ["gốc SO4", "nguyên tử H", "phân tử H2O", "nguyên tử Cu"],
+          "answer": 0,
+          "explanation": "B1. CuO + H2SO4 -> CuSO4 + H2O. B2. Trong muối, O (16 g/mol) của oxit được thay bằng gốc SO4 (96 g/mol) nên mỗi mol tăng 80 g."
+        },
+        {
+          "id": "a9-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phương pháp thường dùng khi giải bài tập tổng hợp vô cơ.",
+          "options": [
+            "bảo toàn khối lượng",
+            "bảo toàn nguyên tố",
+            "tăng giảm khối lượng",
+            "đo cường độ màu dung dịch"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phương pháp đầu là công cụ tính toán chuẩn của Hoá THCS nâng cao. B2. Đo màu không phải phương pháp tính toán định lượng ở THCS."
+        },
+        {
+          "id": "a9-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Cho 0,10 mol MgO tác dụng vừa đủ với dung dịch H2SO4. Số mol MgSO4 thu được là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. MgO + H2SO4 -> MgSO4 + H2O tỉ lệ 1 : 1. B2. nMgSO4 = 0,10 mol."
+        },
+        {
+          "id": "a9-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trộn dung dịch chứa 0,20 mol HCl với dung dịch chứa 0,10 mol NaOH. Dung dịch sau phản ứng có môi trường",
+          "options": ["axit", "bazơ", "trung tính", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. NaOH + HCl -> NaCl + H2O, phản ứng hết 0,10 mol mỗi chất. B2. HCl còn dư 0,10 mol nên dung dịch có môi trường axit."
+        },
+        {
+          "id": "a9-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 0,10 mol MgO bằng dung dịch HCl vừa đủ. Khối lượng muối MgCl2 thu được là",
+          "options": ["9,5 g", "8,0 g", "12,0 g", "4,75 g"],
+          "answer": 0,
+          "explanation": "B1. MgO + 2HCl -> MgCl2 + H2O nên nMgCl2 = 0,10 mol. B2. M(MgCl2) = 24 + 71 = 95 g/mol. B3. m = 0,10 x 95 = 9,5 g."
+        },
+        {
+          "id": "a9-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trộn dung dịch chứa 0,10 mol Ba(OH)2 với dung dịch chứa 0,10 mol H2SO4. Khối lượng kết tủa thu được là",
+          "options": ["23,3 g", "11,65 g", "46,6 g", "0 g"],
+          "answer": 0,
+          "explanation": "B1. Ba(OH)2 + H2SO4 -> BaSO4 + 2H2O, hai chất vừa đủ. B2. nBaSO4 = 0,10 mol. B3. m = 0,10 x 233 = 23,3 g."
+        },
+        {
+          "id": "a9-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Cho từ từ dung dịch HCl vào dung dịch Na2CO3. Chọn các mô tả đúng.",
+          "options": [
+            "giai đoạn đầu tạo NaHCO3, chưa có khí",
+            "khi HCl dư mới có khí thoát ra mạnh",
+            "khí thoát ra là CO2",
+            "khí thoát ra là H2"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Cho từ từ axit: Na2CO3 + HCl -> NaHCO3 + NaCl (chưa có khí). B2. Sau khi hết Na2CO3: NaHCO3 + HCl -> NaCl + H2O + CO2 (sủi bọt). B3. Khí là CO2, không phải H2."
+        },
+        {
+          "id": "a9-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Trộn 0,10 mol NaOH với 0,15 mol HCl. Số mol HCl còn dư sau phản ứng là bao nhiêu?",
+          "answer": "0,05",
+          "acceptedAnswers": ["0.05"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. NaOH + HCl -> NaCl + H2O tỉ lệ 1 : 1, NaOH hết trước. B2. nHCl dư = 0,15 - 0,10 = 0,05 mol."
+        },
+        {
+          "id": "a9-l4-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: MgCO3 + HCl -> MgCl2 + H2O + CO2.",
+          "left": ["MgCO3", "HCl"],
+          "right": ["MgCl2", "H2O", "CO2"],
+          "answer": [1, 2, 1, 1, 1],
+          "explanation": "B1. MgCl2 chứa 2Cl nên cần 2HCl. B2. Hai H kết hợp một O tạo 1H2O, phần CO3 còn lại thoát ra dạng 1CO2."
+        },
+        {
+          "id": "a9-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 20 g hỗn hợp MgO và MgCO3 bằng dung dịch HCl dư, thu được 2,24 lít CO2 (đktc). Phần trăm khối lượng MgO trong hỗn hợp là",
+          "options": ["58%", "42%", "50%", "60%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Chỉ MgCO3 sinh khí: nCO2 = 2,24 / 22,4 = 0,10 mol nên nMgCO3 = 0,10 mol. B2. mMgCO3 = 0,10 x 84 = 8,4 g nên mMgO = 20 - 8,4 = 11,6 g. B3. %MgO = 11,6 / 20 x 100% = 58%."
+        },
+        {
+          "id": "a9-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 0,20 mol NaOH vào dung dịch chứa 0,10 mol CuCl2. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "9,8",
+          "acceptedAnswers": ["9.8"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl; 0,10 mol CuCl2 cần đúng 0,20 mol NaOH — hai chất vừa đủ. B2. nCu(OH)2 = 0,10 mol. B3. m = 0,10 x 98 = 9,8 g (Cu(OH)2 không phải hiđroxit lưỡng tính nên không tan khi kiềm dư)."
+        },
+        {
+          "id": "a9-l4-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: MgCl2 + NaOH -> Mg(OH)2 + NaCl.",
+          "left": ["MgCl2", "NaOH"],
+          "right": ["Mg(OH)2", "NaCl"],
+          "answer": [1, 2, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Mg(OH)2 chứa 2 nhóm OH nên cần 2NaOH. B2. 2Na kết hợp 2Cl tạo 2NaCl. B3. Kiểm tra: hai vế đều có 1Mg, 2Cl, 2Na, 2O, 2H."
+        }
+      ]
     }
   ]
 }
