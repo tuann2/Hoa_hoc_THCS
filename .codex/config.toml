@@ -1,0 +1,5 @@
+# Codex model config — model names deprecate fast.
+# Check `/status` in Codex or developers.openai.com/codex/models before locking.
+# Suggested: gpt-5.4-mini (small fixes) | gpt-5.4 (features) | gpt-5.5 (hard refactors/adversarial review)
+model = "gpt-5.4"
+model_reasoning_effort = "high"
