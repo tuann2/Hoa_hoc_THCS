@@ -1,0 +1,38 @@
+{
+  "id": "b5-tong-hop-huu-co",
+  "part": "organic",
+  "code": "B5",
+  "title": "Chuyên đề tổng hợp Hữu cơ",
+  "order": 5,
+  "description": "Biện luận công thức, chuỗi phản ứng hữu cơ và đề tổng hợp cho HSG/chuyên.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "b5-l1",
+      "title": "Biện luận công thức phân tử hợp chất hữu cơ",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b5-l2",
+      "title": "Chuỗi phản ứng hữu cơ; nhận biết chất hữu cơ",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b5-l3",
+      "title": "Đề tổng hợp hữu cơ theo cấu trúc đề thi chuyên",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

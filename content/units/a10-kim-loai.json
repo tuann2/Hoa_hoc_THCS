@@ -1,0 +1,56 @@
+{
+  "id": "a10-kim-loai",
+  "part": "inorganic",
+  "code": "A10",
+  "title": "Kim loại",
+  "order": 10,
+  "description": "Tính chất chung, dãy hoạt động, nhôm, sắt và các bài toán kim loại với axit hoặc muối.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a10-l1",
+      "title": "Tính chất chung; dãy hoạt động hoá học",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a10-l2",
+      "title": "Nhôm; sắt; hợp kim gang – thép",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a10-l3",
+      "title": "Ăn mòn kim loại và bảo vệ",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a10-l4",
+      "title": "Nâng cao: kim loại + dung dịch muối",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a10-l5",
+      "title": "Nâng cao: hỗn hợp kim loại + axit; chất dư",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

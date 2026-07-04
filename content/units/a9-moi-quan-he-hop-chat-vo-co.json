@@ -1,0 +1,47 @@
+{
+  "id": "a9-moi-quan-he-hop-chat-vo-co",
+  "part": "inorganic",
+  "code": "A9",
+  "title": "Mối quan hệ giữa các hợp chất vô cơ",
+  "order": 9,
+  "description": "Liên hệ oxit – axit – bazơ – muối, chuỗi phản ứng và nhận biết tổng hợp.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a9-l1",
+      "title": "Sơ đồ mối quan hệ oxit – axit – bazơ – muối",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a9-l2",
+      "title": "Chuỗi phản ứng vô cơ; điều chế nhiều bước",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a9-l3",
+      "title": "Nâng cao: nhận biết – tách – tinh chế chất vô cơ",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a9-l4",
+      "title": "Nâng cao: bài tập tổng hợp 4 loại hợp chất",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

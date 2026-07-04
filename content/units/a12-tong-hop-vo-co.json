@@ -1,0 +1,47 @@
+{
+  "id": "a12-tong-hop-vo-co",
+  "part": "inorganic",
+  "code": "A12",
+  "title": "Chuyên đề tổng hợp Vô cơ",
+  "order": 12,
+  "description": "Chuỗi phản ứng, nhận biết, tách chất và đề tổng hợp dành cho học sinh thi HSG.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a12-l1",
+      "title": "Chuỗi phản ứng – điều chế nhiều bước",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a12-l2",
+      "title": "Nhận biết không giới hạn/giới hạn thuốc thử; tách chất",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a12-l3",
+      "title": "Bài tập biện luận theo điều kiện",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a12-l4",
+      "title": "Đề tổng hợp vô cơ theo cấu trúc đề thi chuyên",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

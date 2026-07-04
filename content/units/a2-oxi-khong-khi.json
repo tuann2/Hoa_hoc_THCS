@@ -1,0 +1,38 @@
+{
+  "id": "a2-oxi-khong-khi",
+  "part": "inorganic",
+  "code": "A2",
+  "title": "Oxi – Không khí",
+  "order": 2,
+  "description": "Tính chất, điều chế oxi, oxit và các bài toán đốt cháy cơ bản.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a2-l1",
+      "title": "Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a2-l2",
+      "title": "Oxit: phân loại, gọi tên",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a2-l3",
+      "title": "Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

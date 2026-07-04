@@ -64,8 +64,8 @@ Mô tả rủi ro bảo mật và biện pháp kiểm soát.
 ## 13. Risks
 
 | Risk | Impact | Mitigation |
-|---|---|---|
-| ... | ... | ... |
+| ---- | ------ | ---------- |
+| ...  | ...    | ...        |
 
 ## 14. Rollback plan
 

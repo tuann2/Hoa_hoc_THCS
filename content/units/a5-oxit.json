@@ -1,0 +1,47 @@
+{
+  "id": "a5-oxit",
+  "part": "inorganic",
+  "code": "A5",
+  "title": "Oxit",
+  "order": 5,
+  "description": "Phân loại oxit, tính chất của oxit bazơ, oxit axit và oxit lưỡng tính.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a5-l1",
+      "title": "Phân loại oxit: bazơ, axit, lưỡng tính, trung tính; gọi tên",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a5-l2",
+      "title": "Tính chất hoá học của oxit bazơ; CaO – vôi",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a5-l3",
+      "title": "Tính chất hoá học của oxit axit; SO2",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a5-l4",
+      "title": "Nâng cao: oxit lưỡng tính; bài toán oxit + axit/kiềm",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

@@ -6,12 +6,12 @@ rules live in `CLAUDE.md` (Claude Code), `AGENTS.md` (Codex) and
 
 ## Roles
 
-| Agent | Role | Must never |
-|---|---|---|
-| Claude Code | Architect, planner, orchestrator, reviewer | Merge or deploy |
-| Codex | Implementation, tests, targeted fixes, independent review | Change architecture or scope on its own |
-| Antigravity/Gemini | README, API docs, ADR, runbook, changelog | Modify source code |
-| Human | Approves plans and diffs, merges, deploys | Hand full production control to any agent |
+| Agent              | Role                                                      | Must never                                |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------- |
+| Claude Code        | Architect, planner, orchestrator, reviewer                | Merge or deploy                           |
+| Codex              | Implementation, tests, targeted fixes, independent review | Change architecture or scope on its own   |
+| Antigravity/Gemini | README, API docs, ADR, runbook, changelog                 | Modify source code                        |
+| Human              | Approves plans and diffs, merges, deploys                 | Hand full production control to any agent |
 
 ## Pipeline
 
@@ -43,14 +43,14 @@ Requirement (human)
 
 ## Artifacts
 
-| Artifact | Location | Owner |
-|---|---|---|
-| Plan | `docs/plans/<FEATURE-ID>.md` | Claude Code |
-| Implementation handoff | `docs/handoffs/<FEATURE-ID>-implementation.md` | Codex |
-| ADR | `docs/adr/NNNN-<slug>.md` | Antigravity (drafted), human (approved) |
-| API docs | `docs/api/` | Antigravity |
-| Runbooks | `docs/runbooks/` | Antigravity |
-| Changelog | `CHANGELOG.md` | Antigravity |
+| Artifact               | Location                                       | Owner                                   |
+| ---------------------- | ---------------------------------------------- | --------------------------------------- |
+| Plan                   | `docs/plans/<FEATURE-ID>.md`                   | Claude Code                             |
+| Implementation handoff | `docs/handoffs/<FEATURE-ID>-implementation.md` | Codex                                   |
+| ADR                    | `docs/adr/NNNN-<slug>.md`                      | Antigravity (drafted), human (approved) |
+| API docs               | `docs/api/`                                    | Antigravity                             |
+| Runbooks               | `docs/runbooks/`                               | Antigravity                             |
+| Changelog              | `CHANGELOG.md`                                 | Antigravity                             |
 
 ## Commit convention
 

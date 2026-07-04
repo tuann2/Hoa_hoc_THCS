@@ -1,0 +1,56 @@
+{
+  "id": "a4-dung-dich",
+  "part": "inorganic",
+  "code": "A4",
+  "title": "Dung dịch",
+  "order": 4,
+  "description": "Độ tan, nồng độ, pha chế và các bài toán dung dịch trọng tâm HSG.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a4-l1",
+      "title": "Độ tan; các yếu tố ảnh hưởng",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a4-l2",
+      "title": "Nồng độ % và nồng độ mol; chuyển đổi",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a4-l3",
+      "title": "Pha chế – pha loãng dung dịch; quy tắc đường chéo",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a4-l4",
+      "title": "Nâng cao: tinh thể ngậm nước; bài toán kết tinh",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a4-l5",
+      "title": "Nâng cao: bài toán dung dịch tổng hợp",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

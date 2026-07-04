@@ -1,0 +1,56 @@
+{
+  "id": "a7-bazo",
+  "part": "inorganic",
+  "code": "A7",
+  "title": "Bazơ",
+  "order": 7,
+  "description": "Bazơ tan, bazơ không tan và các bài toán CO2/SO2 với dung dịch kiềm.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a7-l1",
+      "title": "Tính chất hoá học chung của bazơ; bazơ tan và không tan",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a7-l2",
+      "title": "Natri hiđroxit NaOH; điều chế",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a7-l3",
+      "title": "Canxi hiđroxit Ca(OH)2; ứng dụng",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a7-l4",
+      "title": "Nâng cao: CO2/SO2 + dung dịch kiềm (biện luận 2 muối)",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a7-l5",
+      "title": "Nâng cao: hiđroxit lưỡng tính Al(OH)3, Zn(OH)2",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}
