@@ -5,52 +5,837 @@
   "title": "Bazơ",
   "order": 7,
   "description": "Bazơ tan, bazơ không tan và các bài toán CO2/SO2 với dung dịch kiềm.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a7-l1",
       "title": "Tính chất hoá học chung của bazơ; bazơ tan và không tan",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phân biệt kiềm và bazơ không tan, bốn tính chất hoá học của bazơ và phản ứng nhiệt phân.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a7-l1-c1",
+          "heading": "Bazơ tan và bazơ không tan",
+          "body": "Bazơ gồm một nguyên tử kim loại liên kết với một hay nhiều nhóm OH.\n- Bazơ tan trong nước (kiềm): NaOH, KOH, Ca(OH)2, Ba(OH)2.\n- Bazơ không tan: Cu(OH)2, Fe(OH)2, Fe(OH)3, Mg(OH)2, Al(OH)3...\nDung dịch kiềm làm quỳ tím hoá xanh, phenolphtalein không màu hoá hồng."
+        },
+        {
+          "id": "a7-l1-c2",
+          "heading": "Tính chất hoá học của bazơ",
+          "body": "1) Kiềm tác dụng với oxit axit tạo muối và nước:\n2NaOH + CO2 -> Na2CO3 + H2O\n2) Bazơ (tan và không tan) tác dụng với axit tạo muối và nước (phản ứng trung hoà):\nCu(OH)2 + 2HCl -> CuCl2 + 2H2O\n3) Kiềm tác dụng với dung dịch muối tạo muối mới và bazơ mới:\n2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4"
+        },
+        {
+          "id": "a7-l1-c3",
+          "heading": "Nhiệt phân bazơ không tan",
+          "body": "Bazơ không tan bị nhiệt phân huỷ thành oxit và nước:\nCu(OH)2 -> CuO + H2O\n2Fe(OH)3 -> Fe2O3 + 3H2O\nLưu ý: kiềm như NaOH, KOH không bị nhiệt phân huỷ ở nhiệt độ thường gặp."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a7-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào sau đây là bazơ không tan?",
+          "options": ["Cu(OH)2", "NaOH", "KOH", "Ba(OH)2"],
+          "answer": 0,
+          "explanation": "B1. NaOH, KOH, Ba(OH)2 đều là kiềm tan tốt trong nước. B2. Cu(OH)2 là bazơ không tan, tồn tại dạng kết tủa màu xanh."
+        },
+        {
+          "id": "a7-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nhúng quỳ tím vào dung dịch NaOH, quỳ tím",
+          "options": ["hoá xanh", "hoá đỏ", "mất màu", "không đổi màu"],
+          "answer": 0,
+          "explanation": "B1. NaOH là kiềm mạnh. B2. Dung dịch kiềm làm quỳ tím chuyển sang màu xanh."
+        },
+        {
+          "id": "a7-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các bazơ tan trong nước (kiềm).",
+          "options": ["NaOH", "Ba(OH)2", "Cu(OH)2", "Fe(OH)3"],
+          "answers": [0, 1],
+          "explanation": "B1. NaOH và Ba(OH)2 tan tốt trong nước tạo dung dịch kiềm. B2. Cu(OH)2 và Fe(OH)3 là bazơ không tan, tồn tại dạng kết tủa."
+        },
+        {
+          "id": "a7-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nhỏ phenolphtalein vào dung dịch kiềm, dung dịch chuyển sang màu gì?",
+          "answer": "hồng",
+          "acceptedAnswers": ["hong", "đỏ hồng", "màu hồng"],
+          "placeholder": "Nhập màu",
+          "explanation": "B1. Phenolphtalein không màu trong môi trường axit và trung tính. B2. Trong môi trường kiềm, phenolphtalein chuyển sang màu hồng."
+        },
+        {
+          "id": "a7-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nhiệt phân hoàn toàn Cu(OH)2 thu được",
+          "options": ["CuO và H2O", "Cu và H2O", "CuO và H2", "Cu2O và H2O"],
+          "answer": 0,
+          "explanation": "B1. Bazơ không tan bị nhiệt phân huỷ thành oxit tương ứng và nước. B2. Cu(OH)2 -> CuO + H2O (chất rắn chuyển từ xanh sang đen)."
+        },
+        {
+          "id": "a7-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trung hoà vừa đủ 0,10 mol NaOH cần bao nhiêu mol HCl?",
+          "options": ["0,10 mol", "0,20 mol", "0,05 mol", "0,15 mol"],
+          "answer": 0,
+          "explanation": "B1. NaOH + HCl -> NaCl + H2O có tỉ lệ mol 1 : 1. B2. Vậy cần đúng 0,10 mol HCl."
+        },
+        {
+          "id": "a7-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nhiệt phân hoàn toàn 9,8 g Cu(OH)2. Khối lượng chất rắn thu được là",
+          "options": ["8,0 g", "9,8 g", "7,2 g", "6,4 g"],
+          "answer": 0,
+          "explanation": "B1. nCu(OH)2 = 9,8 / 98 = 0,10 mol. B2. Cu(OH)2 -> CuO + H2O nên nCuO = 0,10 mol. B3. mCuO = 0,10 x 80 = 8,0 g."
+        },
+        {
+          "id": "a7-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Dung dịch NaOH phản ứng được với những chất nào sau đây?",
+          "options": [
+            "dung dịch HCl",
+            "khí CO2",
+            "dung dịch CuSO4",
+            "dung dịch KCl"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. NaOH + HCl -> NaCl + H2O (trung hoà). B2. 2NaOH + CO2 -> Na2CO3 + H2O (kiềm + oxit axit). B3. 2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4 (tạo kết tủa xanh). B4. KCl không phản ứng vì không tạo kết tủa, khí hay nước."
+        },
+        {
+          "id": "a7-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nung hoàn toàn 0,20 mol Fe(OH)3. Số mol Fe2O3 thu được là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. 2Fe(OH)3 -> Fe2O3 + 3H2O. B2. nFe2O3 = 0,20 / 2 = 0,10 mol."
+        },
+        {
+          "id": "a7-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhiệt phân: Fe(OH)3 -> Fe2O3 + H2O.",
+          "left": ["Fe(OH)3"],
+          "right": ["Fe2O3", "H2O"],
+          "answer": [2, 1, 3],
+          "explanation": "B1. Fe2O3 chứa 2Fe nên cần 2Fe(OH)3. B2. 2Fe(OH)3 có 6H tạo 3H2O. B3. Kiểm tra O: vế trái 6, vế phải 3 + 3 = 6."
+        },
+        {
+          "id": "a7-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Trung hoà hoàn toàn 200 ml dung dịch H2SO4 1M cần bao nhiêu gam NaOH?",
+          "options": ["16 g", "8 g", "20 g", "12 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2SO4 = 0,2 x 1 = 0,20 mol. B2. 2NaOH + H2SO4 -> Na2SO4 + 2H2O nên nNaOH = 0,40 mol. B3. mNaOH = 0,40 x 40 = 16 g."
+        },
+        {
+          "id": "a7-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Dung dịch chứa 0,10 mol NaOH và 0,10 mol KOH được trung hoà vừa đủ bằng dung dịch HCl. Tổng số mol HCl cần dùng là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cả NaOH và KOH đều phản ứng với HCl theo tỉ lệ 1 : 1. B2. nHCl = nOH- tổng = 0,10 + 0,10 = 0,20 mol."
+        },
+        {
+          "id": "a7-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Ba(OH)2 + HCl -> BaCl2 + H2O.",
+          "left": ["Ba(OH)2", "HCl"],
+          "right": ["BaCl2", "H2O"],
+          "answer": [1, 2, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. BaCl2 chứa 2Cl nên cần 2HCl. B2. Hai nhóm OH kết hợp với 2H tạo 2H2O. B3. Kiểm tra: hai vế đều có 1Ba, 2Cl, 4H, 2O."
+        }
+      ]
     },
     {
       "id": "a7-l2",
       "title": "Natri hiđroxit NaOH; điều chế",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính chất, ứng dụng của NaOH và phương pháp điện phân dung dịch NaCl có màng ngăn.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a7-l2-c1",
+          "heading": "Tính chất của NaOH",
+          "body": "NaOH (xút ăn da) là chất rắn màu trắng, hút ẩm mạnh, tan nhiều trong nước và toả nhiệt, ăn mòn da.\nNaOH mang đầy đủ tính chất của kiềm:\nNaOH + HCl -> NaCl + H2O\n2NaOH + CO2 -> Na2CO3 + H2O\n2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4"
+        },
+        {
+          "id": "a7-l2-c2",
+          "heading": "Ứng dụng của NaOH",
+          "body": "NaOH được dùng trong:\n- Sản xuất xà phòng, chất tẩy rửa, bột giặt.\n- Sản xuất giấy, tơ nhân tạo.\n- Sản xuất nhôm (làm sạch quặng boxit).\n- Chế biến dầu mỏ và nhiều ngành công nghiệp hoá chất khác."
+        },
+        {
+          "id": "a7-l2-c3",
+          "heading": "Điều chế NaOH",
+          "body": "Trong công nghiệp, NaOH được điều chế bằng cách điện phân dung dịch NaCl bão hoà có màng ngăn:\n2NaCl + 2H2O -> 2NaOH + H2 + Cl2\nMàng ngăn giúp Cl2 không tiếp xúc với NaOH tạo nước Gia-ven. Khí H2 thoát ra ở cực âm, Cl2 thoát ra ở cực dương."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a7-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Tên gọi của NaOH là",
+          "options": [
+            "natri hiđroxit",
+            "natri oxit",
+            "natri clorua",
+            "natri cacbonat"
+          ],
+          "answer": 0,
+          "explanation": "B1. NaOH gồm Na liên kết với nhóm OH nên gọi là natri hiđroxit. B2. Tên thông thường là xút ăn da."
+        },
+        {
+          "id": "a7-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "NaOH tác dụng với dung dịch HCl tạo thành",
+          "options": [
+            "NaCl và H2O",
+            "NaCl và H2",
+            "NaClO và H2O",
+            "Na2O và H2O"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đây là phản ứng trung hoà giữa bazơ và axit. B2. NaOH + HCl -> NaCl + H2O."
+        },
+        {
+          "id": "a7-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các tính chất vật lí đúng của NaOH.",
+          "options": [
+            "là chất rắn màu trắng",
+            "hút ẩm mạnh",
+            "tan nhiều trong nước và toả nhiệt",
+            "là chất khí không màu"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. NaOH là chất rắn màu trắng, dễ hút ẩm nên phải bảo quản kín. B2. NaOH tan nhiều trong nước và quá trình tan toả nhiệt mạnh. B3. NaOH không phải chất khí."
+        },
+        {
+          "id": "a7-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Điện phân dung dịch NaCl bão hoà có màng ngăn thu được NaOH, H2 và khí gì? (ghi công thức)",
+          "answer": "Cl2",
+          "acceptedAnswers": ["clo", "khí clo"],
+          "placeholder": "Nhập công thức khí",
+          "explanation": "B1. 2NaCl + 2H2O -> 2NaOH + H2 + Cl2. B2. Khí Cl2 (clo) thoát ra ở cực dương."
+        },
+        {
+          "id": "a7-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Vì có tính ăn mòn da nên NaOH còn được gọi là",
+          "options": ["xút ăn da", "vôi tôi", "muối ăn", "thạch cao"],
+          "answer": 0,
+          "explanation": "B1. NaOH ăn mòn da và vải giấy nên có tên thông thường là xút ăn da. B2. Khi sử dụng phải cẩn thận, tránh để dây vào da và mắt."
+        },
+        {
+          "id": "a7-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 8 g NaOH vào nước thành 200 ml dung dịch. Nồng độ mol của dung dịch là",
+          "options": ["1M", "0,5M", "2M", "0,2M"],
+          "answer": 0,
+          "explanation": "B1. nNaOH = 8 / 40 = 0,20 mol. B2. CM = n / V = 0,20 / 0,2 = 1M."
+        },
+        {
+          "id": "a7-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dung dịch NaOH tác dụng được với tất cả các chất trong dãy nào sau đây?",
+          "options": [
+            "CO2, HCl, CuSO4",
+            "CO2, NaCl, HCl",
+            "KNO3, HCl, SO2",
+            "CaO, CO2, HCl"
+          ],
+          "answer": 0,
+          "explanation": "B1. NaOH phản ứng với CO2 (oxit axit), HCl (axit) và CuSO4 (muối tạo kết tủa). B2. NaCl, KNO3 không phản ứng vì không tạo kết tủa/khí/nước; CaO là oxit bazơ không phản ứng với kiềm."
+        },
+        {
+          "id": "a7-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Nhỏ dung dịch NaOH vào dung dịch CuSO4. Sản phẩm của phản ứng gồm những chất nào?",
+          "options": ["Cu(OH)2", "Na2SO4", "CuO", "H2"],
+          "answers": [0, 1],
+          "explanation": "B1. 2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4. B2. Cu(OH)2 là kết tủa màu xanh, Na2SO4 tan trong dung dịch. B3. Không sinh CuO hay khí H2."
+        },
+        {
+          "id": "a7-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Trung hoà vừa đủ 100 ml dung dịch HCl 1M cần bao nhiêu gam NaOH?",
+          "answer": "4",
+          "acceptedAnswers": ["4 g", "4g"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nHCl = 0,1 x 1 = 0,10 mol. B2. NaOH + HCl -> NaCl + H2O nên nNaOH = 0,10 mol. B3. m = 0,10 x 40 = 4 g."
+        },
+        {
+          "id": "a7-l2-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: NaOH + H2SO4 -> Na2SO4 + H2O.",
+          "left": ["NaOH", "H2SO4"],
+          "right": ["Na2SO4", "H2O"],
+          "answer": [2, 1, 1, 2],
+          "explanation": "B1. Muối Na2SO4 chứa 2Na nên cần 2NaOH. B2. Bốn nguyên tử H tạo 2H2O. B3. Kiểm tra O: vế trái 2 + 4 = 6, vế phải 4 + 2 = 6."
+        },
+        {
+          "id": "a7-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Điện phân dung dịch NaCl bão hoà có màng ngăn thu được 2,24 lít Cl2 (đktc). Khối lượng NaOH tạo thành là",
+          "options": ["8 g", "4 g", "16 g", "12 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCl2 = 2,24 / 22,4 = 0,10 mol. B2. 2NaCl + 2H2O -> 2NaOH + H2 + Cl2 nên nNaOH = 2 x 0,10 = 0,20 mol. B3. m = 0,20 x 40 = 8 g."
+        },
+        {
+          "id": "a7-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Dẫn 0,15 mol CO2 vào dung dịch chứa 0,20 mol NaOH. Số mol NaHCO3 tạo thành là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Tỉ lệ nOH- / nCO2 = 0,20 / 0,15 = 1,33 nằm giữa 1 và 2 nên tạo hai muối. B2. nNa2CO3 = nOH- - nCO2 = 0,20 - 0,15 = 0,05 mol. B3. nNaHCO3 = nCO2 - nNa2CO3 = 0,15 - 0,05 = 0,10 mol."
+        },
+        {
+          "id": "a7-l2-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng điện phân dung dịch muối ăn có màng ngăn: NaCl + H2O -> NaOH + H2 + Cl2.",
+          "left": ["NaCl", "H2O"],
+          "right": ["NaOH", "H2", "Cl2"],
+          "answer": [2, 2, 2, 1, 1],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cl2 chứa 2Cl nên cần 2NaCl, kéo theo 2NaOH. B2. 2NaOH cần 2Na và 2OH; H còn lại ghép thành 1H2 nên cần 2H2O. B3. Kiểm tra: hai vế đều có 2Na, 2Cl, 4H, 2O."
+        }
+      ]
     },
     {
       "id": "a7-l3",
       "title": "Canxi hiđroxit Ca(OH)2; ứng dụng",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Nước vôi trong, phản ứng nhận biết CO2, thang pH và các bài toán kết tủa CaCO3.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a7-l3-c1",
+          "heading": "Ca(OH)2 – vôi tôi và nước vôi trong",
+          "body": "Ca(OH)2 (vôi tôi) ít tan trong nước; phần tan tạo dung dịch trong suốt gọi là nước vôi trong.\nCa(OH)2 mang đầy đủ tính chất của kiềm:\nCa(OH)2 + 2HCl -> CaCl2 + 2H2O\nCa(OH)2 + CO2 -> CaCO3 + H2O\nCa(OH)2 + Na2CO3 -> CaCO3 + 2NaOH"
+        },
+        {
+          "id": "a7-l3-c2",
+          "heading": "Nhận biết CO2 bằng nước vôi trong",
+          "body": "Dẫn CO2 vào nước vôi trong thấy vẩn đục do tạo kết tủa CaCO3:\nCO2 + Ca(OH)2 -> CaCO3 + H2O\nNếu tiếp tục dẫn CO2 dư, kết tủa tan dần do tạo muối axit tan:\nCaCO3 + CO2 + H2O -> Ca(HCO3)2\nHiện tượng \"đục rồi trong trở lại\" là dấu hiệu đặc trưng của CO2 dư."
+        },
+        {
+          "id": "a7-l3-c3",
+          "heading": "Ứng dụng và thang pH",
+          "body": "Ca(OH)2 rẻ nên được dùng nhiều: khử chua đất trồng, khử trùng, xử lí nước thải, trộn vữa xây dựng.\nThang pH đo độ axit - bazơ của dung dịch:\n- pH < 7: môi trường axit.\n- pH = 7: trung tính.\n- pH > 7: môi trường bazơ (kiềm)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a7-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nước vôi trong là dung dịch của chất nào?",
+          "options": ["Ca(OH)2", "CaO", "CaCO3", "CaCl2"],
+          "answer": 0,
+          "explanation": "B1. Ca(OH)2 ít tan; phần tan trong nước tạo dung dịch trong suốt. B2. Dung dịch đó gọi là nước vôi trong."
+        },
+        {
+          "id": "a7-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dẫn khí CO2 vào nước vôi trong, hiện tượng quan sát được là",
+          "options": [
+            "dung dịch vẩn đục",
+            "có khí thoát ra",
+            "dung dịch chuyển màu hồng",
+            "không có hiện tượng"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO2 + Ca(OH)2 -> CaCO3 + H2O. B2. CaCO3 là kết tủa trắng làm dung dịch vẩn đục."
+        },
+        {
+          "id": "a7-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các ứng dụng đúng của Ca(OH)2.",
+          "options": [
+            "khử chua đất trồng",
+            "khử trùng, xử lí nước thải",
+            "trộn vữa xây dựng",
+            "làm nhiên liệu đốt"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ca(OH)2 có tính kiềm nên trung hoà được axit trong đất chua và diệt khuẩn. B2. Vữa xây dựng chứa vôi tôi trộn cát. B3. Ca(OH)2 không cháy nên không dùng làm nhiên liệu."
+        },
+        {
+          "id": "a7-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Dung dịch kiềm có pH lớn hơn hay nhỏ hơn 7?",
+          "answer": "lớn hơn",
+          "acceptedAnswers": ["lon hon", "> 7", ">7", "lớn hơn 7"],
+          "placeholder": "Nhập câu trả lời",
+          "explanation": "B1. Thang pH: axit có pH < 7, trung tính pH = 7. B2. Dung dịch kiềm có pH > 7."
+        },
+        {
+          "id": "a7-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Ca(OH)2 tác dụng với dung dịch HCl tạo thành",
+          "options": [
+            "CaCl2 và H2O",
+            "CaCO3 và H2O",
+            "CaO và H2O",
+            "CaCl2 và H2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đây là phản ứng trung hoà. B2. Ca(OH)2 + 2HCl -> CaCl2 + 2H2O."
+        },
+        {
+          "id": "a7-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trung hoà hoàn toàn 0,10 mol Ca(OH)2 cần bao nhiêu mol HNO3?",
+          "options": ["0,20 mol", "0,10 mol", "0,05 mol", "0,40 mol"],
+          "answer": 0,
+          "explanation": "B1. Ca(OH)2 + 2HNO3 -> Ca(NO3)2 + 2H2O. B2. nHNO3 = 2 x 0,10 = 0,20 mol."
+        },
+        {
+          "id": "a7-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dung dịch nào sau đây có pH > 7?",
+          "options": ["nước vôi trong", "giấm ăn", "nước cất", "nước chanh"],
+          "answer": 0,
+          "explanation": "B1. Nước vôi trong là dung dịch kiềm Ca(OH)2 nên pH > 7. B2. Giấm ăn và nước chanh chứa axit (pH < 7), nước cất trung tính (pH = 7)."
+        },
+        {
+          "id": "a7-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Ca(OH)2 phản ứng được với những chất nào sau đây?",
+          "options": [
+            "khí CO2",
+            "dung dịch HCl",
+            "dung dịch Na2CO3",
+            "dung dịch NaOH"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ca(OH)2 + CO2 -> CaCO3 + H2O. B2. Ca(OH)2 + 2HCl -> CaCl2 + 2H2O. B3. Ca(OH)2 + Na2CO3 -> CaCO3 + 2NaOH (tạo kết tủa). B4. NaOH cũng là kiềm nên không phản ứng."
+        },
+        {
+          "id": "a7-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Dẫn 0,10 mol CO2 vào nước vôi trong dư. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "10",
+          "acceptedAnswers": ["10 g", "10g"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Ca(OH)2 dư nên toàn bộ CO2 tạo kết tủa: CO2 + Ca(OH)2 -> CaCO3 + H2O. B2. nCaCO3 = 0,10 mol. B3. m = 0,10 x 100 = 10 g."
+        },
+        {
+          "id": "a7-l3-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Ca(OH)2 + HNO3 -> Ca(NO3)2 + H2O.",
+          "left": ["Ca(OH)2", "HNO3"],
+          "right": ["Ca(NO3)2", "H2O"],
+          "answer": [1, 2, 1, 2],
+          "explanation": "B1. Muối Ca(NO3)2 chứa 2 gốc NO3 nên cần 2HNO3. B2. Hai nhóm OH kết hợp 2H tạo 2H2O. B3. Kiểm tra: hai vế đều có 1Ca, 2N, 4H, 8O."
+        },
+        {
+          "id": "a7-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn V lít CO2 (đktc) vào dung dịch chứa 0,20 mol Ca(OH)2 thu được 15 g kết tủa. Giá trị lớn nhất của V là",
+          "options": ["5,6 lít", "3,36 lít", "4,48 lít", "2,24 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 15 / 100 = 0,15 mol < nCa(OH)2 nên có hai trường hợp. B2. V lớn nhất khi CO2 dư hoà tan một phần kết tủa: nCO2 = nOH- - nCaCO3 = 0,40 - 0,15 = 0,25 mol. B3. V = 0,25 x 22,4 = 5,6 lít."
+        },
+        {
+          "id": "a7-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Dẫn 0,30 mol CO2 vào dung dịch chứa 0,20 mol Ca(OH)2. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "10",
+          "acceptedAnswers": ["10 g", "10g"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nOH- = 0,40 mol; tỉ lệ nOH- / nCO2 = 1,33 nằm giữa 1 và 2 nên tạo hai muối. B2. nCaCO3 = nOH- - nCO2 = 0,40 - 0,30 = 0,10 mol. B3. m = 0,10 x 100 = 10 g."
+        },
+        {
+          "id": "a7-l3-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng hoà tan kết tủa khi CO2 dư: CaCO3 + CO2 + H2O -> Ca(HCO3)2.",
+          "left": ["CaCO3", "CO2", "H2O"],
+          "right": ["Ca(HCO3)2"],
+          "answer": [1, 1, 1, 1],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Ca(HCO3)2 chứa 2C: một từ CaCO3, một từ CO2 nên hệ số đều là 1. B2. Kiểm tra: hai vế đều có 1Ca, 2C, 2H, 6O."
+        }
+      ]
     },
     {
       "id": "a7-l4",
-      "title": "Nâng cao: CO2/SO2 + dung dịch kiềm (biện luận 2 muối)",
+      "title": "Nâng cao: CO2/SO2 tác dụng với dung dịch kiềm",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phương pháp tỉ lệ mol để biện luận muối trung hoà, muối axit hay hỗn hợp hai muối.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a7-l4-c1",
+          "heading": "Phương pháp tỉ lệ T = nOH- / nCO2",
+          "body": "Khi CO2 (hoặc SO2) tác dụng với dung dịch kiềm, đặt T = nOH- / nCO2:\n- T >= 2: chỉ tạo muối trung hoà (Na2CO3), kiềm có thể dư.\n- T <= 1: chỉ tạo muối axit (NaHCO3), CO2 có thể dư.\n- 1 < T < 2: tạo cả hai muối.\nCông thức nhanh khi tạo hai muối: n(muối trung hoà) = nOH- - nCO2; n(muối axit) = nCO2 - n(muối trung hoà)."
+        },
+        {
+          "id": "a7-l4-c2",
+          "heading": "Với Ca(OH)2, Ba(OH)2: chú ý kết tủa",
+          "body": "Với kiềm của Ca, Ba, muối trung hoà là kết tủa (CaCO3, BaCO3), muối axit tan.\nKhi CO2 tăng dần: kết tủa tăng đến cực đại rồi tan dần do tạo Ca(HCO3)2.\nNếu kết tủa đã tan một phần: nCO2 = nOH- - n(kết tủa).\nNếu kiềm dư: nCO2 = n(kết tủa)."
+        },
+        {
+          "id": "a7-l4-c3",
+          "heading": "Bài toán ngược thường có hai đáp số",
+          "body": "Cho lượng kết tủa, hỏi thể tích CO2: thường có hai giá trị.\n- Trường hợp 1 (kiềm dư): nCO2 = n(kết tủa) — giá trị nhỏ nhất.\n- Trường hợp 2 (CO2 dư, kết tủa tan một phần): nCO2 = nOH- - n(kết tủa) — giá trị lớn nhất.\nĐề hỏi \"giá trị lớn nhất/nhỏ nhất của V\" chính là hai trường hợp này."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a7-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi tỉ lệ T = nOH- / nCO2 >= 2, sản phẩm là",
+          "options": [
+            "chỉ muối trung hoà",
+            "chỉ muối axit",
+            "hai muối",
+            "không phản ứng"
+          ],
+          "answer": 0,
+          "explanation": "B1. Kiềm đủ nhiều để chuyển hết CO2 thành muối trung hoà. B2. Ví dụ: CO2 + 2NaOH -> Na2CO3 + H2O."
+        },
+        {
+          "id": "a7-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi tỉ lệ T = nOH- / nCO2 <= 1, sản phẩm là",
+          "options": [
+            "chỉ muối axit",
+            "chỉ muối trung hoà",
+            "hai muối",
+            "chỉ có nước"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO2 nhiều nên mỗi OH- chỉ đủ tạo một gốc HCO3-. B2. Ví dụ: CO2 + NaOH -> NaHCO3."
+        },
+        {
+          "id": "a7-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "CO2 tác dụng với dung dịch NaOH có thể tạo ra những muối nào?",
+          "options": ["Na2CO3", "NaHCO3", "Na2O", "NaCl"],
+          "answers": [0, 1],
+          "explanation": "B1. Tuỳ tỉ lệ mol, CO2 + NaOH tạo muối trung hoà Na2CO3 hoặc muối axit NaHCO3 (hoặc cả hai). B2. Na2O là oxit, NaCl không chứa gốc cacbonat."
+        },
+        {
+          "id": "a7-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khi 1 < T < 2, số mol muối trung hoà bằng nOH- trừ đi số mol của chất nào?",
+          "answer": "CO2",
+          "acceptedAnswers": ["nCO2", "n CO2", "khí CO2", "cacbon đioxit"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Công thức nhanh khi tạo hai muối: n(muối trung hoà) = nOH- - nCO2. B2. Phần CO2 còn lại chuyển thành muối axit."
+        },
+        {
+          "id": "a7-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dẫn 0,10 mol CO2 vào dung dịch chứa 0,30 mol NaOH. Muối thu được là",
+          "options": ["Na2CO3", "NaHCO3", "cả hai muối", "không tạo muối"],
+          "answer": 0,
+          "explanation": "B1. T = 0,30 / 0,10 = 3 >= 2. B2. Kiềm dư nên chỉ tạo muối trung hoà Na2CO3."
+        },
+        {
+          "id": "a7-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn 0,20 mol CO2 vào dung dịch chứa 0,30 mol NaOH. Sản phẩm muối gồm",
+          "options": [
+            "cả Na2CO3 và NaHCO3",
+            "chỉ Na2CO3",
+            "chỉ NaHCO3",
+            "Na2CO3 và NaOH dư"
+          ],
+          "answer": 0,
+          "explanation": "B1. T = 0,30 / 0,20 = 1,5. B2. Vì 1 < 1,5 < 2 nên tạo cả hai muối: nNa2CO3 = 0,30 - 0,20 = 0,10 mol; nNaHCO3 = 0,10 mol."
+        },
+        {
+          "id": "a7-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn 0,20 mol CO2 vào dung dịch chứa 0,20 mol NaOH. Muối thu được và số mol là",
+          "options": [
+            "NaHCO3; 0,20 mol",
+            "Na2CO3; 0,20 mol",
+            "Na2CO3; 0,10 mol",
+            "NaHCO3; 0,10 mol"
+          ],
+          "answer": 0,
+          "explanation": "B1. T = 0,20 / 0,20 = 1. B2. Chỉ tạo muối axit: CO2 + NaOH -> NaHCO3 với số mol 0,20."
+        },
+        {
+          "id": "a7-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Để giải bài toán CO2 tác dụng với kiềm, cần xác định những đại lượng nào?",
+          "options": [
+            "số mol CO2",
+            "số mol OH-",
+            "tỉ lệ T = nOH- / nCO2",
+            "màu của dung dịch"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Cần nCO2 và nOH- để tính tỉ lệ T. B2. Giá trị T quyết định loại muối tạo thành. B3. Màu dung dịch không liên quan đến phép tính."
+        },
+        {
+          "id": "a7-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hấp thụ 0,10 mol SO2 vào dung dịch chứa 0,25 mol NaOH. Khối lượng Na2SO3 thu được là bao nhiêu gam?",
+          "answer": "12,6",
+          "acceptedAnswers": ["12.6"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. T = 0,25 / 0,10 = 2,5 >= 2 nên chỉ tạo muối trung hoà. B2. nNa2SO3 = nSO2 = 0,10 mol. B3. M(Na2SO3) = 126 g/mol nên m = 12,6 g."
+        },
+        {
+          "id": "a7-l4-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: SO2 + NaOH -> Na2SO3 + H2O.",
+          "left": ["SO2", "NaOH"],
+          "right": ["Na2SO3", "H2O"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Muối Na2SO3 chứa 2Na nên cần 2NaOH. B2. Hai nguyên tử H tạo 1H2O. B3. Kiểm tra O: vế trái 2 + 2 = 4, vế phải 3 + 1 = 4."
+        },
+        {
+          "id": "a7-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn 6,72 lít CO2 (đktc) vào 400 ml dung dịch NaOH 1M. Khối lượng Na2CO3 thu được là",
+          "options": ["10,6 g", "21,2 g", "16,8 g", "8,4 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 6,72 / 22,4 = 0,30 mol; nNaOH = 0,40 mol; T = 1,33 nên tạo hai muối. B2. nNa2CO3 = 0,40 - 0,30 = 0,10 mol. B3. m = 0,10 x 106 = 10,6 g."
+        },
+        {
+          "id": "a7-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Dẫn khí CO2 vào 200 ml dung dịch Ba(OH)2 1M thu được 19,7 g kết tủa BaCO3. Số mol CO2 lớn nhất có thể đã dùng là bao nhiêu?",
+          "answer": "0,3",
+          "acceptedAnswers": ["0.3"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nBaCO3 = 19,7 / 197 = 0,10 mol; nOH- = 2 x 0,20 = 0,40 mol. B2. CO2 lớn nhất khi kết tủa đã bị hoà tan một phần: nCO2 = nOH- - n(kết tủa) = 0,40 - 0,10 = 0,30 mol."
+        },
+        {
+          "id": "a7-l4-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng tạo muối axit khi CO2 dư: CO2 + Ba(OH)2 -> Ba(HCO3)2.",
+          "left": ["CO2", "Ba(OH)2"],
+          "right": ["Ba(HCO3)2"],
+          "answer": [2, 1, 1],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Muối Ba(HCO3)2 chứa 2 gốc HCO3 nên cần 2CO2. B2. Kiểm tra: hai vế đều có 1Ba, 2C, 2H, 6O."
+        }
+      ]
     },
     {
       "id": "a7-l5",
       "title": "Nâng cao: hiđroxit lưỡng tính Al(OH)3, Zn(OH)2",
       "order": 5,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Hiđroxit lưỡng tính tan trong cả axit và kiềm; hiện tượng kết tủa rồi tan và bài toán kiềm dư.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a7-l5-c1",
+          "heading": "Hiđroxit lưỡng tính",
+          "body": "Al(OH)3 và Zn(OH)2 tan được trong cả axit và dung dịch kiềm:\nAl(OH)3 + 3HCl -> AlCl3 + 3H2O\nAl(OH)3 + NaOH -> NaAlO2 + 2H2O\nZn(OH)2 + 2HCl -> ZnCl2 + 2H2O\nZn(OH)2 + 2NaOH -> Na2ZnO2 + 2H2O"
+        },
+        {
+          "id": "a7-l5-c2",
+          "heading": "Hiện tượng kết tủa rồi tan",
+          "body": "Nhỏ từ từ dung dịch NaOH vào dung dịch AlCl3:\n- Lúc đầu xuất hiện kết tủa keo trắng: AlCl3 + 3NaOH -> Al(OH)3 + 3NaCl\n- Khi NaOH dư, kết tủa tan dần: Al(OH)3 + NaOH -> NaAlO2 + 2H2O\nHiện tượng \"kết tủa trắng rồi tan trong kiềm dư\" dùng để nhận biết muối nhôm, muối kẽm."
+        },
+        {
+          "id": "a7-l5-c3",
+          "heading": "Nhiệt phân và mẹo bài toán kiềm dư",
+          "body": "Nhiệt phân hiđroxit lưỡng tính:\n2Al(OH)3 -> Al2O3 + 3H2O\nZn(OH)2 -> ZnO + H2O\nMẹo bài toán NaOH + AlCl3: kết tủa cực đại khi nOH- = 3nAl3+. Nếu nOH- > 3nAl3+, phần OH- dư hoà tan kết tủa theo tỉ lệ 1 : 1 với Al(OH)3."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a7-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Hiđroxit nào sau đây là hiđroxit lưỡng tính?",
+          "options": ["Al(OH)3", "NaOH", "Ca(OH)2", "Fe(OH)3"],
+          "answer": 0,
+          "explanation": "B1. Al(OH)3 tan được trong cả axit và kiềm nên là hiđroxit lưỡng tính. B2. NaOH, Ca(OH)2 là kiềm; Fe(OH)3 là bazơ không tan thông thường."
+        },
+        {
+          "id": "a7-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nhỏ từ từ đến dư dung dịch NaOH vào dung dịch AlCl3, hiện tượng quan sát được là",
+          "options": [
+            "kết tủa trắng xuất hiện rồi tan dần",
+            "kết tủa trắng không tan",
+            "có khí thoát ra",
+            "không có hiện tượng"
+          ],
+          "answer": 0,
+          "explanation": "B1. Lúc đầu tạo kết tủa keo trắng Al(OH)3. B2. NaOH dư hoà tan kết tủa tạo NaAlO2 tan nên kết tủa tan dần."
+        },
+        {
+          "id": "a7-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các hiđroxit lưỡng tính.",
+          "options": ["Al(OH)3", "Zn(OH)2", "KOH", "Mg(OH)2"],
+          "answers": [0, 1],
+          "explanation": "B1. Al(OH)3 và Zn(OH)2 tan trong cả axit và kiềm. B2. KOH là kiềm; Mg(OH)2 là bazơ không tan chỉ phản ứng với axit."
+        },
+        {
+          "id": "a7-l5-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Al(OH)3 tan trong dung dịch NaOH tạo muối gì? (ghi công thức)",
+          "answer": "NaAlO2",
+          "acceptedAnswers": ["natri aluminat"],
+          "placeholder": "Nhập công thức muối",
+          "explanation": "B1. Al(OH)3 + NaOH -> NaAlO2 + 2H2O. B2. Muối natri aluminat NaAlO2 tan trong nước."
+        },
+        {
+          "id": "a7-l5-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nhiệt phân hoàn toàn Al(OH)3 thu được chất rắn nào?",
+          "options": ["Al2O3", "Al", "AlCl3", "NaAlO2"],
+          "answer": 0,
+          "explanation": "B1. Hiđroxit bị nhiệt phân huỷ thành oxit và nước. B2. 2Al(OH)3 -> Al2O3 + 3H2O."
+        },
+        {
+          "id": "a7-l5-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 0,10 mol Al(OH)3 cần vừa đủ bao nhiêu mol HCl?",
+          "options": ["0,30 mol", "0,10 mol", "0,20 mol", "0,60 mol"],
+          "answer": 0,
+          "explanation": "B1. Al(OH)3 + 3HCl -> AlCl3 + 3H2O. B2. nHCl = 3 x 0,10 = 0,30 mol."
+        },
+        {
+          "id": "a7-l5-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nung hoàn toàn 15,6 g Al(OH)3. Khối lượng Al2O3 thu được là",
+          "options": ["10,2 g", "20,4 g", "5,1 g", "7,8 g"],
+          "answer": 0,
+          "explanation": "B1. nAl(OH)3 = 15,6 / 78 = 0,20 mol. B2. 2Al(OH)3 -> Al2O3 + 3H2O nên nAl2O3 = 0,10 mol. B3. m = 0,10 x 102 = 10,2 g."
+        },
+        {
+          "id": "a7-l5-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Al(OH)3 phản ứng được với những dung dịch nào sau đây?",
+          "options": ["HCl", "NaOH", "H2SO4 loãng", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Al(OH)3 là hiđroxit lưỡng tính nên tan trong axit HCl, H2SO4. B2. Al(OH)3 cũng tan trong kiềm NaOH tạo NaAlO2. B3. NaCl là muối trung hoà, không phản ứng."
+        },
+        {
+          "id": "a7-l5-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nhiệt phân hoàn toàn 9,9 g Zn(OH)2. Khối lượng ZnO thu được là bao nhiêu gam?",
+          "answer": "8,1",
+          "acceptedAnswers": ["8.1"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nZn(OH)2 = 9,9 / 99 = 0,10 mol. B2. Zn(OH)2 -> ZnO + H2O nên nZnO = 0,10 mol. B3. m = 0,10 x 81 = 8,1 g."
+        },
+        {
+          "id": "a7-l5-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhiệt phân: Al(OH)3 -> Al2O3 + H2O.",
+          "left": ["Al(OH)3"],
+          "right": ["Al2O3", "H2O"],
+          "answer": [2, 1, 3],
+          "explanation": "B1. Al2O3 chứa 2Al nên cần 2Al(OH)3. B2. Sáu nguyên tử H tạo 3H2O. B3. Kiểm tra O: vế trái 6, vế phải 3 + 3 = 6."
+        },
+        {
+          "id": "a7-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho từ từ 0,30 mol NaOH vào dung dịch chứa 0,10 mol AlCl3. Khối lượng kết tủa thu được là",
+          "options": ["7,8 g", "3,9 g", "0 g", "15,6 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. AlCl3 + 3NaOH -> Al(OH)3 + 3NaCl cần 3 x 0,10 = 0,30 mol NaOH. B2. NaOH vừa đủ tạo kết tủa cực đại, không dư để hoà tan. B3. nAl(OH)3 = 0,10 mol nên m = 0,10 x 78 = 7,8 g."
+        },
+        {
+          "id": "a7-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho từ từ 0,35 mol NaOH vào dung dịch chứa 0,10 mol AlCl3. Khối lượng kết tủa còn lại là bao nhiêu gam?",
+          "answer": "3,9",
+          "acceptedAnswers": ["3.9"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Tạo kết tủa cực đại cần 0,30 mol NaOH: nAl(OH)3 = 0,10 mol. B2. NaOH dư 0,05 mol hoà tan kết tủa theo tỉ lệ 1 : 1: còn 0,10 - 0,05 = 0,05 mol Al(OH)3. B3. m = 0,05 x 78 = 3,9 g."
+        },
+        {
+          "id": "a7-l5-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Al(OH)3 + NaOH -> NaAlO2 + H2O.",
+          "left": ["Al(OH)3", "NaOH"],
+          "right": ["NaAlO2", "H2O"],
+          "answer": [1, 1, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Một Al(OH)3 kết hợp một NaOH tạo một NaAlO2. B2. Bốn nguyên tử H còn lại tạo 2H2O. B3. Kiểm tra: hai vế đều có 1Al, 1Na, 4H, 4O."
+        }
+      ]
     }
   ]
 }

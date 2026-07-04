@@ -9,3 +9,5 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Initial project scaffold with AI workflow instruction files (2026-07-04).
 - `FEATURE-001` MVP web app với Vite/React/TypeScript/Tailwind, lộ trình học, lesson flow, quiz engine, store tiến độ, content A6/A8, test và CI (2026-07-04).
+- `FEATURE-001` deploy GitHub Pages (branch `gh-pages`) tại https://tuann2.github.io/Hoa_hoc_THCS/; câu HSG A6/A8 gắn nguồn trung thực và sửa 3 lỗi nội dung (2026-07-05).
+- `FEATURE-002` biên soạn đầy đủ 3 unit cụm vô cơ: A5 Oxit (4 bài), A7 Bazơ (5 bài), A9 Mối quan hệ giữa các hợp chất vô cơ (4 bài) — 39 thẻ lý thuyết, 169 câu hỏi 3 mức có lời giải từng bước (2026-07-05).
