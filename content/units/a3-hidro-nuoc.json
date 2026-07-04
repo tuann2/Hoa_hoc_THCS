@@ -1,0 +1,47 @@
+{
+  "id": "a3-hidro-nuoc",
+  "part": "inorganic",
+  "code": "A3",
+  "title": "Hiđro – Nước",
+  "order": 3,
+  "description": "Hiđro, nước và phần nhập môn axit – bazơ – muối.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a3-l1",
+      "title": "Tính chất – điều chế hiđro; phản ứng thế; khử oxit kim loại",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a3-l2",
+      "title": "Nước: tính chất; phản ứng với kim loại/oxit",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a3-l3",
+      "title": "Axit – bazơ – muối: định nghĩa, phân loại, gọi tên",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a3-l4",
+      "title": "Nâng cao: khử hỗn hợp oxit, bài toán H2 + oxit kim loại",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

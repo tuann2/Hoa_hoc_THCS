@@ -15,8 +15,8 @@ Quyết định được chọn, mô tả ngắn gọn và dứt khoát.
 ## Alternatives considered
 
 | Phương án | Ưu điểm | Nhược điểm | Lý do loại |
-|---|---|---|---|
-| ... | ... | ... | ... |
+| --------- | ------- | ---------- | ---------- |
+| ...       | ...     | ...        | ...        |
 
 ## Consequences
 

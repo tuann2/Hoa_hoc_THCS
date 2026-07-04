@@ -1,0 +1,65 @@
+{
+  "id": "b4-gluxit-protein-polime",
+  "part": "organic",
+  "code": "B4",
+  "title": "Gluxit – Protein – Polime",
+  "order": 4,
+  "description": "Glucozơ, saccarozơ, tinh bột, protein, polime và chuỗi chuyển hoá hữu cơ.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "b4-l1",
+      "title": "Glucozơ; phản ứng tráng gương; lên men",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b4-l2",
+      "title": "Saccarozơ; thuỷ phân",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b4-l3",
+      "title": "Tinh bột và xenlulozơ",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b4-l4",
+      "title": "Protein",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b4-l5",
+      "title": "Polime – chất dẻo, tơ, cao su",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b4-l6",
+      "title": "Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men",
+      "order": 6,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

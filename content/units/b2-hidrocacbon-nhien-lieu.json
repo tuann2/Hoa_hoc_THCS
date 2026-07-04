@@ -1,0 +1,65 @@
+{
+  "id": "b2-hidrocacbon-nhien-lieu",
+  "part": "organic",
+  "code": "B2",
+  "title": "Hiđrocacbon – Nhiên liệu",
+  "order": 2,
+  "description": "Metan, etilen, axetilen, benzen và các dạng toán đốt cháy hiđrocacbon.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "b2-l1",
+      "title": "Metan: cấu tạo, phản ứng thế",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b2-l2",
+      "title": "Etilen: liên kết đôi, phản ứng cộng, trùng hợp",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b2-l3",
+      "title": "Axetilen: liên kết ba, phản ứng cộng; điều chế",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b2-l4",
+      "title": "Benzen: cấu tạo vòng, thế/cộng",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b2-l5",
+      "title": "Dầu mỏ – khí thiên nhiên – nhiên liệu",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b2-l6",
+      "title": "Nâng cao: bài toán đốt cháy hiđrocacbon, hỗn hợp khí",
+      "order": 6,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

@@ -1,0 +1,811 @@
+{
+  "id": "a8-muoi-phan-bon",
+  "part": "inorganic",
+  "code": "A8",
+  "title": "Muối – Phân bón hoá học",
+  "order": 8,
+  "description": "Từ tính chất của muối đến phân bón và các bài toán biện luận kết tủa, khí trong Hoá 9.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "a8-l1",
+      "title": "Tính chất hoá học của muối; phản ứng trao đổi",
+      "order": 1,
+      "summary": "Hệ thống các phản ứng của muối với kim loại, axit, bazơ, muối và điều kiện phản ứng trao đổi.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a8-l1-c1",
+          "heading": "Muối có thể phản ứng với gì?",
+          "body": "Muối có thể phản ứng với kim loại mạnh hơn, với axit, với bazơ và với muối khác. Tuy nhiên không phải lúc nào cũng xảy ra; cần xét điều kiện tạo kết tủa, tạo khí hoặc tạo chất điện li yếu."
+        },
+        {
+          "id": "a8-l1-c2",
+          "heading": "Phản ứng trao đổi xảy ra khi nào?",
+          "body": "Trong dung dịch, phản ứng trao đổi giữa hai chất điện li xảy ra khi sản phẩm có kết tủa, có khí bay lên hoặc có nước tạo thành.\nVí dụ: BaCl2 + Na2SO4 -> BaSO4 + 2NaCl."
+        },
+        {
+          "id": "a8-l1-c3",
+          "heading": "Đừng quên độ tan",
+          "body": "Muốn dự đoán phản ứng muối + muối hoặc muối + bazơ, phải nhớ chất nào tan, chất nào kết tủa. Ví dụ AgCl, BaSO4, CaCO3 không tan nên thường là lực đẩy phản ứng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a8-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Muối nào sau đây tan trong nước?",
+          "options": ["AgCl", "BaSO4", "NaCl", "CaCO3"],
+          "answer": 2,
+          "explanation": "B1. NaCl là muối tan quen thuộc. B2. AgCl, BaSO4 và CaCO3 đều không tan hoặc rất ít tan trong nước."
+        },
+        {
+          "id": "a8-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phản ứng trao đổi trong dung dịch xảy ra khi",
+          "options": [
+            "cả hai sản phẩm đều tan và bền",
+            "có ít nhất một sản phẩm là kết tủa, khí hoặc nước",
+            "hai chất tham gia đều là kim loại",
+            "nhiệt độ rất cao"
+          ],
+          "answer": 1,
+          "explanation": "B1. Phản ứng trao đổi cần có lực đẩy là tạo chất kết tủa, khí hoặc chất điện li yếu như nước. B2. Nếu mọi sản phẩm đều tan tốt thì phản ứng thường không xảy ra theo chiều đó."
+        },
+        {
+          "id": "a8-l1-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Kết tủa tạo thành khi trộn dung dịch BaCl2 và Na2SO4 là chất gì?",
+          "answer": "BaSO4",
+          "acceptedAnswers": ["sunfat bari", "bari sunfat"],
+          "placeholder": "Tên hoặc công thức kết tủa",
+          "explanation": "B1. Ion Ba^2+ kết hợp với ion SO4^2- tạo BaSO4 không tan. B2. Vì vậy kết tủa tạo ra là BaSO4."
+        },
+        {
+          "id": "a8-l1-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các trường hợp có phản ứng xảy ra trong dung dịch.",
+          "options": [
+            "Na2CO3 + HCl",
+            "BaCl2 + Na2SO4",
+            "NaCl + KNO3",
+            "CuSO4 + NaOH"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Na2CO3 gặp HCl tạo CO2. B2. BaCl2 với Na2SO4 tạo kết tủa BaSO4. B3. CuSO4 với NaOH tạo kết tủa Cu(OH)2. B4. NaCl và KNO3 đều tan nên không có lực đẩy phản ứng."
+        },
+        {
+          "id": "a8-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Kim loại nào có thể đẩy Cu ra khỏi dung dịch CuSO4?",
+          "options": ["Ag", "Au", "Fe", "Pt"],
+          "answer": 2,
+          "explanation": "B1. Kim loại mạnh hơn Cu mới đẩy được Cu^2+ ra khỏi muối. B2. Fe đứng trước Cu nên phản ứng xảy ra."
+        },
+        {
+          "id": "a8-l1-q6",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa BaCl2 và Na2SO4.",
+          "left": ["BaCl2", "Na2SO4"],
+          "right": ["BaSO4", "NaCl"],
+          "answer": [1, 1, 1, 2],
+          "explanation": "B1. Ba^2+ và SO4^2- ghép thành BaSO4 với hệ số 1. B2. Còn lại 2Na và 2Cl nên tạo 2NaCl."
+        },
+        {
+          "id": "a8-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trộn 0,10 mol BaCl2 với 0,20 mol Na2SO4. Số mol kết tủa tạo ra là",
+          "options": ["0,05 mol", "0,10 mol", "0,20 mol", "0,30 mol"],
+          "answer": 1,
+          "explanation": "B1. Phương trình có tỉ lệ 1 : 1 giữa BaCl2 và Na2SO4 để tạo BaSO4. B2. Chất giới hạn là BaCl2 với 0,10 mol nên số mol kết tủa BaSO4 là 0,10 mol."
+        },
+        {
+          "id": "a8-l1-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho Fe vào dung dịch CuSO4 dư. Sau phản ứng, kim loại bám ngoài đinh sắt là kim loại gì?",
+          "answer": "Cu",
+          "acceptedAnswers": ["đồng"],
+          "placeholder": "Tên hoặc kí hiệu kim loại",
+          "explanation": "B1. Fe mạnh hơn Cu nên đẩy được Cu khỏi muối. B2. Đồng kim loại tách ra bám lên bề mặt đinh sắt."
+        },
+        {
+          "id": "a8-l1-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các cặp chất tạo kết tủa khi trộn dung dịch của chúng.",
+          "options": [
+            "AgNO3 và NaCl",
+            "Na2SO4 và KCl",
+            "CuSO4 và NaOH",
+            "NaNO3 và HCl"
+          ],
+          "answers": [0, 2],
+          "explanation": "B1. AgNO3 với NaCl tạo AgCl trắng. B2. CuSO4 với NaOH tạo Cu(OH)2 xanh. B3. Hai cặp còn lại đều chỉ tạo các muối tan."
+        },
+        {
+          "id": "a8-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Điều kiện đúng để phản ứng giữa Na2CO3 và CaCl2 xảy ra là",
+          "options": [
+            "vì tạo kim loại tự do",
+            "vì tạo khí H2",
+            "vì tạo kết tủa CaCO3",
+            "vì cần đun nóng mạnh"
+          ],
+          "answer": 2,
+          "explanation": "B1. Ion Ca^2+ kết hợp với CO3^2- tạo CaCO3 không tan. B2. Kết tủa này kéo phản ứng xảy ra."
+        },
+        {
+          "id": "a8-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 0,10 mol Fe vào 100 ml dung dịch CuSO4 1M. Sau phản ứng, khối lượng kim loại rắn thu được là",
+          "options": ["5,6 g", "6,4 g", "12,0 g", "0 g"],
+          "answer": 1,
+          "explanation": "B1. nCuSO4 = 0,1 x 1 = 0,10 mol. B2. Phương trình: Fe + CuSO4 -> FeSO4 + Cu, tỉ lệ 1 : 1 nên Fe phản ứng hết và tạo 0,10 mol Cu. B3. Kim loại rắn cuối cùng là 0,10 mol Cu nên khối lượng là 6,4 g."
+        },
+        {
+          "id": "a8-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Trộn 0,20 mol AgNO3 với 0,10 mol NaCl. Khối lượng kết tủa tạo thành là bao nhiêu gam?",
+          "answer": "14,35",
+          "acceptedAnswers": ["14.35", "14,350", "14.350"],
+          "placeholder": "Khối lượng kết tủa",
+          "explanation": "B1. Phương trình: AgNO3 + NaCl -> AgCl + NaNO3. B2. Chất giới hạn là NaCl với 0,10 mol nên nAgCl = 0,10 mol. B3. MAgCl = 108 + 35,5 = 143,5 g/mol. B4. m = 0,10 x 143,5 = 14,35 g."
+        },
+        {
+          "id": "a8-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CuSO4 + NaOH -> Cu(OH)2 + Na2SO4.",
+          "left": ["CuSO4", "NaOH"],
+          "right": ["Cu(OH)2", "Na2SO4"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Gốc SO4 giữ nguyên ở CuSO4 và Na2SO4 nên đặt 1 cho hai chất này. B2. Muối natri cần 2Na nên phải có 2NaOH. B3. Hai nhóm OH còn lại tạo Cu(OH)2."
+        }
+      ]
+    },
+    {
+      "id": "a8-l2",
+      "title": "Một số muối quan trọng: NaCl, KNO3, muối cacbonat",
+      "order": 2,
+      "summary": "Khắc sâu tính chất, ứng dụng của NaCl, KNO3, CaCO3, Na2CO3 và NaHCO3.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a8-l2-c1",
+          "heading": "NaCl và KNO3",
+          "body": "NaCl là muối ăn, nguyên liệu quan trọng cho công nghiệp hoá chất. KNO3 là muối tan, cung cấp cả K và N cho cây, đồng thời là chất oxi hoá trong một số hỗn hợp."
+        },
+        {
+          "id": "a8-l2-c2",
+          "heading": "Muối cacbonat quen thuộc",
+          "body": "CaCO3 có trong đá vôi, đá phấn, cẩm thạch. Na2CO3 tan, còn gọi là soda; NaHCO3 là thuốc muối, bột nở và dễ bị nhiệt phân.\n2NaHCO3 -> Na2CO3 + CO2 + H2O."
+        },
+        {
+          "id": "a8-l2-c3",
+          "heading": "Nhận biết nhanh",
+          "body": "Muối cacbonat hoặc hiđrocacbonat gặp axit giải phóng CO2. Nhiều muối cacbonat kim loại kiềm tan, còn đa số cacbonat kim loại khác không tan."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a8-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Thành phần chính của đá vôi là",
+          "options": ["NaCl", "KNO3", "CaCO3", "NaHCO3"],
+          "answer": 2,
+          "explanation": "B1. Đá vôi, đá phấn, cẩm thạch đều chứa CaCO3 là thành phần chính. B2. Vì vậy đáp án đúng là CaCO3."
+        },
+        {
+          "id": "a8-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Muối nào dưới đây thường dùng làm phân đạm kali?",
+          "options": ["NaCl", "KNO3", "CaCO3", "Na2CO3"],
+          "answer": 1,
+          "explanation": "B1. KNO3 chứa K và N nên là loại phân cung cấp đồng thời hai nguyên tố này. B2. Do đó KNO3 được dùng làm phân kali đạm."
+        },
+        {
+          "id": "a8-l2-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khí sinh ra khi cho Na2CO3 tác dụng với HCl là khí gì?",
+          "answer": "CO2",
+          "acceptedAnswers": ["cacbon đioxit"],
+          "placeholder": "Tên hoặc công thức khí",
+          "explanation": "B1. Phản ứng: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. B2. Vì vậy khí thoát ra là CO2."
+        },
+        {
+          "id": "a8-l2-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phát biểu đúng.",
+          "options": [
+            "NaCl tan tốt trong nước",
+            "CaCO3 là chất không tan trong nước",
+            "NaHCO3 bị nhiệt phân khi đun nóng",
+            "KNO3 là muối không tan"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. NaCl tan tốt. B2. CaCO3 hầu như không tan. B3. NaHCO3 bị nhiệt phân tạo Na2CO3, CO2, H2O. B4. KNO3 là muối tan nên mệnh đề cuối sai."
+        },
+        {
+          "id": "a8-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "NaHCO3 còn được biết đến phổ biến với tên",
+          "options": ["muối ăn", "thuốc muối/bột nở", "phèn chua", "thạch cao"],
+          "answer": 1,
+          "explanation": "B1. NaHCO3 là natri hiđrocacbonat, dùng trong bột nở và thuốc muối. B2. Vì vậy đáp án đúng là thuốc muối/bột nở."
+        },
+        {
+          "id": "a8-l2-q6",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhiệt phân NaHCO3.",
+          "left": ["NaHCO3"],
+          "right": ["Na2CO3", "CO2", "H2O"],
+          "answer": [2, 1, 1, 1],
+          "explanation": "B1. Cần 2NaHCO3 để tạo 1Na2CO3. B2. Khi đó số H, C, O còn lại cân bằng thành 1CO2 và 1H2O."
+        },
+        {
+          "id": "a8-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 10,6 g Na2CO3 phản ứng hết với HCl dư. Khối lượng NaCl thu được là",
+          "options": ["5,85 g", "11,7 g", "10,6 g", "21,2 g"],
+          "answer": 1,
+          "explanation": "B1. nNa2CO3 = 10,6 / 106 = 0,10 mol. B2. Theo phương trình, 1 mol Na2CO3 tạo 2 mol NaCl nên nNaCl = 0,20 mol. B3. mNaCl = 0,20 x 58,5 = 11,7 g."
+        },
+        {
+          "id": "a8-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nhiệt phân hoàn toàn 16,8 g NaHCO3. Thể tích CO2 thu được ở đktc là bao nhiêu lít?",
+          "answer": "2,24",
+          "acceptedAnswers": ["2.24", "2,240", "2.240"],
+          "placeholder": "Thể tích CO2",
+          "explanation": "B1. nNaHCO3 = 16,8 / 84 = 0,20 mol. B2. Theo phương trình 2NaHCO3 -> Na2CO3 + CO2 + H2O, 0,20 mol NaHCO3 tạo 0,10 mol CO2. B3. VCO2 = 0,10 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a8-l2-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các ứng dụng đúng của những muối sau.",
+          "options": [
+            "NaCl dùng trong bảo quản thực phẩm",
+            "CaCO3 dùng sản xuất vôi",
+            "KNO3 không dùng làm phân bón",
+            "NaHCO3 dùng trong bột nở"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. NaCl được dùng bảo quản thực phẩm. B2. CaCO3 nung tạo CaO nên dùng sản xuất vôi. B3. KNO3 có dùng làm phân bón nên phát biểu thứ ba sai. B4. NaHCO3 là thành phần của bột nở."
+        },
+        {
+          "id": "a8-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,10 mol CaCO3 phản ứng với HCl dư. Số mol CO2 thu được là",
+          "options": ["0,05 mol", "0,10 mol", "0,20 mol", "0,30 mol"],
+          "answer": 1,
+          "explanation": "B1. Phương trình: CaCO3 + 2HCl -> CaCl2 + H2O + CO2. B2. Tỉ lệ CaCO3 : CO2 = 1 : 1 nên thu 0,10 mol CO2."
+        },
+        {
+          "id": "a8-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nhiệt phân hoàn toàn 33,6 g NaHCO3. Khối lượng Na2CO3 thu được là",
+          "options": ["10,6 g", "15,9 g", "21,2 g", "31,8 g"],
+          "answer": 2,
+          "explanation": "B1. nNaHCO3 = 33,6 / 84 = 0,40 mol. B2. Theo phương trình 2NaHCO3 -> Na2CO3 + CO2 + H2O, nNa2CO3 = 0,20 mol. B3. mNa2CO3 = 0,20 x 106 = 21,2 g."
+        },
+        {
+          "id": "a8-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 20 g hỗn hợp Na2CO3 và NaHCO3 tác dụng vừa đủ với HCl, thu được 4,48 lít CO2 (đktc). Tổng số mol hai muối ban đầu là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2", "0,20", "0.20"],
+          "placeholder": "Tổng số mol hỗn hợp",
+          "explanation": "B1. nCO2 = 4,48 / 22,4 = 0,20 mol. B2. Cả Na2CO3 và NaHCO3 đều cho 1 mol CO2 trên 1 mol muối. B3. Vì vậy tổng số mol hai muối ban đầu bằng 0,20 mol."
+        },
+        {
+          "id": "a8-l2-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa CaCO3 và HCl.",
+          "left": ["CaCO3", "HCl"],
+          "right": ["CaCl2", "H2O", "CO2"],
+          "answer": [1, 2, 1, 1, 1],
+          "explanation": "B1. CaCO3 tạo CaCl2 nên cần 2Cl, tức là 2HCl. B2. Phần H và O còn lại cân bằng thành 1H2O; C tạo 1CO2."
+        }
+      ]
+    },
+    {
+      "id": "a8-l3",
+      "title": "Muối axit và muối trung hoà; chuyển đổi qua lại",
+      "order": 3,
+      "summary": "Phân biệt muối axit, muối trung hoà và rèn tư duy đổi muối theo lượng axit/bazơ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a8-l3-c1",
+          "heading": "Muối axit và muối trung hoà khác nhau ở đâu?",
+          "body": "Muối trung hoà không còn H có khả năng thay thế bằng kim loại. Muối axit vẫn còn H trong gốc axit, ví dụ NaHCO3, NaHSO4, KH2PO4."
+        },
+        {
+          "id": "a8-l3-c2",
+          "heading": "Chuyển đổi qua lại",
+          "body": "Tăng lượng axit có thể chuyển muối trung hoà thành muối axit, còn tăng bazơ có thể chuyển muối axit thành muối trung hoà.\nVí dụ: Na2CO3 + HCl -> NaHCO3 + NaCl; NaHCO3 + NaOH -> Na2CO3 + H2O."
+        },
+        {
+          "id": "a8-l3-c3",
+          "heading": "Cách xét bài toán",
+          "body": "Trước tiên xác định axit đa nấc hay đơn nấc. Sau đó so lượng H^+ hoặc OH^- cung cấp với nhu cầu của gốc axit. Riêng hệ CO3^2- / HCO3^- rất hay ra đề biện luận."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a8-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào là muối axit?",
+          "options": ["Na2CO3", "NaHCO3", "K2SO4", "CaCl2"],
+          "answer": 1,
+          "explanation": "B1. Muối axit còn H trong gốc axit. B2. NaHCO3 còn H trong gốc HCO3^- nên là muối axit."
+        },
+        {
+          "id": "a8-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào là muối trung hoà?",
+          "options": ["NaHSO4", "NaHCO3", "Na2SO4", "KH2PO4"],
+          "answer": 2,
+          "explanation": "B1. Muối trung hoà không còn H có thể thay thế. B2. Na2SO4 không chứa H trong gốc nên là muối trung hoà."
+        },
+        {
+          "id": "a8-l3-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Sản phẩm khí khi cho NaHCO3 tác dụng với HCl là khí gì?",
+          "answer": "CO2",
+          "acceptedAnswers": ["cacbon đioxit"],
+          "placeholder": "Tên hoặc công thức khí",
+          "explanation": "B1. NaHCO3 + HCl -> NaCl + H2O + CO2. B2. Vì thế khí thoát ra là CO2."
+        },
+        {
+          "id": "a8-l3-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các muối axit trong danh sách sau.",
+          "options": ["NaHCO3", "KH2PO4", "Na2SO4", "Ca(HCO3)2"],
+          "answers": [0, 1, 3],
+          "explanation": "B1. NaHCO3, KH2PO4 và Ca(HCO3)2 đều còn H trong gốc axit. B2. Na2SO4 không còn H nên là muối trung hoà."
+        },
+        {
+          "id": "a8-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để chuyển NaHCO3 thành Na2CO3, cần cho tác dụng với",
+          "options": ["HCl", "NaOH", "CO2", "H2SO4 loãng"],
+          "answer": 1,
+          "explanation": "B1. Muối axit muốn chuyển thành muối trung hoà cần bổ sung bazơ. B2. NaHCO3 + NaOH -> Na2CO3 + H2O."
+        },
+        {
+          "id": "a8-l3-q6",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: NaHCO3 + NaOH -> Na2CO3 + H2O.",
+          "left": ["NaHCO3", "NaOH"],
+          "right": ["Na2CO3", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Hai chất phản ứng đã cung cấp đủ 2Na cho Na2CO3. B2. Số H và O còn lại tự cân bằng thành 1H2O."
+        },
+        {
+          "id": "a8-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,10 mol Na2CO3 tác dụng với 0,10 mol HCl. Muối tạo thành chủ yếu là",
+          "options": ["NaCl", "NaHCO3", "CO2", "Na2O"],
+          "answer": 1,
+          "explanation": "B1. Để chuyển hết Na2CO3 thành NaCl cần 0,20 mol HCl. B2. Chỉ có 0,10 mol HCl nên phản ứng dừng ở bước tạo NaHCO3."
+        },
+        {
+          "id": "a8-l3-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 8,4 g NaHCO3 bằng HCl dư. Thể tích CO2 thu được ở đktc là bao nhiêu lít?",
+          "answer": "2,24",
+          "acceptedAnswers": ["2.24", "2,240", "2.240"],
+          "placeholder": "Thể tích CO2",
+          "explanation": "B1. nNaHCO3 = 8,4 / 84 = 0,10 mol. B2. Tỉ lệ NaHCO3 : CO2 = 1 : 1 nên nCO2 = 0,10 mol. B3. VCO2 = 2,24 lít."
+        },
+        {
+          "id": "a8-l3-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng.",
+          "options": [
+            "NaHCO3 là muối axit",
+            "Na2CO3 là muối trung hoà",
+            "Na2CO3 gặp HCl dư cho CO2",
+            "NaHCO3 gặp NaOH có thể tạo Na2CO3"
+          ],
+          "answers": [0, 1, 2, 3],
+          "explanation": "B1. Cả bốn nhận định đều phù hợp với tính chất của hệ cacbonat – hiđrocacbonat. B2. Hai phản ứng cuối là các phản ứng chuyển đổi qua lại rất quan trọng."
+        },
+        {
+          "id": "a8-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,20 mol HCl tác dụng vừa đủ với Na2CO3. Số mol Na2CO3 cần dùng là",
+          "options": ["0,05 mol", "0,10 mol", "0,15 mol", "0,20 mol"],
+          "answer": 1,
+          "explanation": "B1. Phương trình: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. B2. Tỉ lệ là 1 : 2 nên số mol Na2CO3 cần là 0,20 / 2 = 0,10 mol."
+        },
+        {
+          "id": "a8-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 0,10 mol Na2CO3 vào 0,15 mol HCl. Số mol CO2 thu được là",
+          "options": ["0,025 mol", "0,050 mol", "0,075 mol", "0,100 mol"],
+          "answer": 1,
+          "explanation": "B1. 0,10 mol Na2CO3 cần 0,20 mol HCl để tạo hoàn toàn CO2. B2. Chỉ có 0,15 mol HCl nên sau khi tạo 0,10 mol NaHCO3 còn 0,05 mol HCl để phân huỷ 0,05 mol NaHCO3. B3. Vì thế nCO2 = 0,05 mol."
+        },
+        {
+          "id": "a8-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Muốn trung hoà hoàn toàn 0,10 mol NaHSO4 thành Na2SO4 cần thêm bao nhiêu mol NaOH?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1", "0,10", "0.10"],
+          "placeholder": "Số mol NaOH",
+          "explanation": "B1. NaHSO4 còn 1H axit nên cần 1OH^- để chuyển thành SO4^2-. B2. Vì thế 0,10 mol NaHSO4 cần 0,10 mol NaOH."
+        },
+        {
+          "id": "a8-l3-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Na2CO3 + HCl -> NaHCO3 + NaCl.",
+          "left": ["Na2CO3", "HCl"],
+          "right": ["NaHCO3", "NaCl"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Một mol HCl chỉ đủ proton hoá một nửa gốc CO3^2- thành HCO3^-. B2. Đồng thời tạo ra 1 mol NaCl, nên các hệ số đều bằng 1."
+        }
+      ]
+    },
+    {
+      "id": "a8-l4",
+      "title": "Phân bón hoá học",
+      "order": 4,
+      "summary": "Phân đạm, lân, kali, NPK và nguyên tắc sử dụng phân bón an toàn, hợp lí.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a8-l4-c1",
+          "heading": "Ba nhóm phân chính",
+          "body": "Phân đạm cung cấp N, phân lân cung cấp P, phân kali cung cấp K. Ngoài ra còn có phân hỗn hợp như NPK và phân vi lượng."
+        },
+        {
+          "id": "a8-l4-c2",
+          "heading": "Ví dụ quen thuộc",
+          "body": "Đạm urê CO(NH2)2, amoni nitrat NH4NO3; lân supephotphat chứa Ca(H2PO4)2; kali clorua KCl, kali nitrat KNO3. NPK phối hợp nhiều nguyên tố để bón cân đối."
+        },
+        {
+          "id": "a8-l4-c3",
+          "heading": "Dùng phân đúng cách",
+          "body": "Không bón quá nhiều một loại phân vì dễ làm đất chua, cây mất cân đối dinh dưỡng hoặc thất thoát. Đất chua thường cần bón vôi CaCO3 hoặc CaO để cải tạo trước khi bón phân."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a8-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nguyên tố dinh dưỡng chính do phân đạm cung cấp là",
+          "options": ["P", "K", "N", "Ca"],
+          "answer": 2,
+          "explanation": "B1. Tên gọi 'đạm' gắn với nguyên tố nitơ. B2. Vì vậy phân đạm chủ yếu cung cấp N."
+        },
+        {
+          "id": "a8-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phân nào sau đây là phân kali?",
+          "options": ["KCl", "NH4NO3", "Ca(H2PO4)2", "CO(NH2)2"],
+          "answer": 0,
+          "explanation": "B1. Phân kali là phân cung cấp K cho cây. B2. KCl chứa K nên là phân kali."
+        },
+        {
+          "id": "a8-l4-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Tên nguyên tố dinh dưỡng chính trong phân lân là gì?",
+          "answer": "photpho",
+          "acceptedAnswers": ["phospho", "p"],
+          "placeholder": "Nhập tên nguyên tố",
+          "explanation": "B1. Phân lân cung cấp nguyên tố P cho cây. B2. Tên nguyên tố đó là photpho."
+        },
+        {
+          "id": "a8-l4-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các chất có thể dùng làm phân đạm.",
+          "options": ["NH4NO3", "CO(NH2)2", "KCl", "NaCl"],
+          "answers": [0, 1],
+          "explanation": "B1. NH4NO3 và CO(NH2)2 đều giàu nitơ nên thuộc nhóm phân đạm. B2. KCl là phân kali, còn NaCl không dùng làm phân bón."
+        },
+        {
+          "id": "a8-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để giảm độ chua của đất, người ta thường bón thêm",
+          "options": ["KNO3", "NaCl", "vôi CaCO3", "AgNO3"],
+          "answer": 2,
+          "explanation": "B1. Vôi CaCO3 hoặc CaO có khả năng trung hoà môi trường chua. B2. Vì thế đất chua thường được cải tạo bằng cách bón vôi."
+        },
+        {
+          "id": "a8-l4-q6",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng điều chế amoni clorua: NH3 + HCl -> NH4Cl.",
+          "left": ["NH3", "HCl"],
+          "right": ["NH4Cl"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. Một phân tử NH3 kết hợp với một HCl tạo một NH4Cl. B2. Các nguyên tử N, H, Cl đã cân bằng với hệ số 1 : 1 : 1."
+        },
+        {
+          "id": "a8-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phân NPK là loại phân",
+          "options": [
+            "chỉ cung cấp N",
+            "hỗn hợp cung cấp N, P, K",
+            "chỉ dùng cho đất kiềm",
+            "không tan trong nước"
+          ],
+          "answer": 1,
+          "explanation": "B1. NPK là viết tắt của nitơ, photpho, kali. B2. Vì vậy đây là phân hỗn hợp cung cấp đồng thời N, P, K."
+        },
+        {
+          "id": "a8-l4-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Trong 1 mol NH4NO3 có bao nhiêu mol nguyên tử N?",
+          "answer": "2",
+          "acceptedAnswers": ["2,0", "2.0"],
+          "placeholder": "Số mol nguyên tử N",
+          "explanation": "B1. Công thức NH4NO3 có 2 nguyên tử N trong mỗi phân tử. B2. Do đó 1 mol NH4NO3 chứa 2 mol nguyên tử N."
+        },
+        {
+          "id": "a8-l4-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng về phân bón hoá học.",
+          "options": [
+            "Phân đạm giúp cây phát triển thân lá",
+            "Phân kali giúp cây cứng cây, tăng sức chống chịu",
+            "Đất chua không bao giờ cần bón vôi",
+            "Bón phân cần phù hợp loại đất và giai đoạn cây"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Phân đạm thúc đẩy phát triển thân lá. B2. Kali giúp cây cứng cáp, tăng sức chống chịu. B3. Đất chua thường cần bón vôi nên phát biểu thứ ba sai. B4. Sử dụng phân phải phù hợp đất và nhu cầu cây."
+        },
+        {
+          "id": "a8-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Muốn cung cấp đồng thời N và K cho cây bằng một muối duy nhất, nên chọn",
+          "options": ["KNO3", "KCl", "NaNO3", "CaCO3"],
+          "answer": 0,
+          "explanation": "B1. Cần một chất chứa cả K và N. B2. KNO3 đáp ứng đồng thời hai nguyên tố này."
+        },
+        {
+          "id": "a8-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Khối lượng N có trong 80 g NH4NO3 là",
+          "options": ["14 g", "20 g", "28 g", "35 g"],
+          "answer": 2,
+          "explanation": "B1. M(NH4NO3) = 80 g/mol, trong đó có 2 nguyên tử N nên khối lượng N trong 1 mol là 28 g. B2. Vì 80 g NH4NO3 đúng bằng 1 mol nên chứa 28 g N."
+        },
+        {
+          "id": "a8-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Phần trăm khối lượng N trong urê CO(NH2)2 là bao nhiêu?",
+          "answer": "46,67",
+          "acceptedAnswers": ["46.67", "46,7", "46.7"],
+          "placeholder": "Phần trăm khối lượng N",
+          "explanation": "B1. M urê = 12 + 16 + 28 + 4 = 60 g/mol. B2. Khối lượng N trong 1 mol là 28 g. B3. %N = 28 / 60 x 100% = 46,67%."
+        },
+        {
+          "id": "a8-l4-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng trung hoà đất chua bằng vôi: CaCO3 + HCl -> CaCl2 + H2O + CO2.",
+          "left": ["CaCO3", "HCl"],
+          "right": ["CaCl2", "H2O", "CO2"],
+          "answer": [1, 2, 1, 1, 1],
+          "explanation": "B1. CaCO3 tạo CaCl2 nên cần 2Cl, tức là 2HCl. B2. Phần còn lại cân bằng thành 1H2O và 1CO2."
+        }
+      ]
+    },
+    {
+      "id": "a8-l5",
+      "title": "Nâng cao: bài toán muối + muối/axit/kiềm",
+      "order": 5,
+      "summary": "Biện luận kết tủa, khí, phản ứng theo từng bước với hệ cacbonat, hiđrocacbonat và muối kim loại.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a8-l5-c1",
+          "heading": "Ưu tiên gì trong bài toán biện luận?",
+          "body": "Hãy xem phản ứng tạo kết tủa, khí hay trung hoà xảy ra trước. Với hệ CO3^2- / HCO3^- và H^+, phản ứng diễn ra theo từng nấc nên lượng H^+ quyết định sản phẩm cuối."
+        },
+        {
+          "id": "a8-l5-c2",
+          "heading": "Tư duy chất giới hạn",
+          "body": "Khi trộn hai dung dịch tạo kết tủa, thường xét số mol ion trực tiếp tạo kết tủa để tìm chất giới hạn. Ví dụ Ba^2+ và SO4^2- tạo BaSO4 theo tỉ lệ 1:1."
+        },
+        {
+          "id": "a8-l5-c3",
+          "heading": "Dùng bảo toàn nhanh",
+          "body": "Bảo toàn nguyên tố và điện tích giúp rút ngắn lời giải. Với hỗn hợp cacbonat, tổng số mol CO2 sau khi phản ứng hết bằng tổng số mol gốc CO3 tương ứng đã bị axit phân huỷ."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a8-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trộn dung dịch nào sau đây chắc chắn tạo kết tủa?",
+          "options": [
+            "NaCl và KNO3",
+            "BaCl2 và Na2SO4",
+            "NaOH và KCl",
+            "HCl và NaNO3"
+          ],
+          "answer": 1,
+          "explanation": "B1. Ba^2+ gặp SO4^2- tạo BaSO4 không tan. B2. Các cặp còn lại chỉ tạo các chất tan nên không có kết tủa."
+        },
+        {
+          "id": "a8-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Cho HCl vào Na2CO3, hiện tượng chính là",
+          "options": [
+            "xuất hiện kết tủa trắng",
+            "sủi bọt khí",
+            "dung dịch chuyển xanh",
+            "kim loại bám lên thành cốc"
+          ],
+          "answer": 1,
+          "explanation": "B1. Muối cacbonat gặp axit giải phóng CO2. B2. Vì vậy quan sát thấy sủi bọt khí."
+        },
+        {
+          "id": "a8-l5-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Kết tủa trắng tạo thành khi trộn AgNO3 với NaCl là",
+          "answer": "AgCl",
+          "acceptedAnswers": ["bạc clorua", "clorua bạc"],
+          "placeholder": "Tên hoặc công thức kết tủa",
+          "explanation": "B1. Ag^+ kết hợp với Cl^- tạo AgCl không tan. B2. Do đó chất kết tủa là AgCl."
+        },
+        {
+          "id": "a8-l5-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các cặp chất có thể tạo khí khi trộn hoặc cho tác dụng với nhau.",
+          "options": [
+            "Na2CO3 và HCl",
+            "NaHCO3 và HCl",
+            "BaCl2 và Na2SO4",
+            "FeS và HCl"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Na2CO3 và NaHCO3 gặp HCl đều tạo CO2. B2. FeS gặp HCl tạo H2S. B3. BaCl2 với Na2SO4 chỉ tạo kết tủa BaSO4."
+        },
+        {
+          "id": "a8-l5-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi cho NaOH vào CuSO4, chất kết tủa thu được là",
+          "options": ["Cu", "CuO", "Cu(OH)2", "Na2SO4"],
+          "answer": 2,
+          "explanation": "B1. Ion Cu^2+ tác dụng với OH^- tạo kết tủa Cu(OH)2 màu xanh. B2. Vì vậy chất kết tủa là Cu(OH)2."
+        },
+        {
+          "id": "a8-l5-q6",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa Na2CO3 và HCl.",
+          "left": ["Na2CO3", "HCl"],
+          "right": ["NaCl", "H2O", "CO2"],
+          "answer": [1, 2, 2, 1, 1],
+          "explanation": "B1. Na2CO3 tạo 2NaCl nên cần 2HCl. B2. H và O còn lại cân bằng thành 1H2O; C tạo 1CO2."
+        },
+        {
+          "id": "a8-l5-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trộn 0,10 mol BaCl2 với 0,05 mol Na2SO4. Số mol kết tủa tạo ra là",
+          "options": ["0,025 mol", "0,050 mol", "0,100 mol", "0,150 mol"],
+          "answer": 1,
+          "explanation": "B1. Phản ứng tạo BaSO4 theo tỉ lệ 1 : 1. B2. Na2SO4 là chất giới hạn với 0,05 mol nên kết tủa tạo ra là 0,05 mol."
+        },
+        {
+          "id": "a8-l5-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho HCl dư vào 8,4 g NaHCO3. Khối lượng khí CO2 thu được là bao nhiêu gam?",
+          "answer": "4,4",
+          "acceptedAnswers": ["4.4", "4,40", "4.40"],
+          "placeholder": "Khối lượng CO2",
+          "explanation": "B1. nNaHCO3 = 8,4 / 84 = 0,10 mol. B2. Tỉ lệ NaHCO3 : CO2 = 1 : 1 nên nCO2 = 0,10 mol. B3. mCO2 = 0,10 x 44 = 4,4 g."
+        },
+        {
+          "id": "a8-l5-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các trường hợp có thể dùng để nhận biết ion SO4^2-.",
+          "options": ["BaCl2", "AgNO3", "HCl", "NaOH"],
+          "answers": [0],
+          "explanation": "B1. Ion Ba^2+ tạo kết tủa BaSO4 trắng rất bền với SO4^2-. B2. Các chất còn lại không phải thuốc thử đặc trưng cho sunfat ở mức THCS."
+        },
+        {
+          "id": "a8-l5-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,10 mol AgNO3 vào dung dịch chứa 0,20 mol NaCl. Số mol AgCl thu được là",
+          "options": ["0,05 mol", "0,10 mol", "0,20 mol", "0,30 mol"],
+          "answer": 1,
+          "explanation": "B1. AgNO3 và NaCl phản ứng theo tỉ lệ 1 : 1. B2. AgNO3 là chất giới hạn với 0,10 mol nên tạo 0,10 mol AgCl."
+        },
+        {
+          "id": "a8-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 0,10 mol Na2CO3 vào 0,15 mol HCl. Sau phản ứng, số mol NaHCO3 còn lại trong dung dịch là",
+          "options": ["0,00 mol", "0,05 mol", "0,10 mol", "0,15 mol"],
+          "answer": 1,
+          "explanation": "B1. Bước 1: 0,10 mol Na2CO3 dùng 0,10 mol HCl để tạo 0,10 mol NaHCO3. B2. HCl còn 0,05 mol tiếp tục phân huỷ 0,05 mol NaHCO3 thành CO2. B3. Vậy còn lại 0,05 mol NaHCO3."
+        },
+        {
+          "id": "a8-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Trộn 200 ml dung dịch BaCl2 1M với 300 ml dung dịch Na2SO4 0,5M. Khối lượng BaSO4 thu được là bao nhiêu gam?",
+          "answer": "34,95",
+          "acceptedAnswers": ["34.95", "34,950", "34.950"],
+          "placeholder": "Khối lượng kết tủa",
+          "explanation": "B1. nBaCl2 = 0,20 x 1 = 0,20 mol; nNa2SO4 = 0,30 x 0,5 = 0,15 mol. B2. Tỉ lệ 1 : 1 nên Na2SO4 là chất giới hạn, nBaSO4 = 0,15 mol. B3. MBaSO4 = 137 + 96 = 233 g/mol. B4. m = 0,15 x 233 = 34,95 g."
+        },
+        {
+          "id": "a8-l5-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: FeS + 2HCl -> FeCl2 + H2S.",
+          "left": ["FeS", "HCl"],
+          "right": ["FeCl2", "H2S"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Fe và S đã cân bằng với hệ số 1 cho FeS, FeCl2, H2S. B2. Để có 2Cl trong FeCl2 cần 2HCl. B3. Hai H còn lại ghép vào S tạo H2S."
+        }
+      ]
+    }
+  ]
+}

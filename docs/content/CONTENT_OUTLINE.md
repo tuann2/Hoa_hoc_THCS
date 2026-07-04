@@ -17,7 +17,7 @@ trọng tâm.
 
 ## PHẦN A — HOÁ VÔ CƠ
 
-### A1. Nền tảng hoá học *(gộp SGK Hoá 8 ch.1–3: kiến thức nền, học nhanh)*
+### A1. Nền tảng hoá học _(gộp SGK Hoá 8 ch.1–3: kiến thức nền, học nhanh)_
 
 1. Chất – hỗn hợp – tách chất; nguyên tử, p – n – e
 2. Nguyên tố hoá học – nguyên tử khối; sơ lược bảng tuần hoàn
@@ -30,20 +30,20 @@ trọng tâm.
 9. Nâng cao: bài toán hỗn hợp (hệ phương trình, M̄); tăng – giảm khối
    lượng; bảo toàn nguyên tố, bảo toàn khối lượng
 
-### A2. Oxi – Không khí *(SGK Hoá 8 ch.4)*
+### A2. Oxi – Không khí _(SGK Hoá 8 ch.4)_
 
 1. Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ
 2. Oxit: phân loại, gọi tên (mở đầu)
 3. Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp
 
-### A3. Hiđro – Nước *(SGK Hoá 8 ch.5)*
+### A3. Hiđro – Nước _(SGK Hoá 8 ch.5)_
 
 1. Tính chất – điều chế hiđro; phản ứng thế; khử oxit kim loại
 2. Nước: tính chất; phản ứng với kim loại/oxit
 3. Axit – bazơ – muối: định nghĩa, phân loại, gọi tên (mở đầu)
 4. Nâng cao: khử hỗn hợp oxit, bài toán H₂ + CuO/Fe₂O₃…
 
-### A4. Dung dịch *(SGK Hoá 8 ch.6 — trọng tâm HSG)*
+### A4. Dung dịch _(SGK Hoá 8 ch.6 — trọng tâm HSG)_
 
 1. Độ tan; các yếu tố ảnh hưởng
 2. Nồng độ % và nồng độ mol; chuyển đổi
@@ -51,14 +51,14 @@ trọng tâm.
 4. Nâng cao: tinh thể ngậm nước (CuSO₄·5H₂O…); bài toán kết tinh
 5. Nâng cao: bài toán dung dịch tổng hợp (trộn nhiều dung dịch, C% sau phản ứng)
 
-### A5. Oxit *(tách từ SGK Hoá 9 ch.1 — nhiều kiến thức phải nhớ)*
+### A5. Oxit _(tách từ SGK Hoá 9 ch.1 — nhiều kiến thức phải nhớ)_
 
 1. Phân loại oxit: bazơ, axit, lưỡng tính, trung tính; gọi tên
 2. Tính chất hoá học của oxit bazơ; CaO – vôi
 3. Tính chất hoá học của oxit axit; SO₂
 4. Nâng cao: oxit lưỡng tính (Al₂O₃, ZnO); bài toán oxit + axit/kiềm
 
-### A6. Axit *(tách từ SGK Hoá 9 ch.1)*
+### A6. Axit _(tách từ SGK Hoá 9 ch.1)_
 
 1. Tính chất hoá học chung của axit; thang pH (mở rộng)
 2. Axit clohiđric HCl
@@ -66,7 +66,7 @@ trọng tâm.
 4. Nâng cao: axit tác dụng kim loại/muối — thứ tự phản ứng, chất dư
 5. Nâng cao: bài toán hỗn hợp axit, axit đặc – loãng
 
-### A7. Bazơ *(tách từ SGK Hoá 9 ch.1)*
+### A7. Bazơ _(tách từ SGK Hoá 9 ch.1)_
 
 1. Tính chất hoá học chung của bazơ; bazơ tan và không tan
 2. Natri hiđroxit NaOH; điều chế
@@ -74,7 +74,7 @@ trọng tâm.
 4. Nâng cao: bài toán CO₂/SO₂ + dung dịch kiềm (biện luận 2 muối)
 5. Nâng cao: hiđroxit lưỡng tính (Al(OH)₃, Zn(OH)₂)
 
-### A8. Muối – Phân bón hoá học *(tách từ SGK Hoá 9 ch.1)*
+### A8. Muối – Phân bón hoá học _(tách từ SGK Hoá 9 ch.1)_
 
 1. Tính chất hoá học của muối; phản ứng trao đổi và điều kiện xảy ra
 2. Một số muối quan trọng: NaCl, KNO₃, muối cacbonat
@@ -82,14 +82,14 @@ trọng tâm.
 4. Phân bón hoá học
 5. Nâng cao: bài toán muối + muối/axit/kiềm — biện luận kết tủa, khí
 
-### A9. Mối quan hệ giữa các hợp chất vô cơ *(tách từ SGK Hoá 9 ch.1 — chuyên đề xâu chuỗi)*
+### A9. Mối quan hệ giữa các hợp chất vô cơ _(tách từ SGK Hoá 9 ch.1 — chuyên đề xâu chuỗi)_
 
 1. Sơ đồ mối quan hệ oxit – axit – bazơ – muối
 2. Chuỗi phản ứng vô cơ; điều chế nhiều bước
 3. Nâng cao: nhận biết – tách – tinh chế chất vô cơ
 4. Nâng cao: bài tập tổng hợp 4 loại hợp chất (đề HSG)
 
-### A10. Kim loại *(SGK Hoá 9 ch.2)*
+### A10. Kim loại _(SGK Hoá 9 ch.2)_
 
 1. Tính chất chung; dãy hoạt động hoá học
 2. Nhôm; sắt; hợp kim gang – thép
@@ -97,7 +97,7 @@ trọng tâm.
 4. Nâng cao: kim loại + dung dịch muối (1 và nhiều muối, biện luận)
 5. Nâng cao: bài toán hỗn hợp kim loại + axit; kim loại dư/axit dư
 
-### A11. Phi kim *(SGK Hoá 9 ch.3)*
+### A11. Phi kim _(SGK Hoá 9 ch.3)_
 
 1. Tính chất chung của phi kim
 2. Clo; điều chế và ứng dụng; nước Gia-ven, clorua vôi (mở rộng)
@@ -105,7 +105,7 @@ trọng tâm.
 4. Silic – công nghiệp silicat
 5. Nâng cao: CO khử oxit; bài toán muối cacbonat + axit (thứ tự phản ứng)
 
-### A12. Chuyên đề tổng hợp Vô cơ *(chỉ dành cho HSG/chuyên)*
+### A12. Chuyên đề tổng hợp Vô cơ _(chỉ dành cho HSG/chuyên)_
 
 1. Chuỗi phản ứng – điều chế nhiều bước (tổng hợp toàn phần Vô cơ)
 2. Nhận biết không giới hạn/giới hạn thuốc thử; tách chất (tổng hợp)
@@ -114,7 +114,7 @@ trọng tâm.
 
 ---
 
-## PHẦN B — HOÁ HỮU CƠ *(SGK Hoá 9 ch.4–5)*
+## PHẦN B — HOÁ HỮU CƠ _(SGK Hoá 9 ch.4–5)_
 
 ### B1. Đại cương về hợp chất hữu cơ
 
@@ -148,7 +148,7 @@ trọng tâm.
 5. Polime – chất dẻo, tơ, cao su
 6. Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men – hiệu suất nhiều giai đoạn
 
-### B5. Chuyên đề tổng hợp Hữu cơ *(HSG/chuyên)*
+### B5. Chuyên đề tổng hợp Hữu cơ _(HSG/chuyên)_
 
 1. Biện luận công thức phân tử hợp chất hữu cơ
 2. Chuỗi phản ứng hữu cơ; nhận biết chất hữu cơ
@@ -158,13 +158,13 @@ trọng tâm.
 
 ## Quy ước biên soạn mỗi bài học (lesson)
 
-| Thành phần | Yêu cầu |
-|---|---|
-| Thẻ lý thuyết | ≤ 5 thẻ/bài, mỗi thẻ 1 ý chính, có ví dụ + PTHH minh hoạ |
-| Câu hỏi mức Cơ bản | 5–8 câu (nhận biết, thông hiểu) |
-| Câu hỏi mức Vận dụng | 5–8 câu (tính toán chuẩn SGK) |
-| Câu hỏi mức HSG | 3–5 câu (đề HSG huyện/tỉnh, đề chuyên đã công bố, có lời giải chi tiết) |
-| Lời giải | Bắt buộc cho 100% câu hỏi, giải từng bước |
+| Thành phần           | Yêu cầu                                                                 |
+| -------------------- | ----------------------------------------------------------------------- |
+| Thẻ lý thuyết        | ≤ 5 thẻ/bài, mỗi thẻ 1 ý chính, có ví dụ + PTHH minh hoạ                |
+| Câu hỏi mức Cơ bản   | 5–8 câu (nhận biết, thông hiểu)                                         |
+| Câu hỏi mức Vận dụng | 5–8 câu (tính toán chuẩn SGK)                                           |
+| Câu hỏi mức HSG      | 3–5 câu (đề HSG huyện/tỉnh, đề chuyên đã công bố, có lời giải chi tiết) |
+| Lời giải             | Bắt buộc cho 100% câu hỏi, giải từng bước                               |
 
 Dạng câu hỏi hỗ trợ: trắc nghiệm 1 đáp án, trắc nghiệm nhiều đáp án,
 điền số/từ vào chỗ trống, điền hệ số cân bằng PTHH, ghép cặp

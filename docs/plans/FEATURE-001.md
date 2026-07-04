@@ -103,24 +103,28 @@ tương tác cần SPA; sau này thêm backend không phải viết lại UI.
 // content/units/a6-axit.json
 {
   "id": "a6-axit",
-  "part": "inorganic",            // inorganic | organic
+  "part": "inorganic", // inorganic | organic
   "title": "Axit",
   "order": 6,
-  "status": "available",          // available | coming-soon
-  "lessons": [{
-    "id": "a6-l1",
-    "title": "Tính chất hoá học chung của axit",
-    "cards": [{ "heading": "...", "body": "markdown + hoá học" }],
-    "questions": [{
-      "type": "single-choice",    // multi-choice | fill-blank | balance
-      "level": "hsg",             // basic | applied | hsg
-      "prompt": "...",
-      "options": ["..."],
-      "answer": 2,
-      "explanation": "lời giải từng bước",
-      "source": "Đề HSG tỉnh X 2024"   // với câu sưu tầm
-    }]
-  }]
+  "status": "available", // available | coming-soon
+  "lessons": [
+    {
+      "id": "a6-l1",
+      "title": "Tính chất hoá học chung của axit",
+      "cards": [{ "heading": "...", "body": "markdown + hoá học" }],
+      "questions": [
+        {
+          "type": "single-choice", // multi-choice | fill-blank | balance
+          "level": "hsg", // basic | applied | hsg
+          "prompt": "...",
+          "options": ["..."],
+          "answer": 2,
+          "explanation": "lời giải từng bước",
+          "source": "Đề HSG tỉnh X 2024" // với câu sưu tầm
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -197,13 +201,13 @@ Không có API/DB. Tiến độ chỉ nằm trong `localStorage`
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-|---|---|---|
-| Nội dung hoá học sai (nguy hiểm nhất với app học tập) | Cao | Quy ước lời giải từng bước; validate PTHH tự động; người duyệt rà trước khi merge; ghi nguồn câu HSG |
-| Biên soạn 10 bài mẫu (A6: 5, A8: 5) tốn công hơn dự kiến | Trung bình | Acceptance chỉ yêu cầu tối thiểu 3 bài/chuyên đề; ưu tiên chất lượng hơn số lượng |
-| Bản quyền đề thi sưu tầm | Trung bình | Chỉ dùng đề đã công bố công khai, ghi nguồn; lời giải tự viết |
-| localStorage mất khi xoá cache → mất tiến độ | Thấp | Chấp nhận ở MVP; schema có version, thêm export/import hoặc account ở phase sau |
-| Duolingo-style dễ thành "làm quiz chay" thiếu chiều sâu HSG | Trung bình | Mỗi bài bắt buộc có mức HSG với lời giải chi tiết; thẻ lý thuyết cô đọng phương pháp giải |
+| Risk                                                        | Impact     | Mitigation                                                                                           |
+| ----------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------- |
+| Nội dung hoá học sai (nguy hiểm nhất với app học tập)       | Cao        | Quy ước lời giải từng bước; validate PTHH tự động; người duyệt rà trước khi merge; ghi nguồn câu HSG |
+| Biên soạn 10 bài mẫu (A6: 5, A8: 5) tốn công hơn dự kiến    | Trung bình | Acceptance chỉ yêu cầu tối thiểu 3 bài/chuyên đề; ưu tiên chất lượng hơn số lượng                    |
+| Bản quyền đề thi sưu tầm                                    | Trung bình | Chỉ dùng đề đã công bố công khai, ghi nguồn; lời giải tự viết                                        |
+| localStorage mất khi xoá cache → mất tiến độ                | Thấp       | Chấp nhận ở MVP; schema có version, thêm export/import hoặc account ở phase sau                      |
+| Duolingo-style dễ thành "làm quiz chay" thiếu chiều sâu HSG | Trung bình | Mỗi bài bắt buộc có mức HSG với lời giải chi tiết; thẻ lý thuyết cô đọng phương pháp giải            |
 
 ## 14. Rollback plan
 

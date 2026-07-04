@@ -1,0 +1,56 @@
+{
+  "id": "a11-phi-kim",
+  "part": "inorganic",
+  "code": "A11",
+  "title": "Phi kim",
+  "order": 11,
+  "description": "Phi kim, clo, cacbon, silic và các bài toán muối cacbonat với axit.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a11-l1",
+      "title": "Tính chất chung của phi kim",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a11-l2",
+      "title": "Clo; điều chế và ứng dụng; nước Gia-ven, clorua vôi",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a11-l3",
+      "title": "Cacbon và các oxit của cacbon; muối cacbonat",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a11-l4",
+      "title": "Silic – công nghiệp silicat",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a11-l5",
+      "title": "Nâng cao: CO khử oxit; muối cacbonat + axit",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

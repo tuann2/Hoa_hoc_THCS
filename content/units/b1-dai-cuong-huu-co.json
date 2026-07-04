@@ -1,0 +1,38 @@
+{
+  "id": "b1-dai-cuong-huu-co",
+  "part": "organic",
+  "code": "B1",
+  "title": "Đại cương về hợp chất hữu cơ",
+  "order": 1,
+  "description": "Khái niệm, phân loại, công thức cấu tạo và bài toán tìm công thức phân tử hữu cơ.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "b1-l1",
+      "title": "Khái niệm; phân loại hiđrocacbon/dẫn xuất",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b1-l2",
+      "title": "Cấu tạo phân tử hợp chất hữu cơ; CTCT",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "b1-l3",
+      "title": "Nâng cao: lập CTPT từ % khối lượng, sản phẩm đốt cháy",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}

@@ -10,10 +10,10 @@ Mô tả ngắn kết quả triển khai.
 
 ## 2. Files changed
 
-| File | Change |
-|---|---|
-| `src/...` | ... |
-| `tests/...` | ... |
+| File        | Change |
+| ----------- | ------ |
+| `src/...`   | ...    |
+| `tests/...` | ...    |
 
 ## 3. Design decisions
 
@@ -36,11 +36,11 @@ npm run build
 
 ## 6. Validation results
 
-| Check | Result |
-|---|---|
-| Lint | PASS |
-| Unit tests | PASS |
-| Build | PASS |
+| Check      | Result |
+| ---------- | ------ |
+| Lint       | PASS   |
+| Unit tests | PASS   |
+| Build      | PASS   |
 
 ## 7. Known limitations
 

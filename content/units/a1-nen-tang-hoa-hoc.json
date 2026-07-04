@@ -1,0 +1,92 @@
+{
+  "id": "a1-nen-tang-hoa-hoc",
+  "part": "inorganic",
+  "code": "A1",
+  "title": "Nền tảng hoá học",
+  "order": 1,
+  "description": "Kiến thức nền Hoá 8: nguyên tử, công thức, mol, bảo toàn và các dạng toán mở đầu.",
+  "status": "coming-soon",
+  "lessons": [
+    {
+      "id": "a1-l1",
+      "title": "Chất – hỗn hợp – tách chất; nguyên tử, p – n – e",
+      "order": 1,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l2",
+      "title": "Nguyên tố hoá học – nguyên tử khối; sơ lược bảng tuần hoàn",
+      "order": 2,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l3",
+      "title": "Đơn chất – hợp chất – phân tử; CTHH và ý nghĩa",
+      "order": 3,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l4",
+      "title": "Hoá trị; lập CTHH theo hoá trị",
+      "order": 4,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l5",
+      "title": "Phản ứng hoá học; định luật bảo toàn khối lượng; cân bằng PTHH",
+      "order": 5,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l6",
+      "title": "Mol – khối lượng mol – thể tích mol khí; tỉ khối chất khí",
+      "order": 6,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l7",
+      "title": "Tính theo CTHH và PTHH: %m, chất dư – chất hết, hiệu suất",
+      "order": 7,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l8",
+      "title": "Nâng cao: biện luận tìm nguyên tố/CTHH; cân bằng phản ứng phức tạp",
+      "order": 8,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    },
+    {
+      "id": "a1-l9",
+      "title": "Nâng cao: bài toán hỗn hợp; tăng – giảm khối lượng; bảo toàn",
+      "order": 9,
+      "summary": "Đang biên soạn.",
+      "status": "coming-soon",
+      "cards": [],
+      "questions": []
+    }
+  ]
+}
