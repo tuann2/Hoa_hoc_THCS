@@ -5,43 +5,635 @@
   "title": "Oxit",
   "order": 5,
   "description": "Phân loại oxit, tính chất của oxit bazơ, oxit axit và oxit lưỡng tính.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a5-l1",
-      "title": "Phân loại oxit: bazơ, axit, lưỡng tính, trung tính; gọi tên",
+      "title": "Phân loại oxit và gọi tên",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Bốn loại oxit (bazơ, axit, lưỡng tính, trung tính), cách gọi tên và bài toán xác định nguyên tố từ công thức oxit.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a5-l1-c1",
+          "heading": "Oxit là gì? Bốn loại oxit",
+          "body": "Oxit là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Dựa vào tính chất hoá học, oxit chia thành 4 loại:\n- Oxit bazơ: thường là oxit kim loại, tương ứng với một bazơ. Ví dụ: Na2O, CaO, CuO.\n- Oxit axit: thường là oxit phi kim, tương ứng với một axit. Ví dụ: CO2, SO2, P2O5.\n- Oxit lưỡng tính: tác dụng được cả với axit và kiềm. Ví dụ: Al2O3, ZnO.\n- Oxit trung tính (không tạo muối): không tác dụng với axit, bazơ, nước. Ví dụ: CO, NO."
+        },
+        {
+          "id": "a5-l1-c2",
+          "heading": "Cách gọi tên oxit",
+          "body": "Oxit kim loại: tên kim loại (kèm hoá trị nếu kim loại nhiều hoá trị) + oxit.\nVí dụ: FeO là sắt(II) oxit; Fe2O3 là sắt(III) oxit; CuO là đồng(II) oxit.\nOxit phi kim: dùng tiền tố chỉ số nguyên tử (mono, đi, tri, tetra, penta).\nVí dụ: SO2 là lưu huỳnh đioxit; SO3 là lưu huỳnh trioxit; P2O5 là điphotpho pentaoxit."
+        },
+        {
+          "id": "a5-l1-c3",
+          "heading": "Oxit tương ứng với bazơ và axit",
+          "body": "Mỗi oxit bazơ tương ứng một bazơ, mỗi oxit axit tương ứng một axit:\nNa2O ứng với NaOH; CaO ứng với Ca(OH)2; CO2 ứng với H2CO3; SO3 ứng với H2SO4; P2O5 ứng với H3PO4.\nMẹo giải nhanh: bài toán tìm nguyên tố trong oxit thường dựa vào phần trăm khối lượng của oxi — lập biểu thức %O theo nguyên tử khối rồi giải."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a5-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dãy nào sau đây gồm toàn oxit axit?",
+          "options": [
+            "CO2, SO3, P2O5",
+            "CO2, CaO, SO2",
+            "Na2O, MgO, CO",
+            "CO, NO, SO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO2, SO3, P2O5 đều là oxit phi kim tương ứng với các axit H2CO3, H2SO4, H3PO4. B2. Các dãy còn lại chứa oxit bazơ (CaO, Na2O, MgO) hoặc oxit trung tính (CO, NO)."
+        },
+        {
+          "id": "a5-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Tên gọi đúng của Fe2O3 là",
+          "options": [
+            "sắt(III) oxit",
+            "sắt(II) oxit",
+            "sắt oxit",
+            "đisắt trioxit"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong Fe2O3, oxi hoá trị II nên 3 nguyên tử O mang tổng hoá trị VI. B2. Hai nguyên tử Fe chia đều nên Fe hoá trị III. B3. Fe là kim loại nhiều hoá trị nên phải kèm hoá trị: sắt(III) oxit."
+        },
+        {
+          "id": "a5-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các chất là oxit bazơ.",
+          "options": ["Na2O", "CaO", "SO2", "Al2O3"],
+          "answers": [0, 1],
+          "explanation": "B1. Na2O và CaO là oxit kim loại, tương ứng với các bazơ NaOH và Ca(OH)2. B2. SO2 là oxit axit. B3. Al2O3 tác dụng được cả với axit và kiềm nên là oxit lưỡng tính, không xếp vào oxit bazơ."
+        },
+        {
+          "id": "a5-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "CO và NO không tác dụng với axit, bazơ hay nước. Chúng thuộc loại oxit gì?",
+          "answer": "trung tính",
+          "acceptedAnswers": [
+            "oxit trung tính",
+            "không tạo muối",
+            "oxit không tạo muối"
+          ],
+          "placeholder": "Nhập loại oxit",
+          "explanation": "B1. CO và NO không tạo muối khi gặp axit hoặc kiềm. B2. Vì vậy chúng được gọi là oxit trung tính (oxit không tạo muối)."
+        },
+        {
+          "id": "a5-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "SO3 là oxit tương ứng với axit nào?",
+          "options": ["H2SO4", "H2SO3", "H2S", "HNO3"],
+          "answer": 0,
+          "explanation": "B1. SO3 tan trong nước tạo H2SO4 (lưu huỳnh giữ nguyên hoá trị VI). B2. H2SO3 tương ứng với SO2, còn H2S và HNO3 không phải axit tương ứng của SO3."
+        },
+        {
+          "id": "a5-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phần trăm khối lượng của oxi trong Fe2O3 là",
+          "options": ["30%", "40%", "48%", "70%"],
+          "answer": 0,
+          "explanation": "B1. M(Fe2O3) = 2 x 56 + 3 x 16 = 160 g/mol. B2. Khối lượng O trong 1 mol là 48 g. B3. %O = 48 / 160 x 100% = 30%."
+        },
+        {
+          "id": "a5-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxit R2O3 có phần trăm khối lượng của R bằng 52,94%. R là nguyên tố nào?",
+          "options": ["Al", "Fe", "Cr", "B"],
+          "answer": 0,
+          "explanation": "B1. Gọi nguyên tử khối của R là M: %R = 2M / (2M + 48) = 0,5294. B2. Biến đổi: 2M = 0,5294 x (2M + 48) nên 0,9412M = 25,41, tức M = 27. B3. M = 27 ứng với nhôm (Al), công thức oxit là Al2O3."
+        },
+        {
+          "id": "a5-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các oxit vừa tác dụng được với dung dịch HCl, vừa tác dụng được với dung dịch NaOH.",
+          "options": ["Al2O3", "ZnO", "CuO", "CO2"],
+          "answers": [0, 1],
+          "explanation": "B1. Al2O3 và ZnO là oxit lưỡng tính nên phản ứng được với cả axit và kiềm. B2. CuO là oxit bazơ, chỉ tác dụng với axit. B3. CO2 là oxit axit, chỉ tác dụng với kiềm."
+        },
+        {
+          "id": "a5-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Trong oxit Mn2O7, mangan có hoá trị bao nhiêu? (ghi số La Mã)",
+          "answer": "VII",
+          "acceptedAnswers": ["7", "vii"],
+          "placeholder": "Nhập hoá trị",
+          "explanation": "B1. Bảy nguyên tử O mang tổng hoá trị 14. B2. Hai nguyên tử Mn chia đều 14 nên mỗi Mn có hoá trị VII."
+        },
+        {
+          "id": "a5-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng đốt cháy photpho: P + O2 -> P2O5.",
+          "left": ["P", "O2"],
+          "right": ["P2O5"],
+          "answer": [4, 5, 2],
+          "explanation": "B1. Đặt 2P2O5 để số O ở vế phải chẵn (10 O). B2. Cần 5O2 để có 10 O. B3. Vế phải có 4P nên cần 4P ở vế trái."
+        },
+        {
+          "id": "a5-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Oxit RO2 có oxi chiếm 72,7% khối lượng. R là nguyên tố nào?",
+          "options": ["C", "S", "Si", "N"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi nguyên tử khối của R là M: %O = 32 / (M + 32) = 0,727. B2. Giải ra M + 32 = 44, tức M = 12. B3. M = 12 ứng với cacbon, oxit là CO2."
+        },
+        {
+          "id": "a5-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Oxit của kim loại M hoá trị II chứa 20% oxi về khối lượng. Kim loại M là gì? (ghi kí hiệu hoá học)",
+          "answer": "Cu",
+          "acceptedAnswers": ["đồng", "cu"],
+          "placeholder": "Nhập kí hiệu kim loại",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Công thức oxit là MO: %O = 16 / (M + 16) = 0,20. B2. Giải ra M + 16 = 80, tức M = 64. B3. M = 64 ứng với đồng (Cu), oxit là CuO."
+        },
+        {
+          "id": "a5-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng đốt quặng pirit: FeS2 + O2 -> Fe2O3 + SO2.",
+          "left": ["FeS2", "O2"],
+          "right": ["Fe2O3", "SO2"],
+          "answer": [4, 11, 2, 8],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Đặt 2Fe2O3 để số Fe chẵn, suy ra 4FeS2. B2. 4FeS2 chứa 8S nên tạo 8SO2. B3. Vế phải có 6 + 16 = 22 nguyên tử O, vậy cần 11O2."
+        }
+      ]
     },
     {
       "id": "a5-l2",
       "title": "Tính chất hoá học của oxit bazơ; CaO – vôi",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Ba tính chất của oxit bazơ, vôi sống CaO và bài toán nung đá vôi, hỗn hợp oxit.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a5-l2-c1",
+          "heading": "Ba tính chất hoá học của oxit bazơ",
+          "body": "1) Tác dụng với nước tạo dung dịch kiềm (chỉ với Na2O, K2O, CaO, BaO):\nNa2O + H2O -> 2NaOH\n2) Tác dụng với axit tạo muối và nước:\nCuO + 2HCl -> CuCl2 + H2O\n3) Tác dụng với oxit axit tạo muối:\nCaO + CO2 -> CaCO3\nLưu ý: các oxit bazơ không tan (CuO, FeO, Fe2O3...) không tác dụng với nước."
+        },
+        {
+          "id": "a5-l2-c2",
+          "heading": "CaO – vôi sống",
+          "body": "CaO (vôi sống) là chất rắn màu trắng, tác dụng mạnh với nước và toả nhiều nhiệt (tôi vôi):\nCaO + H2O -> Ca(OH)2\nỨng dụng: khử chua đất trồng, xử lí nước thải, sát trùng, làm vật liệu xây dựng.\nĐể lâu trong không khí, CaO hấp thụ CO2 hoá rắn thành CaCO3 nên phải bảo quản kín."
+        },
+        {
+          "id": "a5-l2-c3",
+          "heading": "Sản xuất vôi sống",
+          "body": "Nung đá vôi ở khoảng 900 độ C trong lò nung vôi:\nCaCO3 -> CaO + CO2\nMẹo giải bài toán nung đá vôi: số mol CaO = số mol CO2 = số mol CaCO3 bị phân huỷ; nếu nung không hoàn toàn thì chất rắn sau nung gồm cả CaO và CaCO3 dư."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a5-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Oxit nào sau đây tan trong nước tạo dung dịch làm quỳ tím hoá xanh?",
+          "options": ["Na2O", "CuO", "CO2", "Fe2O3"],
+          "answer": 0,
+          "explanation": "B1. Na2O tan trong nước tạo NaOH là dung dịch kiềm nên quỳ tím hoá xanh. B2. CuO và Fe2O3 không tan trong nước. B3. CO2 tạo axit H2CO3 làm quỳ hoá đỏ nhạt."
+        },
+        {
+          "id": "a5-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Sản phẩm của phản ứng CaO + H2O là",
+          "options": ["Ca(OH)2", "CaCO3", "CaH2", "CaO2"],
+          "answer": 0,
+          "explanation": "B1. CaO là oxit bazơ tan được trong nước. B2. Phản ứng tôi vôi: CaO + H2O -> Ca(OH)2, toả nhiều nhiệt."
+        },
+        {
+          "id": "a5-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các oxit bazơ tác dụng được với nước ở điều kiện thường.",
+          "options": ["Na2O", "BaO", "CuO", "FeO"],
+          "answers": [0, 1],
+          "explanation": "B1. Na2O và BaO tan trong nước tạo kiềm NaOH và Ba(OH)2. B2. CuO và FeO là oxit bazơ không tan, không tác dụng với nước."
+        },
+        {
+          "id": "a5-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Tên thông thường của CaO là gì?",
+          "answer": "vôi sống",
+          "acceptedAnswers": ["voi song"],
+          "placeholder": "Nhập tên thông thường",
+          "explanation": "B1. CaO được sản xuất bằng cách nung đá vôi nên gọi là vôi sống. B2. Khi tôi với nước, vôi sống chuyển thành vôi tôi Ca(OH)2."
+        },
+        {
+          "id": "a5-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "CuO tác dụng với dung dịch HCl tạo ra muối nào?",
+          "options": ["CuCl2", "CuCl", "Cu(OH)2", "CuSO4"],
+          "answer": 0,
+          "explanation": "B1. Oxit bazơ tác dụng với axit tạo muối và nước. B2. CuO + 2HCl -> CuCl2 + H2O, muối thu được là đồng(II) clorua."
+        },
+        {
+          "id": "a5-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 0,10 mol CaO vào nước dư. Khối lượng Ca(OH)2 tạo thành là",
+          "options": ["7,4 g", "5,6 g", "7,2 g", "8,0 g"],
+          "answer": 0,
+          "explanation": "B1. CaO + H2O -> Ca(OH)2 nên nCa(OH)2 = 0,10 mol. B2. M(Ca(OH)2) = 40 + 2 x 17 = 74 g/mol. B3. m = 0,10 x 74 = 7,4 g."
+        },
+        {
+          "id": "a5-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Chất nào sau đây thường được dùng để khử chua đất trồng?",
+          "options": ["CaO", "NaCl", "HCl", "CO2"],
+          "answer": 0,
+          "explanation": "B1. Đất chua chứa nhiều axit. B2. CaO tác dụng với nước tạo Ca(OH)2 trung hoà axit trong đất nên được dùng để khử chua."
+        },
+        {
+          "id": "a5-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "CaO phản ứng được với những chất nào sau đây?",
+          "options": ["H2O", "dung dịch HCl", "CO2", "dung dịch NaOH"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. CaO + H2O -> Ca(OH)2. B2. CaO + 2HCl -> CaCl2 + H2O (oxit bazơ + axit). B3. CaO + CO2 -> CaCO3 (oxit bazơ + oxit axit). B4. CaO là oxit bazơ nên không phản ứng với kiềm NaOH."
+        },
+        {
+          "id": "a5-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nung hoàn toàn 10 g CaCO3. Khối lượng CaO thu được là bao nhiêu gam?",
+          "answer": "5,6",
+          "acceptedAnswers": ["5.6"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nCaCO3 = 10 / 100 = 0,10 mol. B2. CaCO3 -> CaO + CO2 nên nCaO = 0,10 mol. B3. mCaO = 0,10 x 56 = 5,6 g."
+        },
+        {
+          "id": "a5-l2-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CaO + HNO3 -> Ca(NO3)2 + H2O.",
+          "left": ["CaO", "HNO3"],
+          "right": ["Ca(NO3)2", "H2O"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Muối Ca(NO3)2 chứa 2 gốc NO3 nên cần 2HNO3. B2. Hai nguyên tử H kết hợp với O của CaO tạo 1H2O."
+        },
+        {
+          "id": "a5-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nung m gam CaCO3 đến khối lượng không đổi, dẫn toàn bộ khí sinh ra vào nước vôi trong dư thu được 10 g kết tủa. Giá trị của m là",
+          "options": ["10 g", "5 g", "15 g", "20 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Kết tủa là CaCO3: n = 10 / 100 = 0,10 mol. B2. CO2 + Ca(OH)2 dư -> CaCO3 + H2O nên nCO2 = 0,10 mol. B3. CaCO3 -> CaO + CO2 nên nCaCO3 ban đầu = 0,10 mol, tức m = 10 g."
+        },
+        {
+          "id": "a5-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hỗn hợp CaO và CaCO3 nặng 27,2 g tác dụng với HCl dư thu được 2,24 lít CO2 (đktc). Khối lượng CaO trong hỗn hợp là bao nhiêu gam?",
+          "answer": "17,2",
+          "acceptedAnswers": ["17.2"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Chỉ CaCO3 sinh khí: nCO2 = 2,24 / 22,4 = 0,10 mol nên nCaCO3 = 0,10 mol. B2. mCaCO3 = 0,10 x 100 = 10 g. B3. mCaO = 27,2 - 10 = 17,2 g."
+        },
+        {
+          "id": "a5-l2-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Fe2O3 + H2SO4 -> Fe2(SO4)3 + H2O.",
+          "left": ["Fe2O3", "H2SO4"],
+          "right": ["Fe2(SO4)3", "H2O"],
+          "answer": [1, 3, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Muối Fe2(SO4)3 chứa 3 gốc SO4 nên cần 3H2SO4. B2. Sáu nguyên tử H kết hợp với 3 O của Fe2O3 tạo 3H2O. B3. Kiểm tra O: vế trái 3 + 12 = 15, vế phải 12 + 3 = 15."
+        }
+      ]
     },
     {
       "id": "a5-l3",
       "title": "Tính chất hoá học của oxit axit; SO2",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Ba tính chất của oxit axit, lưu huỳnh đioxit SO2 và bài toán CO2/SO2 tác dụng với kiềm.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a5-l3-c1",
+          "heading": "Ba tính chất hoá học của oxit axit",
+          "body": "1) Tác dụng với nước tạo axit:\nSO2 + H2O -> H2SO3; SO3 + H2O -> H2SO4; P2O5 + 3H2O -> 2H3PO4\n2) Tác dụng với dung dịch kiềm tạo muối và nước:\nCO2 + 2NaOH -> Na2CO3 + H2O\n3) Tác dụng với oxit bazơ tạo muối:\nCO2 + CaO -> CaCO3"
+        },
+        {
+          "id": "a5-l3-c2",
+          "heading": "Lưu huỳnh đioxit SO2",
+          "body": "SO2 là khí không màu, mùi hắc, độc, nặng hơn không khí; là một trong các khí chính gây mưa axit.\nSO2 mang đầy đủ tính chất của oxit axit:\nSO2 + H2O -> H2SO3\nSO2 + 2NaOH -> Na2SO3 + H2O\nSO2 + CaO -> CaSO3"
+        },
+        {
+          "id": "a5-l3-c3",
+          "heading": "Điều chế SO2 và mẹo bài toán khí + kiềm",
+          "body": "Trong công nghiệp: đốt lưu huỳnh hoặc quặng pirit:\nS + O2 -> SO2\nTrong phòng thí nghiệm: cho muối sunfit tác dụng với axit mạnh:\nNa2SO3 + H2SO4 -> Na2SO4 + SO2 + H2O\nMẹo: bài toán CO2/SO2 + kiềm xét tỉ lệ T = nOH- / nkhí. T >= 2: chỉ muối trung hoà; T <= 1: chỉ muối axit; 1 < T < 2: hai muối, khi đó n(muối trung hoà) = nOH- - nkhí."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a5-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "SO2 tác dụng với nước tạo thành",
+          "options": ["H2SO3", "H2SO4", "H2S", "S"],
+          "answer": 0,
+          "explanation": "B1. SO2 là oxit axit nên tác dụng với nước tạo axit tương ứng. B2. Lưu huỳnh giữ hoá trị IV nên axit tạo thành là H2SO3 (axit sunfurơ)."
+        },
+        {
+          "id": "a5-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khí nào sau đây là một trong các nguyên nhân chính gây mưa axit?",
+          "options": ["SO2", "O2", "N2", "H2"],
+          "answer": 0,
+          "explanation": "B1. SO2 thải ra từ việc đốt nhiên liệu hoá thạch kết hợp với nước trong khí quyển tạo axit. B2. O2, N2, H2 không tạo axit trong điều kiện thường."
+        },
+        {
+          "id": "a5-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các chất là oxit axit.",
+          "options": ["SO2", "P2O5", "CO2", "CaO"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. SO2, P2O5, CO2 đều là oxit phi kim tương ứng với các axit H2SO3, H3PO4, H2CO3. B2. CaO là oxit bazơ."
+        },
+        {
+          "id": "a5-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "P2O5 tác dụng với nước tạo thành axit gì? (ghi công thức)",
+          "answer": "H3PO4",
+          "acceptedAnswers": ["axit photphoric"],
+          "placeholder": "Nhập công thức axit",
+          "explanation": "B1. P2O5 + 3H2O -> 2H3PO4. B2. Axit tạo thành là axit photphoric H3PO4."
+        },
+        {
+          "id": "a5-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dẫn khí CO2 vào dung dịch Ca(OH)2 dư, hiện tượng quan sát được là",
+          "options": [
+            "xuất hiện kết tủa trắng",
+            "không có hiện tượng",
+            "có khí thoát ra",
+            "dung dịch chuyển màu xanh"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO2 + Ca(OH)2 -> CaCO3 + H2O. B2. CaCO3 không tan tạo kết tủa trắng — đây là phản ứng nhận biết CO2 bằng nước vôi trong."
+        },
+        {
+          "id": "a5-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 3,2 g lưu huỳnh. Thể tích SO2 thu được ở đktc là",
+          "options": ["2,24 lít", "1,12 lít", "3,36 lít", "4,48 lít"],
+          "answer": 0,
+          "explanation": "B1. nS = 3,2 / 32 = 0,10 mol. B2. S + O2 -> SO2 nên nSO2 = 0,10 mol. B3. V = 0,10 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a5-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn khí CO2 vào dung dịch NaOH dư. Muối thu được là",
+          "options": [
+            "Na2CO3",
+            "NaHCO3",
+            "cả Na2CO3 và NaHCO3",
+            "không tạo muối"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khi NaOH dư, tỉ lệ nOH- / nCO2 > 2. B2. Vì kiềm dư nên toàn bộ CO2 chuyển thành muối trung hoà: CO2 + 2NaOH -> Na2CO3 + H2O."
+        },
+        {
+          "id": "a5-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "SO2 phản ứng được với những chất nào sau đây?",
+          "options": ["H2O", "dung dịch NaOH", "CaO", "dung dịch HCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. SO2 + H2O -> H2SO3. B2. SO2 + 2NaOH -> Na2SO3 + H2O (oxit axit + kiềm). B3. SO2 + CaO -> CaSO3 (oxit axit + oxit bazơ). B4. SO2 là oxit axit nên không phản ứng với axit HCl."
+        },
+        {
+          "id": "a5-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 8 g SO3 tác dụng hết với nước. Khối lượng H2SO4 tạo thành là bao nhiêu gam?",
+          "answer": "9,8",
+          "acceptedAnswers": ["9.8"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nSO3 = 8 / 80 = 0,10 mol. B2. SO3 + H2O -> H2SO4 nên nH2SO4 = 0,10 mol. B3. m = 0,10 x 98 = 9,8 g."
+        },
+        {
+          "id": "a5-l3-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng oxi hoá SO2 thành SO3: SO2 + O2 -> SO3.",
+          "left": ["SO2", "O2"],
+          "right": ["SO3"],
+          "answer": [2, 1, 2],
+          "explanation": "B1. Đặt 2SO3 để số O ở vế phải chẵn (6 O). B2. Cần 2SO2 (4 O) và 1O2 (2 O) để đủ 6 O. B3. Kiểm tra S: hai vế đều có 2S."
+        },
+        {
+          "id": "a5-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn 2,24 lít CO2 (đktc) vào 150 ml dung dịch NaOH 1M. Số mol Na2CO3 tạo thành là",
+          "options": ["0,05 mol", "0,10 mol", "0,15 mol", "0,025 mol"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 0,10 mol; nNaOH = 0,15 mol. B2. Tỉ lệ nOH- / nCO2 = 1,5 nằm giữa 1 và 2 nên tạo cả hai muối. B3. nNa2CO3 = nOH- - nCO2 = 0,15 - 0,10 = 0,05 mol; nNaHCO3 = 0,10 - 0,05 = 0,05 mol."
+        },
+        {
+          "id": "a5-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hấp thụ hoàn toàn 4,48 lít SO2 (đktc) vào dung dịch chứa 0,30 mol NaOH. Khối lượng NaHSO3 thu được là bao nhiêu gam?",
+          "answer": "10,4",
+          "acceptedAnswers": ["10.4"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nSO2 = 4,48 / 22,4 = 0,20 mol; tỉ lệ nOH- / nSO2 = 0,30 / 0,20 = 1,5 nên tạo hai muối. B2. nNa2SO3 = nOH- - nSO2 = 0,10 mol; nNaHSO3 = 0,20 - 0,10 = 0,10 mol. B3. M(NaHSO3) = 104 g/mol nên m = 0,10 x 104 = 10,4 g."
+        },
+        {
+          "id": "a5-l3-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng tạo muối axit khi CO2 dư: CO2 + Ca(OH)2 -> Ca(HCO3)2.",
+          "left": ["CO2", "Ca(OH)2"],
+          "right": ["Ca(HCO3)2"],
+          "answer": [2, 1, 1],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Muối Ca(HCO3)2 chứa 2 gốc HCO3 nên cần 2CO2. B2. Một Ca(OH)2 cung cấp 1Ca và 2OH. B3. Kiểm tra: hai vế đều có 1Ca, 2C, 2H, 6O."
+        }
+      ]
     },
     {
       "id": "a5-l4",
       "title": "Nâng cao: oxit lưỡng tính; bài toán oxit + axit/kiềm",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Al2O3 và ZnO tác dụng với cả axit và kiềm; phương pháp giải bài toán hỗn hợp oxit tác dụng với axit.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a5-l4-c1",
+          "heading": "Oxit lưỡng tính",
+          "body": "Al2O3 và ZnO tác dụng được với cả axit và dung dịch kiềm:\nAl2O3 + 6HCl -> 2AlCl3 + 3H2O\nAl2O3 + 2NaOH -> 2NaAlO2 + H2O\nZnO + 2HCl -> ZnCl2 + H2O\nZnO + 2NaOH -> Na2ZnO2 + H2O\nMuối NaAlO2 (natri aluminat) và Na2ZnO2 (natri zincat) đều tan trong nước."
+        },
+        {
+          "id": "a5-l4-c2",
+          "heading": "Mẹo bảo toàn nguyên tố với bài toán oxit + axit",
+          "body": "Khi oxit tác dụng với axit, toàn bộ O của oxit chuyển vào H2O:\n- Với HCl: nHCl = 2 x nO(trong oxit)\n- Với H2SO4 loãng: nH2SO4 = nO(trong oxit)\nVí dụ: hoà tan hết hỗn hợp oxit chứa 0,30 mol O cần 0,60 mol HCl.\nKhối lượng muối = khối lượng kim loại + khối lượng gốc axit."
+        },
+        {
+          "id": "a5-l4-c3",
+          "heading": "Bài toán hỗn hợp oxit",
+          "body": "Các bước giải bài toán hỗn hợp hai oxit:\nB1. Gọi số mol từng oxit là x, y.\nB2. Lập hệ hai phương trình: một theo khối lượng hỗn hợp, một theo số mol axit (hoặc số mol muối, khí).\nB3. Giải hệ tìm x, y rồi tính đại lượng đề hỏi.\nVới hỗn hợp chứa oxit lưỡng tính tác dụng với kiềm, chỉ oxit lưỡng tính phản ứng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a5-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Oxit nào sau đây là oxit lưỡng tính?",
+          "options": ["Al2O3", "Na2O", "SO2", "CO"],
+          "answer": 0,
+          "explanation": "B1. Al2O3 tác dụng được với cả HCl và NaOH nên là oxit lưỡng tính. B2. Na2O là oxit bazơ, SO2 là oxit axit, CO là oxit trung tính."
+        },
+        {
+          "id": "a5-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "ZnO tác dụng với dung dịch HCl tạo ra",
+          "options": ["ZnCl2 và H2O", "ZnCl2 và H2", "Zn(OH)2", "Zn và Cl2"],
+          "answer": 0,
+          "explanation": "B1. ZnO là oxit nên tác dụng với axit tạo muối và nước: ZnO + 2HCl -> ZnCl2 + H2O. B2. Không sinh khí H2 vì chất phản ứng là oxit, không phải kim loại Zn."
+        },
+        {
+          "id": "a5-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các oxit lưỡng tính.",
+          "options": ["Al2O3", "ZnO", "CO2", "MgO"],
+          "answers": [0, 1],
+          "explanation": "B1. Al2O3 và ZnO tác dụng được cả với axit và kiềm nên là oxit lưỡng tính. B2. CO2 là oxit axit, MgO là oxit bazơ."
+        },
+        {
+          "id": "a5-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Al2O3 tác dụng với dung dịch NaOH tạo muối gì? (ghi công thức)",
+          "answer": "NaAlO2",
+          "acceptedAnswers": ["natri aluminat"],
+          "placeholder": "Nhập công thức muối",
+          "explanation": "B1. Al2O3 + 2NaOH -> 2NaAlO2 + H2O. B2. Muối tạo thành là natri aluminat NaAlO2, tan trong nước."
+        },
+        {
+          "id": "a5-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Oxit nào sau đây không tác dụng với axit, kiềm và nước?",
+          "options": ["CO", "CO2", "SO2", "CaO"],
+          "answer": 0,
+          "explanation": "B1. CO là oxit trung tính (không tạo muối) nên không tác dụng với axit, kiềm hay nước ở điều kiện thường. B2. CO2, SO2 là oxit axit; CaO là oxit bazơ."
+        },
+        {
+          "id": "a5-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 10,2 g Al2O3 cần vừa đủ bao nhiêu mol HCl?",
+          "options": ["0,60 mol", "0,30 mol", "0,20 mol", "0,10 mol"],
+          "answer": 0,
+          "explanation": "B1. nAl2O3 = 10,2 / 102 = 0,10 mol. B2. Al2O3 + 6HCl -> 2AlCl3 + 3H2O. B3. nHCl = 6 x 0,10 = 0,60 mol."
+        },
+        {
+          "id": "a5-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 8,1 g ZnO bằng dung dịch H2SO4 loãng vừa đủ. Khối lượng muối thu được là",
+          "options": ["16,1 g", "14,1 g", "12,1 g", "19,3 g"],
+          "answer": 0,
+          "explanation": "B1. nZnO = 8,1 / 81 = 0,10 mol. B2. ZnO + H2SO4 -> ZnSO4 + H2O nên nZnSO4 = 0,10 mol. B3. M(ZnSO4) = 65 + 96 = 161 g/mol nên m = 16,1 g."
+        },
+        {
+          "id": "a5-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Al2O3 phản ứng được với những dung dịch nào sau đây?",
+          "options": ["HCl", "NaOH", "H2SO4 loãng", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Al2O3 là oxit lưỡng tính nên phản ứng với axit HCl và H2SO4 loãng. B2. Al2O3 cũng phản ứng với kiềm NaOH tạo NaAlO2. B3. NaCl là muối trung hoà, không phản ứng với Al2O3."
+        },
+        {
+          "id": "a5-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan hết 4 g MgO cần bao nhiêu mol HCl?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nMgO = 4 / 40 = 0,10 mol. B2. MgO + 2HCl -> MgCl2 + H2O nên nHCl = 2 x 0,10 = 0,20 mol."
+        },
+        {
+          "id": "a5-l4-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: ZnO + NaOH -> Na2ZnO2 + H2O.",
+          "left": ["ZnO", "NaOH"],
+          "right": ["Na2ZnO2", "H2O"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Muối Na2ZnO2 chứa 2Na nên cần 2NaOH. B2. Hai nguyên tử H còn lại tạo 1H2O. B3. Kiểm tra O: vế trái 1 + 2 = 3, vế phải 2 + 1 = 3."
+        },
+        {
+          "id": "a5-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 16 g hỗn hợp MgO và CuO cần vừa đủ 0,60 mol HCl. Khối lượng MgO trong hỗn hợp là",
+          "options": ["8 g", "4 g", "12 g", "6 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol MgO, CuO là x, y: 40x + 80y = 16. B2. Cả hai oxit đều cần 2 mol HCl cho 1 mol oxit: 2x + 2y = 0,60 nên x + y = 0,30. B3. Giải hệ: x = 0,20; y = 0,10. B4. mMgO = 0,20 x 40 = 8 g."
+        },
+        {
+          "id": "a5-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hoà tan hết hỗn hợp gồm 0,10 mol Fe2O3 và 0,10 mol CuO bằng H2SO4 loãng vừa đủ. Số mol H2SO4 đã dùng là bao nhiêu?",
+          "answer": "0,4",
+          "acceptedAnswers": ["0.4"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Bảo toàn nguyên tố O: với H2SO4 loãng, nH2SO4 = nO trong oxit. B2. nO = 0,10 x 3 + 0,10 x 1 = 0,40 mol. B3. Vậy cần 0,40 mol H2SO4."
+        },
+        {
+          "id": "a5-l4-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Al2O3 + HCl -> AlCl3 + H2O.",
+          "left": ["Al2O3", "HCl"],
+          "right": ["AlCl3", "H2O"],
+          "answer": [1, 6, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Al2O3 chứa 2Al nên tạo 2AlCl3, cần 6Cl tức 6HCl. B2. Sáu nguyên tử H kết hợp với 3 O tạo 3H2O. B3. Kiểm tra: hai vế đều có 2Al, 6Cl, 6H, 3O."
+        }
+      ]
     }
   ]
 }
