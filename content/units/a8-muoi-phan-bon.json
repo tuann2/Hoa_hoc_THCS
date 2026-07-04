@@ -151,7 +151,8 @@
           "prompt": "Cho 0,10 mol Fe vào 100 ml dung dịch CuSO4 1M. Sau phản ứng, khối lượng kim loại rắn thu được là",
           "options": ["5,6 g", "6,4 g", "12,0 g", "0 g"],
           "answer": 1,
-          "explanation": "B1. nCuSO4 = 0,1 x 1 = 0,10 mol. B2. Phương trình: Fe + CuSO4 -> FeSO4 + Cu, tỉ lệ 1 : 1 nên Fe phản ứng hết và tạo 0,10 mol Cu. B3. Kim loại rắn cuối cùng là 0,10 mol Cu nên khối lượng là 6,4 g."
+          "explanation": "B1. nCuSO4 = 0,1 x 1 = 0,10 mol. B2. Phương trình: Fe + CuSO4 -> FeSO4 + Cu, tỉ lệ 1 : 1 nên Fe phản ứng hết và tạo 0,10 mol Cu. B3. Kim loại rắn cuối cùng là 0,10 mol Cu nên khối lượng là 6,4 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l1-q12",
@@ -161,7 +162,8 @@
           "answer": "14,35",
           "acceptedAnswers": ["14.35", "14,350", "14.350"],
           "placeholder": "Khối lượng kết tủa",
-          "explanation": "B1. Phương trình: AgNO3 + NaCl -> AgCl + NaNO3. B2. Chất giới hạn là NaCl với 0,10 mol nên nAgCl = 0,10 mol. B3. MAgCl = 108 + 35,5 = 143,5 g/mol. B4. m = 0,10 x 143,5 = 14,35 g."
+          "explanation": "B1. Phương trình: AgNO3 + NaCl -> AgCl + NaNO3. B2. Chất giới hạn là NaCl với 0,10 mol nên nAgCl = 0,10 mol. B3. MAgCl = 108 + 35,5 = 143,5 g/mol. B4. m = 0,10 x 143,5 = 14,35 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l1-q13",
@@ -171,7 +173,8 @@
           "left": ["CuSO4", "NaOH"],
           "right": ["Cu(OH)2", "Na2SO4"],
           "answer": [1, 2, 1, 1],
-          "explanation": "B1. Gốc SO4 giữ nguyên ở CuSO4 và Na2SO4 nên đặt 1 cho hai chất này. B2. Muối natri cần 2Na nên phải có 2NaOH. B3. Hai nhóm OH còn lại tạo Cu(OH)2."
+          "explanation": "B1. Gốc SO4 giữ nguyên ở CuSO4 và Na2SO4 nên đặt 1 cho hai chất này. B2. Muối natri cần 2Na nên phải có 2NaOH. B3. Hai nhóm OH còn lại tạo Cu(OH)2.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -309,7 +312,8 @@
           "prompt": "Nhiệt phân hoàn toàn 33,6 g NaHCO3. Khối lượng Na2CO3 thu được là",
           "options": ["10,6 g", "15,9 g", "21,2 g", "31,8 g"],
           "answer": 2,
-          "explanation": "B1. nNaHCO3 = 33,6 / 84 = 0,40 mol. B2. Theo phương trình 2NaHCO3 -> Na2CO3 + CO2 + H2O, nNa2CO3 = 0,20 mol. B3. mNa2CO3 = 0,20 x 106 = 21,2 g."
+          "explanation": "B1. nNaHCO3 = 33,6 / 84 = 0,40 mol. B2. Theo phương trình 2NaHCO3 -> Na2CO3 + CO2 + H2O, nNa2CO3 = 0,20 mol. B3. mNa2CO3 = 0,20 x 106 = 21,2 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l2-q12",
@@ -319,7 +323,8 @@
           "answer": "0,2",
           "acceptedAnswers": ["0.2", "0,20", "0.20"],
           "placeholder": "Tổng số mol hỗn hợp",
-          "explanation": "B1. nCO2 = 4,48 / 22,4 = 0,20 mol. B2. Cả Na2CO3 và NaHCO3 đều cho 1 mol CO2 trên 1 mol muối. B3. Vì vậy tổng số mol hai muối ban đầu bằng 0,20 mol."
+          "explanation": "B1. nCO2 = 4,48 / 22,4 = 0,20 mol. B2. Cả Na2CO3 và NaHCO3 đều cho 1 mol CO2 trên 1 mol muối. B3. Vì vậy tổng số mol hai muối ban đầu bằng 0,20 mol.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l2-q13",
@@ -329,7 +334,8 @@
           "left": ["CaCO3", "HCl"],
           "right": ["CaCl2", "H2O", "CO2"],
           "answer": [1, 2, 1, 1, 1],
-          "explanation": "B1. CaCO3 tạo CaCl2 nên cần 2Cl, tức là 2HCl. B2. Phần H và O còn lại cân bằng thành 1H2O; C tạo 1CO2."
+          "explanation": "B1. CaCO3 tạo CaCl2 nên cần 2Cl, tức là 2HCl. B2. Phần H và O còn lại cân bằng thành 1H2O; C tạo 1CO2.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -462,7 +468,8 @@
           "prompt": "Cho 0,10 mol Na2CO3 vào 0,15 mol HCl. Số mol CO2 thu được là",
           "options": ["0,025 mol", "0,050 mol", "0,075 mol", "0,100 mol"],
           "answer": 1,
-          "explanation": "B1. 0,10 mol Na2CO3 cần 0,20 mol HCl để tạo hoàn toàn CO2. B2. Chỉ có 0,15 mol HCl nên sau khi tạo 0,10 mol NaHCO3 còn 0,05 mol HCl để phân huỷ 0,05 mol NaHCO3. B3. Vì thế nCO2 = 0,05 mol."
+          "explanation": "B1. 0,10 mol Na2CO3 cần 0,20 mol HCl để tạo hoàn toàn CO2. B2. Chỉ có 0,15 mol HCl nên sau khi tạo 0,10 mol NaHCO3 còn 0,05 mol HCl để phân huỷ 0,05 mol NaHCO3. B3. Vì thế nCO2 = 0,05 mol.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l3-q12",
@@ -472,7 +479,8 @@
           "answer": "0,1",
           "acceptedAnswers": ["0.1", "0,10", "0.10"],
           "placeholder": "Số mol NaOH",
-          "explanation": "B1. NaHSO4 còn 1H axit nên cần 1OH^- để chuyển thành SO4^2-. B2. Vì thế 0,10 mol NaHSO4 cần 0,10 mol NaOH."
+          "explanation": "B1. NaHSO4 còn 1H axit nên cần 1OH^- để chuyển thành SO4^2-. B2. Vì thế 0,10 mol NaHSO4 cần 0,10 mol NaOH.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l3-q13",
@@ -482,7 +490,8 @@
           "left": ["Na2CO3", "HCl"],
           "right": ["NaHCO3", "NaCl"],
           "answer": [1, 1, 1, 1],
-          "explanation": "B1. Một mol HCl chỉ đủ proton hoá một nửa gốc CO3^2- thành HCO3^-. B2. Đồng thời tạo ra 1 mol NaCl, nên các hệ số đều bằng 1."
+          "explanation": "B1. Một mol HCl chỉ đủ proton hoá một nửa gốc CO3^2- thành HCO3^-. B2. Đồng thời tạo ra 1 mol NaCl, nên các hệ số đều bằng 1.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -620,7 +629,8 @@
           "prompt": "Khối lượng N có trong 80 g NH4NO3 là",
           "options": ["14 g", "20 g", "28 g", "35 g"],
           "answer": 2,
-          "explanation": "B1. M(NH4NO3) = 80 g/mol, trong đó có 2 nguyên tử N nên khối lượng N trong 1 mol là 28 g. B2. Vì 80 g NH4NO3 đúng bằng 1 mol nên chứa 28 g N."
+          "explanation": "B1. M(NH4NO3) = 80 g/mol, trong đó có 2 nguyên tử N nên khối lượng N trong 1 mol là 28 g. B2. Vì 80 g NH4NO3 đúng bằng 1 mol nên chứa 28 g N.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l4-q12",
@@ -630,17 +640,19 @@
           "answer": "46,67",
           "acceptedAnswers": ["46.67", "46,7", "46.7"],
           "placeholder": "Phần trăm khối lượng N",
-          "explanation": "B1. M urê = 12 + 16 + 28 + 4 = 60 g/mol. B2. Khối lượng N trong 1 mol là 28 g. B3. %N = 28 / 60 x 100% = 46,67%."
+          "explanation": "B1. M urê = 12 + 16 + 28 + 4 = 60 g/mol. B2. Khối lượng N trong 1 mol là 28 g. B3. %N = 28 / 60 x 100% = 46,67%.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l4-q13",
           "type": "balance",
           "level": "hsg",
-          "prompt": "Điền hệ số tối giản cho phản ứng trung hoà đất chua bằng vôi: CaCO3 + HCl -> CaCl2 + H2O + CO2.",
-          "left": ["CaCO3", "HCl"],
-          "right": ["CaCl2", "H2O", "CO2"],
-          "answer": [1, 2, 1, 1, 1],
-          "explanation": "B1. CaCO3 tạo CaCl2 nên cần 2Cl, tức là 2HCl. B2. Phần còn lại cân bằng thành 1H2O và 1CO2."
+          "prompt": "Điền hệ số tối giản cho phản ứng điều chế phân đạm amoni sunfat: NH3 + H2SO4 -> (NH4)2SO4.",
+          "left": ["NH3", "H2SO4"],
+          "right": ["(NH4)2SO4"],
+          "answer": [2, 1, 1],
+          "explanation": "B1. Muối (NH4)2SO4 chứa 2 gốc NH4+ nên cần 2NH3. B2. Một gốc SO4 lấy từ 1H2SO4. B3. Kiểm tra: hai vế đều có 2N, 8H, 1S, 4O.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -783,7 +795,8 @@
           "prompt": "Cho 0,10 mol Na2CO3 vào 0,15 mol HCl. Sau phản ứng, số mol NaHCO3 còn lại trong dung dịch là",
           "options": ["0,00 mol", "0,05 mol", "0,10 mol", "0,15 mol"],
           "answer": 1,
-          "explanation": "B1. Bước 1: 0,10 mol Na2CO3 dùng 0,10 mol HCl để tạo 0,10 mol NaHCO3. B2. HCl còn 0,05 mol tiếp tục phân huỷ 0,05 mol NaHCO3 thành CO2. B3. Vậy còn lại 0,05 mol NaHCO3."
+          "explanation": "B1. Bước 1: 0,10 mol Na2CO3 dùng 0,10 mol HCl để tạo 0,10 mol NaHCO3. B2. HCl còn 0,05 mol tiếp tục phân huỷ 0,05 mol NaHCO3 thành CO2. B3. Vậy còn lại 0,05 mol NaHCO3.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l5-q12",
@@ -793,17 +806,19 @@
           "answer": "34,95",
           "acceptedAnswers": ["34.95", "34,950", "34.950"],
           "placeholder": "Khối lượng kết tủa",
-          "explanation": "B1. nBaCl2 = 0,20 x 1 = 0,20 mol; nNa2SO4 = 0,30 x 0,5 = 0,15 mol. B2. Tỉ lệ 1 : 1 nên Na2SO4 là chất giới hạn, nBaSO4 = 0,15 mol. B3. MBaSO4 = 137 + 96 = 233 g/mol. B4. m = 0,15 x 233 = 34,95 g."
+          "explanation": "B1. nBaCl2 = 0,20 x 1 = 0,20 mol; nNa2SO4 = 0,30 x 0,5 = 0,15 mol. B2. Tỉ lệ 1 : 1 nên Na2SO4 là chất giới hạn, nBaSO4 = 0,15 mol. B3. MBaSO4 = 137 + 96 = 233 g/mol. B4. m = 0,15 x 233 = 34,95 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a8-l5-q13",
           "type": "balance",
           "level": "hsg",
-          "prompt": "Điền hệ số tối giản cho phản ứng: FeS + 2HCl -> FeCl2 + H2S.",
+          "prompt": "Điền hệ số tối giản cho phản ứng: FeS + HCl -> FeCl2 + H2S.",
           "left": ["FeS", "HCl"],
           "right": ["FeCl2", "H2S"],
           "answer": [1, 2, 1, 1],
-          "explanation": "B1. Fe và S đã cân bằng với hệ số 1 cho FeS, FeCl2, H2S. B2. Để có 2Cl trong FeCl2 cần 2HCl. B3. Hai H còn lại ghép vào S tạo H2S."
+          "explanation": "B1. Fe và S đã cân bằng với hệ số 1 cho FeS, FeCl2, H2S. B2. Để có 2Cl trong FeCl2 cần 2HCl. B3. Hai H còn lại ghép vào S tạo H2S.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     }

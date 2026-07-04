@@ -138,10 +138,11 @@
           "id": "a6-l1-q11",
           "type": "single-choice",
           "level": "hsg",
-          "prompt": "Hoà tan hoàn toàn 9,2 g hỗn hợp Mg và Zn bằng HCl dư, thu 4,48 lít H2 (đktc). Khối lượng Mg trong hỗn hợp là",
+          "prompt": "Hoà tan hoàn toàn 8,9 g hỗn hợp Mg và Zn bằng HCl dư, thu 4,48 lít H2 (đktc). Khối lượng Mg trong hỗn hợp là",
           "options": ["2,4 g", "4,0 g", "5,2 g", "6,8 g"],
           "answer": 0,
-          "explanation": "B1. Số mol H2 là 4,48 / 22,4 = 0,20 mol nên tổng số mol Mg và Zn cũng bằng 0,20. B2. Gọi số mol Mg, Zn lần lượt là x và y: x + y = 0,20; 24x + 65y = 9,2. B3. Giải hệ được x = 0,10 mol nên mMg = 0,10 x 24 = 2,4 g."
+          "explanation": "B1. Số mol H2 là 4,48 / 22,4 = 0,20 mol nên tổng số mol Mg và Zn cũng bằng 0,20. B2. Gọi số mol Mg, Zn lần lượt là x và y: x + y = 0,20; 24x + 65y = 8,9. B3. Giải hệ được x = 0,10 mol nên mMg = 0,10 x 24 = 2,4 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l1-q12",
@@ -151,7 +152,8 @@
           "answer": "0,1",
           "acceptedAnswers": ["0.1", "0,10", "0.10"],
           "placeholder": "Tổng số mol hỗn hợp",
-          "explanation": "B1. Cả Mg và MgO đều tiêu tốn 2 mol HCl cho mỗi mol chất. B2. Gọi số mol mỗi chất là x thì 2x + 2x = 0,20 nên x = 0,05. B3. Tổng số mol hỗn hợp là 0,05 + 0,05 = 0,10 mol."
+          "explanation": "B1. Cả Mg và MgO đều tiêu tốn 2 mol HCl cho mỗi mol chất. B2. Gọi số mol mỗi chất là x thì 2x + 2x = 0,20 nên x = 0,05. B3. Tổng số mol hỗn hợp là 0,05 + 0,05 = 0,10 mol.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l1-q13",
@@ -161,7 +163,8 @@
           "left": ["FeS", "HCl"],
           "right": ["FeCl2", "H2S"],
           "answer": [1, 2, 1, 1],
-          "explanation": "B1. Fe và S đã cân bằng với hệ số 1 cho FeS và FeCl2, H2S. B2. Sản phẩm có 2Cl nên cần 2HCl. B3. Khi đó số H cũng vừa đủ để tạo 1H2S."
+          "explanation": "B1. Fe và S đã cân bằng với hệ số 1 cho FeS và FeCl2, H2S. B2. Sản phẩm có 2Cl nên cần 2HCl. B3. Khi đó số H cũng vừa đủ để tạo 1H2S.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -299,7 +302,8 @@
           "prompt": "Hoà tan vừa đủ 9,3 g hỗn hợp Fe và Zn bằng HCl, thu được 3,36 lít H2 (đktc). Khối lượng Fe trong hỗn hợp là",
           "options": ["2,8 g", "5,6 g", "3,9 g", "4,2 g"],
           "answer": 0,
-          "explanation": "B1. nH2 = 3,36 / 22,4 = 0,15 mol nên tổng số mol Fe và Zn bằng 0,15. B2. Gọi x, y là số mol Fe, Zn: x + y = 0,15; 56x + 65y = 9,3. B3. Giải hệ được x = 0,05 mol. B4. mFe = 0,05 x 56 = 2,8 g."
+          "explanation": "B1. nH2 = 3,36 / 22,4 = 0,15 mol nên tổng số mol Fe và Zn bằng 0,15. B2. Gọi x, y là số mol Fe, Zn: x + y = 0,15; 56x + 65y = 9,3. B3. Giải hệ được x = 0,05 mol. B4. mFe = 0,05 x 56 = 2,8 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l2-q12",
@@ -309,7 +313,8 @@
           "answer": "50",
           "acceptedAnswers": ["50,0", "50.0"],
           "placeholder": "Thể tích HCl (ml)",
-          "explanation": "B1. Phương trình trung hoà có tỉ lệ HCl : NaOH = 1 : 1 nên cần 0,10 mol HCl. B2. Với CM = 2M, thể tích cần là V = n / C = 0,10 / 2 = 0,05 lít = 50 ml."
+          "explanation": "B1. Phương trình trung hoà có tỉ lệ HCl : NaOH = 1 : 1 nên cần 0,10 mol HCl. B2. Với CM = 2M, thể tích cần là V = n / C = 0,10 / 2 = 0,05 lít = 50 ml.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l2-q13",
@@ -319,7 +324,8 @@
           "left": ["MnO2", "HCl"],
           "right": ["MnCl2", "Cl2", "H2O"],
           "answer": [1, 4, 1, 1, 2],
-          "explanation": "B1. Mn giữ hệ số 1 ở hai vế. B2. Có 2O ở MnO2 nên đặt 2H2O ở sản phẩm. B3. Khi đó cần 4HCl để cung cấp 4H và 4Cl; 2Cl vào MnCl2, 2Cl còn lại tạo Cl2."
+          "explanation": "B1. Mn giữ hệ số 1 ở hai vế. B2. Có 2O ở MnO2 nên đặt 2H2O ở sản phẩm. B3. Khi đó cần 4HCl để cung cấp 4H và 4Cl; 2Cl vào MnCl2, 2Cl còn lại tạo Cl2.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -467,7 +473,8 @@
           "prompt": "Hoà tan hoàn toàn 6,5 g Zn bằng H2SO4 loãng vừa đủ. Khối lượng muối thu được là",
           "options": ["14,1 g", "16,1 g", "16,5 g", "19,5 g"],
           "answer": 1,
-          "explanation": "B1. nZn = 6,5 / 65 = 0,10 mol. B2. Phương trình: Zn + H2SO4 -> ZnSO4 + H2 nên nZnSO4 = 0,10 mol. B3. MZnSO4 = 65 + 96 = 161 g/mol. B4. mZnSO4 = 0,10 x 161 = 16,1 g."
+          "explanation": "B1. nZn = 6,5 / 65 = 0,10 mol. B2. Phương trình: Zn + H2SO4 -> ZnSO4 + H2 nên nZnSO4 = 0,10 mol. B3. MZnSO4 = 65 + 96 = 161 g/mol. B4. mZnSO4 = 0,10 x 161 = 16,1 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l3-q12",
@@ -477,7 +484,8 @@
           "answer": "6,4",
           "acceptedAnswers": ["6.4", "6,40", "6.40"],
           "placeholder": "Khối lượng Cu",
-          "explanation": "B1. nSO2 = 2,24 / 22,4 = 0,10 mol. B2. Theo phương trình Cu + 2H2SO4 -> CuSO4 + SO2 + 2H2O, tỉ lệ Cu : SO2 = 1 : 1. B3. nCu = 0,10 mol nên mCu = 0,10 x 64 = 6,4 g."
+          "explanation": "B1. nSO2 = 2,24 / 22,4 = 0,10 mol. B2. Theo phương trình Cu + 2H2SO4 -> CuSO4 + SO2 + 2H2O, tỉ lệ Cu : SO2 = 1 : 1. B3. nCu = 0,10 mol nên mCu = 0,10 x 64 = 6,4 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l3-q13",
@@ -487,7 +495,8 @@
           "left": ["C", "H2SO4"],
           "right": ["CO2", "SO2", "H2O"],
           "answer": [1, 2, 1, 2, 2],
-          "explanation": "B1. C bị oxi hoá từ 0 lên +4 tạo CO2. B2. Hai nguyên tử S trong 2H2SO4 đều bị khử xuống +4 nên tạo 2SO2. B3. Cân bằng H, O còn lại thu được 2H2O."
+          "explanation": "B1. C bị oxi hoá từ 0 lên +4 tạo CO2. B2. Hai nguyên tử S trong 2H2SO4 đều bị khử xuống +4 nên tạo 2SO2. B3. Cân bằng H, O còn lại thu được 2H2O.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -615,7 +624,8 @@
           "prompt": "Hoà tan vừa đủ hỗn hợp 2,4 g Mg và 5,6 g Fe bằng HCl. Thể tích H2 thu được ở đktc là",
           "options": ["2,24 lít", "4,48 lít", "5,60 lít", "6,72 lít"],
           "answer": 1,
-          "explanation": "B1. nMg = 2,4 / 24 = 0,10 mol; nFe = 5,6 / 56 = 0,10 mol. B2. Cả Mg và Fe đều cho tỉ lệ 1 mol kim loại tạo 1 mol H2. B3. nH2 = 0,20 mol nên VH2 = 0,20 x 22,4 = 4,48 lít."
+          "explanation": "B1. nMg = 2,4 / 24 = 0,10 mol; nFe = 5,6 / 56 = 0,10 mol. B2. Cả Mg và Fe đều cho tỉ lệ 1 mol kim loại tạo 1 mol H2. B3. nH2 = 0,20 mol nên VH2 = 0,20 x 22,4 = 4,48 lít.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l4-q12",
@@ -625,7 +635,8 @@
           "answer": "4,48",
           "acceptedAnswers": ["4.48", "4,480", "4.480"],
           "placeholder": "Thể tích CO2",
-          "explanation": "B1. nNa2CO3 = 10,6 / 106 = 0,10 mol; nNaHCO3 = 8,4 / 84 = 0,10 mol. B2. Mỗi mol của hai muối đều sinh 1 mol CO2 khi phản ứng hết với axit. B3. nCO2 = 0,20 mol nên V = 4,48 lít."
+          "explanation": "B1. nNa2CO3 = 10,6 / 106 = 0,10 mol; nNaHCO3 = 8,4 / 84 = 0,10 mol. B2. Mỗi mol của hai muối đều sinh 1 mol CO2 khi phản ứng hết với axit. B3. nCO2 = 0,20 mol nên V = 4,48 lít.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l4-q13",
@@ -635,7 +646,8 @@
           "left": ["BaCl2", "H2SO4"],
           "right": ["BaSO4", "HCl"],
           "answer": [1, 1, 1, 2],
-          "explanation": "B1. Ba và gốc SO4 ghép thành kết tủa BaSO4 với hệ số 1. B2. Còn lại 2Cl và 2H nên tạo 2HCl."
+          "explanation": "B1. Ba và gốc SO4 ghép thành kết tủa BaSO4 với hệ số 1. B2. Còn lại 2Cl và 2H nên tạo 2HCl.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     },
@@ -778,7 +790,8 @@
           "prompt": "Hoà tan hoàn toàn 6,5 g Zn bằng hỗn hợp HCl và H2SO4 loãng vừa đủ. Tổng số mol H^+ tối thiểu của hỗn hợp axit là",
           "options": ["0,05 mol", "0,10 mol", "0,20 mol", "0,30 mol"],
           "answer": 2,
-          "explanation": "B1. nZn = 6,5 / 65 = 0,10 mol. B2. 1 mol Zn cần 2 mol H^+ để tạo 1 mol Zn^2+ và 1 mol H2. B3. Vậy hỗn hợp axit phải cung cấp 0,20 mol H^+."
+          "explanation": "B1. nZn = 6,5 / 65 = 0,10 mol. B2. 1 mol Zn cần 2 mol H^+ để tạo 1 mol Zn^2+ và 1 mol H2. B3. Vậy hỗn hợp axit phải cung cấp 0,20 mol H^+.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l5-q12",
@@ -788,7 +801,8 @@
           "answer": "2,24",
           "acceptedAnswers": ["2.24", "2,240", "2.240"],
           "placeholder": "Thể tích SO2",
-          "explanation": "B1. nCu = 6,4 / 64 = 0,10 mol. B2. Theo phương trình Cu + 2H2SO4 -> CuSO4 + SO2 + 2H2O, nSO2 = nCu = 0,10 mol. B3. VSO2 = 0,10 x 22,4 = 2,24 lít."
+          "explanation": "B1. nCu = 6,4 / 64 = 0,10 mol. B2. Theo phương trình Cu + 2H2SO4 -> CuSO4 + SO2 + 2H2O, nSO2 = nCu = 0,10 mol. B3. VSO2 = 0,10 x 22,4 = 2,24 lít.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         },
         {
           "id": "a6-l5-q13",
@@ -798,7 +812,8 @@
           "left": ["Zn", "HCl"],
           "right": ["ZnCl2", "H2"],
           "answer": [1, 2, 1, 1],
-          "explanation": "B1. Zn tạo muối ZnCl2 nên cần 2Cl, tức là 2HCl. B2. Hai H còn lại ghép thành H2, vậy hệ số là 1 : 2 : 1 : 1."
+          "explanation": "B1. Zn tạo muối ZnCl2 nên cần 2Cl, tức là 2HCl. B2. Hai H còn lại ghép thành H2, vậy hệ số là 1 : 2 : 1 : 1.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
         }
       ]
     }

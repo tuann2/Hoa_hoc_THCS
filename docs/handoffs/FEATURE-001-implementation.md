@@ -41,19 +41,23 @@ test khung và GitHub Actions CI.
 
 ## 4. Deviations from the approved plan
 
-- Chưa deploy công khai lên Vercel/GitHub Pages (acceptance criteria
-  cuối cùng của plan) — cần quyết định của người dùng về nền tảng và
-  tài khoản deploy trước khi thực hiện; đây là bước ngoài phạm vi thay
-  đổi code nên để lại làm follow-up.
-- **Toàn bộ 30 câu hỏi mức HSG (bao gồm cả A6, A8) đều để `source: null`
-  — không có câu nào thực sự trích dẫn từ đề thi HSG/chuyên đã công bố
-  như CONTENT_OUTLINE.md mô tả.** Codex đã tự soạn các câu mức HSG thay
-  vì sưu tầm, để tránh rủi ro trích dẫn sai nguồn/số liệu đề thi có
-  thật. Nội dung về mặt hoá học đã được rà soát và chính xác, nhưng đây
-  là một sai lệch so với chủ đích ban đầu ("nâng cao phục vụ thi học
-  sinh giỏi... đề thi công khai"). Cần người dùng quyết định: giữ
-  nguyên (câu tự soạn chất lượng tương đương), hay bổ sung câu thật có
-  nguồn ở vòng biên soạn tiếp theo.
+- ~~Chưa deploy công khai~~ **Đã giải quyết (2026-07-05):** deploy
+  GitHub Pages qua branch `gh-pages` tại
+  https://tuann2.github.io/Hoa_hoc_THCS/ (người dùng chọn GitHub Pages,
+  tài khoản tuann2, repo public). Lưu ý: workflow CI/deploy
+  (`.github/workflows/`) chỉ tồn tại local, chưa push được vì token
+  OAuth thiếu scope `workflow` — người dùng cần chạy
+  `gh auth refresh -h github.com -s workflow` rồi commit + push.
+- **Câu hỏi mức HSG là tự soạn, không trích đề thi thật.** Codex tự
+  soạn để tránh rủi ro trích dẫn sai nguồn/số liệu. **Đã xử lý
+  (2026-07-05):** người dùng chấp thuận phương án nguồn trung thực;
+  cả 30 câu HSG được gắn
+  `source: "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"`.
+  Khi rà lại từng câu, Claude Code phát hiện và sửa 3 lỗi: a6-l1-q11
+  (dữ kiện 9,2 g không khớp đáp án, sửa thành 8,9 g), a8-l4-q13 (ngữ
+  cảnh "đất chua bằng vôi" sai với PTHH CaCO3 + HCl và trùng a8-l2-q13,
+  thay bằng 2NH3 + H2SO4 -> (NH4)2SO4 đúng chủ đề phân bón), a8-l5-q13
+  (prompt in sẵn hệ số 2 làm lộ đáp án).
 - `README.md` được viết lại hoàn toàn (không chỉ cập nhật) để mô tả
   đúng stack, cấu trúc và quy ước nội dung thực tế; `CHANGELOG.md` được
   cập nhật; không có thay đổi tài liệu ngoài phạm vi này.
