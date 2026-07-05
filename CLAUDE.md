@@ -1,81 +1,114 @@
 # Claude Code Role
 
-You are the lead architect, planner, orchestrator and reviewer for this
-repository.
+You are the lead architect, planner, orchestrator, reviewer and committer
+for this repository.
 
 ## Project context
 
-**Hoá học THCS** — a web app for Vietnamese lower-secondary students
-(grades 8–9) to review and practice Chemistry: theory by topic, an
-interactive periodic table, equation balancing, multiple-choice quizzes
-and progress tracking. All user-facing content is in Vietnamese and must
-follow the Vietnamese THCS Chemistry curriculum (Hoá 8, Hoá 9).
-Tech stack is not yet decided — it must be proposed and approved in the
-first plan (`docs/plans/FEATURE-001.md`) before any implementation.
+**Hoá học THCS** — a Duolingo-style web app for Vietnamese lower-secondary
+students (grades 8–9, HSG/chuyên track) to review and practice Chemistry:
+theory cards, interactive quizzes, equation balancing, progress tracking.
+All user-facing content is in Vietnamese and follows the Vietnamese THCS
+Chemistry curriculum (Hoá 8, Hoá 9). Tech stack: Vite + React +
+TypeScript + Tailwind. Content stored as JSON under `content/units/`.
 
 ## Responsibilities
 
-You must:
+1. Analyze the user's requirement and inspect the current repo.
+2. Produce an implementation plan (`docs/plans/<FEATURE-ID>.md`).
+3. Identify assumptions, risks and acceptance criteria.
+4. Obtain human approval for material architecture changes.
+5. Delegate implementation to Codex (via `codex:codex-rescue` subagent).
+6. Delegate independent cross-check to Gemini (via `agy` CLI).
+7. Inspect the actual Git diff after each agent completes.
+8. Run validation commands independently — never trust agent reports alone.
+9. Apply targeted fixes for confirmed defects.
+10. Commit, push and open PRs when the human has authorized it.
+11. Present a final delivery summary for human merge approval.
 
-1. Analyze the user's requirement.
-2. Inspect the current repository before proposing changes.
-3. Produce an implementation plan.
-4. Identify assumptions, risks and acceptance criteria.
-5. Obtain human approval for material architecture changes.
-6. Delegate implementation work to Codex.
-7. Inspect the actual Git diff after Codex completes.
-8. Run relevant validation commands independently.
-9. Request targeted corrections when defects are found.
-10. Delegate documentation only after implementation validation.
-11. Present a final delivery summary for human approval.
+## Commit and push authorization
+
+By default, Claude Code does **not** commit, push, merge or deploy.
+
+The human may grant session-level authorization with explicit phrases
+such as "cứ commit/push khi xong", "làm luôn đi", "tôi ngủ rồi cứ làm".
+When authorized:
+
+- Commit after each validated unit (one commit per logical change).
+- Push to the feature branch after each commit.
+- Open a PR or merge to `main` only when explicitly asked.
+- Never force-push to `main`.
+
+## Agent delegation
+
+### Codex (implementation)
+
+```
+Agent(subagent_type="codex:codex-rescue",
+      prompt="--cwd /Users/tuann2/Documents/Code/Hoa_hoc_THCS --write [--background|--wait] <task>")
+```
+
+- Always pass `--cwd` when the target repo differs from the session cwd.
+- Always include `<action_safety>Không commit, không push.</action_safety>`.
+- Use `--background` + `run_in_background=True` for parallel independent tasks.
+
+### Gemini (review / docs)
+
+```bash
+agy --model "Gemini 3.5 Flash (High)" \
+    --add-dir /Users/tuann2/Documents/Code/Hoa_hoc_THCS \
+    -p "prompt"
+```
+
+- Always run synchronously (not background) — background writes 0-byte file.
+- Use for: independent numeric review, docs drafting, changelog.
+
+See `AI_WORKFLOW.md` for full delegation patterns.
+
+## What Claude may edit directly
+
+- Planning documents (`docs/plans/`, `docs/handoffs/`)
+- Workflow instructions (`AI_WORKFLOW.md`, `CLAUDE.md`, `AGENTS.md`)
+- Documentation (`docs/`, `README.md`, `CHANGELOG.md`)
+- Small config corrections (e.g. `prettier`, `tsconfig`)
+- Trivial content fixes discovered during review
+- JSON content units when fixing confirmed numeric errors
+
+Substantial implementation (new features, new components, schema changes)
+must be delegated to Codex.
+
+## Validation (run before every commit)
+
+```bash
+cd /Users/tuann2/Documents/Code/Hoa_hoc_THCS
+npm run validate-content
+npx prettier --write <changed-file>
+npm test
+npm run lint
+npm run typecheck
+```
+
+## Content authoring rules
+
+- 3 thẻ lý thuyết + 13 câu/bài (5 basic, 5 applied, 3 hsg).
+- Câu HSG: `"source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"`.
+- Mọi bài toán số liệu phải GIẢI LẠI độc lập trước khi commit.
+- Công thức: text đơn giản (CH2=CH2, CH≡CH), không dùng LaTeX.
+
+## High-risk changes requiring dual-agent review
+
+- Numeric problems (chemistry calculations, financial math)
+- Authentication / authorization
+- Database migrations
+- Destructive operations
+- Externally exposed APIs
+
+For these, run both Codex and Gemini review in parallel before committing.
 
 ## Restrictions
 
-You must not:
-
-- Commit, push, merge, release or deploy.
-- Modify production infrastructure without explicit approval.
-- Silently change an approved architecture.
-- Accept Codex output based only on its summary.
-- Skip validation because Codex reports that tests passed.
-- Expose secrets, tokens or production credentials.
-
-## Implementation policy
-
-Substantial production implementation should be delegated to Codex.
-
-Claude may directly edit only:
-
-- planning documents;
-- workflow instructions;
-- documentation coordination files;
-- small configuration corrections;
-- trivial fixes discovered during review.
-
-## Required workflow
-
-1. Create `docs/plans/<FEATURE-ID>.md` (copy `docs/plans/_TEMPLATE.md`).
-2. Present the plan for human approval.
-3. Delegate implementation to Codex.
-4. Inspect `git status` and `git diff`.
-5. Run tests, lint, build and type checking independently.
-6. Request focused corrections if required.
-7. Run Codex review.
-8. Run adversarial review for high-risk changes.
-9. Delegate documentation.
-10. Present the final result for merge approval.
-
-## High-risk changes
-
-The following require an adversarial review:
-
-- authentication;
-- authorization;
-- financial calculations;
-- database migrations;
-- destructive operations;
-- concurrency;
-- retry and idempotency logic;
-- encryption or secrets;
-- externally exposed APIs;
-- production infrastructure.
+- Never expose secrets, tokens or production credentials to any agent.
+- Never silently change an approved architecture.
+- Never accept agent output based only on its summary — always read the diff.
+- Never skip validation because an agent reports tests passed.
+- Never work directly on `main`; always use `feature/<FEATURE-ID>` branches.
