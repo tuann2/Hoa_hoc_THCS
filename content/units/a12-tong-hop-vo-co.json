@@ -5,43 +5,650 @@
   "title": "Chuyên đề tổng hợp Vô cơ",
   "order": 12,
   "description": "Chuỗi phản ứng, nhận biết, tách chất và đề tổng hợp dành cho học sinh thi HSG.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a12-l1",
       "title": "Chuỗi phản ứng – điều chế nhiều bước",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Viết chuỗi phản ứng 5-6 bước và điều chế chất vô cơ từ đá vôi, muối ăn, quặng pirit, không khí và nước.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a12-l1-c1",
+          "heading": "Tách chuỗi dài thành các mắt xích gần nhau",
+          "body": "Với chuỗi dài, hãy biến đổi từng bước sao cho chất sau luôn suy ra trực tiếp từ chất trước.\nVí dụ: CaCO3 -> CaO -> Ca(OH)2 -> CaCO3 -> CaCl2.\nPTHH: CaCO3 -> CaO + CO2; CaO + H2O -> Ca(OH)2; Ca(OH)2 + CO2 -> CaCO3 + H2O; CaCO3 + 2HCl -> CaCl2 + H2O + CO2."
+        },
+        {
+          "id": "a12-l1-c2",
+          "heading": "Điều chế nhiều bước từ nguyên liệu quen thuộc",
+          "body": "Từ đá vôi và muối ăn có thể đi tới nhiều sản phẩm khác nhau nếu chọn đúng nhánh trung gian.\nVí dụ điều chế clorua vôi: CaCO3 -> CaO -> Ca(OH)2; đồng thời điện phân dung dịch NaCl bão hoà có màng ngăn để thu Cl2; sau đó Ca(OH)2 + Cl2 -> CaOCl2 + H2O."
+        },
+        {
+          "id": "a12-l1-c3",
+          "heading": "Chuỗi oxi hoá lưu huỳnh từ quặng pirit",
+          "body": "Muốn điều chế H2SO4 từ FeS2, phải đi qua ba chặng: tạo SO2, oxi hoá thành SO3, rồi hấp thụ nước.\nPTHH tiêu biểu: 4FeS2 + 11O2 -> 2Fe2O3 + 8SO2; 2SO2 + O2 -> 2SO3; SO3 + H2O -> H2SO4."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a12-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để chuyển CaO thành CaCl2 trong một phản ứng, cần dùng chất nào?",
+          "options": ["HCl", "H2O", "O2", "NaOH"],
+          "answer": 0,
+          "explanation": "B1. CaO là oxit bazơ nên tác dụng với axit tạo muối và nước. B2. Phản ứng: CaO + 2HCl -> CaCl2 + H2O."
+        },
+        {
+          "id": "a12-l1-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Trong chuỗi FeS2 -> SO2 -> SO3 -> H2SO4, chất trung gian đứng ngay trước H2SO4 là gì?",
+          "answer": "SO3",
+          "placeholder": "Nhập công thức chất",
+          "explanation": "B1. SO2 phải tiếp tục bị oxi hoá thành SO3. B2. Sau đó SO3 hấp thụ nước mới tạo H2SO4."
+        },
+        {
+          "id": "a12-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các chất đóng vai trò nguyên liệu trực tiếp trong quy trình điều chế H2SO4 từ quặng pirit.",
+          "options": ["FeS2", "O2", "H2O", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. FeS2 là nguồn lưu huỳnh ban đầu. B2. O2 dùng để oxi hoá FeS2 và SO2, còn H2O dùng ở bước hấp thụ SO3 tạo H2SO4. B3. NaCl không tham gia quy trình này."
+        },
+        {
+          "id": "a12-l1-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng nung quặng pirit: FeS2 + O2 -> Fe2O3 + SO2.",
+          "left": ["FeS2", "O2"],
+          "right": ["Fe2O3", "SO2"],
+          "answer": [4, 11, 2, 8],
+          "explanation": "B1. Cân bằng Fe trước: chọn 4FeS2 thì có 4 Fe, tương ứng 2Fe2O3. B2. Khi đó có 8 S nên tạo 8SO2. B3. Tổng số O ở vế phải là 6 + 16 = 22 nguyên tử O nên cần 11O2."
+        },
+        {
+          "id": "a12-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Điện phân dung dịch NaCl bão hoà có màng ngăn thu được đồng thời những sản phẩm nào?",
+          "options": [
+            "NaOH, H2, Cl2",
+            "NaOH, O2, Cl2",
+            "Na2CO3, H2, Cl2",
+            "NaClO, H2, O2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Phản ứng điện phân có màng ngăn là 2NaCl + 2H2O -> 2NaOH + H2 + Cl2. B2. Vì vậy thu được đồng thời xút, hiđro và clo."
+        },
+        {
+          "id": "a12-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dãy chuyển hoá nào dưới đây dùng được để điều chế clorua vôi từ đá vôi?",
+          "options": [
+            "CaCO3 -> CaO -> Ca(OH)2 -> CaOCl2",
+            "CaCO3 -> CaCl2 -> Ca(OH)2 -> CaOCl2",
+            "CaCO3 -> CaO -> CaCl2 -> CaOCl2",
+            "CaCO3 -> Ca(OH)2 -> CaO -> CaOCl2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Từ đá vôi phải nung tạo CaO, rồi tôi vôi tạo Ca(OH)2. B2. Sau đó cho Ca(OH)2 tác dụng với Cl2 mới thu được CaOCl2."
+        },
+        {
+          "id": "a12-l1-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nung hoàn toàn 25 g CaCO3, rồi cho toàn bộ CaO thu được tác dụng với HCl dư. Khối lượng CaCl2 tạo thành là bao nhiêu gam?",
+          "answer": "27,75",
+          "acceptedAnswers": ["27.75"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol. B2. Theo chuỗi CaCO3 -> CaO -> CaCl2, số mol CaCl2 tạo thành cũng bằng 0,25 mol. B3. mCaCl2 = 0,25 x 111 = 27,75 g."
+        },
+        {
+          "id": "a12-l1-q8",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng điều chế HCl từ muối ăn và axit sunfuric đặc: NaCl + H2SO4 -> Na2SO4 + HCl.",
+          "left": ["NaCl", "H2SO4"],
+          "right": ["Na2SO4", "HCl"],
+          "answer": [2, 1, 1, 2],
+          "explanation": "B1. Muối Na2SO4 có 2 Na nên cần 2NaCl. B2. Khi đó vế trái có 2 Cl nên vế phải phải là 2HCl. B3. H và S đều đã cân bằng."
+        },
+        {
+          "id": "a12-l1-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phương trình thuộc quy trình điều chế clorua vôi từ NaCl, nước và đá vôi.",
+          "options": [
+            "2NaCl + 2H2O -> 2NaOH + H2 + Cl2",
+            "CaCO3 -> CaO + CO2",
+            "CaO + H2O -> Ca(OH)2",
+            "Ca(OH)2 + Cl2 -> CaOCl2 + H2O",
+            "2NaOH + Cl2 -> CaOCl2 + H2O"
+          ],
+          "answers": [0, 1, 2, 3],
+          "explanation": "B1. Muốn có CaOCl2 phải chuẩn bị Cl2 từ điện phân NaCl và Ca(OH)2 từ đá vôi. B2. Bốn phương trình đầu mô tả đúng các chặng đó. B3. Phương trình cuối sai vì CaOCl2 không thể tạo từ NaOH và Cl2."
+        },
+        {
+          "id": "a12-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt hoàn toàn 15 g FeS2, chuyển toàn bộ lưu huỳnh thành H2SO4. Khối lượng H2SO4 tối đa thu được là",
+          "options": ["24,5 g", "12,25 g", "39,2 g", "49 g"],
+          "answer": 0,
+          "explanation": "B1. nFeS2 = 15/120 = 0,125 mol. B2. Mỗi mol FeS2 chứa 2 mol S nên cuối cùng tạo 2 mol H2SO4: nH2SO4 = 0,25 mol. B3. mH2SO4 = 0,25 x 98 = 24,5 g."
+        },
+        {
+          "id": "a12-l1-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Điện phân hoàn toàn dung dịch chứa 11,7 g NaCl. Toàn bộ H2 và Cl2 sinh ra được cho phản ứng vừa đủ với nhau để tạo HCl. Khối lượng HCl thu được là bao nhiêu gam?",
+          "answer": "7,3",
+          "acceptedAnswers": ["7.3"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nNaCl = 11,7/58,5 = 0,2 mol. B2. Theo điện phân: 2NaCl + 2H2O -> 2NaOH + H2 + Cl2 nên thu được 0,1 mol H2 và 0,1 mol Cl2. B3. H2 + Cl2 -> 2HCl nên nHCl = 0,2 mol. B4. mHCl = 0,2 x 36,5 = 7,3 g."
+        },
+        {
+          "id": "a12-l1-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Từ 30 g quặng pirit chứa 80% FeS2, điều chế được dung dịch H2SO4 49% với hiệu suất chung 75%. Khối lượng dung dịch H2SO4 thu được là",
+          "options": ["60 g", "49 g", "58,8 g", "80 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Khối lượng FeS2 tinh khiết là 30 x 80% = 24 g, nên nFeS2 = 24/120 = 0,2 mol. B2. Theo sơ đồ, 1 mol FeS2 tạo tối đa 2 mol H2SO4 nên nH2SO4 lt = 0,4 mol, mlt = 0,4 x 98 = 39,2 g. B3. Với hiệu suất chung 75%, mH2SO4 thực tế = 39,2 x 75% = 29,4 g. B4. Dung dịch 49% có khối lượng mdd = 29,4/0,49 = 60 g."
+        },
+        {
+          "id": "a12-l1-q13",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Từ 25 g CaCO3 và 23,4 g NaCl, điều chế CaOCl2 với hiệu suất 100% ở mọi giai đoạn. Khối lượng CaOCl2 tối đa thu được là bao nhiêu gam?",
+          "answer": "25,4",
+          "acceptedAnswers": ["25.4"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol nên tối đa tạo 0,25 mol Ca(OH)2. B2. nNaCl = 23,4/58,5 = 0,4 mol; theo điện phân 2NaCl -> Cl2 nên nCl2 = 0,2 mol. B3. Ca(OH)2 + Cl2 -> CaOCl2 + H2O theo tỉ lệ 1:1 nên Cl2 là chất giới hạn, tạo 0,2 mol CaOCl2. B4. mCaOCl2 = 0,2 x 127 = 25,4 g."
+        }
+      ]
     },
     {
       "id": "a12-l2",
       "title": "Nhận biết không giới hạn/giới hạn thuốc thử; tách chất",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Nhận biết đồng thời nhiều chất mất nhãn khi bị giới hạn thuốc thử và chọn quy trình tách, tinh chế phù hợp cho hỗn hợp vô cơ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a12-l2-c1",
+          "heading": "Một thuốc thử nhưng phải tạo ra nhiều hiện tượng",
+          "body": "Khi chỉ có một thuốc thử, cần chọn thuốc thử tạo hiện tượng khác nhau rõ rệt giữa các mẫu.\nVí dụ dùng H2SO4 loãng cho ba dung dịch BaCl2, Na2CO3, NaCl: với BaCl2 xuất hiện kết tủa trắng BaSO4; với Na2CO3 sủi bọt CO2; với NaCl không hiện tượng."
+        },
+        {
+          "id": "a12-l2-c2",
+          "heading": "Không giới hạn thuốc thử: nhận từ nhóm dễ trước",
+          "body": "Nếu có nhiều thuốc thử, nên nhận axit và bazơ trước bằng quỳ tím hoặc phenolphthalein, rồi mới xét các dung dịch trung tính.\nVí dụ: trong bộ HCl, NaOH, Na2CO3, Na2SO4, dùng quỳ tím để nhận HCl và hai dung dịch bazơ; dùng HCl để tách riêng Na2CO3; cuối cùng dùng BaCl2 để nhận Na2SO4."
+        },
+        {
+          "id": "a12-l2-c3",
+          "heading": "Tách và tinh chế phải giữ chất cần thu",
+          "body": "Luôn ưu tiên phương pháp vật lí trước: nam châm, hoà tan chọn lọc, lọc, cô cạn. Chỉ dùng phản ứng hoá học khi chất cần thu không bị mất.\nVí dụ tách hỗn hợp Fe, NaCl, cát: dùng nam châm hút Fe; hoà tan phần còn lại vào nước; lọc lấy cát; cô cạn dịch lọc thu NaCl."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a12-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chỉ dùng H2SO4 loãng để thử ba dung dịch BaCl2, Na2CO3, NaCl. Dung dịch nào sẽ sủi bọt khí?",
+          "options": ["BaCl2", "Na2CO3", "NaCl", "cả ba dung dịch"],
+          "answer": 1,
+          "explanation": "B1. Na2CO3 gặp H2SO4 tạo H2CO3 rồi phân huỷ thành CO2 và H2O. B2. BaCl2 chỉ cho kết tủa BaSO4, còn NaCl không phản ứng."
+        },
+        {
+          "id": "a12-l2-q2",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Để tách NaCl khỏi hỗn hợp NaCl và cát, cần thực hiện những thao tác nào?",
+          "options": ["hoà tan vào nước", "lọc", "cô cạn", "dùng nam châm"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. NaCl tan trong nước còn cát không tan, nên trước hết hoà tan rồi lọc. B2. Sau đó cô cạn dịch lọc để thu lại NaCl rắn. B3. Nam châm không có tác dụng với hai chất này."
+        },
+        {
+          "id": "a12-l2-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Trong quy trình tách hỗn hợp bột sắt, lưu huỳnh và muối ăn, dụng cụ cần dùng đầu tiên để lấy bột sắt là ___.",
+          "answer": "nam châm",
+          "acceptedAnswers": ["magnet"],
+          "placeholder": "Nhập tên dụng cụ",
+          "explanation": "B1. Sắt có từ tính nên bị nam châm hút, còn lưu huỳnh và NaCl thì không. B2. Vì vậy dùng nam châm là bước đầu nhanh nhất và sạch nhất."
+        },
+        {
+          "id": "a12-l2-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhận biết ion sunfat: BaCl2 + Na2SO4 -> BaSO4 + NaCl.",
+          "left": ["BaCl2", "Na2SO4"],
+          "right": ["BaSO4", "NaCl"],
+          "answer": [1, 1, 1, 2],
+          "explanation": "B1. Ba, Na và SO4 đã cân bằng theo tỉ lệ 1:1:1. B2. Vế trái có 2 Cl nên vế phải phải là 2NaCl để bảo toàn clo và natri."
+        },
+        {
+          "id": "a12-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nếu chỉ có quỳ tím, trong ba dung dịch HCl, NaOH, NaCl thì dung dịch nào không thể nhận ra ngay bằng sự đổi màu quỳ?",
+          "options": ["HCl", "NaOH", "NaCl", "cả HCl và NaOH"],
+          "answer": 2,
+          "explanation": "B1. HCl làm quỳ tím hoá đỏ, NaOH làm quỳ tím hoá xanh. B2. NaCl là dung dịch trung tính nên không làm đổi màu quỳ."
+        },
+        {
+          "id": "a12-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Có bốn lọ mất nhãn: H2SO4, Na2CO3, BaCl2, NaCl. Chỉ dùng quỳ tím rồi tận dụng các dung dịch đã nhận ra, phát biểu nào đúng?",
+          "options": [
+            "Có thể nhận biết hết cả bốn lọ",
+            "Chỉ nhận ra được H2SO4 và Na2CO3",
+            "Chỉ nhận ra được BaCl2 và NaCl",
+            "Không thể nhận ra bất kì lọ nào"
+          ],
+          "answer": 0,
+          "explanation": "B1. Quỳ tím nhận ra ngay H2SO4 (đỏ) và Na2CO3 (xanh). B2. Dùng Na2CO3 đã nhận ra để thử hai lọ còn lại: BaCl2 cho kết tủa BaCO3, còn NaCl không hiện tượng. B3. Vì thế nhận ra được toàn bộ bốn lọ."
+        },
+        {
+          "id": "a12-l2-q7",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Muốn nhận biết đồng thời bốn dung dịch NaCl, Na2SO4, Na2CO3, NaOH bằng các thuốc thử ngoài bộ mẫu, chọn những thuốc thử nào là đủ?",
+          "options": ["quỳ tím", "HCl", "BaCl2", "AgNO3"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Quỳ tím giúp tách NaOH và Na2CO3 khỏi hai dung dịch trung tính. B2. HCl nhận ra Na2CO3 nhờ khí CO2. B3. BaCl2 nhận ra Na2SO4 nhờ kết tủa BaSO4; dung dịch còn lại là NaCl. B4. AgNO3 không cần thiết."
+        },
+        {
+          "id": "a12-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hỗn hợp ban đầu gồm NaCl và cát có khối lượng 11,7 g. Sau khi hoà tan, lọc và cô cạn, thu được 5,85 g NaCl khan. Phần trăm khối lượng NaCl trong hỗn hợp là bao nhiêu?",
+          "answer": "50",
+          "acceptedAnswers": ["50%"],
+          "placeholder": "Nhập phần trăm",
+          "explanation": "B1. Vì tách vật lí không làm mất NaCl nên khối lượng NaCl ban đầu là 5,85 g. B2. Phần trăm khối lượng NaCl = 5,85/11,7 x 100% = 50%."
+        },
+        {
+          "id": "a12-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trình tự hợp lí để tách riêng Fe, NaCl và CaCO3 khỏi hỗn hợp rắn gồm ba chất này là",
+          "options": [
+            "hoà tan cả hỗn hợp vào nước, lọc, rồi mới dùng nam châm",
+            "dùng nam châm tách Fe, cho phần còn lại vào nước, lọc tách CaCO3, cô cạn dịch lọc thu NaCl",
+            "cho HCl vào hỗn hợp rồi cô cạn để thu cả ba chất",
+            "đun nóng hỗn hợp trước, sau đó mới lọc bằng nước"
+          ],
+          "answer": 1,
+          "explanation": "B1. Fe phải được lấy ra trước bằng nam châm. B2. Trong phần còn lại, NaCl tan còn CaCO3 không tan nên hoà tan bằng nước rồi lọc. B3. Cô cạn dịch lọc sẽ thu được NaCl."
+        },
+        {
+          "id": "a12-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Một hỗn hợp bột Fe và Cu có khối lượng 19,3 g. Cho tác dụng với HCl dư, lọc lấy chất rắn không tan rồi rửa, sấy khô được 12,8 g. Khối lượng Fe trong hỗn hợp ban đầu là",
+          "options": ["6,5 g", "12,8 g", "19,3 g", "25,8 g"],
+          "answer": 0,
+          "explanation": "B1. Cu không phản ứng với HCl nên chất rắn sau phản ứng là Cu, có khối lượng 12,8 g. B2. Khối lượng Fe ban đầu = 19,3 - 12,8 = 6,5 g."
+        },
+        {
+          "id": "a12-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Có bốn dung dịch mất nhãn: HCl, NaOH, Na2CO3, BaCl2. Chỉ dùng phenolphthalein rồi tận dụng các dung dịch đã nhận ra, kết luận nào sau đây đúng?",
+          "options": [
+            "Vẫn có thể nhận biết hết cả bốn dung dịch",
+            "Chỉ nhận được NaOH và Na2CO3, không phân biệt tiếp được",
+            "Chỉ nhận được HCl và BaCl2",
+            "Hoàn toàn không thể dùng phenolphthalein trong trường hợp này"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phenolphthalein làm NaOH và Na2CO3 chuyển hồng, còn HCl và BaCl2 không màu. B2. Lấy một mẫu màu hồng thử vào hai mẫu không màu: nếu gặp một mẫu sủi khí và một mẫu tạo kết tủa thì mẫu hồng đó là Na2CO3, hai mẫu không màu tương ứng là HCl và BaCl2. B3. Mẫu hồng còn lại là NaOH, nên vẫn nhận ra đủ bốn dung dịch."
+        },
+        {
+          "id": "a12-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Dung dịch X chứa đồng thời Na2CO3 0,5M và NaCl 0,25M; thể tích dung dịch là 200 ml. Dùng HCl vừa đủ để loại gốc CO3^2-, sau đó cô cạn dung dịch. Khối lượng NaCl thu được là bao nhiêu gam?",
+          "answer": "14,625",
+          "acceptedAnswers": ["14.625"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nNa2CO3 = 0,2 x 0,5 = 0,1 mol; nNaCl ban đầu = 0,2 x 0,25 = 0,05 mol. B2. Theo Na2CO3 + 2HCl -> 2NaCl + H2O + CO2, 0,1 mol Na2CO3 tạo thêm 0,2 mol NaCl. B3. Tổng nNaCl sau xử lí là 0,05 + 0,2 = 0,25 mol. B4. mNaCl = 0,25 x 58,5 = 14,625 g."
+        },
+        {
+          "id": "a12-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hỗn hợp X gồm BaCl2 và NaCl. Hoà tan X vào nước rồi cho Na2SO4 vừa đủ, lọc bỏ kết tủa và cô cạn dịch lọc thu được 11,7 g NaCl. Nếu ban đầu hỗn hợp X có 0,05 mol BaCl2 thì khối lượng hỗn hợp X là",
+          "options": ["16,25 g", "11,7 g", "10,4 g", "21,5 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nNaCl cuối cùng = 11,7/58,5 = 0,2 mol. B2. Phản ứng BaCl2 + Na2SO4 -> BaSO4 + 2NaCl cho 0,05 mol BaCl2 tạo 0,1 mol NaCl. B3. Vậy NaCl ban đầu trong hỗn hợp là 0,2 - 0,1 = 0,1 mol, có khối lượng 5,85 g. B4. mBaCl2 = 0,05 x 208 = 10,4 g, nên mX = 10,4 + 5,85 = 16,25 g."
+        }
+      ]
     },
     {
       "id": "a12-l3",
       "title": "Bài tập biện luận theo điều kiện",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Biện luận xác định kim loại, công thức chất và lượng chất phản ứng khi đề bài cho dữ kiện về khí, chất dư hoặc hoá trị.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a12-l3-c1",
+          "heading": "Luôn xét chất nào dư trước",
+          "body": "Ở bài kim loại + axit, nếu axit dư thì kim loại phản ứng hết; nếu axit thiếu thì còn kim loại dư và số mol H2 chỉ phụ thuộc phần kim loại đã phản ứng.\nVí dụ: 8,4 g Fe tác dụng với HCl thiếu, còn lại 2,8 g Fe. Phần Fe phản ứng là 5,6 g = 0,1 mol nên tạo 0,1 mol H2."
+        },
+        {
+          "id": "a12-l3-c2",
+          "heading": "Từ hoá trị và thể tích khí để suy ra kim loại",
+          "body": "Với kim loại hoá trị II: M + 2HCl -> MCl2 + H2 nên nM = nH2.\nVới kim loại hoá trị III: 2M + 6HCl -> 2MCl3 + 3H2 nên nM = 2nH2/3.\nSau khi tìm số mol kim loại, lấy m/n để suy ra nguyên tử khối."
+        },
+        {
+          "id": "a12-l3-c3",
+          "heading": "Biện luận công thức từ oxit hoặc muối",
+          "body": "Nếu biết oxit có dạng MO hay M2O3, hãy dùng khối lượng mol hợp chất hoặc tỉ lệ khối lượng kim loại - oxi để tìm M.\nVí dụ: oxit MO có phân tử khối 80 thì M = 80 - 16 = 64, suy ra M là Cu."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a12-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Kim loại M hoá trị II tác dụng với HCl theo sơ đồ M + 2HCl -> MCl2 + H2. Vậy 1 mol M tạo ra bao nhiêu mol H2?",
+          "options": ["1 mol", "0,5 mol", "1,5 mol", "2 mol"],
+          "answer": 0,
+          "explanation": "B1. Phương trình cho thấy 1 mol M đi cùng 1 mol H2. B2. Vì vậy kim loại hoá trị II phản ứng vừa đủ với axit sẽ tạo số mol H2 bằng số mol kim loại."
+        },
+        {
+          "id": "a12-l3-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Kim loại M hoá trị III phản ứng với HCl theo tỉ lệ nH2 = ___ x nM.",
+          "answer": "1,5",
+          "acceptedAnswers": ["3/2", "1.5"],
+          "placeholder": "Nhập hệ số",
+          "explanation": "B1. Phương trình tổng quát là 2M + 6HCl -> 2MCl3 + 3H2. B2. Suy ra nH2/nM = 3/2 = 1,5."
+        },
+        {
+          "id": "a12-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các dữ kiện thường dùng để biện luận bài toán hỗn hợp kim loại + axit.",
+          "options": [
+            "khối lượng hỗn hợp ban đầu",
+            "thể tích khí H2 thoát ra",
+            "khối lượng chất rắn còn dư",
+            "màu ngọn lửa đèn cồn"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Khối lượng hỗn hợp, thể tích H2 và khối lượng chất rắn dư là ba dữ kiện định lượng trực tiếp. B2. Màu ngọn lửa đèn cồn không liên quan đến bài toán biện luận loại này."
+        },
+        {
+          "id": "a12-l3-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Al + HCl -> AlCl3 + H2.",
+          "left": ["Al", "HCl"],
+          "right": ["AlCl3", "H2"],
+          "answer": [2, 6, 2, 3],
+          "explanation": "B1. Nhôm tạo muối AlCl3 nên cần 3 Cl cho mỗi Al. B2. Chọn 2Al thì tạo 2AlCl3 và cần 6HCl. B3. Khi đó có 6 H ở vế trái nên tạo 3H2."
+        },
+        {
+          "id": "a12-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Oxit của kim loại M có dạng MO và phân tử khối bằng 80. Kim loại M là",
+          "options": ["Cu", "Mg", "Zn", "Fe"],
+          "answer": 0,
+          "explanation": "B1. MO có M + 16 = 80 nên M = 64. B2. Kim loại có nguyên tử khối gần 64 ở mức THCS là Cu."
+        },
+        {
+          "id": "a12-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan vừa đủ 5,6 g kim loại M hoá trị II bằng HCl, thu được 2,24 lít H2 (đktc). Kim loại M là",
+          "options": ["Fe", "Mg", "Zn", "Cu"],
+          "answer": 0,
+          "explanation": "B1. nH2 = 2,24/22,4 = 0,1 mol nên nM = 0,1 mol. B2. Nguyên tử khối M = 5,6/0,1 = 56. B3. Kim loại có nguyên tử khối 56 là Fe."
+        },
+        {
+          "id": "a12-l3-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan 6,75 g kim loại M hoá trị III bằng HCl dư, thu được 8,4 lít H2 (đktc). Kim loại M là gì? (ghi kí hiệu hoá học)",
+          "answer": "Al",
+          "acceptedAnswers": ["Nhôm"],
+          "placeholder": "Nhập kí hiệu kim loại",
+          "explanation": "B1. nH2 = 8,4/22,4 = 0,375 mol. B2. Với kim loại hoá trị III, nM = 2nH2/3 = 0,25 mol. B3. Nguyên tử khối M = 6,75/0,25 = 27 nên M là Al."
+        },
+        {
+          "id": "a12-l3-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 10,1 g hỗn hợp Mg và Zn bằng HCl dư, thu được 5,6 lít H2 (đktc). Khối lượng Zn trong hỗn hợp là",
+          "options": ["6,5 g", "5,9 g", "7,1 g", "3,6 g"],
+          "answer": 0,
+          "explanation": "B1. Gọi số mol Mg, Zn lần lượt là a và b. Vì cả hai đều hoá trị II nên a + b = nH2 = 5,6/22,4 = 0,25 mol. B2. Theo khối lượng: 24a + 65b = 10,1. B3. Giải hệ được a = 0,15; b = 0,1 mol. B4. mZn = 0,1 x 65 = 6,5 g."
+        },
+        {
+          "id": "a12-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 8,4 g Fe tác dụng với HCl thiếu. Sau phản ứng còn lại 2,8 g Fe chưa tan. Thể tích H2 thu được ở đktc là bao nhiêu lít?",
+          "answer": "2,24",
+          "acceptedAnswers": ["2.24"],
+          "placeholder": "Nhập số lít",
+          "explanation": "B1. Khối lượng Fe đã phản ứng là 8,4 - 2,8 = 5,6 g nên nFe phản ứng = 5,6/56 = 0,1 mol. B2. Theo Fe + 2HCl -> FeCl2 + H2, nH2 = 0,1 mol. B3. VH2 = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a12-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxit của kim loại M có công thức M2O3. Biết 16 g oxit chứa 11,2 g kim loại. Kim loại M là",
+          "options": ["Fe", "Al", "Zn", "Cu"],
+          "answer": 0,
+          "explanation": "B1. Khối lượng O trong oxit là 16 - 11,2 = 4,8 g, tương ứng nO = 4,8/16 = 0,3 mol nguyên tử O. B2. Trong M2O3, cứ 3 mol O đi với 2 mol M nên nM = 0,3 x 2/3 = 0,2 mol. B3. Nguyên tử khối M = 11,2/0,2 = 56 nên M là Fe."
+        },
+        {
+          "id": "a12-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 15,3 g hỗn hợp Mg và Al bằng HCl dư, thu được 15,68 lít H2 (đktc). Khối lượng Al trong hỗn hợp là",
+          "options": ["4,5 g", "10,8 g", "6,75 g", "8,1 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol Mg, Al lần lượt là a, b. Khi đó 24a + 27b = 15,3. B2. nH2 = 15,68/22,4 = 0,7 mol; theo tỉ lệ phản ứng a + 1,5b = 0,7. B3. Giải hệ được a = 0,45 mol; b = 1/6 mol. B4. mAl = 27 x 1/6 = 4,5 g."
+        },
+        {
+          "id": "a12-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hoà tan 6,5 g kim loại M hoá trị II bằng 200 ml dung dịch HCl 1M vừa đủ, thu được 2,24 lít H2 (đktc). M là kim loại gì? (ghi kí hiệu hoá học)",
+          "answer": "Zn",
+          "acceptedAnswers": ["Kẽm"],
+          "placeholder": "Nhập kí hiệu kim loại",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nHCl = 0,2 x 1 = 0,2 mol; vì HCl vừa đủ với kim loại hoá trị II nên nM = 0,1 mol. B2. Thể tích H2 2,24 lít cũng cho nH2 = 0,1 mol, khớp với tỉ lệ 1:1. B3. Nguyên tử khối M = 6,5/0,1 = 65 nên M là Zn."
+        },
+        {
+          "id": "a12-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan m gam hỗn hợp Fe và Cu bằng H2SO4 loãng dư, thu được 3,36 lít H2 (đktc) và còn lại 3,2 g chất rắn không tan. Giá trị của m là",
+          "options": ["11,6 g", "8,4 g", "14,8 g", "6,4 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cu không phản ứng với H2SO4 loãng nên chất rắn còn lại là Cu, có khối lượng 3,2 g. B2. nH2 = 3,36/22,4 = 0,15 mol nên nFe = 0,15 mol, mFe = 0,15 x 56 = 8,4 g. B3. Tổng khối lượng hỗn hợp ban đầu m = 8,4 + 3,2 = 11,6 g."
+        }
+      ]
     },
     {
       "id": "a12-l4",
       "title": "Đề tổng hợp vô cơ theo cấu trúc đề thi chuyên",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Rèn kiểu bài tổng hợp nhiều mảng vô cơ trong cùng một câu hỏi: oxit, axit, bazơ, muối, kim loại và phi kim.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a12-l4-c1",
+          "heading": "Chia đề thành các chặng phản ứng",
+          "body": "Đề tổng hợp thường gồm nhiều chặng nối tiếp nhau: tạo khí, hấp thụ khí, kết tủa, rồi lại hoà tan kết tủa.\nVí dụ: CaCO3 + 2HCl -> CaCl2 + H2O + CO2; CO2 + Ca(OH)2 -> CaCO3 + H2O; CaCO3 + 2HCl -> CaCl2 + H2O + CO2."
+        },
+        {
+          "id": "a12-l4-c2",
+          "heading": "Bảo toàn nguyên tố qua nhiều bước",
+          "body": "Dù chất trung gian thay đổi, nguyên tố kim loại thường được bảo toàn hoàn toàn qua chuỗi chuyển hoá.\nVí dụ: CuO + H2SO4 -> CuSO4 + H2O; CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4. Số mol Cu luôn không đổi từ đầu đến cuối."
+        },
+        {
+          "id": "a12-l4-c3",
+          "heading": "Kiểm tra chất giới hạn sau từng chặng",
+          "body": "Khi đề ghép nhiều phản ứng liên tiếp, chất giới hạn ở chặng đầu có thể quyết định toàn bộ chặng sau.\nVí dụ: Fe + CuSO4 -> FeSO4 + Cu. Nếu Fe còn dư sau chặng này, phần Fe dư mới tiếp tục phản ứng với HCl để tạo H2; đồng sinh ra thì không phản ứng với HCl loãng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a12-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Cho CO2 vào dung dịch Ca(OH)2 dư, lọc lấy kết tủa rồi hoà tan kết tủa bằng HCl. Muối cuối cùng thu được là",
+          "options": ["CaCl2", "CaCO3", "Ca(HCO3)2", "CaO"],
+          "answer": 0,
+          "explanation": "B1. CO2 gặp Ca(OH)2 dư tạo kết tủa CaCO3. B2. CaCO3 tan trong HCl theo phản ứng CaCO3 + 2HCl -> CaCl2 + H2O + CO2. B3. Vì vậy muối cuối cùng là CaCl2."
+        },
+        {
+          "id": "a12-l4-q2",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Trong sơ đồ Fe -> FeCl2 -> Fe(OH)2 -> FeO, chọn các thuốc thử hoặc điều kiện đúng cho từng bước.",
+          "options": ["HCl", "NaOH", "O2 dư", "nhiệt"],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Fe tác dụng với HCl tạo FeCl2. B2. FeCl2 gặp NaOH tạo Fe(OH)2. B3. Nung Fe(OH)2 bị phân huỷ thành FeO và H2O; nếu dùng O2 dư sẽ bị oxi hoá sâu hơn."
+        },
+        {
+          "id": "a12-l4-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Hoà tan vừa đủ 4,8 g MgO bằng dung dịch HCl 1M. Thể tích dung dịch HCl tối thiểu cần dùng là bao nhiêu ml?",
+          "answer": "240",
+          "acceptedAnswers": ["240 ml", "240mL"],
+          "placeholder": "Nhập số ml",
+          "explanation": "B1. nMgO = 4,8/40 = 0,12 mol. B2. Theo MgO + 2HCl -> MgCl2 + H2O, cần nHCl = 0,24 mol. B3. Với dung dịch 1M, V = n/C = 0,24 lít = 240 ml."
+        },
+        {
+          "id": "a12-l4-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng khử oxit sắt bằng CO: Fe2O3 + CO -> Fe + CO2.",
+          "left": ["Fe2O3", "CO"],
+          "right": ["Fe", "CO2"],
+          "answer": [1, 3, 2, 3],
+          "explanation": "B1. Cân bằng Fe trước: 1Fe2O3 cho 2Fe. B2. Để cân bằng O và C, cần 3CO tạo 3CO2. B3. Khi đó số nguyên tử của mọi nguyên tố đều bằng nhau ở hai vế."
+        },
+        {
+          "id": "a12-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dẫn CO2 dư vào dung dịch NaOH. Muối tạo thành cuối cùng là",
+          "options": ["NaHCO3", "Na2CO3", "NaCl", "Na2SO4"],
+          "answer": 0,
+          "explanation": "B1. Khi CO2 dư, Na2CO3 trung gian tiếp tục hấp thụ CO2 và H2O tạo NaHCO3. B2. Vì vậy sản phẩm cuối cùng là muối axit NaHCO3."
+        },
+        {
+          "id": "a12-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 16,8 g Fe vào 200 ml dung dịch CuSO4 1M. Lấy chất rắn sau phản ứng cho tác dụng với HCl dư. Thể tích H2 sinh ra ở đktc là",
+          "options": ["2,24 lít", "4,48 lít", "0 lít", "1,12 lít"],
+          "answer": 0,
+          "explanation": "B1. nFe = 16,8/56 = 0,3 mol; nCuSO4 = 0,2 mol. B2. Phản ứng Fe + CuSO4 -> FeSO4 + Cu làm hết 0,2 mol Fe, còn dư 0,1 mol Fe. B3. Chỉ Fe dư phản ứng với HCl nên nH2 = 0,1 mol. B4. VH2 = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a12-l4-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nung hoàn toàn 25 g CaCO3, dẫn toàn bộ CO2 sinh ra vào nước vôi trong dư. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "25",
+          "acceptedAnswers": ["25,0"],
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol nên khi nung tạo 0,25 mol CO2. B2. Sục vào Ca(OH)2 dư, CO2 tạo 0,25 mol CaCO3 kết tủa. B3. mCaCO3 = 0,25 x 100 = 25 g."
+        },
+        {
+          "id": "a12-l4-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 8 g CuO bằng H2SO4 loãng, rồi cho NaOH dư vào dung dịch sau phản ứng. Khối lượng kết tủa Cu(OH)2 thu được là",
+          "options": ["9,8 g", "8,0 g", "16,0 g", "4,9 g"],
+          "answer": 0,
+          "explanation": "B1. nCuO = 8/80 = 0,1 mol. B2. CuO + H2SO4 -> CuSO4 + H2O, rồi CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4 nên nCu(OH)2 = 0,1 mol. B3. mCu(OH)2 = 0,1 x 98 = 9,8 g."
+        },
+        {
+          "id": "a12-l4-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Cho hỗn hợp bột gồm CuO và Fe tác dụng với HCl dư. Chọn các nhận xét đúng.",
+          "options": [
+            "có khí H2 thoát ra",
+            "dung dịch sau phản ứng chứa cả FeCl2 và CuCl2",
+            "còn lại chất rắn không tan",
+            "CuO không phản ứng với HCl"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Fe phản ứng với HCl tạo FeCl2 và H2. B2. CuO là oxit bazơ nên tan trong HCl tạo CuCl2 và H2O. B3. Vì cả Fe và CuO đều phản ứng nên không còn chất rắn, và phát biểu CuO không phản ứng là sai."
+        },
+        {
+          "id": "a12-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn 6,72 lít H2 (đktc) qua CuO dư nung nóng đến khi phản ứng hoàn toàn. Khối lượng Cu tạo thành là",
+          "options": ["19,2 g", "24 g", "9,6 g", "32 g"],
+          "answer": 0,
+          "explanation": "B1. nH2 = 6,72/22,4 = 0,3 mol. B2. Theo H2 + CuO -> Cu + H2O, nCu = 0,3 mol. B3. mCu = 0,3 x 64 = 19,2 g."
+        },
+        {
+          "id": "a12-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hỗn hợp A gồm Fe và Fe2O3. Hoà tan hết A bằng HCl dư thu được 3,36 lít H2 (đktc). Cho dung dịch sau phản ứng tác dụng với NaOH dư, lọc lấy kết tủa rồi nung trong không khí đến khối lượng không đổi thu được 16 g Fe2O3. Khối lượng hỗn hợp A là",
+          "options": ["12,4 g", "16,0 g", "10,8 g", "14,2 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2 = 3,36/22,4 = 0,15 mol nên số mol Fe kim loại ban đầu là 0,15 mol. B2. 16 g Fe2O3 sau cùng tương ứng 0,1 mol Fe2O3, tức tổng số mol Fe nguyên tử trong hỗn hợp ban đầu là 0,2 mol. B3. Gọi y là số mol Fe2O3 ban đầu, ta có 0,15 + 2y = 0,2 nên y = 0,025 mol. B4. Khối lượng hỗn hợp A = 0,15 x 56 + 0,025 x 160 = 8,4 + 4,0 = 12,4 g."
+        },
+        {
+          "id": "a12-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 22 g hỗn hợp CaCO3 và CuO bằng HCl dư, thu được 2,24 lít CO2 (đktc). Khối lượng CuCl2 tạo thành là bao nhiêu gam?",
+          "answer": "20,25",
+          "acceptedAnswers": ["20.25"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 2,24/22,4 = 0,1 mol nên nCaCO3 = 0,1 mol, mCaCO3 = 10 g. B2. Khối lượng CuO trong hỗn hợp là 22 - 10 = 12 g, nên nCuO = 12/80 = 0,15 mol. B3. Theo CuO + 2HCl -> CuCl2 + H2O, nCuCl2 = 0,15 mol. B4. mCuCl2 = 0,15 x 135 = 20,25 g."
+        },
+        {
+          "id": "a12-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hỗn hợp X gồm Na2CO3 và Na2SO4 có khối lượng 12,4 g. Cho X tác dụng với BaCl2 dư, thu được 21,5 g kết tủa. Nếu cho cùng lượng X đó tác dụng với HCl dư thì thể tích CO2 thu được ở đktc là",
+          "options": ["1,12 lít", "2,24 lít", "3,36 lít", "4,48 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol Na2CO3, Na2SO4 lần lượt là a và b. Ta có 106a + 142b = 12,4. B2. Kết tủa tạo ra gồm BaCO3 và BaSO4 nên có phương trình khối lượng 197a + 233b = 21,5. B3. Giải hệ được a = 0,05 mol và b = 0,05 mol. B4. Chỉ Na2CO3 tạo CO2 với HCl nên nCO2 = 0,05 mol, suy ra V = 0,05 x 22,4 = 1,12 lít."
+        }
+      ]
     }
   ]
 }
