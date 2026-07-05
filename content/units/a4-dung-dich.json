@@ -5,52 +5,824 @@
   "title": "Dung dịch",
   "order": 4,
   "description": "Độ tan, nồng độ, pha chế và các bài toán dung dịch trọng tâm HSG.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a4-l1",
       "title": "Độ tan; các yếu tố ảnh hưởng",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Khái niệm dung dịch, độ tan và các yếu tố ảnh hưởng đến độ tan của chất rắn, chất khí trong nước.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a4-l1-c1",
+          "heading": "Dung dịch, chất tan, dung môi",
+          "body": "Dung dịch là hỗn hợp đồng nhất của dung môi và chất tan. Dung dịch bão hoà: không thể hoà tan thêm chất tan ở nhiệt độ đó. Dung dịch chưa bão hoà: vẫn có thể hoà tan thêm chất tan."
+        },
+        {
+          "id": "a4-l1-c2",
+          "heading": "Độ tan",
+          "body": "Độ tan (S) là khối lượng chất tan tối đa có thể tan trong 100 g dung môi (thường là nước) để tạo thành dung dịch bão hoà ở một nhiệt độ xác định.\nCông thức: S = (khối lượng chất tan / khối lượng dung môi) x 100."
+        },
+        {
+          "id": "a4-l1-c3",
+          "heading": "Các yếu tố ảnh hưởng đến độ tan",
+          "body": "Nhiệt độ: đa số chất rắn tan nhiều hơn khi nhiệt độ tăng; ngược lại, chất khí tan ít hơn khi nhiệt độ tăng.\nÁp suất: độ tan của chất khí tăng khi áp suất tăng; áp suất hầu như không ảnh hưởng đến độ tan của chất rắn, chất lỏng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a4-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Dung dịch là gì?",
+          "options": [
+            "hỗn hợp đồng nhất của chất tan và dung môi",
+            "chỉ gồm chất rắn nguyên chất",
+            "chỉ gồm chất lỏng nguyên chất",
+            "một hợp chất hoá học"
+          ],
+          "answer": 0,
+          "explanation": "B1. Dung dịch được tạo thành khi chất tan phân tán đều vào dung môi. B2. Đây là hỗn hợp đồng nhất, không phải chất nguyên chất hay hợp chất."
+        },
+        {
+          "id": "a4-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Độ tan S là khối lượng chất tan tối đa hoà tan trong bao nhiêu gam dung môi?",
+          "options": ["100 g", "1000 g", "10 g", "1 g"],
+          "answer": 0,
+          "explanation": "B1. Theo định nghĩa, độ tan quy về 100 g dung môi. B2. S = (mct/mdm) x 100."
+        },
+        {
+          "id": "a4-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các yếu tố ảnh hưởng đến độ tan của một chất.",
+          "options": [
+            "nhiệt độ",
+            "áp suất (đối với chất khí)",
+            "màu sắc của dung môi",
+            "khối lượng của cả dung dịch"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Nhiệt độ ảnh hưởng đến độ tan của mọi chất. B2. Áp suất ảnh hưởng đáng kể đến độ tan chất khí. B3. Màu sắc dung môi và khối lượng dung dịch không phải yếu tố ảnh hưởng độ tan."
+        },
+        {
+          "id": "a4-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Dung dịch không thể hoà tan thêm chất tan ở một nhiệt độ xác định được gọi là dung dịch gì?",
+          "answer": "bão hoà",
+          "acceptedAnswers": ["dung dịch bão hoà"],
+          "placeholder": "Nhập tên loại dung dịch",
+          "explanation": "B1. Ở trạng thái này, chất tan và dung môi đã đạt cân bằng hoà tan. B2. Đây gọi là dung dịch bão hoà."
+        },
+        {
+          "id": "a4-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi tăng nhiệt độ, độ tan của đa số chất rắn trong nước thường thay đổi như thế nào?",
+          "options": ["tăng", "giảm", "không đổi", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. Đa số chất rắn tan tốt hơn khi nhiệt độ tăng (ví dụ NaNO3, KNO3, đường). B2. Đây là quy luật chung, khác với chất khí (độ tan giảm khi nhiệt độ tăng)."
+        },
+        {
+          "id": "a4-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Ở 20 độ C, 200 g nước hoà tan tối đa 72 g NaCl tạo dung dịch bão hoà. Độ tan của NaCl ở 20 độ C là",
+          "options": ["36 g", "72 g", "18 g", "44 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức S = (mct/mdm) x 100. B2. S = 72/200 x 100 = 36 g."
+        },
+        {
+          "id": "a4-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Ở một nhiệt độ, độ tan của KNO3 là 32 g. Khối lượng KNO3 tan tối đa trong 200 g nước ở nhiệt độ đó là",
+          "options": ["64 g", "32 g", "16 g", "128 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức mct = S x mdm / 100. B2. mct = 32 x 200/100 = 64 g."
+        },
+        {
+          "id": "a4-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng về độ tan.",
+          "options": [
+            "độ tan phụ thuộc vào nhiệt độ",
+            "độ tan của chất khí giảm khi nhiệt độ tăng",
+            "độ tan luôn tăng theo nhiệt độ với mọi chất",
+            "độ tan không phụ thuộc bản chất dung môi"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Độ tan luôn phụ thuộc nhiệt độ. B2. Chất khí tan kém hơn khi nhiệt độ tăng, khác với đa số chất rắn. B3. Không phải mọi chất đều tăng độ tan theo nhiệt độ, và độ tan phụ thuộc rõ vào bản chất dung môi."
+        },
+        {
+          "id": "a4-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Một dung dịch bão hoà chứa 15 g chất tan trong 50 g nước. Độ tan của chất đó là bao nhiêu?",
+          "answer": "30",
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Áp dụng công thức S = (mct/mdm) x 100. B2. S = 15/50 x 100 = 30."
+        },
+        {
+          "id": "a4-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Ở 25 độ C, độ tan của đường là 200 g. Khối lượng đường tối đa hoà tan trong 50 g nước ở nhiệt độ đó là",
+          "options": ["100 g", "50 g", "200 g", "150 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức mct = S x mdm/100. B2. mct = 200 x 50/100 = 100 g."
+        },
+        {
+          "id": "a4-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Ở nhiệt độ t, độ tan của muối M là 40 g. Cần bao nhiêu gam nước để hoà tan hết 100 g muối M tạo dung dịch bão hoà?",
+          "options": ["250 g", "200 g", "100 g", "400 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Tỉ lệ chất tan : nước ở trạng thái bão hoà là 40 : 100. B2. Với 100 g muối, khối lượng nước cần là 100 x 100/40 = 250 g."
+        },
+        {
+          "id": "a4-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Một dung dịch bão hoà ở 60 độ C chứa 60 g CuSO4 trong 200 g nước. Độ tan của CuSO4 ở 60 độ C là bao nhiêu?",
+          "answer": "30",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức S = (mct/mdm) x 100. B2. S = 60/200 x 100 = 30."
+        },
+        {
+          "id": "a4-l1-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan 25 g một muối vào 100 g nước ở nhiệt độ mà độ tan của muối đó là 20 g. Hiện tượng xảy ra là",
+          "options": [
+            "còn 5 g muối không tan (dư)",
+            "tan hết, dung dịch chưa bão hoà",
+            "tan hết vừa đủ bão hoà",
+            "không xảy ra hiện tượng gì"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Với độ tan 20 g/100 g nước, lượng muối tối đa tan hết trong 100 g nước là 20 g. B2. Vì cho vào 25 g > 20 g nên còn 5 g muối không tan (dư), dung dịch đạt bão hoà."
+        }
+      ]
     },
     {
       "id": "a4-l2",
       "title": "Nồng độ % và nồng độ mol; chuyển đổi",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Công thức tính nồng độ phần trăm, nồng độ mol và cách chuyển đổi giữa hai loại nồng độ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a4-l2-c1",
+          "heading": "Nồng độ phần trăm (C%)",
+          "body": "Nồng độ phần trăm là khối lượng chất tan có trong 100 g dung dịch.\nCông thức: C% = (mct/mdd) x 100%, trong đó mdd = mct + mdm (khi không có phản ứng tạo khí hay kết tủa)."
+        },
+        {
+          "id": "a4-l2-c2",
+          "heading": "Nồng độ mol (CM)",
+          "body": "Nồng độ mol là số mol chất tan có trong 1 lít dung dịch.\nCông thức: CM = n/V, trong đó V tính bằng lít."
+        },
+        {
+          "id": "a4-l2-c3",
+          "heading": "Chuyển đổi giữa C% và CM",
+          "body": "Cần biết khối lượng riêng D (g/ml) của dung dịch để chuyển đổi:\nCM = (10 x D x C%) / M, trong đó M là khối lượng mol của chất tan."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a4-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức tính nồng độ phần trăm là",
+          "options": [
+            "C% = (mct/mdd) x 100%",
+            "C% = mct/mdm",
+            "C% = n/V",
+            "C% = n x M"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nồng độ phần trăm là tỉ lệ khối lượng chất tan trên khối lượng dung dịch, nhân 100%. B2. Công thức đúng là C% = (mct/mdd) x 100%."
+        },
+        {
+          "id": "a4-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức tính nồng độ mol là",
+          "options": ["CM = n/V", "CM = m/M", "CM = mct/mdd", "CM = V/n"],
+          "answer": 0,
+          "explanation": "B1. Nồng độ mol là số mol chất tan trong 1 lít dung dịch. B2. Công thức đúng là CM = n/V (V tính bằng lít)."
+        },
+        {
+          "id": "a4-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các công thức viết đúng.",
+          "options": ["mdd = mct + mdm", "n = CM x V", "C% = mct/V", "n = m/M"],
+          "answers": [0, 1, 3],
+          "explanation": "B1. mdd = mct + mdm và n = CM x V (suy ra từ CM = n/V) đều đúng. B2. n = m/M cũng là công thức tính số mol đúng. B3. C% = mct/V là công thức sai vì nồng độ % không liên quan trực tiếp đến thể tích."
+        },
+        {
+          "id": "a4-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nồng độ mol có đơn vị là gì?",
+          "answer": "mol/lít",
+          "acceptedAnswers": ["mol/l", "m"],
+          "placeholder": "Nhập đơn vị",
+          "explanation": "B1. Nồng độ mol tính bằng số mol chất tan trên thể tích dung dịch (lít). B2. Đơn vị là mol/lít, kí hiệu M."
+        },
+        {
+          "id": "a4-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "500 ml dung dịch có thể tích bằng bao nhiêu lít?",
+          "options": ["0,5 lít", "5 lít", "50 lít", "500 lít"],
+          "answer": 0,
+          "explanation": "B1. 1 lít = 1000 ml. B2. 500 ml = 500/1000 = 0,5 lít."
+        },
+        {
+          "id": "a4-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 20 g NaOH vào nước được 200 g dung dịch. Nồng độ % của dung dịch là",
+          "options": ["10%", "20%", "5%", "2%"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức C% = (mct/mdd) x 100%. B2. C% = 20/200 x 100% = 10%."
+        },
+        {
+          "id": "a4-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 0,5 mol NaCl vào nước được 250 ml dung dịch. Nồng độ mol của dung dịch là",
+          "options": ["2M", "0,5M", "4M", "1M"],
+          "answer": 0,
+          "explanation": "B1. Đổi 250 ml = 0,25 lít. B2. CM = n/V = 0,5/0,25 = 2M."
+        },
+        {
+          "id": "a4-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan 8 g NaOH (M = 40) vào nước được 500 ml dung dịch. Nồng độ mol của dung dịch là bao nhiêu?",
+          "answer": "0,4",
+          "acceptedAnswers": ["0.4"],
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. nNaOH = 8/40 = 0,2 mol. B2. CM = n/V = 0,2/0,5 = 0,4M."
+        },
+        {
+          "id": "a4-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dung dịch H2SO4 có nồng độ 20%, khối lượng dung dịch 150 g. Khối lượng H2SO4 tan trong đó là",
+          "options": ["30 g", "20 g", "15 g", "45 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức mct = C% x mdd/100. B2. mct = 20 x 150/100 = 30 g."
+        },
+        {
+          "id": "a4-l2-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các đại lượng cần biết để chuyển đổi từ C% sang CM.",
+          "options": [
+            "khối lượng riêng D của dung dịch",
+            "khối lượng mol M của chất tan",
+            "màu của dung dịch",
+            "tên chất tan"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Công thức CM = (10 x D x C%)/M cần D và M. B2. Màu dung dịch và tên chất tan (nếu đã biết M) không cần thiết cho phép tính."
+        },
+        {
+          "id": "a4-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dung dịch HCl có nồng độ 36,5% và khối lượng riêng D = 1,2 g/ml (M của HCl là 36,5). Nồng độ mol của dung dịch là",
+          "options": ["12M", "10M", "14,6M", "7,3M"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức CM = (10 x D x C%)/M. B2. CM = (10 x 1,2 x 36,5)/36,5 = 12M."
+        },
+        {
+          "id": "a4-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cần hoà tan bao nhiêu gam CuSO4 vào nước để được 200 g dung dịch CuSO4 nồng độ 16%?",
+          "answer": "32",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức mct = C% x mdd/100. B2. mCuSO4 = 16 x 200/100 = 32 g."
+        },
+        {
+          "id": "a4-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Trộn 100 ml dung dịch NaOH 2M với nước để được 500 ml dung dịch mới. Nồng độ mol của dung dịch sau khi pha loãng là",
+          "options": ["0,4M", "2M", "0,1M", "1M"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Số mol NaOH ban đầu: n = 0,1 x 2 = 0,2 mol, không đổi khi pha loãng. B2. Nồng độ mới: CM = n/V = 0,2/0,5 = 0,4M."
+        }
+      ]
     },
     {
       "id": "a4-l3",
       "title": "Pha chế – pha loãng dung dịch; quy tắc đường chéo",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Các bước pha chế dung dịch theo nồng độ cho trước, công thức pha loãng và quy tắc đường chéo khi trộn hai dung dịch.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a4-l3-c1",
+          "heading": "Pha chế dung dịch theo nồng độ cho trước",
+          "body": "Từ chất tan rắn: tính khối lượng chất tan cần dùng (m = C% x mdd/100, hoặc n = CM x V), cân đủ lượng rồi hoà tan vào nước cho đủ thể tích hoặc khối lượng dung dịch yêu cầu."
+        },
+        {
+          "id": "a4-l3-c2",
+          "heading": "Pha loãng dung dịch",
+          "body": "Khi thêm nước vào dung dịch, khối lượng (hoặc số mol) chất tan không đổi:\nC1.V1 = C2.V2 (đối với nồng độ mol); m1.C%1 = m2.C%2 (đối với nồng độ phần trăm)."
+        },
+        {
+          "id": "a4-l3-c3",
+          "heading": "Quy tắc đường chéo",
+          "body": "Dùng để tính nhanh tỉ lệ pha trộn hai dung dịch có nồng độ khác nhau để được dung dịch nồng độ mong muốn C.\nVới dung dịch 1 nồng độ C1 và dung dịch 2 nồng độ C2 (C1 < C < C2): tỉ lệ khối lượng m1 : m2 = (C2 - C) : (C - C1)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a4-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi pha loãng dung dịch bằng cách thêm nước, đại lượng nào của chất tan không đổi?",
+          "options": [
+            "số mol (khối lượng) chất tan",
+            "nồng độ %",
+            "nồng độ mol",
+            "khối lượng riêng dung dịch"
+          ],
+          "answer": 0,
+          "explanation": "B1. Thêm nước chỉ làm tăng khối lượng/thể tích dung dịch, không thêm hay bớt chất tan. B2. Vì vậy số mol (khối lượng) chất tan không đổi, còn nồng độ thì giảm."
+        },
+        {
+          "id": "a4-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức pha loãng theo nồng độ mol là",
+          "options": [
+            "C1.V1 = C2.V2",
+            "C1 + V1 = C2 + V2",
+            "C1/V1 = C2/V2",
+            "C1 x C2 = V1 x V2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Vì số mol chất tan không đổi: n = C1.V1 = C2.V2. B2. Đây là công thức pha loãng chuẩn theo nồng độ mol."
+        },
+        {
+          "id": "a4-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các bước đúng khi pha chế dung dịch từ chất tan rắn.",
+          "options": [
+            "tính khối lượng (số mol) chất tan cần dùng",
+            "cân đủ lượng chất tan",
+            "hoà tan vào nước cho đủ thể tích/khối lượng yêu cầu",
+            "đun sôi dung dịch"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba bước đầu là quy trình chuẩn để pha chế dung dịch theo nồng độ cho trước. B2. Đun sôi không phải bước bắt buộc trong pha chế thông thường."
+        },
+        {
+          "id": "a4-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Quy tắc đường chéo dùng để tính gì khi trộn hai dung dịch?",
+          "answer": "tỉ lệ pha trộn",
+          "acceptedAnswers": ["tỉ lệ trộn", "tỷ lệ pha trộn"],
+          "placeholder": "Nhập cụm từ",
+          "explanation": "B1. Quy tắc đường chéo giúp tìm nhanh tỉ lệ khối lượng (hoặc thể tích) cần trộn hai dung dịch. B2. Mục tiêu là đạt được nồng độ mong muốn."
+        },
+        {
+          "id": "a4-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi pha loãng dung dịch, thể tích dung dịch thay đổi như thế nào?",
+          "options": ["tăng", "giảm", "không đổi", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. Thêm nước làm tăng thể tích dung dịch. B2. Trong khi đó số mol chất tan vẫn giữ nguyên nên nồng độ giảm."
+        },
+        {
+          "id": "a4-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Pha loãng 100 ml dung dịch HCl 2M thành 500 ml. Nồng độ mol sau khi pha loãng là",
+          "options": ["0,4M", "2M", "0,1M", "1M"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức C1.V1 = C2.V2. B2. 2 x 0,1 = C2 x 0,5 nên C2 = 0,4M."
+        },
+        {
+          "id": "a4-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cần lấy bao nhiêu ml dung dịch NaOH 4M để pha thành 200 ml dung dịch NaOH 1M?",
+          "options": ["50 ml", "100 ml", "200 ml", "25 ml"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức C1.V1 = C2.V2. B2. 4 x V1 = 1 x 0,2 nên V1 = 0,05 lít = 50 ml."
+        },
+        {
+          "id": "a4-l3-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Trộn 200 g dung dịch NaCl 20% với nước để được dung dịch NaCl 10%. Khối lượng dung dịch mới là bao nhiêu gam?",
+          "answer": "400",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Khối lượng NaCl không đổi: mct = 200 x 20% = 40 g. B2. Khối lượng dung dịch mới: mdd = mct/C%mới x 100 = 40/10 x 100 = 400 g."
+        },
+        {
+          "id": "a4-l3-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Theo quy tắc đường chéo, trộn dung dịch A nồng độ 10% với dung dịch B nồng độ 30% để được dung dịch C nồng độ 20%. Tỉ lệ khối lượng mA : mB là",
+          "options": ["1:1", "1:2", "2:1", "1:3"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc đường chéo: mA : mB = (30-20) : (20-10) = 10 : 10. B2. Rút gọn được tỉ lệ 1:1."
+        },
+        {
+          "id": "a4-l3-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng về pha loãng dung dịch.",
+          "options": [
+            "khối lượng chất tan không đổi",
+            "nồng độ giảm khi thêm nước",
+            "thể tích dung dịch giảm khi thêm nước",
+            "khối lượng riêng dung dịch luôn không đổi"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Khối lượng chất tan không đổi và nồng độ giảm khi pha loãng là hai phát biểu đúng. B2. Thể tích thực ra tăng khi thêm nước, và khối lượng riêng thường thay đổi (giảm dần về gần khối lượng riêng nước)."
+        },
+        {
+          "id": "a4-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Trộn 300 g dung dịch H2SO4 10% với 200 g dung dịch H2SO4 25% thu được dung dịch mới. Nồng độ % của dung dịch mới là",
+          "options": ["16%", "17,5%", "20%", "15%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Khối lượng H2SO4: mct = 300 x 10% + 200 x 25% = 30 + 50 = 80 g. B2. Khối lượng dung dịch mới: 300 + 200 = 500 g. B3. C% = 80/500 x 100% = 16%."
+        },
+        {
+          "id": "a4-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cần trộn dung dịch NaOH 5% (m1) với dung dịch NaOH 25% (m2) theo tỉ lệ khối lượng m1:m2 nào để được dung dịch NaOH 10%? (ghi dạng \"a:b\")",
+          "answer": "3:1",
+          "placeholder": "Nhập tỉ lệ",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng quy tắc đường chéo: m1 : m2 = (25-10) : (10-5) = 15 : 5. B2. Rút gọn được tỉ lệ 3:1."
+        },
+        {
+          "id": "a4-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Trộn V1 ml dung dịch HCl 2M với V2 ml dung dịch HCl 0,5M để được dung dịch HCl 1M. Tỉ lệ V1:V2 là",
+          "options": ["1:2", "2:1", "1:1", "3:1"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng quy tắc đường chéo: V1 : V2 = (1-0,5) : (2-1) = 0,5 : 1. B2. Rút gọn được tỉ lệ 1:2."
+        }
+      ]
     },
     {
       "id": "a4-l4",
       "title": "Nâng cao: tinh thể ngậm nước; bài toán kết tinh",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Muối kết tinh ngậm nước, cách tính khối lượng chất tan/nước từ tinh thể ngậm nước, và bài toán kết tinh khi làm nguội dung dịch.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a4-l4-c1",
+          "heading": "Tinh thể ngậm nước",
+          "body": "Nhiều muối kết tinh ở dạng ngậm một số phân tử nước cố định, kí hiệu dạng ...·nH2O.\nVí dụ: CuSO4·5H2O (M = 250), Na2CO3·10H2O (M = 286), FeSO4·7H2O (M = 278)."
+        },
+        {
+          "id": "a4-l4-c2",
+          "heading": "Tính khối lượng chất tan và nước từ tinh thể ngậm nước",
+          "body": "Khi hoà tan m gam tinh thể X·nH2O vào nước, khối lượng chất tan khan (X) và khối lượng nước do tinh thể mang vào dung dịch đều tính theo tỉ lệ mol và phân tử khối tương ứng của X và H2O trong công thức."
+        },
+        {
+          "id": "a4-l4-c3",
+          "heading": "Bài toán kết tinh",
+          "body": "Khi làm nguội hoặc làm bay hơi bớt nước của dung dịch bão hoà, một phần chất tan tách ra (kết tinh) do độ tan giảm. Phần dung dịch còn lại vẫn bão hoà ở điều kiện mới.\nDùng bảo toàn khối lượng chất tan và nước để tính khối lượng chất kết tinh tách ra."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a4-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức CuSO4·5H2O có nghĩa là gì?",
+          "options": [
+            "1 mol CuSO4 kết tinh cùng 5 mol nước",
+            "CuSO4 tan trong 5 lít nước",
+            "hỗn hợp của 5 chất khác nhau",
+            "CuSO4 có 5 nguyên tử oxi"
+          ],
+          "answer": 0,
+          "explanation": "B1. Dấu chấm và số trước H2O cho biết số phân tử nước kết tinh cùng muối. B2. CuSO4·5H2O nghĩa là 1 mol CuSO4 kết tinh cùng 5 mol nước."
+        },
+        {
+          "id": "a4-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phân tử khối của CuSO4·5H2O là bao nhiêu (CuSO4 = 160, H2O = 18)?",
+          "options": ["250", "160", "178", "340"],
+          "answer": 0,
+          "explanation": "B1. Phân tử khối tinh thể = phân tử khối CuSO4 + 5 x phân tử khối H2O. B2. M = 160 + 5 x 18 = 160 + 90 = 250."
+        },
+        {
+          "id": "a4-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các muối kết tinh ngậm nước phổ biến.",
+          "options": ["CuSO4·5H2O", "NaCl", "Na2CO3·10H2O", "KNO3"],
+          "answers": [0, 2],
+          "explanation": "B1. CuSO4·5H2O và Na2CO3·10H2O là các tinh thể ngậm nước quen thuộc. B2. NaCl và KNO3 thường kết tinh ở dạng khan, không ngậm nước."
+        },
+        {
+          "id": "a4-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khi làm nguội dung dịch bão hoà, phần chất tan dư sẽ có hiện tượng gì?",
+          "answer": "kết tinh",
+          "acceptedAnswers": ["kết tinh lại", "tách ra"],
+          "placeholder": "Nhập hiện tượng",
+          "explanation": "B1. Khi nhiệt độ giảm, độ tan giảm nên lượng chất tan dư không hoà tan hết. B2. Phần dư này kết tinh (tách ra) khỏi dung dịch."
+        },
+        {
+          "id": "a4-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong CuSO4·5H2O, tỉ lệ khối lượng CuSO4 khan so với tổng khối lượng tinh thể là bao nhiêu (làm tròn)?",
+          "options": ["64%", "36%", "50%", "72%"],
+          "answer": 0,
+          "explanation": "B1. Phân tử khối CuSO4 = 160, phân tử khối tinh thể = 250. B2. Tỉ lệ = 160/250 x 100% = 64%."
+        },
+        {
+          "id": "a4-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 25 g CuSO4·5H2O (M = 250) vào nước. Khối lượng CuSO4 khan có trong đó là",
+          "options": ["16 g", "25 g", "9 g", "40 g"],
+          "answer": 0,
+          "explanation": "B1. nCuSO4.5H2O = 25/250 = 0,1 mol, chứa 0,1 mol CuSO4. B2. mCuSO4 = 0,1 x 160 = 16 g."
+        },
+        {
+          "id": "a4-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Từ 25 g CuSO4·5H2O ở câu trên (0,1 mol), khối lượng nước do tinh thể mang vào dung dịch là",
+          "options": ["9 g", "16 g", "25 g", "18 g"],
+          "answer": 0,
+          "explanation": "B1. 0,1 mol CuSO4.5H2O chứa 0,1 x 5 = 0,5 mol H2O. B2. mH2O = 0,5 x 18 = 9 g."
+        },
+        {
+          "id": "a4-l4-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan 28,6 g Na2CO3·10H2O (M = 286) vào nước. Số mol Na2CO3 khan có trong đó là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nNa2CO3.10H2O = 28,6/286 = 0,1 mol. B2. Mỗi mol tinh thể chứa 1 mol Na2CO3 nên nNa2CO3 = 0,1 mol."
+        },
+        {
+          "id": "a4-l4-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cần lấy bao nhiêu gam CuSO4·5H2O (M = 250) để có 32 g CuSO4 khan (M = 160)?",
+          "options": ["50 g", "32 g", "40 g", "64 g"],
+          "answer": 0,
+          "explanation": "B1. nCuSO4 = 32/160 = 0,2 mol, tương ứng 0,2 mol tinh thể. B2. Khối lượng tinh thể cần = 0,2 x 250 = 50 g."
+        },
+        {
+          "id": "a4-l4-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng về tinh thể ngậm nước.",
+          "options": [
+            "khối lượng nước trong tinh thể tính theo tỉ lệ mol cố định",
+            "tinh thể ngậm nước có phân tử khối lớn hơn muối khan tương ứng",
+            "tinh thể ngậm nước không tan trong nước",
+            "số phân tử nước ngậm luôn giống nhau ở mọi muối"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Tỉ lệ mol nước ngậm là cố định theo công thức, và phân tử khối tinh thể luôn lớn hơn muối khan (do cộng thêm khối lượng nước). B2. Tinh thể ngậm nước vẫn tan tốt trong nước, và số phân tử nước ngậm khác nhau tuỳ từng muối (5 với CuSO4, 10 với Na2CO3...)."
+        },
+        {
+          "id": "a4-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 25 g CuSO4·5H2O (M = 250) vào 175 g nước. Nồng độ % của CuSO4 trong dung dịch thu được là bao nhiêu?",
+          "options": ["8%", "8,5%", "9%", "16%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCuSO4.5H2O = 25/250 = 0,1 mol, chứa mCuSO4 = 0,1 x 160 = 16 g. B2. Khối lượng dung dịch = khối lượng tinh thể + khối lượng nước thêm = 25 + 175 = 200 g. B3. C% = 16/200 x 100% = 8%."
+        },
+        {
+          "id": "a4-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Một dung dịch NaCl bão hoà ở nhiệt độ t chứa 60 g NaCl và 300 g nước (độ tan của NaCl ở t là 20 g/100 g nước). Làm bay hơi 100 g nước rồi giữ nguyên nhiệt độ t. Khối lượng NaCl kết tinh trở lại là bao nhiêu gam?",
+          "answer": "20",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Sau khi bay hơi, khối lượng nước còn lại = 300 - 100 = 200 g. B2. Lượng NaCl tối đa hoà tan trong 200 g nước ở độ tan 20: m = 20 x 200/100 = 40 g. B3. NaCl kết tinh = 60 - 40 = 20 g."
+        },
+        {
+          "id": "a4-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Ở 80 độ C, độ tan của KNO3 là 170 g/100 g nước; ở 20 độ C độ tan là 30 g/100 g nước. Làm nguội 270 g dung dịch KNO3 bão hoà ở 80 độ C xuống 20 độ C. Khối lượng KNO3 kết tinh tách ra là",
+          "options": ["140 g", "130 g", "150 g", "120 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Ở 80 độ C, dung dịch bão hoà có tỉ lệ KNO3 : nước = 170 : 100. Với tổng 270 g, giải ra được 170 g KNO3 và 100 g nước. B2. Ở 20 độ C, 100 g nước đó chỉ hoà tan tối đa 30 g KNO3. B3. Khối lượng KNO3 kết tinh = 170 - 30 = 140 g."
+        }
+      ]
     },
     {
       "id": "a4-l5",
       "title": "Nâng cao: bài toán dung dịch tổng hợp",
       "order": 5,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Trộn nhiều dung dịch cùng chất tan hoặc có phản ứng hoá học, và cách tính nồng độ phần trăm của dung dịch sau khi trộn/phản ứng.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a4-l5-c1",
+          "heading": "Trộn nhiều dung dịch không phản ứng",
+          "body": "Khi trộn các dung dịch cùng chất tan mà không xảy ra phản ứng, tổng khối lượng chất tan và tổng khối lượng dung dịch được bảo toàn. Từ đó tính được nồng độ % hoặc nồng độ mol của dung dịch sau khi trộn."
+        },
+        {
+          "id": "a4-l5-c2",
+          "heading": "Nồng độ dung dịch sau phản ứng hoá học",
+          "body": "Khi các dung dịch phản ứng với nhau sinh ra kết tủa hoặc khí, phải trừ khối lượng kết tủa hoặc khí thoát ra khỏi tổng khối lượng dung dịch trước khi tính nồng độ % các chất còn lại trong dung dịch sau phản ứng."
+        },
+        {
+          "id": "a4-l5-c3",
+          "heading": "Các bước giải bài toán dung dịch tổng hợp",
+          "body": "B1. Đổi dữ kiện ra số mol. B2. Viết phương trình hoá học, xác định chất dư/hết.\nB3. Tính khối lượng dung dịch sau phản ứng: mdd sau = tổng khối lượng các dung dịch trộn (+ chất rắn tan thêm nếu có) - khối lượng kết tủa - khối lượng khí thoát ra.\nB4. Tính nồng độ % hoặc CM của chất cần tìm."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a4-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi trộn hai dung dịch cùng chất tan, không xảy ra phản ứng, khối lượng dung dịch sau khi trộn bằng",
+          "options": [
+            "tổng khối lượng hai dung dịch",
+            "hiệu khối lượng hai dung dịch",
+            "trung bình cộng khối lượng",
+            "tích khối lượng hai dung dịch"
+          ],
+          "answer": 0,
+          "explanation": "B1. Không có chất nào mất đi hay sinh ra khi chỉ trộn đơn thuần. B2. Vì vậy khối lượng dung dịch sau khi trộn bằng tổng khối lượng hai dung dịch ban đầu."
+        },
+        {
+          "id": "a4-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi phản ứng sinh ra khí thoát ra, khối lượng dung dịch sau phản ứng so với tổng khối lượng ban đầu như thế nào?",
+          "options": ["nhỏ hơn", "lớn hơn", "bằng nhau", "không xác định được"],
+          "answer": 0,
+          "explanation": "B1. Khí thoát ra khỏi dung dịch nên khối lượng dung dịch giảm đi đúng bằng khối lượng khí đó. B2. Vì vậy khối lượng dung dịch sau phản ứng nhỏ hơn tổng khối lượng ban đầu."
+        },
+        {
+          "id": "a4-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các đại lượng cần trừ khỏi tổng khối lượng khi tính khối lượng dung dịch sau phản ứng.",
+          "options": [
+            "khối lượng kết tủa",
+            "khối lượng khí thoát ra",
+            "khối lượng nước có trong dung dịch",
+            "khối lượng dung môi ban đầu"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Kết tủa và khí thoát ra không còn nằm trong dung dịch nên phải trừ đi. B2. Nước và dung môi ban đầu vẫn còn trong dung dịch nên không trừ."
+        },
+        {
+          "id": "a4-l5-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khi trộn hai dung dịch không xảy ra phản ứng, tổng khối lượng chất tan có thay đổi không?",
+          "answer": "không đổi",
+          "acceptedAnswers": ["không thay đổi", "bảo toàn"],
+          "placeholder": "Nhập câu trả lời",
+          "explanation": "B1. Không có chất tan nào mất đi hay sinh ra khi chỉ trộn dung dịch. B2. Vì vậy tổng khối lượng chất tan không đổi."
+        },
+        {
+          "id": "a4-l5-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức tính khối lượng dung dịch sau phản ứng có khí thoát ra là",
+          "options": [
+            "mdd sau = tổng mdd trước - mkhí",
+            "mdd sau = tổng mdd trước + mkhí",
+            "mdd sau = tổng mdd trước",
+            "mdd sau = mkhí"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khí sinh ra thoát khỏi dung dịch nên phải trừ khối lượng khí đó. B2. Công thức đúng là mdd sau = tổng mdd trước - mkhí."
+        },
+        {
+          "id": "a4-l5-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trộn 100 g dung dịch NaCl 10% với 150 g dung dịch NaCl 20%. Nồng độ % của dung dịch sau khi trộn là",
+          "options": ["16%", "15%", "18%", "20%"],
+          "answer": 0,
+          "explanation": "B1. Khối lượng NaCl: mct = 100 x 10% + 150 x 20% = 10 + 30 = 40 g. B2. Khối lượng dung dịch: 100 + 150 = 250 g. B3. C% = 40/250 x 100% = 16%."
+        },
+        {
+          "id": "a4-l5-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trộn 200 ml dung dịch HCl 1M với 300 ml dung dịch HCl 2M (coi thể tích cộng đơn giản). Nồng độ mol dung dịch sau khi trộn là",
+          "options": ["1,6M", "1,5M", "1,8M", "2M"],
+          "answer": 0,
+          "explanation": "B1. Số mol HCl: n = 0,2 x 1 + 0,3 x 2 = 0,2 + 0,6 = 0,8 mol. B2. Thể tích tổng: 0,2 + 0,3 = 0,5 lít. B3. CM = 0,8/0,5 = 1,6M."
+        },
+        {
+          "id": "a4-l5-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 100 g dung dịch Na2CO3 phản ứng vừa đủ với 50 g dung dịch HCl, sinh ra 2,2 g khí CO2 thoát ra. Khối lượng dung dịch sau phản ứng là bao nhiêu gam?",
+          "answer": "147,8",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Áp dụng bảo toàn khối lượng: mdd sau = tổng khối lượng dung dịch trước - mkhí. B2. mdd sau = 100 + 50 - 2,2 = 147,8 g."
+        },
+        {
+          "id": "a4-l5-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 5,6 g CaO vào 194,4 g nước (phản ứng toả nhiệt, không sinh khí, không tạo kết tủa). Khối lượng dung dịch Ca(OH)2 thu được là",
+          "options": ["200 g", "194,4 g", "205,6 g", "188,8 g"],
+          "answer": 0,
+          "explanation": "B1. Vì không có khí thoát ra hay kết tủa tách ra, toàn bộ khối lượng chất tham gia chuyển vào dung dịch. B2. mdd = mCaO + mnước = 5,6 + 194,4 = 200 g."
+        },
+        {
+          "id": "a4-l5-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các đại lượng cần tính trước khi tìm nồng độ % của dung dịch sau phản ứng.",
+          "options": [
+            "khối lượng chất tan còn lại trong dung dịch",
+            "khối lượng dung dịch sau phản ứng",
+            "màu của dung dịch",
+            "thời gian phản ứng"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Cần biết khối lượng chất tan còn lại và khối lượng dung dịch sau phản ứng để áp dụng công thức C%. B2. Màu dung dịch và thời gian phản ứng không liên quan đến phép tính nồng độ."
+        },
+        {
+          "id": "a4-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 200 g dung dịch BaCl2 10,4% tác dụng vừa đủ với 150 g dung dịch Na2SO4, thu được kết tủa BaSO4 nặng 23,3 g và dung dịch NaCl. Khối lượng dung dịch sau phản ứng là",
+          "options": ["326,7 g", "350 g", "373,3 g", "303,4 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng bảo toàn khối lượng: mdd sau = tổng khối lượng hai dung dịch - khối lượng kết tủa. B2. mdd sau = 200 + 150 - 23,3 = 326,7 g."
+        },
+        {
+          "id": "a4-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 6,5 g Zn vào 300 g dung dịch HCl dư, thu được khí H2 có khối lượng 0,2 g. Khối lượng dung dịch sau phản ứng là bao nhiêu gam?",
+          "answer": "306,3",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng bảo toàn khối lượng: mdd sau = mZn + mdd HCl - mH2. B2. mdd sau = 6,5 + 300 - 0,2 = 306,3 g."
+        },
+        {
+          "id": "a4-l5-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Trộn 300 g dung dịch NaOH 10% với 200 g dung dịch NaOH 25%, sau đó cô cạn bớt 50 g nước. Nồng độ % của dung dịch cuối cùng là",
+          "options": ["17,8%", "16%", "20%", "22,2%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Khối lượng NaOH: mct = 300 x 10% + 200 x 25% = 30 + 50 = 80 g, tổng khối lượng dung dịch trước cô cạn = 500 g. B2. Sau khi cô cạn bớt 50 g nước, khối lượng dung dịch còn 450 g. B3. C% = 80/450 x 100% xấp xỉ 17,8%."
+        }
+      ]
     }
   ]
 }
