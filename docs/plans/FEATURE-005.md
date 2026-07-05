@@ -44,13 +44,13 @@ tất theo đúng phạm vi CONTENT_OUTLINE.md.
 - Giữ nguyên mật độ 3 thẻ + 13 câu/bài (5 basic, 5 applied, 3 hsg) như
   toàn bộ phần Vô cơ.
 - Câu HSG dùng `source: "Tự biên soạn theo dạng bài quen thuộc trong
-  đề thi HSG Hoá 9 cấp huyện/tỉnh"`.
+đề thi HSG Hoá 9 cấp huyện/tỉnh"`.
 - Mỗi bài toán số liệu (đốt cháy hiđrocacbon, hiệu suất este hoá/lên
   men, độ rượu...) phải được giải lại độc lập trước khi chốt — rủi ro
   sai sót cao nhất trong toàn dự án vì hoá hữu cơ có nhiều phản ứng
   phụ (trùng hợp, thuỷ phân, lên men) dễ nhầm hệ số/tỉ lệ mol.
 - Giao việc biên soạn cho Codex qua `Agent(subagent_type:
-  "codex:codex-rescue")` với `--cwd /Users/tuann2/Documents/Code/Hoa_hoc_THCS --write --wait`,
+"codex:codex-rescue")` với `--cwd /Users/tuann2/Documents/Code/Hoa_hoc_THCS --write --wait`,
   theo từng unit một (5 lượt). Claude Code review diff, tự chạy lại
   validate độc lập trước khi merge, không tin hoàn toàn báo cáo của
   Codex.
@@ -112,6 +112,7 @@ Giao Codex biên soạn từng unit một (B1 → B2 → B3 → B4 → B5) qua
 `codex:codex-rescue` với `--cwd` trỏ đúng repo, theo mẫu văn phong của
 các unit Vô cơ đã có (ví dụ `content/units/a10-kim-loai.json`). Sau mỗi
 lượt, Claude Code:
+
 1. Đọc diff, kiểm tra định tính vài câu (đặc biệt câu tính toán).
 2. Tự chạy `npm run validate-content && npm run lint && npm run typecheck && npm test` độc lập.
 3. Sửa trực tiếp nếu phát hiện lỗi nhỏ; giao lại Codex nếu lỗi lớn/nhiều.
@@ -159,12 +160,12 @@ Chỉ thêm dữ liệu JSON tĩnh; không code mới, không dependency mới.
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Hoá hữu cơ có nhiều phản ứng đặc thù (trùng hợp, thuỷ phân, lên men, este hoá) dễ sai hệ số/tỉ lệ mol hơn vô cơ | Cao | Giải lại độc lập mọi bài toán trước khi chốt; validate-content tự động; review kỹ hơn các bài nâng cao |
-| Biểu diễn công thức cấu tạo hữu cơ (liên kết đôi/ba, mạch vòng) khó viết bằng text thuần | Trung bình | Dùng quy ước text đơn giản (CH2=CH2, C6H6...) và mô tả cấu tạo bằng lời trong thẻ lý thuyết thay vì công thức đồ hoạ |
-| Khối lượng lớn nhất từ trước tới nay (23 bài, ~299 câu hỏi) | Trung bình | Giao Codex theo từng unit, Claude review + validate riêng từng lượt, không dồn hết một lượt |
-| Codex mới được sửa để dùng `--cwd`, chưa có nhiều lần chạy thực tế quy mô lớn | Trung bình | Bắt đầu với unit nhỏ nhất (B1, 3 bài) để kiểm chứng trước khi giao các unit lớn hơn |
+| Risk                                                                                                            | Impact     | Mitigation                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| Hoá hữu cơ có nhiều phản ứng đặc thù (trùng hợp, thuỷ phân, lên men, este hoá) dễ sai hệ số/tỉ lệ mol hơn vô cơ | Cao        | Giải lại độc lập mọi bài toán trước khi chốt; validate-content tự động; review kỹ hơn các bài nâng cao               |
+| Biểu diễn công thức cấu tạo hữu cơ (liên kết đôi/ba, mạch vòng) khó viết bằng text thuần                        | Trung bình | Dùng quy ước text đơn giản (CH2=CH2, C6H6...) và mô tả cấu tạo bằng lời trong thẻ lý thuyết thay vì công thức đồ hoạ |
+| Khối lượng lớn nhất từ trước tới nay (23 bài, ~299 câu hỏi)                                                     | Trung bình | Giao Codex theo từng unit, Claude review + validate riêng từng lượt, không dồn hết một lượt                          |
+| Codex mới được sửa để dùng `--cwd`, chưa có nhiều lần chạy thực tế quy mô lớn                                   | Trung bình | Bắt đầu với unit nhỏ nhất (B1, 3 bài) để kiểm chứng trước khi giao các unit lớn hơn                                  |
 
 ## 14. Rollback plan
 
