@@ -4,35 +4,508 @@
   "code": "B5",
   "title": "Chuyên đề tổng hợp Hữu cơ",
   "order": 5,
-  "description": "Biện luận công thức, chuỗi phản ứng hữu cơ và đề tổng hợp cho HSG/chuyên.",
-  "status": "coming-soon",
+  "description": "Biện luận công thức phân tử, chuỗi phản ứng hữu cơ và các bài tổng hợp theo dạng đề HSG/chuyên.",
+  "status": "available",
   "lessons": [
     {
       "id": "b5-l1",
       "title": "Biện luận công thức phân tử hợp chất hữu cơ",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Luyện cách đi từ % khối lượng, sản phẩm đốt cháy và điều kiện bài toán để suy ra công thức phân tử hợp chất hữu cơ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b5-l1-c1",
+          "heading": "Từ % khối lượng đến công thức đơn giản nhất",
+          "body": "Cách làm quen thuộc là giả sử có 100 g chất rồi đổi % khối lượng từng nguyên tố thành số mol.\nLấy tỉ lệ mol nhỏ nhất để rút gọn, ta thu được công thức đơn giản nhất.\nNếu biết thêm khối lượng mol M thì so sánh M với khối lượng mol của công thức đơn giản nhất để suy ra công thức phân tử."
+        },
+        {
+          "id": "b5-l1-c2",
+          "heading": "Từ sản phẩm đốt cháy đến số nguyên tử C, H, O",
+          "body": "Khi đốt cháy hoàn toàn hợp chất hữu cơ, số mol C trong chất bằng số mol CO2 tạo ra; số mol H trong chất bằng 2 lần số mol H2O.\nNếu chất chỉ chứa C, H, O thì khối lượng oxi trong chất được tính bằng m chất ban đầu trừ mC và mH.\nTừ số mol C, H, O ta lập tỉ lệ đơn giản nhất rồi suy ra công thức."
+        },
+        {
+          "id": "b5-l1-c3",
+          "heading": "Biện luận công thức hợp lí",
+          "body": "Sau khi có công thức đơn giản nhất, cần đối chiếu với dạng chất đã cho.\nRượu no đơn chức mạch hở có dạng CnH2n+2O; axit no đơn chức mạch hở có dạng CnH2nO2.\nNếu số H không phù hợp với loại liên kết hoặc nhóm chức đã nêu thì phải loại công thức đó và chọn công thức hợp lí hơn."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b5-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Hợp chất X chứa 40% C, 6,67% H, còn lại là O. Công thức đơn giản nhất của X là",
+          "options": ["CH2O", "C2H4O", "CH4O", "C2H6O"],
+          "answer": 0,
+          "explanation": "B1. Giả sử có 100 g X thì mC = 40 g, mH = 6,67 g, mO = 53,33 g. B2. Số mol tương ứng là nC = 40/12 = 3,33; nH = 6,67/1 = 6,67; nO = 53,33/16 = 3,33. B3. Chia cả ba số cho 3,33 được tỉ lệ C : H : O = 1 : 2 : 1. B4. Công thức đơn giản nhất là CH2O."
+        },
+        {
+          "id": "b5-l1-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Đốt cháy hoàn toàn một chất hữu cơ thu được 8,8 g CO2. Số mol nguyên tử C có trong mẫu chất là ___ mol.",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2", "0,20", "0.20"],
+          "placeholder": "Nhập số mol C",
+          "explanation": "B1. nCO2 = 8,8/44 = 0,2 mol. B2. Mỗi mol CO2 chứa 1 mol nguyên tử C nên nC trong mẫu cũng bằng 0,2 mol."
+        },
+        {
+          "id": "b5-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các công thức phân tử có thể là rượu no đơn chức mạch hở.",
+          "options": ["C2H6O", "C3H8O", "C2H4O2", "C4H10O"],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Rượu no đơn chức mạch hở có dạng CnH2n+2O. B2. C2H6O, C3H8O và C4H10O đều phù hợp công thức này. B3. C2H4O2 có 2 nguyên tử O nên không phải rượu no đơn chức."
+        },
+        {
+          "id": "b5-l1-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức tổng quát của axit no đơn chức mạch hở là",
+          "options": ["CnH2n+2", "CnH2nO2", "CnH2n+2O", "CnH2n-2"],
+          "answer": 1,
+          "explanation": "B1. Axit no đơn chức mạch hở chứa một nhóm -COOH. B2. Dạng công thức tổng quát quen thuộc của dãy này là CnH2nO2."
+        },
+        {
+          "id": "b5-l1-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Đốt cháy hoàn toàn một hợp chất hữu cơ thu được 5,4 g H2O. Số mol nguyên tử H có trong mẫu chất là ___ mol.",
+          "answer": "0,6",
+          "acceptedAnswers": ["0.6", "0,60", "0.60"],
+          "placeholder": "Nhập số mol H",
+          "explanation": "B1. nH2O = 5,4/18 = 0,3 mol. B2. Trong 1 mol H2O có 2 mol H nên nH = 2 x 0,3 = 0,6 mol."
+        },
+        {
+          "id": "b5-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Một hợp chất hữu cơ X chứa 52,17% C, 13,04% H, còn lại là O. Biết Mx = 46. Nếu X là rượu no đơn chức thì CTPT của X là",
+          "options": ["CH4O", "C2H6O", "C3H8O", "C2H4O2"],
+          "answer": 1,
+          "explanation": "B1. Giả sử có 100 g X thì nC = 52,17/12 = 4,3475; nH = 13,04/1 = 13,04; nO = 34,79/16 = 2,174. B2. Chia cho 2,174 được tỉ lệ gần đúng 2 : 6 : 1 nên công thức đơn giản nhất là C2H6O. B3. M(C2H6O) = 46 đúng bằng Mx nên công thức phân tử cũng là C2H6O. B4. Công thức này phù hợp dạng rượu no đơn chức."
+        },
+        {
+          "id": "b5-l1-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 4,6 g một rượu no đơn chức X thu được 8,8 g CO2 và 5,4 g H2O. CTPT của X là ___.",
+          "answer": "C2H6O",
+          "acceptedAnswers": ["c2h6o"],
+          "placeholder": "Nhập công thức phân tử",
+          "explanation": "B1. nCO2 = 8,8/44 = 0,2 mol nên trong mẫu có 0,2 mol C, tương ứng mC = 2,4 g. B2. nH2O = 5,4/18 = 0,3 mol nên nH = 0,6 mol, tương ứng mH = 0,6 g. B3. mO trong X = 4,6 - 2,4 - 0,6 = 1,6 g nên nO = 1,6/16 = 0,1 mol. B4. Tỉ lệ mol C : H : O = 0,2 : 0,6 : 0,1 = 2 : 6 : 1 nên CTĐGN là C2H6O. B5. M(C2H6O) = 46 và 4,6 g ứng với 0,1 mol, phù hợp dữ kiện nên CTPT là C2H6O."
+        },
+        {
+          "id": "b5-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 0,10 mol hợp chất hữu cơ X thu được 0,20 mol CO2 và 0,30 mol H2O. Chọn các kết luận đúng.",
+          "options": [
+            "Mỗi phân tử X chứa 2 nguyên tử C.",
+            "Mỗi phân tử X chứa 6 nguyên tử H.",
+            "Nếu X là rượu no đơn chức thì X có thể là C2H6O.",
+            "X có thể là CH3COOH."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Từ 0,10 mol X thu 0,20 mol CO2 nên 1 mol X tạo 2 mol CO2, suy ra mỗi phân tử X có 2C. B2. Từ 0,10 mol X thu 0,30 mol H2O nên có 0,60 mol H nguyên tử; chia cho 0,10 mol X được 6H trong mỗi phân tử. B3. Nếu X là rượu no đơn chức thì công thức phù hợp là C2H6O. B4. CH3COOH có công thức C2H4O2 nên chỉ có 4H, không phù hợp."
+        },
+        {
+          "id": "b5-l1-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 6 g axit no đơn chức X thu được 8,8 g CO2 và 3,6 g H2O. CTPT của X là",
+          "options": ["CH2O", "C2H4O2", "C3H6O2", "C2H6O"],
+          "answer": 1,
+          "explanation": "B1. nCO2 = 8,8/44 = 0,2 mol nên mC = 0,2 x 12 = 2,4 g. B2. nH2O = 3,6/18 = 0,2 mol nên nH = 0,4 mol, mH = 0,4 g. B3. mO = 6 - 2,4 - 0,4 = 3,2 g nên nO = 0,2 mol. B4. Tỉ lệ C : H : O = 0,2 : 0,4 : 0,2 = 1 : 2 : 1 nên CTĐGN là CH2O. B5. Axit no đơn chức phải có dạng CnH2nO2, vì vậy CTPT tương ứng là C2H4O2."
+        },
+        {
+          "id": "b5-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng đốt cháy rượu etylic: C2H6O + O2 -> CO2 + H2O.",
+          "left": ["C2H6O", "O2"],
+          "right": ["CO2", "H2O"],
+          "answer": [1, 3, 2, 3],
+          "explanation": "B1. Cân bằng C trước: cần 2CO2. B2. Cân bằng H: cần 3H2O để có 6H. B3. Khi đó số O ở vế phải là 4 + 3 = 7 nguyên tử O. B4. Vế trái đã có 1O trong C2H6O nên cần thêm 6O từ 3O2. B5. Hệ số tối giản là 1 : 3 : 2 : 3."
+        },
+        {
+          "id": "b5-l1-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Chất X chứa 54,55% C, 9,09% H, còn lại là O. Biết Mx = 88 và X là este đơn chức. CTPT của X là ___.",
+          "answer": "C4H8O2",
+          "acceptedAnswers": ["c4h8o2"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập công thức phân tử",
+          "explanation": "B1. Giả sử có 100 g X thì nC = 54,55/12 = 4,546; nH = 9,09/1 = 9,09; nO = 36,36/16 = 2,2725. B2. Chia cả ba số cho 2,2725 được tỉ lệ gần đúng 2 : 4 : 1 nên CTĐGN là C2H4O. B3. M(C2H4O) = 44. B4. Vì Mx = 88 nên CTPT là (C2H4O)2 = C4H8O2. B5. Công thức này cũng phù hợp với một este đơn chức như CH3COOC2H5."
+        },
+        {
+          "id": "b5-l1-q12",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 0,15 mol hợp chất hữu cơ X thu được 0,30 mol CO2 và 0,30 mol H2O. Biết X chứa oxi và Mx = 60. Chọn các kết luận đúng.",
+          "options": [
+            "Công thức đơn giản nhất của X là CH2O.",
+            "Công thức phân tử của X là C2H4O2.",
+            "Nếu X là axit no đơn chức thì dữ kiện hoàn toàn phù hợp.",
+            "X có thể là rượu no đơn chức C2H6O."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Từ 0,15 mol X thu 0,30 mol CO2 nên mỗi phân tử X có 2C. B2. Từ 0,30 mol H2O suy ra có 0,60 mol H nguyên tử, vậy mỗi phân tử X có 4H. B3. Khối lượng 0,15 mol X là 0,15 x 60 = 9 g. Khối lượng C là 0,30 x 12 = 3,6 g; khối lượng H là 0,60 g nên khối lượng O là 9 - 3,6 - 0,6 = 4,8 g, tương ứng 0,30 mol O nguyên tử. B4. Chia cho 0,15 mol X suy ra mỗi phân tử có 2O. Vậy CTPT là C2H4O2, công thức đơn giản nhất là CH2O. B5. C2H4O2 phù hợp với axit no đơn chức nhưng không phải rượu no đơn chức C2H6O."
+        },
+        {
+          "id": "b5-l1-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 6,0 g một rượu no đơn chức X thu được 13,2 g CO2 và 7,2 g H2O. CTPT của X là",
+          "options": ["C2H6O", "C3H8O", "C3H6O", "C2H4O2"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 13,2/44 = 0,3 mol nên mC = 0,3 x 12 = 3,6 g. B2. nH2O = 7,2/18 = 0,4 mol nên nH = 0,8 mol, mH = 0,8 g. B3. mO trong X = 6,0 - 3,6 - 0,8 = 1,6 g nên nO = 0,1 mol. B4. Tỉ lệ C : H : O = 0,3 : 0,8 : 0,1 = 3 : 8 : 1 nên CTPT là C3H8O. B5. Công thức này phù hợp dạng rượu no đơn chức."
+        }
+      ]
     },
     {
       "id": "b5-l2",
       "title": "Chuỗi phản ứng hữu cơ; nhận biết chất hữu cơ",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Luyện viết chuỗi chuyển hoá quen thuộc và chọn thuốc thử thích hợp để nhận biết các chất hữu cơ thường gặp.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b5-l2-c1",
+          "heading": "Chuỗi CH4 đến este etyl axetat",
+          "body": "Một chuỗi rất quen thuộc là CH4 -> C2H2 -> C2H4 -> C2H5OH -> CH3COOH -> CH3COOC2H5.\nÝ nghĩa của chuỗi là nối liền hiđrocacbon, rượu, axit và este trong một mạch kiến thức.\nKhi làm bài cần viết đúng chất trung gian và đúng hướng chuyển hoá từng bước."
+        },
+        {
+          "id": "b5-l2-c2",
+          "heading": "Chuỗi tinh bột đến axit axetic",
+          "body": "Tinh bột thuỷ phân tạo glucozơ: (C6H10O5)n + nH2O -> nC6H12O6.\nGlucozơ lên men tạo rượu etylic: C6H12O6 -> 2C2H5OH + 2CO2.\nRượu etylic tiếp tục bị oxi hoá tạo axit axetic: C2H5OH + O2 -> CH3COOH + H2O."
+        },
+        {
+          "id": "b5-l2-c3",
+          "heading": "Nhận biết bằng thuốc thử",
+          "body": "Dung dịch brom nhận ra C2H4 và C2H2 vì bị mất màu do phản ứng cộng.\nDung dịch AgNO3/NH3 nhận ra C2H2 bằng kết tủa bạc axetylua, còn glucozơ cho phản ứng tráng gương khi đun nóng.\nDung dịch iot nhận ra tinh bột nhờ màu xanh tím; quỳ tím nhận ra CH3COOH do làm đỏ quỳ."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b5-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Thuốc thử thường dùng để nhận biết tinh bột là",
+          "options": [
+            "Dung dịch iot",
+            "Dung dịch brom",
+            "Quỳ tím",
+            "Dung dịch NaCl"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tinh bột tạo màu xanh tím đặc trưng với dung dịch iot. B2. Vì vậy dùng dung dịch iot để nhận biết tinh bột."
+        },
+        {
+          "id": "b5-l2-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Trong chuỗi CH4 -> C2H2 -> C2H4, chất trung gian nằm giữa CH4 và C2H4 là ___.",
+          "answer": "C2H2",
+          "acceptedAnswers": ["c2h2"],
+          "placeholder": "Nhập công thức chất",
+          "explanation": "B1. Theo chuỗi chuyển hoá đã học, metan được chuyển thành axetilen trước. B2. Từ axetilen mới cộng hiđro để tạo etilen. B3. Vì vậy chất trung gian là C2H2."
+        },
+        {
+          "id": "b5-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các chất làm mất màu dung dịch brom ở điều kiện thường.",
+          "options": ["C2H4", "C2H2", "C2H5OH", "CH3COOH"],
+          "answers": [0, 1],
+          "explanation": "B1. C2H4 và C2H2 đều là hiđrocacbon không no nên tham gia phản ứng cộng với brom và làm mất màu dung dịch brom. B2. C2H5OH và CH3COOH không có tính chất này trong chương trình THCS."
+        },
+        {
+          "id": "b5-l2-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng hiđrat hoá etilen: C2H4 + H2O -> C2H6O.",
+          "left": ["C2H4", "H2O"],
+          "right": ["C2H6O"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. Vế phải có 2C, 6H và 1O. B2. Dùng 1C2H4 và 1H2O ở vế trái cung cấp đúng số nguyên tử đó. B3. Phương trình cân bằng theo tỉ lệ 1 : 1 : 1."
+        },
+        {
+          "id": "b5-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào sau đây làm quỳ tím hoá đỏ?",
+          "options": ["C2H5OH", "CH3COOH", "C6H12O6", "C2H4"],
+          "answer": 1,
+          "explanation": "B1. CH3COOH là axit axetic nên có tính axit. B2. Dung dịch axit làm quỳ tím chuyển sang màu đỏ."
+        },
+        {
+          "id": "b5-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trong chuỗi CH4 -> C2H2 -> C2H4 -> C2H5OH -> CH3COOH -> CH3COOC2H5, chất tạo thành khi CH3COOH tác dụng với C2H5OH là",
+          "options": ["C2H4", "C2H2", "CH3COOC2H5", "C6H12O6"],
+          "answer": 2,
+          "explanation": "B1. Axit axetic tác dụng với rượu etylic tạo este etyl axetat và nước. B2. Sản phẩm hữu cơ của bước này là CH3COOC2H5."
+        },
+        {
+          "id": "b5-l2-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Lên men hoàn toàn 180 g glucozơ rồi oxi hoá hoàn toàn lượng rượu etylic thu được thành axit axetic. Khối lượng CH3COOH thu được là ___ g.",
+          "answer": "120",
+          "placeholder": "Nhập khối lượng axit",
+          "explanation": "B1. n glucozơ = 180/180 = 1 mol. B2. Theo phản ứng lên men, 1 mol glucozơ tạo 2 mol C2H5OH. B3. Theo phản ứng oxi hoá, 1 mol C2H5OH tạo 1 mol CH3COOH nên thu được 2 mol CH3COOH. B4. mCH3COOH = 2 x 60 = 120 g."
+        },
+        {
+          "id": "b5-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Có bốn mẫu riêng biệt: glucozơ, tinh bột, axit axetic và rượu etylic. Chọn các nhận xét đúng về cách nhận biết chúng.",
+          "options": [
+            "Dùng quỳ tím có thể nhận ra ngay axit axetic.",
+            "Dùng dung dịch iot có thể nhận ra tinh bột.",
+            "Dùng AgNO3/NH3 và đun nóng có thể nhận ra glucozơ.",
+            "Rượu etylic làm quỳ tím hoá đỏ nên nhận ra bằng quỳ tím."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Axit axetic làm quỳ tím hoá đỏ nên nhận ra bằng quỳ tím. B2. Tinh bột cho màu xanh tím với dung dịch iot. B3. Glucozơ tham gia phản ứng tráng gương với AgNO3/NH3 khi đun nóng. B4. Rượu etylic không làm đổi màu quỳ tím nên mệnh đề cuối sai."
+        },
+        {
+          "id": "b5-l2-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.",
+          "left": ["CH3COOH", "C2H5OH"],
+          "right": ["CH3COOC2H5", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Đếm nguyên tử ở hai vế đều có 4C, 10H và 3O khi đặt hệ số 1 cho mỗi chất. B2. Vì vậy phương trình este hoá này đã cân bằng với hệ số 1 : 1 : 1 : 1."
+        },
+        {
+          "id": "b5-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Có bốn chất lỏng mất nhãn: CH3COOH, C2H5OH, dung dịch glucozơ và hồ tinh bột. Cách làm nào sau đây giúp nhận biết đúng cả bốn chất?",
+          "options": [
+            "Dùng quỳ tím để tìm CH3COOH, dùng iot để tìm hồ tinh bột, dùng AgNO3/NH3 đun nóng để tìm glucozơ, chất còn lại là C2H5OH.",
+            "Chỉ dùng dung dịch brom là đủ để phân biệt cả bốn chất.",
+            "Chỉ dùng quỳ tím là đủ để phân biệt cả bốn chất.",
+            "Dùng AgNO3/NH3 để nhận ra ngay cả bốn chất."
+          ],
+          "answer": 0,
+          "explanation": "B1. Quỳ tím giúp tách ra CH3COOH vì chỉ mẫu này làm đỏ quỳ. B2. Dung dịch iot nhận ra hồ tinh bột nhờ màu xanh tím. B3. Dùng AgNO3/NH3 và đun nóng nhận ra glucozơ bằng phản ứng tráng gương. B4. Mẫu còn lại không phản ứng trong các phép thử trên là C2H5OH."
+        },
+        {
+          "id": "b5-l2-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Từ 324 g tinh bột, nếu thuỷ phân hoàn toàn rồi lên men hoàn toàn thì khối lượng rượu etylic thu được là ___ g.",
+          "answer": "184",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng etanol",
+          "explanation": "B1. Một mắt xích tinh bột C6H10O5 có khối lượng mol 162 g/mol. B2. n mắt xích tinh bột = 324/162 = 2 mol. B3. Thuỷ phân cho 2 mol glucozơ, mỗi mol glucozơ lên men tạo 2 mol etanol nên thu được 4 mol etanol. B4. mC2H5OH = 4 x 46 = 184 g."
+        },
+        {
+          "id": "b5-l2-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Tập thuốc thử nào dưới đây đủ để phân biệt 5 mẫu riêng biệt: C2H2, C2H4, C2H5OH, CH3COOH, hồ tinh bột?",
+          "options": [
+            "Dung dịch brom, AgNO3/NH3, quỳ tím, dung dịch iot",
+            "Chỉ dung dịch brom và quỳ tím",
+            "Chỉ AgNO3/NH3 và dung dịch iot",
+            "Chỉ dung dịch iot"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Quỳ tím nhận ra CH3COOH. B2. Dung dịch iot nhận ra hồ tinh bột. B3. Dung dịch brom tách ra nhóm chất không no gồm C2H2 và C2H4 vì đều làm mất màu brom. B4. Dùng tiếp AgNO3/NH3 sẽ nhận ra C2H2 do tạo kết tủa, mẫu còn lại là C2H4. B5. C2H5OH là mẫu không phản ứng trong các phép thử trên."
+        },
+        {
+          "id": "b5-l2-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Chọn các nhận xét đúng về nhận biết các chất hữu cơ thường gặp.",
+          "options": [
+            "C2H2 và C2H4 đều làm mất màu dung dịch brom.",
+            "AgNO3/NH3 có thể nhận ra C2H2 nhờ tạo kết tủa bạc axetylua.",
+            "CH3COOH làm quỳ tím hoá đỏ.",
+            "C2H4 cho phản ứng tráng gương với AgNO3/NH3."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. C2H2 và C2H4 đều là chất không no nên làm mất màu dung dịch brom. B2. C2H2 còn phản ứng với AgNO3/NH3 tạo kết tủa bạc axetylua, còn C2H4 thì không. B3. CH3COOH có tính axit nên làm quỳ tím hoá đỏ. B4. Phản ứng tráng gương là tính chất của glucozơ, không phải của C2H4."
+        }
+      ]
     },
     {
       "id": "b5-l3",
       "title": "Đề tổng hợp hữu cơ theo cấu trúc đề thi chuyên",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Rèn các câu tổng hợp bao quát hiđrocacbon, dẫn xuất chứa oxi, gluxit và polime theo mạch đề HSG/chuyên.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b5-l3-c1",
+          "heading": "Trục kiến thức cần nối lại",
+          "body": "Phần tổng hợp hữu cơ thường nối bốn mảng: hiđrocacbon, dẫn xuất chứa oxi, gluxit và polime.\nMột bài có thể yêu cầu vừa nhận biết tính chất, vừa viết chuỗi phản ứng, vừa tính toán theo phương trình.\nMuốn làm tốt cần nhớ chắc công thức quen thuộc như C2H5OH, CH3COOH, C6H12O6, CH3COOC2H5."
+        },
+        {
+          "id": "b5-l3-c2",
+          "heading": "Dạng câu ghép nhiều phát biểu",
+          "body": "Trong đề chuyên, câu trắc nghiệm nhiều lựa chọn thường đưa ra 4 đến 5 phát biểu thuộc nhiều phần kiến thức khác nhau.\nCách làm là xét từng phát biểu độc lập, không vội chọn theo cảm tính.\nNhững mốc rất hay dùng là: etilen làm mất màu brom, glucozơ tráng gương, tinh bột cho màu xanh tím với iot, PE là sản phẩm trùng hợp etilen."
+        },
+        {
+          "id": "b5-l3-c3",
+          "heading": "Bài toán chuỗi nhiều giai đoạn",
+          "body": "Với chuỗi 2 đến 3 phản ứng liên tiếp, nên tính số mol theo từng bước rồi nhân hiệu suất của từng giai đoạn.\nNếu đề cho hiệu suất ở mọi bước thì số mol cuối cùng bằng số mol lí thuyết nhân lần lượt với từng hiệu suất.\nKhi biện luận công thức từ đốt cháy, vẫn áp dụng các bước quen thuộc: tìm nC, nH, nO rồi kiểm tra sự phù hợp với loại hợp chất."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b5-l3-q1",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phát biểu đúng về kiến thức hữu cơ đã học.",
+          "options": [
+            "Etilen làm mất màu dung dịch brom.",
+            "Glucozơ tham gia phản ứng tráng gương.",
+            "Polietilen được tạo từ phản ứng trùng hợp etilen.",
+            "Tinh bột trực tiếp làm quỳ tím hoá đỏ."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Etilen có liên kết đôi nên làm mất màu dung dịch brom. B2. Glucozơ có phản ứng tráng gương. B3. Polietilen là sản phẩm trùng hợp của etilen. B4. Tinh bột không có tính axit nên không làm quỳ tím hoá đỏ."
+        },
+        {
+          "id": "b5-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Monome dùng để tạo polietilen là",
+          "options": ["CH4", "C2H4", "C2H2", "C6H12O6"],
+          "answer": 1,
+          "explanation": "B1. Polietilen được điều chế bằng phản ứng trùng hợp nhiều phân tử etilen. B2. Vì vậy monome là C2H4."
+        },
+        {
+          "id": "b5-l3-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Công thức phân tử của glucozơ là ___.",
+          "answer": "C6H12O6",
+          "acceptedAnswers": ["c6h12o6"],
+          "placeholder": "Nhập công thức phân tử",
+          "explanation": "B1. Glucozơ là đường đơn quen thuộc trong chương gluxit. B2. Công thức phân tử của nó là C6H12O6."
+        },
+        {
+          "id": "b5-l3-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng lên men glucozơ: C6H12O6 -> C2H6O + CO2.",
+          "left": ["C6H12O6"],
+          "right": ["C2H6O", "CO2"],
+          "answer": [1, 2, 2],
+          "explanation": "B1. Cân bằng C: cần 2C2H6O và 2CO2 để có tổng 6C. B2. Khi đó số H ở vế phải là 12, đúng với 12H của glucozơ. B3. Số O ở vế phải là 2 + 4 = 6, đúng với vế trái. B4. Hệ số tối giản là 1 : 2 : 2."
+        },
+        {
+          "id": "b5-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào sau đây làm quỳ tím hoá đỏ?",
+          "options": ["C2H4", "CH3COOH", "C2H5OH", "PE"],
+          "answer": 1,
+          "explanation": "B1. CH3COOH là axit axetic nên làm quỳ tím hoá đỏ. B2. Các chất còn lại không có tính axit trong điều kiện thường."
+        },
+        {
+          "id": "b5-l3-q6",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Xét các phát biểu sau trong một đề tổng hợp hữu cơ. Chọn các phát biểu đúng.",
+          "options": [
+            "Benzen không làm mất màu dung dịch brom ở điều kiện thường.",
+            "Glucozơ và C2H2 đều có thể phản ứng với AgNO3/NH3 nhưng hiện tượng khác nhau.",
+            "Axit axetic và rượu etylic phản ứng tạo este và nước.",
+            "Tinh bột trực tiếp tham gia phản ứng tráng gương."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Benzen không làm mất màu dung dịch brom ở điều kiện thường theo kiến thức THCS. B2. Glucozơ cho phản ứng tráng gương còn C2H2 tạo kết tủa với AgNO3/NH3. B3. CH3COOH tác dụng với C2H5OH tạo este và nước. B4. Tinh bột không trực tiếp tráng gương nên mệnh đề cuối sai."
+        },
+        {
+          "id": "b5-l3-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Lên men 360 g glucozơ với hiệu suất 75%. Khối lượng rượu etylic thực tế thu được là ___ g.",
+          "answer": "138",
+          "placeholder": "Nhập khối lượng etanol",
+          "explanation": "B1. n glucozơ = 360/180 = 2 mol. B2. Theo lí thuyết, 2 mol glucozơ tạo 4 mol etanol. B3. m etanol lí thuyết = 4 x 46 = 184 g. B4. Với hiệu suất 75%, khối lượng thực tế là 184 x 0,75 = 138 g."
+        },
+        {
+          "id": "b5-l3-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 5,6 lít C2H4 (đktc) cộng nước tạo rượu etylic với hiệu suất 80%. Khối lượng C2H5OH thu được là",
+          "options": ["5,75 g", "9,2 g", "11,5 g", "18,4 g"],
+          "answer": 1,
+          "explanation": "B1. nC2H4 = 5,6/22,4 = 0,25 mol. B2. Theo phương trình C2H4 + H2O -> C2H6O, số mol etanol lí thuyết là 0,25 mol. B3. Khối lượng etanol lí thuyết là 0,25 x 46 = 11,5 g. B4. Với hiệu suất 80%, khối lượng thực tế là 11,5 x 0,8 = 9,2 g."
+        },
+        {
+          "id": "b5-l3-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng đốt cháy axit axetic: CH3COOH + O2 -> CO2 + H2O.",
+          "left": ["CH3COOH", "O2"],
+          "right": ["CO2", "H2O"],
+          "answer": [1, 2, 2, 2],
+          "explanation": "B1. CH3COOH có 2C nên đặt 2CO2. B2. Chất này có 4H nên đặt 2H2O. B3. Vế phải có tổng 6 nguyên tử O; trong CH3COOH đã có 2O nên cần thêm 4O từ 2O2. B4. Hệ số tối giản là 1 : 2 : 2 : 2."
+        },
+        {
+          "id": "b5-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Lên men 180 g glucozơ tạo rượu etylic với hiệu suất 80%, rồi oxi hoá toàn bộ lượng rượu đó thành axit axetic với hiệu suất 75%. Khối lượng CH3COOH thu được là",
+          "options": ["48 g", "60 g", "72 g", "90 g"],
+          "answer": 2,
+          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. Theo lí thuyết, 1 mol glucozơ tạo 2 mol etanol; với hiệu suất 80% thu được 2 x 0,8 = 1,6 mol etanol. B3. Theo lí thuyết, 1 mol etanol tạo 1 mol axit axetic; với hiệu suất 75% thu được 1,6 x 0,75 = 1,2 mol CH3COOH. B4. Khối lượng axit là 1,2 x 60 = 72 g."
+        },
+        {
+          "id": "b5-l3-q11",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Chọn các phát biểu đúng trong bài tổng hợp hữu cơ nâng cao.",
+          "options": [
+            "1 mol glucozơ lên men hoàn toàn có thể tạo tối đa 2 mol C2H5OH.",
+            "Polietilen là sản phẩm trùng hợp của etilen.",
+            "CH3COOH + C2H5OH tạo CH3COOC2H5 + H2.",
+            "Glucozơ và C2H2 đều có thể phản ứng với AgNO3/NH3 nhưng không cùng hiện tượng."
+          ],
+          "answers": [0, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phản ứng lên men cho tỉ lệ 1 mol glucozơ -> 2 mol etanol nên phát biểu 1 đúng. B2. PE đúng là sản phẩm trùng hợp etilen nên phát biểu 2 đúng. B3. Phản ứng este hoá tạo este và nước chứ không tạo H2 nên phát biểu 3 sai. B4. Glucozơ cho phản ứng tráng gương còn C2H2 tạo kết tủa với AgNO3/NH3 nên phát biểu 4 đúng."
+        },
+        {
+          "id": "b5-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Từ 11,2 lít C2H4 (đktc), điều chế CH3COOC2H5 qua 3 bước: C2H4 -> C2H5OH (80%), C2H5OH -> CH3COOH (75%), CH3COOH + C2H5OH -> CH3COOC2H5 (50%). Khối lượng este thu được là ___ g.",
+          "answer": "13,2",
+          "acceptedAnswers": ["13.2"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng este",
+          "explanation": "B1. nC2H4 = 11,2/22,4 = 0,5 mol. B2. Bước 1 tạo etanol với hiệu suất 80% nên thu được 0,5 x 0,8 = 0,4 mol C2H5OH. B3. Bước 2 oxi hoá etanol thành axit axetic với hiệu suất 75% nên thu được 0,4 x 0,75 = 0,3 mol CH3COOH. B4. Bước 3 este hoá theo tỉ lệ 1 : 1, giả sử có dư rượu etylic nên số mol este lí thuyết theo axit là 0,3 mol; với hiệu suất 50% thu được 0,15 mol este. B5. mCH3COOC2H5 = 0,15 x 88 = 13,2 g."
+        },
+        {
+          "id": "b5-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 3,0 g hợp chất hữu cơ X thu được 4,4 g CO2 và 1,8 g H2O. Biết X là axit no đơn chức mạch hở. CTPT của X là",
+          "options": ["CH2O", "C2H4O2", "C3H6O2", "C2H6O"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 4,4/44 = 0,1 mol nên mC = 1,2 g. B2. nH2O = 1,8/18 = 0,1 mol nên nH = 0,2 mol, mH = 0,2 g. B3. mO trong X = 3,0 - 1,2 - 0,2 = 1,6 g nên nO = 0,1 mol. B4. Tỉ lệ C : H : O = 0,1 : 0,2 : 0,1 = 1 : 2 : 1 nên CTĐGN là CH2O. B5. Vì X là axit no đơn chức mạch hở nên CTPT phải thuộc dạng CnH2nO2. Công thức phù hợp nhỏ nhất là C2H4O2."
+        }
+      ]
     }
   ]
 }
