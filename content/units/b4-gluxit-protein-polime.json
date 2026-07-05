@@ -4,62 +4,1038 @@
   "code": "B4",
   "title": "Gluxit – Protein – Polime",
   "order": 4,
-  "description": "Glucozơ, saccarozơ, tinh bột, protein, polime và chuỗi chuyển hoá hữu cơ.",
-  "status": "coming-soon",
+  "description": "Glucozơ, saccarozơ, tinh bột, xenlulozơ, protein, polime và các bài toán chuyển hoá gluxit.",
+  "status": "available",
   "lessons": [
     {
       "id": "b4-l1",
       "title": "Glucozơ; phản ứng tráng gương; lên men",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Nắm công thức phân tử của glucozơ, phản ứng tráng gương và phản ứng lên men tạo rượu etylic, CO2.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b4-l1-c1",
+          "heading": "Công thức và đặc điểm chung",
+          "body": "Glucozơ có công thức phân tử C6H12O6. Đây là một loại gluxit đơn giản, tan tốt trong nước và có nhiều trong quả chín, mật ong.\nTrong chương trình THCS, glucozơ được nhấn mạnh ở hai tính chất đặc trưng là phản ứng tráng gương và phản ứng lên men rượu."
+        },
+        {
+          "id": "b4-l1-c2",
+          "heading": "Phản ứng tráng gương",
+          "body": "Glucozơ phản ứng với thuốc thử bạc trong môi trường amoniac, tạo lớp bạc sáng bám trên thành ống nghiệm.\nCó thể viết dạng đơn giản: C6H12O6 + Ag2O -> C6H12O7 + 2Ag.\nDấu hiệu nhận biết là xuất hiện bạc kim loại màu trắng sáng."
+        },
+        {
+          "id": "b4-l1-c3",
+          "heading": "Phản ứng lên men",
+          "body": "Khi có enzim men rượu, glucozơ lên men tạo rượu etylic và khí cacbon đioxit: C6H12O6 -> 2C2H5OH + 2CO2.\nTừ 1 mol glucozơ thu được 2 mol etanol và 2 mol CO2.\nĐây là cơ sở của nhiều bài toán tính khối lượng glucozơ cần dùng hoặc lượng rượu, CO2 tạo thành."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b4-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức phân tử của glucozơ là",
+          "options": ["C6H12O6", "C12H22O11", "C2H5OH", "(C6H10O5)n"],
+          "answer": 0,
+          "explanation": "B1. Glucozơ là đường đơn quen thuộc trong chương gluxit. B2. Công thức phân tử của glucozơ là C6H12O6."
+        },
+        {
+          "id": "b4-l1-q2",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng về glucozơ.",
+          "options": [
+            "Glucozơ tan tốt trong nước.",
+            "Glucozơ tham gia phản ứng tráng gương.",
+            "Glucozơ có thể lên men tạo rượu etylic và CO2.",
+            "Glucozơ không chứa nguyên tố oxi."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Glucozơ là chất rắn, tan được trong nước. B2. Glucozơ có phản ứng tráng gương. B3. Glucozơ còn lên men tạo etanol và CO2. B4. Trong công thức C6H12O6 có oxi nên mệnh đề cuối sai."
+        },
+        {
+          "id": "b4-l1-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Trong phản ứng tráng gương của glucozơ, kim loại tạo thành bám trên thành ống nghiệm là ___.",
+          "answer": "Ag",
+          "acceptedAnswers": ["bạc", "ag"],
+          "placeholder": "Nhập tên hoặc kí hiệu kim loại",
+          "explanation": "B1. Phản ứng tráng gương tạo ra bạc kim loại. B2. Vì vậy đáp án là Ag hoặc bạc."
+        },
+        {
+          "id": "b4-l1-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng lên men glucozơ: C6H12O6 -> C2H5OH + CO2.",
+          "left": ["C6H12O6"],
+          "right": ["C2H5OH", "CO2"],
+          "answer": [1, 2, 2],
+          "explanation": "B1. Cân bằng C: vế trái có 6C nên cần 2C2H5OH và 2CO2 để có 4 + 2 = 6C. B2. Kiểm tra H: 2C2H5OH cho 12H, đúng với 12H của glucozơ. B3. Kiểm tra O: vế phải có 2O trong 2C2H5OH và 4O trong 2CO2, tổng 6O. B4. Hệ số tối giản là 1 : 2 : 2."
+        },
+        {
+          "id": "b4-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Thuốc thử thường dùng để thực hiện phản ứng tráng gương với glucozơ là",
+          "options": [
+            "Dung dịch NaCl",
+            "Dung dịch AgNO3 trong NH3",
+            "Dung dịch I2",
+            "Dung dịch HCl"
+          ],
+          "answer": 1,
+          "explanation": "B1. Phản ứng tráng gương của glucozơ dùng thuốc thử bạc trong môi trường amoniac. B2. Vì vậy chọn dung dịch AgNO3 trong NH3."
+        },
+        {
+          "id": "b4-l1-q6",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Lên men hoàn toàn 18 g glucozơ thu được ___ g rượu etylic.",
+          "answer": "9,2",
+          "acceptedAnswers": ["9.2"],
+          "placeholder": "Nhập khối lượng etanol",
+          "explanation": "B1. n glucozơ = 18/180 = 0,10 mol. B2. Theo phương trình, 1 mol glucozơ tạo 2 mol etanol nên 0,10 mol glucozơ tạo 0,20 mol etanol. B3. m etanol = 0,20 x 46 = 9,2 g."
+        },
+        {
+          "id": "b4-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,50 mol glucozơ lên men hoàn toàn. Số mol CO2 tạo ra là",
+          "options": ["0,25 mol", "0,50 mol", "1,00 mol", "1,50 mol"],
+          "answer": 2,
+          "explanation": "B1. Theo phương trình lên men, 1 mol glucozơ tạo 2 mol CO2. B2. Vậy 0,50 mol glucozơ tạo 0,50 x 2 = 1,00 mol CO2."
+        },
+        {
+          "id": "b4-l1-q8",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng tráng gương viết gọn: C6H12O6 + Ag2O -> C6H12O7 + Ag.",
+          "left": ["C6H12O6", "Ag2O"],
+          "right": ["C6H12O7", "Ag"],
+          "answer": [1, 1, 1, 2],
+          "explanation": "B1. Giữ 1C6H12O6 và 1C6H12O7 để bảo toàn C, H, O. B2. Bên trái có 2Ag trong Ag2O nên bên phải cần 2Ag. B3. Phương trình cân bằng là 1 : 1 : 1 : 2."
+        },
+        {
+          "id": "b4-l1-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Lên men hoàn toàn 36 g glucozơ. Chọn các kết luận đúng.",
+          "options": [
+            "Thu được 0,40 mol C2H5OH.",
+            "Khối lượng CO2 tạo ra là 17,6 g.",
+            "Thể tích CO2 ở đktc là 8,96 lít.",
+            "Khối lượng C2H5OH tạo ra là 9,2 g."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. n glucozơ = 36/180 = 0,20 mol. B2. Theo phương trình, tạo 0,40 mol etanol và 0,40 mol CO2. B3. Khối lượng CO2 là 0,40 x 44 = 17,6 g. B4. Thể tích CO2 ở đktc là 0,40 x 22,4 = 8,96 lít. B5. Khối lượng etanol là 0,40 x 46 = 18,4 g nên mệnh đề 4 sai. B6. Vì vậy các mệnh đề 1, 2 và 3 đúng."
+        },
+        {
+          "id": "b4-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Muốn thu được 13,8 g rượu etylic theo lí thuyết từ phản ứng lên men, cần dùng khối lượng glucozơ là",
+          "options": ["18 g", "27 g", "36 g", "54 g"],
+          "answer": 1,
+          "explanation": "B1. n etanol = 13,8/46 = 0,30 mol. B2. Theo phương trình, 2 mol etanol được tạo ra từ 1 mol glucozơ nên n glucozơ = 0,30/2 = 0,15 mol. B3. m glucozơ = 0,15 x 180 = 27 g."
+        },
+        {
+          "id": "b4-l1-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Lên men một lượng glucozơ thu được 11,2 lít CO2 ở đktc. Khối lượng glucozơ đã dùng là ___ g.",
+          "answer": "45",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng glucozơ",
+          "explanation": "B1. n CO2 = 11,2/22,4 = 0,50 mol. B2. Theo phương trình, 1 mol glucozơ tạo 2 mol CO2 nên n glucozơ = 0,50/2 = 0,25 mol. B3. m glucozơ = 0,25 x 180 = 45 g."
+        },
+        {
+          "id": "b4-l1-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 0,10 mol glucozơ tham gia phản ứng tráng gương viết gọn C6H12O6 + Ag2O -> C6H12O7 + 2Ag. Khối lượng Ag thu được là",
+          "options": ["10,8 g", "21,6 g", "32,4 g", "43,2 g"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo phương trình, 1 mol glucozơ tạo 2 mol Ag. B2. Vậy 0,10 mol glucozơ tạo 0,20 mol Ag. B3. m Ag = 0,20 x 108 = 21,6 g."
+        },
+        {
+          "id": "b4-l1-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Lên men 90 g glucozơ với hiệu suất 80%. Chọn các kết luận đúng.",
+          "options": [
+            "Khối lượng etanol thực tế thu được là 36,8 g.",
+            "Thể tích CO2 thực tế ở đktc là 22,4 lít.",
+            "Nếu tính theo lí thuyết thì thu được 46 g etanol.",
+            "Hiệu suất 80% nghĩa là lấy lượng sản phẩm lí thuyết nhân với 0,8."
+          ],
+          "answers": [0, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. n glucozơ = 90/180 = 0,50 mol. B2. Theo lí thuyết, 0,50 mol glucozơ tạo 1,00 mol etanol, tương ứng 46 g. B3. Với hiệu suất 80%, khối lượng etanol thực tế là 46 x 0,8 = 36,8 g. B4. CO2 lí thuyết là 1,00 mol nên CO2 thực tế ở đktc là 22,4 x 0,8 = 17,92 lít, không phải 22,4 lít. B5. Vì vậy các mệnh đề 1, 3 và 4 đúng."
+        }
+      ]
     },
     {
       "id": "b4-l2",
       "title": "Saccarozơ; thuỷ phân",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Hiểu công thức phân tử của saccarozơ, tính không tráng gương trực tiếp và phản ứng thuỷ phân tạo glucozơ, fructozơ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b4-l2-c1",
+          "heading": "Công thức và nguồn gốc",
+          "body": "Saccarozơ có công thức phân tử C12H22O11. Đây là loại đường quen thuộc có trong mía, củ cải đường và nhiều loại quả.\nỞ điều kiện thường, saccarozơ dễ tan trong nước và có vị ngọt."
+        },
+        {
+          "id": "b4-l2-c2",
+          "heading": "Tính chất đáng chú ý",
+          "body": "Saccarozơ không trực tiếp tham gia phản ứng tráng gương như glucozơ.\nVì vậy nếu chỉ cho saccarozơ tác dụng với thuốc thử bạc trong amoniac thì không xuất hiện lớp bạc sáng."
+        },
+        {
+          "id": "b4-l2-c3",
+          "heading": "Phản ứng thuỷ phân",
+          "body": "Khi đun nóng với axit loãng hoặc dưới tác dụng của enzim, saccarozơ bị thuỷ phân:\nC12H22O11 + H2O -> C6H12O6 + C6H12O6.\nHai monosaccarit thu được là glucozơ và fructozơ. Sau thuỷ phân, hỗn hợp mới có khả năng tham gia phản ứng tráng gương."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b4-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức phân tử của saccarozơ là",
+          "options": ["C6H12O6", "C12H22O11", "C2H5OH", "(C6H10O5)n"],
+          "answer": 1,
+          "explanation": "B1. Saccarozơ là đường mía quen thuộc. B2. Công thức phân tử của nó là C12H22O11."
+        },
+        {
+          "id": "b4-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nhận xét nào đúng về phản ứng tráng gương của saccarozơ?",
+          "options": [
+            "Saccarozơ trực tiếp tạo bạc ngay.",
+            "Saccarozơ chỉ tráng gương sau khi thuỷ phân.",
+            "Saccarozơ làm xanh tím hồ tinh bột.",
+            "Saccarozơ không chứa oxi."
+          ],
+          "answer": 1,
+          "explanation": "B1. Saccarozơ không trực tiếp tham gia phản ứng tráng gương. B2. Sau khi thuỷ phân thành glucozơ và fructozơ thì hỗn hợp mới có thể tráng gương."
+        },
+        {
+          "id": "b4-l2-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Thuỷ phân saccarozơ, ngoài glucozơ còn thu được ___.",
+          "answer": "fructozơ",
+          "acceptedAnswers": ["fructose", "fructozo"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Phản ứng thuỷ phân saccarozơ tạo ra hai monosaccarit. B2. Đó là glucozơ và fructozơ."
+        },
+        {
+          "id": "b4-l2-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng thuỷ phân saccarozơ: C12H22O11 + H2O -> C6H12O6 + C6H12O6.",
+          "left": ["C12H22O11", "H2O"],
+          "right": ["C6H12O6", "C6H12O6"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Vế phải gồm 2 phân tử C6H12O6 nên có tổng C12H24O12. B2. Vế trái là C12H22O11 cộng H2O cũng cho C12H24O12. B3. Vì vậy hệ số tối giản đều bằng 1."
+        },
+        {
+          "id": "b4-l2-q5",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phát biểu đúng về saccarozơ.",
+          "options": [
+            "Có trong đường mía, đường củ cải.",
+            "Không trực tiếp tham gia phản ứng tráng gương.",
+            "Thuỷ phân tạo glucozơ và fructozơ.",
+            "Công thức phân tử là C6H12O6."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Saccarozơ có nhiều trong mía và củ cải đường. B2. Saccarozơ không trực tiếp tráng gương. B3. Khi thuỷ phân, nó tạo glucozơ và fructozơ. B4. Công thức C6H12O6 là của glucozơ, không phải của saccarozơ."
+        },
+        {
+          "id": "b4-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 34,2 g saccarozơ. Khối lượng glucozơ riêng tạo thành là",
+          "options": ["9 g", "18 g", "36 g", "54 g"],
+          "answer": 1,
+          "explanation": "B1. n saccarozơ = 34,2/342 = 0,10 mol. B2. Theo phương trình, 1 mol saccarozơ tạo 1 mol glucozơ nên tạo 0,10 mol glucozơ. B3. m glucozơ = 0,10 x 180 = 18 g."
+        },
+        {
+          "id": "b4-l2-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 171 g saccarozơ thu được tổng cộng ___ g hai monosaccarit có công thức C6H12O6.",
+          "answer": "180",
+          "placeholder": "Nhập khối lượng sản phẩm",
+          "explanation": "B1. n saccarozơ = 171/342 = 0,50 mol. B2. Theo phương trình, 1 mol saccarozơ tạo 2 mol monosaccarit C6H12O6 nên thu được 1,00 mol các chất này. B3. Khối lượng sản phẩm là 1,00 x 180 = 180 g."
+        },
+        {
+          "id": "b4-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Xét 0,10 mol saccarozơ đã thuỷ phân hoàn toàn. Chọn các kết luận đúng.",
+          "options": [
+            "Thu được 0,20 mol các monosaccarit có công thức C6H12O6.",
+            "Saccarozơ trước thuỷ phân đã trực tiếp tráng gương được.",
+            "Hỗn hợp sau thuỷ phân có thể tham gia phản ứng tráng gương.",
+            "Khối lượng hai monosaccarit nhỏ hơn khối lượng saccarozơ ban đầu."
+          ],
+          "answers": [0, 2],
+          "explanation": "B1. 0,10 mol saccarozơ tạo 0,20 mol các chất có công thức C6H12O6. B2. Saccarozơ ban đầu không trực tiếp tráng gương. B3. Sau thuỷ phân, hỗn hợp mới có thể tham gia phản ứng tráng gương. B4. Khối lượng sản phẩm hữu cơ là 36 g, lớn hơn 34,2 g do có thêm khối lượng của nước."
+        },
+        {
+          "id": "b4-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 68,4 g saccarozơ. Tổng số mol các monosaccarit tạo ra là",
+          "options": ["0,10 mol", "0,20 mol", "0,30 mol", "0,40 mol"],
+          "answer": 3,
+          "explanation": "B1. n saccarozơ = 68,4/342 = 0,20 mol. B2. Theo phương trình, 1 mol saccarozơ tạo 2 mol monosaccarit nên số mol sản phẩm là 0,20 x 2 = 0,40 mol."
+        },
+        {
+          "id": "b4-l2-q10",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 17,1 g saccarozơ thu được tổng cộng ___ g hai monosaccarit.",
+          "answer": "18",
+          "placeholder": "Nhập khối lượng sản phẩm",
+          "explanation": "B1. n saccarozơ = 17,1/342 = 0,05 mol. B2. Theo phương trình, tạo 0,10 mol các chất C6H12O6. B3. Khối lượng sản phẩm là 0,10 x 180 = 18 g."
+        },
+        {
+          "id": "b4-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Thuỷ phân hoàn toàn 68,4 g saccarozơ. Nếu chỉ đem phần glucozơ tạo thành đi lên men hoàn toàn thì khối lượng rượu etylic thu được là",
+          "options": ["9,2 g", "18,4 g", "27,6 g", "36,8 g"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. n saccarozơ = 68,4/342 = 0,20 mol. B2. Thuỷ phân tạo 0,20 mol glucozơ. B3. Theo phản ứng lên men, 1 mol glucozơ tạo 2 mol etanol nên thu được 0,40 mol etanol. B4. m etanol = 0,40 x 46 = 18,4 g."
+        },
+        {
+          "id": "b4-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Thuỷ phân hoàn toàn 34,2 g saccarozơ. Biết 1 mol mỗi monosaccarit thu được phản ứng tráng gương tạo 2 mol Ag. Khối lượng Ag tối đa thu được là ___ g.",
+          "answer": "43,2",
+          "acceptedAnswers": ["43.2"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng Ag",
+          "explanation": "B1. n saccarozơ = 34,2/342 = 0,10 mol. B2. Sau thuỷ phân có 0,20 mol monosaccarit. B3. Mỗi mol monosaccarit tạo 2 mol Ag nên n Ag = 0,20 x 2 = 0,40 mol. B4. m Ag = 0,40 x 108 = 43,2 g."
+        },
+        {
+          "id": "b4-l2-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Thuỷ phân hoàn toàn 171 g saccarozơ. Chọn các kết luận đúng.",
+          "options": [
+            "Khối lượng glucozơ riêng tạo thành là 90 g.",
+            "Tổng khối lượng hai monosaccarit tạo thành là 180 g.",
+            "Nếu chỉ lên men phần glucozơ thì tối đa thu được 1,0 mol etanol.",
+            "Saccarozơ chưa thuỷ phân trực tiếp tác dụng với AgNO3/NH3 tạo bạc."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. n saccarozơ = 171/342 = 0,50 mol. B2. Thuỷ phân tạo 0,50 mol glucozơ, tương ứng 90 g, và 0,50 mol fructozơ. B3. Tổng khối lượng hai monosaccarit là 180 g. B4. Nếu chỉ lên men phần glucozơ thì số mol etanol tối đa là 0,50 x 2 = 1,0 mol. B5. Saccarozơ ban đầu không trực tiếp tráng gương nên mệnh đề cuối sai."
+        }
+      ]
     },
     {
       "id": "b4-l3",
       "title": "Tinh bột và xenlulozơ",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phân biệt tinh bột và xenlulozơ qua cấu trúc chung, tính chất đặc trưng, phản ứng thuỷ phân và ứng dụng.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b4-l3-c1",
+          "heading": "Điểm giống nhau",
+          "body": "Tinh bột và xenlulozơ đều là polisaccarit, có công thức dạng chung (C6H10O5)n.\nCả hai đều có nguồn gốc từ thực vật và khi thuỷ phân hoàn toàn đều tạo glucozơ."
+        },
+        {
+          "id": "b4-l3-c2",
+          "heading": "Tinh bột",
+          "body": "Tinh bột có nhiều trong gạo, ngô, khoai, sắn. Hồ tinh bột tác dụng với iot cho màu xanh tím, đây là phản ứng nhận biết đặc trưng.\nTinh bột bị thuỷ phân dưới tác dụng của axit hoặc enzim để tạo glucozơ."
+        },
+        {
+          "id": "b4-l3-c3",
+          "heading": "Xenlulozơ",
+          "body": "Xenlulozơ là thành phần chính của sợi bông, gỗ, tre nứa và nhiều loại sợi thực vật. Cấu trúc của xenlulozơ bền hơn tinh bột nên không cho màu xanh tím với iot.\nXenlulozơ được dùng để sản xuất giấy, vải sợi và cũng có thể thuỷ phân tạo glucozơ."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b4-l3-q1",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng về tinh bột và xenlulozơ.",
+          "options": [
+            "Cả hai đều là polisaccarit.",
+            "Cả hai đều có công thức dạng chung (C6H10O5)n.",
+            "Cả hai đều trực tiếp tham gia phản ứng tráng gương.",
+            "Cả hai đều có nguồn gốc từ thực vật."
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Tinh bột và xenlulozơ đều là polisaccarit của thực vật. B2. Công thức dạng chung của cả hai là (C6H10O5)n. B3. Chúng không trực tiếp tráng gương, phải thuỷ phân thành glucozơ trước."
+        },
+        {
+          "id": "b4-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Thuốc thử dùng để nhận biết hồ tinh bột là",
+          "options": [
+            "Dung dịch HCl",
+            "Dung dịch I2",
+            "Dung dịch NaOH",
+            "Dung dịch AgNO3"
+          ],
+          "answer": 1,
+          "explanation": "B1. Hồ tinh bột tác dụng với iot cho màu xanh tím đặc trưng. B2. Vì vậy dùng dung dịch I2 để nhận biết tinh bột."
+        },
+        {
+          "id": "b4-l3-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Thành phần chính của sợi bông, gỗ và nhiều sợi thực vật là ___.",
+          "answer": "xenlulozơ",
+          "acceptedAnswers": ["xenlulozo", "cellulose"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Xenlulozơ là polisaccarit cấu tạo nên thành tế bào thực vật. B2. Vì thế bông, gỗ và nhiều sợi thực vật chứa chủ yếu xenlulozơ."
+        },
+        {
+          "id": "b4-l3-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng thuỷ phân một mắt xích polisaccarit: C6H10O5 + H2O -> C6H12O6.",
+          "left": ["C6H10O5", "H2O"],
+          "right": ["C6H12O6"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. C6H10O5 cộng H2O cho C6H12O6 nên số nguyên tử C, H, O đã bằng nhau ở hai vế. B2. Vì vậy hệ số tối giản là 1 : 1 : 1."
+        },
+        {
+          "id": "b4-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Điểm khác biệt dễ nhận thấy giữa tinh bột và xenlulozơ là",
+          "options": [
+            "Tinh bột cho màu xanh tím với I2, xenlulozơ thì không.",
+            "Xenlulozơ tan rất tốt trong nước, tinh bột thì không.",
+            "Tinh bột không chứa oxi còn xenlulozơ có oxi.",
+            "Xenlulozơ trực tiếp tráng gương còn tinh bột thì không."
+          ],
+          "answer": 0,
+          "explanation": "B1. Phản ứng màu với iot là dấu hiệu nhận biết đặc trưng của hồ tinh bột. B2. Xenlulozơ không cho màu xanh tím với iot."
+        },
+        {
+          "id": "b4-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 162 g tinh bột tính theo một mắt xích C6H10O5 thu được khối lượng glucozơ là",
+          "options": ["90 g", "162 g", "180 g", "324 g"],
+          "answer": 2,
+          "explanation": "B1. 162 g C6H10O5 tương ứng 1 mol mắt xích. B2. Theo phương trình C6H10O5 + H2O -> C6H12O6, 1 mol mắt xích tạo 1 mol glucozơ. B3. Khối lượng glucozơ là 1 x 180 = 180 g."
+        },
+        {
+          "id": "b4-l3-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 32,4 g tinh bột tính theo mắt xích C6H10O5 thu được ___ g glucozơ.",
+          "answer": "36",
+          "placeholder": "Nhập khối lượng glucozơ",
+          "explanation": "B1. n C6H10O5 = 32,4/162 = 0,20 mol. B2. Theo phương trình, tạo 0,20 mol glucozơ. B3. m glucozơ = 0,20 x 180 = 36 g."
+        },
+        {
+          "id": "b4-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng.",
+          "options": [
+            "Gạo, ngô, khoai chứa nhiều tinh bột.",
+            "Xenlulozơ được dùng để sản xuất giấy và vải sợi.",
+            "Tinh bột là thành phần chính của bông và gỗ.",
+            "Xenlulozơ có cấu trúc bền hơn tinh bột."
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Tinh bột có nhiều trong các hạt và củ như gạo, ngô, khoai. B2. Xenlulozơ là nguyên liệu làm giấy, vải sợi. B3. Thành phần chính của bông, gỗ là xenlulozơ chứ không phải tinh bột. B4. Xenlulozơ có cấu trúc bền hơn tinh bột."
+        },
+        {
+          "id": "b4-l3-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 81 g xenlulozơ tính theo mắt xích C6H10O5 thu được khối lượng glucozơ là",
+          "options": ["45 g", "90 g", "135 g", "180 g"],
+          "answer": 1,
+          "explanation": "B1. n C6H10O5 = 81/162 = 0,50 mol. B2. Theo phương trình, tạo 0,50 mol glucozơ. B3. m glucozơ = 0,50 x 180 = 90 g."
+        },
+        {
+          "id": "b4-l3-q10",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Một mẫu bột màu trắng được đun với nước tạo hồ, nhỏ I2 vào thấy xuất hiện màu xanh tím. Mẫu đó là ___.",
+          "answer": "tinh bột",
+          "acceptedAnswers": ["tinh bot", "starch"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Hồ tinh bột tác dụng với iot cho màu xanh tím. B2. Vì vậy mẫu được nhận biết là tinh bột."
+        },
+        {
+          "id": "b4-l3-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Thuỷ phân hoàn toàn 16,2 g tinh bột tính theo mắt xích C6H10O5 rồi lên men hết lượng glucozơ tạo ra. Khối lượng etanol thu được là ___ g.",
+          "answer": "9,2",
+          "acceptedAnswers": ["9.2"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng etanol",
+          "explanation": "B1. n C6H10O5 = 16,2/162 = 0,10 mol. B2. Thuỷ phân tạo 0,10 mol glucozơ. B3. Lên men 0,10 mol glucozơ tạo 0,20 mol etanol. B4. m etanol = 0,20 x 46 = 9,2 g."
+        },
+        {
+          "id": "b4-l3-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Thuỷ phân hoàn toàn 32,4 g xenlulozơ tính theo mắt xích C6H10O5, rồi cho toàn bộ glucozơ tạo thành tham gia phản ứng tráng gương viết gọn C6H12O6 + Ag2O -> C6H12O7 + 2Ag. Khối lượng Ag thu được là",
+          "options": ["21,6 g", "32,4 g", "43,2 g", "64,8 g"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. n C6H10O5 = 32,4/162 = 0,20 mol nên tạo 0,20 mol glucozơ. B2. Theo phản ứng tráng gương viết gọn, 1 mol glucozơ tạo 2 mol Ag. B3. Vậy n Ag = 0,20 x 2 = 0,40 mol. B4. m Ag = 0,40 x 108 = 43,2 g."
+        },
+        {
+          "id": "b4-l3-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Chọn các kết luận đúng khi so sánh tinh bột và xenlulozơ.",
+          "options": [
+            "Cả hai đều có thể thuỷ phân tạo glucozơ.",
+            "Hồ tinh bột cho màu xanh tím với I2, xenlulozơ thì không.",
+            "Xenlulozơ tan tốt trong nước như đường.",
+            "Hai chất có cùng công thức dạng chung nhưng tính chất khác nhau do cấu trúc khác nhau."
+          ],
+          "answers": [0, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cả tinh bột và xenlulozơ đều cho glucozơ khi thuỷ phân hoàn toàn. B2. Phản ứng màu xanh tím với I2 chỉ đặc trưng cho hồ tinh bột. B3. Xenlulozơ không tan tốt trong nước. B4. Dù có cùng công thức dạng chung, cấu trúc của chúng khác nhau nên tính chất khác nhau."
+        }
+      ]
     },
     {
       "id": "b4-l4",
       "title": "Protein",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Nắm thành phần nguyên tố, đơn vị cấu tạo, tính chất đông tụ, thuỷ phân và vai trò sinh học của protein.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b4-l4-c1",
+          "heading": "Thành phần và cấu tạo",
+          "body": "Protein là hợp chất hữu cơ phức tạp, thường chứa các nguyên tố C, H, O, N; nhiều protein còn chứa thêm S hoặc P.\nĐơn vị cấu tạo cơ bản của protein là các axit amin liên kết với nhau thành chuỗi dài."
+        },
+        {
+          "id": "b4-l4-c2",
+          "heading": "Tính chất hoá học cơ bản",
+          "body": "Protein bị đông tụ hoặc biến tính khi đun nóng, gặp axit mạnh hoặc cồn. Đây là hiện tượng thường gặp khi luộc trứng hoặc khi sữa gặp axit.\nProtein còn bị thuỷ phân tạo thành các axit amin. Trong bài học này chỉ cần biết phản ứng màu biure là một phản ứng nhận biết protein."
+        },
+        {
+          "id": "b4-l4-c3",
+          "heading": "Vai trò và nguồn thực phẩm",
+          "body": "Protein là chất dinh dưỡng rất quan trọng, tham gia xây dựng tế bào, mô, enzim và nhiều chất sinh học khác.\nNguồn protein quen thuộc trong thực phẩm là thịt, cá, trứng, sữa, tôm, cua, đậu nành."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b4-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nguyên tố đặc trưng luôn có mặt trong protein là",
+          "options": ["Na", "N", "Cl", "Ag"],
+          "answer": 1,
+          "explanation": "B1. Protein luôn chứa C, H, O, N. B2. Vì vậy nguyên tố đặc trưng cần chọn là N."
+        },
+        {
+          "id": "b4-l4-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Đơn vị cấu tạo cơ bản của protein là các ___.",
+          "answer": "axit amin",
+          "acceptedAnswers": ["amino axit", "amino acid", "aminoaxit"],
+          "placeholder": "Nhập tên đơn vị cấu tạo",
+          "explanation": "B1. Protein được tạo nên từ các mắt xích nhỏ là axit amin. B2. Vì vậy đáp án là axit amin."
+        },
+        {
+          "id": "b4-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phát biểu đúng về protein.",
+          "options": [
+            "Protein thường chứa C, H, O, N.",
+            "Nhiều protein còn có thể chứa S hoặc P.",
+            "Protein bị thuỷ phân tạo ra axit amin.",
+            "Protein không liên quan đến dinh dưỡng."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Protein là hợp chất hữu cơ chứa chủ yếu C, H, O, N. B2. Một số protein còn chứa S hoặc P. B3. Protein bị thuỷ phân tạo ra axit amin. B4. Protein có vai trò dinh dưỡng rất quan trọng nên mệnh đề cuối sai."
+        },
+        {
+          "id": "b4-l4-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi đun nóng lòng trắng trứng, hiện tượng chính xảy ra là",
+          "options": [
+            "Protein bị đông tụ",
+            "Protein biến thành glucozơ",
+            "Protein tan hoàn toàn hơn",
+            "Không có thay đổi nào"
+          ],
+          "answer": 0,
+          "explanation": "B1. Lòng trắng trứng chứa nhiều protein. B2. Khi đun nóng, protein bị đông tụ nên trứng chín và rắn lại."
+        },
+        {
+          "id": "b4-l4-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khi đun nóng, protein thường bị ___.",
+          "answer": "đông tụ",
+          "acceptedAnswers": ["bien tinh", "biến tính", "dong tu"],
+          "placeholder": "Nhập hiện tượng",
+          "explanation": "B1. Nhiệt độ cao làm cấu trúc protein thay đổi. B2. Hiện tượng quen thuộc được mô tả ở THCS là protein bị đông tụ."
+        },
+        {
+          "id": "b4-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Thực phẩm nào sau đây giàu protein nhất?",
+          "options": ["Đường kính", "Dầu ăn", "Thịt nạc", "Muối ăn"],
+          "answer": 2,
+          "explanation": "B1. Thịt nạc là nguồn thực phẩm giàu protein. B2. Đường kính chủ yếu là saccarozơ, dầu ăn là chất béo, muối ăn là NaCl."
+        },
+        {
+          "id": "b4-l4-q7",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Những hiện tượng nào dưới đây liên quan đến sự đông tụ hoặc biến tính của protein?",
+          "options": [
+            "Luộc trứng thấy lòng trắng đặc lại",
+            "Nhỏ chanh vào sữa thấy vón cục",
+            "Ngâm thực phẩm giàu protein trong cồn làm protein biến tính",
+            "Hoà tan muối ăn vào nước"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Nhiệt, axit và cồn đều có thể làm protein biến tính hoặc đông tụ. B2. Hoà tan muối ăn vào nước chỉ là quá trình hoà tan thông thường, không liên quan đến protein."
+        },
+        {
+          "id": "b4-l4-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Sản phẩm cuối cùng khi thuỷ phân hoàn toàn protein là các ___.",
+          "answer": "axit amin",
+          "acceptedAnswers": ["amino acid", "amino axit", "aminoaxit"],
+          "placeholder": "Nhập tên sản phẩm",
+          "explanation": "B1. Protein là chuỗi dài gồm nhiều axit amin. B2. Khi thuỷ phân hoàn toàn, chuỗi bị cắt thành các axit amin."
+        },
+        {
+          "id": "b4-l4-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Mẫu thực phẩm nào sau đây thường được dùng làm nguồn bổ sung protein thực vật?",
+          "options": ["Đậu nành", "Đường mía", "Dầu hỏa", "Muối biển"],
+          "answer": 0,
+          "explanation": "B1. Đậu nành giàu protein thực vật. B2. Các chất còn lại không phải nguồn bổ sung protein."
+        },
+        {
+          "id": "b4-l4-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các vai trò đúng của protein trong cơ thể.",
+          "options": [
+            "Tham gia xây dựng tế bào và mô",
+            "Là thành phần của nhiều enzim, hoocmon",
+            "Có thể cung cấp năng lượng khi cần",
+            "Là thành phần chính của nhựa PE"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Protein tham gia cấu tạo tế bào và mô. B2. Nhiều enzim, hoocmon có bản chất là protein. B3. Khi cần, protein vẫn có thể cung cấp năng lượng. B4. PE là polime tổng hợp, không phải protein."
+        },
+        {
+          "id": "b4-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Chất X chứa C, H, O, N; bị đông tụ khi đun nóng và thuỷ phân cho axit amin. X là",
+          "options": ["Protein", "Tinh bột", "Polietilen", "Saccarozơ"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Dấu hiệu chứa N, bị đông tụ bởi nhiệt và thuỷ phân cho axit amin là đặc trưng của protein. B2. Vì vậy X là protein."
+        },
+        {
+          "id": "b4-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Trong phản ứng màu biure thường nhắc ở mức giới thiệu, protein cho màu ___.",
+          "answer": "tím",
+          "acceptedAnswers": ["màu tím", "tim"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập màu sắc",
+          "explanation": "B1. Phản ứng màu biure là phản ứng nhận biết protein ở mức giới thiệu. B2. Dấu hiệu thường nhắc đến là xuất hiện màu tím."
+        },
+        {
+          "id": "b4-l4-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Chọn các phát biểu đúng về protein.",
+          "options": [
+            "Mọi protein đều chứa nguyên tố nitơ.",
+            "Protein luôn bị phân huỷ hoàn toàn thành CO2 và H2O ngay ở điều kiện thường.",
+            "Nhiệt, axit và cồn đều có thể làm protein biến tính hoặc đông tụ.",
+            "Tơ tằm là một dạng protein thiên nhiên."
+          ],
+          "answers": [0, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Nitơ là nguyên tố luôn có mặt trong protein. B2. Ở điều kiện thường protein không tự phân huỷ hoàn toàn thành CO2 và H2O. B3. Nhiệt, axit và cồn đều có thể làm protein biến tính hoặc đông tụ. B4. Tơ tằm có bản chất là protein thiên nhiên nên mệnh đề 4 đúng."
+        }
+      ]
     },
     {
       "id": "b4-l5",
       "title": "Polime – chất dẻo, tơ, cao su",
       "order": 5,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Hiểu khái niệm polime, các ví dụ quen thuộc về chất dẻo, tơ, cao su và phân biệt vật liệu thiên nhiên, tổng hợp.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b4-l5-c1",
+          "heading": "Khái niệm polime",
+          "body": "Polime là những phân tử khổng lồ do nhiều mắt xích nhỏ liên kết lặp đi lặp lại tạo nên.\nCó polime thiên nhiên như tinh bột, xenlulozơ, protein, cao su thiên nhiên và polime tổng hợp như PE, PVC, nilon."
+        },
+        {
+          "id": "b4-l5-c2",
+          "heading": "Chất dẻo thông dụng",
+          "body": "PE được điều chế từ etilen bằng phản ứng trùng hợp và dùng làm túi, chai lọ, màng bọc.\nPVC được điều chế từ vinyl clorua CH2=CHCl, dùng làm ống dẫn, vỏ bọc dây điện và nhiều đồ gia dụng."
+        },
+        {
+          "id": "b4-l5-c3",
+          "heading": "Tơ và cao su",
+          "body": "Tơ tằm là tơ thiên nhiên, còn nilon là tơ tổng hợp thường được điều chế từ caprolactam.\nCao su thiên nhiên liên quan đến monome isopren C5H8. Khi lưu hoá, cao su trở nên bền, đàn hồi và chịu mài mòn tốt hơn."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b4-l5-q1",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Polime là phân tử khổng lồ gồm nhiều ___ lặp đi lặp lại.",
+          "answer": "mắt xích",
+          "acceptedAnswers": ["mat xich"],
+          "placeholder": "Nhập cụm từ thích hợp",
+          "explanation": "B1. Cấu tạo cơ bản của polime là nhiều đơn vị lặp lại. B2. Các đơn vị đó được gọi là mắt xích."
+        },
+        {
+          "id": "b4-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Polietilen (PE) được điều chế từ monome nào?",
+          "options": ["Metan", "Etilen", "Axetilen", "Benzen"],
+          "answer": 1,
+          "explanation": "B1. PE được tạo thành do trùng hợp etilen. B2. Vì vậy monome của PE là etilen."
+        },
+        {
+          "id": "b4-l5-q3",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Monome dùng để điều chế PVC là",
+          "options": ["CH2=CH2", "CH2=CHCl", "C6H6", "C2H5OH"],
+          "answer": 1,
+          "explanation": "B1. PVC là polivinyl clorua. B2. Monome tạo PVC là vinyl clorua có công thức CH2=CHCl."
+        },
+        {
+          "id": "b4-l5-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng.",
+          "options": [
+            "Tơ tằm là tơ thiên nhiên.",
+            "Nilon là tơ tổng hợp.",
+            "PE là một chất dẻo.",
+            "Cao su lưu hoá kém bền hơn cao su thiên nhiên."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Tơ tằm là tơ thiên nhiên. B2. Nilon là tơ tổng hợp. B3. PE là chất dẻo rất thông dụng. B4. Cao su lưu hoá bền hơn cao su thiên nhiên nên mệnh đề cuối sai."
+        },
+        {
+          "id": "b4-l5-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Monome của cao su thiên nhiên thường được nhắc đến là ___.",
+          "answer": "isopren",
+          "acceptedAnswers": ["c5h8", "isoprn"],
+          "placeholder": "Nhập tên hoặc công thức",
+          "explanation": "B1. Cao su thiên nhiên liên quan đến monome isopren. B2. Công thức phân tử của isopren là C5H8."
+        },
+        {
+          "id": "b4-l5-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Vật liệu nào sau đây thường được làm từ PE?",
+          "options": ["Túi đựng hàng mỏng", "Gạch xây", "Thạch cao", "Muối ăn"],
+          "answer": 0,
+          "explanation": "B1. PE là chất dẻo dùng rộng rãi để làm túi, màng bọc, chai lọ. B2. Vì vậy túi đựng hàng mỏng thường làm từ PE."
+        },
+        {
+          "id": "b4-l5-q7",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng về vật liệu polime.",
+          "options": [
+            "PVC được dùng làm ống dẫn và vỏ bọc dây điện.",
+            "Cao su lưu hoá bền hơn cao su thiên nhiên.",
+            "Nilon trong phạm vi bài học được xem là tơ tổng hợp từ caprolactam.",
+            "Mọi polime đều tan tốt trong nước."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. PVC là chất dẻo thông dụng trong ống dẫn và vỏ bọc điện. B2. Quá trình lưu hoá giúp cao su bền và đàn hồi hơn. B3. Nilon là tơ tổng hợp, trong bài học gắn với nguyên liệu caprolactam. B4. Không phải mọi polime đều tan tốt trong nước."
+        },
+        {
+          "id": "b4-l5-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Loại tơ thiên nhiên quen thuộc lấy từ kén tằm là ___.",
+          "answer": "tơ tằm",
+          "acceptedAnswers": ["to tam"],
+          "placeholder": "Nhập tên tơ",
+          "explanation": "B1. Tơ tằm là loại tơ thiên nhiên quen thuộc nhất trong chương trình THCS. B2. Nó được lấy từ kén tằm."
+        },
+        {
+          "id": "b4-l5-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cặp vật liệu nào gồm một tơ thiên nhiên và một tơ tổng hợp?",
+          "options": [
+            "Tơ tằm và nilon",
+            "PE và PVC",
+            "Cao su thiên nhiên và cao su lưu hoá",
+            "Tinh bột và xenlulozơ"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tơ tằm là tơ thiên nhiên. B2. Nilon là tơ tổng hợp. B3. Vì vậy đây là cặp gồm một tơ thiên nhiên và một tơ tổng hợp."
+        },
+        {
+          "id": "b4-l5-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các chất thuộc loại polime.",
+          "options": ["PE", "PVC", "Tinh bột", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. PE và PVC là polime tổng hợp. B2. Tinh bột là polime thiên nhiên. B3. NaCl là muối vô cơ, không phải polime."
+        },
+        {
+          "id": "b4-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Vật liệu thích hợp hơn để làm lốp xe nhờ độ bền và đàn hồi tốt là",
+          "options": ["Cao su lưu hoá", "Đường mía", "Tơ tằm", "Tinh bột"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Quá trình lưu hoá làm cao su bền hơn, chịu mài mòn và đàn hồi tốt hơn. B2. Vì vậy cao su lưu hoá thích hợp hơn để làm lốp xe."
+        },
+        {
+          "id": "b4-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Loại tơ tổng hợp thường gắn với caprolactam trong chương trình THCS là ___.",
+          "answer": "nilon",
+          "acceptedAnswers": ["nilon-6", "nylon"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập tên tơ",
+          "explanation": "B1. Trong phạm vi bài học, nilon là tơ tổng hợp được nêu gắn với nguyên liệu caprolactam. B2. Vì vậy đáp án là nilon."
+        },
+        {
+          "id": "b4-l5-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Chọn các kết luận đúng về polime, chất dẻo, tơ và cao su.",
+          "options": [
+            "PE được điều chế từ etilen bằng phản ứng trùng hợp.",
+            "PVC có mắt xích chứa nguyên tố clo.",
+            "Tơ tằm và nilon đều là tơ tổng hợp.",
+            "Cao su thiên nhiên liên quan đến monome isopren C5H8."
+          ],
+          "answers": [0, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. PE là sản phẩm trùng hợp etilen. B2. PVC được tạo từ vinyl clorua nên mắt xích có chứa clo. B3. Tơ tằm là tơ thiên nhiên, chỉ nilon là tơ tổng hợp. B4. Cao su thiên nhiên liên quan đến monome isopren C5H8."
+        }
+      ]
     },
     {
       "id": "b4-l6",
-      "title": "Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men",
+      "title": "Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men – hiệu suất nhiều giai đoạn",
       "order": 6,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Luyện chuỗi tinh bột -> glucozơ -> rượu etylic -> axit axetic và các bài toán hiệu suất nhiều giai đoạn, độ rượu.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b4-l6-c1",
+          "heading": "Chuỗi chuyển hoá gluxit quen thuộc",
+          "body": "Một chuỗi chuyển hoá quan trọng là: tinh bột -> glucozơ -> rượu etylic -> axit axetic.\nCác phản ứng đại diện là: (C6H10O5)n + nH2O -> nC6H12O6; C6H12O6 -> 2C2H5OH + 2CO2; C2H5OH + O2 -> CH3COOH + H2O."
+        },
+        {
+          "id": "b4-l6-c2",
+          "heading": "Cách tính hiệu suất nhiều giai đoạn",
+          "body": "Nếu quá trình có nhiều bước liên tiếp thì phải nhân lần lượt từng hiệu suất, không được cộng hiệu suất.\nVí dụ khối lượng etanol thực tế = khối lượng etanol lí thuyết x h1 x h2 khi gồm hai bước thuỷ phân và lên men."
+        },
+        {
+          "id": "b4-l6-c3",
+          "heading": "Biện luận trước và sau thuỷ phân",
+          "body": "Saccarozơ và tinh bột không trực tiếp tham gia phản ứng tráng gương. Sau khi thuỷ phân thành glucozơ hoặc hỗn hợp monosaccarit, chúng mới có khả năng tham gia phản ứng này.\nKhi làm bài, cần xét đúng trạng thái của chất là trước hay sau thuỷ phân."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b4-l6-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chuỗi chuyển hoá đúng là",
+          "options": [
+            "Tinh bột -> glucozơ -> rượu etylic -> axit axetic",
+            "Glucozơ -> tinh bột -> axit axetic -> rượu etylic",
+            "Rượu etylic -> tinh bột -> glucozơ -> axit axetic",
+            "Axit axetic -> rượu etylic -> glucozơ -> tinh bột"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tinh bột thuỷ phân cho glucozơ. B2. Glucozơ lên men tạo rượu etylic. B3. Rượu etylic có thể oxi hoá tạo axit axetic. B4. Vì vậy chuỗi đúng là tinh bột -> glucozơ -> rượu etylic -> axit axetic."
+        },
+        {
+          "id": "b4-l6-q2",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng lên men: C6H12O6 -> C2H5OH + CO2.",
+          "left": ["C6H12O6"],
+          "right": ["C2H5OH", "CO2"],
+          "answer": [1, 2, 2],
+          "explanation": "B1. Cân bằng số nguyên tử C, H, O như ở bài glucozơ sẽ được hệ số 1 : 2 : 2. B2. Đây là phản ứng lên men cơ bản dùng trong nhiều bài toán hiệu suất."
+        },
+        {
+          "id": "b4-l6-q3",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng oxi hoá rượu etylic: C2H5OH + O2 -> CH3COOH + H2O.",
+          "left": ["C2H5OH", "O2"],
+          "right": ["CH3COOH", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Giữ 1C2H5OH và 1CH3COOH để bảo toàn 2 nguyên tử C. B2. Khi đó 1H2O sẽ bảo toàn H. B3. Tổng số O ở vế phải là 3, đúng bằng 1O trong etanol cộng 2O trong O2. B4. Vậy hệ số đều bằng 1."
+        },
+        {
+          "id": "b4-l6-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng.",
+          "options": [
+            "Hiệu suất của quá trình nhiều giai đoạn được tính bằng cách nhân các hiệu suất từng bước.",
+            "Saccarozơ chưa thuỷ phân trực tiếp tráng gương được.",
+            "Tinh bột phải thuỷ phân thành glucozơ rồi mới lên men rượu.",
+            "Rượu etylic có thể bị oxi hoá để tạo axit axetic."
+          ],
+          "answers": [0, 2, 3],
+          "explanation": "B1. Trong chuỗi nhiều giai đoạn, hiệu suất toàn quá trình bằng tích các hiệu suất thành phần. B2. Saccarozơ chưa thuỷ phân không trực tiếp tráng gương. B3. Tinh bột phải chuyển thành glucozơ trước khi lên men. B4. Etanol có thể oxi hoá thành axit axetic."
+        },
+        {
+          "id": "b4-l6-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Thuỷ phân một mắt xích C6H10O5 của tinh bột hoặc xenlulozơ thu được ___.",
+          "answer": "C6H12O6",
+          "acceptedAnswers": ["glucozơ", "glucose", "glucozo"],
+          "placeholder": "Nhập công thức hoặc tên chất",
+          "explanation": "B1. Phương trình thuỷ phân một mắt xích là C6H10O5 + H2O -> C6H12O6. B2. Chất thu được là glucozơ."
+        },
+        {
+          "id": "b4-l6-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Từ 162 g tinh bột tính theo mắt xích C6H10O5, nếu hiệu suất thuỷ phân là 80% và hiệu suất lên men là 75% thì khối lượng etanol thu được là",
+          "options": ["46 g", "55,2 g", "73,6 g", "92 g"],
+          "answer": 1,
+          "explanation": "B1. 162 g C6H10O5 ứng với 1 mol mắt xích. B2. Nếu 100% thì 1 mol mắt xích tạo 1 mol glucozơ rồi lên men thành 2 mol etanol, tức 92 g etanol. B3. Có hiệu suất hai bước nên khối lượng thực tế là 92 x 0,80 x 0,75 = 55,2 g."
+        },
+        {
+          "id": "b4-l6-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Muốn thu được 9,2 g etanol từ tinh bột, biết hiệu suất thuỷ phân là 90% và hiệu suất lên men là 80%, cần dùng ___ g tinh bột tính theo mắt xích C6H10O5.",
+          "answer": "22,5",
+          "acceptedAnswers": ["22.5"],
+          "placeholder": "Nhập khối lượng tinh bột",
+          "explanation": "B1. 9,2 g etanol ứng với n etanol = 9,2/46 = 0,20 mol. B2. Gọi số mol mắt xích tinh bột là n, khi đó số mol etanol thực tế là 2n x 0,90 x 0,80 = 1,44n. B3. Suy ra 1,44n = 0,20 nên n = 0,138888... mol. B4. m tinh bột = 0,138888... x 162 = 22,5 g."
+        },
+        {
+          "id": "b4-l6-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Thuỷ phân hoàn toàn 34,2 g saccarozơ. Chọn các kết luận đúng.",
+          "options": [
+            "Thu được 0,10 mol glucozơ.",
+            "Thu được tổng cộng 0,20 mol monosaccarit có công thức C6H12O6.",
+            "Saccarozơ trước thuỷ phân đã trực tiếp tráng gương được.",
+            "Nếu cả hai monosaccarit sau thuỷ phân đều phản ứng tráng gương thì tối đa thu được 0,40 mol Ag."
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. n saccarozơ = 34,2/342 = 0,10 mol. B2. Thuỷ phân tạo 0,10 mol glucozơ và 0,10 mol fructozơ, tổng 0,20 mol monosaccarit. B3. Saccarozơ ban đầu không trực tiếp tráng gương. B4. Nếu mỗi mol monosaccarit tạo 2 mol Ag thì tổng n Ag tối đa là 0,20 x 2 = 0,40 mol."
+        },
+        {
+          "id": "b4-l6-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Lên men hoàn toàn 4,5 kg glucozơ. Khối lượng etanol thu được theo lí thuyết là",
+          "options": ["1,15 kg", "2,30 kg", "3,60 kg", "4,60 kg"],
+          "answer": 1,
+          "explanation": "B1. n glucozơ = 4500/180 = 25 mol. B2. Theo phương trình, tạo 50 mol etanol. B3. m etanol = 50 x 46 = 2300 g = 2,30 kg."
+        },
+        {
+          "id": "b4-l6-q10",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nếu chuyển hoá hoàn toàn 180 g glucozơ theo chuỗi glucozơ -> rượu etylic -> axit axetic thì khối lượng axit axetic thu được là ___ g.",
+          "answer": "120",
+          "placeholder": "Nhập khối lượng axit axetic",
+          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. 1 mol glucozơ lên men tạo 2 mol etanol. B3. 1 mol etanol oxi hoá tạo 1 mol axit axetic nên cuối cùng thu được 2 mol axit axetic. B4. m axit axetic = 2 x 60 = 120 g."
+        },
+        {
+          "id": "b4-l6-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Muốn điều chế 10 lít rượu 46 do từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 75%, cần dùng ___ kg tinh bột tính theo mắt xích C6H10O5.",
+          "answer": "10,8",
+          "acceptedAnswers": ["10.8"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng tinh bột",
+          "explanation": "B1. Rượu 46 do nghĩa là trong 10 lít dung dịch có 4,6 lít etanol nguyên chất. B2. m etanol cần có = 4600 x 0,8 = 3680 g, suy ra n etanol = 3680/46 = 80 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,75 = 1,2n. B4. Giải 1,2n = 80 được n = 66,666... mol. B5. m tinh bột = 66,666... x 162 = 10800 g = 10,8 kg."
+        },
+        {
+          "id": "b4-l6-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Muốn điều chế 4,6 lít rượu 40 do từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 80%, cần dùng khối lượng tinh bột tính theo mắt xích C6H10O5 là",
+          "options": ["2,43 kg", "3,24 kg", "4,05 kg", "5,40 kg"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Rượu 40 do nghĩa là có 1,84 lít etanol nguyên chất trong 4,6 lít dung dịch. B2. m etanol = 1840 x 0,8 = 1472 g, suy ra n etanol = 1472/46 = 32 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,80 = 1,28n. B4. Giải 1,28n = 32 được n = 25 mol. B5. m tinh bột = 25 x 162 = 4050 g = 4,05 kg."
+        },
+        {
+          "id": "b4-l6-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Cho 16,2 g tinh bột tính theo mắt xích C6H10O5. Nếu hiệu suất thuỷ phân là 50% và hiệu suất lên men là 100% thì chọn các kết luận đúng.",
+          "options": [
+            "Số mol glucozơ tạo ra sau thuỷ phân là 0,05 mol.",
+            "Khối lượng etanol tối đa thu được là 9,2 g.",
+            "Thể tích CO2 tạo ra ở đktc là 2,24 lít.",
+            "Nếu tăng hiệu suất thuỷ phân từ 50% lên 100% thì lượng etanol thu được tăng gấp đôi."
+          ],
+          "answers": [0, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. n C6H10O5 ban đầu = 16,2/162 = 0,10 mol. B2. Hiệu suất thuỷ phân 50% nên n glucozơ thực tế = 0,10 x 0,50 = 0,05 mol. B3. Lên men 0,05 mol glucozơ tạo 0,10 mol etanol và 0,10 mol CO2. B4. m etanol = 0,10 x 46 = 4,6 g nên mệnh đề 2 sai. B5. Thể tích CO2 ở đktc là 0,10 x 22,4 = 2,24 lít. B6. Nếu hiệu suất thuỷ phân tăng từ 50% lên 100% trong khi các điều kiện khác giữ nguyên thì lượng etanol tăng gấp đôi."
+        }
+      ]
     }
   ]
 }
