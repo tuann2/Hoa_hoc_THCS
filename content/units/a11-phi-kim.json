@@ -5,52 +5,837 @@
   "title": "Phi kim",
   "order": 11,
   "description": "Phi kim, clo, cacbon, silic và các bài toán muối cacbonat với axit.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a11-l1",
       "title": "Tính chất chung của phi kim",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính chất vật lí, hoá học chung của phi kim và mức độ hoạt động hoá học của phi kim.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a11-l1-c1",
+          "heading": "Tính chất vật lí của phi kim",
+          "body": "Phi kim tồn tại ở cả ba thể: rắn (C, S, P, Si...), lỏng (Br2), khí (O2, N2, Cl2, H2...).\nPhần lớn phi kim không dẫn điện, dẫn nhiệt kém, trừ than chì (một dạng thù hình của cacbon) có khả năng dẫn điện."
+        },
+        {
+          "id": "a11-l1-c2",
+          "heading": "Tính chất hoá học của phi kim",
+          "body": "Phi kim tác dụng với kim loại tạo muối hoặc oxit; tác dụng với hiđro tạo hợp chất khí; tác dụng với oxi tạo oxit axit.\nMức độ hoạt động hoá học của phi kim khác nhau: F, O, Cl hoạt động mạnh hơn Br, I, S, P, C, Si."
+        },
+        {
+          "id": "a11-l1-c3",
+          "heading": "Mức độ hoạt động của phi kim",
+          "body": "Flo, Oxi, Clo là các phi kim hoạt động mạnh; Brom, Iot, Lưu huỳnh, Photpho, Cacbon, Silic hoạt động yếu hơn.\nPhi kim mạnh hơn có thể đẩy được phi kim yếu hơn ra khỏi muối/hợp chất, ví dụ Cl2 đẩy được Br2 ra khỏi dung dịch muối bromua."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a11-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phi kim nào tồn tại ở thể lỏng ở nhiệt độ thường?",
+          "options": ["brom (Br2)", "oxi", "clo", "nitơ"],
+          "answer": 0,
+          "explanation": "B1. Đa số phi kim ở thể rắn hoặc khí. B2. Brom là phi kim duy nhất tồn tại ở thể lỏng ở nhiệt độ thường."
+        },
+        {
+          "id": "a11-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Đa số phi kim có khả năng dẫn điện như thế nào?",
+          "options": [
+            "không dẫn điện",
+            "dẫn điện tốt",
+            "dẫn điện như kim loại",
+            "dẫn điện tốt hơn kim loại"
+          ],
+          "answer": 0,
+          "explanation": "B1. Phần lớn phi kim không dẫn điện. B2. Than chì là ngoại lệ, có khả năng dẫn điện tốt."
+        },
+        {
+          "id": "a11-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phi kim tồn tại ở thể khí ở nhiệt độ thường.",
+          "options": ["O2", "Cl2", "Br2", "C"],
+          "answers": [0, 1],
+          "explanation": "B1. O2 và Cl2 đều là chất khí ở nhiệt độ thường. B2. Br2 là chất lỏng, C (cacbon) là chất rắn."
+        },
+        {
+          "id": "a11-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Dạng thù hình nào của cacbon có khả năng dẫn điện (ngoại lệ so với đa số phi kim)?",
+          "answer": "than chì",
+          "acceptedAnswers": ["graphit", "cacbon (than chì)"],
+          "placeholder": "Nhập tên dạng thù hình",
+          "explanation": "B1. Kim cương không dẫn điện, nhưng than chì có cấu trúc lớp cho phép electron di chuyển. B2. Vì vậy than chì dẫn điện được, khác với đa số phi kim."
+        },
+        {
+          "id": "a11-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phi kim tác dụng với oxi thường tạo ra loại hợp chất gì?",
+          "options": ["oxit axit", "oxit bazơ", "muối", "bazơ"],
+          "answer": 0,
+          "explanation": "B1. Oxit của phi kim thường tương ứng với một axit. B2. Ví dụ: S + O2 -> SO2 (oxit axit)."
+        },
+        {
+          "id": "a11-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 3,2 g lưu huỳnh trong khí oxi dư. Thể tích SO2 sinh ra ở đktc là",
+          "options": ["2,24 lít", "4,48 lít", "1,12 lít", "3,36 lít"],
+          "answer": 0,
+          "explanation": "B1. nS = 3,2/32 = 0,1 mol. B2. S + O2 -> SO2 nên nSO2 = 0,1 mol. B3. V = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a11-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 3,1 g photpho trong khí oxi dư tạo P2O5. Khối lượng P2O5 tạo thành là",
+          "options": ["7,1 g", "14,2 g", "3,55 g", "10 g"],
+          "answer": 0,
+          "explanation": "B1. nP = 3,1/31 = 0,1 mol. B2. 4P + 5O2 -> 2P2O5 nên nP2O5 = 0,05 mol. B3. mP2O5 = 0,05 x 142 = 7,1 g."
+        },
+        {
+          "id": "a11-l1-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho khí Cl2 dư tác dụng với 0,1 mol Fe nung nóng, tạo FeCl3. Số mol Cl2 cần dùng là bao nhiêu?",
+          "answer": "0,15",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình 2Fe + 3Cl2 -> 2FeCl3 có tỉ lệ Fe : Cl2 = 2 : 3. B2. nCl2 = 0,1 x 3/2 = 0,15 mol."
+        },
+        {
+          "id": "a11-l1-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho khí Cl2 tác dụng với dung dịch NaBr (Cl hoạt động mạnh hơn Br). Hiện tượng xảy ra là",
+          "options": [
+            "Cl2 đẩy Br2 ra khỏi muối, tạo NaCl",
+            "không xảy ra phản ứng",
+            "tạo kết tủa trắng",
+            "sinh ra khí H2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Cl là phi kim hoạt động mạnh hơn Br. B2. Vì vậy Cl2 đẩy được Br2 ra khỏi dung dịch muối bromua: Cl2 + 2NaBr -> 2NaCl + Br2."
+        },
+        {
+          "id": "a11-l1-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phi kim hoạt động hoá học mạnh.",
+          "options": ["F", "O", "Cl", "C"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. F, O, Cl đều là các phi kim hoạt động mạnh. B2. C (cacbon) hoạt động yếu hơn nhiều so với ba phi kim trên."
+        },
+        {
+          "id": "a11-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn hỗn hợp gồm 0,1 mol C và 0,1 mol S trong khí oxi dư, sau đó hấp thụ toàn bộ sản phẩm khí vào nước vôi trong dư. Tổng khối lượng kết tủa (CaCO3 và CaSO3) thu được là",
+          "options": ["22 g", "20 g", "24 g", "18 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. C + O2 -> CO2, sau đó CO2 + Ca(OH)2 -> CaCO3 + H2O, nCaCO3 = 0,1 mol, m = 10 g. B2. S + O2 -> SO2, sau đó SO2 + Ca(OH)2 -> CaSO3 + H2O, nCaSO3 = 0,1 mol, m = 12 g. B3. Tổng khối lượng kết tủa = 10 + 12 = 22 g."
+        },
+        {
+          "id": "a11-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 0,2 mol khí Cl2 tác dụng vừa đủ với kim loại M hoá trị II, tạo muối MCl2. Số mol M đã phản ứng là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình M + Cl2 -> MCl2 có tỉ lệ 1:1. B2. Vậy nM = nCl2 = 0,2 mol."
+        },
+        {
+          "id": "a11-l1-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho lượng dư khí Cl2 tác dụng với 5,6 g Fe nung nóng. Khối lượng muối FeCl3 tạo thành là",
+          "options": ["16,25 g", "11,25 g", "20,3 g", "32,5 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nFe = 5,6/56 = 0,1 mol. B2. 2Fe + 3Cl2 -> 2FeCl3 có tỉ lệ Fe : FeCl3 = 1 : 1 nên nFeCl3 = 0,1 mol. B3. mFeCl3 = 0,1 x 162,5 = 16,25 g."
+        }
+      ]
     },
     {
       "id": "a11-l2",
       "title": "Clo; điều chế và ứng dụng; nước Gia-ven, clorua vôi",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính chất, cách điều chế clo và các hợp chất tẩy màu - khử trùng: nước Gia-ven, clorua vôi.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a11-l2-c1",
+          "heading": "Tính chất của clo",
+          "body": "Cl2 là khí màu vàng lục, mùi hắc, độc, tan trong nước.\nTác dụng với kim loại tạo muối clorua, với hiđro tạo khí HCl, với nước tạo nước clo (hỗn hợp HCl và HClO):\nCl2 + H2O <-> HCl + HClO"
+        },
+        {
+          "id": "a11-l2-c2",
+          "heading": "Điều chế clo",
+          "body": "Trong phòng thí nghiệm: MnO2 + 4HCl đặc (nhiệt độ) -> MnCl2 + Cl2 + 2H2O.\nTrong công nghiệp: điện phân dung dịch NaCl bão hoà có màng ngăn."
+        },
+        {
+          "id": "a11-l2-c3",
+          "heading": "Nước Gia-ven và clorua vôi",
+          "body": "Cl2 tác dụng với dung dịch NaOH tạo nước Gia-ven (hỗn hợp NaCl và NaClO):\nCl2 + 2NaOH -> NaCl + NaClO + H2O\nCl2 tác dụng với vôi tôi tạo clorua vôi: Cl2 + Ca(OH)2 -> CaOCl2 + H2O.\nCả hai đều có tính tẩy màu, khử trùng do chứa gốc hipoclorit có tính oxi hoá mạnh."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a11-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khí clo có màu gì?",
+          "options": ["vàng lục", "không màu", "nâu đỏ", "xanh lam"],
+          "answer": 0,
+          "explanation": "B1. Đây là đặc điểm nhận biết của khí Cl2. B2. Clo có màu vàng lục, mùi hắc, độc."
+        },
+        {
+          "id": "a11-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong phòng thí nghiệm, khí clo thường được điều chế từ MnO2 và chất nào?",
+          "options": [
+            "dung dịch HCl đặc",
+            "dung dịch NaOH",
+            "nước",
+            "dung dịch H2SO4"
+          ],
+          "answer": 0,
+          "explanation": "B1. MnO2 là chất oxi hoá, HCl đặc là chất khử. B2. Phương trình: MnO2 + 4HCl đặc -> MnCl2 + Cl2 + 2H2O."
+        },
+        {
+          "id": "a11-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các ứng dụng của khí clo.",
+          "options": [
+            "khử trùng nước sinh hoạt",
+            "sản xuất nước Gia-ven",
+            "sản xuất clorua vôi",
+            "làm phân bón trực tiếp"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Clo được dùng để khử trùng nước, sản xuất nước Gia-ven và clorua vôi. B2. Clo không phải nguyên liệu trực tiếp sản xuất phân bón."
+        },
+        {
+          "id": "a11-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nước Gia-ven là hỗn hợp của NaCl và chất gì?",
+          "answer": "NaClO",
+          "acceptedAnswers": ["natri hipoclorit"],
+          "placeholder": "Nhập công thức hoặc tên",
+          "explanation": "B1. Cl2 + 2NaOH -> NaCl + NaClO + H2O. B2. Nước Gia-ven là hỗn hợp NaCl và NaClO (natri hipoclorit)."
+        },
+        {
+          "id": "a11-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong công nghiệp, clo được điều chế bằng cách nào?",
+          "options": [
+            "điện phân dung dịch NaCl bão hoà có màng ngăn",
+            "nhiệt phân NaCl",
+            "cho Na tác dụng với HCl",
+            "chưng cất nước biển"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đây là phương pháp sản xuất clo trong công nghiệp, đồng thời thu được NaOH và H2. B2. Phương trình: 2NaCl + 2H2O -> 2NaOH + H2 + Cl2."
+        },
+        {
+          "id": "a11-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,2 mol MnO2 tác dụng với dung dịch HCl đặc dư. Số mol Cl2 thu được là",
+          "options": ["0,2 mol", "0,4 mol", "0,1 mol", "0,8 mol"],
+          "answer": 0,
+          "explanation": "B1. Phương trình MnO2 + 4HCl -> MnCl2 + Cl2 + 2H2O có tỉ lệ MnO2 : Cl2 = 1 : 1. B2. nCl2 = 0,2 mol."
+        },
+        {
+          "id": "a11-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,1 mol Cl2 tác dụng với dung dịch NaOH dư tạo nước Gia-ven. Số mol NaClO tạo thành là",
+          "options": ["0,1 mol", "0,2 mol", "0,05 mol", "0,15 mol"],
+          "answer": 0,
+          "explanation": "B1. Phương trình Cl2 + 2NaOH -> NaCl + NaClO + H2O có tỉ lệ Cl2 : NaClO = 1 : 1. B2. nNaClO = 0,1 mol."
+        },
+        {
+          "id": "a11-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 7,1 g Cl2 (M = 71) tác dụng với Ca(OH)2 dư tạo clorua vôi CaOCl2. Số mol CaOCl2 tạo thành là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nCl2 = 7,1/71 = 0,1 mol. B2. Phương trình Cl2 + Ca(OH)2 -> CaOCl2 + H2O có tỉ lệ 1:1 nên nCaOCl2 = 0,1 mol."
+        },
+        {
+          "id": "a11-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy khí H2 trong khí Cl2 tạo ra khí gì?",
+          "options": ["HCl", "H2O", "Cl2O", "không phản ứng"],
+          "answer": 0,
+          "explanation": "B1. H2 và Cl2 phản ứng trực tiếp khi đốt cháy hoặc chiếu sáng. B2. Phương trình: H2 + Cl2 -> 2HCl."
+        },
+        {
+          "id": "a11-l2-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phản ứng đúng của clo.",
+          "options": [
+            "Cl2 + 2NaOH -> NaCl + NaClO + H2O",
+            "Cl2 + Ca(OH)2 -> CaOCl2 + H2O",
+            "Cl2 + H2 -> 2HCl",
+            "Cl2 + O2 -> Cl2O2"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phản ứng đầu đều đúng và cân bằng. B2. Cl2 không phản ứng trực tiếp với O2 ở điều kiện thường."
+        },
+        {
+          "id": "a11-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 17,4 g MnO2 tác dụng với dung dịch HCl đặc dư, đun nóng. Thể tích khí Cl2 thu được ở đktc là",
+          "options": ["4,48 lít", "2,24 lít", "8,96 lít", "6,72 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nMnO2 = 17,4/87 = 0,2 mol. B2. MnO2 + 4HCl -> MnCl2 + Cl2 + 2H2O có tỉ lệ 1:1 nên nCl2 = 0,2 mol. B3. V = 0,2 x 22,4 = 4,48 lít."
+        },
+        {
+          "id": "a11-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 0,3 mol khí Cl2 tác dụng vừa đủ với dung dịch NaOH tạo nước Gia-ven. Khối lượng NaCl tạo thành là bao nhiêu gam?",
+          "answer": "17,55",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình Cl2 + 2NaOH -> NaCl + NaClO + H2O có tỉ lệ Cl2 : NaCl = 1 : 1. B2. nNaCl = 0,3 mol. B3. mNaCl = 0,3 x 58,5 = 17,55 g."
+        },
+        {
+          "id": "a11-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn 0,2 mol khí Cl2 vào dung dịch chứa 0,5 mol NaOH. Sau phản ứng, số mol NaOH còn dư là",
+          "options": ["0,1 mol", "0,2 mol", "0,3 mol", "0 mol"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình Cl2 + 2NaOH -> NaCl + NaClO + H2O cần 0,4 mol NaOH cho 0,2 mol Cl2. B2. NaOH dư = 0,5 - 0,4 = 0,1 mol."
+        }
+      ]
     },
     {
       "id": "a11-l3",
       "title": "Cacbon và các oxit của cacbon; muối cacbonat",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Các dạng thù hình của cacbon, tính chất của CO - CO2 và muối cacbonat.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a11-l3-c1",
+          "heading": "Tính chất của cacbon",
+          "body": "Cacbon có 3 dạng thù hình: kim cương (cứng), than chì (dẫn điện, mềm), cacbon vô định hình (than gỗ, than đá...).\nTính chất hoá học: tác dụng với oxi (cháy), khử được oxit kim loại ở nhiệt độ cao (tính khử):\nC + O2 -> CO2; C + 2CuO (nhiệt độ) -> 2Cu + CO2"
+        },
+        {
+          "id": "a11-l3-c2",
+          "heading": "Các oxit của cacbon",
+          "body": "CO là oxit trung tính (không tạo muối), độc, có tính khử mạnh, khử được oxit kim loại: CO + CuO (nhiệt độ) -> Cu + CO2.\nCO2 là oxit axit, không duy trì sự cháy, dùng để dập tắt đám cháy, làm nước đá khô, nước có ga."
+        },
+        {
+          "id": "a11-l3-c3",
+          "heading": "Muối cacbonat",
+          "body": "Muối cacbonat (CO3^2-) và muối hiđrocacbonat (HCO3-) tác dụng với axit đều sinh khí CO2.\nMuối cacbonat của kim loại kiềm tan trong nước; đa số muối cacbonat kim loại khác không tan.\nCaCO3 là thành phần chính của đá vôi, đá phấn, đá hoa."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a11-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Kim cương và than chì là hai dạng thù hình của nguyên tố nào?",
+          "options": ["cacbon", "silic", "lưu huỳnh", "photpho"],
+          "answer": 0,
+          "explanation": "B1. Kim cương và than chì có cùng thành phần nguyên tố nhưng cấu trúc tinh thể khác nhau. B2. Cả hai đều là dạng thù hình của cacbon."
+        },
+        {
+          "id": "a11-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "CO là loại oxit gì?",
+          "options": [
+            "oxit trung tính",
+            "oxit axit",
+            "oxit bazơ",
+            "oxit lưỡng tính"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO không tác dụng với axit, bazơ hay nước để tạo muối ở điều kiện thường. B2. Vì vậy CO là oxit trung tính (oxit không tạo muối)."
+        },
+        {
+          "id": "a11-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các tính chất của CO2.",
+          "options": [
+            "là oxit axit",
+            "không duy trì sự cháy",
+            "có tính khử mạnh",
+            "dùng làm nước đá khô"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. CO2 là oxit axit, không duy trì sự cháy nên dùng để dập lửa, và được dùng làm nước đá khô. B2. Tính khử mạnh là tính chất của CO, không phải CO2."
+        },
+        {
+          "id": "a11-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Muối nào là thành phần chính của đá vôi?",
+          "answer": "CaCO3",
+          "acceptedAnswers": ["canxi cacbonat"],
+          "placeholder": "Nhập công thức hoặc tên muối",
+          "explanation": "B1. Đá vôi, đá phấn, đá hoa đều có thành phần chính giống nhau. B2. Đó là CaCO3 (canxi cacbonat)."
+        },
+        {
+          "id": "a11-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "CO có tính chất hoá học đặc trưng nào?",
+          "options": [
+            "tính khử mạnh",
+            "tính oxi hoá mạnh",
+            "tính axit",
+            "tính bazơ"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO có thể lấy oxi của nhiều oxit kim loại để tạo CO2. B2. Đây là tính khử đặc trưng của CO."
+        },
+        {
+          "id": "a11-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn khí CO dư qua 8 g CuO nung nóng. Khối lượng Cu thu được là",
+          "options": ["6,4 g", "8 g", "4 g", "12,8 g"],
+          "answer": 0,
+          "explanation": "B1. nCuO = 8/80 = 0,1 mol. B2. CO + CuO -> Cu + CO2 nên nCu = 0,1 mol. B3. mCu = 0,1 x 64 = 6,4 g."
+        },
+        {
+          "id": "a11-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 25 g CaCO3 tác dụng với dung dịch HCl dư. Thể tích khí CO2 sinh ra ở đktc là",
+          "options": ["5,6 lít", "2,8 lít", "11,2 lít", "8,4 lít"],
+          "answer": 0,
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol. B2. CaCO3 + 2HCl -> CaCl2 + H2O + CO2 nên nCO2 = 0,25 mol. B3. V = 0,25 x 22,4 = 5,6 lít."
+        },
+        {
+          "id": "a11-l3-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nung 84 g NaHCO3 (M = 84) đến khối lượng không đổi. Số mol Na2CO3 tạo thành là bao nhiêu?",
+          "answer": "0,5",
+          "acceptedAnswers": ["0.5"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nNaHCO3 = 84/84 = 1 mol. B2. 2NaHCO3 -> Na2CO3 + CO2 + H2O nên nNa2CO3 = 0,5 mol."
+        },
+        {
+          "id": "a11-l3-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn khí CO2 dư vào dung dịch nước vôi trong. Muối tạo thành cuối cùng là",
+          "options": ["Ca(HCO3)2", "CaCO3", "Ca(OH)2", "không tạo muối"],
+          "answer": 0,
+          "explanation": "B1. Khi CO2 dư, kết tủa CaCO3 ban đầu bị hoà tan tiếp: CaCO3 + CO2 + H2O -> Ca(HCO3)2. B2. Muối cuối cùng là Ca(HCO3)2 tan trong nước."
+        },
+        {
+          "id": "a11-l3-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các dạng thù hình của cacbon.",
+          "options": [
+            "kim cương",
+            "than chì",
+            "cacbon vô định hình",
+            "thạch anh"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Kim cương, than chì và cacbon vô định hình đều là dạng thù hình của cacbon. B2. Thạch anh là một dạng tinh thể của SiO2, không phải của cacbon."
+        },
+        {
+          "id": "a11-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn khí CO dư qua 20 g hỗn hợp CuO và Fe2O3 nung nóng, thu được hỗn hợp kim loại và khí CO2. Dẫn khí CO2 sinh ra vào nước vôi trong dư, thu được 15 g kết tủa CaCO3. Khối lượng kim loại thu được là",
+          "options": ["17,6 g", "16,4 g", "18,8 g", "15,2 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 15/100 = 0,15 mol, bằng số mol CO2 sinh ra, cũng bằng số mol O bị lấy khỏi oxit. B2. mO = 0,15 x 16 = 2,4 g. B3. Khối lượng kim loại = 20 - 2,4 = 17,6 g."
+        },
+        {
+          "id": "a11-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 100 g dung dịch Na2CO3 10,6% tác dụng với dung dịch HCl dư. Khối lượng khí CO2 sinh ra là bao nhiêu gam?",
+          "answer": "4,4",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. mNa2CO3 = 100 x 10,6% = 10,6 g, nNa2CO3 = 10,6/106 = 0,1 mol. B2. Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 nên nCO2 = 0,1 mol. B3. mCO2 = 0,1 x 44 = 4,4 g."
+        },
+        {
+          "id": "a11-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nung m gam hỗn hợp CaCO3 và MgCO3 đến khối lượng không đổi, thu được 4,48 lít khí CO2 (đktc) và 10,8 g hỗn hợp oxit CaO, MgO. Giá trị của m là",
+          "options": ["19,6 g", "17,6 g", "21,6 g", "15,6 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 4,48/22,4 = 0,2 mol. B2. Theo bảo toàn khối lượng: m (hỗn hợp muối) = m (hỗn hợp oxit) + mCO2. B3. m = 10,8 + 0,2 x 44 = 10,8 + 8,8 = 19,6 g."
+        }
+      ]
     },
     {
       "id": "a11-l4",
       "title": "Silic – công nghiệp silicat",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính chất của silic, silic đioxit và các ngành công nghiệp silicat: gốm sứ, xi măng, thuỷ tinh.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a11-l4-c1",
+          "heading": "Silic (Si)",
+          "body": "Silic là phi kim, có 2 dạng: silic tinh thể (dùng làm chất bán dẫn) và silic vô định hình.\nTrong tự nhiên, Si không tồn tại ở dạng đơn chất mà chủ yếu ở dạng SiO2 (cát, thạch anh)."
+        },
+        {
+          "id": "a11-l4-c2",
+          "heading": "Silic đioxit SiO2",
+          "body": "SiO2 là oxit axit (tương ứng axit H2SiO3 rất yếu, không tan).\nTác dụng với kiềm nóng chảy hoặc dung dịch kiềm đặc, tác dụng với oxit bazơ ở nhiệt độ cao tạo silicat:\nSiO2 + 2NaOH (nhiệt độ) -> Na2SiO3 + H2O"
+        },
+        {
+          "id": "a11-l4-c3",
+          "heading": "Công nghiệp silicat",
+          "body": "Sản xuất đồ gốm sứ (từ đất sét, thạch anh, fenspat), sản xuất xi măng (từ đất sét, đá vôi, nung ở nhiệt độ cao), sản xuất thuỷ tinh (từ cát, đá vôi, sođa Na2CO3 nung chảy)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a11-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Silic trong tự nhiên chủ yếu tồn tại ở dạng nào?",
+          "options": [
+            "SiO2 (cát, thạch anh)",
+            "đơn chất Si",
+            "muối silicat tan",
+            "khí SiH4"
+          ],
+          "answer": 0,
+          "explanation": "B1. Silic không tồn tại tự do trong tự nhiên. B2. Nó tồn tại chủ yếu ở dạng hợp chất SiO2 trong cát, thạch anh."
+        },
+        {
+          "id": "a11-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "SiO2 thuộc loại oxit nào?",
+          "options": [
+            "oxit axit",
+            "oxit bazơ",
+            "oxit trung tính",
+            "oxit lưỡng tính"
+          ],
+          "answer": 0,
+          "explanation": "B1. SiO2 tương ứng với axit H2SiO3 (axit silixic). B2. Vì vậy SiO2 là oxit axit."
+        },
+        {
+          "id": "a11-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nguyên liệu sản xuất thuỷ tinh.",
+          "options": ["cát (SiO2)", "đá vôi (CaCO3)", "sođa (Na2CO3)", "sắt"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Cát, đá vôi và sođa là ba nguyên liệu chính để nung chảy sản xuất thuỷ tinh. B2. Sắt không phải nguyên liệu sản xuất thuỷ tinh."
+        },
+        {
+          "id": "a11-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Silic tinh thể được ứng dụng làm vật liệu gì trong công nghiệp điện tử?",
+          "answer": "chất bán dẫn",
+          "acceptedAnswers": ["bán dẫn"],
+          "placeholder": "Nhập tên vật liệu",
+          "explanation": "B1. Silic tinh thể có tính chất bán dẫn đặc biệt. B2. Vì vậy được dùng làm chip, pin mặt trời và nhiều linh kiện điện tử."
+        },
+        {
+          "id": "a11-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Đồ gốm sứ được sản xuất chủ yếu từ nguyên liệu nào?",
+          "options": [
+            "đất sét, thạch anh, fenspat",
+            "sắt và than",
+            "muối ăn và đường",
+            "dầu mỏ"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đất sét, thạch anh và fenspat là nguyên liệu chính của công nghiệp gốm sứ. B2. Chúng được nhào trộn, tạo hình rồi nung ở nhiệt độ cao."
+        },
+        {
+          "id": "a11-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho SiO2 tác dụng với NaOH nóng chảy dư. Sản phẩm muối là",
+          "options": ["Na2SiO3", "NaSiO3", "Na2Si2O3", "NaSiO2"],
+          "answer": 0,
+          "explanation": "B1. Phương trình SiO2 + 2NaOH -> Na2SiO3 + H2O. B2. Muối tạo thành là natri silicat Na2SiO3."
+        },
+        {
+          "id": "a11-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nung 60 g SiO2 (M = 60) với NaOH dư ở nhiệt độ cao. Số mol Na2SiO3 tạo thành là",
+          "options": ["1 mol", "2 mol", "0,5 mol", "0,25 mol"],
+          "answer": 0,
+          "explanation": "B1. nSiO2 = 60/60 = 1 mol. B2. SiO2 + 2NaOH -> Na2SiO3 + H2O có tỉ lệ 1:1 nên nNa2SiO3 = 1 mol."
+        },
+        {
+          "id": "a11-l4-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Xi măng được sản xuất chủ yếu từ đất sét và nguyên liệu nào (chứa CaCO3)?",
+          "answer": "đá vôi",
+          "placeholder": "Nhập tên nguyên liệu",
+          "explanation": "B1. Đất sét cung cấp silicat và nhôm oxit, còn đá vôi cung cấp canxi. B2. Hai nguyên liệu này được nung ở nhiệt độ cao để tạo clinke xi măng."
+        },
+        {
+          "id": "a11-l4-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "SiO2 không phản ứng được với chất nào sau đây ở điều kiện thường?",
+          "options": [
+            "nước",
+            "dung dịch NaOH đặc nóng",
+            "NaOH nóng chảy",
+            "CaO ở nhiệt độ cao"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khác với CO2, SO2, SiO2 không tan và không phản ứng với nước ở điều kiện thường. B2. SiO2 chỉ phản ứng với kiềm đặc/nóng chảy hoặc oxit bazơ ở nhiệt độ cao."
+        },
+        {
+          "id": "a11-l4-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các sản phẩm của công nghiệp silicat.",
+          "options": ["đồ gốm sứ", "xi măng", "thuỷ tinh", "muối ăn"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Gốm sứ, xi măng, thuỷ tinh đều là sản phẩm chính của công nghiệp silicat. B2. Muối ăn (NaCl) không liên quan đến công nghiệp silicat."
+        },
+        {
+          "id": "a11-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nung 30 g hỗn hợp SiO2 và CaCO3 với NaOH dư (chỉ SiO2 phản ứng với NaOH, CaCO3 không phản ứng), thu được 0,2 mol Na2SiO3. Phần trăm khối lượng SiO2 trong hỗn hợp là",
+          "options": ["40%", "60%", "50%", "30%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nSiO2 = nNa2SiO3 = 0,2 mol (tỉ lệ 1:1). B2. mSiO2 = 0,2 x 60 = 12 g. B3. %SiO2 = 12/30 x 100% = 40%."
+        },
+        {
+          "id": "a11-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Phản ứng SiO2 + Na2CO3 -> Na2SiO3 + CO2 (tỉ lệ 1:1) dùng trong sản xuất thuỷ tinh. Số mol SiO2 cần dùng để phản ứng vừa đủ với 0,1 mol Na2CO3 là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình có tỉ lệ SiO2 : Na2CO3 = 1 : 1. B2. Vậy nSiO2 = 0,1 mol."
+        },
+        {
+          "id": "a11-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 12 g SiO2 tác dụng với NaOH nóng chảy dư. Khối lượng Na2SiO3 tạo thành là",
+          "options": ["24,4 g", "12,2 g", "36,6 g", "18,3 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nSiO2 = 12/60 = 0,2 mol. B2. SiO2 + 2NaOH -> Na2SiO3 + H2O có tỉ lệ 1:1 nên nNa2SiO3 = 0,2 mol. B3. mNa2SiO3 = 0,2 x 122 = 24,4 g."
+        }
+      ]
     },
     {
       "id": "a11-l5",
       "title": "Nâng cao: CO khử oxit; muối cacbonat + axit",
       "order": 5,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phương pháp bảo toàn oxi khi CO khử oxit kim loại, và thứ tự phản ứng khi nhỏ từ từ axit vào muối cacbonat.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a11-l5-c1",
+          "heading": "CO khử oxit kim loại",
+          "body": "Tương tự H2, khí CO khử được oxit của kim loại đứng sau Al trong dãy hoạt động, tạo kim loại và khí CO2.\nÁp dụng bảo toàn nguyên tố oxi: số mol CO phản ứng = số mol CO2 sinh ra = số mol O bị lấy khỏi oxit."
+        },
+        {
+          "id": "a11-l5-c2",
+          "heading": "Thứ tự phản ứng: nhỏ từ từ axit vào muối cacbonat",
+          "body": "Khi nhỏ từ từ dung dịch HCl vào dung dịch Na2CO3, phản ứng xảy ra theo 2 giai đoạn:\nGiai đoạn 1: Na2CO3 + HCl -> NaHCO3 + NaCl (chưa có khí).\nGiai đoạn 2: NaHCO3 + HCl -> NaCl + H2O + CO2 (mới có khí thoát ra)."
+        },
+        {
+          "id": "a11-l5-c3",
+          "heading": "Thứ tự ngược lại: nhỏ từ từ muối cacbonat vào axit",
+          "body": "Khi nhỏ từ từ Na2CO3 vào dung dịch axit dư, khí CO2 thoát ra ngay từ đầu vì axit luôn dư so với lượng CO3^2- vừa thêm vào:\nNa2CO3 + 2HCl -> 2NaCl + H2O + CO2 (phản ứng trực tiếp, có khí ngay)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a11-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khí CO khử được oxit của những kim loại nào?",
+          "options": [
+            "kim loại đứng sau Al trong dãy hoạt động",
+            "kim loại đứng trước Al",
+            "mọi kim loại",
+            "không kim loại nào"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tương tự H2, CO chỉ khử được oxit của kim loại hoạt động trung bình và yếu. B2. Đó là các kim loại đứng sau Al trong dãy hoạt động."
+        },
+        {
+          "id": "a11-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi nhỏ từ từ dung dịch HCl vào dung dịch Na2CO3, giai đoạn đầu tạo ra sản phẩm gì (chưa có khí)?",
+          "options": [
+            "NaHCO3 và NaCl",
+            "CO2 và NaCl",
+            "Na2O và HCl",
+            "không phản ứng"
+          ],
+          "answer": 0,
+          "explanation": "B1. Giai đoạn đầu, HCl chỉ đủ chuyển CO3^2- thành HCO3^-. B2. Phương trình: Na2CO3 + HCl -> NaHCO3 + NaCl, chưa sinh khí."
+        },
+        {
+          "id": "a11-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phát biểu đúng.",
+          "options": [
+            "CO khử được CuO",
+            "CO khử được Na2O",
+            "số mol CO phản ứng bằng số mol CO2 sinh ra",
+            "nhỏ từ từ HCl vào Na2CO3, giai đoạn đầu chưa có khí"
+          ],
+          "answers": [0, 2, 3],
+          "explanation": "B1. CO khử được CuO (kim loại yếu); số mol CO phản ứng bằng số mol CO2 sinh ra theo bảo toàn nguyên tố; giai đoạn đầu của phản ứng nhỏ từ từ HCl vào Na2CO3 chưa có khí. B2. CO không khử được Na2O vì Na là kim loại hoạt động mạnh."
+        },
+        {
+          "id": "a11-l5-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khi nhỏ từ từ dung dịch Na2CO3 vào axit dư, khí CO2 thoát ra ngay từ lúc nào?",
+          "answer": "ngay từ đầu",
+          "acceptedAnswers": ["từ đầu", "ngay lập tức"],
+          "placeholder": "Nhập câu trả lời",
+          "explanation": "B1. Vì axit luôn dư so với lượng Na2CO3 vừa thêm vào. B2. Phản ứng xảy ra trực tiếp Na2CO3 + 2HCl -> 2NaCl + H2O + CO2, sinh khí ngay."
+        },
+        {
+          "id": "a11-l5-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Sản phẩm của phản ứng CO + CuO (nhiệt độ) là",
+          "options": ["Cu và CO2", "CuO2 và C", "Cu2O và CO", "Cu và C"],
+          "answer": 0,
+          "explanation": "B1. CO lấy oxi của CuO tạo CO2. B2. Phương trình: CO + CuO -> Cu + CO2."
+        },
+        {
+          "id": "a11-l5-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn khí CO dư qua 16 g Fe2O3 nung nóng. Khối lượng Fe thu được là",
+          "options": ["11,2 g", "16 g", "8 g", "22,4 g"],
+          "answer": 0,
+          "explanation": "B1. nFe2O3 = 16/160 = 0,1 mol. B2. Fe2O3 + 3CO -> 2Fe + 3CO2 nên nFe = 0,2 mol. B3. mFe = 0,2 x 56 = 11,2 g."
+        },
+        {
+          "id": "a11-l5-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nhỏ từ từ 200 ml dung dịch HCl 1M vào dung dịch chứa 0,1 mol Na2CO3 (giai đoạn 1 dùng hết Na2CO3 tạo NaHCO3, giai đoạn 2 mới sinh khí). Số mol CO2 thoát ra là",
+          "options": ["0,1 mol", "0,2 mol", "0,05 mol", "0 mol"],
+          "answer": 0,
+          "explanation": "B1. nHCl = 0,2 mol. Giai đoạn 1 cần 0,1 mol HCl để chuyển hết 0,1 mol Na2CO3 thành NaHCO3, còn dư 0,1 mol HCl. B2. Giai đoạn 2: NaHCO3 + HCl -> NaCl + H2O + CO2, 0,1 mol HCl phản ứng vừa đủ với 0,1 mol NaHCO3, tạo 0,1 mol CO2."
+        },
+        {
+          "id": "a11-l5-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Dẫn khí CO dư qua 20 g CuO nung nóng, dẫn khí CO2 sinh ra vào nước vôi trong dư. Khối lượng kết tủa CaCO3 thu được là bao nhiêu gam?",
+          "answer": "25",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nCuO = 20/80 = 0,25 mol. B2. CO + CuO -> Cu + CO2 nên nCO2 = 0,25 mol, bằng nCaCO3. B3. mCaCO3 = 0,25 x 100 = 25 g."
+        },
+        {
+          "id": "a11-l5-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nhỏ từ từ dung dịch chứa 0,2 mol Na2CO3 vào dung dịch chứa 0,5 mol HCl (axit dư ngay từ đầu). Số mol CO2 thoát ra là",
+          "options": ["0,2 mol", "0,1 mol", "0,4 mol", "0,5 mol"],
+          "answer": 0,
+          "explanation": "B1. Vì HCl luôn dư nên phản ứng trực tiếp: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. B2. Với 0,2 mol Na2CO3 cần 0,4 mol HCl (có sẵn 0,5 mol, đủ dư), nCO2 = 0,2 mol."
+        },
+        {
+          "id": "a11-l5-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các đại lượng cần biết để giải bài toán CO khử oxit.",
+          "options": [
+            "số mol oxit",
+            "số mol CO hoặc CO2",
+            "bảo toàn nguyên tố oxi",
+            "màu của khí CO"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba đại lượng đầu là cơ sở để tính toán trong bài toán CO khử oxit. B2. Màu của khí CO không liên quan đến phép tính định lượng."
+        },
+        {
+          "id": "a11-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn khí CO dư qua 24 g hỗn hợp CuO và Fe2O3 nung nóng, dẫn khí CO2 sinh ra vào nước vôi trong dư thu được 30 g kết tủa. Khối lượng hỗn hợp kim loại thu được là",
+          "options": ["19,2 g", "20,4 g", "17,6 g", "21,6 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 30/100 = 0,3 mol, bằng số mol O bị lấy khỏi oxit. B2. mO = 0,3 x 16 = 4,8 g. B3. Khối lượng kim loại = 24 - 4,8 = 19,2 g."
+        },
+        {
+          "id": "a11-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nhỏ từ từ 300 ml dung dịch HCl 1M vào dung dịch chứa 0,2 mol Na2CO3 (giai đoạn 1 dùng hết Na2CO3 tạo NaHCO3, giai đoạn 2 tiếp tục tạo khí). Số mol CO2 thoát ra là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nHCl = 0,3 mol. Giai đoạn 1 cần 0,2 mol HCl để chuyển hết Na2CO3 thành NaHCO3, còn dư 0,1 mol HCl. B2. Giai đoạn 2 chỉ có 0,1 mol HCl phản ứng với NaHCO3 (đang dư), tạo 0,1 mol CO2."
+        },
+        {
+          "id": "a11-l5-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nhỏ từ từ đến dư dung dịch HCl vào 200 ml dung dịch Na2CO3 1M (HCl dư nên phản ứng xảy ra hoàn toàn qua cả hai giai đoạn). Thể tích khí CO2 thu được ở đktc là",
+          "options": ["4,48 lít", "2,24 lít", "8,96 lít", "6,72 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nNa2CO3 = 0,2 x 1 = 0,2 mol. B2. Vì HCl dư nên toàn bộ Na2CO3 chuyển hoàn toàn thành CO2: nCO2 = 0,2 mol. B3. V = 0,2 x 22,4 = 4,48 lít."
+        }
+      ]
     }
   ]
 }
