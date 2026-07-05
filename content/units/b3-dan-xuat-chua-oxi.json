@@ -4,53 +4,852 @@
   "code": "B3",
   "title": "Dẫn xuất chứa oxi",
   "order": 3,
-  "description": "Rượu etylic, axit axetic, chất béo và bài toán hiệu suất hữu cơ đơn giản.",
-  "status": "coming-soon",
+  "description": "Rượu etylic, axit axetic, chất béo và các bài toán hiệu suất hữu cơ cơ bản đến nâng cao.",
+  "status": "available",
   "lessons": [
     {
       "id": "b3-l1",
       "title": "Rượu etylic: cấu tạo, tính chất, độ rượu",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Nắm công thức CH3-CH2-OH, tính chất cơ bản của rượu etylic và cách tính độ rượu theo phần trăm thể tích.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b3-l1-c1",
+          "heading": "Cấu tạo phân tử rượu etylic",
+          "body": "Rượu etylic có công thức phân tử C2H6O, thường viết dưới dạng C2H5OH hoặc CH3-CH2-OH.\nTrong phân tử có nhóm -OH gắn với gốc etyl C2H5-, nên rượu etylic thuộc loại ancol.\nNhóm -OH là phần quyết định nhiều tính chất đặc trưng của rượu etylic."
+        },
+        {
+          "id": "b3-l1-c2",
+          "heading": "Tính chất hoá học tiêu biểu",
+          "body": "Rượu etylic tác dụng với natri giải phóng khí hiđro: 2C2H5OH + 2Na -> 2C2H5ONa + H2.\nRượu etylic cháy trong oxi tạo khí cacbonic và hơi nước: C2H5OH + 3O2 -> 2CO2 + 3H2O.\nNgoài ra, rượu etylic là chất lỏng không màu, tan vô hạn trong nước và nhẹ hơn nước."
+        },
+        {
+          "id": "b3-l1-c3",
+          "heading": "Độ rượu và cách tính",
+          "body": "Độ rượu cho biết số ml rượu etylic nguyên chất có trong 100 ml dung dịch rượu.\nCông thức tính nhanh: Vruou nguyen chat = do ruou x Vdung dich / 100.\nNếu cần đổi sang khối lượng, phải dùng khối lượng riêng của rượu etylic; phổ biến là D = 0,789 g/ml hoặc lấy gần đúng D = 0,8 g/ml khi đề bài cho phép."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b3-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong phân tử rượu etylic, nhóm chức đặc trưng là",
+          "options": ["-COOH", "-OH", "-CHO", "-NH2"],
+          "answer": 1,
+          "explanation": "B1. Rượu etylic có công thức C2H5OH. B2. Phần đặc trưng của ancol là nhóm -OH. B3. Vì vậy đáp án đúng là -OH."
+        },
+        {
+          "id": "b3-l1-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Viết công thức cấu tạo thu gọn của rượu etylic: ___.",
+          "answer": "CH3-CH2-OH",
+          "acceptedAnswers": ["C2H5OH", "CH3CH2OH"],
+          "placeholder": "Nhập công thức",
+          "explanation": "B1. Rượu etylic có 2 nguyên tử C và 1 nhóm -OH. B2. Công thức cấu tạo thu gọn thường viết là CH3-CH2-OH, cũng có thể viết là C2H5OH."
+        },
+        {
+          "id": "b3-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng về rượu etylic.",
+          "options": [
+            "Trong phân tử có nhóm -OH.",
+            "Rượu etylic cháy tạo CO2 và H2O.",
+            "Rượu etylic tác dụng với Na giải phóng H2.",
+            "Rượu etylic làm quỳ tím hoá đỏ."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Rượu etylic chứa nhóm -OH nên mệnh đề 1 đúng. B2. Khi cháy hoàn toàn, rượu etylic tạo CO2 và H2O nên mệnh đề 2 đúng. B3. Rượu etylic phản ứng với Na giải phóng H2 nên mệnh đề 3 đúng. B4. Rượu etylic không phải axit nên không làm quỳ tím hoá đỏ, mệnh đề 4 sai."
+        },
+        {
+          "id": "b3-l1-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng của rượu etylic với natri: C2H5OH + Na -> C2H5ONa + H2.",
+          "left": ["C2H5OH", "Na"],
+          "right": ["C2H5ONa", "H2"],
+          "answer": [2, 2, 2, 1],
+          "explanation": "B1. Đặt 2 trước C2H5OH để có số H chẵn thuận lợi tạo H2. B2. Khi đó cần 2Na và tạo 2C2H5ONa. B3. Số H còn lại ghép thành 1 phân tử H2. B4. Hệ số tối giản là 2 : 2 : 2 : 1."
+        },
+        {
+          "id": "b3-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Rượu 40 do nghĩa là",
+          "options": [
+            "Có 40 g C2H5OH trong 100 g dung dịch",
+            "Có 40 ml C2H5OH nguyên chất trong 100 ml dung dịch",
+            "Có 40 mol C2H5OH trong 1 lít dung dịch",
+            "Có 40 ml nước trong 100 ml dung dịch"
+          ],
+          "answer": 1,
+          "explanation": "B1. Độ rượu được định nghĩa theo phần trăm thể tích. B2. Rượu 40 do nghĩa là trong 100 ml dung dịch có 40 ml rượu etylic nguyên chất. B3. Vì vậy đáp án 2 đúng."
+        },
+        {
+          "id": "b3-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Một chai rượu 250 ml, 40 do chứa thể tích rượu etylic nguyên chất là",
+          "options": ["80 ml", "90 ml", "100 ml", "120 ml"],
+          "answer": 2,
+          "explanation": "B1. Dùng công thức Vruou nguyen chat = do ruou x Vdung dich / 100. B2. Ta có V = 40 x 250 / 100 = 100 ml. B3. Vậy chai rượu chứa 100 ml rượu etylic nguyên chất."
+        },
+        {
+          "id": "b3-l1-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "500 ml rượu 12 do chứa ___ ml rượu etylic nguyên chất.",
+          "answer": "60",
+          "placeholder": "Nhập thể tích",
+          "explanation": "B1. Vruou nguyen chat = 12 x 500 / 100. B2. Tính được V = 60 ml. B3. Vậy đáp án là 60."
+        },
+        {
+          "id": "b3-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Xét 200 ml rượu 46 do. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "options": [
+            "Thể tích rượu etylic nguyên chất là 92 ml.",
+            "Khối lượng rượu etylic nguyên chất là 73,6 g.",
+            "Dung dịch trên chứa 108 ml nước và chất tan khác.",
+            "Độ rượu của dung dịch là 54 do."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Thể tích rượu nguyên chất là 46 x 200 / 100 = 92 ml. B2. Khối lượng rượu etylic là 92 x 0,8 = 73,6 g. B3. Phần còn lại của 200 ml dung dịch là 200 - 92 = 108 ml. B4. Vì dung dịch đã cho là 46 do nên mệnh đề 4 sai."
+        },
+        {
+          "id": "b3-l1-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng cháy: C2H5OH + O2 -> CO2 + H2O.",
+          "left": ["C2H5OH", "O2"],
+          "right": ["CO2", "H2O"],
+          "answer": [1, 3, 2, 3],
+          "explanation": "B1. Có 2 nguyên tử C trong C2H5OH nên đặt 2 trước CO2. B2. Có 6 nguyên tử H nên đặt 3 trước H2O. B3. Khi đó tổng số O ở vế phải là 4 + 3 = 7; phía rượu đã có 1 O nên cần thêm 6 O từ 3O2. B4. Hệ số là 1 : 3 : 2 : 3."
+        },
+        {
+          "id": "b3-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 9,2 g rượu etylic tác dụng hết với Na. Thể tích H2 thu được ở đktc là",
+          "options": ["1,12 lít", "2,24 lít", "3,36 lít", "4,48 lít"],
+          "answer": 1,
+          "explanation": "B1. nC2H5OH = 9,2 / 46 = 0,2 mol. B2. Theo phương trình 2C2H5OH + 2Na -> 2C2H5ONa + H2, 2 mol rượu tạo 1 mol H2. B3. Vậy nH2 = 0,2 / 2 = 0,1 mol. B4. VH2 = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "b3-l1-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Một bình chứa 250 ml rượu 92 do. Lấy D(C2H5OH) = 0,789 g/ml. Khối lượng rượu etylic nguyên chất là ___ g.",
+          "answer": "181,47",
+          "acceptedAnswers": ["181.47"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng",
+          "explanation": "B1. Thể tích rượu etylic nguyên chất là 92 x 250 / 100 = 230 ml. B2. Khối lượng rượu etylic là m = D x V = 0,789 x 230 = 181,47 g. B3. Vậy đáp án là 181,47 g."
+        },
+        {
+          "id": "b3-l1-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 4,6 g rượu etylic. Thể tích CO2 thu được ở đktc là",
+          "options": ["2,24 lít", "3,36 lít", "4,48 lít", "6,72 lít"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nC2H5OH = 4,6 / 46 = 0,1 mol. B2. Theo phương trình cháy, 1 mol C2H5OH tạo 2 mol CO2 nên nCO2 = 0,2 mol. B3. VCO2 = 0,2 x 22,4 = 4,48 lít. B4. Chọn đáp án 4,48 lít."
+        },
+        {
+          "id": "b3-l1-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Pha 300 ml rượu 40 do với 200 ml nước. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "options": [
+            "Thể tích rượu etylic nguyên chất ban đầu là 120 ml.",
+            "Độ rượu của dung dịch sau khi pha là 24 do.",
+            "Khối lượng rượu etylic có trong dung dịch sau pha là 96 g.",
+            "Thể tích nước thêm vào là 200 ml."
+          ],
+          "answers": [0, 1, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Trong 300 ml rượu 40 do có 300 x 40 / 100 = 120 ml rượu etylic nguyên chất. B2. Sau khi pha thêm 200 ml nước, tổng thể tích là 500 ml nên độ rượu mới là 120 x 100 / 500 = 24 do. B3. Khối lượng rượu etylic không đổi, bằng 120 x 0,8 = 96 g. B4. Dữ kiện cũng cho biết đã thêm đúng 200 ml nước. Vì vậy cả 4 nhận xét đều đúng."
+        }
+      ]
     },
     {
       "id": "b3-l2",
       "title": "Axit axetic: tính chất axit, phản ứng este hoá",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Hiểu cấu tạo CH3COOH, tính axit yếu của axit axetic và phản ứng este hoá với rượu etylic.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b3-l2-c1",
+          "heading": "Cấu tạo và nhóm chức",
+          "body": "Axit axetic có công thức phân tử C2H4O2, thường viết là CH3COOH hoặc CH3-COOH.\nTrong phân tử có nhóm -COOH gọi là nhóm cacboxyl, quyết định tính axit của chất.\nAxit axetic là axit hữu cơ đơn giản, có trong giấm ăn."
+        },
+        {
+          "id": "b3-l2-c2",
+          "heading": "Tính chất hoá học của axit axetic",
+          "body": "Axit axetic là axit yếu nhưng vẫn làm quỳ tím hoá đỏ.\nNó tác dụng với kim loại Na, bazơ NaOH và muối cacbonat như Na2CO3; ví dụ: 2CH3COOH + Na2CO3 -> 2CH3COONa + CO2 + H2O.\nCác phản ứng đó cho thấy axit axetic có đầy đủ tính chất chung của axit."
+        },
+        {
+          "id": "b3-l2-c3",
+          "heading": "Phản ứng este hoá",
+          "body": "Axit axetic tác dụng với rượu etylic tạo etyl axetat và nước: CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O.\nPhản ứng này là phản ứng thuận nghịch, thường cần H2SO4 đặc làm xúc tác và phải đun nóng.\nEtyl axetat có mùi thơm, là este đơn giản được học ở THCS."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b3-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nhóm chức đặc trưng của axit axetic là",
+          "options": ["-OH", "-COOH", "-CHO", "-Cl"],
+          "answer": 1,
+          "explanation": "B1. Axit axetic có công thức CH3COOH. B2. Nhóm chức của các axit hữu cơ là -COOH. B3. Vì vậy đáp án đúng là -COOH."
+        },
+        {
+          "id": "b3-l2-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Viết công thức thu gọn của axit axetic: ___.",
+          "answer": "CH3COOH",
+          "acceptedAnswers": ["CH3-COOH"],
+          "placeholder": "Nhập công thức",
+          "explanation": "B1. Axit axetic gồm gốc CH3- gắn với nhóm -COOH. B2. Vì vậy công thức thu gọn là CH3COOH hoặc CH3-COOH."
+        },
+        {
+          "id": "b3-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các tính chất đúng của axit axetic.",
+          "options": [
+            "Làm quỳ tím hoá đỏ.",
+            "Tác dụng với NaOH.",
+            "Tác dụng với Na2CO3 giải phóng CO2.",
+            "Làm phenolphtalein hoá hồng."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Axit axetic là axit yếu nên vẫn làm quỳ tím hoá đỏ. B2. Nó phản ứng với NaOH theo phản ứng trung hoà. B3. Nó phản ứng với Na2CO3 tạo muối, CO2 và H2O. B4. Phenolphtalein chỉ hồng trong môi trường bazơ nên mệnh đề 4 sai."
+        },
+        {
+          "id": "b3-l2-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CH3COOH + Na2CO3 -> CH3COONa + CO2 + H2O.",
+          "left": ["CH3COOH", "Na2CO3"],
+          "right": ["CH3COONa", "CO2", "H2O"],
+          "answer": [2, 1, 2, 1, 1],
+          "explanation": "B1. Na2CO3 có 2 Na nên cần tạo 2CH3COONa. B2. Khi đó phải đặt 2 trước CH3COOH để đủ 2 gốc CH3COO-. B3. Phần CO3 kết hợp với H tạo 1CO2 và 1H2O. B4. Hệ số tối giản là 2 : 1 : 2 : 1 : 1."
+        },
+        {
+          "id": "b3-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Sản phẩm este tạo ra khi cho CH3COOH tác dụng với C2H5OH là",
+          "options": ["CH3OH", "CH3COOC2H5", "C2H5COOH", "CH3COONa"],
+          "answer": 1,
+          "explanation": "B1. Phản ứng este hoá giữa axit axetic và rượu etylic tạo etyl axetat. B2. Công thức của etyl axetat là CH3COOC2H5. B3. Vì vậy đáp án đúng là CH3COOC2H5."
+        },
+        {
+          "id": "b3-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Để trung hoà hoàn toàn 0,20 mol CH3COOH cần khối lượng NaOH là",
+          "options": ["4 g", "6 g", "8 g", "10 g"],
+          "answer": 2,
+          "explanation": "B1. Phương trình: CH3COOH + NaOH -> CH3COONa + H2O. B2. Tỉ lệ mol là 1 : 1 nên cần 0,20 mol NaOH. B3. mNaOH = 0,20 x 40 = 8 g."
+        },
+        {
+          "id": "b3-l2-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "12 g CH3COOH tương ứng với ___ mol.",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. M(CH3COOH) = 60 g/mol. B2. Số mol là n = 12 / 60 = 0,2 mol. B3. Vậy đáp án là 0,2 mol."
+        },
+        {
+          "id": "b3-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Cho 6 g CH3COOH tác dụng vừa đủ với Na2CO3. Chọn các kết luận đúng.",
+          "options": [
+            "Số mol CH3COOH là 0,1 mol.",
+            "Khối lượng Na2CO3 cần dùng là 5,3 g.",
+            "Thể tích CO2 thu được ở đktc là 1,12 lít.",
+            "Số mol Na2CO3 phản ứng là 0,1 mol."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. nCH3COOH = 6 / 60 = 0,1 mol. B2. Theo phương trình 2CH3COOH + Na2CO3 -> 2CH3COONa + CO2 + H2O, số mol Na2CO3 cần là 0,1 / 2 = 0,05 mol. B3. mNa2CO3 = 0,05 x 106 = 5,3 g. B4. nCO2 = 0,05 mol nên VCO2 = 0,05 x 22,4 = 1,12 lít. B5. Mệnh đề 4 sai vì số mol Na2CO3 chỉ là 0,05 mol."
+        },
+        {
+          "id": "b3-l2-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.",
+          "left": ["CH3COOH", "C2H5OH"],
+          "right": ["CH3COOC2H5", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Phản ứng este hoá giữa axit axetic và rượu etylic có tỉ lệ mol 1 : 1 : 1 : 1. B2. Kiểm tra số nguyên tử C, H, O ở hai vế đều bằng nhau. B3. Vì vậy hệ số tối giản là 1 : 1 : 1 : 1."
+        },
+        {
+          "id": "b3-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,15 mol CH3COOH phản ứng với lượng dư C2H5OH. Khối lượng este thu được theo lí thuyết là",
+          "options": ["8,8 g", "11,0 g", "13,2 g", "17,6 g"],
+          "answer": 2,
+          "explanation": "B1. Theo phương trình, 1 mol CH3COOH tạo 1 mol CH3COOC2H5. B2. Vậy 0,15 mol axit tạo 0,15 mol este. B3. M(CH3COOC2H5) = 88 g/mol. B4. mEste = 0,15 x 88 = 13,2 g."
+        },
+        {
+          "id": "b3-l2-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 6 g CH3COOH tác dụng với lượng dư C2H5OH. Hiệu suất phản ứng este hoá là 75%. Khối lượng este thu được là ___ g.",
+          "answer": "6,6",
+          "acceptedAnswers": ["6.6"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng este",
+          "explanation": "B1. nCH3COOH = 6 / 60 = 0,1 mol. B2. Theo lí thuyết, nEste = 0,1 mol nên mEste li thuyet = 0,1 x 88 = 8,8 g. B3. Khối lượng thực tế là 8,8 x 75 / 100 = 6,6 g. B4. Vậy đáp án là 6,6 g."
+        },
+        {
+          "id": "b3-l2-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 6 g CH3COOH tác dụng hết với Na. Thể tích H2 thu được ở đktc là",
+          "options": ["0,56 lít", "1,12 lít", "2,24 lít", "4,48 lít"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCH3COOH = 6 / 60 = 0,1 mol. B2. Phương trình: 2CH3COOH + 2Na -> 2CH3COONa + H2 nên 2 mol axit tạo 1 mol H2. B3. nH2 = 0,1 / 2 = 0,05 mol. B4. VH2 = 0,05 x 22,4 = 1,12 lít."
+        },
+        {
+          "id": "b3-l2-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Cho 12 g CH3COOH phản ứng với 9,2 g C2H5OH trong điều kiện thích hợp, hiệu suất este hoá 80%. Chọn các kết luận đúng.",
+          "options": [
+            "Ban đầu mỗi chất đều có số mol bằng 0,2 mol.",
+            "Khối lượng este thu được theo lí thuyết là 17,6 g.",
+            "Khối lượng este thực tế là 14,08 g.",
+            "Khối lượng nước thực tế tạo thành là 2,88 g."
+          ],
+          "answers": [0, 1, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCH3COOH = 12 / 60 = 0,2 mol và nC2H5OH = 9,2 / 46 = 0,2 mol. B2. Tỉ lệ phản ứng là 1 : 1 nên theo lí thuyết tạo 0,2 mol este, tức 0,2 x 88 = 17,6 g. B3. Với hiệu suất 80%, khối lượng este thực tế là 17,6 x 80 / 100 = 14,08 g. B4. Số mol nước thực tế cũng là 0,2 x 80 / 100 = 0,16 mol, nên mH2O = 0,16 x 18 = 2,88 g. B5. Do đó cả 4 nhận xét đều đúng."
+        }
+      ]
     },
     {
       "id": "b3-l3",
       "title": "Mối liên hệ etilen – rượu etylic – axit axetic",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Theo dõi các quá trình chuyển hoá từ etilen hoặc glucozơ thành rượu etylic rồi oxi hoá thành axit axetic.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b3-l3-c1",
+          "heading": "Điều chế rượu etylic",
+          "body": "Rượu etylic có thể điều chế bằng cách cho etilen cộng nước: C2H4 + H2O -> C2H5OH.\nTrong thực tế còn có cách lên men glucozơ: C6H12O6 -> 2C2H5OH + 2CO2.\nHai con đường này cho thấy rượu etylic là mắt xích trung gian rất quan trọng trong hoá học hữu cơ."
+        },
+        {
+          "id": "b3-l3-c2",
+          "heading": "Oxi hoá rượu etylic thành axit axetic",
+          "body": "Khi rượu etylic bị oxi hoá chậm trong không khí, có xúc tác thích hợp, sẽ tạo axit axetic: C2H5OH + O2 -> CH3COOH + H2O.\nQuá trình này được vận dụng trong sản xuất giấm ăn.\nVì vậy có thể xem chuỗi chuyển hoá quen thuộc là etilen -> rượu etylic -> axit axetic."
+        },
+        {
+          "id": "b3-l3-c3",
+          "heading": "Ý nghĩa thực tiễn của chuỗi chuyển hoá",
+          "body": "Từ etilen của công nghiệp dầu mỏ có thể tạo rượu etylic dùng làm dung môi, nhiên liệu sinh học và nguyên liệu hữu cơ.\nTừ glucozơ của nông sản có thể lên men tạo rượu; từ rượu lại oxi hoá tạo giấm.\nCác chuỗi phản ứng này thường xuất hiện trong bài tập nhận biết, điều chế và tính theo sơ đồ chuyển hoá."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b3-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Sản phẩm của phản ứng C2H4 + H2O là",
+          "options": ["CH3COOH", "C2H5OH", "C2H6", "CO2"],
+          "answer": 1,
+          "explanation": "B1. Etilen cộng nước tạo rượu etylic. B2. Công thức của rượu etylic là C2H5OH. B3. Vì vậy đáp án đúng là C2H5OH."
+        },
+        {
+          "id": "b3-l3-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Trong phản ứng lên men glucozơ, 1 mol glucozơ tạo ___ mol C2H5OH.",
+          "answer": "2",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình lên men là C6H12O6 -> 2C2H5OH + 2CO2. B2. Từ hệ số phương trình, 1 mol glucozơ tạo 2 mol rượu etylic."
+        },
+        {
+          "id": "b3-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng về mối liên hệ etilen - rượu etylic - axit axetic.",
+          "options": [
+            "Etilen có thể cộng nước tạo rượu etylic.",
+            "Glucozơ có thể lên men tạo rượu etylic.",
+            "Rượu etylic bị oxi hoá có thể tạo axit axetic.",
+            "Axit axetic bị khử trực tiếp tạo etilen theo kiến thức THCS."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. C2H4 + H2O -> C2H5OH nên mệnh đề 1 đúng. B2. C6H12O6 -> 2C2H5OH + 2CO2 nên mệnh đề 2 đúng. B3. C2H5OH + O2 -> CH3COOH + H2O nên mệnh đề 3 đúng. B4. Mệnh đề 4 không phải mối chuyển hoá trực tiếp được học ở THCS."
+        },
+        {
+          "id": "b3-l3-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng: C2H4 + H2O -> C2H5OH.",
+          "left": ["C2H4", "H2O"],
+          "right": ["C2H5OH"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. Vế phải có 2 C, 6 H và 1 O. B2. Dùng 1C2H4 và 1H2O cung cấp đúng số nguyên tử đó. B3. Phương trình cân bằng theo tỉ lệ 1 : 1 : 1."
+        },
+        {
+          "id": "b3-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất tạo thành khi oxi hoá rượu etylic trong điều kiện thích hợp là",
+          "options": ["CH4", "CH3COOH", "C2H4Br2", "C2H6"],
+          "answer": 1,
+          "explanation": "B1. Rượu etylic bị oxi hoá tạo axit axetic. B2. Công thức của axit axetic là CH3COOH. B3. Vì vậy đáp án đúng là CH3COOH."
+        },
+        {
+          "id": "b3-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 0,5 mol C2H4 cộng nước hoàn toàn. Khối lượng C2H5OH thu được là",
+          "options": ["11,5 g", "23,0 g", "34,5 g", "46,0 g"],
+          "answer": 1,
+          "explanation": "B1. Theo phương trình C2H4 + H2O -> C2H5OH, 1 mol C2H4 tạo 1 mol C2H5OH. B2. Vậy 0,5 mol C2H4 tạo 0,5 mol C2H5OH. B3. m = 0,5 x 46 = 23,0 g."
+        },
+        {
+          "id": "b3-l3-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Lên men hoàn toàn 18 g glucozơ. Khối lượng rượu etylic thu được theo lí thuyết là ___ g.",
+          "answer": "9,2",
+          "acceptedAnswers": ["9.2"],
+          "placeholder": "Nhập khối lượng",
+          "explanation": "B1. nGlucozo = 18 / 180 = 0,1 mol. B2. Theo phương trình lên men, 1 mol glucozơ tạo 2 mol rượu nên nC2H5OH = 0,2 mol. B3. mC2H5OH = 0,2 x 46 = 9,2 g."
+        },
+        {
+          "id": "b3-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Lên men hoàn toàn 45 g glucozơ. Chọn các kết luận đúng.",
+          "options": [
+            "Số mol glucozơ ban đầu là 0,25 mol.",
+            "Khối lượng rượu etylic tạo ra theo lí thuyết là 23 g.",
+            "Thể tích CO2 thu được ở đktc là 11,2 lít.",
+            "Số mol CO2 tạo ra là 0,25 mol."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. nGlucozo = 45 / 180 = 0,25 mol. B2. Theo phương trình, số mol C2H5OH và CO2 đều bằng 2 x 0,25 = 0,5 mol. B3. Khối lượng rượu là 0,5 x 46 = 23 g. B4. VCO2 = 0,5 x 22,4 = 11,2 lít. B5. Mệnh đề 4 sai vì số mol CO2 là 0,5 mol, không phải 0,25 mol."
+        },
+        {
+          "id": "b3-l3-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng oxi hoá: C2H5OH + O2 -> CH3COOH + H2O.",
+          "left": ["C2H5OH", "O2"],
+          "right": ["CH3COOH", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. So sánh hai vế thấy mỗi bên đều có 2 C và 6 H khi dùng hệ số 1. B2. Số O ở vế trái là 1 + 2 = 3, ở vế phải là 2 + 1 = 3. B3. Vì vậy hệ số tối giản là 1 : 1 : 1 : 1."
+        },
+        {
+          "id": "b3-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxi hoá hoàn toàn 46 g rượu etylic thành axit axetic theo phương trình đã học. Khối lượng CH3COOH thu được theo lí thuyết là",
+          "options": ["30 g", "46 g", "60 g", "88 g"],
+          "answer": 2,
+          "explanation": "B1. nC2H5OH = 46 / 46 = 1 mol. B2. Theo phương trình, 1 mol rượu tạo 1 mol axit axetic. B3. mCH3COOH = 1 x 60 = 60 g."
+        },
+        {
+          "id": "b3-l3-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 11,2 lít C2H4 (đktc) cộng nước hoàn toàn rồi oxi hoá toàn bộ rượu thu được thành CH3COOH. Khối lượng axit axetic cuối cùng là ___ g.",
+          "answer": "30",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng axit",
+          "explanation": "B1. nC2H4 = 11,2 / 22,4 = 0,5 mol. B2. Theo phản ứng cộng nước, 0,5 mol C2H4 tạo 0,5 mol C2H5OH. B3. Theo phản ứng oxi hoá, 0,5 mol C2H5OH tạo 0,5 mol CH3COOH. B4. mCH3COOH = 0,5 x 60 = 30 g."
+        },
+        {
+          "id": "b3-l3-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Lên men 90 g glucozơ đạt hiệu suất 80%, sau đó oxi hoá hoàn toàn lượng rượu thu được thành CH3COOH. Khối lượng axit axetic tạo thành là",
+          "options": ["36 g", "48 g", "60 g", "72 g"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nGlucozo = 90 / 180 = 0,5 mol. B2. Theo lí thuyết, nC2H5OH = 2 x 0,5 = 1,0 mol; với hiệu suất 80%, thực tế thu 0,8 mol rượu. B3. Oxi hoá hoàn toàn 0,8 mol rượu thu 0,8 mol axit axetic. B4. mCH3COOH = 0,8 x 60 = 48 g."
+        },
+        {
+          "id": "b3-l3-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Từ 180 g glucozơ, lên men rượu với hiệu suất 75%, rồi oxi hoá rượu thành axit axetic với hiệu suất 80%. Chọn các kết luận đúng.",
+          "options": [
+            "Khối lượng rượu etylic thực tế thu được sau lên men là 69 g.",
+            "Khối lượng axit axetic cuối cùng thu được là 72 g.",
+            "Thể tích CO2 thoát ra trong giai đoạn lên men ở đktc là 33,6 lít.",
+            "Hiệu suất chung của cả hai giai đoạn là 75%."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. Theo lí thuyết, 1 mol glucozơ tạo 2 mol rượu; với hiệu suất 75% thì nC2H5OH thuc te = 2 x 0,75 = 1,5 mol, nên m = 1,5 x 46 = 69 g. B3. CO2 sinh ra cùng số mol với rượu ở giai đoạn lên men nên nCO2 = 1,5 mol, V = 1,5 x 22,4 = 33,6 lít. B4. Oxi hoá rượu với hiệu suất 80% cho nCH3COOH = 1,5 x 0,8 = 1,2 mol, m = 1,2 x 60 = 72 g. B5. Hiệu suất chung của chuỗi là 75% x 80% = 60%, nên mệnh đề 4 sai vì đã ghi 75%."
+        }
+      ]
     },
     {
       "id": "b3-l4",
       "title": "Chất béo; xà phòng hoá",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Hiểu chất béo là este của glixerol với axit béo, nắm tính chất cơ bản và phản ứng xà phòng hoá.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b3-l4-c1",
+          "heading": "Chất béo là gì",
+          "body": "Chất béo là este của glixerol với các axit béo.\nMột số axit béo thường gặp là axit stearic C17H35COOH, axit oleic C17H33COOH và axit panmitic C15H31COOH.\nVì có nguồn gốc từ glixerol và axit béo nên chất béo còn được gọi là triglixerit."
+        },
+        {
+          "id": "b3-l4-c2",
+          "heading": "Tính chất cơ bản của chất béo",
+          "body": "Chất béo không tan trong nước và nhẹ hơn nước nên thường nổi trên mặt nước.\nChất béo cháy được và cũng có thể bị thuỷ phân.\nĐặc điểm này vừa quan trọng trong đời sống vừa là cơ sở của phản ứng xà phòng hoá."
+        },
+        {
+          "id": "b3-l4-c3",
+          "heading": "Phản ứng xà phòng hoá",
+          "body": "Khi đun chất béo với dung dịch kiềm như NaOH, chất béo bị thuỷ phân tạo muối natri của axit béo và glixerol.\nPhương trình tổng quát: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3.\nMuối RCOONa là thành phần chính của xà phòng, còn C3H5(OH)3 là glixerol."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b3-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất béo là",
+          "options": [
+            "ancol đơn chức",
+            "este của glixerol và axit béo",
+            "axit hữu cơ đơn chức",
+            "muối natri của axit béo"
+          ],
+          "answer": 1,
+          "explanation": "B1. Theo định nghĩa, chất béo là este của glixerol với các axit béo. B2. Muối natri của axit béo là xà phòng, không phải chất béo ban đầu."
+        },
+        {
+          "id": "b3-l4-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Phần ancol tạo nên chất béo là ___.",
+          "answer": "glixerol",
+          "acceptedAnswers": ["glycerol"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Chất béo được tạo bởi glixerol và axit béo. B2. Vì vậy phần ancol tham gia tạo chất béo là glixerol."
+        },
+        {
+          "id": "b3-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng về chất béo.",
+          "options": [
+            "Không tan trong nước.",
+            "Nhẹ hơn nước.",
+            "Có thể bị thuỷ phân.",
+            "Làm quỳ tím hoá đỏ."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Chất béo không tan trong nước nên mệnh đề 1 đúng. B2. Chất béo nhẹ hơn nước nên thường nổi lên trên, mệnh đề 2 đúng. B3. Chất béo có thể bị thuỷ phân nên mệnh đề 3 đúng. B4. Chất béo không phải axit nên không làm quỳ tím hoá đỏ."
+        },
+        {
+          "id": "b3-l4-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng xà phòng hoá tổng quát: (RCOO)3C3H5 + NaOH -> RCOONa + C3H5(OH)3.",
+          "left": ["(RCOO)3C3H5", "NaOH"],
+          "right": ["RCOONa", "C3H5(OH)3"],
+          "answer": [1, 3, 3, 1],
+          "explanation": "B1. Trong một phân tử chất béo có 3 gốc axit nên khi thuỷ phân kiềm sẽ tạo 3 phân tử muối RCOONa. B2. Vì tạo 3 muối nên cần 3NaOH. B3. Glixerol chỉ tạo 1 phân tử C3H5(OH)3. B4. Hệ số cân bằng là 1 : 3 : 3 : 1."
+        },
+        {
+          "id": "b3-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức nào dưới đây là công thức của một axit béo thường gặp?",
+          "options": ["C17H35COOH", "C2H5OH", "CH3COOH", "C6H12O6"],
+          "answer": 0,
+          "explanation": "B1. Axit stearic có công thức C17H35COOH và là một axit béo điển hình. B2. Các công thức còn lại lần lượt là rượu etylic, axit axetic và glucozơ."
+        },
+        {
+          "id": "b3-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Khi đun chất béo với dung dịch NaOH, sản phẩm thu được là",
+          "options": [
+            "rượu etylic và CO2",
+            "muối natri của axit béo và glixerol",
+            "axit axetic và nước",
+            "glucozơ và glixerol"
+          ],
+          "answer": 1,
+          "explanation": "B1. Phản ứng giữa chất béo và NaOH là phản ứng xà phòng hoá. B2. Sản phẩm gồm muối natri của axit béo và glixerol."
+        },
+        {
+          "id": "b3-l4-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Trong phương trình tổng quát xà phòng hoá, hệ số của NaOH là ___.",
+          "answer": "3",
+          "placeholder": "Nhập hệ số",
+          "explanation": "B1. Một phân tử chất béo có 3 liên kết este. B2. Vì vậy cần 3 phân tử NaOH để thuỷ phân hết, nên hệ số của NaOH là 3."
+        },
+        {
+          "id": "b3-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các nhận xét đúng về quá trình làm xà phòng từ chất béo.",
+          "options": [
+            "Đó là phản ứng thuỷ phân trong môi trường kiềm.",
+            "Có thể dùng NaOH để thực hiện phản ứng.",
+            "Sản phẩm tạo thành có glixerol.",
+            "Phản ứng cần dùng HCl làm thuốc thử chính."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Xà phòng hoá là thuỷ phân este trong môi trường kiềm nên mệnh đề 1 đúng. B2. Có thể dùng NaOH để tạo xà phòng natri nên mệnh đề 2 đúng. B3. Sản phẩm có glixerol nên mệnh đề 3 đúng. B4. HCl không phải thuốc thử chính của phản ứng xà phòng hoá nên mệnh đề 4 sai."
+        },
+        {
+          "id": "b3-l4-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: (C17H35COO)3C3H5 + NaOH -> C17H35COONa + C3H5(OH)3.",
+          "left": ["(C17H35COO)3C3H5", "NaOH"],
+          "right": ["C17H35COONa", "C3H5(OH)3"],
+          "answer": [1, 3, 3, 1],
+          "explanation": "B1. Chất béo này có 3 gốc stearat nên khi xà phòng hoá tạo 3 phân tử C17H35COONa. B2. Do đó cần 3NaOH để cắt 3 liên kết este. B3. Phần glixerol chỉ tạo 1 phân tử C3H5(OH)3. B4. Hệ số là 1 : 3 : 3 : 1."
+        },
+        {
+          "id": "b3-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Trong phản ứng xà phòng hoá, chất nào dưới đây là glixerol?",
+          "options": ["C3H5(OH)3", "C2H5OH", "CH3COOH", "NaCl"],
+          "answer": 0,
+          "explanation": "B1. Công thức của glixerol là C3H5(OH)3. B2. Đây là sản phẩm đồng thời với xà phòng trong phản ứng xà phòng hoá."
+        },
+        {
+          "id": "b3-l4-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nếu xà phòng hoá hoàn toàn 1 mol chất béo tổng quát (RCOO)3C3H5 thì thu được ___ mol glixerol.",
+          "answer": "1",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình tổng quát cho thấy 1 mol chất béo tạo 1 mol glixerol. B2. Vì vậy số mol glixerol thu được là 1 mol."
+        },
+        {
+          "id": "b3-l4-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Xà phòng hoá hoàn toàn 0,20 mol chất béo tổng quát (RCOO)3C3H5 bằng lượng dư NaOH. Số mol muối RCOONa thu được là",
+          "options": ["0,20 mol", "0,30 mol", "0,40 mol", "0,60 mol"],
+          "answer": 3,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo phương trình, 1 mol chất béo tạo 3 mol muối RCOONa. B2. Vậy 0,20 mol chất béo tạo 0,20 x 3 = 0,60 mol muối."
+        },
+        {
+          "id": "b3-l4-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Cho 0,50 mol chất béo tổng quát (RCOO)3C3H5 phản ứng hoàn toàn với NaOH. Chọn các kết luận đúng.",
+          "options": [
+            "Số mol NaOH cần dùng là 1,50 mol.",
+            "Số mol muối RCOONa tạo ra là 1,50 mol.",
+            "Số mol glixerol tạo ra là 0,50 mol.",
+            "Phản ứng này không phải phản ứng thuỷ phân."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo phương trình tổng quát, 1 mol chất béo cần 3 mol NaOH và tạo 3 mol muối cùng 1 mol glixerol. B2. Với 0,50 mol chất béo, nNaOH = 0,50 x 3 = 1,50 mol. B3. nRCOONa = 1,50 mol và nglixerol = 0,50 mol. B4. Đây chính là phản ứng thuỷ phân trong môi trường kiềm nên mệnh đề 4 sai."
+        }
+      ]
     },
     {
       "id": "b3-l5",
       "title": "Nâng cao: hiệu suất este hoá/lên men; bài toán độ rượu",
       "order": 5,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Vận dụng đồng thời công thức độ rượu, khối lượng riêng và hiệu suất phản ứng để giải các bài toán hữu cơ THCS nâng cao.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "b3-l5-c1",
+          "heading": "Bài toán độ rượu có khối lượng riêng",
+          "body": "Muốn tính khối lượng rượu etylic trong dung dịch, trước hết tính thể tích rượu nguyên chất theo độ rượu.\nSau đó đổi sang khối lượng bằng công thức m = D x V, với D thường lấy 0,789 g/ml hoặc gần đúng 0,8 g/ml nếu đề cho.\nChuỗi bước quen thuộc là: độ rượu -> thể tích rượu nguyên chất -> khối lượng rượu."
+        },
+        {
+          "id": "b3-l5-c2",
+          "heading": "Hiệu suất phản ứng este hoá",
+          "body": "Phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.\nKhối lượng este thực tế được tính theo công thức meste thuc = meste li thuyet x h / 100.\nKhi tính, cần tìm số mol chất giới hạn trước rồi mới suy ra khối lượng lí thuyết của este."
+        },
+        {
+          "id": "b3-l5-c3",
+          "heading": "Hiệu suất lên men và bài toán nhiều giai đoạn",
+          "body": "Lên men glucozơ: C6H12O6 -> 2C2H5OH + 2CO2, trong đó M(C6H12O6) = 180 và M(C2H5OH) = 46.\nNếu hiệu suất lên men là h%, lượng rượu thực tế bằng lượng lí thuyết nhân h/100.\nỞ bài toán nhiều giai đoạn như lên men rồi este hoá, cần tính lần lượt từng bước và có thể gộp thành hiệu suất chung bằng tích các hiệu suất thành phần."
+        }
+      ],
+      "questions": [
+        {
+          "id": "b3-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức tính thể tích rượu etylic nguyên chất trong dung dịch rượu là",
+          "options": [
+            "V = do ruou + Vdung dich",
+            "V = do ruou x Vdung dich / 100",
+            "V = 100 x Vdung dich / do ruou",
+            "V = D x Vdung dich"
+          ],
+          "answer": 1,
+          "explanation": "B1. Độ rượu là số ml rượu nguyên chất có trong 100 ml dung dịch. B2. Vì vậy thể tích rượu nguyên chất được tính bằng do ruou x Vdung dich / 100."
+        },
+        {
+          "id": "b3-l5-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Trong nhiều bài toán THCS, nếu đề cho gần đúng thì có thể lấy D(C2H5OH) = ___ g/ml.",
+          "answer": "0,8",
+          "acceptedAnswers": ["0.8"],
+          "placeholder": "Nhập giá trị D",
+          "explanation": "B1. Khối lượng riêng chính xác thường dùng là 0,789 g/ml. B2. Khi đề cho phép lấy gần đúng, giá trị hay dùng là 0,8 g/ml."
+        },
+        {
+          "id": "b3-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các nhận xét đúng về hiệu suất phản ứng.",
+          "options": [
+            "Hiệu suất h luon tinh bang luong thuc te chia luong li thuyet, nhan 100%.",
+            "Khối lượng este thực tế bằng khối lượng este lí thuyết nhân h/100.",
+            "Hiệu suất có thể lớn hơn 100% trong bài toán phổ thông.",
+            "Muốn tính lượng lí thuyết, phải xác định chất giới hạn."
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Theo định nghĩa, h% = luong thuc te / luong li thuyet x 100%. B2. Suy ra lượng thực tế bằng lượng lí thuyết nhân h/100. B3. Trong bài toán phổ thông, hiệu suất không vượt quá 100%. B4. Với phản ứng có nhiều chất tham gia, phải xác định chất giới hạn để tính lượng lí thuyết."
+        },
+        {
+          "id": "b3-l5-q4",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng lên men: C6H12O6 -> C2H5OH + CO2.",
+          "left": ["C6H12O6"],
+          "right": ["C2H5OH", "CO2"],
+          "answer": [1, 2, 2],
+          "explanation": "B1. Đặt 2 trước C2H5OH để có 4 nguyên tử C và 12 H ở phía sản phẩm. B2. Khi đó cần thêm 2CO2 để đủ 6 nguyên tử C. B3. Kiểm tra O ở hai vế đều là 6. B4. Hệ số là 1 : 2 : 2."
+        },
+        {
+          "id": "b3-l5-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "100 ml rượu 25 do chứa thể tích rượu etylic nguyên chất là",
+          "options": ["20 ml", "25 ml", "40 ml", "75 ml"],
+          "answer": 1,
+          "explanation": "B1. Vruou nguyen chat = 25 x 100 / 100 = 25 ml. B2. Vì vậy 100 ml rượu 25 do chứa 25 ml rượu etylic nguyên chất."
+        },
+        {
+          "id": "b3-l5-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Một chai rượu 250 ml, 40 do. Nếu lấy D(C2H5OH) = 0,8 g/ml thì khối lượng rượu etylic nguyên chất là",
+          "options": ["64 g", "72 g", "80 g", "96 g"],
+          "answer": 2,
+          "explanation": "B1. Thể tích rượu etylic nguyên chất là 40 x 250 / 100 = 100 ml. B2. Khối lượng rượu etylic là m = 100 x 0,8 = 80 g. B3. Vậy đáp án đúng là 80 g."
+        },
+        {
+          "id": "b3-l5-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Khối lượng este thực tế thu được từ 13,2 g este theo lí thuyết với hiệu suất 75% là ___ g.",
+          "answer": "9,9",
+          "acceptedAnswers": ["9.9"],
+          "placeholder": "Nhập khối lượng este",
+          "explanation": "B1. Dùng công thức meste thuc = meste li thuyet x h / 100. B2. Ta có meste thuc = 13,2 x 75 / 100 = 9,9 g. B3. Vậy đáp án là 9,9 g."
+        },
+        {
+          "id": "b3-l5-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Lên men 180 g glucozơ với hiệu suất 80%. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "options": [
+            "Khối lượng rượu etylic thực tế thu được là 73,6 g.",
+            "Thể tích rượu etylic thực tế thu được là 92 ml.",
+            "Khối lượng rượu etylic theo lí thuyết là 92 g.",
+            "Số mol rượu etylic thực tế thu được là 1,6 mol."
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. Theo lí thuyết, 1 mol glucozơ tạo 2 mol rượu, tức 92 g rượu etylic. B3. Với hiệu suất 80%, khối lượng thực tế là 92 x 80 / 100 = 73,6 g. B4. Số mol thực tế là 73,6 / 46 = 1,6 mol. B5. Thể tích thực tế là 73,6 / 0,8 = 92 ml."
+        },
+        {
+          "id": "b3-l5-q9",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.",
+          "left": ["CH3COOH", "C2H5OH"],
+          "right": ["CH3COOC2H5", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Phản ứng este hoá này có tỉ lệ mol đơn giản 1 : 1 : 1 : 1. B2. Kiểm tra số C, H, O đều bằng nhau ở hai vế. B3. Vì vậy hệ số tối giản là 1 : 1 : 1 : 1."
+        },
+        {
+          "id": "b3-l5-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 12 g CH3COOH phản ứng với lượng dư C2H5OH. Hiệu suất este hoá là 60%. Khối lượng este thu được là",
+          "options": ["8,80 g", "10,56 g", "13,20 g", "17,60 g"],
+          "answer": 1,
+          "explanation": "B1. nCH3COOH = 12 / 60 = 0,2 mol. B2. Theo lí thuyết tạo 0,2 mol este nên meste li thuyet = 0,2 x 88 = 17,6 g. B3. Với hiệu suất 60%, meste thuc = 17,6 x 60 / 100 = 10,56 g."
+        },
+        {
+          "id": "b3-l5-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Muốn điều chế 230 ml rượu 40 do từ glucozơ bằng phản ứng lên men có hiệu suất 80%, lấy D(C2H5OH) = 0,8 g/ml. Khối lượng glucozơ cần dùng là ___ g.",
+          "answer": "180",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng glucozơ",
+          "explanation": "B1. Thể tích rượu nguyên chất cần có là 230 x 40 / 100 = 92 ml. B2. Khối lượng rượu thực tế cần thu là 92 x 0,8 = 73,6 g, tương ứng nC2H5OH thuc te = 73,6 / 46 = 1,6 mol. B3. Hiệu suất lên men 80% nên số mol rượu theo lí thuyết phải là 1,6 / 0,8 = 2,0 mol. B4. Theo phương trình, 1 mol glucozơ tạo 2 mol rượu nên cần 1 mol glucozơ. B5. mGlucozo = 1 x 180 = 180 g."
+        },
+        {
+          "id": "b3-l5-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 27,6 g C2H5OH phản ứng với 36 g CH3COOH. Hiệu suất este hoá là 75%. Khối lượng CH3COOC2H5 thu được là",
+          "options": ["26,4 g", "35,2 g", "39,6 g", "52,8 g"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nC2H5OH = 27,6 / 46 = 0,6 mol và nCH3COOH = 36 / 60 = 0,6 mol. B2. Hai chất phản ứng vừa đủ theo tỉ lệ 1 : 1 nên theo lí thuyết tạo 0,6 mol este. B3. mEste li thuyet = 0,6 x 88 = 52,8 g. B4. Với hiệu suất 75%, khối lượng este thực tế là 52,8 x 75 / 100 = 39,6 g."
+        },
+        {
+          "id": "b3-l5-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "prompt": "Lên men 180 g glucozơ tạo rượu với hiệu suất 90%, rồi dùng toàn bộ rượu đó este hoá với lượng dư CH3COOH, hiệu suất este hoá 80%. Chọn các kết luận đúng.",
+          "options": [
+            "Số mol rượu etylic thực tế sau giai đoạn lên men là 1,8 mol.",
+            "Khối lượng este thu được cuối cùng là 126,72 g.",
+            "Hiệu suất chung của cả hai giai đoạn là 72%.",
+            "Khối lượng CO2 tạo ra ở giai đoạn lên men là 22,4 g."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. Theo lí thuyết lên men tạo 2 mol rượu; với hiệu suất 90% thì số mol rượu thực tế là 2 x 0,9 = 1,8 mol. B3. Este hoá lượng rượu này với hiệu suất 80% cho số mol este là 1,8 x 0,8 = 1,44 mol, nên m = 1,44 x 88 = 126,72 g. B4. Hiệu suất chung của chuỗi là 90% x 80% = 72%. B5. CO2 ở giai đoạn lên men tạo cùng số mol với rượu, nên nCO2 = 1,8 mol và mCO2 = 1,8 x 44 = 79,2 g; vì vậy mệnh đề 4 sai."
+        }
+      ]
     }
   ]
 }
