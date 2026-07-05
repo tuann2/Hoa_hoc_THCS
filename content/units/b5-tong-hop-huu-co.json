@@ -488,12 +488,12 @@
           "id": "b5-l3-q12",
           "type": "fill-blank",
           "level": "hsg",
-          "prompt": "Từ 11,2 lít C2H4 (đktc), điều chế CH3COOC2H5 qua 3 bước: C2H4 -> C2H5OH (80%), C2H5OH -> CH3COOH (75%), CH3COOH + C2H5OH -> CH3COOC2H5 (50%). Khối lượng este thu được là ___ g.",
+          "prompt": "Từ 11,2 lít C2H4 (đktc), điều chế CH3COOC2H5 qua 3 bước: C2H4 -> C2H5OH (80%), oxi hoá toàn bộ lượng C2H5OH thu được thành CH3COOH (75%), rồi cho CH3COOH tác dụng với C2H5OH dư tạo este (50%). Khối lượng este thu được là ___ g.",
           "answer": "13,2",
           "acceptedAnswers": ["13.2"],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
           "placeholder": "Nhập khối lượng este",
-          "explanation": "B1. nC2H4 = 11,2/22,4 = 0,5 mol. B2. Bước 1 tạo etanol với hiệu suất 80% nên thu được 0,5 x 0,8 = 0,4 mol C2H5OH. B3. Bước 2 oxi hoá etanol thành axit axetic với hiệu suất 75% nên thu được 0,4 x 0,75 = 0,3 mol CH3COOH. B4. Bước 3 este hoá theo tỉ lệ 1 : 1, giả sử có dư rượu etylic nên số mol este lí thuyết theo axit là 0,3 mol; với hiệu suất 50% thu được 0,15 mol este. B5. mCH3COOC2H5 = 0,15 x 88 = 13,2 g."
+          "explanation": "B1. nC2H4 = 11,2/22,4 = 0,5 mol. B2. Bước 1 tạo etanol với hiệu suất 80% nên thu được 0,5 x 0,8 = 0,4 mol C2H5OH. B3. Oxi hoá toàn bộ lượng etanol đó thành axit axetic với hiệu suất 75% nên thu được 0,4 x 0,75 = 0,3 mol CH3COOH. B4. Ở bước este hoá, C2H5OH được cho dư nên số mol este lí thuyết theo axit là 0,3 mol; với hiệu suất 50% thu được 0,15 mol este. B5. mCH3COOC2H5 = 0,15 x 88 = 13,2 g."
         },
         {
           "id": "b5-l3-q13",

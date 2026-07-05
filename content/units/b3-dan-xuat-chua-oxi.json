@@ -792,8 +792,8 @@
             "Khối lượng rượu etylic theo lí thuyết là 92 g.",
             "Số mol rượu etylic thực tế thu được là 1,6 mol."
           ],
-          "answers": [0, 1, 3],
-          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. Theo lí thuyết, 1 mol glucozơ tạo 2 mol rượu, tức 92 g rượu etylic. B3. Với hiệu suất 80%, khối lượng thực tế là 92 x 80 / 100 = 73,6 g. B4. Số mol thực tế là 73,6 / 46 = 1,6 mol. B5. Thể tích thực tế là 73,6 / 0,8 = 92 ml."
+          "answers": [0, 1, 2, 3],
+          "explanation": "B1. 180 g glucozơ ứng với 1 mol. B2. Theo lí thuyết, 1 mol glucozơ tạo 2 mol rượu, tức 92 g rượu etylic (kết luận 2 đúng). B3. Với hiệu suất 80%, khối lượng thực tế là 92 x 80 / 100 = 73,6 g (kết luận 0 đúng). B4. Số mol thực tế là 73,6 / 46 = 1,6 mol (kết luận 3 đúng). B5. Thể tích thực tế là 73,6 / 0,8 = 92 ml (kết luận 1 đúng). Vậy cả 4 kết luận đều đúng."
         },
         {
           "id": "b3-l5-q9",
