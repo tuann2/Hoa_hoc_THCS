@@ -5,34 +5,497 @@
   "title": "Oxi – Không khí",
   "order": 2,
   "description": "Tính chất, điều chế oxi, oxit và các bài toán đốt cháy cơ bản.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a2-l1",
       "title": "Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính chất vật lí, hoá học của oxi, cách điều chế trong phòng thí nghiệm và phân biệt phản ứng hoá hợp - phân huỷ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a2-l1-c1",
+          "heading": "Tính chất của oxi",
+          "body": "Oxi là chất khí không màu, không mùi, ít tan trong nước, nặng hơn không khí (M = 32).\nOxi tác dụng với hầu hết kim loại, nhiều phi kim và nhiều hợp chất, đều là phản ứng cháy toả nhiệt.\nVí dụ: 3Fe + 2O2 (nhiệt độ) -> Fe3O4; S + O2 (nhiệt độ) -> SO2."
+        },
+        {
+          "id": "a2-l1-c2",
+          "heading": "Điều chế oxi",
+          "body": "Trong phòng thí nghiệm: nhiệt phân KMnO4 hoặc KClO3 (có xúc tác MnO2):\n2KMnO4 (nhiệt độ) -> K2MnO4 + MnO2 + O2\n2KClO3 (nhiệt độ, MnO2) -> 2KCl + 3O2\nTrong công nghiệp: chưng cất phân đoạn không khí lỏng, hoặc điện phân nước."
+        },
+        {
+          "id": "a2-l1-c3",
+          "heading": "Phản ứng hoá hợp và phản ứng phân huỷ",
+          "body": "Phản ứng hoá hợp: từ hai hay nhiều chất tạo thành một chất mới (dạng A + B -> C).\nPhản ứng phân huỷ: từ một chất tạo thành hai hay nhiều chất mới (dạng A -> B + C).\nĐiều chế oxi trong phòng thí nghiệm bằng cách nhiệt phân KMnO4 hoặc KClO3 là phản ứng phân huỷ."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khí oxi có tính chất vật lí nào sau đây?",
+          "options": [
+            "không màu, không mùi, ít tan trong nước",
+            "màu vàng lục, có mùi hắc",
+            "tan nhiều trong nước",
+            "nhẹ hơn không khí"
+          ],
+          "answer": 0,
+          "explanation": "B1. Oxi là chất khí không màu, không mùi. B2. Oxi ít tan trong nước và nặng hơn không khí (M = 32 > 29)."
+        },
+        {
+          "id": "a2-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong phòng thí nghiệm, khí oxi thường được điều chế bằng cách nào?",
+          "options": [
+            "nhiệt phân KMnO4 hoặc KClO3",
+            "điện phân nước",
+            "chưng cất không khí lỏng",
+            "cho kim loại tác dụng với axit"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong phòng thí nghiệm, cách đơn giản và phổ biến là nhiệt phân các hợp chất giàu oxi như KMnO4, KClO3. B2. Điện phân nước và chưng cất không khí lỏng là phương pháp sản xuất công nghiệp."
+        },
+        {
+          "id": "a2-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phản ứng hoá hợp.",
+          "options": [
+            "3Fe + 2O2 -> Fe3O4",
+            "2KClO3 -> 2KCl + 3O2",
+            "S + O2 -> SO2",
+            "CaCO3 -> CaO + CO2"
+          ],
+          "answers": [0, 2],
+          "explanation": "B1. 3Fe + 2O2 -> Fe3O4 và S + O2 -> SO2 đều từ nhiều chất tạo thành 1 chất nên là phản ứng hoá hợp. B2. Hai phản ứng còn lại từ 1 chất tạo ra nhiều chất nên là phản ứng phân huỷ."
+        },
+        {
+          "id": "a2-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Phản ứng từ một chất tạo ra hai hay nhiều chất mới được gọi là phản ứng gì?",
+          "answer": "phân huỷ",
+          "acceptedAnswers": ["phản ứng phân huỷ"],
+          "placeholder": "Nhập tên loại phản ứng",
+          "explanation": "B1. Khi một chất bị phân tách thành nhiều chất khác. B2. Đây gọi là phản ứng phân huỷ."
+        },
+        {
+          "id": "a2-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất xúc tác thường dùng khi nhiệt phân KClO3 để điều chế oxi là",
+          "options": ["MnO2", "CaO", "NaOH", "CuO"],
+          "answer": 0,
+          "explanation": "B1. MnO2 làm chất xúc tác giúp phản ứng nhiệt phân KClO3 xảy ra nhanh hơn ở nhiệt độ thấp hơn. B2. MnO2 không bị tiêu hao trong phản ứng."
+        },
+        {
+          "id": "a2-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nhiệt phân hoàn toàn 24,5 g KClO3 (M = 122,5) thu được V lít khí O2 (đktc). Giá trị V là",
+          "options": ["6,72 lít", "4,48 lít", "2,24 lít", "8,96 lít"],
+          "answer": 0,
+          "explanation": "B1. nKClO3 = 24,5/122,5 = 0,2 mol. B2. Phương trình 2KClO3 -> 2KCl + 3O2 có tỉ lệ KClO3 : O2 = 2 : 3 nên nO2 = 0,2 x 3/2 = 0,3 mol. B3. V = 0,3 x 22,4 = 6,72 lít."
+        },
+        {
+          "id": "a2-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nhiệt phân hoàn toàn 31,6 g KMnO4 (M = 158) thu được bao nhiêu lít khí O2 ở đktc?",
+          "options": ["2,24 lít", "4,48 lít", "1,12 lít", "6,72 lít"],
+          "answer": 0,
+          "explanation": "B1. nKMnO4 = 31,6/158 = 0,2 mol. B2. Phương trình 2KMnO4 -> K2MnO4 + MnO2 + O2 có tỉ lệ KMnO4 : O2 = 2 : 1 nên nO2 = 0,1 mol. B3. V = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a2-l1-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 3,1 g photpho trong khí oxi dư thu được P2O5. Khối lượng oxi đã phản ứng là bao nhiêu gam?",
+          "answer": "4",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. nP = 3,1/31 = 0,1 mol. B2. Phương trình 4P + 5O2 -> 2P2O5 có tỉ lệ P : O2 = 4 : 5 nên nO2 = 0,1 x 5/4 = 0,125 mol. B3. mO2 = 0,125 x 32 = 4 g."
+        },
+        {
+          "id": "a2-l1-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 12 g Mg trong khí oxi dư thu được MgO. Thể tích O2 (đktc) đã dùng là",
+          "options": ["5,6 lít", "2,8 lít", "11,2 lít", "4,48 lít"],
+          "answer": 0,
+          "explanation": "B1. nMg = 12/24 = 0,5 mol. B2. Phương trình 2Mg + O2 -> 2MgO có tỉ lệ Mg : O2 = 2 : 1 nên nO2 = 0,25 mol. B3. V = 0,25 x 22,4 = 5,6 lít."
+        },
+        {
+          "id": "a2-l1-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phản ứng phân huỷ.",
+          "options": [
+            "CaCO3 -> CaO + CO2",
+            "2KMnO4 -> K2MnO4 + MnO2 + O2",
+            "Fe + 2HCl -> FeCl2 + H2",
+            "2H2 + O2 -> 2H2O"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. CaCO3 -> CaO + CO2 và 2KMnO4 -> K2MnO4 + MnO2 + O2 đều từ 1 chất tạo ra nhiều chất nên là phản ứng phân huỷ. B2. Fe + 2HCl -> FeCl2 + H2 là phản ứng thế; 2H2 + O2 -> 2H2O là phản ứng hoá hợp."
+        },
+        {
+          "id": "a2-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nhiệt phân hỗn hợp gồm 0,1 mol KMnO4 và 0,1 mol KClO3. Tổng thể tích khí O2 thu được ở đktc là",
+          "options": ["4,48 lít", "2,24 lít", "6,72 lít", "8,96 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Từ KMnO4: tỉ lệ 2:1 nên nO2 = 0,1 x 1/2 = 0,05 mol. B2. Từ KClO3: tỉ lệ 2:3 nên nO2 = 0,1 x 3/2 = 0,15 mol. B3. Tổng nO2 = 0,05 + 0,15 = 0,2 mol, V = 0,2 x 22,4 = 4,48 lít."
+        },
+        {
+          "id": "a2-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn hỗn hợp gồm 0,1 mol C và 0,1 mol S trong khí oxi dư. Tổng khối lượng oxi đã phản ứng là bao nhiêu gam?",
+          "answer": "6,4",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. C + O2 -> CO2 nên 0,1 mol C cần 0,1 mol O2. B2. S + O2 -> SO2 nên 0,1 mol S cần 0,1 mol O2. B3. Tổng nO2 = 0,2 mol, mO2 = 0,2 x 32 = 6,4 g."
+        },
+        {
+          "id": "a2-l1-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nung 43,85 g hỗn hợp KMnO4 và KClO3, biết số mol KMnO4 gấp đôi số mol KClO3. Thể tích khí O2 thu được ở đktc là",
+          "options": ["5,6 lít", "4,48 lít", "6,72 lít", "8,96 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol KClO3 là x thì số mol KMnO4 là 2x. B2. Khối lượng: 122,5x + 158 x 2x = 438,5x = 43,85 nên x = 0,1 mol. B3. nO2 = x x 3/2 (từ KClO3) + 2x x 1/2 (từ KMnO4) = 0,15 + 0,1 = 0,25 mol, V = 0,25 x 22,4 = 5,6 lít."
+        }
+      ]
     },
     {
       "id": "a2-l2",
-      "title": "Oxit: phân loại, gọi tên",
+      "title": "Oxit: phân loại, gọi tên (mở đầu)",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Định nghĩa oxit, phân biệt bước đầu oxit axit - oxit bazơ và cách gọi tên oxit.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a2-l2-c1",
+          "heading": "Định nghĩa oxit",
+          "body": "Oxit là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Công thức chung dạng MxOy."
+        },
+        {
+          "id": "a2-l2-c2",
+          "heading": "Hai loại oxit chính (mức mở đầu)",
+          "body": "Oxit bazơ: thường là oxit của kim loại, tương ứng với một bazơ. Ví dụ: Na2O, CaO, CuO.\nOxit axit: thường là oxit của phi kim, tương ứng với một axit. Ví dụ: CO2, SO2, P2O5."
+        },
+        {
+          "id": "a2-l2-c3",
+          "heading": "Cách gọi tên oxit",
+          "body": "Oxit kim loại: tên kim loại (kèm hoá trị nếu kim loại có nhiều hoá trị) + oxit. Ví dụ: Fe2O3 là sắt(III) oxit.\nOxit phi kim: tiền tố chỉ số nguyên tử (đi, tri, tetra, penta) + tên phi kim + oxit. Ví dụ: SO3 là lưu huỳnh trioxit."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Oxit là hợp chất của oxi với",
+          "options": [
+            "một nguyên tố khác",
+            "hai nguyên tố khác",
+            "ba nguyên tố khác",
+            "không có nguyên tố nào khác"
+          ],
+          "answer": 0,
+          "explanation": "B1. Theo định nghĩa, oxit gồm hai nguyên tố, một trong đó là oxi. B2. Vậy oxit là hợp chất của oxi với một nguyên tố khác."
+        },
+        {
+          "id": "a2-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "CO2 thuộc loại oxit nào?",
+          "options": [
+            "oxit axit",
+            "oxit bazơ",
+            "oxit trung tính",
+            "oxit lưỡng tính"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO2 là oxit của phi kim cacbon, tương ứng với axit H2CO3. B2. Vì vậy CO2 là oxit axit."
+        },
+        {
+          "id": "a2-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các oxit bazơ.",
+          "options": ["Na2O", "CO2", "CaO", "SO2"],
+          "answers": [0, 2],
+          "explanation": "B1. Na2O và CaO là oxit của kim loại, tương ứng với bazơ NaOH và Ca(OH)2. B2. CO2 và SO2 là oxit axit."
+        },
+        {
+          "id": "a2-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Tên gọi của Fe2O3 là gì?",
+          "answer": "sắt(III) oxit",
+          "acceptedAnswers": ["sat (iii) oxit", "oxit sắt(III)"],
+          "placeholder": "Nhập tên gọi",
+          "explanation": "B1. Sắt là kim loại nhiều hoá trị nên cần kèm hoá trị khi gọi tên. B2. Trong Fe2O3, sắt có hoá trị III nên tên gọi là sắt(III) oxit."
+        },
+        {
+          "id": "a2-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức tổng quát của oxit là",
+          "options": ["MxOy", "MxNy", "MxHy", "MxCy"],
+          "answer": 0,
+          "explanation": "B1. Oxit luôn chứa nguyên tố oxi. B2. Công thức tổng quát viết là MxOy, với M là nguyên tố còn lại."
+        },
+        {
+          "id": "a2-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Tên gọi của SO3 là",
+          "options": [
+            "lưu huỳnh trioxit",
+            "lưu huỳnh đioxit",
+            "lưu huỳnh oxit",
+            "đilưu huỳnh trioxit"
+          ],
+          "answer": 0,
+          "explanation": "B1. SO3 có 1 nguyên tử S và 3 nguyên tử O. B2. Theo quy tắc gọi tên oxit phi kim, tên gọi là lưu huỳnh trioxit."
+        },
+        {
+          "id": "a2-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxit nào tương ứng với axit H2CO3?",
+          "options": ["CO2", "CO", "SO2", "SO3"],
+          "answer": 0,
+          "explanation": "B1. Mỗi oxit axit tương ứng với một axit. B2. CO2 tan trong nước tạo H2CO3."
+        },
+        {
+          "id": "a2-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các oxit axit trong các chất sau.",
+          "options": ["P2O5", "MgO", "SO2", "K2O"],
+          "answers": [0, 2],
+          "explanation": "B1. P2O5 và SO2 là oxit của phi kim, tương ứng với axit H3PO4 và H2SO3. B2. MgO và K2O là oxit bazơ."
+        },
+        {
+          "id": "a2-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Công thức hoá học của oxit sắt từ là gì?",
+          "answer": "Fe3O4",
+          "placeholder": "Nhập công thức",
+          "explanation": "B1. Oxit sắt từ là hợp chất của sắt với oxi có thành phần đặc biệt, coi như hỗn hợp FeO và Fe2O3 theo tỉ lệ 1:1. B2. Công thức là Fe3O4."
+        },
+        {
+          "id": "a2-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxit nào tương ứng với bazơ Ca(OH)2?",
+          "options": ["CaO", "CaCO3", "CaCl2", "Ca(NO3)2"],
+          "answer": 0,
+          "explanation": "B1. Mỗi oxit bazơ tương ứng với một bazơ. B2. CaO tác dụng với nước tạo Ca(OH)2."
+        },
+        {
+          "id": "a2-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Oxit RO có phân tử khối 56. Nguyên tố R là",
+          "options": ["canxi (Ca)", "sắt (Fe)", "magie (Mg)", "kẽm (Zn)"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối RO = R + 16 = 56. B2. Giải ra R = 40, ứng với canxi (Ca), khớp CaO."
+        },
+        {
+          "id": "a2-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hợp chất R2O5 có phân tử khối 108. Nguyên tử khối của R là bao nhiêu?",
+          "answer": "14",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O5 = 2R + 5 x 16 = 108. B2. Giải ra 2R = 28 nên R = 14, ứng với nitơ (N), khớp N2O5."
+        },
+        {
+          "id": "a2-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Một oxit kim loại M có công thức M2O, phân tử khối 94. Kim loại M là",
+          "options": ["kali (K)", "natri (Na)", "liti (Li)", "canxi (Ca)"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối M2O = 2M + 16 = 94. B2. Giải ra M = 39, ứng với kali (K), khớp K2O."
+        }
+      ]
     },
     {
       "id": "a2-l3",
       "title": "Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Thành phần không khí, khái niệm sự cháy - sự oxi hoá chậm và bài toán đốt cháy hỗn hợp khí.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a2-l3-c1",
+          "heading": "Thành phần không khí",
+          "body": "Không khí là hỗn hợp khí, gồm khoảng 78% N2, 21% O2 theo thể tích, còn lại là CO2, hơi nước và các khí hiếm khác."
+        },
+        {
+          "id": "a2-l3-c2",
+          "heading": "Sự cháy và sự oxi hoá chậm",
+          "body": "Sự cháy là sự oxi hoá có toả nhiệt và phát sáng. Sự oxi hoá chậm cũng toả nhiệt nhưng không phát sáng (ví dụ: gỉ sắt để lâu trong không khí).\nĐiều kiện để có sự cháy: chất phải nóng đến nhiệt độ cháy và phải có đủ khí oxi."
+        },
+        {
+          "id": "a2-l3-c3",
+          "heading": "Biện pháp dập tắt đám cháy",
+          "body": "Hạ nhiệt độ của chất cháy xuống dưới nhiệt độ cháy, hoặc cách li chất cháy với oxi (ngăn không cho tiếp xúc với không khí)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong không khí, khí nào chiếm tỉ lệ thể tích lớn nhất?",
+          "options": ["N2", "O2", "CO2", "hơi nước"],
+          "answer": 0,
+          "explanation": "B1. Không khí gồm khoảng 78% N2, 21% O2, còn lại là các khí khác. B2. N2 chiếm tỉ lệ lớn nhất."
+        },
+        {
+          "id": "a2-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Tỉ lệ thể tích khí oxi trong không khí xấp xỉ bao nhiêu %?",
+          "options": ["21%", "78%", "1%", "50%"],
+          "answer": 0,
+          "explanation": "B1. Đây là thành phần chuẩn của không khí. B2. Oxi chiếm khoảng 21% thể tích."
+        },
+        {
+          "id": "a2-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các điều kiện cần có để xảy ra sự cháy.",
+          "options": [
+            "chất phải nóng đến nhiệt độ cháy",
+            "phải có đủ khí oxi",
+            "phải có ánh sáng mặt trời",
+            "phải có chất xúc tác"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Hai điều kiện bắt buộc để có sự cháy là nhiệt độ đủ cao và đủ oxi. B2. Ánh sáng mặt trời và chất xúc tác không phải điều kiện bắt buộc."
+        },
+        {
+          "id": "a2-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Sự oxi hoá toả nhiệt và phát sáng được gọi là gì?",
+          "answer": "sự cháy",
+          "placeholder": "Nhập tên hiện tượng",
+          "explanation": "B1. Đây là định nghĩa của sự cháy. B2. Khác với sự oxi hoá chậm (toả nhiệt nhưng không phát sáng)."
+        },
+        {
+          "id": "a2-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Biện pháp nào dùng để dập tắt đám cháy?",
+          "options": [
+            "cách li chất cháy với oxi hoặc hạ nhiệt độ xuống dưới nhiệt độ cháy",
+            "tăng nhiệt độ của đám cháy",
+            "cung cấp thêm oxi",
+            "không cần biện pháp gì"
+          ],
+          "answer": 0,
+          "explanation": "B1. Muốn dập cháy phải phá vỡ ít nhất một trong hai điều kiện gây cháy. B2. Cách li với oxi hoặc hạ nhiệt độ xuống dưới nhiệt độ cháy là hai biện pháp cơ bản."
+        },
+        {
+          "id": "a2-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 3,2 g khí metan CH4 trong không khí. Thể tích không khí cần dùng ở đktc là bao nhiêu lít (biết O2 chiếm 1/5 thể tích không khí)?",
+          "options": ["44,8 lít", "8,96 lít", "22,4 lít", "89,6 lít"],
+          "answer": 0,
+          "explanation": "B1. nCH4 = 3,2/16 = 0,2 mol. B2. CH4 + 2O2 -> CO2 + 2H2O nên nO2 = 0,4 mol, VO2 = 8,96 lít. B3. Vì O2 chiếm 1/5 không khí nên Vkk = 8,96 x 5 = 44,8 lít."
+        },
+        {
+          "id": "a2-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 6 g cacbon cần thể tích không khí (đktc) là bao nhiêu lít (O2 chiếm 1/5 thể tích không khí)?",
+          "options": ["56 lít", "11,2 lít", "22,4 lít", "28 lít"],
+          "answer": 0,
+          "explanation": "B1. nC = 6/12 = 0,5 mol. B2. C + O2 -> CO2 nên nO2 = 0,5 mol, VO2 = 11,2 lít. B3. Vkk = 11,2 x 5 = 56 lít."
+        },
+        {
+          "id": "a2-l3-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Đốt cháy 4,8 g Mg trong không khí cần bao nhiêu lít khí O2 (đktc)?",
+          "answer": "2,24",
+          "placeholder": "Nhập số lít",
+          "explanation": "B1. nMg = 4,8/24 = 0,2 mol. B2. 2Mg + O2 -> 2MgO nên nO2 = 0,1 mol. B3. V = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a2-l3-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hỗn hợp khí X gồm 80% N2 và 20% O2 theo thể tích. Trong 10 lít X có bao nhiêu lít O2?",
+          "options": ["2 lít", "8 lít", "5 lít", "4 lít"],
+          "answer": 0,
+          "explanation": "B1. Thể tích tỉ lệ thuận với phần trăm thể tích. B2. VO2 = 10 x 20% = 2 lít."
+        },
+        {
+          "id": "a2-l3-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các hiện tượng thuộc sự oxi hoá chậm.",
+          "options": [
+            "gỉ sắt để lâu trong không khí",
+            "đốt cháy than",
+            "miếng đồng để lâu ngày bị xỉn màu",
+            "nổ mìn"
+          ],
+          "answers": [0, 2],
+          "explanation": "B1. Gỉ sắt và đồng xỉn màu là quá trình oxi hoá chậm, toả nhiệt rất ít, không phát sáng. B2. Đốt cháy than và nổ mìn là sự cháy, toả nhiệt mạnh và phát sáng."
+        },
+        {
+          "id": "a2-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn hỗn hợp gồm 0,1 mol CH4 và 0,1 mol C2H2 trong khí oxi dư. Tổng số mol CO2 sinh ra là",
+          "options": ["0,3 mol", "0,2 mol", "0,4 mol", "0,5 mol"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. CH4 + 2O2 -> CO2 + 2H2O nên 0,1 mol CH4 tạo 0,1 mol CO2. B2. 2C2H2 + 5O2 -> 4CO2 + 2H2O nên 0,1 mol C2H2 tạo 0,2 mol CO2. B3. Tổng CO2 = 0,1 + 0,2 = 0,3 mol."
+        },
+        {
+          "id": "a2-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 2,24 lít hỗn hợp khí gồm CH4 và C2H4 (đktc, tỉ lệ mol 1:1) cần bao nhiêu lít O2 (đktc)?",
+          "answer": "5,6",
+          "placeholder": "Nhập số lít",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Tổng số mol hỗn hợp = 2,24/22,4 = 0,1 mol nên mỗi khí 0,05 mol. B2. CH4 + 2O2 -> CO2 + 2H2O cần 0,05 x 2 = 0,1 mol O2. B3. C2H4 + 3O2 -> 2CO2 + 2H2O cần 0,05 x 3 = 0,15 mol O2. B4. Tổng O2 = 0,25 mol, V = 0,25 x 22,4 = 5,6 lít."
+        },
+        {
+          "id": "a2-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 4,48 lít hỗn hợp khí X gồm CH4 và H2 (đktc), cần vừa đủ 5,6 lít O2 (đktc). Phần trăm thể tích CH4 trong X là",
+          "options": ["50%", "60%", "40%", "70%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol CH4, H2 lần lượt là a, b: a + b = 4,48/22,4 = 0,2. B2. CH4 + 2O2 -> CO2 + 2H2O và 2H2 + O2 -> 2H2O nên nO2 = 2a + 0,5b = 5,6/22,4 = 0,25. B3. Giải hệ: a = 0,1; b = 0,1. B4. %CH4 = 0,1/0,2 x 100% = 50%."
+        }
+      ]
     }
   ]
 }
