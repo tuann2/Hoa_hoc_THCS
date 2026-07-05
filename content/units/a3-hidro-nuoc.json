@@ -5,43 +5,651 @@
   "title": "Hiđro – Nước",
   "order": 3,
   "description": "Hiđro, nước và phần nhập môn axit – bazơ – muối.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a3-l1",
       "title": "Tính chất – điều chế hiđro; phản ứng thế; khử oxit kim loại",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính chất của khí hiđro, cách điều chế và phản ứng thế, khả năng khử oxit kim loại của H2.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a3-l1-c1",
+          "heading": "Tính chất của hiđro",
+          "body": "H2 là chất khí không màu, không mùi, nhẹ nhất trong các khí (M = 2), ít tan trong nước.\nH2 tác dụng với oxi (nổ khi tỉ lệ đúng): 2H2 + O2 -> 2H2O.\nH2 khử được nhiều oxit kim loại ở nhiệt độ cao: H2 + CuO (nhiệt độ) -> Cu + H2O."
+        },
+        {
+          "id": "a3-l1-c2",
+          "heading": "Điều chế hiđro",
+          "body": "Trong phòng thí nghiệm: cho kim loại (Zn, Fe, Al...) tác dụng với dung dịch axit (HCl, H2SO4 loãng):\nZn + 2HCl -> ZnCl2 + H2\nTrong công nghiệp: điện phân nước."
+        },
+        {
+          "id": "a3-l1-c3",
+          "heading": "Phản ứng thế",
+          "body": "Phản ứng thế là phản ứng giữa đơn chất và hợp chất, trong đó nguyên tử của đơn chất thay thế nguyên tử của một nguyên tố khác trong hợp chất.\nVí dụ: Zn + 2HCl -> ZnCl2 + H2; Fe + CuSO4 -> FeSO4 + Cu."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a3-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khí H2 có tính chất vật lí nào sau đây?",
+          "options": [
+            "nhẹ nhất trong các khí",
+            "nặng nhất trong các khí",
+            "có màu vàng lục",
+            "tan nhiều trong nước"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khối lượng mol H2 chỉ bằng 2 g/mol, nhỏ nhất trong các chất khí. B2. Vì vậy H2 là khí nhẹ nhất."
+        },
+        {
+          "id": "a3-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong phòng thí nghiệm, khí H2 thường được điều chế bằng cách nào?",
+          "options": [
+            "cho kim loại tác dụng với dung dịch axit",
+            "nhiệt phân KMnO4",
+            "chưng cất không khí lỏng",
+            "đun nóng nước"
+          ],
+          "answer": 0,
+          "explanation": "B1. Kim loại đứng trước H trong dãy hoạt động (Zn, Fe, Al...) phản ứng với axit sinh ra khí H2. B2. Đây là cách điều chế H2 phổ biến trong phòng thí nghiệm."
+        },
+        {
+          "id": "a3-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các phản ứng thế.",
+          "options": [
+            "Zn + 2HCl -> ZnCl2 + H2",
+            "Fe + CuSO4 -> FeSO4 + Cu",
+            "CaCO3 -> CaO + CO2",
+            "2H2 + O2 -> 2H2O"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Zn + 2HCl -> ZnCl2 + H2 và Fe + CuSO4 -> FeSO4 + Cu đều là đơn chất thay thế nguyên tố trong hợp chất nên là phản ứng thế. B2. CaCO3 -> CaO + CO2 là phản ứng phân huỷ; 2H2 + O2 -> 2H2O là phản ứng hoá hợp."
+        },
+        {
+          "id": "a3-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Phản ứng giữa đơn chất và hợp chất, trong đó nguyên tử đơn chất thay thế nguyên tử của một nguyên tố trong hợp chất, được gọi là phản ứng gì?",
+          "answer": "phản ứng thế",
+          "acceptedAnswers": ["thế"],
+          "placeholder": "Nhập tên loại phản ứng",
+          "explanation": "B1. Đây là định nghĩa của phản ứng thế. B2. Ví dụ điển hình là kim loại đẩy kim loại khác ra khỏi dung dịch muối, hoặc kim loại đẩy H2 ra khỏi axit."
+        },
+        {
+          "id": "a3-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "H2 tác dụng với CuO ở nhiệt độ cao tạo ra",
+          "options": ["Cu và H2O", "CuH2 và O2", "Cu2O và H2", "CuO2 và H2"],
+          "answer": 0,
+          "explanation": "B1. H2 khử CuO, chiếm lấy oxi của oxit tạo nước. B2. Phương trình: H2 + CuO -> Cu + H2O."
+        },
+        {
+          "id": "a3-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 6,5 g Zn tác dụng với dung dịch HCl dư. Thể tích H2 sinh ra ở đktc là",
+          "options": ["2,24 lít", "4,48 lít", "1,12 lít", "0,56 lít"],
+          "answer": 0,
+          "explanation": "B1. nZn = 6,5/65 = 0,1 mol. B2. Zn + 2HCl -> ZnCl2 + H2 nên nH2 = 0,1 mol. B3. V = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a3-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Khử hoàn toàn 8 g CuO bằng khí H2 ở nhiệt độ cao. Khối lượng Cu thu được là",
+          "options": ["6,4 g", "8 g", "4 g", "12,8 g"],
+          "answer": 0,
+          "explanation": "B1. nCuO = 8/80 = 0,1 mol. B2. H2 + CuO -> Cu + H2O nên nCu = 0,1 mol. B3. mCu = 0,1 x 64 = 6,4 g."
+        },
+        {
+          "id": "a3-l1-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 5,4 g Al tác dụng với dung dịch HCl dư. Thể tích H2 sinh ra ở đktc là bao nhiêu lít?",
+          "answer": "6,72",
+          "placeholder": "Nhập số lít",
+          "explanation": "B1. nAl = 5,4/27 = 0,2 mol. B2. 2Al + 6HCl -> 2AlCl3 + 3H2 nên nH2 = 0,2 x 3/2 = 0,3 mol. B3. V = 0,3 x 22,4 = 6,72 lít."
+        },
+        {
+          "id": "a3-l1-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Khử hoàn toàn 16 g Fe2O3 bằng khí H2 dư ở nhiệt độ cao. Khối lượng Fe thu được là",
+          "options": ["11,2 g", "16 g", "5,6 g", "22,4 g"],
+          "answer": 0,
+          "explanation": "B1. nFe2O3 = 16/160 = 0,1 mol. B2. Fe2O3 + 3H2 -> 2Fe + 3H2O nên nFe = 0,2 mol. B3. mFe = 0,2 x 56 = 11,2 g."
+        },
+        {
+          "id": "a3-l1-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các oxit có thể bị khử bởi khí H2 ở nhiệt độ cao.",
+          "options": ["CuO", "Fe2O3", "Na2O", "CaO"],
+          "answers": [0, 1],
+          "explanation": "B1. H2 khử được oxit của các kim loại đứng sau Al trong dãy hoạt động hoá học, như CuO và Fe2O3. B2. Na2O và CaO là oxit của kim loại hoạt động mạnh, H2 không khử được ở điều kiện thông thường."
+        },
+        {
+          "id": "a3-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn khí H2 dư qua ống nghiệm chứa 24 g hỗn hợp CuO và Fe2O3 nung nóng. Sau phản ứng thu được 17,6 g chất rắn (hỗn hợp Cu và Fe). Khối lượng oxi đã bị khử là",
+          "options": ["6,4 g", "8 g", "4 g", "12,8 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo bảo toàn khối lượng, khối lượng oxi bị lấy đi bằng độ giảm khối lượng chất rắn. B2. mO = 24 - 17,6 = 6,4 g."
+        },
+        {
+          "id": "a3-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 11 g hỗn hợp Al và Fe tác dụng với dung dịch HCl dư, thu được 8,96 lít khí H2 (đktc). Biết số mol Al gấp đôi số mol Fe. Số mol Fe trong hỗn hợp là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol Fe là x, số mol Al là 2x. B2. Al + HCl: 2Al + 6HCl -> 2AlCl3 + 3H2 nên nH2 từ Al = 2x x 3/2 = 3x. Fe + 2HCl -> FeCl2 + H2 nên nH2 từ Fe = x. B3. Tổng H2 = 4x = 8,96/22,4 = 0,4 nên x = 0,1."
+        },
+        {
+          "id": "a3-l1-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Khử hoàn toàn 20 g hỗn hợp CuO và Fe2O3 bằng khí H2 dư, thu được 5,4 g H2O. Khối lượng hỗn hợp kim loại thu được là",
+          "options": ["15,2 g", "14,6 g", "16,8 g", "13,4 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2O = 5,4/18 = 0,3 mol, đúng bằng số mol nguyên tố O bị lấy khỏi oxit. B2. mO = 0,3 x 16 = 4,8 g. B3. Khối lượng kim loại = 20 - 4,8 = 15,2 g."
+        }
+      ]
     },
     {
       "id": "a3-l2",
       "title": "Nước: tính chất; phản ứng với kim loại/oxit",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Thành phần, tính chất của nước và phản ứng của nước với kim loại mạnh, oxit bazơ, oxit axit.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a3-l2-c1",
+          "heading": "Thành phần và tính chất của nước",
+          "body": "Nước có công thức H2O, gồm 2 nguyên tử H và 1 nguyên tử O (tỉ lệ khối lượng H : O = 1 : 8).\nNước là chất lỏng không màu, không mùi, không vị, sôi ở 100 độ C, hoà tan được nhiều chất."
+        },
+        {
+          "id": "a3-l2-c2",
+          "heading": "Nước tác dụng với kim loại",
+          "body": "Nước tác dụng được với các kim loại mạnh (Na, K, Ca, Ba...) ở nhiệt độ thường, tạo bazơ tan và khí H2:\n2Na + 2H2O -> 2NaOH + H2"
+        },
+        {
+          "id": "a3-l2-c3",
+          "heading": "Nước tác dụng với oxit",
+          "body": "Nước tác dụng với oxit bazơ của kim loại mạnh tạo bazơ tan (kiềm): Na2O + H2O -> 2NaOH.\nNước tác dụng với oxit axit tạo axit: CO2 + H2O -> H2CO3."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a3-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Thành phần của nước gồm hai nguyên tố nào?",
+          "options": [
+            "hiđro và oxi",
+            "cacbon và oxi",
+            "hiđro và nitơ",
+            "oxi và lưu huỳnh"
+          ],
+          "answer": 0,
+          "explanation": "B1. Công thức của nước là H2O. B2. Vậy thành phần gồm hiđro và oxi."
+        },
+        {
+          "id": "a3-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nước tác dụng với Na ở nhiệt độ thường tạo ra",
+          "options": ["NaOH và H2", "Na2O và H2", "NaOH và O2", "Na2O và O2"],
+          "answer": 0,
+          "explanation": "B1. Na là kim loại mạnh, phản ứng với nước ở nhiệt độ thường. B2. Phương trình: 2Na + 2H2O -> 2NaOH + H2."
+        },
+        {
+          "id": "a3-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các kim loại tác dụng được với nước ở nhiệt độ thường.",
+          "options": ["Na", "K", "Fe", "Cu"],
+          "answers": [0, 1],
+          "explanation": "B1. Na và K là kim loại mạnh, phản ứng với nước ngay ở nhiệt độ thường. B2. Fe và Cu không phản ứng với nước ở nhiệt độ thường."
+        },
+        {
+          "id": "a3-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nước tác dụng với oxit axit tạo ra loại hợp chất gì?",
+          "answer": "axit",
+          "placeholder": "Nhập tên loại hợp chất",
+          "explanation": "B1. Oxit axit + nước tạo axit tương ứng. B2. Ví dụ: CO2 + H2O -> H2CO3."
+        },
+        {
+          "id": "a3-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Tỉ lệ khối lượng H : O trong phân tử nước là",
+          "options": ["1:8", "2:1", "1:16", "8:1"],
+          "answer": 0,
+          "explanation": "B1. Khối lượng 2H = 2, khối lượng O = 16. B2. Tỉ lệ H : O = 2 : 16 = 1 : 8."
+        },
+        {
+          "id": "a3-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 4,6 g Na tác dụng với nước dư. Thể tích khí H2 sinh ra ở đktc là",
+          "options": ["2,24 lít", "4,48 lít", "1,12 lít", "0,56 lít"],
+          "answer": 0,
+          "explanation": "B1. nNa = 4,6/23 = 0,2 mol. B2. 2Na + 2H2O -> 2NaOH + H2 nên nH2 = 0,1 mol. B3. V = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a3-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoà tan 6,2 g Na2O vào nước dư. Khối lượng NaOH thu được là",
+          "options": ["8 g", "6,2 g", "4 g", "16 g"],
+          "answer": 0,
+          "explanation": "B1. nNa2O = 6,2/62 = 0,1 mol. B2. Na2O + H2O -> 2NaOH nên nNaOH = 0,2 mol. B3. mNaOH = 0,2 x 40 = 8 g."
+        },
+        {
+          "id": "a3-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 0,1 mol CaO tác dụng với nước dư. Số mol Ca(OH)2 tạo thành là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. CaO + H2O -> Ca(OH)2 có tỉ lệ 1:1. B2. Vậy nCa(OH)2 = 0,1 mol."
+        },
+        {
+          "id": "a3-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn 2,24 lít khí CO2 (đktc) vào nước dư. Số mol H2CO3 tạo thành tối đa là",
+          "options": ["0,1 mol", "0,2 mol", "0,05 mol", "0,4 mol"],
+          "answer": 0,
+          "explanation": "B1. nCO2 = 2,24/22,4 = 0,1 mol. B2. CO2 + H2O -> H2CO3 có tỉ lệ 1:1 nên nH2CO3 = 0,1 mol."
+        },
+        {
+          "id": "a3-l2-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các oxit tác dụng được với nước ở điều kiện thường.",
+          "options": ["Na2O", "CaO", "CuO", "CO2"],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Na2O, CaO là oxit bazơ tan, phản ứng với nước tạo kiềm. B2. CO2 là oxit axit, phản ứng với nước tạo axit. B3. CuO là oxit bazơ không tan, không phản ứng với nước."
+        },
+        {
+          "id": "a3-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 10,8 g hỗn hợp Na và Na2O tác dụng với nước dư, thu được dung dịch NaOH và 2,24 lít khí H2 (đktc, chỉ Na phản ứng sinh khí). Khối lượng Na2O trong hỗn hợp là",
+          "options": ["6,2 g", "4,6 g", "5,6 g", "8,2 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2 = 2,24/22,4 = 0,1 mol. B2. 2Na + 2H2O -> 2NaOH + H2 có tỉ lệ Na : H2 = 2 : 1 nên nNa = 0,2 mol, mNa = 4,6 g. B3. mNa2O = 10,8 - 4,6 = 6,2 g."
+        },
+        {
+          "id": "a3-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 3,1 g Na2O vào 96,9 g nước. Nồng độ % của dung dịch NaOH thu được là bao nhiêu?",
+          "answer": "4",
+          "placeholder": "Nhập giá trị (%)",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nNa2O = 3,1/62 = 0,05 mol. B2. Na2O + H2O -> 2NaOH nên nNaOH = 0,1 mol, mNaOH = 4 g. B3. Khối lượng dung dịch = 3,1 + 96,9 = 100 g (bảo toàn khối lượng). C% = 4/100 x 100% = 4%."
+        },
+        {
+          "id": "a3-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho m gam Ca tác dụng hết với nước, thu được dung dịch Ca(OH)2 và 3,36 lít khí H2 (đktc). Giá trị của m là",
+          "options": ["6 g", "3 g", "12 g", "7,5 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2 = 3,36/22,4 = 0,15 mol. B2. Ca + 2H2O -> Ca(OH)2 + H2 có tỉ lệ Ca : H2 = 1 : 1 nên nCa = 0,15 mol. B3. m = 0,15 x 40 = 6 g."
+        }
+      ]
     },
     {
       "id": "a3-l3",
-      "title": "Axit – bazơ – muối: định nghĩa, phân loại, gọi tên",
+      "title": "Axit – bazơ – muối: định nghĩa, phân loại, gọi tên (mở đầu)",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Định nghĩa, phân loại và cách gọi tên bước đầu của axit, bazơ và muối.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a3-l3-c1",
+          "heading": "Axit",
+          "body": "Axit là hợp chất mà phân tử gồm một hay nhiều nguyên tử H liên kết với gốc axit.\nPhân loại: axit không có oxi (HCl, H2S) và axit có oxi (H2SO4, HNO3)."
+        },
+        {
+          "id": "a3-l3-c2",
+          "heading": "Bazơ",
+          "body": "Bazơ là hợp chất mà phân tử gồm một nguyên tử kim loại liên kết với một hay nhiều nhóm OH.\nPhân loại: bazơ tan (kiềm: NaOH, KOH, Ca(OH)2) và bazơ không tan (Cu(OH)2, Fe(OH)3)."
+        },
+        {
+          "id": "a3-l3-c3",
+          "heading": "Muối",
+          "body": "Muối là hợp chất mà phân tử gồm kim loại (hoặc nhóm NH4) liên kết với gốc axit.\nPhân loại: muối trung hoà (không còn H trong gốc axit, ví dụ NaCl, Na2CO3) và muối axit (còn H trong gốc axit, ví dụ NaHCO3, NaHSO4).\nTên gọi muối: tên kim loại + tên gốc axit."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a3-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Axit là hợp chất mà phân tử gồm",
+          "options": [
+            "một hay nhiều nguyên tử H liên kết với gốc axit",
+            "kim loại liên kết với gốc axit",
+            "kim loại liên kết với nhóm OH",
+            "phi kim liên kết với oxi"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đây là định nghĩa của axit. B2. Ví dụ: HCl, H2SO4 đều gồm H liên kết với gốc axit."
+        },
+        {
+          "id": "a3-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Bazơ là hợp chất mà phân tử gồm",
+          "options": [
+            "kim loại liên kết với nhóm OH",
+            "hiđro liên kết với gốc axit",
+            "kim loại liên kết với gốc axit",
+            "phi kim liên kết với hiđro"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đây là định nghĩa của bazơ. B2. Ví dụ: NaOH, Ca(OH)2 đều gồm kim loại liên kết với nhóm OH."
+        },
+        {
+          "id": "a3-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các muối trung hoà.",
+          "options": ["NaCl", "NaHCO3", "Na2CO3", "NaHSO4"],
+          "answers": [0, 2],
+          "explanation": "B1. NaCl và Na2CO3 không còn nguyên tử H trong gốc axit nên là muối trung hoà. B2. NaHCO3 và NaHSO4 còn nguyên tử H nên là muối axit."
+        },
+        {
+          "id": "a3-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Muối còn nguyên tử H trong gốc axit được gọi là muối gì?",
+          "answer": "muối axit",
+          "acceptedAnswers": ["axit"],
+          "placeholder": "Nhập tên loại muối",
+          "explanation": "B1. Ví dụ NaHCO3, NaHSO4 còn H trong gốc axit. B2. Đây gọi là muối axit, phân biệt với muối trung hoà."
+        },
+        {
+          "id": "a3-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "HCl thuộc loại axit nào?",
+          "options": ["axit không có oxi", "axit có oxi", "bazơ", "muối"],
+          "answer": 0,
+          "explanation": "B1. Gốc axit -Cl không chứa oxi. B2. Vậy HCl là axit không có oxi."
+        },
+        {
+          "id": "a3-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Tên gọi của muối NaNO3 là",
+          "options": [
+            "natri nitrat",
+            "natri nitrit",
+            "natri nitrua",
+            "natri nitro"
+          ],
+          "answer": 0,
+          "explanation": "B1. Gốc NO3 gọi là nitrat. B2. Kết hợp với kim loại natri, tên gọi là natri nitrat."
+        },
+        {
+          "id": "a3-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hoá trị của gốc axit SO4 (trong H2SO4) là bao nhiêu?",
+          "options": ["II", "I", "III", "IV"],
+          "answer": 0,
+          "explanation": "B1. H2SO4 có 2 nguyên tử H liên kết với gốc SO4. B2. Vì H có hoá trị I nên gốc SO4 có hoá trị II."
+        },
+        {
+          "id": "a3-l3-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Muối Na2CO3 có tên gọi là gì?",
+          "answer": "natri cacbonat",
+          "placeholder": "Nhập tên gọi",
+          "explanation": "B1. Gốc CO3 gọi là cacbonat. B2. Kết hợp với natri, tên gọi là natri cacbonat."
+        },
+        {
+          "id": "a3-l3-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Công thức hoá học của muối kali clorua là",
+          "options": ["KCl", "K2Cl", "KCl2", "K2Cl2"],
+          "answer": 0,
+          "explanation": "B1. K hoá trị I, gốc Cl hoá trị I. B2. Áp dụng quy tắc hoá trị, công thức là KCl."
+        },
+        {
+          "id": "a3-l3-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các bazơ tan (kiềm).",
+          "options": ["NaOH", "Cu(OH)2", "Ca(OH)2", "Fe(OH)3"],
+          "answers": [0, 2],
+          "explanation": "B1. NaOH và Ca(OH)2 là bazơ tan tốt trong nước (kiềm). B2. Cu(OH)2 và Fe(OH)3 là bazơ không tan."
+        },
+        {
+          "id": "a3-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Muối M(NO3)2 có phân tử khối 164 (nhóm NO3 có khối lượng 62). Nguyên tử khối M là",
+          "options": ["40", "24", "56", "65"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối M(NO3)2 = M + 2 x 62 = 164. B2. Giải ra M = 40, ứng với canxi (Ca), khớp Ca(NO3)2."
+        },
+        {
+          "id": "a3-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Muối MHCO3 có phân tử khối 84 (nhóm HCO3 có khối lượng 61). Nguyên tử khối của M là bao nhiêu?",
+          "answer": "23",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối MHCO3 = M + 61 = 84. B2. Giải ra M = 23, ứng với natri (Na), khớp NaHCO3."
+        },
+        {
+          "id": "a3-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Muối M2SO4 có phân tử khối 174 (nhóm SO4 có khối lượng 96). Nguyên tử khối M là",
+          "options": ["39", "23", "32", "20"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối M2SO4 = 2M + 96 = 174. B2. Giải ra M = 39, ứng với kali (K), khớp K2SO4."
+        }
+      ]
     },
     {
       "id": "a3-l4",
       "title": "Nâng cao: khử hỗn hợp oxit, bài toán H2 + oxit kim loại",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phương pháp bảo toàn nguyên tố oxi và bảo toàn khối lượng để giải bài toán khử hỗn hợp oxit kim loại bằng H2.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a3-l4-c1",
+          "heading": "Khử hỗn hợp oxit bằng H2",
+          "body": "Khi dẫn H2 dư qua hỗn hợp nhiều oxit kim loại (đứng sau Al trong dãy hoạt động) nung nóng, H2 khử lần lượt các oxit thành kim loại và nước.\nÁp dụng bảo toàn nguyên tố oxi và bảo toàn khối lượng để tính nhanh mà không cần viết riêng từng phương trình."
+        },
+        {
+          "id": "a3-l4-c2",
+          "heading": "Mẹo bảo toàn oxi",
+          "body": "Số mol H2 phản ứng = số mol nguyên tố O bị lấy khỏi oxit = số mol H2O sinh ra.\nKhối lượng kim loại thu được = khối lượng oxit ban đầu - khối lượng oxi đã mất."
+        },
+        {
+          "id": "a3-l4-c3",
+          "heading": "Bài toán H2 dư/thiếu và hiệu suất",
+          "body": "Nếu đề cho hiệu suất phản ứng khử, khối lượng kim loại thực tế thu được nhỏ hơn khối lượng lí thuyết theo tỉ lệ hiệu suất.\nNếu H2 không đủ, chỉ một phần oxit bị khử, phần oxit còn lại vẫn ở dạng oxit dư."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a3-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi H2 khử oxit kim loại, sản phẩm luôn có",
+          "options": [
+            "kim loại và nước",
+            "kim loại và oxi",
+            "muối và nước",
+            "oxit mới"
+          ],
+          "answer": 0,
+          "explanation": "B1. H2 lấy nguyên tố oxi của oxit để tạo nước. B2. Phần kim loại còn lại ở dạng đơn chất."
+        },
+        {
+          "id": "a3-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Số mol H2 phản ứng trong phản ứng khử oxit bằng số mol nguyên tố nào bị lấy đi?",
+          "options": [
+            "oxi",
+            "kim loại",
+            "hiđro trong oxit",
+            "không nguyên tố nào"
+          ],
+          "answer": 0,
+          "explanation": "B1. Mỗi phân tử H2 kết hợp với 1 nguyên tử O để tạo H2O. B2. Vì vậy số mol H2 phản ứng bằng số mol O bị lấy khỏi oxit."
+        },
+        {
+          "id": "a3-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các oxit có thể bị khử bởi H2 ở nhiệt độ cao.",
+          "options": ["CuO", "Fe2O3", "Na2O", "CaO"],
+          "answers": [0, 1],
+          "explanation": "B1. CuO và Fe2O3 là oxit của kim loại đứng sau Al, bị H2 khử được. B2. Na2O và CaO là oxit của kim loại hoạt động mạnh, không bị H2 khử."
+        },
+        {
+          "id": "a3-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Sản phẩm khí (hơi) sinh ra khi H2 khử oxit kim loại là gì?",
+          "answer": "nước",
+          "acceptedAnswers": ["H2O", "hơi nước"],
+          "placeholder": "Nhập tên sản phẩm",
+          "explanation": "B1. H2 kết hợp với oxi trong oxit. B2. Sản phẩm là nước (H2O)."
+        },
+        {
+          "id": "a3-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nếu hiệu suất phản ứng khử là 80%, khối lượng kim loại thực tế thu được so với lượng lí thuyết là",
+          "options": [
+            "bằng 80% lượng lí thuyết",
+            "bằng 100% lượng lí thuyết",
+            "lớn hơn lượng lí thuyết",
+            "không liên quan đến lượng lí thuyết"
+          ],
+          "answer": 0,
+          "explanation": "B1. Hiệu suất phản ứng cho biết tỉ lệ giữa lượng thực tế và lượng lí thuyết. B2. Với hiệu suất 80%, lượng thực tế bằng 80% lượng lí thuyết."
+        },
+        {
+          "id": "a3-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn khí H2 dư qua 24 g CuO nung nóng. Khối lượng Cu thu được là",
+          "options": ["19,2 g", "24 g", "16 g", "32 g"],
+          "answer": 0,
+          "explanation": "B1. nCuO = 24/80 = 0,3 mol. B2. H2 + CuO -> Cu + H2O nên nCu = 0,3 mol. B3. mCu = 0,3 x 64 = 19,2 g."
+        },
+        {
+          "id": "a3-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Dẫn khí H2 dư qua 32 g Fe2O3 nung nóng. Khối lượng Fe thu được là",
+          "options": ["22,4 g", "32 g", "16 g", "44,8 g"],
+          "answer": 0,
+          "explanation": "B1. nFe2O3 = 32/160 = 0,2 mol. B2. Fe2O3 + 3H2 -> 2Fe + 3H2O nên nFe = 0,4 mol. B3. mFe = 0,4 x 56 = 22,4 g."
+        },
+        {
+          "id": "a3-l4-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Khử hoàn toàn 20 g hỗn hợp CuO và Fe2O3 bằng khí H2 dư, thu được 14,4 g hỗn hợp kim loại. Khối lượng oxi đã bị khử là bao nhiêu gam?",
+          "answer": "5,6",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Áp dụng bảo toàn khối lượng: mO = m oxit - m kim loại. B2. mO = 20 - 14,4 = 5,6 g."
+        },
+        {
+          "id": "a3-l4-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Từ hỗn hợp oxit ở câu trên (khối lượng oxi bị khử là 5,6 g), số mol H2 đã phản ứng là",
+          "options": ["0,35 mol", "0,2 mol", "0,4 mol", "0,3 mol"],
+          "answer": 0,
+          "explanation": "B1. Số mol H2 phản ứng bằng số mol O bị lấy đi. B2. nO = 5,6/16 = 0,35 mol, nên nH2 = 0,35 mol."
+        },
+        {
+          "id": "a3-l4-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các đại lượng thường dùng khi giải bài toán khử hỗn hợp oxit bằng H2.",
+          "options": [
+            "bảo toàn khối lượng",
+            "bảo toàn nguyên tố oxi",
+            "số mol H2 bằng số mol O bị khử",
+            "màu sắc của oxit"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phương pháp đầu là công cụ tính toán chuẩn cho dạng bài này. B2. Màu sắc oxit không phải đại lượng dùng để tính toán định lượng."
+        },
+        {
+          "id": "a3-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn khí H2 dư qua 40 g hỗn hợp CuO và Fe2O3 nung nóng, thu được hỗn hợp kim loại và 10,8 g H2O. Khối lượng hỗn hợp kim loại thu được là",
+          "options": ["30,4 g", "29,2 g", "32,8 g", "28 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2O = 10,8/18 = 0,6 mol, bằng số mol O bị lấy khỏi oxit. B2. mO = 0,6 x 16 = 9,6 g. B3. Khối lượng kim loại = 40 - 9,6 = 30,4 g."
+        },
+        {
+          "id": "a3-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Khử hoàn toàn hỗn hợp gồm 0,1 mol CuO và 0,1 mol Fe2O3 bằng khí H2 dư. Thể tích H2 (đktc) đã phản ứng là bao nhiêu lít?",
+          "answer": "8,96",
+          "placeholder": "Nhập số lít",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. H2 + CuO -> Cu + H2O cần 0,1 mol H2 cho CuO. B2. Fe2O3 + 3H2 -> 2Fe + 3H2O cần 0,1 x 3 = 0,3 mol H2 cho Fe2O3. B3. Tổng H2 = 0,4 mol, V = 0,4 x 22,4 = 8,96 lít."
+        },
+        {
+          "id": "a3-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Dẫn 6,72 lít khí H2 (đktc) qua 19,2 g hỗn hợp CuO và Fe2O3 nung nóng đến khi phản ứng hoàn toàn (H2 vừa đủ), biết số mol CuO gấp đôi số mol Fe2O3. Khối lượng hỗn hợp kim loại thu được là",
+          "options": ["14,4 g", "15,2 g", "13,6 g", "16,8 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2 = 6,72/22,4 = 0,3 mol, đúng bằng số mol O bị lấy khỏi oxit. B2. mO = 0,3 x 16 = 4,8 g. B3. Khối lượng kim loại = 19,2 - 4,8 = 14,4 g."
+        }
+      ]
     }
   ]
 }
