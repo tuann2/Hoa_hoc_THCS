@@ -5,88 +5,1417 @@
   "title": "Nền tảng hoá học",
   "order": 1,
   "description": "Kiến thức nền Hoá 8: nguyên tử, công thức, mol, bảo toàn và các dạng toán mở đầu.",
-  "status": "coming-soon",
+  "status": "available",
   "lessons": [
     {
       "id": "a1-l1",
       "title": "Chất – hỗn hợp – tách chất; nguyên tử, p – n – e",
       "order": 1,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phân biệt chất tinh khiết và hỗn hợp, các phương pháp tách chất, và cấu tạo nguyên tử (proton, nơtron, electron).",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l1-c1",
+          "heading": "Chất tinh khiết và hỗn hợp",
+          "body": "Chất tinh khiết chỉ gồm một chất duy nhất, có tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy...). Hỗn hợp gồm hai hay nhiều chất trộn lẫn, tính chất phụ thuộc thành phần.\nVí dụ: nước cất là chất tinh khiết; nước muối, không khí, nước chanh là hỗn hợp."
+        },
+        {
+          "id": "a1-l1-c2",
+          "heading": "Các phương pháp tách chất",
+          "body": "Lọc: tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc.\nCô cạn: làm bay hơi dung môi để thu chất tan rắn (tách muối ăn khỏi nước muối).\nChưng cất: dựa vào sự khác nhau về nhiệt độ sôi để tách các chất lỏng tan lẫn vào nhau.\nChiết: tách hai chất lỏng không tan vào nhau (dầu ăn và nước) bằng phễu chiết."
+        },
+        {
+          "id": "a1-l1-c3",
+          "heading": "Cấu tạo nguyên tử",
+          "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào sau đây là chất tinh khiết?",
+          "options": ["nước cất", "nước khoáng", "nước biển", "nước chanh"],
+          "answer": 0,
+          "explanation": "B1. Nước cất chỉ gồm phân tử H2O, không lẫn chất khác nên là chất tinh khiết. B2. Nước khoáng, nước biển, nước chanh đều là hỗn hợp vì chứa nhiều chất tan khác nhau."
+        },
+        {
+          "id": "a1-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong nguyên tử, hạt nào mang điện tích dương?",
+          "options": ["proton", "electron", "nơtron", "cả electron và nơtron"],
+          "answer": 0,
+          "explanation": "B1. Proton mang điện dương, nơtron không mang điện, electron mang điện âm. B2. Vậy hạt mang điện dương là proton."
+        },
+        {
+          "id": "a1-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các chất là hỗn hợp.",
+          "options": [
+            "nước muối",
+            "khí oxi tinh khiết",
+            "không khí",
+            "nước chanh"
+          ],
+          "answers": [0, 2, 3],
+          "explanation": "B1. Nước muối, không khí, nước chanh đều chứa từ hai chất trở lên nên là hỗn hợp. B2. Khí oxi tinh khiết chỉ gồm một chất O2 nên là chất tinh khiết."
+        },
+        {
+          "id": "a1-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Phương pháp nào dùng để tách chất rắn không tan ra khỏi chất lỏng?",
+          "answer": "lọc",
+          "acceptedAnswers": ["phương pháp lọc"],
+          "placeholder": "Nhập tên phương pháp",
+          "explanation": "B1. Dùng giấy lọc hoặc phễu lọc, chất rắn không tan bị giữ lại, chất lỏng chảy qua. B2. Đây gọi là phương pháp lọc."
+        },
+        {
+          "id": "a1-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Để tách muối ăn ra khỏi dung dịch nước muối, ta dùng phương pháp nào?",
+          "options": ["cô cạn", "lọc", "chiết", "dùng nam châm"],
+          "answer": 0,
+          "explanation": "B1. Đun cho nước bay hơi hết, muối ăn (chất tan rắn) sẽ kết tinh lại. B2. Đây là phương pháp cô cạn."
+        },
+        {
+          "id": "a1-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nguyên tử X có 11 proton và 12 nơtron. Số electron trong X là",
+          "options": ["11", "12", "23", "1"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử trung hoà điện nên số electron bằng số proton. B2. X có 11 proton nên có 11 electron."
+        },
+        {
+          "id": "a1-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nguyên tử Y có 17 proton và 18 nơtron. Số khối của Y là",
+          "options": ["35", "17", "18", "33"],
+          "answer": 0,
+          "explanation": "B1. Số khối bằng tổng số proton và số nơtron. B2. Số khối = 17 + 18 = 35."
+        },
+        {
+          "id": "a1-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phương pháp phù hợp để tách hỗn hợp dầu ăn và nước.",
+          "options": ["chiết", "lọc", "cô cạn", "chưng cất"],
+          "answers": [0, 3],
+          "explanation": "B1. Dầu ăn và nước không tan lẫn vào nhau nên có thể tách bằng chiết (dùng phễu chiết). B2. Cũng có thể chưng cất vì hai chất có nhiệt độ sôi khác nhau. B3. Lọc chỉ tách được rắn khỏi lỏng; cô cạn dùng khi có chất tan rắn, không phù hợp ở đây."
+        },
+        {
+          "id": "a1-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nguyên tử R có số khối bằng 24 và có 12 proton. Số nơtron trong R là bao nhiêu?",
+          "answer": "12",
+          "placeholder": "Nhập số nơtron",
+          "explanation": "B1. Số khối bằng số proton cộng số nơtron. B2. Số nơtron = 24 - 12 = 12."
+        },
+        {
+          "id": "a1-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nguyên tử M có 19 proton, biết số nơtron nhiều hơn số proton là 1. Số khối của M là",
+          "options": ["39", "38", "40", "20"],
+          "answer": 0,
+          "explanation": "B1. Số nơtron = số proton + 1 = 19 + 1 = 20. B2. Số khối = số proton + số nơtron = 19 + 20 = 39."
+        },
+        {
+          "id": "a1-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nguyên tử X có tổng số hạt proton, nơtron, electron là 34, biết số hạt mang điện nhiều hơn số hạt không mang điện là 10. Số proton của X là",
+          "options": ["11", "12", "10", "13"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi p là số proton (bằng số electron), n là số nơtron. B2. Tổng số hạt: 2p + n = 34. B3. Số hạt mang điện nhiều hơn không mang điện: 2p - n = 10. B4. Cộng hai phương trình: 4p = 44 nên p = 11."
+        },
+        {
+          "id": "a1-l1-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Tổng số hạt proton, nơtron, electron trong nguyên tử X là 36, biết số hạt mang điện gấp đôi số hạt không mang điện. Số proton của X là",
+          "options": ["12", "13", "11", "14"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi p là số proton, n là số nơtron; số hạt mang điện là 2p (proton và electron). B2. Theo đề: 2p = 2n nên p = n. B3. Tổng số hạt: 2p + n = 36, thay n = p được 3p = 36 nên p = 12."
+        },
+        {
+          "id": "a1-l1-q13",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nguyên tử A có tổng số hạt là 52, biết số hạt mang điện nhiều hơn số hạt không mang điện là 16. Số electron của A là bao nhiêu?",
+          "answer": "17",
+          "placeholder": "Nhập số electron",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi p là số proton (bằng số electron), n là số nơtron. B2. Tổng số hạt: 2p + n = 52. B3. Số hạt mang điện nhiều hơn không mang điện: 2p - n = 16. B4. Cộng hai phương trình: 4p = 68 nên p = 17, tức số electron = 17."
+        }
+      ]
     },
     {
       "id": "a1-l2",
       "title": "Nguyên tố hoá học – nguyên tử khối; sơ lược bảng tuần hoàn",
       "order": 2,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Kí hiệu hoá học, nguyên tử khối, phân tử khối và cách sắp xếp nguyên tố trong bảng tuần hoàn.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l2-c1",
+          "heading": "Nguyên tố hoá học và kí hiệu",
+          "body": "Nguyên tố hoá học là tập hợp các nguyên tử có cùng số proton (số hiệu nguyên tử). Mỗi nguyên tố có một kí hiệu hoá học gồm 1 hoặc 2 chữ cái, chữ cái đầu viết hoa.\nVí dụ: H (hiđro, có 1 proton), O (oxi, có 8 proton), Na (natri, có 11 proton)."
+        },
+        {
+          "id": "a1-l2-c2",
+          "heading": "Nguyên tử khối",
+          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65."
+        },
+        {
+          "id": "a1-l2-c3",
+          "heading": "Sơ lược bảng tuần hoàn",
+          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Kí hiệu hoá học của nguyên tố oxi là",
+          "options": ["O", "Ox", "Oxi", "O2"],
+          "answer": 0,
+          "explanation": "B1. Mỗi nguyên tố có kí hiệu hoá học riêng, thường 1-2 chữ cái. B2. Nguyên tố oxi có kí hiệu là O."
+        },
+        {
+          "id": "a1-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Nguyên tử khối của cacbon là",
+          "options": ["12", "14", "16", "6"],
+          "answer": 0,
+          "explanation": "B1. Đây là giá trị cần nhớ trong bảng nguyên tử khối. B2. Nguyên tử khối của cacbon (C) là 12."
+        },
+        {
+          "id": "a1-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các kí hiệu hoá học viết đúng quy tắc (chữ cái đầu viết hoa).",
+          "options": ["Na", "Ca", "cl", "fe"],
+          "answers": [0, 1],
+          "explanation": "B1. Na (natri) và Ca (canxi) viết đúng quy tắc, chữ cái đầu viết hoa. B2. Kí hiệu đúng của clo là Cl và của sắt là Fe, không phải \"cl\" hay \"fe\"."
+        },
+        {
+          "id": "a1-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Số hiệu nguyên tử của một nguyên tố bằng số hạt nào trong nguyên tử?",
+          "answer": "proton",
+          "acceptedAnswers": ["số proton", "p"],
+          "placeholder": "Nhập tên hạt",
+          "explanation": "B1. Số hiệu nguyên tử chính là số proton trong hạt nhân. B2. Mỗi nguyên tố có số hiệu nguyên tử (số proton) khác nhau và duy nhất."
+        },
+        {
+          "id": "a1-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong bảng tuần hoàn, các nguyên tố được sắp xếp theo chiều tăng dần của đại lượng nào?",
+          "options": [
+            "số hiệu nguyên tử",
+            "nguyên tử khối",
+            "số nơtron",
+            "số lớp electron"
+          ],
+          "answer": 0,
+          "explanation": "B1. Bảng tuần hoàn hiện đại sắp xếp nguyên tố theo chiều tăng dần điện tích hạt nhân, tức số hiệu nguyên tử. B2. Đây là căn cứ sắp xếp chính, khác với cách sắp theo nguyên tử khối ban đầu của Mendeleev."
+        },
+        {
+          "id": "a1-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phân tử khối của khí oxi O2 là",
+          "options": ["32", "16", "8", "64"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối của O là 16. B2. Phân tử O2 gồm 2 nguyên tử O nên phân tử khối = 2 x 16 = 32."
+        },
+        {
+          "id": "a1-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phân tử khối của CaCO3 là",
+          "options": ["100", "116", "84", "60"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Ca = 40, C = 12, O = 16. B2. Phân tử khối CaCO3 = 40 + 12 + 3 x 16 = 40 + 12 + 48 = 100."
+        },
+        {
+          "id": "a1-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các nguyên tố có nguyên tử khối lớn hơn 30.",
+          "options": ["Na", "S", "Cl", "Mg"],
+          "answers": [1, 2],
+          "explanation": "B1. Nguyên tử khối: Na = 23, S = 32, Cl = 35,5, Mg = 24. B2. Chỉ có S (32) và Cl (35,5) lớn hơn 30."
+        },
+        {
+          "id": "a1-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Phân tử khối của khí cacbonic CO2 là bao nhiêu?",
+          "answer": "44",
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Nguyên tử khối: C = 12, O = 16. B2. Phân tử khối CO2 = 12 + 2 x 16 = 44."
+        },
+        {
+          "id": "a1-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nguyên tử X có nguyên tử khối gấp 2 lần nguyên tử khối của cacbon. Nguyên tử khối của X là",
+          "options": ["24", "12", "32", "16"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối cacbon là 12. B2. X = 2 x 12 = 24, ứng với magie (Mg)."
+        },
+        {
+          "id": "a1-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hợp chất A có công thức R2O, phân tử khối bằng 62. Nguyên tử khối của R là",
+          "options": ["23", "24", "39", "7"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O = 2R + 16 = 62. B2. Giải ra 2R = 46 nên R = 23, ứng với natri (Na), khớp Na2O."
+        },
+        {
+          "id": "a1-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hợp chất B có công thức RO2 với phân tử khối 44. Nguyên tử khối của R là bao nhiêu?",
+          "answer": "12",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối RO2 = R + 2 x 16 = 44. B2. Giải ra R = 44 - 32 = 12, ứng với cacbon (C), khớp CO2."
+        },
+        {
+          "id": "a1-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Một nguyên tố X tạo oxit cao nhất có công thức XO3, biết phân tử khối của oxit này là 80. Nguyên tử khối của X là",
+          "options": ["32", "16", "64", "48"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối XO3 = X + 3 x 16 = 80. B2. Giải ra X = 80 - 48 = 32, ứng với lưu huỳnh (S), khớp SO3."
+        }
+      ]
     },
     {
       "id": "a1-l3",
       "title": "Đơn chất – hợp chất – phân tử; CTHH và ý nghĩa",
       "order": 3,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phân biệt đơn chất và hợp chất, khái niệm phân tử, cách đọc và ý nghĩa của công thức hoá học.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l3-c1",
+          "heading": "Đơn chất và hợp chất",
+          "body": "Đơn chất do một nguyên tố hoá học tạo nên. Ví dụ kim loại: Fe, Cu, Al; phi kim: O2, N2, Cl2, C, S.\nHợp chất do hai hay nhiều nguyên tố hoá học tạo nên. Ví dụ: H2O, CO2, NaCl, H2SO4."
+        },
+        {
+          "id": "a1-l3-c2",
+          "heading": "Phân tử",
+          "body": "Phân tử là hạt đại diện cho chất, gồm một số nguyên tử liên kết với nhau, thể hiện đầy đủ tính chất hoá học của chất.\nPhân tử khối bằng tổng nguyên tử khối của các nguyên tử có trong phân tử."
+        },
+        {
+          "id": "a1-l3-c3",
+          "heading": "Công thức hoá học và ý nghĩa",
+          "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào sau đây là đơn chất?",
+          "options": [
+            "khí oxi O2",
+            "nước H2O",
+            "muối ăn NaCl",
+            "khí cacbonic CO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. O2 chỉ do một nguyên tố oxi tạo nên nên là đơn chất. B2. H2O, NaCl, CO2 đều do 2 nguyên tố trở lên tạo nên nên là hợp chất."
+        },
+        {
+          "id": "a1-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Chất nào sau đây là hợp chất?",
+          "options": ["H2O", "O2", "N2", "Cl2"],
+          "answer": 0,
+          "explanation": "B1. H2O do hai nguyên tố H và O tạo nên nên là hợp chất. B2. O2, N2, Cl2 mỗi chất chỉ do một nguyên tố tạo nên nên là đơn chất."
+        },
+        {
+          "id": "a1-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các đơn chất trong các chất sau.",
+          "options": ["Fe", "H2O", "Cu", "NaCl"],
+          "answers": [0, 2],
+          "explanation": "B1. Fe và Cu đều chỉ do một nguyên tố kim loại tạo nên nên là đơn chất. B2. H2O và NaCl do 2 nguyên tố tạo nên nên là hợp chất."
+        },
+        {
+          "id": "a1-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Hạt đại diện cho chất, thể hiện đầy đủ tính chất hoá học của chất được gọi là gì?",
+          "answer": "phân tử",
+          "placeholder": "Nhập tên hạt",
+          "explanation": "B1. Đây là định nghĩa của phân tử trong hoá học. B2. Phân tử gồm một số nguyên tử liên kết với nhau."
+        },
+        {
+          "id": "a1-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức hoá học H2SO4 cho biết một phân tử gồm bao nhiêu nguyên tử?",
+          "options": ["7", "4", "3", "2"],
+          "answer": 0,
+          "explanation": "B1. H2SO4 gồm 2 nguyên tử H, 1 nguyên tử S, 4 nguyên tử O. B2. Tổng số nguyên tử = 2 + 1 + 4 = 7."
+        },
+        {
+          "id": "a1-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phân tử khối của H2O là",
+          "options": ["18", "16", "17", "20"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: H = 1, O = 16. B2. Phân tử khối H2O = 2 x 1 + 16 = 18."
+        },
+        {
+          "id": "a1-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phân tử khối của NaCl là",
+          "options": ["58,5", "58", "35,5", "23"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Na = 23, Cl = 35,5. B2. Phân tử khối NaCl = 23 + 35,5 = 58,5."
+        },
+        {
+          "id": "a1-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các công thức hoá học biểu diễn hợp chất.",
+          "options": ["CO2", "O2", "H2SO4", "N2"],
+          "answers": [0, 2],
+          "explanation": "B1. CO2 và H2SO4 do từ 2 nguyên tố trở lên tạo nên nên là hợp chất. B2. O2 và N2 chỉ do một nguyên tố tạo nên nên là đơn chất."
+        },
+        {
+          "id": "a1-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Công thức hoá học Al2O3 gồm bao nhiêu nguyên tử Al?",
+          "answer": "2",
+          "placeholder": "Nhập số nguyên tử",
+          "explanation": "B1. Chỉ số 2 đứng sau Al trong công thức Al2O3 cho biết số nguyên tử Al trong một phân tử. B2. Vậy có 2 nguyên tử Al."
+        },
+        {
+          "id": "a1-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Phân tử khối của Al2O3 là",
+          "options": ["102", "54", "48", "150"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Al = 27, O = 16. B2. Phân tử khối Al2O3 = 2 x 27 + 3 x 16 = 54 + 48 = 102."
+        },
+        {
+          "id": "a1-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Một oxit kim loại có công thức R2O3, phân tử khối bằng 160. Nguyên tử khối của R là",
+          "options": ["56", "52", "48", "64"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O3 = 2R + 3 x 16 = 160. B2. Giải ra 2R = 112 nên R = 56, ứng với sắt (Fe), khớp Fe2O3."
+        },
+        {
+          "id": "a1-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Hợp chất Y có công thức RO, phân tử khối bằng 40. Nguyên tử khối của R là bao nhiêu?",
+          "answer": "24",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối RO = R + 16 = 40. B2. Giải ra R = 24, ứng với magie (Mg), khớp MgO."
+        },
+        {
+          "id": "a1-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Một hợp chất có công thức R2O5 với phân tử khối 142. Nguyên tử khối của R là",
+          "options": ["31", "30", "32", "28"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O5 = 2R + 5 x 16 = 142. B2. Giải ra 2R = 62 nên R = 31, ứng với photpho (P), khớp P2O5."
+        }
+      ]
     },
     {
       "id": "a1-l4",
       "title": "Hoá trị; lập CTHH theo hoá trị",
       "order": 4,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Khái niệm hoá trị, quy tắc hoá trị và các bước lập công thức hoá học đúng theo hoá trị.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l4-c1",
+          "heading": "Hoá trị",
+          "body": "Hoá trị là con số biểu thị khả năng liên kết của nguyên tử nguyên tố này với nguyên tử nguyên tố khác (quy ước H có hoá trị I).\nMột số hoá trị thường gặp: H (I), O (II), Na, K (I), Ca, Mg, Ba (II), Al (III), Fe (II, III), Cu (I, II)."
+        },
+        {
+          "id": "a1-l4-c2",
+          "heading": "Quy tắc hoá trị",
+          "body": "Trong công thức hoá học AxBy, tích của hoá trị và chỉ số của A bằng tích của hoá trị và chỉ số của B:\na.x = b.y (a, b lần lượt là hoá trị của A, B)."
+        },
+        {
+          "id": "a1-l4-c3",
+          "heading": "Lập CTHH theo hoá trị",
+          "body": "Các bước: gọi công thức hoá học dạng AxBy; áp dụng quy tắc hoá trị a.x = b.y; đưa về tỉ lệ tối giản x : y = b : a.\nVí dụ: Al (III) và O (II) cho tỉ lệ x : y = 2 : 3, công thức đúng là Al2O3."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Hoá trị của H trong các hợp chất được quy ước là",
+          "options": ["I", "II", "III", "IV"],
+          "answer": 0,
+          "explanation": "B1. Theo quy ước hoá học, hiđro luôn được chọn làm đơn vị hoá trị. B2. Hoá trị của H là I."
+        },
+        {
+          "id": "a1-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Hoá trị của O trong các oxit thường là",
+          "options": ["II", "I", "III", "IV"],
+          "answer": 0,
+          "explanation": "B1. Trong hầu hết hợp chất, oxi có hoá trị II. B2. Ví dụ: CO2, Na2O, Al2O3."
+        },
+        {
+          "id": "a1-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các hoá trị thường gặp của sắt (Fe).",
+          "options": ["I", "II", "III", "IV"],
+          "answers": [1, 2],
+          "explanation": "B1. Sắt là kim loại có nhiều hoá trị. B2. Hai hoá trị thường gặp của Fe là II (FeO, FeCl2) và III (Fe2O3, FeCl3)."
+        },
+        {
+          "id": "a1-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nguyên tố Al thường có hoá trị mấy? (ghi số La Mã)",
+          "answer": "III",
+          "acceptedAnswers": ["3", "iii"],
+          "placeholder": "Nhập hoá trị",
+          "explanation": "B1. Nhôm là kim loại có hoá trị không đổi. B2. Hoá trị của Al là III, thể hiện qua Al2O3, AlCl3."
+        },
+        {
+          "id": "a1-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Công thức hoá học nào viết đúng quy tắc hoá trị cho hợp chất giữa Na (I) và Cl (I)?",
+          "options": ["NaCl", "Na2Cl", "NaCl2", "Na2Cl2"],
+          "answer": 0,
+          "explanation": "B1. Na và Cl đều hoá trị I nên tỉ lệ x : y = 1 : 1. B2. Công thức đúng là NaCl."
+        },
+        {
+          "id": "a1-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Lập công thức hoá học của hợp chất giữa Ca (hoá trị II) và Cl (hoá trị I).",
+          "options": ["CaCl2", "CaCl", "Ca2Cl", "CaCl3"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị: 2 x 1 = 1 x y nên y = 2. B2. Công thức đúng là CaCl2."
+        },
+        {
+          "id": "a1-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Lập công thức hoá học của hợp chất giữa Al (hoá trị III) và O (hoá trị II).",
+          "options": ["Al2O3", "AlO", "Al3O2", "AlO3"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị, tỉ lệ x : y = 2 : 3 (hoá trị O : hoá trị Al). B2. Công thức đúng là Al2O3."
+        },
+        {
+          "id": "a1-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các công thức hoá học viết đúng quy tắc hoá trị.",
+          "options": ["MgO", "Na2O", "CaO2", "Al3O2"],
+          "answers": [0, 1],
+          "explanation": "B1. MgO đúng vì Mg (II) và O (II) cho tỉ lệ 1:1. B2. Na2O đúng vì Na (I) và O (II) cho tỉ lệ 2:1. B3. CaO2 sai (đúng phải là CaO); Al3O2 sai (đúng phải là Al2O3)."
+        },
+        {
+          "id": "a1-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Lập công thức hoá học giữa Fe (hoá trị III) và O (hoá trị II), ghi tỉ lệ x:y tối giản (ví dụ \"2:3\").",
+          "answer": "2:3",
+          "placeholder": "Nhập tỉ lệ x:y",
+          "explanation": "B1. Áp dụng quy tắc hoá trị: hoá trị Fe (III) và O (II). B2. Tỉ lệ x : y = 2 : 3, ứng với công thức Fe2O3."
+        },
+        {
+          "id": "a1-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Công thức hoá học của hợp chất giữa Cu (hoá trị II) và nhóm OH (hoá trị I) là",
+          "options": ["Cu(OH)2", "CuOH", "Cu2OH", "CuOH2"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị: 2 x 1 = 1 x y nên y = 2. B2. Công thức đúng là Cu(OH)2."
+        },
+        {
+          "id": "a1-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hợp chất R2O3 có phân tử khối 102, biết O có hoá trị II và R có hoá trị III. Nguyên tử khối của R là",
+          "options": ["27", "28", "26", "30"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O3 = 2R + 3 x 16 = 102. B2. Giải ra 2R = 54 nên R = 27, ứng với nhôm (Al)."
+        },
+        {
+          "id": "a1-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Một nguyên tố M hoá trị II tạo với nhóm SO4 (hoá trị II, khối lượng nhóm là 96) hợp chất MSO4. Nếu phân tử khối của MSO4 là 120, nguyên tử khối của M là bao nhiêu?",
+          "answer": "24",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối MSO4 = M + 96 = 120. B2. Giải ra M = 24, ứng với magie (Mg), khớp MgSO4."
+        },
+        {
+          "id": "a1-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Nguyên tố X có hoá trị không đổi, tạo được hai hợp chất XCl3 và X2O3 (biết Cl hoá trị I, O hoá trị II). Hoá trị của X là",
+          "options": ["III", "II", "I", "IV"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Từ XCl3: hoá trị X x 1 = 1 x 3 nên X có hoá trị III. B2. Kiểm tra với X2O3: hoá trị X x 2 = 2 x 3 cũng cho X hoá trị III, khớp nhau."
+        }
+      ]
     },
     {
       "id": "a1-l5",
       "title": "Phản ứng hoá học; định luật bảo toàn khối lượng; cân bằng PTHH",
       "order": 5,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Dấu hiệu nhận biết phản ứng hoá học, định luật bảo toàn khối lượng và các bước cân bằng phương trình hoá học.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l5-c1",
+          "heading": "Phản ứng hoá học",
+          "body": "Phản ứng hoá học là quá trình biến đổi chất này thành chất khác. Chất ban đầu gọi là chất tham gia, chất mới sinh ra gọi là sản phẩm.\nDấu hiệu nhận biết: có chất mới tạo thành (đổi màu, tạo kết tủa, sinh khí, toả nhiệt/phát sáng...)."
+        },
+        {
+          "id": "a1-l5-c2",
+          "heading": "Định luật bảo toàn khối lượng",
+          "body": "Trong phản ứng hoá học, tổng khối lượng các chất sản phẩm bằng tổng khối lượng các chất tham gia phản ứng (vì số nguyên tử mỗi nguyên tố không đổi).\nÁp dụng: mA + mB = mC + mD."
+        },
+        {
+          "id": "a1-l5-c3",
+          "heading": "Cân bằng phương trình hoá học",
+          "body": "Các bước cân bằng PTHH: viết sơ đồ phản ứng với công thức đúng của các chất; thêm hệ số thích hợp trước công thức để số nguyên tử mỗi nguyên tố ở hai vế bằng nhau (không được đổi chỉ số trong công thức); kiểm tra lại."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong phản ứng hoá học, chất mới được tạo ra gọi là gì?",
+          "options": ["sản phẩm", "chất tham gia", "chất xúc tác", "dung môi"],
+          "answer": 0,
+          "explanation": "B1. Chất ban đầu trước phản ứng gọi là chất tham gia. B2. Chất mới sinh ra sau phản ứng gọi là sản phẩm."
+        },
+        {
+          "id": "a1-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Định luật bảo toàn khối lượng phát biểu: tổng khối lượng sản phẩm bằng gì?",
+          "options": [
+            "tổng khối lượng chất tham gia",
+            "khối lượng chất rắn",
+            "thể tích khí",
+            "số mol"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong phản ứng, số nguyên tử mỗi nguyên tố được bảo toàn. B2. Vì vậy tổng khối lượng sản phẩm bằng tổng khối lượng chất tham gia."
+        },
+        {
+          "id": "a1-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các dấu hiệu cho thấy có phản ứng hoá học xảy ra.",
+          "options": [
+            "đổi màu",
+            "sinh khí",
+            "thay đổi hình dạng vật lí",
+            "tạo kết tủa"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Đổi màu, sinh khí, tạo kết tủa đều là dấu hiệu có chất mới tạo thành. B2. Thay đổi hình dạng (như đập vụn, làm nóng chảy) chỉ là biến đổi vật lí, không phải phản ứng hoá học."
+        },
+        {
+          "id": "a1-l5-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Khi cân bằng phương trình hoá học, ta được phép thay đổi gì để hai vế bằng nhau về số nguyên tử?",
+          "answer": "hệ số",
+          "acceptedAnswers": ["hệ số cân bằng"],
+          "placeholder": "Nhập từ cần điền",
+          "explanation": "B1. Chỉ được thêm hệ số trước công thức, không được đổi chỉ số trong công thức. B2. Hệ số giúp cân bằng số nguyên tử mỗi nguyên tố ở hai vế."
+        },
+        {
+          "id": "a1-l5-q5",
+          "type": "balance",
+          "level": "basic",
+          "prompt": "Điền hệ số tối giản cho phản ứng: H2 + O2 -> H2O.",
+          "left": ["H2", "O2"],
+          "right": ["H2O"],
+          "answer": [2, 1, 2],
+          "explanation": "B1. Đặt 2H2O để số O ở vế phải chẵn (2 O). B2. Cần 1O2 để có 2 O. B3. Bốn nguyên tử H ở vế phải cần 2H2 ở vế trái."
+        },
+        {
+          "id": "a1-l5-q6",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Đốt cháy hết 3 g cacbon trong khí oxi thu được 11 g khí CO2. Khối lượng oxi đã phản ứng là bao nhiêu gam?",
+          "answer": "8",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mC + mO2 = mCO2. B2. mO2 = mCO2 - mC = 11 - 3 = 8 g."
+        },
+        {
+          "id": "a1-l5-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy 12 g cacbon trong khí oxi vừa đủ, thu được 44 g khí CO2. Khối lượng oxi đã dùng là",
+          "options": ["32 g", "44 g", "12 g", "56 g"],
+          "answer": 0,
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mC + mO2 = mCO2. B2. mO2 = 44 - 12 = 32 g."
+        },
+        {
+          "id": "a1-l5-q8",
+          "type": "balance",
+          "level": "applied",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Fe + O2 -> Fe3O4.",
+          "left": ["Fe", "O2"],
+          "right": ["Fe3O4"],
+          "answer": [3, 2, 1],
+          "explanation": "B1. Fe3O4 chứa 3 Fe nên cần 3Fe. B2. Fe3O4 chứa 4 O nên cần 2O2 (4 nguyên tử O)."
+        },
+        {
+          "id": "a1-l5-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phương trình hoá học đã được cân bằng đúng.",
+          "options": [
+            "2H2 + O2 -> 2H2O",
+            "Fe + O2 -> FeO",
+            "CaCO3 -> CaO + CO2",
+            "N2 + H2 -> NH3"
+          ],
+          "answers": [0, 2],
+          "explanation": "B1. 2H2 + O2 -> 2H2O đã cân bằng đúng (4H, 2O mỗi vế). B2. CaCO3 -> CaO + CO2 đã cân bằng đúng vì tỉ lệ 1:1:1 giữ nguyên số nguyên tử. B3. Fe + O2 -> FeO cần sửa thành 2Fe + O2 -> 2FeO; N2 + H2 -> NH3 cần sửa thành N2 + 3H2 -> 2NH3."
+        },
+        {
+          "id": "a1-l5-q10",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Nung 50 g CaCO3 thu được 28 g CaO và khí CO2. Khối lượng CO2 sinh ra là bao nhiêu gam?",
+          "answer": "22",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mCaCO3 = mCaO + mCO2. B2. mCO2 = 50 - 28 = 22 g."
+        },
+        {
+          "id": "a1-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 8,4 g Fe trong khí oxi dư, thu được 11,6 g oxit sắt từ Fe3O4 duy nhất, không còn Fe dư. Khối lượng oxi đã phản ứng là",
+          "options": ["3,2 g", "4,2 g", "2,4 g", "4,8 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mFe + mO2 = mFe3O4. B2. mO2 = 11,6 - 8,4 = 3,2 g."
+        },
+        {
+          "id": "a1-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Cho 6,5 g Zn phản ứng vừa đủ với dung dịch HCl, sinh ra 13,6 g ZnCl2 và 0,2 g khí H2. Khối lượng HCl đã phản ứng là bao nhiêu gam?",
+          "answer": "7,3",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mZn + mHCl = mZnCl2 + mH2. B2. mHCl = 13,6 + 0,2 - 6,5 = 7,3 g."
+        },
+        {
+          "id": "a1-l5-q13",
+          "type": "balance",
+          "level": "hsg",
+          "prompt": "Điền hệ số tối giản cho phản ứng khử oxit sắt trong lò cao: Fe2O3 + CO -> Fe + CO2.",
+          "left": ["Fe2O3", "CO"],
+          "right": ["Fe", "CO2"],
+          "answer": [1, 3, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe2O3 chứa 2 Fe nên tạo 2Fe. B2. Ba nguyên tử O trong Fe2O3 kết hợp với 3CO tạo 3CO2 (dùng thêm O từ CO). B3. Kiểm tra: vế trái có 3 + 3 = 6 nguyên tử O, vế phải có 6 nguyên tử O trong 3CO2."
+        }
+      ]
     },
     {
       "id": "a1-l6",
       "title": "Mol – khối lượng mol – thể tích mol khí; tỉ khối chất khí",
       "order": 6,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Khái niệm mol, công thức chuyển đổi số mol - khối lượng - thể tích khí, và tỉ khối chất khí.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l6-c1",
+          "heading": "Mol",
+          "body": "Mol là lượng chất chứa 6,022 x 10^23 hạt vi mô (nguyên tử, phân tử...), gọi là số Avogadro (N_A).\nSố mol kí hiệu là n."
+        },
+        {
+          "id": "a1-l6-c2",
+          "heading": "Khối lượng mol",
+          "body": "Khối lượng mol (M) là khối lượng của 1 mol chất, tính bằng gam, có trị số bằng nguyên tử khối hoặc phân tử khối của chất.\nCông thức: n = m / M, suy ra m = n x M."
+        },
+        {
+          "id": "a1-l6-c3",
+          "heading": "Thể tích mol khí và tỉ khối",
+          "body": "Ở điều kiện tiêu chuẩn (đktc: 0 độ C, 1 atm), 1 mol chất khí bất kì chiếm thể tích 22,4 lít.\nCông thức: n = V / 22,4, suy ra V = n x 22,4.\nTỉ khối của khí A so với khí B: d(A/B) = M_A / M_B."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l6-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "1 mol chất chứa bao nhiêu hạt vi mô (nguyên tử hoặc phân tử)?",
+          "options": ["6,022 x 10^23", "22,4", "1", "12"],
+          "answer": 0,
+          "explanation": "B1. Đây là số Avogadro, kí hiệu N_A. B2. Mọi chất, 1 mol đều chứa 6,022 x 10^23 hạt vi mô."
+        },
+        {
+          "id": "a1-l6-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khối lượng mol của nước H2O là bao nhiêu g/mol?",
+          "options": ["18", "16", "17", "20"],
+          "answer": 0,
+          "explanation": "B1. Phân tử khối H2O = 2 x 1 + 16 = 18. B2. Khối lượng mol có trị số bằng phân tử khối nên M(H2O) = 18 g/mol."
+        },
+        {
+          "id": "a1-l6-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các công thức đúng liên quan đến mol.",
+          "options": [
+            "n = m/M",
+            "V = n x 22,4 (ở đktc)",
+            "n = V x 22,4",
+            "m = n/M"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Công thức n = m/M và V = n x 22,4 (đktc) đều đúng. B2. n = V x 22,4 và m = n/M là công thức sai (đảo ngược phép tính)."
+        },
+        {
+          "id": "a1-l6-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Ở điều kiện tiêu chuẩn, 1 mol khí bất kì chiếm thể tích bao nhiêu lít?",
+          "answer": "22,4",
+          "acceptedAnswers": ["22.4"],
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Đây là giá trị quy ước ở đktc (0 độ C, 1 atm). B2. Thể tích mol khí ở đktc là 22,4 lít."
+        },
+        {
+          "id": "a1-l6-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Số mol của 8 g khí oxi O2 (M = 32 g/mol) là",
+          "options": ["0,25 mol", "0,5 mol", "2 mol", "4 mol"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức n = m/M. B2. n = 8/32 = 0,25 mol."
+        },
+        {
+          "id": "a1-l6-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Số mol của 11,2 lít khí CO2 ở đktc là",
+          "options": ["0,5 mol", "1 mol", "0,25 mol", "2 mol"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức n = V/22,4. B2. n = 11,2/22,4 = 0,5 mol."
+        },
+        {
+          "id": "a1-l6-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Khối lượng của 0,2 mol NaOH (M = 40 g/mol) là",
+          "options": ["8 g", "4 g", "40 g", "80 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức m = n x M. B2. m = 0,2 x 40 = 8 g."
+        },
+        {
+          "id": "a1-l6-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Thể tích ở đktc của 0,5 mol khí H2 là bao nhiêu lít?",
+          "answer": "11,2",
+          "acceptedAnswers": ["11.2"],
+          "placeholder": "Nhập số lít",
+          "explanation": "B1. Áp dụng công thức V = n x 22,4. B2. V = 0,5 x 22,4 = 11,2 lít."
+        },
+        {
+          "id": "a1-l6-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Tỉ khối của khí CO2 (M = 44) so với khí H2 (M = 2) là",
+          "options": ["22", "44", "2", "11"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức d(A/B) = M_A/M_B. B2. d(CO2/H2) = 44/2 = 22."
+        },
+        {
+          "id": "a1-l6-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các khí nặng hơn không khí (M không khí xấp xỉ 29).",
+          "options": ["CO2", "H2", "SO2", "CH4"],
+          "answers": [0, 2],
+          "explanation": "B1. M(CO2) = 44 và M(SO2) = 64, đều lớn hơn 29 nên nặng hơn không khí. B2. M(H2) = 2 và M(CH4) = 16, đều nhỏ hơn 29 nên nhẹ hơn không khí."
+        },
+        {
+          "id": "a1-l6-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hỗn hợp khí X gồm 0,2 mol CO2 và 0,2 mol O2. Khối lượng mol trung bình của X là",
+          "options": ["38", "44", "32", "76"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. mCO2 = 0,2 x 44 = 8,8 g; mO2 = 0,2 x 32 = 6,4 g. B2. Tổng khối lượng = 15,2 g; tổng số mol = 0,4 mol. B3. Khối lượng mol trung bình = 15,2/0,4 = 38 g/mol."
+        },
+        {
+          "id": "a1-l6-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Một hỗn hợp khí có tỉ khối so với H2 bằng 15. Khối lượng mol trung bình của hỗn hợp là bao nhiêu g/mol?",
+          "answer": "30",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức M = d x M_H2. B2. M = 15 x 2 = 30 g/mol."
+        },
+        {
+          "id": "a1-l6-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Đốt cháy hoàn toàn 3,2 g khí metan CH4 (M = 16), thu được V lít khí CO2 (đktc). Giá trị của V là",
+          "options": ["4,48 lít", "2,24 lít", "8,96 lít", "6,72 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCH4 = 3,2/16 = 0,2 mol. B2. Phương trình CH4 + 2O2 -> CO2 + 2H2O có tỉ lệ CH4 : CO2 = 1 : 1 nên nCO2 = 0,2 mol. B3. V = 0,2 x 22,4 = 4,48 lít."
+        }
+      ]
     },
     {
       "id": "a1-l7",
       "title": "Tính theo CTHH và PTHH: %m, chất dư – chất hết, hiệu suất",
       "order": 7,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Tính thành phần phần trăm khối lượng, các bước giải toán theo PTHH, xác định chất dư - chất hết và hiệu suất phản ứng.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l7-c1",
+          "heading": "Tính thành phần % khối lượng nguyên tố",
+          "body": "Công thức: %A = (số nguyên tử A x nguyên tử khối A) / (phân tử khối hợp chất) x 100%.\nVí dụ: %Na trong NaCl (M = 58,5) = 23/58,5 x 100% xấp xỉ 39,3%."
+        },
+        {
+          "id": "a1-l7-c2",
+          "heading": "Các bước tính theo phương trình hoá học",
+          "body": "B1. Đổi dữ kiện đề bài ra số mol.\nB2. Viết phương trình hoá học và cân bằng.\nB3. Lập tỉ lệ mol theo phương trình để tìm số mol chất cần tính.\nB4. Đổi số mol sang khối lượng hoặc thể tích theo yêu cầu."
+        },
+        {
+          "id": "a1-l7-c3",
+          "heading": "Chất dư – chất hết và hiệu suất phản ứng",
+          "body": "Khi hai chất phản ứng với lượng cho trước, so sánh tỉ lệ mol thực tế với tỉ lệ mol theo phương trình để xác định chất phản ứng hết (dùng để tính sản phẩm) và chất còn dư.\nHiệu suất phản ứng: H% = (lượng thực tế thu được / lượng tính theo lí thuyết) x 100%."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l7-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phần trăm khối lượng Na trong NaCl (M = 58,5) là bao nhiêu (làm tròn)?",
+          "options": ["39,3%", "60,7%", "23%", "58,5%"],
+          "answer": 0,
+          "explanation": "B1. %Na = (nguyên tử khối Na / phân tử khối NaCl) x 100%. B2. %Na = 23/58,5 x 100% xấp xỉ 39,3%."
+        },
+        {
+          "id": "a1-l7-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Bước đầu tiên khi giải bài toán tính theo phương trình hoá học là gì?",
+          "options": [
+            "đổi dữ kiện ra số mol",
+            "viết phương trình hoá học",
+            "cân bằng phương trình hoá học",
+            "tính khối lượng sản phẩm"
+          ],
+          "answer": 0,
+          "explanation": "B1. Cần đổi các dữ kiện đề bài (khối lượng, thể tích) ra số mol trước tiên. B2. Sau đó mới viết, cân bằng phương trình và lập tỉ lệ để tính."
+        },
+        {
+          "id": "a1-l7-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các bước đúng khi giải bài toán theo phương trình hoá học.",
+          "options": [
+            "đổi dữ kiện ra số mol",
+            "viết và cân bằng phương trình hoá học",
+            "lập tỉ lệ mol theo phương trình",
+            "đo nhiệt độ của phản ứng"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba bước đầu là quy trình chuẩn để giải toán theo PTHH. B2. Đo nhiệt độ không phải là bước tính toán cần thiết."
+        },
+        {
+          "id": "a1-l7-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Công thức tính hiệu suất phản ứng là H% = (lượng thực tế / ?) x 100%.",
+          "answer": "lượng lí thuyết",
+          "acceptedAnswers": ["lí thuyết", "luong ly thuyet"],
+          "placeholder": "Nhập cụm từ còn thiếu",
+          "explanation": "B1. Hiệu suất so sánh lượng sản phẩm thực tế thu được với lượng tính theo lí thuyết (theo PTHH). B2. H% = (lượng thực tế / lượng lí thuyết) x 100%."
+        },
+        {
+          "id": "a1-l7-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phần trăm khối lượng O trong CO2 (M = 44) là bao nhiêu (làm tròn)?",
+          "options": ["72,7%", "27,3%", "50%", "16%"],
+          "answer": 0,
+          "explanation": "B1. Khối lượng O trong 1 phân tử CO2 là 2 x 16 = 32. B2. %O = 32/44 x 100% xấp xỉ 72,7%."
+        },
+        {
+          "id": "a1-l7-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Đốt cháy hoàn toàn 6,4 g Cu trong khí oxi dư thu được CuO. Khối lượng CuO tạo thành là",
+          "options": ["8 g", "6,4 g", "4 g", "16 g"],
+          "answer": 0,
+          "explanation": "B1. nCu = 6,4/64 = 0,1 mol. B2. Phương trình 2Cu + O2 -> 2CuO có tỉ lệ 1:1 nên nCuO = 0,1 mol. B3. mCuO = 0,1 x 80 = 8 g."
+        },
+        {
+          "id": "a1-l7-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Cho 5,6 g Fe tác dụng với dung dịch HCl dư. Thể tích khí H2 sinh ra ở đktc là",
+          "options": ["2,24 lít", "1,12 lít", "4,48 lít", "0,56 lít"],
+          "answer": 0,
+          "explanation": "B1. nFe = 5,6/56 = 0,1 mol. B2. Phương trình Fe + 2HCl -> FeCl2 + H2 có tỉ lệ 1:1 giữa Fe và H2 nên nH2 = 0,1 mol. B3. V = 0,1 x 22,4 = 2,24 lít."
+        },
+        {
+          "id": "a1-l7-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Cho 0,2 mol Zn tác dụng với 0,3 mol dung dịch HCl. Số mol Zn còn dư sau phản ứng là bao nhiêu?",
+          "answer": "0,05",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình Zn + 2HCl -> ZnCl2 + H2 cần tỉ lệ 1:2. B2. Với 0,3 mol HCl thì HCl hết trước (cần 0,4 mol HCl để hết 0,2 mol Zn). B3. Số mol Zn phản ứng = 0,3/2 = 0,15 mol nên Zn dư = 0,2 - 0,15 = 0,05 mol."
+        },
+        {
+          "id": "a1-l7-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nung 20 g CaCO3, hiệu suất phản ứng đạt 80%. Khối lượng CaO thực tế thu được là",
+          "options": ["8,96 g", "11,2 g", "9,6 g", "10 g"],
+          "answer": 0,
+          "explanation": "B1. nCaCO3 = 20/100 = 0,2 mol nên CaO lí thuyết = 0,2 x 56 = 11,2 g. B2. Khối lượng CaO thực tế = 11,2 x 80% = 8,96 g."
+        },
+        {
+          "id": "a1-l7-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phát biểu đúng về hiệu suất phản ứng.",
+          "options": [
+            "hiệu suất luôn nhỏ hơn hoặc bằng 100%",
+            "hiệu suất càng cao thì lượng sản phẩm thực tế càng gần lượng lí thuyết",
+            "hiệu suất không phụ thuộc điều kiện phản ứng",
+            "hiệu suất có thể lớn hơn 100%"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Vì lượng thực tế không thể vượt lượng lí thuyết nên hiệu suất luôn nhỏ hơn hoặc bằng 100%. B2. Hiệu suất càng cao thì sản phẩm thực tế càng gần với tính toán lí thuyết. B3. Hiệu suất phụ thuộc điều kiện phản ứng (nhiệt độ, xúc tác...) nên hai phát biểu còn lại sai."
+        },
+        {
+          "id": "a1-l7-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 13 g Zn tác dụng với 200 ml dung dịch HCl 2M. Khối lượng muối ZnCl2 thu được là",
+          "options": ["27,2 g", "13,6 g", "20,4 g", "34 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nZn = 13/65 = 0,2 mol; nHCl = 0,2 x 2 = 0,4 mol. B2. Phương trình Zn + 2HCl -> ZnCl2 + H2 cần tỉ lệ 1:2, với 0,2 mol Zn cần đúng 0,4 mol HCl nên hai chất vừa đủ. B3. nZnCl2 = 0,2 mol, mZnCl2 = 0,2 x 136 = 27,2 g."
+        },
+        {
+          "id": "a1-l7-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nung 25 g CaCO3, hiệu suất phản ứng đạt 90%. Khối lượng CaO thực tế thu được là bao nhiêu gam?",
+          "answer": "12,6",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol nên CaO lí thuyết = 0,25 x 56 = 14 g. B2. Khối lượng CaO thực tế = 14 x 90% = 12,6 g."
+        },
+        {
+          "id": "a1-l7-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Cho 5,4 g Al tác dụng với dung dịch HCl dư. Thể tích khí H2 thu được ở đktc là",
+          "options": ["6,72 lít", "4,48 lít", "2,24 lít", "8,96 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nAl = 5,4/27 = 0,2 mol. B2. Phương trình 2Al + 6HCl -> 2AlCl3 + 3H2 có tỉ lệ Al : H2 = 2 : 3 nên nH2 = 0,2 x 3/2 = 0,3 mol. B3. V = 0,3 x 22,4 = 6,72 lít."
+        }
+      ]
     },
     {
       "id": "a1-l8",
       "title": "Nâng cao: biện luận tìm nguyên tố/CTHH; cân bằng phản ứng phức tạp",
       "order": 8,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phương pháp biện luận tìm nguyên tử khối qua phần trăm khối lượng hoặc phân tử khối, và cách cân bằng phương trình nhiều nguyên tố.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l8-c1",
+          "heading": "Biện luận tìm nguyên tố qua phần trăm khối lượng",
+          "body": "Dùng phần trăm khối lượng nguyên tố hoặc phân tử khối hợp chất để lập phương trình tìm nguyên tử khối, sau đó đối chiếu bảng nguyên tử khối để suy ra nguyên tố.\nVí dụ: oxit RO có %O = 20% thì R/(R+16) = 0,8, giải ra R = 64 (Cu)."
+        },
+        {
+          "id": "a1-l8-c2",
+          "heading": "Biện luận công thức oxit khi chưa biết hoá trị",
+          "body": "Nếu kim loại M có hoá trị n chưa biết, oxit có công thức M2On (n lẻ) hoặc MO(n/2) (n chẵn). Lập phương trình theo %M hoặc phân tử khối, sau đó thử các giá trị hoá trị hợp lí (I, II, III) để tìm nguyên tử khối M là số nguyên phù hợp."
+        },
+        {
+          "id": "a1-l8-c3",
+          "heading": "Cân bằng phương trình hoá học phức tạp",
+          "body": "Với phản ứng có nhiều nguyên tố, nên ưu tiên cân bằng nguyên tố xuất hiện ít lần trước (thường là kim loại), để nguyên tố oxi cân bằng sau cùng. Có thể dùng hệ số phân số tạm thời rồi quy đồng mẫu số chung để đưa về hệ số nguyên."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l8-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phương pháp thường dùng để tìm nguyên tử khối của nguyên tố khi biết phần trăm khối lượng là gì?",
+          "options": [
+            "lập phương trình theo phần trăm khối lượng",
+            "đo màu sắc của chất",
+            "đo nhiệt độ sôi",
+            "cân trực tiếp nguyên tử"
+          ],
+          "answer": 0,
+          "explanation": "B1. Từ công thức %A = (khối lượng A / phân tử khối hợp chất) x 100%, lập phương trình để tìm nguyên tử khối. B2. Không thể cân trực tiếp một nguyên tử hay dựa vào màu sắc để tính toán định lượng."
+        },
+        {
+          "id": "a1-l8-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Khi cân bằng phương trình hoá học phức tạp, nên ưu tiên cân bằng nguyên tố nào trước?",
+          "options": [
+            "kim loại (nguyên tố ít xuất hiện)",
+            "oxi luôn cân bằng trước",
+            "hiđro luôn cân bằng trước",
+            "không có thứ tự ưu tiên"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nguyên tố xuất hiện ít lần trong phương trình (thường là kim loại) nên cân bằng trước để tránh vướng vào nhiều biến số. B2. Oxi thường được cân bằng sau cùng."
+        },
+        {
+          "id": "a1-l8-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các đại lượng cần biết để tìm nguyên tử khối R trong oxit RO.",
+          "options": [
+            "phần trăm khối lượng R hoặc O",
+            "phân tử khối của oxit",
+            "màu sắc của oxit",
+            "tên người phát hiện nguyên tố"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Cần %R (hoặc %O) hoặc phân tử khối oxit để lập phương trình tìm R. B2. Màu sắc hay tên người phát hiện không liên quan đến phép tính định lượng."
+        },
+        {
+          "id": "a1-l8-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Nếu oxit của kim loại M có hoá trị n (n lẻ) chưa xác định, công thức oxit tổng quát viết là gì? (dùng n là hoá trị, ví dụ dạng \"M2On\")",
+          "answer": "M2On",
+          "placeholder": "Nhập công thức tổng quát",
+          "explanation": "B1. Với hoá trị n lẻ, oxi hoá trị II kết hợp với M theo tỉ lệ để tổng hoá trị cân bằng. B2. Công thức tổng quát là M2On."
+        },
+        {
+          "id": "a1-l8-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong công thức R2O3, hoá trị của R theo quy tắc hoá trị với O (hoá trị II) là bao nhiêu?",
+          "options": ["III", "II", "I", "IV"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị: hoá trị R x 2 = hoá trị O x 3 = 2 x 3 = 6. B2. Hoá trị R = 6/2 = III."
+        },
+        {
+          "id": "a1-l8-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxit kim loại M có hoá trị II, biết phần trăm khối lượng M là 80%. Nguyên tử khối của M là",
+          "options": ["64", "56", "40", "24"],
+          "answer": 0,
+          "explanation": "B1. Công thức oxit là MO. Phương trình: M/(M+16) = 0,8. B2. Giải ra M = 0,8M + 12,8 nên 0,2M = 12,8, M = 64, ứng với đồng (Cu)."
+        },
+        {
+          "id": "a1-l8-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Oxit kim loại R có hoá trị III, phân tử khối bằng 160. Nguyên tử khối của R là",
+          "options": ["56", "52", "64", "27"],
+          "answer": 0,
+          "explanation": "B1. Công thức oxit là R2O3. Phương trình: 2R + 48 = 160. B2. Giải ra R = 56, ứng với sắt (Fe)."
+        },
+        {
+          "id": "a1-l8-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Muối RCl2 có phân tử khối 111 (Cl = 35,5). Nguyên tử khối của R là bao nhiêu?",
+          "answer": "40",
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Phân tử khối RCl2 = R + 2 x 35,5 = 111. B2. Giải ra R = 111 - 71 = 40, ứng với canxi (Ca)."
+        },
+        {
+          "id": "a1-l8-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Khi biện luận hoá trị n của kim loại M trong oxit chưa rõ công thức, các giá trị hoá trị hợp lí cần thử là",
+          "options": ["I", "II", "III", "0 (không có hoá trị)"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Kim loại thường có hoá trị I, II hoặc III trong các hợp chất oxit phổ biến ở THCS. B2. Hoá trị 0 không tồn tại cho kim loại trong hợp chất."
+        },
+        {
+          "id": "a1-l8-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Kim loại M tạo oxit M2O3, biết phần trăm khối lượng O trong oxit là 30%. Nguyên tử khối của M là",
+          "options": ["56", "52", "64", "27"],
+          "answer": 0,
+          "explanation": "B1. Phương trình: 48/(2M + 48) = 0,3. B2. Giải ra 48 = 0,6M + 14,4 nên 0,6M = 33,6, M = 56, ứng với sắt (Fe)."
+        },
+        {
+          "id": "a1-l8-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Oxit kim loại R có công thức dạng R2O3, phân tử khối 102, biết phần trăm khối lượng R là 52,94%. Kim loại R là",
+          "options": ["nhôm (Al)", "sắt (Fe)", "canxi (Ca)", "magie (Mg)"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Thử công thức R2O3: 2R + 48 = 102 nên R = 27. B2. Kiểm tra %R = 2 x 27/102 = 54/102 xấp xỉ 52,94%, khớp với đề bài. B3. R = 27 ứng với nhôm (Al)."
+        },
+        {
+          "id": "a1-l8-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nguyên tố M tạo oxit cao nhất có công thức MO3, phân tử khối của oxit là 80. Nguyên tử khối của M là bao nhiêu?",
+          "answer": "32",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối MO3 = M + 3 x 16 = 80. B2. Giải ra M = 80 - 48 = 32, ứng với lưu huỳnh (S), khớp SO3."
+        },
+        {
+          "id": "a1-l8-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Muối MCO3 có phân tử khối 100 (nhóm CO3 có khối lượng 60). Nguyên tử khối của M là",
+          "options": ["40", "24", "56", "65"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối MCO3 = M + 60 = 100. B2. Giải ra M = 40, ứng với canxi (Ca), khớp CaCO3."
+        }
+      ]
     },
     {
       "id": "a1-l9",
       "title": "Nâng cao: bài toán hỗn hợp; tăng – giảm khối lượng; bảo toàn",
       "order": 9,
-      "summary": "Đang biên soạn.",
-      "status": "coming-soon",
-      "cards": [],
-      "questions": []
+      "summary": "Phương pháp hệ phương trình cho hỗn hợp, phương pháp tăng giảm khối lượng, và bảo toàn nguyên tố/khối lượng trong bài toán nhiều chất.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "a1-l9-c1",
+          "heading": "Phương pháp hệ phương trình cho hỗn hợp",
+          "body": "Gọi số mol từng chất trong hỗn hợp là ẩn số. Lập hai phương trình: một theo khối lượng (hoặc số mol) hỗn hợp, một theo dữ kiện phản ứng (số mol khí, axit, kết tủa...). Giải hệ để tìm từng ẩn."
+        },
+        {
+          "id": "a1-l9-c2",
+          "heading": "Phương pháp tăng giảm khối lượng",
+          "body": "So sánh khối lượng mol chất trước và sau phản ứng để tính nhanh số mol dựa trên độ chênh lệch khối lượng.\nVí dụ: kim loại M đẩy kim loại M' ra khỏi dung dịch muối, khối lượng thanh kim loại thay đổi một lượng bằng (M' - M) x số mol phản ứng."
+        },
+        {
+          "id": "a1-l9-c3",
+          "heading": "Bảo toàn nguyên tố và bảo toàn khối lượng",
+          "body": "Số mol một nguyên tố không đổi qua các phản ứng (bảo toàn nguyên tố). Tổng khối lượng chất tham gia bằng tổng khối lượng sản phẩm (bảo toàn khối lượng).\nHai định luật này giúp tính nhanh mà không cần viết đủ mọi phương trình trung gian."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a1-l9-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Phương pháp tăng giảm khối lượng thường dùng cho dạng bài nào?",
+          "options": [
+            "kim loại đẩy kim loại khỏi dung dịch muối",
+            "tính pH dung dịch",
+            "đo nhiệt độ phản ứng",
+            "xác định màu sắc chất"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khi kim loại M đẩy kim loại M' ra khỏi muối, khối lượng thanh kim loại thay đổi theo hiệu khối lượng mol. B2. Đây là dạng bài đặc trưng của phương pháp tăng giảm khối lượng."
+        },
+        {
+          "id": "a1-l9-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Trong bài toán hỗn hợp 2 chất, cần lập bao nhiêu phương trình để tìm 2 ẩn số mol?",
+          "options": ["2", "1", "3", "4"],
+          "answer": 0,
+          "explanation": "B1. Để giải được hệ 2 ẩn số, cần đúng 2 phương trình độc lập. B2. Một phương trình theo khối lượng hỗn hợp, một phương trình theo dữ kiện phản ứng."
+        },
+        {
+          "id": "a1-l9-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "prompt": "Chọn các đại lượng có thể dùng để lập phương trình thứ hai trong bài toán hỗn hợp 2 kim loại.",
+          "options": [
+            "số mol khí sinh ra",
+            "số mol axit phản ứng",
+            "khối lượng hỗn hợp ban đầu",
+            "màu sắc dung dịch"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Số mol khí sinh ra hoặc số mol axit phản ứng là dữ kiện độc lập, phù hợp làm phương trình thứ hai. B2. Khối lượng hỗn hợp ban đầu đã dùng để lập phương trình thứ nhất; màu sắc không phải đại lượng định lượng."
+        },
+        {
+          "id": "a1-l9-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "prompt": "Theo định luật bảo toàn nguyên tố, số mol một nguyên tố trước và sau phản ứng như thế nào?",
+          "answer": "không đổi",
+          "acceptedAnswers": ["bằng nhau", "giữ nguyên"],
+          "placeholder": "Nhập câu trả lời",
+          "explanation": "B1. Trong phản ứng hoá học, nguyên tử không tự sinh ra hay mất đi. B2. Vì vậy số mol một nguyên tố trước và sau phản ứng luôn không đổi."
+        },
+        {
+          "id": "a1-l9-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "prompt": "Định luật bảo toàn khối lượng phát biểu: tổng khối lượng chất tham gia bằng gì?",
+          "options": [
+            "tổng khối lượng sản phẩm",
+            "thể tích khí sinh ra",
+            "số mol phản ứng",
+            "nhiệt lượng toả ra"
+          ],
+          "answer": 0,
+          "explanation": "B1. Số nguyên tử mỗi nguyên tố không đổi qua phản ứng. B2. Vì vậy tổng khối lượng chất tham gia bằng tổng khối lượng sản phẩm."
+        },
+        {
+          "id": "a1-l9-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Hỗn hợp gồm 0,1 mol Mg và 0,2 mol Zn tác dụng hết với dung dịch HCl dư. Tổng số mol H2 sinh ra là",
+          "options": ["0,3 mol", "0,2 mol", "0,1 mol", "0,5 mol"],
+          "answer": 0,
+          "explanation": "B1. Mg + 2HCl -> MgCl2 + H2 nên 0,1 mol Mg tạo 0,1 mol H2. B2. Zn + 2HCl -> ZnCl2 + H2 nên 0,2 mol Zn tạo 0,2 mol H2. B3. Tổng số mol H2 = 0,1 + 0,2 = 0,3 mol."
+        },
+        {
+          "id": "a1-l9-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Nhúng thanh Fe vào dung dịch CuSO4, sau phản ứng khối lượng thanh Fe tăng 1,6 g (biết mỗi mol Fe phản ứng làm tăng khối lượng thanh 8 g do Cu bám vào nhiều hơn Fe tan ra). Số mol Fe đã phản ứng là",
+          "options": ["0,2 mol", "0,1 mol", "1,6 mol", "0,8 mol"],
+          "answer": 0,
+          "explanation": "B1. Mỗi mol Fe phản ứng: Fe (56) tan ra, Cu (64) bám vào nên khối lượng thanh tăng 64 - 56 = 8 g. B2. Số mol Fe phản ứng = 1,6/8 = 0,2 mol."
+        },
+        {
+          "id": "a1-l9-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "prompt": "Hoà tan hoàn toàn 10 g hỗn hợp Mg và MgCO3 bằng dung dịch HCl dư, thu được 2,24 lít khí CO2 (đktc, chỉ MgCO3 sinh khí). Số mol MgCO3 trong hỗn hợp là bao nhiêu?",
+          "answer": "0,1",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nCO2 = 2,24/22,4 = 0,1 mol. B2. Vì mỗi mol MgCO3 sinh 1 mol CO2 nên nMgCO3 = 0,1 mol."
+        },
+        {
+          "id": "a1-l9-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "prompt": "Từ hỗn hợp 10 g Mg và MgCO3 (câu trên, nMgCO3 = 0,1 mol), khối lượng Mg trong hỗn hợp là",
+          "options": ["1,6 g", "8,4 g", "10 g", "2,4 g"],
+          "answer": 0,
+          "explanation": "B1. mMgCO3 = 0,1 x 84 = 8,4 g. B2. mMg = 10 - 8,4 = 1,6 g."
+        },
+        {
+          "id": "a1-l9-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "prompt": "Chọn các phương pháp tính nhanh không cần viết đầy đủ mọi phương trình trung gian.",
+          "options": [
+            "bảo toàn khối lượng",
+            "bảo toàn nguyên tố",
+            "tăng giảm khối lượng",
+            "đo trực tiếp bằng cân"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Bảo toàn khối lượng, bảo toàn nguyên tố và tăng giảm khối lượng đều là phương pháp tính toán nhanh, không cần viết đủ PTHH trung gian. B2. Đo trực tiếp bằng cân là thao tác thực nghiệm, không phải phương pháp tính toán."
+        },
+        {
+          "id": "a1-l9-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hỗn hợp X gồm Fe và Cu có tổng khối lượng 12 g tác dụng với dung dịch HCl dư (chỉ Fe phản ứng), thu được 2,24 lít khí H2 (đktc). Phần trăm khối lượng Cu trong X là",
+          "options": ["53,3%", "46,7%", "50%", "40%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2 = 2,24/22,4 = 0,1 mol. B2. Fe + 2HCl -> FeCl2 + H2 nên nFe = 0,1 mol, mFe = 5,6 g. B3. mCu = 12 - 5,6 = 6,4 g. B4. %Cu = 6,4/12 x 100% xấp xỉ 53,3%."
+        },
+        {
+          "id": "a1-l9-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "prompt": "Nhúng thanh Zn vào dung dịch CuSO4. Sau phản ứng khối lượng thanh kim loại giảm 0,2 g (biết mỗi mol Zn phản ứng làm giảm khối lượng thanh 1 g vì Zn tan ra nhiều hơn Cu bám vào). Số mol Zn đã phản ứng là bao nhiêu?",
+          "answer": "0,2",
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Mỗi mol Zn phản ứng: Zn (65) tan ra, Cu (64) bám vào nên khối lượng thanh giảm 65 - 64 = 1 g. B2. Số mol Zn phản ứng = 0,2/1 = 0,2 mol."
+        },
+        {
+          "id": "a1-l9-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "prompt": "Hoà tan hoàn toàn 9,2 g hỗn hợp Na và Na2O vào nước dư, thu được dung dịch NaOH và 1,12 lít khí H2 (đktc, chỉ Na phản ứng với nước sinh khí). Khối lượng Na2O trong hỗn hợp là",
+          "options": ["6,9 g", "2,3 g", "4,6 g", "9,2 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nH2 = 1,12/22,4 = 0,05 mol. B2. Phương trình 2Na + 2H2O -> 2NaOH + H2 có tỉ lệ Na : H2 = 2 : 1 nên nNa = 0,1 mol, mNa = 2,3 g. B3. mNa2O = 9,2 - 2,3 = 6,9 g."
+        }
+      ]
     }
   ]
 }
