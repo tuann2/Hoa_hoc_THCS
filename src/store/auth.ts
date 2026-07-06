@@ -99,11 +99,9 @@ async function resolveDisplayName(user: User): Promise<string | null> {
 }
 
 let initializePromise: Promise<void> | null = null;
-let unsubscribeAuth:
-  | {
-      unsubscribe: () => void;
-    }
-  | null = null;
+let unsubscribeAuth: {
+  unsubscribe: () => void;
+} | null = null;
 
 export const useAuthStore = create<AuthState>()((set) => ({
   session: null,
@@ -142,7 +140,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
                     ? false
                     : state.isPasswordRecovery
             }));
-          });
+          }
+        );
 
         unsubscribeAuth = data.subscription;
       }
@@ -171,7 +170,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
   async signUp(email, password, displayName) {
     if (!supabase) {
       return {
-        error: 'Ứng dụng chưa được cấu hình Supabase nên chỉ lưu tiến độ cục bộ.'
+        error:
+          'Ứng dụng chưa được cấu hình Supabase nên chỉ lưu tiến độ cục bộ.'
       };
     }
 
@@ -205,9 +205,7 @@ export const useAuthStore = create<AuthState>()((set) => ({
     }
 
     const user = data.session?.user ?? data.user;
-    const nextDisplayName = user
-      ? await resolveDisplayName(user)
-      : trimmedName;
+    const nextDisplayName = user ? await resolveDisplayName(user) : trimmedName;
 
     if (data.session && user) {
       set({
@@ -229,7 +227,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
   async signIn(email, password) {
     if (!supabase) {
       return {
-        error: 'Ứng dụng chưa được cấu hình Supabase nên chỉ lưu tiến độ cục bộ.'
+        error:
+          'Ứng dụng chưa được cấu hình Supabase nên chỉ lưu tiến độ cục bộ.'
       };
     }
 
@@ -293,7 +292,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
   async resetPassword(email) {
     if (!supabase) {
       return {
-        error: 'Ứng dụng chưa được cấu hình Supabase nên chưa thể gửi email đặt lại mật khẩu.'
+        error:
+          'Ứng dụng chưa được cấu hình Supabase nên chưa thể gửi email đặt lại mật khẩu.'
       };
     }
 
@@ -313,7 +313,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
   async updatePassword(newPassword) {
     if (!supabase) {
       return {
-        error: 'Ứng dụng chưa được cấu hình Supabase nên chưa thể cập nhật mật khẩu.'
+        error:
+          'Ứng dụng chưa được cấu hình Supabase nên chưa thể cập nhật mật khẩu.'
       };
     }
 

@@ -31,9 +31,9 @@ FEATURE-006/007.
   đúng/sai khi prop `result` khác `null`. **Quan trọng cho thiết kế
   thi thử**: nếu component cha gọi `onSubmit` nhưng KHÔNG bao giờ set
   `result` (giữ `null`), rồi tự tăng `questionIndex` để đổi `question`
-  + đổi `key`, thì `QuestionRenderer` remount sang câu tiếp theo mà
-  không hiện đáp án — đúng yêu cầu "không hiện đáp án từng câu" mà
-  **không cần sửa** component này.
+  - đổi `key`, thì `QuestionRenderer` remount sang câu tiếp theo mà
+    không hiện đáp án — đúng yêu cầu "không hiện đáp án từng câu" mà
+    **không cần sửa** component này.
 - `src/components/ResultScreen.tsx`: gắn chặt với khái niệm một bài học
   (earnedXp, onNextLesson) — không tái dùng được nguyên trạng cho màn
   kết quả thi (cần bảng điểm theo mức + xem lại từng câu). Cần màn
@@ -330,12 +330,12 @@ ro duy nhất là logic (xem mục 13), không phải bảo mật.
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Thuật toán chọn câu theo tỉ lệ sai lệch (lặp câu, sai tỉ lệ, crash khi pool nhỏ) | Trung bình — đề thi không công bằng hoặc app crash | Test riêng từng nhánh (đủ/thiếu/rỗng) trước khi nối UI; Gemini review độc lập phần `pickExamQuestions`/`gradeExamAttempt` (thuộc nhóm "numeric/logic" cần dual-review theo CLAUDE.md) |
-| Cơ chế "không lộ đáp án" dựa vào không set `result` có thể vô tình bị phá nếu sau này có người sửa `QuestionRenderer` giả định `result` luôn được set sau `onSubmit` | Thấp hiện tại, rủi ro tăng dần theo thời gian | Ghi chú rõ trong code comment tại `ExamRoute.tsx` về việc cố ý không set `result`; cân nhắc thêm test integration khẳng định hành vi này |
-| Bump `PROGRESS_VERSION` lần 2 (2 → 3) có thể lặp lại rủi ro migrate như FEATURE-007 | Trung bình nếu migrate sai | Test riêng migrate v2→v3, không đổi field cũ, theo đúng pattern đã dùng ở FEATURE-007 |
-| Lịch sử thi phình payload nếu học sinh thi nhiều | Thấp | Cắt cứng còn 20 phần tử mới nhất mỗi lần ghi |
+| Risk                                                                                                                                                                 | Impact                                             | Mitigation                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Thuật toán chọn câu theo tỉ lệ sai lệch (lặp câu, sai tỉ lệ, crash khi pool nhỏ)                                                                                     | Trung bình — đề thi không công bằng hoặc app crash | Test riêng từng nhánh (đủ/thiếu/rỗng) trước khi nối UI; Gemini review độc lập phần `pickExamQuestions`/`gradeExamAttempt` (thuộc nhóm "numeric/logic" cần dual-review theo CLAUDE.md) |
+| Cơ chế "không lộ đáp án" dựa vào không set `result` có thể vô tình bị phá nếu sau này có người sửa `QuestionRenderer` giả định `result` luôn được set sau `onSubmit` | Thấp hiện tại, rủi ro tăng dần theo thời gian      | Ghi chú rõ trong code comment tại `ExamRoute.tsx` về việc cố ý không set `result`; cân nhắc thêm test integration khẳng định hành vi này                                              |
+| Bump `PROGRESS_VERSION` lần 2 (2 → 3) có thể lặp lại rủi ro migrate như FEATURE-007                                                                                  | Trung bình nếu migrate sai                         | Test riêng migrate v2→v3, không đổi field cũ, theo đúng pattern đã dùng ở FEATURE-007                                                                                                 |
+| Lịch sử thi phình payload nếu học sinh thi nhiều                                                                                                                     | Thấp                                               | Cắt cứng còn 20 phần tử mới nhất mỗi lần ghi                                                                                                                                          |
 
 ## 14. Rollback plan
 

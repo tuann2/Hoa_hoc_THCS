@@ -21,25 +21,25 @@ test cho auth/progress sync.
 
 ## 2. Files changed
 
-| File | Change |
-| --- | --- |
-| `supabase/migrations/0001_init.sql` | Tạo schema `profiles` / `progress`, trigger tạo profile, RLS policies |
-| `src/lib/supabase.ts` | Official `@supabase/supabase-js` client với offline fallback khi thiếu env |
-| `src/lib/progressSync.ts` | Pull/merge/push tiến độ, debounce push, sync khi đăng nhập, sửa merge streak |
-| `src/store/auth.ts` | Zustand auth store, initialize, sign up/in/out, reset password, update password sau recovery |
-| `src/store/progress.ts` | Export snapshot helpers, source tracking cho sync subscription |
-| `src/routes/AuthRoute.tsx` | UI đăng nhập / tạo tài khoản / quên mật khẩu / nhập mật khẩu mới |
-| `src/routes/ProfileRoute.tsx` | Hiển thị tên/email, CTA login, đăng xuất, trạng thái sync |
-| `src/App.tsx` | Route `/auth`, header auth state, bootstrap auth + sync |
-| `.env.example` | Mẫu env Supabase |
-| `tests/lib/progress-sync.test.ts` | Test merge logic, malformed server data, debounce push, edge case streak |
-| `tests/store/auth.test.ts` | Test auth store với mock Supabase, gồm update password |
-| `package.json` | Thêm dependency Supabase |
-| `.github/workflows/ci.yml` | Inject env giả để build CI |
-| `.github/workflows/deploy.yml` | Inject env từ GitHub Secrets khi deploy |
-| `README.md` | Hướng dẫn thiết lập Supabase và ghi chú quyền riêng tư |
-| `CHANGELOG.md` | Ghi nhận FEATURE-006 |
-| `docs/handoffs/FEATURE-006-implementation.md` | Handoff này |
+| File                                          | Change                                                                                       |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `supabase/migrations/0001_init.sql`           | Tạo schema `profiles` / `progress`, trigger tạo profile, RLS policies                        |
+| `src/lib/supabase.ts`                         | Official `@supabase/supabase-js` client với offline fallback khi thiếu env                   |
+| `src/lib/progressSync.ts`                     | Pull/merge/push tiến độ, debounce push, sync khi đăng nhập, sửa merge streak                 |
+| `src/store/auth.ts`                           | Zustand auth store, initialize, sign up/in/out, reset password, update password sau recovery |
+| `src/store/progress.ts`                       | Export snapshot helpers, source tracking cho sync subscription                               |
+| `src/routes/AuthRoute.tsx`                    | UI đăng nhập / tạo tài khoản / quên mật khẩu / nhập mật khẩu mới                             |
+| `src/routes/ProfileRoute.tsx`                 | Hiển thị tên/email, CTA login, đăng xuất, trạng thái sync                                    |
+| `src/App.tsx`                                 | Route `/auth`, header auth state, bootstrap auth + sync                                      |
+| `.env.example`                                | Mẫu env Supabase                                                                             |
+| `tests/lib/progress-sync.test.ts`             | Test merge logic, malformed server data, debounce push, edge case streak                     |
+| `tests/store/auth.test.ts`                    | Test auth store với mock Supabase, gồm update password                                       |
+| `package.json`                                | Thêm dependency Supabase                                                                     |
+| `.github/workflows/ci.yml`                    | Inject env giả để build CI                                                                   |
+| `.github/workflows/deploy.yml`                | Inject env từ GitHub Secrets khi deploy                                                      |
+| `README.md`                                   | Hướng dẫn thiết lập Supabase và ghi chú quyền riêng tư                                       |
+| `CHANGELOG.md`                                | Ghi nhận FEATURE-006                                                                         |
+| `docs/handoffs/FEATURE-006-implementation.md` | Handoff này                                                                                  |
 
 ## 3. Design decisions
 
@@ -69,13 +69,13 @@ thật — toàn bộ 5 lệnh PASS trực tiếp, không cần workaround.
 
 ## 6. Validation results
 
-| Check | Result |
-| --- | --- |
+| Check                      | Result                                    |
+| -------------------------- | ----------------------------------------- |
 | `npm run validate-content` | PASS (17 unit, không lỗi schema/nội dung) |
-| `npm test` | PASS (7 file, 28 test) |
-| `npm run lint` | PASS |
-| `npm run typecheck` | PASS |
-| `npm run build` | PASS |
+| `npm test`                 | PASS (7 file, 28 test)                    |
+| `npm run lint`             | PASS                                      |
+| `npm run typecheck`        | PASS                                      |
+| `npm run build`            | PASS                                      |
 
 ## 7. Known limitations
 
@@ -94,3 +94,20 @@ thật — toàn bộ 5 lệnh PASS trực tiếp, không cần workaround.
 - Chạy adversarial review đúng checklist của plan: RLS bypass, merge ảo XP,
   xác nhận bundle không chứa `service_role`.
 - Thêm component test cho `AuthRoute` nếu muốn khóa chặt thông báo/điều hướng UI.
+
+## Follow-up closed
+
+Gap test `AuthRoute` ở mục 9 đã được đóng bằng `tests/routes/auth-route.test.tsx`.
+Các scenario hiện được cover:
+
+- Sign-in mặc định: render email/mật khẩu, gọi `signIn`, điều hướng sang
+  `/profile` khi thành công, và hiển thị lỗi trả về cho người dùng.
+- Sign-up: chuyển tab "Tạo tài khoản", hiện trường `displayName`, gọi
+  `signUp` với đúng tham số, giữ nguyên trang khi cần xác nhận email, và
+  điều hướng sang `/profile` khi không cần xác nhận.
+- Reset password: chuyển tab "Quên mật khẩu", ẩn trường mật khẩu, gọi
+  `resetPassword(email)` và hiển thị thông báo trả về.
+- Password recovery: khi `isPasswordRecovery = true`, hiển thị form "Nhập
+  mật khẩu mới", gọi `updatePassword`, rồi điều hướng sang `/profile`.
+- Already logged in: khi `session` có giá trị và không ở recovery mode,
+  hiển thị panel "Em đã đăng nhập rồi" thay vì form auth.

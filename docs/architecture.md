@@ -11,14 +11,14 @@ see the linked ADR in `docs/adr/`.
 
 ## Current stack
 
-| Layer | Technology | Since | Rationale (short) | ADR |
-| --- | --- | --- | --- | --- |
-| Build/dev | Vite | project start | Fast dev server, native ESM, minimal config for a static SPA | — |
-| UI | React + TypeScript | project start | Component model fits card/quiz UI; TS catches content-shape errors at compile time | — |
-| Styling | Tailwind CSS | project start | Utility-first, fast iteration for mobile-first layouts | — |
-| Content | JSON under `content/units/` | project start | No backend needed; content is data, versionable in Git, validated by script | — |
-| Hosting | GitHub Pages (static) | project start | Free, zero-ops for a static SPA | — |
-| Auth + sync | Supabase (Auth + Postgres + RLS) | FEATURE-006 (2026-07-06) | Free tier covers email+password auth and small JSON progress storage; official SDK avoids hand-rolled auth code; RLS enforces per-user isolation without a custom backend | — |
+| Layer       | Technology                       | Since                    | Rationale (short)                                                                                                                                                         | ADR                                        |
+| ----------- | -------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Build/dev   | Vite                             | project start            | Fast dev server, native ESM, minimal config for a static SPA                                                                                                              | —                                          |
+| UI          | React + TypeScript               | project start            | Component model fits card/quiz UI; TS catches content-shape errors at compile time                                                                                        | —                                          |
+| Styling     | Tailwind CSS                     | project start            | Utility-first, fast iteration for mobile-first layouts                                                                                                                    | —                                          |
+| Content     | JSON under `content/units/`      | project start            | No backend needed; content is data, versionable in Git, validated by script                                                                                               | —                                          |
+| Hosting     | GitHub Pages (static)            | project start            | Free, zero-ops for a static SPA                                                                                                                                           | —                                          |
+| Auth + sync | Supabase (Auth + Postgres + RLS) | FEATURE-006 (2026-07-06) | Free tier covers email+password auth and small JSON progress storage; official SDK avoids hand-rolled auth code; RLS enforces per-user isolation without a custom backend | [ADR-0001](adr/0001-supabase-auth-sync.md) |
 
 ## How to update this file
 

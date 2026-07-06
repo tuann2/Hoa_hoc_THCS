@@ -30,12 +30,12 @@ brew install claude-code
 
 Mỗi repo cần 3 file để Claude biết vai trò:
 
-| File                          | Mục đích                          |
-| ----------------------------- | --------------------------------- |
-| `CLAUDE.md`                   | Vai trò và luật của Claude Code   |
-| `AGENTS.md`                   | Luật của Codex                    |
-| `docs/DOCUMENTATION_RULES.md` | Luật của Antigravity/Gemini       |
-| `AI_WORKFLOW.md`              | Pipeline chung cho mọi agent      |
+| File                          | Mục đích                        |
+| ----------------------------- | ------------------------------- |
+| `CLAUDE.md`                   | Vai trò và luật của Claude Code |
+| `AGENTS.md`                   | Luật của Codex                  |
+| `docs/DOCUMENTATION_RULES.md` | Luật của Antigravity/Gemini     |
+| `AI_WORKFLOW.md`              | Pipeline chung cho mọi agent    |
 
 Copy từ repo này làm template (xem mục 5).
 
@@ -181,12 +181,12 @@ với `timeout: 300000` (5 phút).
 
 ### Use cases
 
-| Use case                          | Model đề xuất              |
-| --------------------------------- | -------------------------- |
-| Review số liệu/bài toán           | Gemini 3.5 Flash (High)    |
-| Soạn thảo docs dài                | Gemini 3.1 Pro (High)      |
-| Kiểm tra nhanh một vài câu        | Gemini 3.5 Flash (Medium)  |
-| Cross-check logic phức tạp        | Gemini 3.1 Pro (High)      |
+| Use case                   | Model đề xuất             |
+| -------------------------- | ------------------------- |
+| Review số liệu/bài toán    | Gemini 3.5 Flash (High)   |
+| Soạn thảo docs dài         | Gemini 3.1 Pro (High)     |
+| Kiểm tra nhanh một vài câu | Gemini 3.5 Flash (Medium) |
+| Cross-check logic phức tạp | Gemini 3.1 Pro (High)     |
 
 ---
 
@@ -207,11 +207,13 @@ Claude soạn `docs/plans/FEATURE-XXX.md`, user approve.
 ### Bước 3 — Delegate cho Codex
 
 Với task đơn:
+
 ```
 Agent(subagent_type="codex:codex-rescue", prompt="--cwd /repo --write --wait <task>")
 ```
 
 Với nhiều task độc lập (song song):
+
 ```
 Agent(subagent_type="codex:codex-rescue", run_in_background=True,
       prompt="--cwd /repo --write --background <task A>")
@@ -263,11 +265,11 @@ cp docs/DOCUMENTATION_RULES.md /new-project/docs/DOCUMENTATION_RULES.md
 
 Điều chỉnh bắt buộc trong mỗi file:
 
-| File          | Điều chỉnh                                                     |
-| ------------- | -------------------------------------------------------------- |
-| `CLAUDE.md`   | Project context, đường dẫn repo, validation commands          |
-| `AGENTS.md`   | Validation commands (npm/cargo/python tùy stack)              |
-| `AI_WORKFLOW.md` | Validation commands, đường dẫn repo trong ví dụ           |
+| File             | Điều chỉnh                                           |
+| ---------------- | ---------------------------------------------------- |
+| `CLAUDE.md`      | Project context, đường dẫn repo, validation commands |
+| `AGENTS.md`      | Validation commands (npm/cargo/python tùy stack)     |
+| `AI_WORKFLOW.md` | Validation commands, đường dẫn repo trong ví dụ      |
 
 ---
 

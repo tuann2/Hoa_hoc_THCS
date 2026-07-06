@@ -287,11 +287,11 @@ migration SQL mới.
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Logic merge 3 chiều (giữ/giữ/xoá) sai lệch làm mất câu cần ôn hoặc hồi sinh câu đã ôn xong | Trung bình — trải nghiệm khó chịu, không mất dữ liệu học tập cốt lõi (XP/sao) | Test rõ 3 case; Gemini review độc lập phần merge trước khi commit (thuộc nhóm "numeric/logic" cần dual-review theo CLAUDE.md) |
-| Bump `PROGRESS_VERSION` phá vỡ dữ liệu localStorage cũ của học sinh đang dùng | Cao nếu migrate sai — mất tiến độ hiển thị (dữ liệu gốc vẫn còn trong localStorage, chỉ là đọc sai) | Viết `migrate` tường minh, test riêng cho migrate v1→v2, không đổi field cũ |
-| Badge số câu sai gây phân tâm nếu quá nhiều | Thấp | Chỉ hiển thị số đếm đơn giản, không ép buộc học sinh vào `/review` |
+| Risk                                                                                       | Impact                                                                                              | Mitigation                                                                                                                    |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Logic merge 3 chiều (giữ/giữ/xoá) sai lệch làm mất câu cần ôn hoặc hồi sinh câu đã ôn xong | Trung bình — trải nghiệm khó chịu, không mất dữ liệu học tập cốt lõi (XP/sao)                       | Test rõ 3 case; Gemini review độc lập phần merge trước khi commit (thuộc nhóm "numeric/logic" cần dual-review theo CLAUDE.md) |
+| Bump `PROGRESS_VERSION` phá vỡ dữ liệu localStorage cũ của học sinh đang dùng              | Cao nếu migrate sai — mất tiến độ hiển thị (dữ liệu gốc vẫn còn trong localStorage, chỉ là đọc sai) | Viết `migrate` tường minh, test riêng cho migrate v1→v2, không đổi field cũ                                                   |
+| Badge số câu sai gây phân tâm nếu quá nhiều                                                | Thấp                                                                                                | Chỉ hiển thị số đếm đơn giản, không ép buộc học sinh vào `/review`                                                            |
 
 ## 14. Rollback plan
 
