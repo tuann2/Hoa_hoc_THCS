@@ -36,6 +36,8 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
   const navigate = useNavigate();
   const progressStore = getProgressStore(units);
   const completeLesson = progressStore((state) => state.completeLesson);
+  const recordWrongAnswer = progressStore((state) => state.recordWrongAnswer);
+  const clearWrongAnswer = progressStore((state) => state.clearWrongAnswer);
   const [phase, setPhase] = useState<Phase>('theory');
   const [cardIndex, setCardIndex] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -99,12 +101,14 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
 
       if (correct) {
         setCorrectFirstTry((current) => current + 1);
+        clearWrongAnswer(unit.id, lesson.id, currentQuestion.id);
       } else {
         setRetryIds((current) =>
           current.includes(currentQuestion.id)
             ? current
             : [...current, currentQuestion.id]
         );
+        recordWrongAnswer(unit.id, lesson.id, currentQuestion.id);
       }
     }
 

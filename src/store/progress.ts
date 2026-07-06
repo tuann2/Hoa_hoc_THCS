@@ -8,7 +8,7 @@ import type { Lesson, UnitContent } from '../types/content';
 import { calculateStars } from '../lib/chemistry';
 
 export const PROGRESS_STORAGE_KEY = 'hhthcs-progress';
-export const PROGRESS_VERSION = 1;
+export const PROGRESS_VERSION = 2;
 
 export interface LessonProgress {
   completed: boolean;
@@ -18,13 +18,24 @@ export interface LessonProgress {
   completedAt?: string;
 }
 
+export interface WrongQuestionEntry {
+  unitId: string;
+  lessonId: string;
+  questionId: string;
+  missCount: number;
+  lastMissedAt: string;
+  resolvedAt?: string | null;
+}
+
 export interface ProgressSnapshot {
   totalXp: number;
   streakCurrent: number;
   streakLongest: number;
   lastStudyDate: string | null;
+  lastMutationAt: string | null;
   lessonProgress: Record<string, LessonProgress>;
   unlockedLessonIds: string[];
+  wrongQuestions: Record<string, WrongQuestionEntry>;
 }
 
 export interface ProgressState {
@@ -32,8 +43,10 @@ export interface ProgressState {
   streakCurrent: number;
   streakLongest: number;
   lastStudyDate: string | null;
+  lastMutationAt: string | null;
   lessonProgress: Record<string, LessonProgress>;
   unlockedLessonIds: string[];
+  wrongQuestions: Record<string, WrongQuestionEntry>;
   completeLesson: (
     lesson: Lesson,
     nextLessonId: string | null,
@@ -41,21 +54,45 @@ export interface ProgressState {
     earnedXp: number,
     date?: Date
   ) => void;
+  recordWrongAnswer: (
+    unitId: string,
+    lessonId: string,
+    questionId: string,
+    date?: Date,
+    options?: { incrementMissCount?: boolean }
+  ) => void;
+  clearWrongAnswer: (
+    unitId: string,
+    lessonId: string,
+    questionId: string,
+    date?: Date
+  ) => void;
   reset: () => void;
 }
 
-type ProgressMutationSource = 'completeLesson' | 'reset' | 'hydrate';
+type ProgressMutationSource =
+  | 'completeLesson'
+  | 'recordWrongAnswer'
+  | 'clearWrongAnswer'
+  | 'reset'
+  | 'hydrate';
 
 const EMPTY_PROGRESS: ProgressSnapshot = {
   totalXp: 0,
   streakCurrent: 0,
   streakLongest: 0,
   lastStudyDate: null,
+  lastMutationAt: null,
   lessonProgress: {},
-  unlockedLessonIds: []
+  unlockedLessonIds: [],
+  wrongQuestions: {}
 };
 
 let lastMutationSource: ProgressMutationSource | null = null;
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null;
+}
 
 function toDateKey(date: Date): string {
   return date.toISOString().slice(0, 10);
@@ -75,9 +112,9 @@ function deriveUnlockedLessons(units: UnitContent[]): string[] {
     .map((lesson) => lesson.id);
 }
 
-function createSafeStorage(): PersistStorage<ProgressState> {
+function createSafeStorage(): PersistStorage<Partial<ProgressState>> {
   return {
-    getItem: (name: string): StorageValue<ProgressState> | null => {
+    getItem: (name: string): StorageValue<Partial<ProgressState>> | null => {
       if (typeof window === 'undefined') {
         return null;
       }
@@ -89,13 +126,13 @@ function createSafeStorage(): PersistStorage<ProgressState> {
       }
 
       try {
-        return JSON.parse(raw) as StorageValue<ProgressState>;
+        return JSON.parse(raw) as StorageValue<Partial<ProgressState>>;
       } catch {
         window.localStorage.removeItem(name);
         return null;
       }
     },
-    setItem: (name: string, value: StorageValue<ProgressState>) => {
+    setItem: (name: string, value: StorageValue<Partial<ProgressState>>) => {
       if (typeof window === 'undefined') {
         return;
       }
@@ -117,6 +154,40 @@ export const createInitialProgressState = (units: UnitContent[]) => ({
   unlockedLessonIds: deriveUnlockedLessons(units)
 });
 
+export function getWrongQuestionKey(
+  unitId: string,
+  lessonId: string,
+  questionId: string
+) {
+  return `${unitId}::${lessonId}::${questionId}`;
+}
+
+export function isWrongQuestionPending(entry: WrongQuestionEntry): boolean {
+  return !entry.resolvedAt || entry.lastMissedAt > entry.resolvedAt;
+}
+
+export function migrateProgressState(
+  persistedState: unknown,
+  version: number
+): Partial<ProgressState> {
+  if (!isRecord(persistedState)) {
+    return {};
+  }
+
+  if (version < 2) {
+    return {
+      ...persistedState,
+      wrongQuestions: {},
+      lastMutationAt:
+        typeof persistedState.lastMutationAt === 'string'
+          ? persistedState.lastMutationAt
+          : null
+    };
+  }
+
+  return persistedState;
+}
+
 export function cloneProgressSnapshot(
   snapshot: ProgressSnapshot
 ): ProgressSnapshot {
@@ -125,13 +196,20 @@ export function cloneProgressSnapshot(
     streakCurrent: snapshot.streakCurrent,
     streakLongest: snapshot.streakLongest,
     lastStudyDate: snapshot.lastStudyDate,
+    lastMutationAt: snapshot.lastMutationAt,
     lessonProgress: Object.fromEntries(
       Object.entries(snapshot.lessonProgress).map(([lessonId, progress]) => [
         lessonId,
         { ...progress }
       ])
     ),
-    unlockedLessonIds: [...snapshot.unlockedLessonIds]
+    unlockedLessonIds: [...snapshot.unlockedLessonIds],
+    wrongQuestions: Object.fromEntries(
+      Object.entries(snapshot.wrongQuestions).map(([key, entry]) => [
+        key,
+        { ...entry }
+      ])
+    )
   };
 }
 
@@ -141,8 +219,10 @@ export function getProgressSnapshot(state: ProgressState): ProgressSnapshot {
     streakCurrent: state.streakCurrent,
     streakLongest: state.streakLongest,
     lastStudyDate: state.lastStudyDate,
+    lastMutationAt: state.lastMutationAt,
     lessonProgress: state.lessonProgress,
-    unlockedLessonIds: state.unlockedLessonIds
+    unlockedLessonIds: state.unlockedLessonIds,
+    wrongQuestions: state.wrongQuestions
   });
 }
 
@@ -221,6 +301,7 @@ export const createProgressStore = (units: UnitContent[]) =>
               streakCurrent,
               streakLongest: Math.max(state.streakLongest, streakCurrent),
               lastStudyDate: studyDate,
+              lastMutationAt: date.toISOString(),
               lessonProgress: {
                 ...state.lessonProgress,
                 [lesson.id]: {
@@ -238,14 +319,72 @@ export const createProgressStore = (units: UnitContent[]) =>
                 : state.unlockedLessonIds
             };
           }),
+        recordWrongAnswer: (
+          unitId,
+          lessonId,
+          questionId,
+          date = new Date(),
+          options
+        ) =>
+          set((state) => {
+            const key = getWrongQuestionKey(unitId, lessonId, questionId);
+            const current = state.wrongQuestions[key];
+            const incrementMissCount = options?.incrementMissCount ?? true;
+
+            lastMutationSource = 'recordWrongAnswer';
+
+            return {
+              ...state,
+              lastMutationAt: date.toISOString(),
+              wrongQuestions: {
+                ...state.wrongQuestions,
+                [key]: {
+                  unitId,
+                  lessonId,
+                  questionId,
+                  missCount: current
+                    ? current.missCount + (incrementMissCount ? 1 : 0)
+                    : 1,
+                  lastMissedAt: date.toISOString(),
+                  resolvedAt: current?.resolvedAt ?? null
+                }
+              }
+            };
+          }),
+        clearWrongAnswer: (unitId, lessonId, questionId, date = new Date()) =>
+          set((state) => {
+            const key = getWrongQuestionKey(unitId, lessonId, questionId);
+
+            if (!state.wrongQuestions[key]) {
+              return state;
+            }
+
+            lastMutationSource = 'clearWrongAnswer';
+
+            return {
+              ...state,
+              lastMutationAt: date.toISOString(),
+              wrongQuestions: {
+                ...state.wrongQuestions,
+                [key]: {
+                  ...state.wrongQuestions[key],
+                  resolvedAt: date.toISOString()
+                }
+              }
+            };
+          }),
         reset: () => {
           lastMutationSource = 'reset';
-          set(createInitialProgressState(units));
+          set({
+            ...createInitialProgressState(units),
+            lastMutationAt: new Date().toISOString()
+          });
         }
       }),
       {
         name: PROGRESS_STORAGE_KEY,
         version: PROGRESS_VERSION,
+        migrate: migrateProgressState,
         storage: createSafeStorage()
       }
     )

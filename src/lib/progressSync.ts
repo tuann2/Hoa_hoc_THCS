@@ -8,7 +8,8 @@ import {
   getProgressSnapshot,
   getProgressStore,
   type LessonProgress,
-  type ProgressSnapshot
+  type ProgressSnapshot,
+  type WrongQuestionEntry
 } from '../store/progress';
 import type { UnitContent } from '../types/content';
 
@@ -43,7 +44,8 @@ function normalizeLessonProgress(value: unknown): LessonProgress | null {
   }
 
   const bestAccuracy =
-    typeof value.bestAccuracy === 'number' && Number.isFinite(value.bestAccuracy)
+    typeof value.bestAccuracy === 'number' &&
+    Number.isFinite(value.bestAccuracy)
       ? Math.max(0, value.bestAccuracy)
       : null;
   const bestXp =
@@ -69,6 +71,41 @@ function normalizeLessonProgress(value: unknown): LessonProgress | null {
   };
 }
 
+function normalizeWrongQuestionEntry(
+  value: unknown
+): WrongQuestionEntry | null {
+  if (!isRecord(value)) {
+    return null;
+  }
+
+  const missCount =
+    typeof value.missCount === 'number' && Number.isFinite(value.missCount)
+      ? Math.max(0, value.missCount)
+      : null;
+
+  if (
+    typeof value.unitId !== 'string' ||
+    typeof value.lessonId !== 'string' ||
+    typeof value.questionId !== 'string' ||
+    missCount === null ||
+    typeof value.lastMissedAt !== 'string'
+  ) {
+    return null;
+  }
+
+  return {
+    unitId: value.unitId,
+    lessonId: value.lessonId,
+    questionId: value.questionId,
+    missCount,
+    lastMissedAt: value.lastMissedAt,
+    resolvedAt:
+      typeof value.resolvedAt === 'string' || value.resolvedAt === null
+        ? value.resolvedAt
+        : undefined
+  };
+}
+
 export function normalizeProgressSnapshot(
   value: unknown
 ): ProgressSnapshot | null {
@@ -88,22 +125,34 @@ export function normalizeProgressSnapshot(
 
   const lessonProgress = Object.fromEntries(
     Object.entries(value.lessonProgress)
-      .map(([lessonId, progress]) => [lessonId, normalizeLessonProgress(progress)])
-      .filter(
-        (entry): entry is [string, LessonProgress] => entry[1] !== null
-      )
+      .map(([lessonId, progress]) => [
+        lessonId,
+        normalizeLessonProgress(progress)
+      ])
+      .filter((entry): entry is [string, LessonProgress] => entry[1] !== null)
   );
+  const wrongQuestions = isRecord(value.wrongQuestions)
+    ? Object.fromEntries(
+        Object.entries(value.wrongQuestions)
+          .map(([key, entry]) => [key, normalizeWrongQuestionEntry(entry)])
+          .filter(
+            (entry): entry is [string, WrongQuestionEntry] => entry[1] !== null
+          )
+      )
+    : {};
 
   const totalXp =
     typeof value.totalXp === 'number' && Number.isFinite(value.totalXp)
       ? Math.max(0, value.totalXp)
       : null;
   const streakCurrent =
-    typeof value.streakCurrent === 'number' && Number.isFinite(value.streakCurrent)
+    typeof value.streakCurrent === 'number' &&
+    Number.isFinite(value.streakCurrent)
       ? Math.max(0, value.streakCurrent)
       : null;
   const streakLongest =
-    typeof value.streakLongest === 'number' && Number.isFinite(value.streakLongest)
+    typeof value.streakLongest === 'number' &&
+    Number.isFinite(value.streakLongest)
       ? Math.max(0, value.streakLongest)
       : null;
 
@@ -117,15 +166,15 @@ export function normalizeProgressSnapshot(
     streakLongest,
     lastStudyDate:
       typeof value.lastStudyDate === 'string' ? value.lastStudyDate : null,
+    lastMutationAt:
+      typeof value.lastMutationAt === 'string' ? value.lastMutationAt : null,
     lessonProgress,
-    unlockedLessonIds: Array.from(new Set(unlockedLessonIds))
+    unlockedLessonIds: Array.from(new Set(unlockedLessonIds)),
+    wrongQuestions
   };
 }
 
-function latestCompletedAt(
-  left?: string,
-  right?: string
-): string | undefined {
+function latestCompletedAt(left?: string, right?: string): string | undefined {
   if (!left) {
     return right;
   }
@@ -135,6 +184,38 @@ function latestCompletedAt(
   }
 
   return left > right ? left : right;
+}
+
+function latestTimestamp(
+  left: string | null | undefined,
+  right: string | null | undefined
+) {
+  if (!left) {
+    return right ?? null;
+  }
+
+  if (!right) {
+    return left;
+  }
+
+  return left > right ? left : right;
+}
+
+function mergeWrongQuestionEntries(
+  left: WrongQuestionEntry,
+  right: WrongQuestionEntry
+): WrongQuestionEntry {
+  return {
+    unitId: left.unitId,
+    lessonId: left.lessonId,
+    questionId: left.questionId,
+    missCount: Math.max(left.missCount, right.missCount),
+    lastMissedAt:
+      left.lastMissedAt > right.lastMissedAt
+        ? left.lastMissedAt
+        : right.lastMissedAt,
+    resolvedAt: latestTimestamp(left.resolvedAt, right.resolvedAt)
+  };
 }
 
 export function mergeProgress(
@@ -157,7 +238,8 @@ export function mergeProgress(
       return [
         lessonId,
         {
-          completed: localLesson?.completed === true || serverLesson?.completed === true,
+          completed:
+            localLesson?.completed === true || serverLesson?.completed === true,
           stars: clampStars(
             Math.max(localLesson?.stars ?? 0, serverLesson?.stars ?? 0)
           ),
@@ -173,6 +255,38 @@ export function mergeProgress(
         } satisfies LessonProgress
       ];
     })
+  );
+  const wrongQuestionKeys = new Set([
+    ...Object.keys(local.wrongQuestions),
+    ...Object.keys(server.wrongQuestions)
+  ]);
+  const wrongQuestions = Object.fromEntries(
+    Array.from(wrongQuestionKeys)
+      .map((key) => {
+        const localEntry = local.wrongQuestions[key];
+        const serverEntry = server.wrongQuestions[key];
+
+        if (localEntry && serverEntry) {
+          return [
+            key,
+            mergeWrongQuestionEntries(localEntry, serverEntry)
+          ] as const;
+        }
+
+        if (localEntry) {
+          return [key, { ...localEntry }] as const;
+        }
+
+        if (!serverEntry) {
+          return null;
+        }
+
+        return [key, { ...serverEntry }] as const;
+      })
+      .filter(
+        (entry): entry is readonly [string, WrongQuestionEntry] =>
+          entry !== null
+      )
   );
 
   const totalXp = Object.values(lessonProgress).reduce(
@@ -193,10 +307,15 @@ export function mergeProgress(
     streakCurrent,
     streakLongest: Math.max(local.streakLongest, server.streakLongest),
     lastStudyDate: newerSource.lastStudyDate,
+    lastMutationAt: latestTimestamp(
+      local.lastMutationAt,
+      server.lastMutationAt
+    ),
     lessonProgress,
     unlockedLessonIds: Array.from(
       new Set([...local.unlockedLessonIds, ...server.unlockedLessonIds])
-    )
+    ),
+    wrongQuestions
   };
 }
 
@@ -209,7 +328,7 @@ export async function pullProgress(
 
   const { data, error } = await supabase
     .from('progress')
-    .select('data, version')
+    .select('data, version, updated_at')
     .eq('user_id', userId)
     .maybeSingle();
 
@@ -225,7 +344,20 @@ export async function pullProgress(
     return null;
   }
 
-  return normalizeProgressSnapshot(data.data);
+  const snapshot = normalizeProgressSnapshot(data.data);
+
+  if (!snapshot) {
+    return null;
+  }
+
+  if (snapshot.lastMutationAt || typeof data.updated_at !== 'string') {
+    return snapshot;
+  }
+
+  return {
+    ...snapshot,
+    lastMutationAt: data.updated_at
+  };
 }
 
 export async function pushProgress(
@@ -283,7 +415,12 @@ export function subscribeProgressPush(units: UnitContent[]) {
   progressStore.subscribe((state) => {
     const source = consumeProgressMutationSource();
 
-    if (source !== 'completeLesson' && source !== 'reset') {
+    if (
+      source !== 'completeLesson' &&
+      source !== 'recordWrongAnswer' &&
+      source !== 'clearWrongAnswer' &&
+      source !== 'reset'
+    ) {
       return;
     }
 

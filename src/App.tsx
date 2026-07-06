@@ -1,26 +1,36 @@
 import { useEffect, useMemo } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { getAllUnits } from './lib/content';
-import { subscribeProgressPush, syncProgressOnSignIn } from './lib/progressSync';
+import {
+  subscribeProgressPush,
+  syncProgressOnSignIn
+} from './lib/progressSync';
 import { getAuthStore } from './store/auth';
+import { getProgressStore, isWrongQuestionPending } from './store/progress';
 import { AuthRoute } from './routes/AuthRoute';
 import { HomeRoute } from './routes/HomeRoute';
 import { LessonRoute } from './routes/LessonRoute';
 import { ProfileRoute } from './routes/ProfileRoute';
-
-const navItems = [
-  { to: '/', label: 'Lộ trình' },
-  { to: '/profile', label: 'Hồ sơ' }
-];
+import { ReviewRoute } from './routes/ReviewRoute';
 
 export default function App() {
   const units = useMemo(() => getAllUnits(), []);
+  const progressStore = getProgressStore(units);
   const authStore = getAuthStore();
   const initialize = authStore((state) => state.initialize);
   const isConfigured = authStore((state) => state.isConfigured);
   const isReady = authStore((state) => state.isReady);
   const user = authStore((state) => state.user);
   const displayName = authStore((state) => state.displayName);
+  const reviewCount = progressStore(
+    (state) =>
+      Object.values(state.wrongQuestions).filter(isWrongQuestionPending).length
+  );
+  const navItems: Array<{ badge?: number; label: string; to: string }> = [
+    { to: '/', label: 'Lộ trình' },
+    { to: '/review', label: 'Ôn lại', badge: reviewCount },
+    { to: '/profile', label: 'Hồ sơ' }
+  ];
 
   useEffect(() => {
     void initialize();
@@ -75,7 +85,14 @@ export default function App() {
                   }`
                 }
               >
-                {item.label}
+                <span className="inline-flex items-center gap-2">
+                  <span>{item.label}</span>
+                  {item.badge ? (
+                    <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-ember px-2 py-0.5 text-xs text-white">
+                      {item.badge}
+                    </span>
+                  ) : null}
+                </span>
               </NavLink>
             ))}
           </nav>
@@ -86,6 +103,7 @@ export default function App() {
             <Route path="/" element={<HomeRoute />} />
             <Route path="/auth" element={<AuthRoute />} />
             <Route path="/learn/:unitId/:lessonId" element={<LessonRoute />} />
+            <Route path="/review" element={<ReviewRoute />} />
             <Route path="/profile" element={<ProfileRoute />} />
           </Routes>
         </main>
