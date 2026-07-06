@@ -37,11 +37,34 @@ VITE_SUPABASE_ANON_KEY=your-public-anon-key
 ```
 
 4. Trong Supabase Auth, đặt mật khẩu tối thiểu 8 ký tự.
-5. Với GitHub Pages / CI, khai báo hai secret cùng tên:
+5. **Bắt buộc** — vào **Authentication → URL Configuration** và cập nhật:
+   - **Site URL**: URL production thật, ví dụ
+     `https://<username>.github.io/<repo>/`.
+   - **Redirect URLs**: thêm cả URL production
+     (`https://<username>.github.io/<repo>/**`) và URL dev cục bộ
+     (`http://localhost:5173/**` — cổng mặc định của Vite).
+
+   Mặc định Supabase để `Site URL = http://localhost:3000` (giá trị
+   mẫu khi tạo project, không phải cổng dev thật của app này). Nếu bỏ
+   qua bước này, email xác nhận đăng ký / đặt lại mật khẩu sẽ luôn
+   điều hướng sai chỗ (`localhost:3000`) bất kể app đang chạy ở đâu.
+
+6. Với GitHub Pages / CI, khai báo hai secret cùng tên:
    `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`.
 
 Nếu hai env bị thiếu, app tự rơi về chế độ local-only và vẫn học bình
 thường như trước.
+
+### Nếu gặp lỗi `access_denied&error_code=otp_expired` khi bấm link email
+
+- Nguyên nhân thường gặp nhất: một số email client (Gmail, Outlook Safe
+  Links...) tự động "prefetch" link trong email để quét an toàn, vô
+  tình dùng luôn link xác nhận (chỉ dùng được 1 lần) trước khi người
+  dùng bấm — link luôn báo hết hạn dù mới nhận được.
+- Kiểm tra lại bước 5 ở trên (Site URL/Redirect URLs) trước, vì cấu
+  hình sai chỗ cũng khiến lỗi tương tự xuất hiện.
+- Nếu vẫn lặp lại, thử tạo tài khoản test bằng email cá nhân (Gmail cá
+  nhân thường không bật link-scanning mạnh như email công ty).
 
 Các lệnh kiểm tra chính:
 
