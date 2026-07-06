@@ -2,15 +2,16 @@
 
 SPA mobile-first kiểu Duolingo để ôn luyện Hoá học THCS nâng cao theo
 lộ trình `Vô cơ` / `Hữu cơ`. Phiên bản hiện tại triển khai MVP của
-`FEATURE-001`: bản đồ unit, màn bài học, quiz 4 dạng, XP/streak/sao,
-trang hồ sơ và hai chuyên đề mẫu hoàn chỉnh `A6 Axit`, `A8 Muối – Phân
-bón hoá học`.
+`FEATURE-006`: bản đồ unit, màn bài học, quiz 4 dạng, XP/streak/sao,
+trang hồ sơ, đăng nhập email + mật khẩu và đồng bộ tiến độ lên
+Supabase khi env được cấu hình.
 
 ## Stack
 
 - Vite + React 18 + TypeScript
 - Tailwind CSS
 - `react-router-dom`
+- `@supabase/supabase-js` cho Supabase Auth + PostgREST
 - `zustand` + persist (`hhthcs-progress`)
 - Vitest + Testing Library
 
@@ -21,6 +22,24 @@ npm install
 npm run validate-content
 npm run dev
 ```
+
+## Thiết lập Supabase
+
+1. Tạo project Supabase free tier.
+2. Mở SQL Editor và chạy [supabase/migrations/0001_init.sql](supabase/migrations/0001_init.sql).
+3. Sao chép `.env.example` thành `.env.local` rồi điền:
+
+```bash
+VITE_SUPABASE_URL=https://your-project-ref.supabase.co
+VITE_SUPABASE_ANON_KEY=your-public-anon-key
+```
+
+4. Trong Supabase Auth, đặt mật khẩu tối thiểu 8 ký tự.
+5. Với GitHub Pages / CI, khai báo hai secret cùng tên:
+   `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`.
+
+Nếu hai env bị thiếu, app tự rơi về chế độ local-only và vẫn học bình
+thường như trước.
 
 Các lệnh kiểm tra chính:
 
@@ -38,8 +57,11 @@ npm run build
 content/units/                # nội dung JSON cho tất cả unit
 scripts/validate-content.ts   # kiểm tra schema + logic PTHH
 src/components/               # UI học tập, quiz, Chem renderer
+src/lib/supabase.ts           # official @supabase/supabase-js client + offline fallback
+src/lib/progressSync.ts       # pull/merge/push tiến độ
 src/routes/                   # Lộ trình / Bài học / Hồ sơ
-src/store/progress.ts         # XP, streak, sao, mở khoá
+src/store/auth.ts             # session + đăng nhập/đăng xuất/reset
+src/store/progress.ts         # XP, streak, sao, mở khoá, snapshot sync
 tests/                        # unit test và component test
 .github/workflows/ci.yml      # lint + typecheck + test + build
 ```
@@ -70,3 +92,9 @@ tests/                        # unit test và component test
 2. `AGENTS.md`
 3. `docs/plans/<FEATURE-ID>.md`
 4. `docs/handoffs/<FEATURE-ID>-implementation.md`
+
+## Quyền riêng tư
+
+- Ứng dụng chỉ lưu email và tên hiển thị khi em tự tạo tài khoản.
+- Không có analytics hay service role key trong client.
+- Anon key là public-by-design; quyền dữ liệu được chặn bằng RLS trong Supabase.

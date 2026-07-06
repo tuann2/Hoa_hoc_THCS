@@ -8,7 +8,7 @@ import type { Lesson, UnitContent } from '../types/content';
 import { calculateStars } from '../lib/chemistry';
 
 export const PROGRESS_STORAGE_KEY = 'hhthcs-progress';
-const PROGRESS_VERSION = 1;
+export const PROGRESS_VERSION = 1;
 
 export interface LessonProgress {
   completed: boolean;
@@ -16,6 +16,15 @@ export interface LessonProgress {
   bestAccuracy: number;
   bestXp: number;
   completedAt?: string;
+}
+
+export interface ProgressSnapshot {
+  totalXp: number;
+  streakCurrent: number;
+  streakLongest: number;
+  lastStudyDate: string | null;
+  lessonProgress: Record<string, LessonProgress>;
+  unlockedLessonIds: string[];
 }
 
 export interface ProgressState {
@@ -35,7 +44,9 @@ export interface ProgressState {
   reset: () => void;
 }
 
-const EMPTY_PROGRESS = {
+type ProgressMutationSource = 'completeLesson' | 'reset' | 'hydrate';
+
+const EMPTY_PROGRESS: ProgressSnapshot = {
   totalXp: 0,
   streakCurrent: 0,
   streakLongest: 0,
@@ -43,6 +54,8 @@ const EMPTY_PROGRESS = {
   lessonProgress: {},
   unlockedLessonIds: []
 };
+
+let lastMutationSource: ProgressMutationSource | null = null;
 
 function toDateKey(date: Date): string {
   return date.toISOString().slice(0, 10);
@@ -104,6 +117,52 @@ export const createInitialProgressState = (units: UnitContent[]) => ({
   unlockedLessonIds: deriveUnlockedLessons(units)
 });
 
+export function cloneProgressSnapshot(
+  snapshot: ProgressSnapshot
+): ProgressSnapshot {
+  return {
+    totalXp: snapshot.totalXp,
+    streakCurrent: snapshot.streakCurrent,
+    streakLongest: snapshot.streakLongest,
+    lastStudyDate: snapshot.lastStudyDate,
+    lessonProgress: Object.fromEntries(
+      Object.entries(snapshot.lessonProgress).map(([lessonId, progress]) => [
+        lessonId,
+        { ...progress }
+      ])
+    ),
+    unlockedLessonIds: [...snapshot.unlockedLessonIds]
+  };
+}
+
+export function getProgressSnapshot(state: ProgressState): ProgressSnapshot {
+  return cloneProgressSnapshot({
+    totalXp: state.totalXp,
+    streakCurrent: state.streakCurrent,
+    streakLongest: state.streakLongest,
+    lastStudyDate: state.lastStudyDate,
+    lessonProgress: state.lessonProgress,
+    unlockedLessonIds: state.unlockedLessonIds
+  });
+}
+
+export function applyProgressSnapshot(
+  units: UnitContent[],
+  snapshot: ProgressSnapshot
+) {
+  lastMutationSource = 'hydrate';
+  getProgressStore(units).setState((state) => ({
+    ...state,
+    ...cloneProgressSnapshot(snapshot)
+  }));
+}
+
+export function consumeProgressMutationSource() {
+  const source = lastMutationSource;
+  lastMutationSource = null;
+  return source;
+}
+
 export function getNextLessonId(
   units: UnitContent[],
   unitId: string,
@@ -138,6 +197,7 @@ export const createProgressStore = (units: UnitContent[]) =>
           date = new Date()
         ) =>
           set((state) => {
+            lastMutationSource = 'completeLesson';
             const current = state.lessonProgress[lesson.id];
             const stars = calculateStars(accuracy);
             const bestAccuracy = Math.max(current?.bestAccuracy ?? 0, accuracy);
@@ -178,7 +238,10 @@ export const createProgressStore = (units: UnitContent[]) =>
                 : state.unlockedLessonIds
             };
           }),
-        reset: () => set(createInitialProgressState(units))
+        reset: () => {
+          lastMutationSource = 'reset';
+          set(createInitialProgressState(units));
+        }
       }),
       {
         name: PROGRESS_STORAGE_KEY,
@@ -200,4 +263,5 @@ export function getProgressStore(units: UnitContent[]) {
 
 export function resetProgressStoreForTests() {
   storeInstance = null;
+  lastMutationSource = null;
 }
