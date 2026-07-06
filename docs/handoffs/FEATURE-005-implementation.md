@@ -17,14 +17,14 @@ hoàn tất.**
 
 ## 2. Files changed
 
-| File                                       | Change                                             |
-| ------------------------------------------ | -------------------------------------------------- |
-| `content/units/b1-dai-cuong-huu-co.json`   | Metadata → unit đầy đủ 3 bài, `status: available`  |
+| File                                           | Change                                            |
+| ---------------------------------------------- | ------------------------------------------------- |
+| `content/units/b1-dai-cuong-huu-co.json`       | Metadata → unit đầy đủ 3 bài, `status: available` |
 | `content/units/b2-hidrocacbon-nhien-lieu.json` | Metadata → unit đầy đủ 6 bài, `status: available` |
-| `content/units/b3-dan-xuat-chua-oxi.json`  | Metadata → unit đầy đủ 5 bài, `status: available`  |
-| `content/units/b4-gluxit-protein-polime.json` | Metadata → unit đầy đủ 6 bài, `status: available` |
-| `content/units/b5-tong-hop-huu-co.json`    | Metadata → unit đầy đủ 3 bài, `status: available`  |
-| `CHANGELOG.md`                             | Ghi nhận FEATURE-005                               |
+| `content/units/b3-dan-xuat-chua-oxi.json`      | Metadata → unit đầy đủ 5 bài, `status: available` |
+| `content/units/b4-gluxit-protein-polime.json`  | Metadata → unit đầy đủ 6 bài, `status: available` |
+| `content/units/b5-tong-hop-huu-co.json`        | Metadata → unit đầy đủ 3 bài, `status: available` |
+| `CHANGELOG.md`                                 | Ghi nhận FEATURE-005                              |
 
 ## 3. Design decisions
 
@@ -58,11 +58,11 @@ npm run typecheck
 
 ## 6. Validation results
 
-| Check                           | Result                       |
-| ------------------------------- | ---------------------------- |
-| `npm run validate-content`      | PASS — 17 unit, 0 lỗi        |
-| `npm test`                      | PASS — 15/15                 |
-| Lint / typecheck / format:check | PASS                         |
+| Check                           | Result                |
+| ------------------------------- | --------------------- |
+| `npm run validate-content`      | PASS — 17 unit, 0 lỗi |
+| `npm test`                      | PASS — 15/15          |
+| Lint / typecheck / format:check | PASS                  |
 
 ## 7. Known limitations
 

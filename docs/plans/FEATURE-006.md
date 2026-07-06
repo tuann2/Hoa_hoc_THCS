@@ -151,7 +151,7 @@ trong bảng `progress` = `PROGRESS_VERSION` để migrate sau này.
 2. Codex lượt 1: migration SQL + `supabase.ts` + `auth.ts` +
    `AuthRoute` + test auth (mock).
 3. Codex lượt 2: `progressSync.ts` (pull/merge/push) + tích hợp store
-   + Profile/header UI + test merge.
+   - Profile/header UI + test merge.
 4. Gemini: `.env.example`, README, CHANGELOG.
 5. Claude: validate độc lập (lint/typecheck/test/build), inspect diff.
 6. **Adversarial review** (bắt buộc — auth): RLS bypass, lộ
@@ -190,13 +190,13 @@ trong bảng `progress` = `PROGRESS_VERSION` để migrate sau này.
 
 ## 13. Risks
 
-| Risk                                                            | Impact     | Mitigation                                                                                    |
-| --------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------- |
-| RLS policy sai → đọc/ghi chéo tiến độ user khác                 | Cao        | Adversarial review bắt buộc; test thủ công truy cập chéo bằng anon key; policy chỉ `auth.uid()` |
-| Merge sai làm mất hoặc tăng ảo tiến độ                          | Trung bình | Merge thuần hàm, test unit dày; nguyên tắc max/union "không mất thành tích"                   |
-| Supabase free tier pause project sau 7 ngày không hoạt động     | Trung bình | App offline-first vẫn chạy; README ghi cách resume; cân nhắc cron ping sau                    |
-| Email xác nhận vào spam / học sinh không nhận được              | Thấp       | Cho phép dùng app không cần login; hướng dẫn trong UI; có nút gửi lại email                   |
-| Env thiếu khi build Pages → app trắng                           | Thấp       | `supabase.ts` fallback offline-mode; CI build với env giả để bắt lỗi sớm                      |
+| Risk                                                        | Impact     | Mitigation                                                                                      |
+| ----------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------- |
+| RLS policy sai → đọc/ghi chéo tiến độ user khác             | Cao        | Adversarial review bắt buộc; test thủ công truy cập chéo bằng anon key; policy chỉ `auth.uid()` |
+| Merge sai làm mất hoặc tăng ảo tiến độ                      | Trung bình | Merge thuần hàm, test unit dày; nguyên tắc max/union "không mất thành tích"                     |
+| Supabase free tier pause project sau 7 ngày không hoạt động | Trung bình | App offline-first vẫn chạy; README ghi cách resume; cân nhắc cron ping sau                      |
+| Email xác nhận vào spam / học sinh không nhận được          | Thấp       | Cho phép dùng app không cần login; hướng dẫn trong UI; có nút gửi lại email                     |
+| Env thiếu khi build Pages → app trắng                       | Thấp       | `supabase.ts` fallback offline-mode; CI build với env giả để bắt lỗi sớm                        |
 
 ## 14. Rollback plan
 

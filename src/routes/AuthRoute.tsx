@@ -119,14 +119,19 @@ export function AuthRoute() {
           Học trên nhiều thiết bị mà không mất XP
         </h2>
         <p className="mt-4 text-sm leading-7 text-white/80">
-          Tài khoản giúp lưu sao, streak, XP và bài đã mở khoá lên Supabase.
-          Nếu chưa muốn đăng nhập, em vẫn học được như cũ với bộ nhớ cục bộ trên
+          Tài khoản giúp lưu sao, streak, XP và bài đã mở khoá lên Supabase. Nếu
+          chưa muốn đăng nhập, em vẫn học được như cũ với bộ nhớ cục bộ trên
           trình duyệt.
         </p>
         <div className="mt-6 space-y-3 rounded-3xl bg-white/10 p-4 text-sm leading-6 text-white/80">
           <p>Tên hiển thị chỉ dùng trong ứng dụng và được giới hạn 50 ký tự.</p>
-          <p>Email dùng để xác nhận tài khoản và gửi liên kết đặt lại mật khẩu.</p>
-          <p>App không cần server riêng; nếu Supabase chưa cấu hình thì vẫn chạy offline-only.</p>
+          <p>
+            Email dùng để xác nhận tài khoản và gửi liên kết đặt lại mật khẩu.
+          </p>
+          <p>
+            App không cần server riêng; nếu Supabase chưa cấu hình thì vẫn chạy
+            offline-only.
+          </p>
         </div>
       </section>
 
@@ -171,7 +176,9 @@ export function AuthRoute() {
         >
           {mode === 'sign-up' && !isPasswordRecovery ? (
             <label className="block">
-              <span className="text-sm font-semibold text-ink">Tên hiển thị</span>
+              <span className="text-sm font-semibold text-ink">
+                Tên hiển thị
+              </span>
               <input
                 className="mt-2 w-full rounded-2xl border border-ink/10 bg-mist px-4 py-3 outline-none transition focus:border-sea"
                 disabled={!isConfigured || isLoading}
