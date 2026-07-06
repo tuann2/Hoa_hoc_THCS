@@ -65,10 +65,34 @@ import {
   getWrongQuestionKey,
   isWrongQuestionPending,
   PROGRESS_VERSION,
+  type ExamAttempt,
   type ProgressSnapshot
 } from '../../src/store/progress';
 
 const wrongQuestionKey = getWrongQuestionKey('u1', 'u1-l1', 'q1');
+
+function createExamAttempt(
+  index: number,
+  overrides: Partial<ExamAttempt> = {}
+) {
+  const minute = String(index).padStart(2, '0');
+
+  return {
+    id: `exam-${index}`,
+    startedAt: `2026-07-06T09:${minute}:00.000Z`,
+    finishedAt: `2026-07-06T10:${minute}:00.000Z`,
+    scope: { mode: 'all' as const },
+    totalQuestions: 20,
+    correctCount: 10,
+    accuracy: 50,
+    breakdown: {
+      basic: { correct: 4, total: 8 },
+      applied: { correct: 4, total: 8 },
+      hsg: { correct: 2, total: 4 }
+    },
+    ...overrides
+  };
+}
 
 function createSnapshot(
   overrides: Partial<ProgressSnapshot> = {}
@@ -90,6 +114,7 @@ function createSnapshot(
     },
     unlockedLessonIds: ['a-1', 'a-2'],
     wrongQuestions: {},
+    examHistory: [],
     ...overrides
   };
 }
@@ -250,6 +275,30 @@ describe('progress sync', () => {
     });
   });
 
+  it('normalizeProgressSnapshot loại từng examHistory entry hỏng nhưng giữ snapshot', () => {
+    expect(
+      normalizeProgressSnapshot({
+        totalXp: 100,
+        streakCurrent: 1,
+        streakLongest: 2,
+        lastStudyDate: '2026-07-05',
+        lastMutationAt: '2026-07-05T10:00:00.000Z',
+        lessonProgress: {},
+        unlockedLessonIds: [],
+        wrongQuestions: {},
+        examHistory: [
+          createExamAttempt(1),
+          {
+            id: 'bad-exam',
+            finishedAt: '2026-07-06T10:00:00.000Z'
+          }
+        ]
+      })
+    ).toMatchObject({
+      examHistory: [createExamAttempt(1)]
+    });
+  });
+
   it('mergeProgress giữ câu sai khi cả hai bên đều còn entry', () => {
     const merged = mergeProgress(
       createSnapshot({
@@ -398,6 +447,31 @@ describe('progress sync', () => {
       lastMissedAt: '2026-07-05T09:00:00.000Z',
       resolvedAt: '2026-07-05T11:00:00.000Z'
     });
+  });
+
+  it('mergeProgress hợp nhất examHistory theo id, sort giảm dần và cắt còn 20', () => {
+    const localHistory = Array.from({ length: 12 }, (_, index) =>
+      createExamAttempt(index + 1)
+    );
+    const serverHistory = [
+      createExamAttempt(5, {
+        accuracy: 99,
+        finishedAt: '2026-07-06T10:59:00.000Z'
+      }),
+      ...Array.from({ length: 12 }, (_, index) => createExamAttempt(index + 12))
+    ];
+
+    const merged = mergeProgress(
+      createSnapshot({ examHistory: localHistory }),
+      createSnapshot({ examHistory: serverHistory })
+    );
+
+    expect(merged.examHistory).toHaveLength(20);
+    expect(merged.examHistory[0].id).toBe('exam-5');
+    expect(merged.examHistory[19].id).toBe('exam-4');
+    expect(
+      merged.examHistory.find((attempt) => attempt.id === 'exam-5')?.accuracy
+    ).toBe(99);
   });
 
   it('pullProgress giữ local khi JSON trên server hỏng', async () => {

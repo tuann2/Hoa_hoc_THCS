@@ -6,7 +6,11 @@ import {
   partLabels
 } from '../lib/content';
 import { getAuthStore } from '../store/auth';
-import { getProgressStore, isWrongQuestionPending } from '../store/progress';
+import {
+  getProgressStore,
+  isWrongQuestionPending,
+  type ExamAttempt
+} from '../store/progress';
 import type { PartId } from '../types/content';
 
 type LessonProgressMap = Record<string, { completed: boolean; stars: number }>;
@@ -28,6 +32,42 @@ function partCompletion(part: PartId, lessonProgress: LessonProgressMap) {
   };
 }
 
+function formatExamScope(attempt: ExamAttempt) {
+  const units = getAllUnits();
+
+  if (attempt.scope.mode === 'all') {
+    return 'Toàn bộ chương trình';
+  }
+
+  if (attempt.scope.mode === 'part') {
+    return partLabels[attempt.scope.part ?? 'inorganic'];
+  }
+
+  const titles = (attempt.scope.unitIds ?? [])
+    .map((unitId) => units.find((unit) => unit.id === unitId)?.title)
+    .filter((title): title is string => Boolean(title));
+
+  if (titles.length === 0) {
+    return 'Chuyên đề đã chọn';
+  }
+
+  if (titles.length <= 2) {
+    return titles.join(' · ');
+  }
+
+  return `${titles.length} chuyên đề`;
+}
+
+function formatExamTimestamp(value: string) {
+  return new Date(value).toLocaleString('vi-VN', {
+    hour: '2-digit',
+    minute: '2-digit',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+}
+
 export function ProfileRoute() {
   const units = getAllUnits();
   const progressStore = getProgressStore(units);
@@ -44,12 +84,14 @@ export function ProfileRoute() {
     (state) =>
       Object.values(state.wrongQuestions).filter(isWrongQuestionPending).length
   );
+  const examHistory = progressStore((state) => state.examHistory);
   const inorganic = partCompletion('inorganic', lessonProgress);
   const organic = partCompletion('organic', lessonProgress);
   const masteredLessons = Object.values(lessonProgress).filter(
     (lesson) => lesson.stars === 3
   ).length;
   const accountLabel = displayName ?? user?.email ?? 'Học sinh';
+  const recentExams = examHistory.slice(0, 5);
 
   return (
     <div className="space-y-6">
@@ -163,6 +205,58 @@ export function ProfileRoute() {
             <code className="rounded bg-mist px-2 py-1">hhthcs-progress</code>
           ) : null}
         </p>
+      </section>
+
+      <section className="rounded-[2rem] bg-white/90 p-6 shadow-card">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-sea/70">
+              Lịch sử thi thử
+            </p>
+            <h3 className="mt-2 font-heading text-2xl font-bold text-ink">
+              {recentExams.length === 0
+                ? 'Em chưa có lần thi nào'
+                : '5 lần thi gần nhất'}
+            </h3>
+          </div>
+          <Link
+            className="inline-flex rounded-full bg-sea px-5 py-3 font-semibold text-white"
+            to="/exam"
+          >
+            Thi thử ngay
+          </Link>
+        </div>
+
+        {recentExams.length === 0 ? (
+          <p className="mt-4 text-base leading-7 text-ink/75">
+            Tạo đề từ trang thi thử để lưu lại điểm, phạm vi và thời điểm hoàn
+            thành.
+          </p>
+        ) : (
+          <div className="mt-5 space-y-3">
+            {recentExams.map((attempt) => (
+              <article
+                key={attempt.id}
+                className="rounded-3xl border border-ink/10 p-4"
+              >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.14em] text-sea/70">
+                      {formatExamScope(attempt)}
+                    </p>
+                    <p className="mt-2 text-lg font-bold text-ink">
+                      {attempt.correctCount}/{attempt.totalQuestions} câu đúng ·{' '}
+                      {attempt.accuracy}%
+                    </p>
+                  </div>
+                  <div className="text-sm text-ink/65">
+                    {formatExamTimestamp(attempt.finishedAt)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );

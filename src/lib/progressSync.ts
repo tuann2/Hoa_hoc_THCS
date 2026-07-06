@@ -1,4 +1,5 @@
 import { getAllUnits } from './content';
+import type { ExamBreakdown, ExamScope } from './exam';
 import { supabase } from './supabase';
 import { getAuthStore } from '../store/auth';
 import {
@@ -7,6 +8,7 @@ import {
   consumeProgressMutationSource,
   getProgressSnapshot,
   getProgressStore,
+  type ExamAttempt,
   type LessonProgress,
   type ProgressSnapshot,
   type WrongQuestionEntry
@@ -106,6 +108,124 @@ function normalizeWrongQuestionEntry(
   };
 }
 
+function isQuestionBreakdown(value: unknown): value is ExamBreakdown {
+  if (!isRecord(value)) {
+    return false;
+  }
+
+  return ['basic', 'applied', 'hsg'].every((level) => {
+    const entry = value[level];
+
+    return (
+      isRecord(entry) &&
+      typeof entry.correct === 'number' &&
+      Number.isFinite(entry.correct) &&
+      typeof entry.total === 'number' &&
+      Number.isFinite(entry.total)
+    );
+  });
+}
+
+function normalizeExamScope(value: unknown): ExamScope | null {
+  if (!isRecord(value) || typeof value.mode !== 'string') {
+    return null;
+  }
+
+  if (value.mode === 'all') {
+    return { mode: 'all' };
+  }
+
+  if (
+    value.mode === 'part' &&
+    (value.part === 'inorganic' || value.part === 'organic')
+  ) {
+    return {
+      mode: 'part',
+      part: value.part
+    };
+  }
+
+  if (value.mode === 'units' && Array.isArray(value.unitIds)) {
+    const unitIds = Array.from(
+      new Set(
+        value.unitIds.filter(
+          (unitId): unitId is string => typeof unitId === 'string'
+        )
+      )
+    );
+
+    if (unitIds.length === 0) {
+      return null;
+    }
+
+    return {
+      mode: 'units',
+      unitIds
+    };
+  }
+
+  return null;
+}
+
+function normalizeExamAttempt(value: unknown): ExamAttempt | null {
+  if (!isRecord(value)) {
+    return null;
+  }
+
+  const scope = normalizeExamScope(value.scope);
+  const totalQuestions =
+    typeof value.totalQuestions === 'number' &&
+    Number.isFinite(value.totalQuestions)
+      ? Math.max(0, value.totalQuestions)
+      : null;
+  const correctCount =
+    typeof value.correctCount === 'number' &&
+    Number.isFinite(value.correctCount)
+      ? Math.max(0, value.correctCount)
+      : null;
+  const accuracy =
+    typeof value.accuracy === 'number' && Number.isFinite(value.accuracy)
+      ? Math.max(0, value.accuracy)
+      : null;
+
+  if (
+    typeof value.id !== 'string' ||
+    typeof value.startedAt !== 'string' ||
+    typeof value.finishedAt !== 'string' ||
+    !scope ||
+    totalQuestions === null ||
+    correctCount === null ||
+    accuracy === null ||
+    !isQuestionBreakdown(value.breakdown)
+  ) {
+    return null;
+  }
+
+  return {
+    id: value.id,
+    startedAt: value.startedAt,
+    finishedAt: value.finishedAt,
+    scope,
+    totalQuestions,
+    correctCount,
+    accuracy,
+    breakdown: {
+      basic: {
+        correct: Math.max(0, value.breakdown.basic.correct),
+        total: Math.max(0, value.breakdown.basic.total)
+      },
+      applied: {
+        correct: Math.max(0, value.breakdown.applied.correct),
+        total: Math.max(0, value.breakdown.applied.total)
+      },
+      hsg: {
+        correct: Math.max(0, value.breakdown.hsg.correct),
+        total: Math.max(0, value.breakdown.hsg.total)
+      }
+    }
+  };
+}
+
 export function normalizeProgressSnapshot(
   value: unknown
 ): ProgressSnapshot | null {
@@ -140,6 +260,13 @@ export function normalizeProgressSnapshot(
           )
       )
     : {};
+  const examHistory = Array.isArray(value.examHistory)
+    ? value.examHistory
+        .map((attempt) => normalizeExamAttempt(attempt))
+        .filter((attempt): attempt is ExamAttempt => attempt !== null)
+        .sort((left, right) => right.finishedAt.localeCompare(left.finishedAt))
+        .slice(0, 20)
+    : [];
 
   const totalXp =
     typeof value.totalXp === 'number' && Number.isFinite(value.totalXp)
@@ -170,7 +297,8 @@ export function normalizeProgressSnapshot(
       typeof value.lastMutationAt === 'string' ? value.lastMutationAt : null,
     lessonProgress,
     unlockedLessonIds: Array.from(new Set(unlockedLessonIds)),
-    wrongQuestions
+    wrongQuestions,
+    examHistory
   };
 }
 
@@ -216,6 +344,29 @@ function mergeWrongQuestionEntries(
         : right.lastMissedAt,
     resolvedAt: latestTimestamp(left.resolvedAt, right.resolvedAt)
   };
+}
+
+function mergeExamHistory(
+  local: ExamAttempt[],
+  server: ExamAttempt[]
+): ExamAttempt[] {
+  return Array.from(
+    [...local, ...server].reduce<Map<string, ExamAttempt>>(
+      (history, attempt) => {
+        const current = history.get(attempt.id);
+
+        if (!current || attempt.finishedAt > current.finishedAt) {
+          history.set(attempt.id, structuredClone(attempt));
+        }
+
+        return history;
+      },
+      new Map()
+    )
+  )
+    .map(([, attempt]) => attempt)
+    .sort((left, right) => right.finishedAt.localeCompare(left.finishedAt))
+    .slice(0, 20);
 }
 
 export function mergeProgress(
@@ -315,7 +466,8 @@ export function mergeProgress(
     unlockedLessonIds: Array.from(
       new Set([...local.unlockedLessonIds, ...server.unlockedLessonIds])
     ),
-    wrongQuestions
+    wrongQuestions,
+    examHistory: mergeExamHistory(local.examHistory, server.examHistory)
   };
 }
 
@@ -419,6 +571,7 @@ export function subscribeProgressPush(units: UnitContent[]) {
       source !== 'completeLesson' &&
       source !== 'recordWrongAnswer' &&
       source !== 'clearWrongAnswer' &&
+      source !== 'recordExamAttempt' &&
       source !== 'reset'
     ) {
       return;

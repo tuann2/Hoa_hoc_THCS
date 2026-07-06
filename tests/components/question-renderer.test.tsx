@@ -4,7 +4,10 @@ import { describe, expect, it, vi } from 'vitest';
 import { QuestionRenderer } from '../../src/components/QuestionRenderer';
 import type { Question } from '../../src/types/content';
 
-function submitQuestion(question: Question) {
+function renderQuestion(
+  question: Question,
+  options?: { submitLabel?: string }
+) {
   const onSubmit = vi.fn();
   const user = userEvent.setup();
 
@@ -16,6 +19,7 @@ function submitQuestion(question: Question) {
       question={question}
       result={null}
       retryMode={false}
+      submitLabel={options?.submitLabel}
       total={1}
     />
   );
@@ -24,8 +28,43 @@ function submitQuestion(question: Question) {
 }
 
 describe('QuestionRenderer', () => {
+  it('giữ nhãn mặc định Kiểm tra khi không truyền submitLabel', () => {
+    renderQuestion({
+      id: 'q0',
+      type: 'single-choice',
+      level: 'basic',
+      prompt: 'Câu hỏi',
+      options: ['A', 'B'],
+      answer: 0,
+      explanation: '...'
+    });
+
+    expect(
+      screen.getByRole('button', { name: 'Kiểm tra' })
+    ).toBeInTheDocument();
+  });
+
+  it('hiển thị submitLabel tuỳ chỉnh khi được truyền vào', () => {
+    renderQuestion(
+      {
+        id: 'q-custom',
+        type: 'single-choice',
+        level: 'basic',
+        prompt: 'Câu hỏi',
+        options: ['A', 'B'],
+        answer: 0,
+        explanation: '...'
+      },
+      { submitLabel: 'Lưu & câu tiếp theo' }
+    );
+
+    expect(
+      screen.getByRole('button', { name: 'Lưu & câu tiếp theo' })
+    ).toBeInTheDocument();
+  });
+
   it('gửi đáp án single-choice', async () => {
-    const { onSubmit, user } = submitQuestion({
+    const { onSubmit, user } = renderQuestion({
       id: 'q1',
       type: 'single-choice',
       level: 'basic',
@@ -42,7 +81,7 @@ describe('QuestionRenderer', () => {
   });
 
   it('gửi đáp án multi-choice', async () => {
-    const { onSubmit, user } = submitQuestion({
+    const { onSubmit, user } = renderQuestion({
       id: 'q2',
       type: 'multi-choice',
       level: 'basic',
@@ -60,7 +99,7 @@ describe('QuestionRenderer', () => {
   });
 
   it('gửi đáp án fill-blank', async () => {
-    const { onSubmit, user } = submitQuestion({
+    const { onSubmit, user } = renderQuestion({
       id: 'q3',
       type: 'fill-blank',
       level: 'applied',
@@ -76,7 +115,7 @@ describe('QuestionRenderer', () => {
   });
 
   it('gửi đáp án balance', async () => {
-    const { onSubmit, user } = submitQuestion({
+    const { onSubmit, user } = renderQuestion({
       id: 'q4',
       type: 'balance',
       level: 'hsg',
