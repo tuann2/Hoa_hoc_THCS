@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import {
   getAllUnits,
   getAvailableLessonCount,
   getUnitsByPart,
   partLabels
 } from '../lib/content';
+import { getAuthStore } from '../store/auth';
 import { getProgressStore } from '../store/progress';
 import type { PartId } from '../types/content';
 
@@ -29,6 +31,11 @@ function partCompletion(part: PartId, lessonProgress: LessonProgressMap) {
 export function ProfileRoute() {
   const units = getAllUnits();
   const progressStore = getProgressStore(units);
+  const authStore = getAuthStore();
+  const user = authStore((state) => state.user);
+  const displayName = authStore((state) => state.displayName);
+  const isConfigured = authStore((state) => state.isConfigured);
+  const signOut = authStore((state) => state.signOut);
   const totalXp = progressStore((state) => state.totalXp);
   const streakCurrent = progressStore((state) => state.streakCurrent);
   const streakLongest = progressStore((state) => state.streakLongest);
@@ -38,6 +45,7 @@ export function ProfileRoute() {
   const masteredLessons = Object.values(lessonProgress).filter(
     (lesson) => lesson.stars === 3
   ).length;
+  const accountLabel = displayName ?? user?.email ?? 'Học sinh';
 
   return (
     <div className="space-y-6">
@@ -46,8 +54,35 @@ export function ProfileRoute() {
           Hồ sơ học tập
         </p>
         <h2 className="mt-2 font-heading text-3xl font-bold text-ink">
-          Tiến độ của em
+          {user ? `Tiến độ của ${accountLabel}` : 'Tiến độ của em'}
         </h2>
+        <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+          {user ? (
+            <>
+              <span className="rounded-full bg-mist px-4 py-2 font-semibold text-ink/75">
+                {user.email}
+              </span>
+              <button
+                className="rounded-full border border-ink/10 px-4 py-2 font-semibold text-ink/70 transition hover:text-ink"
+                onClick={() => {
+                  void signOut();
+                }}
+                type="button"
+              >
+                Đăng xuất
+              </button>
+            </>
+          ) : (
+            <Link
+              className="inline-flex rounded-full bg-sea px-5 py-3 font-semibold text-white"
+              to="/auth"
+            >
+              {isConfigured
+                ? 'Đăng nhập để lưu tiến độ'
+                : 'Supabase chưa cấu hình, app đang lưu cục bộ'}
+            </Link>
+          )}
+        </div>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           <article className="rounded-3xl bg-mist p-4">
@@ -98,8 +133,12 @@ export function ProfileRoute() {
         <p className="mt-5 text-sm leading-6 text-ink/65">
           Streak dài nhất:{' '}
           <span className="font-semibold text-ink">{streakLongest} ngày</span>.
-          Dữ liệu được lưu cục bộ trên trình duyệt bằng khóa{' '}
-          <code className="rounded bg-mist px-2 py-1">hhthcs-progress</code>.
+          {user
+            ? ' Dữ liệu đang được đồng bộ giữa localStorage và Supabase.'
+            : ' Dữ liệu đang được lưu cục bộ trên trình duyệt bằng khóa '}
+          {!user ? (
+            <code className="rounded bg-mist px-2 py-1">hhthcs-progress</code>
+          ) : null}
         </p>
       </section>
     </div>
