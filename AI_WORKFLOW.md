@@ -6,12 +6,12 @@ rules live in `CLAUDE.md` (Claude Code), `AGENTS.md` (Codex) and
 
 ## Roles
 
-| Agent              | Tool / invocation                          | Role                                                       | Must never                                |
-| ------------------ | ------------------------------------------ | ---------------------------------------------------------- | ----------------------------------------- |
-| Claude Code        | `claude` CLI / IDE extension               | Architect, planner, orchestrator, reviewer, committer      | Merge or deploy without human approval    |
-| Codex              | `codex:codex-rescue` subagent              | Implementation, tests, targeted fixes, independent review  | Change architecture or scope on its own   |
-| Antigravity/Gemini | `agy -p "..."` CLI                         | Independent numeric/logic review, README, docs, changelog  | Modify source code                        |
-| Human              | GitHub UI / terminal                       | Approves plans, reviews diffs, merges, deploys             | Hand full production control to any agent |
+| Agent              | Tool / invocation             | Role                                                      | Must never                                |
+| ------------------ | ----------------------------- | --------------------------------------------------------- | ----------------------------------------- |
+| Claude Code        | `claude` CLI / IDE extension  | Architect, planner, orchestrator, reviewer, committer     | Merge or deploy without human approval    |
+| Codex              | `codex:codex-rescue` subagent | Implementation, tests, targeted fixes, independent review | Change architecture or scope on its own   |
+| Antigravity/Gemini | `agy -p "..."` CLI            | Independent numeric/logic review, README, docs, changelog | Modify source code                        |
+| Human              | GitHub UI / terminal          | Approves plans, reviews diffs, merges, deploys            | Hand full production control to any agent |
 
 ## Pipeline
 
@@ -153,15 +153,15 @@ chain.
 
 ## Artifacts
 
-| Artifact               | Location                                       | Owner                                   |
-| ---------------------- | ---------------------------------------------- | --------------------------------------- |
-| Plan                   | `docs/plans/<FEATURE-ID>.md`                   | Claude Code                             |
-| Implementation handoff | `docs/handoffs/<FEATURE-ID>-implementation.md` | Codex (drafted), Claude (reviewed)      |
+| Artifact               | Location                                       | Owner                                      |
+| ---------------------- | ---------------------------------------------- | ------------------------------------------ |
+| Plan                   | `docs/plans/<FEATURE-ID>.md`                   | Claude Code                                |
+| Implementation handoff | `docs/handoffs/<FEATURE-ID>-implementation.md` | Codex (drafted), Claude (reviewed)         |
 | Architecture record    | `docs/architecture.md`                         | Claude Code (updated after human approval) |
-| ADR                    | `docs/adr/NNNN-<slug>.md`                      | Antigravity (drafted), human (approved) |
-| API docs               | `docs/api/`                                    | Antigravity                             |
-| Runbooks               | `docs/runbooks/`                               | Antigravity / Claude                    |
-| Changelog              | `CHANGELOG.md`                                 | Claude Code                             |
+| ADR                    | `docs/adr/NNNN-<slug>.md`                      | Antigravity (drafted), human (approved)    |
+| API docs               | `docs/api/`                                    | Antigravity                                |
+| Runbooks               | `docs/runbooks/`                               | Antigravity / Claude                       |
+| Changelog              | `CHANGELOG.md`                                 | Claude Code                                |
 
 ## Commit convention
 
