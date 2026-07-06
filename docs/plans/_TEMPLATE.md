@@ -32,6 +32,18 @@ Mô tả trạng thái hiện tại của codebase.
 
 Mô tả kiến trúc và hướng triển khai.
 
+## 6a. New technology (bỏ qua nếu không áp dụng)
+
+Chỉ điền nếu kế hoạch thêm dependency, service hoặc infra mới.
+
+- Công nghệ đề xuất:
+- Lý do lựa chọn:
+- Phương án khác đã xem xét và lý do loại:
+- Trade-off chấp nhận (chi phí, độ phức tạp, lock-in, bảo mật, bảo trì):
+- **Cần con người duyệt lựa chọn này trước khi triển khai.**
+- Sau khi duyệt: cập nhật `docs/architecture.md` (và `docs/adr/` nếu là
+  quyết định không tầm thường).
+
 ## 7. Files to create
 
 - `path/to/new-file`
