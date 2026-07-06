@@ -1,6 +1,9 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   createProgressStore,
+  getWrongQuestionKey,
+  isWrongQuestionPending,
+  migrateProgressState,
   PROGRESS_STORAGE_KEY,
   resetProgressStoreForTests
 } from '../../src/store/progress';
@@ -97,5 +100,99 @@ describe('progress store', () => {
 
     expect(store.getState().unlockedLessonIds).toEqual(['u1-l1']);
     expect(localStorage.getItem(PROGRESS_STORAGE_KEY)).toBeNull();
+  });
+
+  it('ghi nhận câu sai và clearWrongAnswer đặt resolvedAt thay vì xoá key', () => {
+    const store = createProgressStore(fixtureUnits);
+    const firstMissedAt = new Date('2026-07-05T09:00:00.000Z');
+    const secondMissedAt = new Date('2026-07-06T09:00:00.000Z');
+    const resolvedAt = new Date('2026-07-06T10:00:00.000Z');
+    const firstKey = getWrongQuestionKey('u1', 'u1-l1', 'q1');
+    const secondKey = getWrongQuestionKey('u1', 'u1-l2', 'q2');
+
+    store.getState().recordWrongAnswer('u1', 'u1-l1', 'q1', firstMissedAt);
+    store.getState().recordWrongAnswer('u1', 'u1-l1', 'q1', secondMissedAt);
+    store.getState().recordWrongAnswer('u1', 'u1-l2', 'q2', secondMissedAt);
+
+    expect(store.getState().wrongQuestions[firstKey]).toMatchObject({
+      unitId: 'u1',
+      lessonId: 'u1-l1',
+      questionId: 'q1',
+      missCount: 2,
+      lastMissedAt: secondMissedAt.toISOString()
+    });
+
+    store.getState().clearWrongAnswer('u1', 'u1-l1', 'q1', resolvedAt);
+
+    expect(store.getState().wrongQuestions[firstKey]).toMatchObject({
+      questionId: 'q1',
+      missCount: 2,
+      lastMissedAt: secondMissedAt.toISOString(),
+      resolvedAt: resolvedAt.toISOString()
+    });
+    expect(
+      isWrongQuestionPending(store.getState().wrongQuestions[firstKey])
+    ).toBe(false);
+    expect(store.getState().wrongQuestions[secondKey]).toBeDefined();
+  });
+
+  it('một lần sai lại sau khi resolved làm câu hỏi pending trở lại', () => {
+    const store = createProgressStore(fixtureUnits);
+    const key = getWrongQuestionKey('u1', 'u1-l1', 'q1');
+
+    store
+      .getState()
+      .recordWrongAnswer(
+        'u1',
+        'u1-l1',
+        'q1',
+        new Date('2026-07-05T09:00:00.000Z')
+      );
+    store
+      .getState()
+      .clearWrongAnswer(
+        'u1',
+        'u1-l1',
+        'q1',
+        new Date('2026-07-05T10:00:00.000Z')
+      );
+    store
+      .getState()
+      .recordWrongAnswer(
+        'u1',
+        'u1-l1',
+        'q1',
+        new Date('2026-07-05T11:00:00.000Z'),
+        { incrementMissCount: false }
+      );
+
+    expect(store.getState().wrongQuestions[key]).toMatchObject({
+      lastMissedAt: '2026-07-05T11:00:00.000Z',
+      resolvedAt: '2026-07-05T10:00:00.000Z'
+    });
+    expect(isWrongQuestionPending(store.getState().wrongQuestions[key])).toBe(
+      true
+    );
+  });
+
+  it('migrate từ v1 lên v2 thêm wrongQuestions rỗng', () => {
+    expect(
+      migrateProgressState(
+        {
+          totalXp: 80,
+          streakCurrent: 1,
+          streakLongest: 2,
+          lastStudyDate: '2026-07-05',
+          lessonProgress: {},
+          unlockedLessonIds: ['u1-l1']
+        },
+        1
+      )
+    ).toMatchObject({
+      totalXp: 80,
+      unlockedLessonIds: ['u1-l1'],
+      wrongQuestions: {},
+      lastMutationAt: null
+    });
   });
 });

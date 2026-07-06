@@ -6,7 +6,7 @@ import {
   partLabels
 } from '../lib/content';
 import { getAuthStore } from '../store/auth';
-import { getProgressStore } from '../store/progress';
+import { getProgressStore, isWrongQuestionPending } from '../store/progress';
 import type { PartId } from '../types/content';
 
 type LessonProgressMap = Record<string, { completed: boolean; stars: number }>;
@@ -40,6 +40,10 @@ export function ProfileRoute() {
   const streakCurrent = progressStore((state) => state.streakCurrent);
   const streakLongest = progressStore((state) => state.streakLongest);
   const lessonProgress = progressStore((state) => state.lessonProgress);
+  const wrongQuestionCount = progressStore(
+    (state) =>
+      Object.values(state.wrongQuestions).filter(isWrongQuestionPending).length
+  );
   const inorganic = partCompletion('inorganic', lessonProgress);
   const organic = partCompletion('organic', lessonProgress);
   const masteredLessons = Object.values(lessonProgress).filter(
@@ -101,6 +105,25 @@ export function ProfileRoute() {
               {masteredLessons}
             </p>
           </article>
+        </div>
+
+        <div className="mt-4 flex flex-col gap-3 rounded-3xl border border-ink/10 bg-white p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-sea/70">
+              Danh sách cần ôn
+            </p>
+            <p className="mt-2 text-base text-ink/75">
+              {wrongQuestionCount === 0
+                ? 'Hiện chưa có câu nào cần ôn lại.'
+                : `Em còn ${wrongQuestionCount} câu cần luyện lại ở trang ôn tập.`}
+            </p>
+          </div>
+          <Link
+            className="inline-flex rounded-full bg-sea px-5 py-3 font-semibold text-white"
+            to="/review"
+          >
+            Mở trang ôn lại
+          </Link>
         </div>
       </section>
 

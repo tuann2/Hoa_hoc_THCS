@@ -1,10 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const {
-  progressUpsert,
-  progressSelect,
-  mockSupabase
-} = vi.hoisted(() => {
+const { progressUpsert, progressSelect, mockSupabase } = vi.hoisted(() => {
   const progressUpsert = vi.fn();
   const progressSelect = vi.fn();
 
@@ -65,7 +61,14 @@ import {
   scheduleProgressPush
 } from '../../src/lib/progressSync';
 import { getAuthStore, resetAuthStoreForTests } from '../../src/store/auth';
-import type { ProgressSnapshot } from '../../src/store/progress';
+import {
+  getWrongQuestionKey,
+  isWrongQuestionPending,
+  PROGRESS_VERSION,
+  type ProgressSnapshot
+} from '../../src/store/progress';
+
+const wrongQuestionKey = getWrongQuestionKey('u1', 'u1-l1', 'q1');
 
 function createSnapshot(
   overrides: Partial<ProgressSnapshot> = {}
@@ -75,6 +78,7 @@ function createSnapshot(
     streakCurrent: 2,
     streakLongest: 3,
     lastStudyDate: '2026-07-05',
+    lastMutationAt: '2026-07-05T10:00:00.000Z',
     lessonProgress: {
       'a-1': {
         completed: true,
@@ -85,6 +89,7 @@ function createSnapshot(
       }
     },
     unlockedLessonIds: ['a-1', 'a-2'],
+    wrongQuestions: {},
     ...overrides
   };
 }
@@ -208,6 +213,193 @@ describe('progress sync', () => {
     ).toBeNull();
   });
 
+  it('normalizeProgressSnapshot loại từng wrongQuestions entry hỏng nhưng giữ snapshot', () => {
+    expect(
+      normalizeProgressSnapshot({
+        totalXp: 100,
+        streakCurrent: 1,
+        streakLongest: 2,
+        lastStudyDate: '2026-07-05',
+        lastMutationAt: '2026-07-05T10:00:00.000Z',
+        lessonProgress: {},
+        unlockedLessonIds: [],
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 2,
+            lastMissedAt: '2026-07-05T09:00:00.000Z'
+          },
+          bad: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q2'
+          }
+        }
+      })
+    ).toMatchObject({
+      wrongQuestions: {
+        [wrongQuestionKey]: {
+          unitId: 'u1',
+          lessonId: 'u1-l1',
+          questionId: 'q1',
+          missCount: 2
+        }
+      }
+    });
+  });
+
+  it('mergeProgress giữ câu sai khi cả hai bên đều còn entry', () => {
+    const merged = mergeProgress(
+      createSnapshot({
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 1,
+            lastMissedAt: '2026-07-05T09:00:00.000Z',
+            resolvedAt: '2026-07-05T10:00:00.000Z'
+          }
+        },
+        lastMutationAt: '2026-07-05T09:00:00.000Z'
+      }),
+      createSnapshot({
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 3,
+            lastMissedAt: '2026-07-05T11:00:00.000Z',
+            resolvedAt: '2026-07-05T12:00:00.000Z'
+          }
+        },
+        lastMutationAt: '2026-07-05T11:00:00.000Z'
+      })
+    );
+
+    expect(merged.wrongQuestions[wrongQuestionKey]).toEqual({
+      unitId: 'u1',
+      lessonId: 'u1-l1',
+      questionId: 'q1',
+      missCount: 3,
+      lastMissedAt: '2026-07-05T11:00:00.000Z',
+      resolvedAt: '2026-07-05T12:00:00.000Z'
+    });
+  });
+
+  it('mergeProgress giữ câu sai khi chỉ một bên còn entry', () => {
+    const merged = mergeProgress(
+      createSnapshot({
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 1,
+            lastMissedAt: '2026-07-05T09:00:00.000Z'
+          }
+        },
+        lastMutationAt: '2026-07-05T09:00:00.000Z'
+      }),
+      createSnapshot({
+        wrongQuestions: {},
+        lastMutationAt: '2026-07-05T08:00:00.000Z'
+      })
+    );
+
+    expect(merged.wrongQuestions[wrongQuestionKey]).toMatchObject({
+      questionId: 'q1',
+      missCount: 1
+    });
+  });
+
+  it('mergeProgress không làm rơi câu sai vì mutation không liên quan ở snapshot còn thiếu key', () => {
+    const merged = mergeProgress(
+      createSnapshot({
+        lessonProgress: {
+          'a-1': {
+            completed: true,
+            stars: 2,
+            bestAccuracy: 80,
+            bestXp: 80,
+            completedAt: '2026-07-05T10:00:00.000Z'
+          },
+          'a-2': {
+            completed: true,
+            stars: 3,
+            bestAccuracy: 100,
+            bestXp: 100,
+            completedAt: '2026-07-05T10:00:00.000Z'
+          }
+        },
+        wrongQuestions: {},
+        lastMutationAt: '2026-07-05T10:00:00.000Z'
+      }),
+      createSnapshot({
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 2,
+            lastMissedAt: '2026-07-05T09:00:00.000Z'
+          }
+        },
+        lastMutationAt: '2026-07-05T09:00:00.000Z'
+      })
+    );
+
+    expect(merged.wrongQuestions[wrongQuestionKey]).toMatchObject({
+      unitId: 'u1',
+      lessonId: 'u1-l1',
+      questionId: 'q1',
+      missCount: 2,
+      lastMissedAt: '2026-07-05T09:00:00.000Z'
+    });
+    expect(merged.wrongQuestions[wrongQuestionKey].resolvedAt).toBeUndefined();
+    expect(
+      isWrongQuestionPending(merged.wrongQuestions[wrongQuestionKey])
+    ).toBe(true);
+  });
+
+  it('mergeProgress giữ tombstone resolvedAt mới nhất khi cả hai bên cùng có entry', () => {
+    const merged = mergeProgress(
+      createSnapshot({
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 2,
+            lastMissedAt: '2026-07-05T09:00:00.000Z',
+            resolvedAt: '2026-07-05T10:00:00.000Z'
+          }
+        }
+      }),
+      createSnapshot({
+        wrongQuestions: {
+          [wrongQuestionKey]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 1,
+            lastMissedAt: '2026-07-05T08:00:00.000Z',
+            resolvedAt: '2026-07-05T11:00:00.000Z'
+          }
+        }
+      })
+    );
+
+    expect(merged.wrongQuestions[wrongQuestionKey]).toMatchObject({
+      missCount: 2,
+      lastMissedAt: '2026-07-05T09:00:00.000Z',
+      resolvedAt: '2026-07-05T11:00:00.000Z'
+    });
+  });
+
   it('pullProgress giữ local khi JSON trên server hỏng', async () => {
     progressSelect.mockResolvedValue({
       data: {
@@ -243,6 +435,6 @@ describe('progress sync', () => {
 
     expect(payload.user_id).toBe('user-1');
     expect(payload.data.totalXp).toBe(120);
-    expect(payload.version).toBe(1);
+    expect(payload.version).toBe(PROGRESS_VERSION);
   });
 });
