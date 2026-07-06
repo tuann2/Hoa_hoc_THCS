@@ -18,6 +18,8 @@ rules live in `CLAUDE.md` (Claude Code), `AGENTS.md` (Codex) and
 ```text
 Requirement (human)
   → Claude: analyze repo, write docs/plans/<FEATURE-ID>.md
+  → [if plan introduces new tech] Claude: state rationale + alternatives
+    + trade-offs in the plan → Human: approve the tech choice explicitly
   → Human: approve plan (status → APPROVED)
   → Codex: implement approved scope, validate, report
   → Claude: inspect git diff, rerun validation independently, commit
@@ -25,6 +27,8 @@ Requirement (human)
   → Codex + Gemini (dual review): cross-check high-risk numeric/logic changes
   → Claude: commit fixes, push, open PR
   → Human: review PR diff, merge, deploy
+  → [if new tech was adopted] Claude: update docs/architecture.md
+    (and docs/adr/ for non-trivial decisions)
 ```
 
 ## Ground rules
@@ -41,6 +45,9 @@ Requirement (human)
 9. Never work directly on `main`; use `feature/<FEATURE-ID>` branches.
 10. No secrets, tokens or production credentials are given to agents.
 11. The human keeps final approval on plan, diff, merge and deploy.
+12. New technology (dependency, service, infra) requires stated
+    rationale/alternatives/trade-offs and explicit human approval before
+    implementation, then a record in `docs/architecture.md`.
 
 ## Invoking Codex from Claude
 
@@ -150,6 +157,7 @@ chain.
 | ---------------------- | ---------------------------------------------- | --------------------------------------- |
 | Plan                   | `docs/plans/<FEATURE-ID>.md`                   | Claude Code                             |
 | Implementation handoff | `docs/handoffs/<FEATURE-ID>-implementation.md` | Codex (drafted), Claude (reviewed)      |
+| Architecture record    | `docs/architecture.md`                         | Claude Code (updated after human approval) |
 | ADR                    | `docs/adr/NNNN-<slug>.md`                      | Antigravity (drafted), human (approved) |
 | API docs               | `docs/api/`                                    | Antigravity                             |
 | Runbooks               | `docs/runbooks/`                               | Antigravity / Claude                    |

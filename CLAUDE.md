@@ -26,6 +26,24 @@ TypeScript + Tailwind. Content stored as JSON under `content/units/`.
 10. Commit, push and open PRs when the human has authorized it.
 11. Present a final delivery summary for human merge approval.
 
+## New technology adoption
+
+Whenever a plan or implementation introduces a new technology (new npm
+dependency, external service, database, infra component, or a
+replacement for an existing tool):
+
+1. State the rationale in the plan: why this solution, which
+   alternatives were considered, and the trade-offs (cost, complexity,
+   lock-in, security surface, maintenance burden).
+2. Stop and get explicit human approval before implementation starts —
+   this is a material architecture change (see responsibility 4 above).
+3. After approval, record the decision in `docs/architecture.md`
+   (current stack table) and, for non-trivial decisions, also add an
+   ADR at `docs/adr/NNNN-<slug>.md`.
+
+Do not silently add a dependency or swap a tool inside an "implementation"
+task — that is scope creep and bypasses the approval gate.
+
 ## Commit and push authorization
 
 By default, Claude Code does **not** commit, push, merge or deploy.
@@ -68,6 +86,7 @@ See `AI_WORKFLOW.md` for full delegation patterns.
 ## What Claude may edit directly
 
 - Planning documents (`docs/plans/`, `docs/handoffs/`)
+- `docs/architecture.md` and `docs/adr/` (after human approval of the decision)
 - Workflow instructions (`AI_WORKFLOW.md`, `CLAUDE.md`, `AGENTS.md`)
 - Documentation (`docs/`, `README.md`, `CHANGELOG.md`)
 - Small config corrections (e.g. `prettier`, `tsconfig`)
