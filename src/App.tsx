@@ -9,6 +9,7 @@ import { getAuthStore } from './store/auth';
 import { getProgressStore, isWrongQuestionPending } from './store/progress';
 import { AuthRoute } from './routes/AuthRoute';
 import { HomeRoute } from './routes/HomeRoute';
+import { ExamRoute } from './routes/ExamRoute';
 import { LessonRoute } from './routes/LessonRoute';
 import { ProfileRoute } from './routes/ProfileRoute';
 import { ReviewRoute } from './routes/ReviewRoute';
@@ -28,6 +29,7 @@ export default function App() {
   );
   const navItems: Array<{ badge?: number; label: string; to: string }> = [
     { to: '/', label: 'Lộ trình' },
+    { to: '/exam', label: 'Thi thử' },
     { to: '/review', label: 'Ôn lại', badge: reviewCount },
     { to: '/profile', label: 'Hồ sơ' }
   ];
@@ -102,6 +104,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomeRoute />} />
             <Route path="/auth" element={<AuthRoute />} />
+            <Route path="/exam" element={<ExamRoute />} />
             <Route path="/learn/:unitId/:lessonId" element={<LessonRoute />} />
             <Route path="/review" element={<ReviewRoute />} />
             <Route path="/profile" element={<ProfileRoute />} />

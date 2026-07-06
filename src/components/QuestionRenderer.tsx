@@ -15,6 +15,7 @@ interface QuestionRendererProps {
   total: number;
   result: SubmissionResult | null;
   retryMode: boolean;
+  submitLabel?: string;
   onSubmit: (response: SubmissionValue) => void;
   onNext: () => void;
 }
@@ -31,6 +32,7 @@ export function QuestionRenderer({
   total,
   result,
   retryMode,
+  submitLabel = 'Kiểm tra',
   onSubmit,
   onNext
 }: QuestionRendererProps) {
@@ -244,7 +246,7 @@ export function QuestionRenderer({
           onClick={submit}
           type="button"
         >
-          Kiểm tra
+          {submitLabel}
         </button>
         {result ? (
           <button

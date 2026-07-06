@@ -4,11 +4,12 @@ import {
   type PersistStorage,
   type StorageValue
 } from 'zustand/middleware';
+import type { ExamBreakdown, ExamScope } from '../lib/exam';
 import type { Lesson, UnitContent } from '../types/content';
 import { calculateStars } from '../lib/chemistry';
 
 export const PROGRESS_STORAGE_KEY = 'hhthcs-progress';
-export const PROGRESS_VERSION = 2;
+export const PROGRESS_VERSION = 3;
 
 export interface LessonProgress {
   completed: boolean;
@@ -27,6 +28,17 @@ export interface WrongQuestionEntry {
   resolvedAt?: string | null;
 }
 
+export interface ExamAttempt {
+  id: string;
+  startedAt: string;
+  finishedAt: string;
+  scope: ExamScope;
+  totalQuestions: number;
+  correctCount: number;
+  accuracy: number;
+  breakdown: ExamBreakdown;
+}
+
 export interface ProgressSnapshot {
   totalXp: number;
   streakCurrent: number;
@@ -36,6 +48,7 @@ export interface ProgressSnapshot {
   lessonProgress: Record<string, LessonProgress>;
   unlockedLessonIds: string[];
   wrongQuestions: Record<string, WrongQuestionEntry>;
+  examHistory: ExamAttempt[];
 }
 
 export interface ProgressState {
@@ -47,6 +60,7 @@ export interface ProgressState {
   lessonProgress: Record<string, LessonProgress>;
   unlockedLessonIds: string[];
   wrongQuestions: Record<string, WrongQuestionEntry>;
+  examHistory: ExamAttempt[];
   completeLesson: (
     lesson: Lesson,
     nextLessonId: string | null,
@@ -67,6 +81,7 @@ export interface ProgressState {
     questionId: string,
     date?: Date
   ) => void;
+  recordExamAttempt: (attempt: ExamAttempt) => void;
   reset: () => void;
 }
 
@@ -74,6 +89,7 @@ type ProgressMutationSource =
   | 'completeLesson'
   | 'recordWrongAnswer'
   | 'clearWrongAnswer'
+  | 'recordExamAttempt'
   | 'reset'
   | 'hydrate';
 
@@ -85,7 +101,8 @@ const EMPTY_PROGRESS: ProgressSnapshot = {
   lastMutationAt: null,
   lessonProgress: {},
   unlockedLessonIds: [],
-  wrongQuestions: {}
+  wrongQuestions: {},
+  examHistory: []
 };
 
 let lastMutationSource: ProgressMutationSource | null = null;
@@ -149,6 +166,31 @@ function createSafeStorage(): PersistStorage<Partial<ProgressState>> {
   };
 }
 
+function mergeExamHistory(attempts: ExamAttempt[]): ExamAttempt[] {
+  return attempts
+    .reduce<ExamAttempt[]>((history, attempt) => {
+      const next = history.filter((entry) => entry.id !== attempt.id);
+      next.push({
+        ...attempt,
+        scope:
+          attempt.scope.mode === 'units'
+            ? {
+                ...attempt.scope,
+                unitIds: [...(attempt.scope.unitIds ?? [])]
+              }
+            : { ...attempt.scope },
+        breakdown: {
+          basic: { ...attempt.breakdown.basic },
+          applied: { ...attempt.breakdown.applied },
+          hsg: { ...attempt.breakdown.hsg }
+        }
+      });
+      return next;
+    }, [])
+    .sort((left, right) => right.finishedAt.localeCompare(left.finishedAt))
+    .slice(0, 20);
+}
+
 export const createInitialProgressState = (units: UnitContent[]) => ({
   ...EMPTY_PROGRESS,
   unlockedLessonIds: deriveUnlockedLessons(units)
@@ -174,9 +216,11 @@ export function migrateProgressState(
     return {};
   }
 
+  let nextState: Partial<ProgressState> = { ...persistedState };
+
   if (version < 2) {
-    return {
-      ...persistedState,
+    nextState = {
+      ...nextState,
       wrongQuestions: {},
       lastMutationAt:
         typeof persistedState.lastMutationAt === 'string'
@@ -185,7 +229,14 @@ export function migrateProgressState(
     };
   }
 
-  return persistedState;
+  if (version < 3) {
+    nextState = {
+      ...nextState,
+      examHistory: []
+    };
+  }
+
+  return nextState;
 }
 
 export function cloneProgressSnapshot(
@@ -209,7 +260,22 @@ export function cloneProgressSnapshot(
         key,
         { ...entry }
       ])
-    )
+    ),
+    examHistory: snapshot.examHistory.map((attempt) => ({
+      ...attempt,
+      scope:
+        attempt.scope.mode === 'units'
+          ? {
+              ...attempt.scope,
+              unitIds: [...(attempt.scope.unitIds ?? [])]
+            }
+          : { ...attempt.scope },
+      breakdown: {
+        basic: { ...attempt.breakdown.basic },
+        applied: { ...attempt.breakdown.applied },
+        hsg: { ...attempt.breakdown.hsg }
+      }
+    }))
   };
 }
 
@@ -222,7 +288,8 @@ export function getProgressSnapshot(state: ProgressState): ProgressSnapshot {
     lastMutationAt: state.lastMutationAt,
     lessonProgress: state.lessonProgress,
     unlockedLessonIds: state.unlockedLessonIds,
-    wrongQuestions: state.wrongQuestions
+    wrongQuestions: state.wrongQuestions,
+    examHistory: state.examHistory
   });
 }
 
@@ -371,6 +438,16 @@ export const createProgressStore = (units: UnitContent[]) =>
                   resolvedAt: date.toISOString()
                 }
               }
+            };
+          }),
+        recordExamAttempt: (attempt) =>
+          set((state) => {
+            lastMutationSource = 'recordExamAttempt';
+
+            return {
+              ...state,
+              lastMutationAt: attempt.finishedAt,
+              examHistory: mergeExamHistory([attempt, ...state.examHistory])
             };
           }),
         reset: () => {

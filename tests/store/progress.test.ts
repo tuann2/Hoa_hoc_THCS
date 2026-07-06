@@ -5,7 +5,8 @@ import {
   isWrongQuestionPending,
   migrateProgressState,
   PROGRESS_STORAGE_KEY,
-  resetProgressStoreForTests
+  resetProgressStoreForTests,
+  type ExamAttempt
 } from '../../src/store/progress';
 import type { UnitContent } from '../../src/types/content';
 
@@ -40,6 +41,25 @@ const fixtureUnits: UnitContent[] = [
     ]
   }
 ];
+
+function createExamAttempt(index: number): ExamAttempt {
+  const minute = String(index).padStart(2, '0');
+
+  return {
+    id: `exam-${index}`,
+    startedAt: `2026-07-06T09:${minute}:00.000Z`,
+    finishedAt: `2026-07-06T10:${minute}:00.000Z`,
+    scope: { mode: 'all' },
+    totalQuestions: 20,
+    correctCount: 10 + index,
+    accuracy: 50 + index,
+    breakdown: {
+      basic: { correct: 4, total: 8 },
+      applied: { correct: 4, total: 8 },
+      hsg: { correct: 2, total: 4 }
+    }
+  };
+}
 
 describe('progress store', () => {
   beforeEach(() => {
@@ -194,5 +214,41 @@ describe('progress store', () => {
       wrongQuestions: {},
       lastMutationAt: null
     });
+  });
+
+  it('migrate từ v2 lên v3 thêm examHistory rỗng', () => {
+    expect(
+      migrateProgressState(
+        {
+          totalXp: 80,
+          streakCurrent: 1,
+          streakLongest: 2,
+          lastStudyDate: '2026-07-05',
+          lastMutationAt: '2026-07-05T09:00:00.000Z',
+          lessonProgress: {},
+          unlockedLessonIds: ['u1-l1'],
+          wrongQuestions: {}
+        },
+        2
+      )
+    ).toMatchObject({
+      wrongQuestions: {},
+      examHistory: []
+    });
+  });
+
+  it('recordExamAttempt prepend đúng thứ tự và cắt còn tối đa 20 phần tử', () => {
+    const store = createProgressStore(fixtureUnits);
+
+    Array.from({ length: 21 }, (_, index) =>
+      createExamAttempt(index + 1)
+    ).forEach((attempt) => {
+      store.getState().recordExamAttempt(attempt);
+    });
+
+    expect(store.getState().examHistory).toHaveLength(20);
+    expect(store.getState().examHistory[0].id).toBe('exam-21');
+    expect(store.getState().examHistory[19].id).toBe('exam-2');
+    expect(store.getState().lastMutationAt).toBe('2026-07-06T10:21:00.000Z');
   });
 });
