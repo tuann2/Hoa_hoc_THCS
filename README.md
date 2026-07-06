@@ -1,10 +1,12 @@
 # Hoá học THCS nâng cao
 
 SPA mobile-first kiểu Duolingo để ôn luyện Hoá học THCS nâng cao theo
-lộ trình `Vô cơ` / `Hữu cơ`. Phiên bản hiện tại triển khai MVP của
-`FEATURE-006`: bản đồ unit, màn bài học, quiz 4 dạng, XP/streak/sao,
-trang hồ sơ, đăng nhập email + mật khẩu và đồng bộ tiến độ lên
-Supabase khi env được cấu hình.
+lộ trình `Vô cơ` / `Hữu cơ`. Phiên bản hiện tại là MVP đầy đủ
+(`FEATURE-001`–`FEATURE-008`): bản đồ unit, màn bài học, quiz 4 dạng,
+XP/streak/sao, trang hồ sơ, đăng nhập email + mật khẩu và đồng bộ tiến
+độ lên Supabase khi env được cấu hình, ôn lại câu trả lời sai
+(`/review`), và chế độ thi thử có đếm giờ theo phạm vi tự chọn
+(`/exam`).
 
 ## Stack
 
@@ -59,9 +61,13 @@ scripts/validate-content.ts   # kiểm tra schema + logic PTHH
 src/components/               # UI học tập, quiz, Chem renderer
 src/lib/supabase.ts           # official @supabase/supabase-js client + offline fallback
 src/lib/progressSync.ts       # pull/merge/push tiến độ
-src/routes/                   # Lộ trình / Bài học / Hồ sơ
+src/lib/exam.ts               # chọn câu theo tỉ lệ mức, chấm điểm đề thi thử
+src/routes/                   # Lộ trình / Bài học / Hồ sơ / Ôn lại (/review) / Thi thử (/exam)
+src/routes/ReviewRoute.tsx    # ôn lại câu trả lời sai (FEATURE-007)
+src/routes/ExamRoute.tsx      # chế độ thi thử có đếm giờ (FEATURE-008)
 src/store/auth.ts             # session + đăng nhập/đăng xuất/reset
-src/store/progress.ts         # XP, streak, sao, mở khoá, snapshot sync
+src/store/progress.ts         # XP, streak, sao, mở khoá, câu sai (wrongQuestions),
+                               # lịch sử thi (examHistory), snapshot sync
 tests/                        # unit test và component test
 .github/workflows/ci.yml      # lint + typecheck + test + build
 ```

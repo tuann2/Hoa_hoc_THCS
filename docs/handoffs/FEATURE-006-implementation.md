@@ -94,3 +94,20 @@ thật — toàn bộ 5 lệnh PASS trực tiếp, không cần workaround.
 - Chạy adversarial review đúng checklist của plan: RLS bypass, merge ảo XP,
   xác nhận bundle không chứa `service_role`.
 - Thêm component test cho `AuthRoute` nếu muốn khóa chặt thông báo/điều hướng UI.
+
+## Follow-up closed
+
+Gap test `AuthRoute` ở mục 9 đã được đóng bằng `tests/routes/auth-route.test.tsx`.
+Các scenario hiện được cover:
+
+- Sign-in mặc định: render email/mật khẩu, gọi `signIn`, điều hướng sang
+  `/profile` khi thành công, và hiển thị lỗi trả về cho người dùng.
+- Sign-up: chuyển tab "Tạo tài khoản", hiện trường `displayName`, gọi
+  `signUp` với đúng tham số, giữ nguyên trang khi cần xác nhận email, và
+  điều hướng sang `/profile` khi không cần xác nhận.
+- Reset password: chuyển tab "Quên mật khẩu", ẩn trường mật khẩu, gọi
+  `resetPassword(email)` và hiển thị thông báo trả về.
+- Password recovery: khi `isPasswordRecovery = true`, hiển thị form "Nhập
+  mật khẩu mới", gọi `updatePassword`, rồi điều hướng sang `/profile`.
+- Already logged in: khi `session` có giá trị và không ở recovery mode,
+  hiển thị panel "Em đã đăng nhập rồi" thay vì form auth.
