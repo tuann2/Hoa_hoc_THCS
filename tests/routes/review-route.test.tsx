@@ -33,6 +33,7 @@ const { fixtureUnits } = vi.hoisted(() => ({
               id: 'q1',
               type: 'single-choice',
               level: 'basic',
+              category: 'theory',
               prompt: 'Chọn đáp án đúng',
               options: ['Sai', 'Đúng'],
               answer: 1,
@@ -42,6 +43,7 @@ const { fixtureUnits } = vi.hoisted(() => ({
               id: 'q2',
               type: 'fill-blank',
               level: 'applied',
+              category: 'calculation',
               prompt: 'Điền công thức khí hiđro',
               answer: 'H2',
               explanation: '...'

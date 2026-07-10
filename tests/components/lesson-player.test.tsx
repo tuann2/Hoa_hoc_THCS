@@ -31,6 +31,7 @@ const fixtureUnits: UnitContent[] = [
             id: 'q1',
             type: 'single-choice',
             level: 'basic',
+            category: 'theory',
             prompt: 'Chọn đáp án đúng',
             options: ['Sai', 'Đúng'],
             answer: 1,
@@ -40,6 +41,7 @@ const fixtureUnits: UnitContent[] = [
             id: 'q2',
             type: 'fill-blank',
             level: 'applied',
+            category: 'calculation',
             prompt: 'Nhập khí tạo thành',
             answer: 'H2',
             explanation: 'B1. Đó là H2.'
@@ -58,6 +60,7 @@ const fixtureUnits: UnitContent[] = [
             id: 'q3',
             type: 'single-choice',
             level: 'basic',
+            category: 'theory',
             prompt: '...',
             options: ['A', 'B'],
             answer: 0,

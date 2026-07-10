@@ -23,6 +23,7 @@ const validUnit: UnitContent = {
           id: 'q1',
           type: 'single-choice',
           level: 'basic',
+          category: 'theory',
           prompt: '...',
           options: ['A', 'B', 'C', 'D', 'E'],
           answer: 0,
@@ -32,6 +33,7 @@ const validUnit: UnitContent = {
           id: 'q2',
           type: 'single-choice',
           level: 'basic',
+          category: 'theory',
           prompt: '...',
           options: ['A', 'B', 'C', 'D', 'E'],
           answer: 1,
@@ -41,6 +43,7 @@ const validUnit: UnitContent = {
           id: 'q3',
           type: 'single-choice',
           level: 'basic',
+          category: 'theory',
           prompt: '...',
           options: ['A', 'B', 'C', 'D', 'E'],
           answer: 2,
@@ -50,6 +53,7 @@ const validUnit: UnitContent = {
           id: 'q4',
           type: 'single-choice',
           level: 'basic',
+          category: 'theory',
           prompt: '...',
           options: ['A', 'B', 'C', 'D', 'E'],
           answer: 3,
@@ -59,6 +63,7 @@ const validUnit: UnitContent = {
           id: 'q5',
           type: 'single-choice',
           level: 'basic',
+          category: 'theory',
           prompt: '...',
           options: ['A', 'B', 'C', 'D', 'E'],
           answer: 4,
@@ -68,6 +73,7 @@ const validUnit: UnitContent = {
           id: 'q6',
           type: 'fill-blank',
           level: 'applied',
+          category: 'calculation',
           prompt: '...',
           answer: '1',
           explanation: 'B1. ...'
@@ -76,6 +82,7 @@ const validUnit: UnitContent = {
           id: 'q7',
           type: 'fill-blank',
           level: 'applied',
+          category: 'calculation',
           prompt: '...',
           answer: '1',
           explanation: 'B1. ...'
@@ -84,6 +91,7 @@ const validUnit: UnitContent = {
           id: 'q8',
           type: 'fill-blank',
           level: 'applied',
+          category: 'calculation',
           prompt: '...',
           answer: '1',
           explanation: 'B1. ...'
@@ -92,6 +100,7 @@ const validUnit: UnitContent = {
           id: 'q9',
           type: 'fill-blank',
           level: 'applied',
+          category: 'calculation',
           prompt: '...',
           answer: '1',
           explanation: 'B1. ...'
@@ -100,6 +109,7 @@ const validUnit: UnitContent = {
           id: 'q10',
           type: 'fill-blank',
           level: 'applied',
+          category: 'calculation',
           prompt: '...',
           answer: '1',
           explanation: 'B1. ...'
@@ -108,6 +118,7 @@ const validUnit: UnitContent = {
           id: 'q11',
           type: 'balance',
           level: 'hsg',
+          category: 'theory',
           prompt: '...',
           left: ['H2', 'O2'],
           right: ['H2O'],
@@ -118,6 +129,7 @@ const validUnit: UnitContent = {
           id: 'q12',
           type: 'balance',
           level: 'hsg',
+          category: 'theory',
           prompt: '...',
           left: ['H2', 'Cl2'],
           right: ['HCl'],
@@ -128,6 +140,7 @@ const validUnit: UnitContent = {
           id: 'q13',
           type: 'balance',
           level: 'hsg',
+          category: 'theory',
           prompt: '...',
           left: ['N2', 'H2'],
           right: ['NH3'],
@@ -172,6 +185,35 @@ describe('validate-content', () => {
 
     expect(validateUnits([invalid]).join('\n')).toContain(
       'phương trình cân bằng không đúng về số nguyên tử'
+    );
+  });
+
+  it('bắt câu thiếu category', () => {
+    const invalid = structuredClone(validUnit);
+    delete (invalid.lessons[0].questions[0] as { category?: string }).category;
+
+    expect(validateUnits([invalid]).join('\n')).toContain(
+      'a1-nen-tang-hoa-hoc/lesson-1/q1: category phải là "theory" hoặc "calculation".'
+    );
+  });
+
+  it('bắt category không hợp lệ', () => {
+    const invalid = structuredClone(validUnit);
+    (invalid.lessons[0].questions[1] as { category: string }).category =
+      'practice';
+
+    expect(validateUnits([invalid]).join('\n')).toContain(
+      'a1-nen-tang-hoa-hoc/lesson-1/q2: category phải là "theory" hoặc "calculation".'
+    );
+  });
+
+  it('bắt câu balance bị gắn category calculation', () => {
+    const invalid = structuredClone(validUnit);
+    (invalid.lessons[0].questions[10] as { category: string }).category =
+      'calculation';
+
+    expect(validateUnits([invalid]).join('\n')).toContain(
+      'a1-nen-tang-hoa-hoc/lesson-1/q11: câu balance phải có category "theory", không được là "calculation".'
     );
   });
 });
