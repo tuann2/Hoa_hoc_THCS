@@ -6,6 +6,7 @@ import type { PartId } from '../types/content';
 
 export function HomeRoute() {
   const [activePart, setActivePart] = useState<PartId>('inorganic');
+  const [activeMode, setActiveMode] = useState<'theory' | 'practice'>('theory');
   const units = getAllUnits();
   const progressStore = getProgressStore(units);
   const unlockedLessonIds = progressStore((state) => state.unlockedLessonIds);
@@ -55,21 +56,44 @@ export function HomeRoute() {
       </section>
 
       <section className="rounded-[2rem] bg-white/85 p-4 shadow-card backdrop-blur">
-        <div className="flex flex-wrap gap-3">
-          {(['inorganic', 'organic'] as PartId[]).map((part) => (
-            <button
-              key={part}
-              className={`rounded-full px-5 py-3 font-semibold transition ${
-                activePart === part
-                  ? 'bg-sea text-white'
-                  : 'bg-mist text-ink/70 hover:text-ink'
-              }`}
-              onClick={() => setActivePart(part)}
-              type="button"
-            >
-              {partLabels[part]}
-            </button>
-          ))}
+        <div className="space-y-3">
+          <div className="flex flex-wrap gap-3">
+            {(['inorganic', 'organic'] as PartId[]).map((part) => (
+              <button
+                key={part}
+                className={`rounded-full px-5 py-3 font-semibold transition ${
+                  activePart === part
+                    ? 'bg-sea text-white'
+                    : 'bg-mist text-ink/70 hover:text-ink'
+                }`}
+                onClick={() => setActivePart(part)}
+                type="button"
+              >
+                {partLabels[part]}
+              </button>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {(
+              [
+                ['theory', 'Lý thuyết'],
+                ['practice', 'Giải bài tập']
+              ] as const
+            ).map(([mode, label]) => (
+              <button
+                key={mode}
+                className={`rounded-full px-5 py-3 font-semibold transition ${
+                  activeMode === mode
+                    ? 'bg-sea text-white'
+                    : 'bg-mist text-ink/70 hover:text-ink'
+                }`}
+                onClick={() => setActiveMode(mode)}
+                type="button"
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
         <p className="mt-4 text-sm leading-6 text-ink/65">
           Hiển thị đầy đủ các unit {partLabels[activePart]}. Những bài chưa biên
@@ -80,6 +104,7 @@ export function HomeRoute() {
 
       <LessonMap
         lessonStars={lessonStars}
+        mode={activeMode}
         unlockedLessonIds={unlockedLessonIds}
         units={partUnits}
       />

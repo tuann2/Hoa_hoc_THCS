@@ -120,6 +120,7 @@ describe('ReviewRoute', () => {
     );
 
     expect(screen.getByText('Chọn đáp án đúng')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '✕ Thoát' })).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Đúng' }));
     await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));

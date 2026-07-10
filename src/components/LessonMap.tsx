@@ -5,6 +5,7 @@ interface LessonMapProps {
   units: UnitContent[];
   unlockedLessonIds: string[];
   lessonStars: Record<string, number>;
+  mode: 'theory' | 'practice';
 }
 
 function LessonBadge({ stars }: { stars?: number }) {
@@ -18,7 +19,8 @@ function LessonBadge({ stars }: { stars?: number }) {
 export function LessonMap({
   units,
   unlockedLessonIds,
-  lessonStars
+  lessonStars,
+  mode
 }: LessonMapProps) {
   return (
     <div className="space-y-5">
@@ -63,7 +65,7 @@ export function LessonMap({
                 <Link
                   key={lesson.id}
                   className={`${sharedClassName} border-sea/15 bg-mist hover:border-sea hover:bg-white`}
-                  to={`/learn/${unit.id}/${lesson.id}`}
+                  to={`/learn/${unit.id}/${lesson.id}/${mode}`}
                 >
                   <div className="flex items-center gap-4">
                     <span className="flex h-11 w-11 items-center justify-center rounded-full bg-sea font-semibold text-white">

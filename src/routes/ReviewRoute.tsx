@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ExitButton } from '../components/ExitButton';
 import {
   QuestionRenderer,
   type SubmissionResult
@@ -172,16 +173,21 @@ export function ReviewRoute() {
   return (
     <div className="space-y-5">
       <section className="rounded-[2rem] bg-ink p-5 text-white shadow-card">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-          Ôn lại câu sai
-        </p>
-        <h2 className="mt-2 font-heading text-3xl font-bold">
-          {currentItem.unit.code} · {currentItem.lesson.title}
-        </h2>
-        <p className="mt-3 text-sm leading-6 text-white/80">
-          {currentItem.unit.title} · {queue.length} câu trong hàng đợi phiên
-          này.
-        </p>
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+              Ôn lại câu sai
+            </p>
+            <h2 className="mt-2 font-heading text-3xl font-bold">
+              {currentItem.unit.code} · {currentItem.lesson.title}
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-white/80">
+              {currentItem.unit.title} · {queue.length} câu trong hàng đợi phiên
+              này.
+            </p>
+          </div>
+          <ExitButton confirmMessage="Thoát ôn tập? Câu đã làm vẫn được lưu, các câu còn lại vẫn ở trong danh sách cần ôn." />
+        </div>
       </section>
 
       <QuestionRenderer

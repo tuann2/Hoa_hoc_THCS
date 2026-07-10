@@ -112,6 +112,8 @@ describe('ExamRoute', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu thi' }));
 
+    expect(screen.getByRole('button', { name: '✕ Thoát' })).toBeInTheDocument();
+
     submitVisibleQuestion();
     submitVisibleQuestion();
     await vi.advanceTimersByTimeAsync(0);
@@ -146,6 +148,9 @@ describe('ExamRoute', () => {
     );
 
     fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu thi' }));
+
+    expect(screen.getByRole('button', { name: '✕ Thoát' })).toBeInTheDocument();
+
     await vi.advanceTimersByTimeAsync(15 * 60 * 1000);
     await vi.advanceTimersByTimeAsync(0);
 

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Chem, ChemParagraph } from '../components/Chem';
+import { ExitButton } from '../components/ExitButton';
 import { QuestionRenderer } from '../components/QuestionRenderer';
 import {
   buildExamQuestionPool,
@@ -779,17 +780,20 @@ export function ExamRoute() {
     <div className="space-y-5">
       <section className="rounded-[2rem] bg-ink p-5 text-white shadow-card">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-              Thi thử
-            </p>
-            <h2 className="mt-2 font-heading text-3xl font-bold">
-              {formatScopeLabel(session.scope, units)}
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-white/80">
-              Seed đề: {session.seed} · bắt đầu lúc{' '}
-              {formatTimestamp(session.startedAt)}
-            </p>
+          <div className="flex flex-1 items-start justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                Thi thử
+              </p>
+              <h2 className="mt-2 font-heading text-3xl font-bold">
+                {formatScopeLabel(session.scope, units)}
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-white/80">
+                Seed đề: {session.seed} · bắt đầu lúc{' '}
+                {formatTimestamp(session.startedAt)}
+              </p>
+            </div>
+            <ExitButton confirmMessage="Thoát bài thi? Lần thi này sẽ không được lưu vào lịch sử." />
           </div>
           <div className="rounded-3xl bg-white/10 px-5 py-4">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/70">

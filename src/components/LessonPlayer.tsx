@@ -7,6 +7,7 @@ import {
 } from '../lib/chemistry';
 import { getNextLessonId, getProgressStore } from '../store/progress';
 import type { Lesson, Question, UnitContent } from '../types/content';
+import { ExitButton } from './ExitButton';
 import { ProgressBar } from './ProgressBar';
 import { QuestionRenderer, type SubmissionResult } from './QuestionRenderer';
 import { ResultScreen } from './ResultScreen';
@@ -14,11 +15,12 @@ import { TheoryCard } from './TheoryCard';
 
 interface LessonPlayerProps {
   lesson: Lesson;
+  mode: 'theory' | 'practice';
   unit: UnitContent;
   units: UnitContent[];
 }
 
-type Phase = 'theory' | 'quiz' | 'result';
+type Phase = 'theory' | 'quiz' | 'theory-done' | 'result';
 
 function buildRetryQueue(
   questions: Question[],
@@ -32,13 +34,15 @@ function buildRetryQueue(
     .filter((question): question is Question => Boolean(question));
 }
 
-export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
+export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
   const navigate = useNavigate();
   const progressStore = getProgressStore(units);
   const completeLesson = progressStore((state) => state.completeLesson);
   const recordWrongAnswer = progressStore((state) => state.recordWrongAnswer);
   const clearWrongAnswer = progressStore((state) => state.clearWrongAnswer);
-  const [phase, setPhase] = useState<Phase>('theory');
+  const [phase, setPhase] = useState<Phase>(
+    mode === 'practice' ? 'quiz' : 'theory'
+  );
   const [cardIndex, setCardIndex] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [retryIds, setRetryIds] = useState<string[]>([]);
@@ -70,7 +74,7 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
   }
 
   function resetLesson() {
-    setPhase('theory');
+    setPhase(mode === 'practice' ? 'quiz' : 'theory');
     setCardIndex(0);
     setQuestionIndex(0);
     setRetryIds([]);
@@ -130,26 +134,28 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
     return (
       <div className="space-y-5">
         <div className="rounded-[2rem] bg-ink p-5 text-white shadow-card">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-            {unit.code} · {unit.title}
-          </p>
-          <h2 className="mt-2 font-heading text-3xl font-bold">
-            {lesson.title}
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/80">
-            {lesson.summary}
-          </p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                {unit.code} · {unit.title}
+              </p>
+              <h2 className="mt-2 font-heading text-3xl font-bold">
+                {lesson.title}
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/80">
+                {lesson.summary}
+              </p>
+            </div>
+            <ExitButton confirmMessage="Thoát học lý thuyết? Tiến trình đọc thẻ hiện tại sẽ không được lưu." />
+          </div>
         </div>
-        <ProgressBar
-          current={cardIndex + 1}
-          total={lesson.cards.length + lesson.questions.length}
-        />
+        <ProgressBar current={cardIndex + 1} total={lesson.cards.length} />
         <TheoryCard
           card={lesson.cards[cardIndex]}
           index={cardIndex}
           onNext={() => {
             if (cardIndex + 1 === lesson.cards.length) {
-              setPhase('quiz');
+              setPhase('theory-done');
               return;
             }
 
@@ -162,6 +168,39 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
     );
   }
 
+  if (phase === 'theory-done') {
+    return (
+      <section className="rounded-[2rem] bg-white/95 p-6 shadow-card">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sea/70">
+          Hoàn thành phần lý thuyết
+        </p>
+        <h2 className="mt-2 font-heading text-3xl font-bold text-ink">
+          Em đã đọc xong lý thuyết bài {lesson.title}!
+        </h2>
+        <p className="mt-3 text-base leading-7 text-ink/75">
+          Nếu muốn củng cố ngay, em có thể chuyển sang phần giải bài tập của bài
+          này.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <button
+            className="rounded-full bg-sea px-5 py-3 font-semibold text-white transition hover:bg-ink"
+            onClick={() => navigate(`/learn/${unit.id}/${lesson.id}/practice`)}
+            type="button"
+          >
+            Giải bài tập ngay
+          </button>
+          <button
+            className="rounded-full border border-ink/10 px-5 py-3 font-semibold text-ink/70 transition hover:border-sea hover:text-sea"
+            onClick={() => navigate('/')}
+            type="button"
+          >
+            Về lộ trình
+          </button>
+        </div>
+      </section>
+    );
+  }
+
   if (phase === 'result' && finalState) {
     return (
       <ResultScreen
@@ -171,7 +210,7 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
         onBackHome={() => navigate('/')}
         onNextLesson={
           nextLessonId
-            ? () => navigate(`/learn/${unit.id}/${nextLessonId}`)
+            ? () => navigate(`/learn/${unit.id}/${nextLessonId}/practice`)
             : undefined
         }
         onReplay={resetLesson}
@@ -184,15 +223,19 @@ export function LessonPlayer({ lesson, unit, units }: LessonPlayerProps) {
   return (
     <div className="space-y-5">
       <div className="rounded-[2rem] bg-ink p-5 text-white shadow-card">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-          {unit.code} · {unit.title}
-        </p>
-        <h2 className="mt-2 font-heading text-3xl font-bold">{lesson.title}</h2>
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+              {unit.code} · {unit.title}
+            </p>
+            <h2 className="mt-2 font-heading text-3xl font-bold">
+              {lesson.title}
+            </h2>
+          </div>
+          <ExitButton confirmMessage="Thoát giải bài tập? Bài học sẽ chưa được tính hoàn thành (không cộng XP/sao), nhưng các câu đã trả lời vẫn được ghi vào danh sách cần ôn." />
+        </div>
       </div>
-      <ProgressBar
-        current={lesson.cards.length + questionIndex + 1}
-        total={lesson.cards.length + questionQueue.length}
-      />
+      <ProgressBar current={questionIndex + 1} total={questionQueue.length} />
       <QuestionRenderer
         index={questionIndex}
         key={currentQuestion.id}
