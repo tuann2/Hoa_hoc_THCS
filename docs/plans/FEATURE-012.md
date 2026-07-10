@@ -71,7 +71,7 @@ xong cả unit.
 
 ### A1 · Nền tảng hoá học (`a1-nen-tang-hoa-hoc`)
 
-- [ ] `a1-l1` — Chất – hỗn hợp – tách chất; nguyên tử, p – n – e
+- [x] `a1-l1` — Chất – hỗn hợp – tách chất; nguyên tử, p – n – e
 - [ ] `a1-l2` — Nguyên tố hoá học – nguyên tử khối; sơ lược bảng tuần hoàn
 - [ ] `a1-l3` — Đơn chất – hợp chất – phân tử; CTHH và ý nghĩa
 - [ ] `a1-l4` — Hoá trị; lập CTHH theo hoá trị

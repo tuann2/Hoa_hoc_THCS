@@ -17,17 +17,17 @@
         {
           "id": "a1-l1-c1",
           "heading": "Chất tinh khiết và hỗn hợp",
-          "body": "Chất tinh khiết chỉ gồm một chất duy nhất, có tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy...). Hỗn hợp gồm hai hay nhiều chất trộn lẫn, tính chất phụ thuộc thành phần.\nVí dụ: nước cất là chất tinh khiết; nước muối, không khí, nước chanh là hỗn hợp."
+          "body": "Chất tinh khiết chỉ gồm một chất duy nhất, có tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy...). Hỗn hợp gồm hai hay nhiều chất trộn lẫn, tính chất phụ thuộc thành phần.\nVí dụ: nước cất là chất tinh khiết; nước muối, không khí, nước chanh là hỗn hợp.\nNâng cao: Hỗn hợp đồng nhất có thành phần phân bố đều, nhìn như một pha, ví dụ nước muối, nước đường, không khí khô. Hỗn hợp không đồng nhất có thành phần không phân bố đều hoặc thấy rõ nhiều pha, ví dụ cát lẫn nước, dầu ăn lẫn nước, bột sắt lẫn lưu huỳnh. Khi gặp câu hỏi nhận biết hỗn hợp, hãy xét xem mẫu có chỉ một chất hay nhiều chất, rồi xét tiếp hỗn hợp đó đồng nhất hay không đồng nhất."
         },
         {
           "id": "a1-l1-c2",
           "heading": "Các phương pháp tách chất",
-          "body": "Lọc: tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc.\nCô cạn: làm bay hơi dung môi để thu chất tan rắn (tách muối ăn khỏi nước muối).\nChưng cất: dựa vào sự khác nhau về nhiệt độ sôi để tách các chất lỏng tan lẫn vào nhau.\nChiết: tách hai chất lỏng không tan vào nhau (dầu ăn và nước) bằng phễu chiết."
+          "body": "Lọc: tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc.\nCô cạn: làm bay hơi dung môi để thu chất tan rắn (tách muối ăn khỏi nước muối).\nChưng cất: dựa vào sự khác nhau về nhiệt độ sôi để tách các chất lỏng tan lẫn vào nhau.\nChiết: tách hai chất lỏng không tan vào nhau (dầu ăn và nước) bằng phễu chiết.\nNâng cao: Khi biện luận chọn phương pháp tách chất, trước hết phải chỉ ra tính chất khác nhau của các chất trong hỗn hợp. Khác độ tan hoặc một chất không tan trong chất lỏng thì nghĩ đến lọc; chất tan rắn trong dung dịch thì cô cạn hoặc kết tinh; các chất lỏng tan lẫn nhưng có nhiệt độ sôi khác nhau thì chưng cất; hai chất lỏng không tan nhau, có khối lượng riêng khác nhau nên phân lớp thì dùng chiết. Với hỗn hợp có nhiều chất, có thể phải tách theo nhiều bước, mỗi bước dựa trên một tính chất riêng."
         },
         {
           "id": "a1-l1-c3",
           "heading": "Cấu tạo nguyên tử",
-          "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e)."
+          "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e).\nNâng cao: Với dạng biện luận hạt, gọi p là số proton, e là số electron, n là số nơtron. Nguyên tử trung hoà nên p = e, vì vậy tổng số hạt là p + e + n = 2p + n. Số hạt mang điện gồm proton và electron nên bằng 2p; số hạt không mang điện là n.\nCách lập hệ: dùng dữ kiện tổng số hạt để viết 2p + n = tổng. Dữ kiện so sánh sẽ cho phương trình thứ hai: \"số hạt mang điện nhiều hơn số hạt không mang điện là X\" nghĩa là 2p - n = X; \"số hạt mang điện gấp k lần số hạt không mang điện\" nghĩa là 2p = k.n. Giải hai phương trình để tìm p, rồi suy ra e = p và số hiệu nguyên tử cũng bằng p. Khi chỉ có một phương trình, có thể thử các giá trị p nguyên dương và kiểm tra n nguyên không âm; với nhiều nguyên tố nhẹ thường gặp ở THCS (trừ hiđro), tỉ lệ n/p thường nằm khoảng 1 <= n/p <= 1,5 nên dùng được để loại nghiệm vô lí."
         }
       ],
       "questions": [
