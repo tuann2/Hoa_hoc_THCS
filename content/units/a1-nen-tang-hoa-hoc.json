@@ -17,17 +17,27 @@
         {
           "id": "a1-l1-c1",
           "heading": "Chất tinh khiết và hỗn hợp",
-          "body": "Chất tinh khiết chỉ gồm một chất duy nhất, có tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy...). Hỗn hợp gồm hai hay nhiều chất trộn lẫn, tính chất phụ thuộc thành phần.\nVí dụ: nước cất là chất tinh khiết; nước muối, không khí, nước chanh là hỗn hợp.\nNâng cao: Hỗn hợp đồng nhất có thành phần phân bố đều, nhìn như một pha, ví dụ nước muối, nước đường, không khí khô. Hỗn hợp không đồng nhất có thành phần không phân bố đều hoặc thấy rõ nhiều pha, ví dụ cát lẫn nước, dầu ăn lẫn nước, bột sắt lẫn lưu huỳnh. Khi gặp câu hỏi nhận biết hỗn hợp, hãy xét xem mẫu có chỉ một chất hay nhiều chất, rồi xét tiếp hỗn hợp đó đồng nhất hay không đồng nhất."
+          "body": "Chất tinh khiết chỉ gồm một chất duy nhất, có tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy...). Hỗn hợp gồm hai hay nhiều chất trộn lẫn, tính chất phụ thuộc thành phần.\nVí dụ: nước cất là chất tinh khiết; nước muối, không khí, nước chanh là hỗn hợp."
         },
         {
           "id": "a1-l1-c2",
           "heading": "Các phương pháp tách chất",
-          "body": "Lọc: tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc.\nCô cạn: làm bay hơi dung môi để thu chất tan rắn (tách muối ăn khỏi nước muối).\nChưng cất: dựa vào sự khác nhau về nhiệt độ sôi để tách các chất lỏng tan lẫn vào nhau.\nChiết: tách hai chất lỏng không tan vào nhau (dầu ăn và nước) bằng phễu chiết.\nNâng cao: Khi biện luận chọn phương pháp tách chất, trước hết phải chỉ ra tính chất khác nhau của các chất trong hỗn hợp. Khác độ tan hoặc một chất không tan trong chất lỏng thì nghĩ đến lọc; chất tan rắn trong dung dịch thì cô cạn hoặc kết tinh; các chất lỏng tan lẫn nhưng có nhiệt độ sôi khác nhau thì chưng cất; hai chất lỏng không tan nhau, có khối lượng riêng khác nhau nên phân lớp thì dùng chiết. Với hỗn hợp có nhiều chất, có thể phải tách theo nhiều bước, mỗi bước dựa trên một tính chất riêng."
+          "body": "Lọc: tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc.\nCô cạn: làm bay hơi dung môi để thu chất tan rắn (tách muối ăn khỏi nước muối).\nChưng cất: dựa vào sự khác nhau về nhiệt độ sôi để tách các chất lỏng tan lẫn vào nhau.\nChiết: tách hai chất lỏng không tan vào nhau (dầu ăn và nước) bằng phễu chiết."
         },
         {
           "id": "a1-l1-c3",
           "heading": "Cấu tạo nguyên tử",
-          "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e).\nNâng cao: Với dạng biện luận hạt, gọi p là số proton, e là số electron, n là số nơtron. Nguyên tử trung hoà nên p = e, vì vậy tổng số hạt là p + e + n = 2p + n. Số hạt mang điện gồm proton và electron nên bằng 2p; số hạt không mang điện là n.\nCách lập hệ: dùng dữ kiện tổng số hạt để viết 2p + n = tổng. Dữ kiện so sánh sẽ cho phương trình thứ hai: \"số hạt mang điện nhiều hơn số hạt không mang điện là X\" nghĩa là 2p - n = X; \"số hạt mang điện gấp k lần số hạt không mang điện\" nghĩa là 2p = k.n. Giải hai phương trình để tìm p, rồi suy ra e = p và số hiệu nguyên tử cũng bằng p. Khi chỉ có một phương trình, có thể thử các giá trị p nguyên dương và kiểm tra n nguyên không âm; với nhiều nguyên tố nhẹ thường gặp ở THCS (trừ hiđro), tỉ lệ n/p thường nằm khoảng 1 <= n/p <= 1,5 nên dùng được để loại nghiệm vô lí."
+          "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e)."
+        },
+        {
+          "id": "a1-l1-c4",
+          "heading": "Nâng cao: Phân biệt hỗn hợp và chọn phương pháp tách chất",
+          "body": "Hỗn hợp đồng nhất có thành phần phân bố đều, nhìn như một pha, ví dụ nước muối, nước đường, không khí khô. Hỗn hợp không đồng nhất có thành phần không phân bố đều hoặc thấy rõ nhiều pha, ví dụ cát lẫn nước, dầu ăn lẫn nước, bột sắt lẫn lưu huỳnh. Khi gặp câu hỏi nhận biết hỗn hợp, hãy xét xem mẫu có chỉ một chất hay nhiều chất, rồi xét tiếp hỗn hợp đó đồng nhất hay không đồng nhất.\nKhi biện luận chọn phương pháp tách chất, trước hết phải chỉ ra tính chất khác nhau của các chất trong hỗn hợp. Khác độ tan hoặc một chất không tan trong chất lỏng thì nghĩ đến lọc; chất tan rắn trong dung dịch thì cô cạn hoặc kết tinh; các chất lỏng tan lẫn nhưng có nhiệt độ sôi khác nhau thì chưng cất; hai chất lỏng không tan nhau, có khối lượng riêng khác nhau nên phân lớp thì dùng chiết. Với hỗn hợp có nhiều chất, có thể phải tách theo nhiều bước, mỗi bước dựa trên một tính chất riêng."
+        },
+        {
+          "id": "a1-l1-c5",
+          "heading": "Nâng cao: Biện luận hạt (p – n – e)",
+          "body": "Gọi p là số proton, e là số electron, n là số nơtron. Nguyên tử trung hoà nên p = e, vì vậy tổng số hạt là p + e + n = 2p + n. Số hạt mang điện gồm proton và electron nên bằng 2p; số hạt không mang điện là n.\nCách lập hệ: dùng dữ kiện tổng số hạt để viết 2p + n = tổng. Dữ kiện so sánh sẽ cho phương trình thứ hai: \"số hạt mang điện nhiều hơn số hạt không mang điện là X\" nghĩa là 2p - n = X; \"số hạt mang điện gấp k lần số hạt không mang điện\" nghĩa là 2p = k.n. Giải hai phương trình để tìm p, rồi suy ra e = p và số hiệu nguyên tử cũng bằng p. Khi chỉ có một phương trình, có thể thử các giá trị p nguyên dương và kiểm tra n nguyên không âm; với nhiều nguyên tố nhẹ thường gặp ở THCS (trừ hiđro), tỉ lệ n/p thường nằm khoảng 1 <= n/p <= 1,5 nên dùng được để loại nghiệm vô lí."
         }
       ],
       "questions": [
@@ -187,12 +197,22 @@
         {
           "id": "a1-l2-c2",
           "heading": "Nguyên tử khối",
-          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65.\nNâng cao: Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối của mỗi nguyên tố nhân với chỉ số của nó, rồi cộng lại. Với công thức dạng RxOy, phân tử khối M được tính là x.R + y.O; vì O = 16 nên M = x.R + 16y. Nếu biết M và công thức, ta lập phương trình để tìm nguyên tử khối chưa biết, sau đó đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết như H = 1, O = 16, C = 12. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. So với bảng đã nhớ; nếu kết quả là 23 thì nghĩ đến Na, 12 là C, 32 là S, 56 là Fe... Sau khi tìm được nguyên tố, nên kiểm tra lại công thức có hợp lí về hoá trị quen thuộc không."
+          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65."
         },
         {
           "id": "a1-l2-c3",
           "heading": "Sơ lược bảng tuần hoàn",
-          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau.\nNâng cao: Với các nguyên tố nhóm A thường học ở THCS, số thứ tự nhóm A bằng số electron lớp ngoài cùng (ngoại lệ cần nhớ: khí hiếm heli He chỉ có 2 electron lớp ngoài cùng nhưng vẫn xếp ở nhóm VIIIA vì có tính chất khí hiếm bền); số thứ tự chu kì bằng số lớp electron. Ví dụ nhóm IA có 1 electron lớp ngoài cùng nên các kim loại như Na thường dễ nhường 1 electron và thường có hoá trị I. Nhóm VIIA có 7 electron lớp ngoài cùng nên các phi kim như Cl thường dễ nhận thêm 1 electron, thường có hoá trị I trong hợp chất với kim loại (riêng trong hợp chất với oxi, Cl có thể có các hoá trị khác như III, V, VII). Quy luật này giúp dự đoán tính chất gần đúng, nhưng khi làm bài vẫn phải ưu tiên hoá trị và công thức đã học."
+          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau."
+        },
+        {
+          "id": "a1-l2-c4",
+          "heading": "Nâng cao: Tìm nguyên tử khối từ công thức và phân tử khối",
+          "body": "Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối của mỗi nguyên tố nhân với chỉ số của nó, rồi cộng lại. Với công thức dạng RxOy, phân tử khối M được tính là x.R + y.O; vì O = 16 nên M = x.R + 16y. Nếu biết M và công thức, ta lập phương trình để tìm nguyên tử khối chưa biết, sau đó đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết như H = 1, O = 16, C = 12. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. So với bảng đã nhớ; nếu kết quả là 23 thì nghĩ đến Na, 12 là C, 32 là S, 56 là Fe... Sau khi tìm được nguyên tố, nên kiểm tra lại công thức có hợp lí về hoá trị quen thuộc không."
+        },
+        {
+          "id": "a1-l2-c5",
+          "heading": "Nâng cao: Quy luật nhóm và chu kì",
+          "body": "Với các nguyên tố nhóm A thường học ở THCS, số thứ tự nhóm A bằng số electron lớp ngoài cùng (ngoại lệ cần nhớ: khí hiếm heli He chỉ có 2 electron lớp ngoài cùng nhưng vẫn xếp ở nhóm VIIIA vì có tính chất khí hiếm bền); số thứ tự chu kì bằng số lớp electron. Ví dụ nhóm IA có 1 electron lớp ngoài cùng nên các kim loại như Na thường dễ nhường 1 electron và thường có hoá trị I. Nhóm VIIA có 7 electron lớp ngoài cùng nên các phi kim như Cl thường dễ nhận thêm 1 electron, thường có hoá trị I trong hợp chất với kim loại (riêng trong hợp chất với oxi, Cl có thể có các hoá trị khác như III, V, VII). Quy luật này giúp dự đoán tính chất gần đúng, nhưng khi làm bài vẫn phải ưu tiên hoá trị và công thức đã học."
         }
       ],
       "questions": [
@@ -347,17 +367,27 @@
         {
           "id": "a1-l3-c1",
           "heading": "Đơn chất và hợp chất",
-          "body": "Đơn chất do một nguyên tố hoá học tạo nên. Ví dụ kim loại: Fe, Cu, Al; phi kim: O2, N2, Cl2, C, S.\nHợp chất do hai hay nhiều nguyên tố hoá học tạo nên. Ví dụ: H2O, CO2, NaCl, H2SO4.\nNâng cao: Một nguyên tố hoá học có thể tạo ra nhiều đơn chất khác nhau, gọi là các dạng thù hình. Các dạng thù hình cùng gồm một loại nguyên tố nhưng cách sắp xếp hoặc số nguyên tử trong hạt khác nhau nên tính chất vật lí có thể rất khác. Ví dụ kim cương và than chì đều là đơn chất cacbon; O2 và O3 (ozon) đều là đơn chất oxi. Vì vậy khi phân biệt đơn chất và hợp chất, không chỉ nhìn vào tên gọi khác nhau mà phải xét xem chất đó do mấy nguyên tố tạo nên."
+          "body": "Đơn chất do một nguyên tố hoá học tạo nên. Ví dụ kim loại: Fe, Cu, Al; phi kim: O2, N2, Cl2, C, S.\nHợp chất do hai hay nhiều nguyên tố hoá học tạo nên. Ví dụ: H2O, CO2, NaCl, H2SO4."
         },
         {
           "id": "a1-l3-c2",
           "heading": "Phân tử",
-          "body": "Phân tử là hạt đại diện cho chất, gồm một số nguyên tử liên kết với nhau, thể hiện đầy đủ tính chất hoá học của chất.\nPhân tử khối bằng tổng nguyên tử khối của các nguyên tử có trong phân tử.\nNâng cao: Phân tử của đơn chất có thể gồm nhiều nguyên tử của cùng một nguyên tố, không nhất thiết chỉ 1 nguyên tử hoặc 2 nguyên tử. Ngoài các phân tử quen thuộc như O2, N2, Cl2, còn có P4 (phân tử photpho trắng) và S8 (phân tử lưu huỳnh). Vì vậy công thức có nhiều nguyên tử chưa đủ để kết luận là hợp chất; hợp chất phải có từ hai nguyên tố khác nhau trở lên."
+          "body": "Phân tử là hạt đại diện cho chất, gồm một số nguyên tử liên kết với nhau, thể hiện đầy đủ tính chất hoá học của chất.\nPhân tử khối bằng tổng nguyên tử khối của các nguyên tử có trong phân tử."
         },
         {
           "id": "a1-l3-c3",
           "heading": "Công thức hoá học và ý nghĩa",
-          "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98.\nNâng cao: Với oxit dạng RxOy, có thể dùng chỉ số để kiểm tra hoá trị của R trong chính oxit đó. Oxi có hoá trị II nên theo quy tắc hoá trị: hoá trị(R) nhân x = II nhân y = 2y, suy ra hoá trị(R) = 2y/x. Kết quả này phải hợp lí với nguyên tố tìm được từ phân tử khối. Ví dụ với công thức R2O3, ta suy ra hoá trị R = 2 x 3 / 2 = III; nếu từ phân tử khối của oxit tính ra nguyên tử khối R = 56 thì đối chiếu được Fe, và Fe có thể có hoá trị III trong Fe2O3. Đây là phép kiểm tra chéo để phát hiện nhầm chỉ số hoặc tính sai nguyên tử khối; lưu ý hoá trị được suy ra từ công thức đang xét, không phải kết luận nguyên tố đó chỉ có một hoá trị."
+          "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98."
+        },
+        {
+          "id": "a1-l3-c4",
+          "heading": "Nâng cao: Đơn chất không đơn giản như tên gọi",
+          "body": "Một nguyên tố hoá học có thể tạo ra nhiều đơn chất khác nhau, gọi là các dạng thù hình. Các dạng thù hình cùng gồm một loại nguyên tố nhưng cách sắp xếp hoặc số nguyên tử trong hạt khác nhau nên tính chất vật lí có thể rất khác. Ví dụ kim cương và than chì đều là đơn chất cacbon; O2 và O3 (ozon) đều là đơn chất oxi. Vì vậy khi phân biệt đơn chất và hợp chất, không chỉ nhìn vào tên gọi khác nhau mà phải xét xem chất đó do mấy nguyên tố tạo nên.\nPhân tử của đơn chất có thể gồm nhiều nguyên tử của cùng một nguyên tố, không nhất thiết chỉ 1 nguyên tử hoặc 2 nguyên tử. Ngoài các phân tử quen thuộc như O2, N2, Cl2, còn có P4 (phân tử photpho trắng) và S8 (phân tử lưu huỳnh). Vì vậy công thức có nhiều nguyên tử chưa đủ để kết luận là hợp chất; hợp chất phải có từ hai nguyên tố khác nhau trở lên."
+        },
+        {
+          "id": "a1-l3-c5",
+          "heading": "Nâng cao: Kiểm tra chéo hoá trị trong oxit",
+          "body": "Với oxit dạng RxOy, có thể dùng chỉ số để kiểm tra hoá trị của R trong chính oxit đó. Oxi có hoá trị II nên theo quy tắc hoá trị: hoá trị(R) nhân x = II nhân y = 2y, suy ra hoá trị(R) = 2y/x. Kết quả này phải hợp lí với nguyên tố tìm được từ phân tử khối. Ví dụ với công thức R2O3, ta suy ra hoá trị R = 2 x 3 / 2 = III; nếu từ phân tử khối của oxit tính ra nguyên tử khối R = 56 thì đối chiếu được Fe, và Fe có thể có hoá trị III trong Fe2O3. Đây là phép kiểm tra chéo để phát hiện nhầm chỉ số hoặc tính sai nguyên tử khối; lưu ý hoá trị được suy ra từ công thức đang xét, không phải kết luận nguyên tố đó chỉ có một hoá trị."
         }
       ],
       "questions": [

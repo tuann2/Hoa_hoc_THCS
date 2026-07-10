@@ -109,7 +109,11 @@ npm run typecheck
 
 ## Content authoring rules
 
-- 3 thẻ lý thuyết + 13 câu/bài (5 basic, 5 applied, 3 hsg).
+- 1–5 thẻ lý thuyết (tuỳ độ dài/số chủ đề của bài, không cố định 3 —
+  giới hạn cứng của schema là tối đa 5) + 13 câu/bài (5 basic, 5
+  applied, 3 hsg). Khi một chủ đề nâng cao đủ dài/độc lập, nên tách
+  thành thẻ riêng (ví dụ "Nâng cao: ...") thay vì nhồi vào cuối một
+  thẻ cơ bản đã có (FEATURE-012).
 - Câu HSG: `"source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"`.
 - Mọi bài toán số liệu phải GIẢI LẠI độc lập trước khi commit.
 - Công thức: text đơn giản (CH2=CH2, CH≡CH), không dùng LaTeX.

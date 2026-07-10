@@ -9,23 +9,28 @@
 
 ## 1. Objective
 
-Mở rộng nội dung 3 thẻ lý thuyết hiện có của mỗi bài học (81 bài
-`available` trên 17 unit) với kiến thức nâng cao (mức HSG cấp
-huyện/tỉnh), do Codex (model `gpt-5.5`) và Gemini (`agy`) cùng nghiên
-cứu, Claude tổng hợp — xử lý **tuần tự từng bài một**, không xử lý
-hàng loạt, để đảm bảo nội dung được đào sâu, chính xác và không bị
-lặp/generic.
+Bổ sung kiến thức nâng cao (mức HSG cấp huyện/tỉnh) vào thẻ lý thuyết
+của mỗi bài học (81 bài `available` trên 17 unit), do Codex (model
+`gpt-5.5`) và Gemini (`agy`) cùng nghiên cứu, Claude tổng hợp — xử lý
+**tuần tự từng bài một**, không xử lý hàng loạt, để đảm bảo nội dung
+được đào sâu, chính xác và không bị lặp/generic. Số thẻ mỗi bài không
+cố định 3 — tuỳ độ dài/số chủ đề nâng cao mà mở rộng `body` thẻ có sẵn
+hoặc thêm thẻ mới (tối đa 5 thẻ/bài, xem mục 3).
 
 ## 2. Current system analysis
 
-- Mỗi bài học có đúng 3 thẻ lý thuyết (`lesson.cards: {id, heading,
-body}[]`), quy định cứng ở `CLAUDE.md` §Content authoring rules
-  ("3 thẻ lý thuyết + 13 câu/bài"). Body hiện tại là text ngắn, gọn
-  cho di động (`TheoryCard.tsx` render trong một card cuộn dọc, không
-  giới hạn độ dài code nhưng UI hướng "học được trên điện thoại").
+- Mỗi bài học hiện có `lesson.cards: {id, heading, body}[]`; trước khi
+  điều chỉnh, quy ước ở `CLAUDE.md` §Content authoring rules ghi cứng
+  "3 thẻ lý thuyết". **Đã xác nhận qua code**: `src/lib/contentValidation.ts`
+  chỉ ràng buộc `cards.length` trong khoảng 1–5 (dòng ~131–137), không
+  hardcode con số 3 ở đâu khác (`TheoryCard.tsx`/`LessonPlayer.tsx`
+  đều lấy `total = lesson.cards.length` động) — nên đổi từ "luôn đúng
+  3 thẻ" sang "1–5 thẻ tuỳ nội dung" **không cần sửa code**, chỉ cần
+  cập nhật quy ước nội dung (đã cập nhật `CLAUDE.md`).
 - Sau FEATURE-011, mỗi câu hỏi có `category: 'theory' | 'calculation'`
   — 641 câu theory / 412 câu calculation trên 1053 câu. Nhiệm vụ này
-  **không đổi câu hỏi**, chỉ mở rộng `body` của 3 thẻ lý thuyết.
+  **không đổi câu hỏi**, chỉ đổi `cards` (mở rộng `body` thẻ có sẵn
+  hoặc thêm thẻ mới).
 - Danh sách 81 bài available, đúng thứ tự xử lý A1→A12 rồi B1→B5, đã
   liệt kê đầy đủ ở mục 4 (checklist tracking).
 - Công cụ đã có sẵn trong dự án (theo `CLAUDE.md` §Agent delegation):
@@ -42,9 +47,15 @@ body}[]`), quy định cứng ở `CLAUDE.md` §Content authoring rules
 
 ## 3. Assumptions (đã chốt với người dùng 2026-07-10)
 
-- **Hình thức bổ sung**: mở rộng nội dung `body` của 3 thẻ hiện có
-  (không thêm thẻ mới, không đổi `heading`/số lượng thẻ) — giữ nguyên
-  quy tắc "3 thẻ lý thuyết" đã có trong `CLAUDE.md`.
+- **Hình thức bổ sung (đã điều chỉnh 2026-07-10 sau đợt thí điểm)**:
+  không còn cố định giữ đúng 3 thẻ. Số thẻ mỗi bài dao động 1–5 (giới
+  hạn cứng của schema, xem `src/lib/contentValidation.ts`) tuỳ độ dài
+  và số chủ đề nâng cao thực sự cần thêm. Khi một mảng kiến thức nâng
+  cao đủ dài/độc lập (ví dụ một kĩ thuật biện luận riêng), **tách
+  thành thẻ mới** (heading dạng "Nâng cao: ...") thay vì nhồi thêm vào
+  cuối một thẻ cơ bản đã có — chỉ nhồi thêm vào thẻ cũ khi phần bổ
+  sung ngắn, thực sự thuộc cùng chủ đề với thẻ đó. `CLAUDE.md` §Content
+  authoring rules đã cập nhật theo quy tắc này.
 - **Thứ tự xử lý**: Vô cơ trước (A1→A12), rồi Hữu cơ (B1→B5), đúng thứ
   tự chương trình.
 - **Model Codex**: `gpt-5.5` (frontier hiện có, không phải "5.6" —
@@ -54,9 +65,10 @@ body}[]`), quy định cứng ở `CLAUDE.md` §Content authoring rules
 - **Phạm vi nâng cao = mức HSG cấp huyện/tỉnh**, nhất quán với quy ước
   đã có cho câu hỏi HSG trong `CLAUDE.md` — không vượt xa chương trình
   Hoá 8/9 sang kiến thức THPT không cần thiết.
-- Không đổi câu hỏi, không đổi đáp án/lời giải — chỉ mở rộng `body`
-  của 3 thẻ. Nếu trong lúc mở rộng phát hiện thẻ cũ có lỗi/thiếu, được
-  sửa kèm nhưng phải ghi rõ trong commit message.
+- Không đổi câu hỏi, không đổi đáp án/lời giải — chỉ đổi `cards` (mở
+  rộng `body` thẻ có sẵn hoặc thêm thẻ mới). Nếu trong lúc mở rộng
+  phát hiện thẻ cũ có lỗi/thiếu, được sửa kèm nhưng phải ghi rõ trong
+  commit message.
 - Vì đây là **sửa nội dung đã duyệt trước đây** (rủi ro cao hơn thêm
   mới), mỗi bài đều qua đủ 3 lớp kiểm định trước khi commit: Codex
   soạn → Gemini nghiên cứu/fact-check độc lập → Claude đọc lại toàn bộ
@@ -221,25 +233,35 @@ checklist, KHÔNG chạy song song nhiều bài để giữ chất lượng):
 ```
 Agent(subagent_type="codex:codex-rescue",
       prompt="--cwd /data/Projects/Hoa_hoc_THCS --write --model gpt-5.5
-              <task: mở rộng body của 3 thẻ lesson <id> trong
-              content/units/<file>.json>")
+              <task: bổ sung kiến thức nâng cao cho lesson <id> trong
+              content/units/<file>.json — mở rộng body thẻ có sẵn
+              hoặc thêm thẻ mới, tối đa 5 thẻ/bài>")
 ```
 
 Yêu cầu cụ thể trong prompt cho mỗi bài:
 
-- Đọc `body` hiện tại của cả 3 thẻ + toàn bộ câu hỏi của bài (để không
-  lặp lại/mâu thuẫn nội dung quiz).
-- Mở rộng mỗi `body`: giữ phần cơ bản gốc, bổ sung thêm đoạn kiến thức
-  nâng cao mức HSG cấp huyện/tỉnh (cơ chế phản ứng sâu hơn, trường hợp
-  đặc biệt, mẹo biện luận, lưu ý hay gặp trong đề thi HSG) — đánh dấu
-  rõ ranh giới phần nâng cao trong text (ví dụ tiền tố "Nâng cao:" hay
-  đoạn riêng) để học sinh đại trà vẫn đọc được phần cơ bản trước.
+- Đọc `body` hiện tại của tất cả thẻ + toàn bộ câu hỏi của bài (để
+  không lặp lại/mâu thuẫn nội dung quiz).
+- Quyết định hình thức bổ sung theo độ dài/tính độc lập của chủ đề
+  nâng cao:
+  - Chủ đề nâng cao **ngắn, cùng mạch** với một thẻ cơ bản đã có → nối
+    thêm vào cuối `body` thẻ đó (tiền tố "Nâng cao:").
+  - Chủ đề nâng cao **dài hoặc là một kĩ thuật/khái niệm riêng biệt**
+    (ví dụ một phương pháp biện luận cụ thể) → tạo **thẻ mới** với
+    `heading` dạng "Nâng cao: <tên kĩ thuật>", `id` nối tiếp quy ước
+    đã có (`<lesson-id>-c<n>`).
+  - Tổng số thẻ sau khi thêm không được vượt quá 5 (giới hạn cứng của
+    `contentValidation.ts`) — nếu có nhiều hơn 2 chủ đề nâng cao đáng
+    tách thẻ, ưu tiên gộp chủ đề gần nhau vào cùng một thẻ mới thay vì
+    vượt trần.
+- Nội dung nâng cao ở mức HSG cấp huyện/tỉnh (cơ chế phản ứng sâu hơn,
+  trường hợp đặc biệt, mẹo biện luận, lưu ý hay gặp trong đề thi HSG).
 - Format: text đơn giản, công thức viết dạng CH2=CH2/CH≡CH (không
-  LaTeX), giữ giọng văn phù hợp học sinh THCS, không quá dài cho một
-  card cuộn trên điện thoại (khuyến nghị mỗi thẻ tăng thêm khoảng
-  60–120% độ dài gốc, không nhân đôi lên gấp nhiều lần).
-- KHÔNG chạm vào `questions`, `id`, `heading`, cấu trúc file khác.
-- Tự chạy `npm run validate-content` sau khi sửa.
+  LaTeX), giữ giọng văn phù hợp học sinh THCS.
+- KHÔNG chạm vào `questions`, cấu trúc file khác, không đổi `id`/
+  `heading` của các thẻ cơ bản đã có.
+- Tự chạy `npm run validate-content` sau khi sửa (tự kiểm tra luôn số
+  thẻ không vượt 5).
 
 ### Bước 2 — Gemini nghiên cứu/fact-check độc lập
 
@@ -247,17 +269,21 @@ Yêu cầu cụ thể trong prompt cho mỗi bài:
 agy --model "Gemini 3.5 Flash (High)" \
     --add-dir /data/Projects/Hoa_hoc_THCS \
     -p "Nghiên cứu độc lập + fact-check nội dung nâng cao vừa thêm vào
-        3 thẻ lý thuyết bài <id> (đọc git diff), đối chiếu chương
-        trình Hoá 8/9 và đề thi HSG cấp huyện/tỉnh Việt Nam. Chỉ ra
-        lỗi hoá học (phương trình sai/không cân bằng, khái niệm sai,
-        vượt quá phạm vi HSG THCS, mâu thuẫn với câu hỏi có sẵn trong
-        bài), và đề xuất bổ sung nếu thấy nội dung còn thiếu góc quan
-        trọng. Không cần khen, chỉ liệt kê vấn đề cụ thể."
+        thẻ lý thuyết bài <id> (đọc git diff), đối chiếu chương
+        trình Hoá 8/9 và đề thi HSG cấp huyện/tỉnh Việt Nam. CHỈ BÁO
+        CÁO phát hiện — không tự sửa file. Chỉ ra lỗi hoá học (phương
+        trình sai/không cân bằng, khái niệm sai, vượt quá phạm vi HSG
+        THCS, mâu thuẫn với câu hỏi có sẵn trong bài), và đề xuất bổ
+        sung nếu thấy nội dung còn thiếu góc quan trọng. Không cần
+        khen, chỉ liệt kê vấn đề cụ thể."
 ```
 
 Chạy đồng bộ (không `run_in_background`), theo đúng lưu ý đã có trong
 bộ nhớ dự án (agy có thể treo với prompt nhiều phần — giữ prompt gọn,
-một nhiệm vụ).
+một nhiệm vụ). **Lưu ý**: dù đã yêu cầu chỉ báo cáo, `agy` từng tự ý
+sửa thẳng vào file ở bài thí điểm `a1-l3` — Claude vẫn phải đối chiếu
+`git diff` sau mỗi lần gọi để phát hiện thay đổi ngoài dự kiến (dù nội
+dung sửa lần đó là đúng), không được bỏ qua bước kiểm tra này.
 
 ### Bước 3 — Claude tổng hợp và duyệt
 
@@ -370,7 +396,7 @@ hưởng các bài khác. Chưa merge `main` cho tới khi được xác nhận.
 - [ ] Mỗi bài có nội dung nâng cao đã qua Gemini fact-check, không còn
       vấn đề hoá học chưa xử lý.
 - [ ] `npm run validate-content && npm test && npm run lint && npm run
-  typecheck && npm run format:check` pass ở lần chạy cuối.
+typecheck && npm run format:check` pass ở lần chạy cuối.
 - [ ] Không thẻ nào vượt quá độ dài hợp lý cho hiển thị di động (kiểm
       tra thủ công qua `npm run dev`).
 - [ ] Không có thay đổi ngoài phạm vi `cards[].body` trong
