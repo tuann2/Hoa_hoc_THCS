@@ -370,7 +370,7 @@ hưởng các bài khác. Chưa merge `main` cho tới khi được xác nhận.
 - [ ] Mỗi bài có nội dung nâng cao đã qua Gemini fact-check, không còn
       vấn đề hoá học chưa xử lý.
 - [ ] `npm run validate-content && npm test && npm run lint && npm run
-    typecheck && npm run format:check` pass ở lần chạy cuối.
+  typecheck && npm run format:check` pass ở lần chạy cuối.
 - [ ] Không thẻ nào vượt quá độ dài hợp lý cho hiển thị di động (kiểm
       tra thủ công qua `npm run dev`).
 - [ ] Không có thay đổi ngoài phạm vi `cards[].body` trong
