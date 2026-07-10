@@ -38,16 +38,21 @@ VITE_SUPABASE_ANON_KEY=your-public-anon-key
 
 4. Trong Supabase Auth, đặt mật khẩu tối thiểu 8 ký tự.
 5. **Bắt buộc** — vào **Authentication → URL Configuration** và cập nhật:
-   - **Site URL**: URL production thật, ví dụ
-     `https://<username>.github.io/<repo>/`.
-   - **Redirect URLs**: thêm cả URL production
-     (`https://<username>.github.io/<repo>/**`) và URL dev cục bộ
-     (`http://localhost:5173/**` — cổng mặc định của Vite).
+   - **Site URL**: `https://tuann2.github.io/Hoa_hoc_THCS/`.
+   - **Redirect URLs**: thêm
+     `https://tuann2.github.io/Hoa_hoc_THCS/auth`,
+     `https://tuann2.github.io/Hoa_hoc_THCS/**` (fallback), và
+     `http://localhost:5173/auth` cho dev cục bộ.
 
    Mặc định Supabase để `Site URL = http://localhost:3000` (giá trị
    mẫu khi tạo project, không phải cổng dev thật của app này). Nếu bỏ
    qua bước này, email xác nhận đăng ký / đặt lại mật khẩu sẽ luôn
    điều hướng sai chỗ (`localhost:3000`) bất kể app đang chạy ở đâu.
+   Nếu `redirectTo` không nằm trong allowlist **Redirect URLs**,
+   Supabase sẽ âm thầm quay về **Site URL**, nên phải cấu hình đúng cả
+   hai mục.
+   Build hiện cũng tự tạo `dist/404.html` làm SPA fallback cho GitHub
+   Pages, để hard navigation tới `/Hoa_hoc_THCS/auth` vẫn nạp được app.
 
 6. Với GitHub Pages / CI, khai báo hai secret cùng tên:
    `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`.

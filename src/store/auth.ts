@@ -68,6 +68,14 @@ function detectPasswordRecoveryFromUrl(): boolean {
   );
 }
 
+function getAuthRedirectUrl(): string | undefined {
+  if (typeof window === 'undefined') {
+    return undefined;
+  }
+
+  return `${window.location.origin}${import.meta.env.BASE_URL}auth`;
+}
+
 function readUserDisplayName(user: User): string | null {
   const metadata = user.user_metadata;
 
@@ -194,7 +202,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
       options: {
         data: {
           display_name: trimmedName
-        }
+        },
+        emailRedirectTo: getAuthRedirectUrl()
       }
     });
 
@@ -298,7 +307,9 @@ export const useAuthStore = create<AuthState>()((set) => ({
     }
 
     set({ isLoading: true });
-    const { error } = await supabase.auth.resetPasswordForEmail(email.trim());
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
+      redirectTo: getAuthRedirectUrl()
+    });
     set({ isLoading: false });
 
     if (error) {
