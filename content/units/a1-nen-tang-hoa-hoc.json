@@ -182,17 +182,17 @@
         {
           "id": "a1-l2-c1",
           "heading": "Nguyên tố hoá học và kí hiệu",
-          "body": "Nguyên tố hoá học là tập hợp các nguyên tử có cùng số proton (số hiệu nguyên tử). Mỗi nguyên tố có một kí hiệu hoá học gồm 1 hoặc 2 chữ cái, chữ cái đầu viết hoa.\nVí dụ: H (hiđro, có 1 proton), O (oxi, có 8 proton), Na (natri, có 11 proton)."
+          "body": "Nguyên tố hoá học là tập hợp các nguyên tử có cùng số proton (số hiệu nguyên tử). Mỗi nguyên tố có một kí hiệu hoá học gồm 1 hoặc 2 chữ cái, chữ cái đầu viết hoa.\nVí dụ: H (hiđro, có 1 proton), O (oxi, có 8 proton), Na (natri, có 11 proton).\nNâng cao: Cần phân biệt nguyên tố hoá học và nguyên tử. Nguyên tố là khái niệm chỉ một loại nguyên tử được xác định bởi cùng số proton; bản thân tên nguyên tố không cho biết có bao nhiêu nguyên tử hay khối lượng cụ thể. Nguyên tử là một hạt cụ thể của nguyên tố đó, có thể đếm số lượng trong phân tử hoặc trong mẫu chất. Vì vậy khi đọc công thức Na2O, ta hiểu phân tử có 2 nguyên tử Na và 1 nguyên tử O, đồng thời chất này được tạo bởi 2 nguyên tố là natri và oxi."
         },
         {
           "id": "a1-l2-c2",
           "heading": "Nguyên tử khối",
-          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65."
+          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65.\nNâng cao: Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối của mỗi nguyên tố nhân với chỉ số của nó, rồi cộng lại. Với công thức dạng RxOy, phân tử khối M được tính là x.R + y.O; vì O = 16 nên M = x.R + 16y. Nếu biết M và công thức, ta lập phương trình để tìm nguyên tử khối chưa biết, sau đó đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết như H = 1, O = 16, C = 12. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. So với bảng đã nhớ; nếu kết quả là 23 thì nghĩ đến Na, 12 là C, 32 là S, 56 là Fe... Sau khi tìm được nguyên tố, nên kiểm tra lại công thức có hợp lí về hoá trị quen thuộc không."
         },
         {
           "id": "a1-l2-c3",
           "heading": "Sơ lược bảng tuần hoàn",
-          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau."
+          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau.\nNâng cao: Với các nguyên tố nhóm A thường học ở THCS, số thứ tự nhóm A bằng số electron lớp ngoài cùng (ngoại lệ cần nhớ: khí hiếm heli He chỉ có 2 electron lớp ngoài cùng nhưng vẫn xếp ở nhóm VIIIA vì có tính chất khí hiếm bền); số thứ tự chu kì bằng số lớp electron. Ví dụ nhóm IA có 1 electron lớp ngoài cùng nên các kim loại như Na thường dễ nhường 1 electron và thường có hoá trị I. Nhóm VIIA có 7 electron lớp ngoài cùng nên các phi kim như Cl thường dễ nhận thêm 1 electron, thường có hoá trị I trong hợp chất với kim loại (riêng trong hợp chất với oxi, Cl có thể có các hoá trị khác như III, V, VII). Quy luật này giúp dự đoán tính chất gần đúng, nhưng khi làm bài vẫn phải ưu tiên hoá trị và công thức đã học."
         }
       ],
       "questions": [
