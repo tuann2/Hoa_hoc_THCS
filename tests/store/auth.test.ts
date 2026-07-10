@@ -184,6 +184,16 @@ describe('auth store', () => {
       .getState()
       .signUp('hoc.sinh@example.com', '12345678', 'Học Sinh');
 
+    expect(signUp).toHaveBeenCalledWith({
+      email: 'hoc.sinh@example.com',
+      password: '12345678',
+      options: {
+        data: {
+          display_name: 'Học Sinh'
+        },
+        emailRedirectTo: 'http://localhost:3000/auth'
+      }
+    });
     expect(result.error).toBeNull();
     expect(result.requiresEmailConfirmation).toBe(true);
     expect(getAuthStore().getState().user).toBeNull();
@@ -232,6 +242,9 @@ describe('auth store', () => {
       getAuthStore().getState().resetPassword('lan.anh@example.com')
     ).resolves.toEqual({
       error: 'Có lỗi xảy ra trong quá trình xử lý. Em hãy thử lại sau nhé.'
+    });
+    expect(resetPasswordForEmail).toHaveBeenCalledWith('lan.anh@example.com', {
+      redirectTo: 'http://localhost:3000/auth'
     });
   });
 
