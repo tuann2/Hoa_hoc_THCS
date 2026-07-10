@@ -1,10 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  calculateStars,
-  calculateXp,
-  isQuestionCorrect
-} from '../lib/chemistry';
+import { calculateXp, isQuestionCorrect } from '../lib/chemistry';
+import { getQuestionsByCategory } from '../lib/content';
 import { getNextLessonId, getProgressStore } from '../store/progress';
 import type { Lesson, Question, UnitContent } from '../types/content';
 import { ExitButton } from './ExitButton';
@@ -20,7 +17,7 @@ interface LessonPlayerProps {
   units: UnitContent[];
 }
 
-type Phase = 'theory' | 'quiz' | 'theory-done' | 'result';
+type Phase = 'theory' | 'quiz' | 'practice-empty' | 'result';
 
 function buildRetryQueue(
   questions: Question[],
@@ -37,11 +34,35 @@ function buildRetryQueue(
 export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
   const navigate = useNavigate();
   const progressStore = getProgressStore(units);
-  const completeLesson = progressStore((state) => state.completeLesson);
+  const completeLessonPart = progressStore((state) => state.completeLessonPart);
   const recordWrongAnswer = progressStore((state) => state.recordWrongAnswer);
   const clearWrongAnswer = progressStore((state) => state.clearWrongAnswer);
+  const currentLessonProgress = progressStore(
+    (state) => state.lessonProgress[lesson.id]
+  );
+  const theoryQuestions = useMemo(
+    () => getQuestionsByCategory(lesson, 'theory'),
+    [lesson]
+  );
+  const practiceQuestions = useMemo(
+    () => getQuestionsByCategory(lesson, 'calculation'),
+    [lesson]
+  );
+  const lessonQuestions =
+    mode === 'theory' ? theoryQuestions : practiceQuestions;
+  const otherMode = mode === 'theory' ? 'practice' : 'theory';
+  const otherModeCompleted =
+    otherMode === 'theory'
+      ? currentLessonProgress?.theory.completed === true
+      : currentLessonProgress?.practice.completed === true;
+  const otherModeQuestionCount =
+    otherMode === 'theory' ? theoryQuestions.length : practiceQuestions.length;
   const [phase, setPhase] = useState<Phase>(
-    mode === 'practice' ? 'quiz' : 'theory'
+    mode === 'theory'
+      ? 'theory'
+      : lessonQuestions.length === 0
+        ? 'practice-empty'
+        : 'quiz'
   );
   const [cardIndex, setCardIndex] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -55,26 +76,40 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
     accuracy: number;
     xp: number;
     stars: 0 | 1 | 2 | 3;
+    showNextLesson: boolean;
+    secondaryActionLabel?: string;
   } | null>(null);
 
   const reviewQueue = useMemo(
-    () => buildRetryQueue(lesson.questions, retryIds),
-    [lesson.questions, retryIds]
+    () => buildRetryQueue(lessonQuestions, retryIds),
+    [lessonQuestions, retryIds]
   );
   const questionQueue = useMemo(
-    () => [...lesson.questions, ...reviewQueue],
-    [lesson.questions, reviewQueue]
+    () => [...lessonQuestions, ...reviewQueue],
+    [lessonQuestions, reviewQueue]
   );
   const currentQuestion = questionQueue[questionIndex];
-  const retryMode = questionIndex >= lesson.questions.length;
+  const retryMode = questionIndex >= lessonQuestions.length;
   const nextLessonId = getNextLessonId(units, unit.id, lesson.id);
+  const secondaryActionLabel =
+    !otherModeCompleted && otherModeQuestionCount > 0
+      ? otherMode === 'practice'
+        ? 'Làm phần Bài tập'
+        : 'Ôn phần Lý thuyết'
+      : undefined;
 
   if (!currentQuestion && phase === 'quiz') {
     return null;
   }
 
   function resetLesson() {
-    setPhase(mode === 'practice' ? 'quiz' : 'theory');
+    setPhase(
+      mode === 'theory'
+        ? 'theory'
+        : lessonQuestions.length === 0
+          ? 'practice-empty'
+          : 'quiz'
+    );
     setCardIndex(0);
     setQuestionIndex(0);
     setRetryIds([]);
@@ -85,14 +120,25 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
   }
 
   function finishLesson() {
-    const accuracy = Math.round(
-      (correctFirstTry / lesson.questions.length) * 100
-    );
+    const accuracy =
+      lessonQuestions.length === 0
+        ? 100
+        : Math.round((correctFirstTry / lessonQuestions.length) * 100);
     const xp = calculateXp(correctFirstTry);
-    const stars = calculateStars(accuracy);
 
-    completeLesson(lesson, nextLessonId, accuracy, xp);
-    setFinalState({ accuracy, xp, stars });
+    completeLessonPart(lesson, mode, accuracy, xp, nextLessonId);
+
+    const updatedProgress =
+      getProgressStore(units).getState().lessonProgress[lesson.id];
+
+    setFinalState({
+      accuracy,
+      xp,
+      stars: updatedProgress?.stars ?? 0,
+      showNextLesson:
+        updatedProgress?.completed === true && nextLessonId !== null,
+      secondaryActionLabel
+    });
     setPhase('result');
   }
 
@@ -155,7 +201,12 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
           index={cardIndex}
           onNext={() => {
             if (cardIndex + 1 === lesson.cards.length) {
-              setPhase('theory-done');
+              if (lessonQuestions.length === 0) {
+                finishLesson();
+                return;
+              }
+
+              setPhase('quiz');
               return;
             }
 
@@ -168,26 +219,26 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
     );
   }
 
-  if (phase === 'theory-done') {
+  if (phase === 'practice-empty') {
     return (
       <section className="rounded-[2rem] bg-white/95 p-6 shadow-card">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sea/70">
-          Hoàn thành phần lý thuyết
+          Chế độ bài tập
         </p>
         <h2 className="mt-2 font-heading text-3xl font-bold text-ink">
-          Em đã đọc xong lý thuyết bài {lesson.title}!
+          Bài này không có bài tập tính toán
         </h2>
         <p className="mt-3 text-base leading-7 text-ink/75">
-          Nếu muốn củng cố ngay, em có thể chuyển sang phần giải bài tập của bài
-          này.
+          Em có thể chuyển sang phần lý thuyết của bài này để tiếp tục học, hoặc
+          quay về lộ trình.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <button
             className="rounded-full bg-sea px-5 py-3 font-semibold text-white transition hover:bg-ink"
-            onClick={() => navigate(`/learn/${unit.id}/${lesson.id}/practice`)}
+            onClick={() => navigate(`/learn/${unit.id}/${lesson.id}/theory`)}
             type="button"
           >
-            Giải bài tập ngay
+            Ôn phần Lý thuyết
           </button>
           <button
             className="rounded-full border border-ink/10 px-5 py-3 font-semibold text-ink/70 transition hover:border-sea hover:text-sea"
@@ -209,13 +260,19 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
         earnedXp={finalState.xp}
         onBackHome={() => navigate('/')}
         onNextLesson={
-          nextLessonId
-            ? () => navigate(`/learn/${unit.id}/${nextLessonId}/practice`)
+          finalState.showNextLesson && nextLessonId
+            ? () => navigate(`/learn/${unit.id}/${nextLessonId}/${mode}`)
+            : undefined
+        }
+        onSecondaryAction={
+          finalState.secondaryActionLabel
+            ? () => navigate(`/learn/${unit.id}/${lesson.id}/${otherMode}`)
             : undefined
         }
         onReplay={resetLesson}
+        secondaryActionLabel={finalState.secondaryActionLabel}
         stars={finalState.stars}
-        totalQuestions={lesson.questions.length}
+        totalQuestions={lessonQuestions.length}
       />
     );
   }

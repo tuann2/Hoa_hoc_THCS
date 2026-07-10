@@ -15,7 +15,13 @@ import b2 from '../../content/units/b2-hidrocacbon-nhien-lieu.json';
 import b3 from '../../content/units/b3-dan-xuat-chua-oxi.json';
 import b4 from '../../content/units/b4-gluxit-protein-polime.json';
 import b5 from '../../content/units/b5-tong-hop-huu-co.json';
-import type { Lesson, PartId, Question, UnitContent } from '../types/content';
+import type {
+  Lesson,
+  PartId,
+  Question,
+  QuestionCategory,
+  UnitContent
+} from '../types/content';
 
 const units = [
   a1,
@@ -75,6 +81,13 @@ export function findQuestion(
   return findLesson(unitId, lessonId)?.questions.find(
     (question) => question.id === questionId
   );
+}
+
+export function getQuestionsByCategory(
+  lesson: Lesson,
+  category: QuestionCategory
+): Question[] {
+  return lesson.questions.filter((question) => question.category === category);
 }
 
 export function getAvailableLessonCount(unitsToCount: UnitContent[]): number {

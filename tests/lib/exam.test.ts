@@ -14,6 +14,7 @@ function createQuestion(level: QuestionLevel, id: string) {
     id,
     type: 'single-choice' as const,
     level,
+    category: 'theory' as const,
     prompt: `Question ${id}`,
     options: ['Sai', 'Đúng'],
     answer: 1,

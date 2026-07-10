@@ -2,6 +2,7 @@ export type PartId = 'inorganic' | 'organic';
 export type UnitStatus = 'available' | 'coming-soon';
 export type LessonStatus = 'available' | 'coming-soon';
 export type QuestionLevel = 'basic' | 'applied' | 'hsg';
+export type QuestionCategory = 'theory' | 'calculation';
 export type QuestionType =
   | 'single-choice'
   | 'multi-choice'
@@ -18,6 +19,7 @@ interface BaseQuestion {
   id: string;
   type: QuestionType;
   level: QuestionLevel;
+  category: QuestionCategory;
   prompt: string;
   explanation: string;
   source?: string;

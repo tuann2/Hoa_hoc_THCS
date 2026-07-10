@@ -9,11 +9,12 @@ import { getAuthStore } from '../store/auth';
 import {
   getProgressStore,
   isWrongQuestionPending,
-  type ExamAttempt
+  type ExamAttempt,
+  type LessonProgress
 } from '../store/progress';
 import type { PartId } from '../types/content';
 
-type LessonProgressMap = Record<string, { completed: boolean; stars: number }>;
+type LessonProgressMap = Record<string, LessonProgress>;
 
 function partCompletion(part: PartId, lessonProgress: LessonProgressMap) {
   const units = getUnitsByPart(part);

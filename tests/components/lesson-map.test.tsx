@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { LessonMap } from '../../src/components/LessonMap';
+import type { LessonProgress } from '../../src/store/progress';
 import type { UnitContent } from '../../src/types/content';
 
 const fixtureUnits: UnitContent[] = [
@@ -21,16 +22,48 @@ const fixtureUnits: UnitContent[] = [
         summary: '...',
         status: 'available',
         cards: [],
-        questions: []
+        questions: [
+          {
+            id: 'q1',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'theory',
+            prompt: '...',
+            options: ['A', 'B'],
+            answer: 0,
+            explanation: '...'
+          },
+          {
+            id: 'q2',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'calculation',
+            prompt: '...',
+            options: ['A', 'B'],
+            answer: 0,
+            explanation: '...'
+          }
+        ]
       },
       {
         id: 'u1-l2',
-        title: 'Bài bị khoá',
+        title: 'Bài không có bài tập',
         order: 2,
         summary: '...',
         status: 'available',
         cards: [],
-        questions: []
+        questions: [
+          {
+            id: 'q3',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'theory',
+            prompt: '...',
+            options: ['A', 'B'],
+            answer: 0,
+            explanation: '...'
+          }
+        ]
       },
       {
         id: 'u1-l3',
@@ -45,6 +78,17 @@ const fixtureUnits: UnitContent[] = [
   }
 ];
 
+const lessonProgress: Record<string, LessonProgress> = {
+  'u1-l1': {
+    theory: { completed: true, accuracy: 100, bestXp: 10 },
+    practice: { completed: false, accuracy: 0 },
+    completed: false,
+    stars: 1,
+    bestAccuracy: 50,
+    bestXp: 10
+  }
+};
+
 describe('LessonMap', () => {
   it.each([
     ['theory', '/learn/u1/u1-l1/theory'],
@@ -53,6 +97,7 @@ describe('LessonMap', () => {
     render(
       <MemoryRouter>
         <LessonMap
+          lessonProgress={lessonProgress}
           lessonStars={{ 'u1-l1': 2 }}
           mode={mode}
           unlockedLessonIds={['u1-l1']}
@@ -71,6 +116,7 @@ describe('LessonMap', () => {
     render(
       <MemoryRouter>
         <LessonMap
+          lessonProgress={{}}
           lessonStars={{}}
           mode="theory"
           unlockedLessonIds={['u1-l1']}
@@ -80,11 +126,47 @@ describe('LessonMap', () => {
     );
 
     expect(
-      screen.queryByRole('link', { name: /Bài bị khoá/ })
+      screen.queryByRole('link', { name: /Bài không có bài tập/ })
     ).not.toBeInTheDocument();
     expect(
       screen.getByText('Hoàn thành bài trước để mở khoá.')
     ).toBeInTheDocument();
     expect(screen.getByText('Nội dung đang biên soạn.')).toBeInTheDocument();
+  });
+
+  it('practice mode hiển thị ghi chú không có bài tập và dẫn sang theory', () => {
+    render(
+      <MemoryRouter>
+        <LessonMap
+          lessonProgress={{}}
+          lessonStars={{}}
+          mode="practice"
+          unlockedLessonIds={['u1-l1', 'u1-l2']}
+          units={fixtureUnits}
+        />
+      </MemoryRouter>
+    );
+
+    expect(screen.getAllByText('không có bài tập')).toHaveLength(2);
+    expect(
+      screen.getByRole('link', { name: /Bài không có bài tập/ })
+    ).toHaveAttribute('href', '/learn/u1/u1-l2/theory');
+  });
+
+  it('hiển thị chip trạng thái LT/BT theo tiến độ từng phần', () => {
+    render(
+      <MemoryRouter>
+        <LessonMap
+          lessonProgress={lessonProgress}
+          lessonStars={{ 'u1-l1': 1 }}
+          mode="theory"
+          unlockedLessonIds={['u1-l1']}
+          units={fixtureUnits}
+        />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('LT ✓')).toBeInTheDocument();
+    expect(screen.getByText('BT')).toBeInTheDocument();
   });
 });

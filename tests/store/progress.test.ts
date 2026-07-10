@@ -27,7 +27,28 @@ const fixtureUnits: UnitContent[] = [
         summary: '...',
         status: 'available',
         cards: [{ id: 'c1', heading: 'h', body: 'b' }],
-        questions: []
+        questions: [
+          {
+            id: 'u1-l1-q1',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'theory',
+            prompt: 'Câu lý thuyết',
+            options: ['Sai', 'Đúng'],
+            answer: 1,
+            explanation: '...'
+          },
+          {
+            id: 'u1-l1-q2',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'calculation',
+            prompt: 'Câu bài tập',
+            options: ['Sai', 'Đúng'],
+            answer: 1,
+            explanation: '...'
+          }
+        ]
       },
       {
         id: 'u1-l2',
@@ -36,7 +57,48 @@ const fixtureUnits: UnitContent[] = [
         summary: '...',
         status: 'available',
         cards: [{ id: 'c2', heading: 'h', body: 'b' }],
-        questions: []
+        questions: [
+          {
+            id: 'u1-l2-q1',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'theory',
+            prompt: 'Câu lý thuyết',
+            options: ['Sai', 'Đúng'],
+            answer: 1,
+            explanation: '...'
+          },
+          {
+            id: 'u1-l2-q2',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'calculation',
+            prompt: 'Câu bài tập',
+            options: ['Sai', 'Đúng'],
+            answer: 1,
+            explanation: '...'
+          }
+        ]
+      },
+      {
+        id: 'u1-l3',
+        title: 'Bài 3',
+        order: 3,
+        summary: '...',
+        status: 'available',
+        cards: [{ id: 'c3', heading: 'h', body: 'b' }],
+        questions: [
+          {
+            id: 'u1-l3-q1',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'theory',
+            prompt: 'Chỉ có lý thuyết',
+            options: ['Sai', 'Đúng'],
+            answer: 1,
+            explanation: '...'
+          }
+        ]
       }
     ]
   }
@@ -67,50 +129,144 @@ describe('progress store', () => {
     resetProgressStoreForTests();
   });
 
-  it('mở khoá bài đầu tiên và mở tiếp bài sau khi hoàn thành', () => {
+  it('chỉ mở bài sau khi hoàn thành đủ lý thuyết và bài tập', () => {
     const store = createProgressStore(fixtureUnits);
 
     expect(store.getState().unlockedLessonIds).toEqual(['u1-l1']);
 
     store
       .getState()
-      .completeLesson(
+      .completeLessonPart(
         fixtureUnits[0].lessons[0],
+        'theory',
+        100,
+        10,
         'u1-l2',
-        80,
-        80,
+        new Date('2026-07-04')
+      );
+
+    expect(store.getState().unlockedLessonIds).not.toContain('u1-l2');
+    expect(store.getState().totalXp).toBe(10);
+    expect(store.getState().lessonProgress['u1-l1']).toMatchObject({
+      theory: { completed: true, accuracy: 100, bestXp: 10 },
+      practice: { completed: false, accuracy: 0 },
+      completed: false,
+      stars: 1,
+      bestAccuracy: 50,
+      bestXp: 10
+    });
+
+    store
+      .getState()
+      .completeLessonPart(
+        fixtureUnits[0].lessons[0],
+        'practice',
+        100,
+        10,
+        'u1-l2',
         new Date('2026-07-04')
       );
 
     expect(store.getState().unlockedLessonIds).toContain('u1-l2');
-    expect(store.getState().totalXp).toBe(80);
-    expect(store.getState().lessonProgress['u1-l1'].stars).toBe(2);
+    expect(store.getState().totalXp).toBe(20);
+    expect(store.getState().lessonProgress['u1-l1']).toMatchObject({
+      theory: { completed: true, accuracy: 100, bestXp: 10 },
+      practice: { completed: true, accuracy: 100, bestXp: 10 },
+      completed: true,
+      stars: 3,
+      bestAccuracy: 100,
+      bestXp: 20
+    });
   });
 
-  it('cập nhật streak theo ngày học', () => {
+  it('cập nhật streak ở mọi lần hoàn thành một phần, không chỉ khi bài xong toàn bộ', () => {
     const store = createProgressStore(fixtureUnits);
 
     store
       .getState()
-      .completeLesson(
+      .completeLessonPart(
         fixtureUnits[0].lessons[0],
+        'theory',
+        100,
+        10,
         'u1-l2',
-        100,
-        100,
         new Date('2026-07-04')
       );
+
+    // Hoàn thành 1 phần (chưa xong cả bài) vẫn tính là "đã học hôm nay".
+    expect(store.getState().streakCurrent).toBe(1);
+    expect(store.getState().streakLongest).toBe(1);
+    expect(store.getState().lastStudyDate).toBe('2026-07-04');
+
     store
       .getState()
-      .completeLesson(
+      .completeLessonPart(
+        fixtureUnits[0].lessons[0],
+        'practice',
+        100,
+        10,
+        'u1-l2',
+        new Date('2026-07-04')
+      );
+
+    // Cùng ngày, không tăng streak thêm lần nữa.
+    expect(store.getState().streakCurrent).toBe(1);
+    expect(store.getState().lastStudyDate).toBe('2026-07-04');
+
+    store
+      .getState()
+      .completeLessonPart(
         fixtureUnits[0].lessons[1],
+        'theory',
+        100,
+        10,
         null,
-        100,
-        100,
         new Date('2026-07-05')
       );
 
+    // Ngày kế tiếp liên tục -> streak tăng.
     expect(store.getState().streakCurrent).toBe(2);
     expect(store.getState().streakLongest).toBe(2);
+
+    // Học lại một bài đã hoàn thành trước đó (không mở khoá bài mới)
+    // vẫn được tính là học hôm nay, khớp hành vi trước FEATURE-011.
+    store
+      .getState()
+      .completeLessonPart(
+        fixtureUnits[0].lessons[0],
+        'practice',
+        100,
+        10,
+        'u1-l2',
+        new Date('2026-07-06')
+      );
+
+    expect(store.getState().streakCurrent).toBe(3);
+    expect(store.getState().streakLongest).toBe(3);
+  });
+
+  it('bài không có phần bài tập tự completed qua theory', () => {
+    const store = createProgressStore(fixtureUnits);
+
+    store
+      .getState()
+      .completeLessonPart(
+        fixtureUnits[0].lessons[2],
+        'theory',
+        100,
+        10,
+        null,
+        new Date('2026-07-07')
+      );
+
+    expect(store.getState().lessonProgress['u1-l3']).toMatchObject({
+      theory: { completed: true, accuracy: 100, bestXp: 10 },
+      practice: { completed: true, accuracy: 100, bestXp: 0 },
+      completed: true,
+      stars: 3,
+      bestAccuracy: 100,
+      bestXp: 10
+    });
   });
 
   it('chịu lỗi localStorage hỏng và reset an toàn', () => {
@@ -234,6 +390,62 @@ describe('progress store', () => {
     ).toMatchObject({
       wrongQuestions: {},
       examHistory: []
+    });
+  });
+
+  it('migrate từ v3 lên v4 giữ completion, stars, unlocks và dữ liệu khác', () => {
+    const migrated = migrateProgressState(
+      {
+        totalXp: 80,
+        streakCurrent: 1,
+        streakLongest: 2,
+        lastStudyDate: '2026-07-05',
+        lastMutationAt: '2026-07-05T09:00:00.000Z',
+        lessonProgress: {
+          'u1-l1': {
+            completed: true,
+            stars: 2,
+            bestAccuracy: 80,
+            bestXp: 80,
+            completedAt: '2026-07-05T09:00:00.000Z'
+          }
+        },
+        unlockedLessonIds: ['u1-l1', 'u1-l2'],
+        wrongQuestions: {
+          [getWrongQuestionKey('u1', 'u1-l1', 'q1')]: {
+            unitId: 'u1',
+            lessonId: 'u1-l1',
+            questionId: 'q1',
+            missCount: 2,
+            lastMissedAt: '2026-07-05T08:00:00.000Z'
+          }
+        },
+        examHistory: [createExamAttempt(1)]
+      },
+      3
+    );
+
+    expect(migrated).toMatchObject({
+      totalXp: 80,
+      unlockedLessonIds: ['u1-l1', 'u1-l2'],
+      wrongQuestions: {
+        [getWrongQuestionKey('u1', 'u1-l1', 'q1')]: {
+          questionId: 'q1',
+          missCount: 2
+        }
+      },
+      examHistory: [createExamAttempt(1)],
+      lessonProgress: {
+        'u1-l1': {
+          theory: { completed: true, accuracy: 80 },
+          practice: { completed: true, accuracy: 80 },
+          completed: true,
+          stars: 2,
+          bestAccuracy: 80,
+          bestXp: 80,
+          completedAt: '2026-07-05T09:00:00.000Z'
+        }
+      }
     });
   });
 

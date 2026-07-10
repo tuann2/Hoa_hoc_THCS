@@ -1,4 +1,9 @@
-import type { Lesson, Question, UnitContent } from '../types/content';
+import type {
+  Lesson,
+  Question,
+  QuestionCategory,
+  UnitContent
+} from '../types/content';
 import { isBalancedEquation, validateLessonLevels } from './chemistry';
 
 const EXPECTED_UNIT_IDS = [
@@ -21,11 +26,23 @@ const EXPECTED_UNIT_IDS = [
   'b5-tong-hop-huu-co'
 ];
 
+const QUESTION_CATEGORIES: QuestionCategory[] = ['theory', 'calculation'];
+
 function validateQuestion(question: Question, prefix: string): string[] {
   const errors: string[] = [];
 
   if (!question.explanation.trim()) {
     errors.push(`${prefix}: thiếu lời giải chi tiết.`);
+  }
+
+  if (!QUESTION_CATEGORIES.includes(question.category)) {
+    errors.push(`${prefix}: category phải là "theory" hoặc "calculation".`);
+  }
+
+  if (question.type === 'balance' && question.category === 'calculation') {
+    errors.push(
+      `${prefix}: câu balance phải có category "theory", không được là "calculation".`
+    );
   }
 
   switch (question.type) {

@@ -104,6 +104,7 @@ export function HomeRoute() {
 
       <LessonMap
         lessonStars={lessonStars}
+        lessonProgress={lessonProgress}
         mode={activeMode}
         unlockedLessonIds={unlockedLessonIds}
         units={partUnits}

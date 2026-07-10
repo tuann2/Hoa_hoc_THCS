@@ -113,6 +113,12 @@ npm run typecheck
 - Câu HSG: `"source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"`.
 - Mọi bài toán số liệu phải GIẢI LẠI độc lập trước khi commit.
 - Công thức: text đơn giản (CH2=CH2, CH≡CH), không dùng LaTeX.
+- Mọi câu hỏi bắt buộc có `"category": "theory" | "calculation"`
+  (FEATURE-011): `theory` = câu định tính (khái niệm, tính chất, nhận
+  biết, chuỗi phản ứng, cân bằng phương trình — mọi câu `balance` đều
+  là `theory`); `calculation` = bài toán số liệu (mol, gam, lít, nồng
+  độ, hiệu suất...). Dùng `scripts/tag-question-category.ts` để gợi ý
+  tag cho câu mới, rồi rà soát lại tay trước khi commit.
 
 ## High-risk changes requiring dual-agent review
 

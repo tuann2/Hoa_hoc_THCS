@@ -5,20 +5,29 @@ import { getAuthStore } from '../store/auth';
 import {
   PROGRESS_VERSION,
   applyProgressSnapshot,
+  buildLessonProgressEntry,
   consumeProgressMutationSource,
   getProgressSnapshot,
   getProgressStore,
+  migrateProgressState,
   type ExamAttempt,
+  type LessonPartProgress,
   type LessonProgress,
+  normalizeLessonProgressEntry,
   type ProgressSnapshot,
   type WrongQuestionEntry
 } from '../store/progress';
-import type { UnitContent } from '../types/content';
+import type { Lesson, UnitContent } from '../types/content';
 
 let pushTimer: number | null = null;
 let lastScheduledSnapshot: ProgressSnapshot | null = null;
 let hasSubscribedToProgress = false;
 let lastSyncedUserId: string | null = null;
+const lessonById = new Map(
+  getAllUnits()
+    .flatMap((unit) => unit.lessons)
+    .map((lesson) => [lesson.id, lesson] as const)
+);
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
@@ -40,36 +49,56 @@ function clampStars(value: number): 0 | 1 | 2 | 3 {
   return 0;
 }
 
-function normalizeLessonProgress(value: unknown): LessonProgress | null {
-  if (!isRecord(value)) {
+function findLessonById(lessonId: string): Lesson | undefined {
+  return lessonById.get(lessonId);
+}
+
+function normalizeLessonProgress(
+  lessonId: string,
+  value: unknown
+): LessonProgress | null {
+  const normalized = normalizeLessonProgressEntry(value);
+
+  if (!normalized) {
     return null;
   }
 
-  const bestAccuracy =
-    typeof value.bestAccuracy === 'number' &&
-    Number.isFinite(value.bestAccuracy)
-      ? Math.max(0, value.bestAccuracy)
-      : null;
-  const bestXp =
-    typeof value.bestXp === 'number' && Number.isFinite(value.bestXp)
-      ? Math.max(0, value.bestXp)
-      : null;
+  const lesson = findLessonById(lessonId);
 
-  if (bestAccuracy === null || bestXp === null) {
-    return null;
+  if (!lesson) {
+    return {
+      ...normalized,
+      theory: structuredClone(normalized.theory),
+      practice: structuredClone(normalized.practice)
+    };
   }
 
+  const completedAt =
+    normalized.completed || normalized.completedAt
+      ? normalized.completedAt
+      : undefined;
+
+  return buildLessonProgressEntry(
+    lesson,
+    normalized.theory,
+    normalized.practice,
+    normalized.bestXp,
+    completedAt
+  );
+}
+
+function mergeLessonPartProgress(
+  left?: LessonPartProgress,
+  right?: LessonPartProgress
+): LessonPartProgress {
   return {
-    completed: value.completed === true,
-    stars: clampStars(
-      typeof value.stars === 'number' && Number.isFinite(value.stars)
-        ? value.stars
-        : 0
-    ),
-    bestAccuracy,
-    bestXp,
-    completedAt:
-      typeof value.completedAt === 'string' ? value.completedAt : undefined
+    completed: left?.completed === true || right?.completed === true,
+    accuracy: Math.max(left?.accuracy ?? 0, right?.accuracy ?? 0),
+    ...(left?.bestXp !== undefined || right?.bestXp !== undefined
+      ? {
+          bestXp: Math.max(left?.bestXp ?? 0, right?.bestXp ?? 0)
+        }
+      : {})
   };
 }
 
@@ -247,7 +276,7 @@ export function normalizeProgressSnapshot(
     Object.entries(value.lessonProgress)
       .map(([lessonId, progress]) => [
         lessonId,
-        normalizeLessonProgress(progress)
+        normalizeLessonProgress(lessonId, progress)
       ])
       .filter((entry): entry is [string, LessonProgress] => entry[1] !== null)
   );
@@ -385,10 +414,43 @@ export function mergeProgress(
     Array.from(lessonIds).map((lessonId) => {
       const localLesson = local.lessonProgress[lessonId];
       const serverLesson = server.lessonProgress[lessonId];
+      const lesson = findLessonById(lessonId);
+      const theory = mergeLessonPartProgress(
+        localLesson?.theory,
+        serverLesson?.theory
+      );
+      const practice = mergeLessonPartProgress(
+        localLesson?.practice,
+        serverLesson?.practice
+      );
+      const bestXp = Math.max(
+        localLesson?.bestXp ?? 0,
+        serverLesson?.bestXp ?? 0,
+        (theory.bestXp ?? 0) + (practice.bestXp ?? 0)
+      );
+      const completedAt = latestCompletedAt(
+        localLesson?.completedAt,
+        serverLesson?.completedAt
+      );
+
+      if (lesson) {
+        return [
+          lessonId,
+          buildLessonProgressEntry(
+            lesson,
+            theory,
+            practice,
+            bestXp,
+            completedAt
+          )
+        ];
+      }
 
       return [
         lessonId,
         {
+          theory,
+          practice,
           completed:
             localLesson?.completed === true || serverLesson?.completed === true,
           stars: clampStars(
@@ -396,13 +458,12 @@ export function mergeProgress(
           ),
           bestAccuracy: Math.max(
             localLesson?.bestAccuracy ?? 0,
-            serverLesson?.bestAccuracy ?? 0
+            serverLesson?.bestAccuracy ?? 0,
+            theory.accuracy,
+            practice.accuracy
           ),
-          bestXp: Math.max(localLesson?.bestXp ?? 0, serverLesson?.bestXp ?? 0),
-          completedAt: latestCompletedAt(
-            localLesson?.completedAt,
-            serverLesson?.completedAt
-          )
+          bestXp,
+          completedAt
         } satisfies LessonProgress
       ];
     })
@@ -496,7 +557,12 @@ export async function pullProgress(
     return null;
   }
 
-  const snapshot = normalizeProgressSnapshot(data.data);
+  const rawData: unknown = data.data;
+  const migratedData: unknown =
+    typeof data.version === 'number'
+      ? migrateProgressState(rawData, data.version)
+      : rawData;
+  const snapshot = normalizeProgressSnapshot(migratedData);
 
   if (!snapshot) {
     return null;
@@ -568,7 +634,7 @@ export function subscribeProgressPush(units: UnitContent[]) {
     const source = consumeProgressMutationSource();
 
     if (
-      source !== 'completeLesson' &&
+      source !== 'completeLessonPart' &&
       source !== 'recordWrongAnswer' &&
       source !== 'clearWrongAnswer' &&
       source !== 'recordExamAttempt' &&

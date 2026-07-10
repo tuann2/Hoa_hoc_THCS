@@ -25,6 +25,7 @@ describe('Chem renderer và tiện ích hoá học', () => {
         id: 'q1',
         type: 'balance',
         level: 'basic',
+        category: 'theory',
         prompt: '...',
         explanation: '...',
         left: ['H2', 'O2'],
