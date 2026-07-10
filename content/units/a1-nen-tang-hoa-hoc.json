@@ -347,17 +347,17 @@
         {
           "id": "a1-l3-c1",
           "heading": "Đơn chất và hợp chất",
-          "body": "Đơn chất do một nguyên tố hoá học tạo nên. Ví dụ kim loại: Fe, Cu, Al; phi kim: O2, N2, Cl2, C, S.\nHợp chất do hai hay nhiều nguyên tố hoá học tạo nên. Ví dụ: H2O, CO2, NaCl, H2SO4."
+          "body": "Đơn chất do một nguyên tố hoá học tạo nên. Ví dụ kim loại: Fe, Cu, Al; phi kim: O2, N2, Cl2, C, S.\nHợp chất do hai hay nhiều nguyên tố hoá học tạo nên. Ví dụ: H2O, CO2, NaCl, H2SO4.\nNâng cao: Một nguyên tố hoá học có thể tạo ra nhiều đơn chất khác nhau, gọi là các dạng thù hình. Các dạng thù hình cùng gồm một loại nguyên tố nhưng cách sắp xếp hoặc số nguyên tử trong hạt khác nhau nên tính chất vật lí có thể rất khác. Ví dụ kim cương và than chì đều là đơn chất cacbon; O2 và O3 (ozon) đều là đơn chất oxi. Vì vậy khi phân biệt đơn chất và hợp chất, không chỉ nhìn vào tên gọi khác nhau mà phải xét xem chất đó do mấy nguyên tố tạo nên."
         },
         {
           "id": "a1-l3-c2",
           "heading": "Phân tử",
-          "body": "Phân tử là hạt đại diện cho chất, gồm một số nguyên tử liên kết với nhau, thể hiện đầy đủ tính chất hoá học của chất.\nPhân tử khối bằng tổng nguyên tử khối của các nguyên tử có trong phân tử."
+          "body": "Phân tử là hạt đại diện cho chất, gồm một số nguyên tử liên kết với nhau, thể hiện đầy đủ tính chất hoá học của chất.\nPhân tử khối bằng tổng nguyên tử khối của các nguyên tử có trong phân tử.\nNâng cao: Phân tử của đơn chất có thể gồm nhiều nguyên tử của cùng một nguyên tố, không nhất thiết chỉ 1 nguyên tử hoặc 2 nguyên tử. Ngoài các phân tử quen thuộc như O2, N2, Cl2, còn có P4 (phân tử photpho trắng) và S8 (phân tử lưu huỳnh). Vì vậy công thức có nhiều nguyên tử chưa đủ để kết luận là hợp chất; hợp chất phải có từ hai nguyên tố khác nhau trở lên."
         },
         {
           "id": "a1-l3-c3",
           "heading": "Công thức hoá học và ý nghĩa",
-          "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98."
+          "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98.\nNâng cao: Với oxit dạng RxOy, có thể dùng chỉ số để kiểm tra hoá trị của R trong chính oxit đó. Oxi có hoá trị II nên theo quy tắc hoá trị: hoá trị(R) nhân x = II nhân y = 2y, suy ra hoá trị(R) = 2y/x. Kết quả này phải hợp lí với nguyên tố tìm được từ phân tử khối. Ví dụ với công thức R2O3, ta suy ra hoá trị R = 2 x 3 / 2 = III; nếu từ phân tử khối của oxit tính ra nguyên tử khối R = 56 thì đối chiếu được Fe, và Fe có thể có hoá trị III trong Fe2O3. Đây là phép kiểm tra chéo để phát hiện nhầm chỉ số hoặc tính sai nguyên tử khối; lưu ý hoá trị được suy ra từ công thức đang xét, không phải kết luận nguyên tố đó chỉ có một hoá trị."
         }
       ],
       "questions": [
