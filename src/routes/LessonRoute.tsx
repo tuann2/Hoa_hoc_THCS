@@ -3,7 +3,11 @@ import { LessonPlayer } from '../components/LessonPlayer';
 import { findLesson, findUnit, getAllUnits } from '../lib/content';
 import { getProgressStore } from '../store/progress';
 
-export function LessonRoute() {
+interface LessonRouteProps {
+  mode: 'theory' | 'practice';
+}
+
+export function LessonRoute({ mode }: LessonRouteProps) {
   const { lessonId = '', unitId = '' } = useParams();
   const units = getAllUnits();
   const unit = findUnit(unitId);
@@ -66,5 +70,13 @@ export function LessonRoute() {
     );
   }
 
-  return <LessonPlayer lesson={lesson} unit={unit} units={units} />;
+  return (
+    <LessonPlayer
+      key={`${unit.id}:${lesson.id}:${mode}`}
+      lesson={lesson}
+      mode={mode}
+      unit={unit}
+      units={units}
+    />
+  );
 }

@@ -47,7 +47,7 @@ export function TheoryCard({
           onClick={onNext}
           type="button"
         >
-          {index + 1 === total ? 'Bắt đầu luyện tập' : 'Thẻ tiếp theo'}
+          {index + 1 === total ? 'Hoàn thành lý thuyết' : 'Thẻ tiếp theo'}
         </button>
       </div>
     </section>

@@ -105,7 +105,14 @@ export default function App() {
             <Route path="/" element={<HomeRoute />} />
             <Route path="/auth" element={<AuthRoute />} />
             <Route path="/exam" element={<ExamRoute />} />
-            <Route path="/learn/:unitId/:lessonId" element={<LessonRoute />} />
+            <Route
+              path="/learn/:unitId/:lessonId/theory"
+              element={<LessonRoute mode="theory" />}
+            />
+            <Route
+              path="/learn/:unitId/:lessonId/practice"
+              element={<LessonRoute mode="practice" />}
+            />
             <Route path="/review" element={<ReviewRoute />} />
             <Route path="/profile" element={<ProfileRoute />} />
           </Routes>
