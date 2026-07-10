@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import type { LessonProgress } from '../store/progress';
 import type { UnitContent } from '../types/content';
 
 interface LessonMapProps {
   units: UnitContent[];
   unlockedLessonIds: string[];
   lessonStars: Record<string, number>;
+  lessonProgress: Record<string, LessonProgress>;
   mode: 'theory' | 'practice';
 }
 
@@ -16,10 +18,30 @@ function LessonBadge({ stars }: { stars?: number }) {
   return <span className="text-xs font-semibold text-amber-600">{stars}★</span>;
 }
 
+function LessonPartChip({
+  completed,
+  label
+}: {
+  completed: boolean;
+  label: string;
+}) {
+  return (
+    <span
+      className={`rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] ${
+        completed ? 'bg-lime/15 text-lime' : 'bg-ink/8 text-ink/45'
+      }`}
+    >
+      {label}
+      {completed ? ' ✓' : ''}
+    </span>
+  );
+}
+
 export function LessonMap({
   units,
   unlockedLessonIds,
   lessonStars,
+  lessonProgress,
   mode
 }: LessonMapProps) {
   return (
@@ -58,14 +80,37 @@ export function LessonMap({
               const unlocked = unlockedLessonIds.includes(lesson.id);
               const available =
                 unit.status === 'available' && lesson.status === 'available';
+              const hasPracticeQuestions = lesson.questions.some(
+                (question) => question.category === 'calculation'
+              );
+              const progress = lessonProgress[lesson.id];
+              const theoryCompleted = progress?.theory.completed === true;
+              const practiceCompleted =
+                progress?.practice.completed === true || !hasPracticeQuestions;
+              const targetMode =
+                mode === 'practice' && !hasPracticeQuestions ? 'theory' : mode;
               const sharedClassName =
                 'flex items-center justify-between gap-4 rounded-3xl border px-4 py-4 transition';
+              const badges = (
+                <div className="flex flex-col items-end gap-2">
+                  <div className="flex flex-wrap items-center justify-end gap-2">
+                    <LessonPartChip completed={theoryCompleted} label="LT" />
+                    <LessonPartChip completed={practiceCompleted} label="BT" />
+                    <LessonBadge stars={lessonStars[lesson.id]} />
+                  </div>
+                  {mode === 'practice' && !hasPracticeQuestions ? (
+                    <span className="text-xs text-ink/45">
+                      không có bài tập
+                    </span>
+                  ) : null}
+                </div>
+              );
 
               return available && unlocked ? (
                 <Link
                   key={lesson.id}
                   className={`${sharedClassName} border-sea/15 bg-mist hover:border-sea hover:bg-white`}
-                  to={`/learn/${unit.id}/${lesson.id}/${mode}`}
+                  to={`/learn/${unit.id}/${lesson.id}/${targetMode}`}
                 >
                   <div className="flex items-center gap-4">
                     <span className="flex h-11 w-11 items-center justify-center rounded-full bg-sea font-semibold text-white">
@@ -76,7 +121,7 @@ export function LessonMap({
                       <p className="text-sm text-ink/55">{lesson.summary}</p>
                     </div>
                   </div>
-                  <LessonBadge stars={lessonStars[lesson.id]} />
+                  {badges}
                 </Link>
               ) : (
                 <div
@@ -106,7 +151,7 @@ export function LessonMap({
                       </p>
                     </div>
                   </div>
-                  <LessonBadge stars={lessonStars[lesson.id]} />
+                  {badges}
                 </div>
               );
             })}

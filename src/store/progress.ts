@@ -5,13 +5,25 @@ import {
   type StorageValue
 } from 'zustand/middleware';
 import type { ExamBreakdown, ExamScope } from '../lib/exam';
+import { getQuestionsByCategory } from '../lib/content';
 import type { Lesson, UnitContent } from '../types/content';
 import { calculateStars } from '../lib/chemistry';
 
 export const PROGRESS_STORAGE_KEY = 'hhthcs-progress';
-export const PROGRESS_VERSION = 3;
+export const PROGRESS_VERSION = 4;
+
+export type LessonMode = 'theory' | 'practice';
+export type LessonProgressPartKey = LessonMode;
+
+export interface LessonPartProgress {
+  completed: boolean;
+  accuracy: number;
+  bestXp?: number;
+}
 
 export interface LessonProgress {
+  theory: LessonPartProgress;
+  practice: LessonPartProgress;
   completed: boolean;
   stars: 0 | 1 | 2 | 3;
   bestAccuracy: number;
@@ -61,11 +73,12 @@ export interface ProgressState {
   unlockedLessonIds: string[];
   wrongQuestions: Record<string, WrongQuestionEntry>;
   examHistory: ExamAttempt[];
-  completeLesson: (
+  completeLessonPart: (
     lesson: Lesson,
-    nextLessonId: string | null,
+    mode: LessonMode,
     accuracy: number,
     earnedXp: number,
+    nextLessonId: string | null,
     date?: Date
   ) => void;
   recordWrongAnswer: (
@@ -86,7 +99,7 @@ export interface ProgressState {
 }
 
 type ProgressMutationSource =
-  | 'completeLesson'
+  | 'completeLessonPart'
   | 'recordWrongAnswer'
   | 'clearWrongAnswer'
   | 'recordExamAttempt'
@@ -107,8 +120,37 @@ const EMPTY_PROGRESS: ProgressSnapshot = {
 
 let lastMutationSource: ProgressMutationSource | null = null;
 
+const EMPTY_LESSON_PART_PROGRESS: LessonPartProgress = {
+  completed: false,
+  accuracy: 0
+};
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
+}
+
+function clampAccuracy(value: number): number {
+  return Math.min(100, Math.max(0, Math.round(value)));
+}
+
+function clampXp(value: number): number {
+  return Math.max(0, Math.round(value));
+}
+
+function clampStars(value: number): 0 | 1 | 2 | 3 {
+  if (value >= 3) {
+    return 3;
+  }
+
+  if (value >= 2) {
+    return 2;
+  }
+
+  if (value >= 1) {
+    return 1;
+  }
+
+  return 0;
 }
 
 function toDateKey(date: Date): string {
@@ -208,6 +250,212 @@ export function isWrongQuestionPending(entry: WrongQuestionEntry): boolean {
   return !entry.resolvedAt || entry.lastMissedAt > entry.resolvedAt;
 }
 
+function questionCategoryForMode(mode: LessonMode) {
+  return mode === 'theory' ? 'theory' : 'calculation';
+}
+
+function normalizeLessonPartProgress(
+  value: unknown
+): LessonPartProgress | null {
+  if (!isRecord(value)) {
+    return null;
+  }
+
+  const accuracy =
+    typeof value.accuracy === 'number' && Number.isFinite(value.accuracy)
+      ? clampAccuracy(value.accuracy)
+      : null;
+  const bestXp =
+    typeof value.bestXp === 'number' && Number.isFinite(value.bestXp)
+      ? clampXp(value.bestXp)
+      : undefined;
+
+  if (accuracy === null) {
+    return null;
+  }
+
+  return {
+    completed: value.completed === true,
+    accuracy,
+    ...(bestXp === undefined ? {} : { bestXp })
+  };
+}
+
+function cloneLessonPartProgress(
+  part: LessonPartProgress | undefined
+): LessonPartProgress {
+  if (!part) {
+    return { ...EMPTY_LESSON_PART_PROGRESS };
+  }
+
+  return part.bestXp === undefined
+    ? {
+        completed: part.completed,
+        accuracy: part.accuracy
+      }
+    : {
+        completed: part.completed,
+        accuracy: part.accuracy,
+        bestXp: part.bestXp
+      };
+}
+
+function migrateLegacyLessonProgress(value: unknown): LessonProgress | null {
+  if (!isRecord(value)) {
+    return null;
+  }
+
+  const bestAccuracySource =
+    typeof value.bestAccuracy === 'number' &&
+    Number.isFinite(value.bestAccuracy)
+      ? value.bestAccuracy
+      : typeof value.accuracy === 'number' && Number.isFinite(value.accuracy)
+        ? value.accuracy
+        : 0;
+  const bestAccuracy = clampAccuracy(bestAccuracySource);
+  const bestXp =
+    typeof value.bestXp === 'number' && Number.isFinite(value.bestXp)
+      ? clampXp(value.bestXp)
+      : 0;
+
+  return {
+    theory: {
+      completed: value.completed === true,
+      accuracy: bestAccuracy
+    },
+    practice: {
+      completed: value.completed === true,
+      accuracy: bestAccuracy
+    },
+    completed: value.completed === true,
+    stars: clampStars(
+      typeof value.stars === 'number' && Number.isFinite(value.stars)
+        ? value.stars
+        : calculateStars(bestAccuracy)
+    ),
+    bestAccuracy,
+    bestXp,
+    completedAt:
+      typeof value.completedAt === 'string' ? value.completedAt : undefined
+  };
+}
+
+export function normalizeLessonProgressEntry(
+  value: unknown
+): LessonProgress | null {
+  if (!isRecord(value)) {
+    return null;
+  }
+
+  if (!('theory' in value) || !('practice' in value)) {
+    return migrateLegacyLessonProgress(value);
+  }
+
+  const theory = normalizeLessonPartProgress(value.theory);
+  const practice = normalizeLessonPartProgress(value.practice);
+
+  if (!theory || !practice) {
+    return null;
+  }
+
+  const bestAccuracy =
+    typeof value.bestAccuracy === 'number' &&
+    Number.isFinite(value.bestAccuracy)
+      ? clampAccuracy(value.bestAccuracy)
+      : clampAccuracy(Math.max(theory.accuracy, practice.accuracy));
+  const bestXp =
+    typeof value.bestXp === 'number' && Number.isFinite(value.bestXp)
+      ? clampXp(value.bestXp)
+      : (theory.bestXp ?? 0) + (practice.bestXp ?? 0);
+
+  return {
+    theory,
+    practice,
+    completed:
+      value.completed === true || (theory.completed && practice.completed),
+    stars: clampStars(
+      typeof value.stars === 'number' && Number.isFinite(value.stars)
+        ? value.stars
+        : calculateStars(bestAccuracy)
+    ),
+    bestAccuracy,
+    bestXp,
+    completedAt:
+      typeof value.completedAt === 'string' ? value.completedAt : undefined
+  };
+}
+
+function getEffectiveLessonPartProgress(
+  lesson: Lesson,
+  mode: LessonMode,
+  part: LessonPartProgress | undefined
+): LessonPartProgress {
+  const questionCount = getQuestionsByCategory(
+    lesson,
+    questionCategoryForMode(mode)
+  ).length;
+
+  if (questionCount === 0) {
+    return {
+      completed: true,
+      accuracy: 100,
+      bestXp: part?.bestXp ?? 0
+    };
+  }
+
+  return cloneLessonPartProgress(part);
+}
+
+function calculateCombinedLessonAccuracy(
+  lesson: Lesson,
+  theory: LessonPartProgress,
+  practice: LessonPartProgress
+) {
+  const theoryCount = getQuestionsByCategory(lesson, 'theory').length;
+  const practiceCount = getQuestionsByCategory(lesson, 'calculation').length;
+  const totalQuestions = theoryCount + practiceCount;
+
+  if (totalQuestions === 0) {
+    return 100;
+  }
+
+  const weightedAccuracy =
+    (theory.accuracy * theoryCount + practice.accuracy * practiceCount) /
+    totalQuestions;
+
+  return clampAccuracy(weightedAccuracy);
+}
+
+export function buildLessonProgressEntry(
+  lesson: Lesson,
+  theoryInput: LessonPartProgress | undefined,
+  practiceInput: LessonPartProgress | undefined,
+  bestXp: number,
+  completedAt?: string
+): LessonProgress {
+  const theory = getEffectiveLessonPartProgress(lesson, 'theory', theoryInput);
+  const practice = getEffectiveLessonPartProgress(
+    lesson,
+    'practice',
+    practiceInput
+  );
+  const bestAccuracy = calculateCombinedLessonAccuracy(
+    lesson,
+    theory,
+    practice
+  );
+
+  return {
+    theory,
+    practice,
+    completed: theory.completed && practice.completed,
+    stars: calculateStars(bestAccuracy),
+    bestAccuracy,
+    bestXp: clampXp(bestXp),
+    completedAt
+  };
+}
+
 export function migrateProgressState(
   persistedState: unknown,
   version: number
@@ -236,6 +484,24 @@ export function migrateProgressState(
     };
   }
 
+  if (version < 4) {
+    nextState = {
+      ...nextState,
+      lessonProgress: isRecord(nextState.lessonProgress)
+        ? Object.fromEntries(
+            Object.entries(nextState.lessonProgress)
+              .map(([lessonId, progress]) => [
+                lessonId,
+                migrateLegacyLessonProgress(progress)
+              ])
+              .filter(
+                (entry): entry is [string, LessonProgress] => entry[1] !== null
+              )
+          )
+        : {}
+    };
+  }
+
   return nextState;
 }
 
@@ -251,7 +517,11 @@ export function cloneProgressSnapshot(
     lessonProgress: Object.fromEntries(
       Object.entries(snapshot.lessonProgress).map(([lessonId, progress]) => [
         lessonId,
-        { ...progress }
+        {
+          ...progress,
+          theory: cloneLessonPartProgress(progress.theory),
+          practice: cloneLessonPartProgress(progress.practice)
+        }
       ])
     ),
     unlockedLessonIds: [...snapshot.unlockedLessonIds],
@@ -336,22 +606,69 @@ export const createProgressStore = (units: UnitContent[]) =>
     persist(
       (set) => ({
         ...createInitialProgressState(units),
-        completeLesson: (
+        completeLessonPart: (
           lesson,
-          nextLessonId,
+          mode,
           accuracy,
           earnedXp,
+          nextLessonId,
           date = new Date()
         ) =>
           set((state) => {
-            lastMutationSource = 'completeLesson';
+            lastMutationSource = 'completeLessonPart';
             const current = state.lessonProgress[lesson.id];
-            const stars = calculateStars(accuracy);
-            const bestAccuracy = Math.max(current?.bestAccuracy ?? 0, accuracy);
-            const bestXp = Math.max(current?.bestXp ?? 0, earnedXp);
-            const xpDelta = bestXp - (current?.bestXp ?? 0);
+            const theoryCurrent = getEffectiveLessonPartProgress(
+              lesson,
+              'theory',
+              current?.theory
+            );
+            const practiceCurrent = getEffectiveLessonPartProgress(
+              lesson,
+              'practice',
+              current?.practice
+            );
+            const currentEntry = buildLessonProgressEntry(
+              lesson,
+              theoryCurrent,
+              practiceCurrent,
+              current?.bestXp ?? 0,
+              current?.completedAt
+            );
+            const partKey = mode;
+            const currentPart =
+              partKey === 'theory' ? theoryCurrent : practiceCurrent;
+            const nextPart: LessonPartProgress = {
+              completed: true,
+              accuracy: Math.max(currentPart.accuracy, clampAccuracy(accuracy)),
+              bestXp: Math.max(currentPart.bestXp ?? 0, clampXp(earnedXp))
+            };
+            const nextTheory = partKey === 'theory' ? nextPart : theoryCurrent;
+            const nextPractice =
+              partKey === 'practice' ? nextPart : practiceCurrent;
+            const nextBestXp = Math.max(
+              current?.bestXp ?? 0,
+              (nextTheory.bestXp ?? 0) + (nextPractice.bestXp ?? 0)
+            );
+            const completedAt = currentEntry.completed
+              ? currentEntry.completedAt
+              : undefined;
+            const nextEntry = buildLessonProgressEntry(
+              lesson,
+              nextTheory,
+              nextPractice,
+              nextBestXp,
+              completedAt
+            );
+            const didCompleteLesson =
+              !currentEntry.completed && nextEntry.completed;
+            const finalizedEntry = {
+              ...nextEntry,
+              completedAt: didCompleteLesson
+                ? date.toISOString()
+                : nextEntry.completedAt
+            };
+            const xpDelta = finalizedEntry.bestXp - (current?.bestXp ?? 0);
             const studyDate = toDateKey(date);
-
             let streakCurrent = state.streakCurrent;
 
             if (state.lastStudyDate !== studyDate) {
@@ -362,28 +679,26 @@ export const createProgressStore = (units: UnitContent[]) =>
               }
             }
 
+            const streakLongest = Math.max(state.streakLongest, streakCurrent);
+            const lastStudyDate = studyDate;
+
             return {
               ...state,
               totalXp: state.totalXp + xpDelta,
               streakCurrent,
-              streakLongest: Math.max(state.streakLongest, streakCurrent),
-              lastStudyDate: studyDate,
+              streakLongest,
+              lastStudyDate,
               lastMutationAt: date.toISOString(),
               lessonProgress: {
                 ...state.lessonProgress,
-                [lesson.id]: {
-                  completed: true,
-                  stars: Math.max(current?.stars ?? 0, stars) as 0 | 1 | 2 | 3,
-                  bestAccuracy,
-                  bestXp,
-                  completedAt: date.toISOString()
-                }
+                [lesson.id]: finalizedEntry
               },
-              unlockedLessonIds: nextLessonId
-                ? Array.from(
-                    new Set([...state.unlockedLessonIds, nextLessonId])
-                  )
-                : state.unlockedLessonIds
+              unlockedLessonIds:
+                didCompleteLesson && nextLessonId
+                  ? Array.from(
+                      new Set([...state.unlockedLessonIds, nextLessonId])
+                    )
+                  : state.unlockedLessonIds
             };
           }),
         recordWrongAnswer: (

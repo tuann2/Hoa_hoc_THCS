@@ -8,6 +8,8 @@ interface ResultScreenProps {
   stars: 0 | 1 | 2 | 3;
   onReplay: () => void;
   onNextLesson?: () => void;
+  onSecondaryAction?: () => void;
+  secondaryActionLabel?: string;
   onBackHome: () => void;
 }
 
@@ -21,6 +23,8 @@ export function ResultScreen({
   stars,
   onReplay,
   onNextLesson,
+  onSecondaryAction,
+  secondaryActionLabel,
   onBackHome
 }: ResultScreenProps) {
   return (
@@ -71,6 +75,15 @@ export function ResultScreen({
             type="button"
           >
             Sang bài tiếp theo
+          </button>
+        ) : null}
+        {onSecondaryAction && secondaryActionLabel ? (
+          <button
+            className="rounded-full border border-sea/20 px-5 py-3 font-semibold text-sea transition hover:border-sea hover:text-ink"
+            onClick={onSecondaryAction}
+            type="button"
+          >
+            {secondaryActionLabel}
           </button>
         ) : null}
         <button

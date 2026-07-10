@@ -38,6 +38,15 @@ const {
               options: ['Sai', 'Đúng'],
               answer: 1,
               explanation: '...'
+            },
+            {
+              id: 'q1b',
+              type: 'fill-blank',
+              level: 'applied',
+              category: 'calculation',
+              prompt: 'Bài tập tính toán',
+              answer: 'H2',
+              explanation: '...'
             }
           ]
         },
@@ -84,7 +93,13 @@ vi.mock('../../src/lib/content', () => ({
   findLesson: (unitId: string, lessonId: string) =>
     fixtureUnits
       .find((unit) => unit.id === unitId)
-      ?.lessons.find((lesson) => lesson.id === lessonId)
+      ?.lessons.find((lesson) => lesson.id === lessonId),
+  getQuestionsByCategory: (
+    lesson: {
+      questions: Array<{ category: 'theory' | 'calculation' }>;
+    },
+    category: 'theory' | 'calculation'
+  ) => lesson.questions.filter((question) => question.category === category)
 }));
 
 vi.mock('../../src/lib/progressSync', () => ({
@@ -150,7 +165,7 @@ describe('Lesson routes', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Câu hỏi luyện tập')).toBeInTheDocument();
+    expect(screen.getByText('Bài tập tính toán')).toBeInTheDocument();
     expect(screen.queryByText('Ghi nhớ')).not.toBeInTheDocument();
   });
 

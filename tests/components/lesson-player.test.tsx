@@ -50,7 +50,7 @@ const fixtureUnits: UnitContent[] = [
       },
       {
         id: 'u1-l2',
-        title: 'Bài tiếp theo',
+        title: 'Bài chỉ có lý thuyết',
         order: 2,
         summary: '...',
         status: 'available',
@@ -58,6 +58,26 @@ const fixtureUnits: UnitContent[] = [
         questions: [
           {
             id: 'q3',
+            type: 'single-choice',
+            level: 'basic',
+            category: 'theory',
+            prompt: 'Câu chỉ có lý thuyết',
+            options: ['A', 'B'],
+            answer: 0,
+            explanation: '...'
+          }
+        ]
+      },
+      {
+        id: 'u1-l3',
+        title: 'Bài tiếp theo',
+        order: 3,
+        summary: '...',
+        status: 'available',
+        cards: [{ id: 'c3', heading: '...', body: '...' }],
+        questions: [
+          {
+            id: 'q4',
             type: 'single-choice',
             level: 'basic',
             category: 'theory',
@@ -72,105 +92,68 @@ const fixtureUnits: UnitContent[] = [
   }
 ];
 
+function renderLessonPlayer(
+  lessonIndex: number,
+  mode: 'theory' | 'practice',
+  initialEntry = `/learn/u1/${fixtureUnits[0].lessons[lessonIndex].id}/${mode}`
+) {
+  const lesson = fixtureUnits[0].lessons[lessonIndex];
+
+  return render(
+    <MemoryRouter initialEntries={[initialEntry]}>
+      <Routes>
+        <Route
+          element={
+            <LessonPlayer
+              key={`${lesson.id}-theory`}
+              lesson={lesson}
+              mode="theory"
+              unit={fixtureUnits[0]}
+              units={fixtureUnits}
+            />
+          }
+          path={`/learn/u1/${lesson.id}/theory`}
+        />
+        <Route
+          element={
+            <LessonPlayer
+              key={`${lesson.id}-practice`}
+              lesson={lesson}
+              mode="practice"
+              unit={fixtureUnits[0]}
+              units={fixtureUnits}
+            />
+          }
+          path={`/learn/u1/${lesson.id}/practice`}
+        />
+        <Route
+          element={<div>Bài tiếp theo</div>}
+          path="/learn/u1/u1-l3/practice"
+        />
+      </Routes>
+    </MemoryRouter>
+  );
+}
+
 describe('LessonPlayer', () => {
   beforeEach(() => {
     localStorage.clear();
     resetProgressStoreForTests();
   });
 
-  it('mode theory dừng ở theory-done và không tính hoàn thành bài', async () => {
+  it('mode theory đi qua thẻ rồi chỉ hỏi câu theory và cập nhật part theory', async () => {
     const user = userEvent.setup();
 
-    render(
-      <MemoryRouter initialEntries={['/learn/u1/u1-l1/theory']}>
-        <Routes>
-          <Route
-            element={
-              <LessonPlayer
-                key="theory"
-                lesson={fixtureUnits[0].lessons[0]}
-                mode="theory"
-                unit={fixtureUnits[0]}
-                units={fixtureUnits}
-              />
-            }
-            path="/learn/u1/u1-l1/theory"
-          />
-          <Route
-            element={
-              <LessonPlayer
-                key="practice"
-                lesson={fixtureUnits[0].lessons[0]}
-                mode="practice"
-                unit={fixtureUnits[0]}
-                units={fixtureUnits}
-              />
-            }
-            path="/learn/u1/u1-l1/practice"
-          />
-        </Routes>
-      </MemoryRouter>
-    );
+    renderLessonPlayer(0, 'theory');
 
+    expect(screen.getByText('Ghi nhớ')).toBeInTheDocument();
     await user.click(
       screen.getByRole('button', { name: 'Hoàn thành lý thuyết' })
     );
 
-    expect(
-      screen.getByText('Em đã đọc xong lý thuyết bài Bài đang học!')
-    ).toBeInTheDocument();
-    expect(
-      getProgressStore(fixtureUnits).getState().lessonProgress['u1-l1']
-    ).toBeUndefined();
-    expect(
-      getProgressStore(fixtureUnits).getState().unlockedLessonIds
-    ).not.toContain('u1-l2');
-
-    await user.click(screen.getByRole('button', { name: 'Giải bài tập ngay' }));
-
-    await waitFor(() =>
-      expect(screen.getByText('Chọn đáp án đúng')).toBeInTheDocument()
-    );
-  });
-
-  it('mode practice bỏ qua theory và giữ nguyên logic hỏi lại câu sai', async () => {
-    const user = userEvent.setup();
-
-    render(
-      <MemoryRouter initialEntries={['/learn/u1/u1-l1/practice']}>
-        <Routes>
-          <Route
-            element={
-              <LessonPlayer
-                lesson={fixtureUnits[0].lessons[0]}
-                mode="practice"
-                unit={fixtureUnits[0]}
-                units={fixtureUnits}
-              />
-            }
-            path="/learn/u1/u1-l1/practice"
-          />
-          <Route
-            element={<div>Bài tiếp theo practice</div>}
-            path="/learn/u1/u1-l2/practice"
-          />
-        </Routes>
-      </MemoryRouter>
-    );
-
     expect(screen.getByText('Chọn đáp án đúng')).toBeInTheDocument();
-    expect(screen.queryByText('Ghi nhớ')).not.toBeInTheDocument();
-    expect(screen.getByText('1/2')).toBeInTheDocument();
-
-    await user.click(screen.getByRole('button', { name: 'Sai' }));
-    await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));
-    await user.click(screen.getByRole('button', { name: 'Câu tiếp theo' }));
-    await user.type(screen.getByRole('textbox'), 'H2');
-    await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));
-    await user.click(screen.getByRole('button', { name: 'Câu tiếp theo' }));
-
-    expect(screen.getByText(/Làm lại/)).toBeInTheDocument();
-    expect(screen.getByText('Chọn đáp án đúng')).toBeInTheDocument();
+    expect(screen.queryByText('Nhập khí tạo thành')).not.toBeInTheDocument();
+    expect(screen.getByText('1/1')).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Đúng' }));
     await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));
@@ -181,16 +164,94 @@ describe('LessonPlayer', () => {
     );
 
     expect(
-      screen.getByText(/Em làm đúng 1\/2 câu ở lượt đầu/)
+      getProgressStore(fixtureUnits).getState().lessonProgress['u1-l1']
+    ).toMatchObject({
+      theory: { completed: true, accuracy: 100, bestXp: 10 },
+      practice: { completed: false, accuracy: 0 },
+      completed: false
+    });
+    expect(
+      getProgressStore(fixtureUnits).getState().unlockedLessonIds
+    ).not.toContain('u1-l2');
+    expect(
+      screen.getByRole('button', { name: 'Làm phần Bài tập' })
     ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: 'Sang bài tiếp theo' })
+    ).not.toBeInTheDocument();
+  });
+
+  it('mode practice chỉ hỏi câu calculation, giữ retry logic, và mở bài sau khi đủ hai phần', async () => {
+    const user = userEvent.setup();
+    const store = getProgressStore(fixtureUnits);
+
+    store
+      .getState()
+      .completeLessonPart(
+        fixtureUnits[0].lessons[0],
+        'theory',
+        100,
+        10,
+        'u1-l2',
+        new Date('2026-07-10')
+      );
+
+    renderLessonPlayer(0, 'practice');
+
+    expect(screen.getByText('Nhập khí tạo thành')).toBeInTheDocument();
+    expect(screen.queryByText('Chọn đáp án đúng')).not.toBeInTheDocument();
+    expect(screen.getByText('1/1')).toBeInTheDocument();
+
+    await user.type(screen.getByRole('textbox'), 'O2');
+    await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));
+    await user.click(screen.getByRole('button', { name: 'Câu tiếp theo' }));
+
+    expect(screen.getByText(/Làm lại/)).toBeInTheDocument();
+    expect(screen.getByText('Nhập khí tạo thành')).toBeInTheDocument();
+
+    await user.clear(screen.getByRole('textbox'));
+    await user.type(screen.getByRole('textbox'), 'H2');
+    await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));
+    await user.click(screen.getByRole('button', { name: 'Câu tiếp theo' }));
+
+    await waitFor(() =>
+      expect(screen.getByText('Em đã xong lượt luyện này')).toBeInTheDocument()
+    );
+
+    expect(
+      getProgressStore(fixtureUnits).getState().lessonProgress['u1-l1']
+    ).toMatchObject({
+      theory: { completed: true, accuracy: 100, bestXp: 10 },
+      practice: { completed: true, accuracy: 0, bestXp: 0 },
+      completed: true
+    });
     expect(
       getProgressStore(fixtureUnits).getState().unlockedLessonIds
     ).toContain('u1-l2');
-
-    await user.click(
+    expect(
       screen.getByRole('button', { name: 'Sang bài tiếp theo' })
+    ).toBeInTheDocument();
+  });
+
+  it('practice mode với bài không có calculation hiển thị màn thân thiện', async () => {
+    const user = userEvent.setup();
+
+    renderLessonPlayer(1, 'practice');
+
+    expect(
+      screen.getByText('Bài này không có bài tập tính toán')
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Ôn phần Lý thuyết' })
+    ).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Ôn phần Lý thuyết' }));
+    await user.click(
+      screen.getByRole('button', { name: 'Hoàn thành lý thuyết' })
     );
 
-    expect(screen.getByText('Bài tiếp theo practice')).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByText('Câu chỉ có lý thuyết')).toBeInTheDocument()
+    );
   });
 });

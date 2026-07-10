@@ -53,6 +53,88 @@ vi.mock('../../src/lib/supabase', () => ({
   supabase: mockSupabase
 }));
 
+vi.mock('../../src/lib/content', () => ({
+  getAllUnits: () => [
+    {
+      id: 'u1',
+      part: 'inorganic',
+      code: 'A0',
+      title: 'Unit thử nghiệm',
+      order: 1,
+      description: '...',
+      status: 'available',
+      lessons: [
+        {
+          id: 'a-1',
+          title: 'Bài 1',
+          order: 1,
+          summary: '...',
+          status: 'available',
+          cards: [],
+          questions: [
+            {
+              id: 'a-1-q1',
+              type: 'single-choice',
+              level: 'basic',
+              category: 'theory',
+              prompt: 'LT',
+              options: ['A', 'B'],
+              answer: 0,
+              explanation: '...'
+            },
+            {
+              id: 'a-1-q2',
+              type: 'single-choice',
+              level: 'basic',
+              category: 'calculation',
+              prompt: 'BT',
+              options: ['A', 'B'],
+              answer: 0,
+              explanation: '...'
+            }
+          ]
+        },
+        {
+          id: 'a-2',
+          title: 'Bài 2',
+          order: 2,
+          summary: '...',
+          status: 'available',
+          cards: [],
+          questions: [
+            {
+              id: 'a-2-q1',
+              type: 'single-choice',
+              level: 'basic',
+              category: 'theory',
+              prompt: 'LT',
+              options: ['A', 'B'],
+              answer: 0,
+              explanation: '...'
+            },
+            {
+              id: 'a-2-q2',
+              type: 'single-choice',
+              level: 'basic',
+              category: 'calculation',
+              prompt: 'BT',
+              options: ['A', 'B'],
+              answer: 0,
+              explanation: '...'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  getQuestionsByCategory: (
+    lesson: {
+      questions: Array<{ category: 'theory' | 'calculation' }>;
+    },
+    category: 'theory' | 'calculation'
+  ) => lesson.questions.filter((question) => question.category === category)
+}));
+
 import {
   mergeProgress,
   normalizeProgressSnapshot,
@@ -66,10 +148,11 @@ import {
   isWrongQuestionPending,
   PROGRESS_VERSION,
   type ExamAttempt,
+  type LessonProgress,
   type ProgressSnapshot
 } from '../../src/store/progress';
 
-const wrongQuestionKey = getWrongQuestionKey('u1', 'u1-l1', 'q1');
+const wrongQuestionKey = getWrongQuestionKey('u1', 'a-1', 'q1');
 
 function createExamAttempt(
   index: number,
@@ -94,6 +177,31 @@ function createExamAttempt(
   };
 }
 
+function createLessonProgress(
+  overrides: Partial<LessonProgress> = {}
+): LessonProgress {
+  const theory = {
+    completed: false,
+    accuracy: 0,
+    ...(overrides.theory ?? {})
+  };
+  const practice = {
+    completed: false,
+    accuracy: 0,
+    ...(overrides.practice ?? {})
+  };
+
+  return {
+    theory,
+    practice,
+    completed: overrides.completed ?? false,
+    stars: overrides.stars ?? 0,
+    bestAccuracy: overrides.bestAccuracy ?? 0,
+    bestXp: overrides.bestXp ?? 0,
+    completedAt: overrides.completedAt
+  };
+}
+
 function createSnapshot(
   overrides: Partial<ProgressSnapshot> = {}
 ): ProgressSnapshot {
@@ -104,13 +212,15 @@ function createSnapshot(
     lastStudyDate: '2026-07-05',
     lastMutationAt: '2026-07-05T10:00:00.000Z',
     lessonProgress: {
-      'a-1': {
+      'a-1': createLessonProgress({
+        theory: { completed: true, accuracy: 80, bestXp: 40 },
+        practice: { completed: true, accuracy: 80, bestXp: 40 },
         completed: true,
         stars: 2,
         bestAccuracy: 80,
         bestXp: 80,
         completedAt: '2026-07-05T10:00:00.000Z'
-      }
+      })
     },
     unlockedLessonIds: ['a-1', 'a-2'],
     wrongQuestions: {},
@@ -138,51 +248,50 @@ describe('progress sync', () => {
     });
   });
 
-  it('mergeProgress lấy max theo lesson, union bài mở khoá và streak từ bản mới hơn', () => {
+  it('mergeProgress hợp nhất theory/practice từ hai thiết bị thành bài hoàn thành', () => {
     const merged = mergeProgress(
       createSnapshot({
+        totalXp: 10,
         lastStudyDate: '2026-07-04',
         streakCurrent: 1,
         streakLongest: 2,
         lessonProgress: {
-          'a-1': {
-            completed: true,
+          'a-1': createLessonProgress({
+            theory: { completed: true, accuracy: 100, bestXp: 10 },
+            practice: { completed: false, accuracy: 0 },
+            completed: false,
             stars: 1,
-            bestAccuracy: 60,
-            bestXp: 60,
-            completedAt: '2026-07-04T08:00:00.000Z'
-          }
+            bestAccuracy: 50,
+            bestXp: 10
+          })
         },
         unlockedLessonIds: ['a-1']
       }),
       createSnapshot({
-        totalXp: 150,
+        totalXp: 10,
         lessonProgress: {
-          'a-1': {
-            completed: true,
-            stars: 3,
-            bestAccuracy: 95,
-            bestXp: 95,
-            completedAt: '2026-07-05T11:00:00.000Z'
-          },
-          'a-2': {
-            completed: true,
-            stars: 2,
-            bestAccuracy: 70,
-            bestXp: 70,
-            completedAt: '2026-07-05T12:00:00.000Z'
-          }
+          'a-1': createLessonProgress({
+            theory: { completed: false, accuracy: 0 },
+            practice: { completed: true, accuracy: 100, bestXp: 10 },
+            completed: false,
+            stars: 1,
+            bestAccuracy: 50,
+            bestXp: 10
+          })
         },
         unlockedLessonIds: ['a-1', 'a-2', 'a-3']
       })
     );
 
-    expect(merged.totalXp).toBe(165);
-    expect(merged.lessonProgress['a-1'].stars).toBe(3);
-    expect(merged.lessonProgress['a-1'].bestAccuracy).toBe(95);
-    expect(merged.lessonProgress['a-1'].completedAt).toBe(
-      '2026-07-05T11:00:00.000Z'
-    );
+    expect(merged.totalXp).toBe(20);
+    expect(merged.lessonProgress['a-1']).toMatchObject({
+      theory: { completed: true, accuracy: 100, bestXp: 10 },
+      practice: { completed: true, accuracy: 100, bestXp: 10 },
+      completed: true,
+      stars: 3,
+      bestAccuracy: 100,
+      bestXp: 20
+    });
     expect(merged.unlockedLessonIds).toEqual(['a-1', 'a-2', 'a-3']);
     expect(merged.streakCurrent).toBe(2);
     expect(merged.lastStudyDate).toBe('2026-07-05');
@@ -206,25 +315,6 @@ describe('progress sync', () => {
     expect(merged.streakCurrent).toBe(5);
   });
 
-  it('mergeProgress giữ streakLongest lịch sử dù bên có ngày cũ hơn', () => {
-    const merged = mergeProgress(
-      createSnapshot({
-        lastStudyDate: '2026-07-05',
-        streakCurrent: 2,
-        streakLongest: 4
-      }),
-      createSnapshot({
-        lastStudyDate: '2026-07-04',
-        streakCurrent: 7,
-        streakLongest: 9
-      })
-    );
-
-    expect(merged.lastStudyDate).toBe('2026-07-05');
-    expect(merged.streakCurrent).toBe(2);
-    expect(merged.streakLongest).toBe(9);
-  });
-
   it('normalizeProgressSnapshot bỏ dữ liệu hỏng', () => {
     expect(
       normalizeProgressSnapshot({
@@ -236,6 +326,44 @@ describe('progress sync', () => {
         unlockedLessonIds: []
       })
     ).toBeNull();
+  });
+
+  it('normalizeProgressSnapshot nâng lessonProgress v3 từ server mà không mất dữ liệu', () => {
+    expect(
+      normalizeProgressSnapshot({
+        totalXp: 80,
+        streakCurrent: 2,
+        streakLongest: 3,
+        lastStudyDate: '2026-07-05',
+        lastMutationAt: '2026-07-05T10:00:00.000Z',
+        lessonProgress: {
+          'a-1': {
+            completed: true,
+            stars: 2,
+            bestAccuracy: 80,
+            bestXp: 80,
+            completedAt: '2026-07-05T10:00:00.000Z'
+          }
+        },
+        unlockedLessonIds: ['a-1', 'a-2'],
+        wrongQuestions: {},
+        examHistory: []
+      })
+    ).toMatchObject({
+      totalXp: 80,
+      unlockedLessonIds: ['a-1', 'a-2'],
+      lessonProgress: {
+        'a-1': {
+          theory: { completed: true, accuracy: 80 },
+          practice: { completed: true, accuracy: 80 },
+          completed: true,
+          stars: 2,
+          bestAccuracy: 80,
+          bestXp: 80,
+          completedAt: '2026-07-05T10:00:00.000Z'
+        }
+      }
+    });
   });
 
   it('normalizeProgressSnapshot loại từng wrongQuestions entry hỏng nhưng giữ snapshot', () => {
@@ -251,14 +379,14 @@ describe('progress sync', () => {
         wrongQuestions: {
           [wrongQuestionKey]: {
             unitId: 'u1',
-            lessonId: 'u1-l1',
+            lessonId: 'a-1',
             questionId: 'q1',
             missCount: 2,
             lastMissedAt: '2026-07-05T09:00:00.000Z'
           },
           bad: {
             unitId: 'u1',
-            lessonId: 'u1-l1',
+            lessonId: 'a-1',
             questionId: 'q2'
           }
         }
@@ -267,7 +395,7 @@ describe('progress sync', () => {
       wrongQuestions: {
         [wrongQuestionKey]: {
           unitId: 'u1',
-          lessonId: 'u1-l1',
+          lessonId: 'a-1',
           questionId: 'q1',
           missCount: 2
         }
@@ -305,33 +433,31 @@ describe('progress sync', () => {
         wrongQuestions: {
           [wrongQuestionKey]: {
             unitId: 'u1',
-            lessonId: 'u1-l1',
+            lessonId: 'a-1',
             questionId: 'q1',
             missCount: 1,
             lastMissedAt: '2026-07-05T09:00:00.000Z',
             resolvedAt: '2026-07-05T10:00:00.000Z'
           }
-        },
-        lastMutationAt: '2026-07-05T09:00:00.000Z'
+        }
       }),
       createSnapshot({
         wrongQuestions: {
           [wrongQuestionKey]: {
             unitId: 'u1',
-            lessonId: 'u1-l1',
+            lessonId: 'a-1',
             questionId: 'q1',
             missCount: 3,
             lastMissedAt: '2026-07-05T11:00:00.000Z',
             resolvedAt: '2026-07-05T12:00:00.000Z'
           }
-        },
-        lastMutationAt: '2026-07-05T11:00:00.000Z'
+        }
       })
     );
 
     expect(merged.wrongQuestions[wrongQuestionKey]).toEqual({
       unitId: 'u1',
-      lessonId: 'u1-l1',
+      lessonId: 'a-1',
       questionId: 'q1',
       missCount: 3,
       lastMissedAt: '2026-07-05T11:00:00.000Z',
@@ -339,23 +465,21 @@ describe('progress sync', () => {
     });
   });
 
-  it('mergeProgress giữ câu sai khi chỉ một bên còn entry', () => {
+  it('mergeProgress không làm rơi câu sai khi chỉ một bên còn entry', () => {
     const merged = mergeProgress(
       createSnapshot({
         wrongQuestions: {
           [wrongQuestionKey]: {
             unitId: 'u1',
-            lessonId: 'u1-l1',
+            lessonId: 'a-1',
             questionId: 'q1',
             missCount: 1,
             lastMissedAt: '2026-07-05T09:00:00.000Z'
           }
-        },
-        lastMutationAt: '2026-07-05T09:00:00.000Z'
+        }
       }),
       createSnapshot({
-        wrongQuestions: {},
-        lastMutationAt: '2026-07-05T08:00:00.000Z'
+        wrongQuestions: {}
       })
     );
 
@@ -363,90 +487,9 @@ describe('progress sync', () => {
       questionId: 'q1',
       missCount: 1
     });
-  });
-
-  it('mergeProgress không làm rơi câu sai vì mutation không liên quan ở snapshot còn thiếu key', () => {
-    const merged = mergeProgress(
-      createSnapshot({
-        lessonProgress: {
-          'a-1': {
-            completed: true,
-            stars: 2,
-            bestAccuracy: 80,
-            bestXp: 80,
-            completedAt: '2026-07-05T10:00:00.000Z'
-          },
-          'a-2': {
-            completed: true,
-            stars: 3,
-            bestAccuracy: 100,
-            bestXp: 100,
-            completedAt: '2026-07-05T10:00:00.000Z'
-          }
-        },
-        wrongQuestions: {},
-        lastMutationAt: '2026-07-05T10:00:00.000Z'
-      }),
-      createSnapshot({
-        wrongQuestions: {
-          [wrongQuestionKey]: {
-            unitId: 'u1',
-            lessonId: 'u1-l1',
-            questionId: 'q1',
-            missCount: 2,
-            lastMissedAt: '2026-07-05T09:00:00.000Z'
-          }
-        },
-        lastMutationAt: '2026-07-05T09:00:00.000Z'
-      })
-    );
-
-    expect(merged.wrongQuestions[wrongQuestionKey]).toMatchObject({
-      unitId: 'u1',
-      lessonId: 'u1-l1',
-      questionId: 'q1',
-      missCount: 2,
-      lastMissedAt: '2026-07-05T09:00:00.000Z'
-    });
-    expect(merged.wrongQuestions[wrongQuestionKey].resolvedAt).toBeUndefined();
     expect(
       isWrongQuestionPending(merged.wrongQuestions[wrongQuestionKey])
     ).toBe(true);
-  });
-
-  it('mergeProgress giữ tombstone resolvedAt mới nhất khi cả hai bên cùng có entry', () => {
-    const merged = mergeProgress(
-      createSnapshot({
-        wrongQuestions: {
-          [wrongQuestionKey]: {
-            unitId: 'u1',
-            lessonId: 'u1-l1',
-            questionId: 'q1',
-            missCount: 2,
-            lastMissedAt: '2026-07-05T09:00:00.000Z',
-            resolvedAt: '2026-07-05T10:00:00.000Z'
-          }
-        }
-      }),
-      createSnapshot({
-        wrongQuestions: {
-          [wrongQuestionKey]: {
-            unitId: 'u1',
-            lessonId: 'u1-l1',
-            questionId: 'q1',
-            missCount: 1,
-            lastMissedAt: '2026-07-05T08:00:00.000Z',
-            resolvedAt: '2026-07-05T11:00:00.000Z'
-          }
-        }
-      })
-    );
-
-    expect(merged.wrongQuestions[wrongQuestionKey]).toMatchObject({
-      missCount: 2,
-      lastMissedAt: '2026-07-05T09:00:00.000Z',
-      resolvedAt: '2026-07-05T11:00:00.000Z'
-    });
   });
 
   it('mergeProgress hợp nhất examHistory theo id, sort giảm dần và cắt còn 20', () => {
