@@ -587,6 +587,26 @@
           "id": "a1-l4-c3",
           "heading": "Lập CTHH theo hoá trị",
           "body": "Các bước: gọi công thức hoá học dạng AxBy; áp dụng quy tắc hoá trị a.x = b.y; đưa về tỉ lệ tối giản x : y = b : a.\nVí dụ: Al (III) và O (II) cho tỉ lệ x : y = 2 : 3, công thức đúng là Al2O3."
+        },
+        {
+          "id": "a1-l4-c4",
+          "heading": "Nâng cao: Nhóm nguyên tử có hoá trị riêng",
+          "body": "Với nhiều gốc axit quen thuộc, hoá trị của nhóm bằng số nguyên tử H có thể thay thế trong axit tương ứng: HNO3 → nhóm NO3 hoá trị I; H2SO4 → nhóm SO4 hoá trị II; H2CO3 → nhóm CO3 hoá trị II; H3PO4 → nhóm PO4 hoá trị III.\nMột số nhóm vẫn còn H nhưng vẫn được xem là một nhóm nguyên tử với hoá trị riêng: HSO4 (I), HCO3 (I), HPO4 (II), H2PO4 (I). Ví dụ Na(I) với HCO3(I) tạo NaHCO3, còn Ca(II) với HCO3(I) tạo Ca(HCO3)2 — không được lấy hoá trị II của CO3 để thay cho HCO3. Nhóm NH4 (amoni) có hoá trị I, thường gặp trong muối amoni như NH4Cl, (NH4)2SO4.\nNhiều hợp chất có từ ba nguyên tố trở lên nhưng khi lập theo hoá trị chỉ cần xét hai phần: kim loại/gốc và nhóm nguyên tử. Na2CO3 = Na(I) với CO3(II); Ca(OH)2 = Ca(II) với OH(I); AlPO4 = Al(III) với PO4(III) — không xử lí từng nguyên tố C, O, H riêng lẻ trong nhóm."
+        },
+        {
+          "id": "a1-l4-c5",
+          "heading": "Nâng cao: Nguyên tố nhiều hoá trị — xác định đúng hoá trị đang dùng",
+          "body": "Fe, Cu, S, N... có thể có nhiều hoá trị, nhưng trong một hợp chất cụ thể phải xác định theo đúng công thức đã cho, không chọn tuỳ ý: CuO có Cu hoá trị II, còn Cu2O có Cu hoá trị I; SO2 có S hoá trị IV, còn SO3 có S hoá trị VI. Chọn sai hoá trị sẽ lập ra công thức khác hoàn toàn.\nNếu đề nói một nguyên tố có hoá trị không đổi và cho nhiều hợp chất của nó, hoá trị suy ra từ các công thức đó phải trùng nhau — đây là cách kiểm tra chéo hữu ích. Ví dụ nguyên tố X tạo được cả XCl3 (Cl hoá trị I → X hoá trị III) và X2O3 (O hoá trị II → X hoá trị III): hai dữ kiện cùng cho hoá trị III nên phù hợp. Nếu một dữ kiện cho hoá trị II còn dữ kiện khác cho hoá trị III thì phải xem lại giả thiết, công thức hoặc đáp án."
+        },
+        {
+          "id": "a1-l4-c6",
+          "heading": "Nâng cao: Bản chất quy tắc hoá trị và lỗi hay gặp",
+          "body": "Quy tắc a.x = b.y thể hiện tổng khả năng liên kết của phần A phải bằng tổng khả năng liên kết của phần B trong một hợp chất trung hoà — khi kiểm tra CTHH, phải so sánh hai TÍCH hoá trị (a.x và b.y) chứ không so sánh riêng từng chỉ số.\nKhi viết phép nhân trong bài làm, nên dùng dấu × (ví dụ 2 × 3) thay vì dấu chấm sát nhau như 2.3, để tránh học sinh đọc nhầm thành số thập phân.\nKhông dùng quy tắc hoá trị để giải thích chỉ số trong công thức đơn chất (ví dụ không suy ra chỉ số 2 của O2 từ hoá trị của oxi) — quy tắc hoá trị chỉ áp dụng cho hợp chất gồm từ hai nguyên tố trở lên."
+        },
+        {
+          "id": "a1-l4-c7",
+          "heading": "Nâng cao: Tìm nguyên tử khối và biện luận công thức từ hoá trị, phân tử khối",
+          "body": "Khi công thức đã biết, lập phương trình phân tử khối bằng tổng khối lượng các nguyên tử và nhóm nguyên tử. Ví dụ R2O3 có phân tử khối 102: 2R + 3×16 = 102, suy ra R = 27 (nhôm Al). Với MSO4 có phân tử khối 120 và nhóm SO4 có khối lượng 96: M + 96 = 120, suy ra M = 24 (magie Mg).\nNếu đề chỉ nói nguyên tố R tạo oxit mà chưa cho hoá trị, có thể liệt kê nhanh theo hoá trị của R (O hoá trị II): R(I) → R2O; R(II) → RO; R(III) → R2O3; R(IV) → RO2; R(V) → R2O5; R(VI) → RO3; R(VII) → R2O7. Thử từng hoá trị rồi tính R, đối chiếu bảng nguyên tử khối quen thuộc — kết quả âm, phân số vô lí hoặc không khớp nguyên tố quen thuộc ở THCS thì loại trường hợp đó."
         }
       ],
       "questions": [

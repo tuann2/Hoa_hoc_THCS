@@ -16,3 +16,5 @@ Mỗi file ghi rõ verdict fact-check của Gemini cho từng mục; mục
   lược bảng tuần hoàn (11 ứng viên dự trữ / 21 tổng, đã dùng 10)
 - [`a1-l3.md`](a1-l3.md) — Đơn chất – hợp chất – phân tử; CTHH và ý
   nghĩa (2 ứng viên dự trữ / 22 tổng, đã dùng 20)
+- [`a1-l4.md`](a1-l4.md) — Hoá trị; lập CTHH theo hoá trị (12 ứng
+  viên dự trữ / 22 tổng, đã dùng 10)
