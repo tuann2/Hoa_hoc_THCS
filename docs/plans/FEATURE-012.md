@@ -113,7 +113,7 @@ xong cả unit.
 
 - [x] `a3-l1` — Tính chất – điều chế hiđro; phản ứng thế; khử oxit kim loại
 - [x] `a3-l2` — Nước: tính chất; phản ứng với kim loại/oxit
-- [ ] `a3-l3` — Axit – bazơ – muối: định nghĩa, phân loại, gọi tên (mở đầu)
+- [x] `a3-l3` — Axit – bazơ – muối: định nghĩa, phân loại, gọi tên (mở đầu)
 - [ ] `a3-l4` — Nâng cao: khử hỗn hợp oxit, bài toán H2 + oxit kim loại
 
 ### A4 · Dung dịch (`a4-dung-dich`)
