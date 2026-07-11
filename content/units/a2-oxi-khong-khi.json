@@ -237,7 +237,7 @@
         {
           "id": "a2-l2-c1",
           "heading": "Định nghĩa oxit",
-          "body": "Oxit là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Công thức chung dạng MxOy."
+          "body": "Oxit là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Công thức chung dạng MxOy.\n\nMuốn kết luận một chất là oxit, cần kiểm tra chất đó là hợp chất chỉ gồm đúng hai nguyên tố và một trong hai là O. Vì vậy MgO, Fe3O4, CO2 là oxit; còn NaOH, H2SO4, CaCO3, KNO3 không phải oxit vì mỗi chất có từ ba nguyên tố trở lên, dù đều chứa O. O2, O3 cũng không phải oxit vì đó là đơn chất của oxi, không phải hợp chất."
         },
         {
           "id": "a2-l2-c2",
@@ -247,7 +247,47 @@
         {
           "id": "a2-l2-c3",
           "heading": "Cách gọi tên oxit",
-          "body": "Oxit kim loại: tên kim loại (kèm hoá trị nếu kim loại có nhiều hoá trị) + oxit. Ví dụ: Fe2O3 là sắt(III) oxit.\nOxit phi kim: tiền tố chỉ số nguyên tử (đi, tri, tetra, penta) + tên phi kim + oxit. Ví dụ: SO3 là lưu huỳnh trioxit."
+          "body": "Oxit kim loại: tên kim loại (kèm hoá trị nếu kim loại có nhiều hoá trị) + oxit. Ví dụ: Fe2O3 là sắt(III) oxit.\nOxit phi kim: tiền tố chỉ số nguyên tử (đi, tri, tetra, penta) + tên phi kim + oxit. Ví dụ: SO3 là lưu huỳnh trioxit.\n\nViệc có ghi hoá trị hay không phụ thuộc vào bản chất của kim loại, không phụ thuộc số oxit đang xét trong bài: kim loại có nhiều hoá trị trong hợp chất (Fe, Cu, Cr, Mn...) luôn cần ghi kèm hoá trị bằng số La Mã, ví dụ FeO là sắt(II) oxit, Fe2O3 là sắt(III) oxit, Cu2O là đồng(I) oxit, CuO là đồng(II) oxit. Kim loại chỉ có một hoá trị duy nhất (Na, K, Ca, Ba, Mg, Al, Zn...) thì không ghi hoá trị: Na2O là natri oxit, CaO là canxi oxit, Al2O3 là nhôm oxit."
+        },
+        {
+          "id": "a2-l2-c4",
+          "heading": "Nâng cao: Lập công thức oxit theo hoá trị và cách tối giản chỉ số",
+          "body": "Trong oxit thông thường, O có hoá trị II. Nếu nguyên tố R có hoá trị a và oxit là RxOy thì x.a = 2.y. Có thể đổi chéo rồi rút gọn: R(I) tạo R2O, R(II) tạo RO, R(III) tạo R2O3, R(IV) tạo RO2, R(V) tạo R2O5.\n\nSau khi đổi chéo hoá trị, cần rút chỉ số về tỉ lệ nguyên tử tối giản: tỉ lệ Na : O = 2 : 1 viết Na2O chứ không viết Na4O2; tỉ lệ Al : O = 2 : 3 viết Al2O3 chứ không viết Al4O6. Đây là quy tắc thực hành áp dụng khi lập công thức oxit thông thường theo hoá trị (đặc biệt các oxit bazơ/oxit ion), không phải quy luật tuyệt đối cho mọi oxit: một số oxit cộng hoá trị đặc biệt như N2O4 hay peoxit Na2O2, H2O2 không tuân theo cách rút gọn này.\n\nSau khi lập hoặc tìm được công thức, nên kiểm tra lại bằng hai câu hỏi: (1) công thức đã thoả mãn quy tắc hoá trị chưa — tích của chỉ số và hoá trị của nguyên tố này phải bằng tích của chỉ số và hoá trị của nguyên tố kia; (2) chỉ số đã rút về tối giản chưa. Chẳng hạn Ca2O2 thoả mãn quy tắc hoá trị (2×II = 2×II) nhưng chỉ số chưa tối giản, phải viết CaO."
+        },
+        {
+          "id": "a2-l2-c5",
+          "heading": "Nâng cao: Suy hoá trị từ công thức oxit",
+          "body": "Khi công thức đã biết, không đọc hoá trị của nguyên tố từ chỉ số đứng cạnh nó. Hãy cân bằng tổng hoá trị: trong Fe2O3, 3 nguyên tử O có tổng hoá trị 3×II = VI nên 2 Fe có tổng hoá trị VI, mỗi Fe có hoá trị III. Tương tự, Cu2O chứa Cu(I), còn CuO chứa Cu(II). Đây là bước bắt buộc trước khi gọi tên oxit của kim loại nhiều hoá trị."
+        },
+        {
+          "id": "a2-l2-c6",
+          "heading": "Nâng cao: Fe3O4 là oxit sắt hỗn hợp",
+          "body": "Fe3O4 không cho sắt một hoá trị nguyên duy nhất: nếu tính trung bình thì mỗi Fe ứng với hoá trị 8/3. Ở mức THCS, coi Fe3O4 là oxit hỗn hợp gồm FeO và Fe2O3 theo tỉ lệ mol 1 : 1, nên trong đó đồng thời có Fe(II) và Fe(III). Vì vậy không gọi Fe3O4 là sắt(II) oxit hay sắt(III) oxit; tên quen dùng là oxit sắt từ."
+        },
+        {
+          "id": "a2-l2-c7",
+          "heading": "Nâng cao: Oxit lưỡng tính và oxit trung tính",
+          "body": "Các chữ \"thường là\" trong quy tắc phân loại cơ bản rất quan trọng: oxit bazơ thường là oxit kim loại và oxit axit thường là oxit phi kim, nhưng đó không phải tiêu chuẩn tuyệt đối. Al2O3 và ZnO là oxit của kim loại nhưng thuộc loại lưỡng tính; CO và NO là oxit của phi kim nhưng thuộc loại trung tính. Gặp các chất quen thuộc có ngoại lệ này, phải nhận ra ngay, không phân loại chỉ dựa vào việc nguyên tố là kim loại hay phi kim.\n\nOxit lưỡng tính là oxit tác dụng được với cả dung dịch axit và dung dịch bazơ, đều tạo thành muối và nước; ví dụ tiêu biểu là Al2O3, ZnO. Oxit trung tính (oxit không tạo muối) là oxit không tác dụng với axit, bazơ, nước ở điều kiện thường; ví dụ tiêu biểu là CO, NO."
+        },
+        {
+          "id": "a2-l2-c8",
+          "heading": "Nâng cao: Suy oxit tương ứng với axit/bazơ và các trường hợp cần lưu ý",
+          "body": "Với các cặp quen thuộc, có thể tìm oxit tương ứng bằng cách bỏ nước khỏi công thức axit hoặc bazơ rồi rút gọn: H2CO3 cho CO2; H2SO3 cho SO2; H2SO4 cho SO3; Ca(OH)2 cho CaO. Khi số nguyên tử H trong axit/bazơ là số lẻ (NaOH, H3PO4, HNO3), phải nhân đôi công thức trước khi trừ nước để tránh hệ số lẻ: 2NaOH -> Na2O + H2O; 2H3PO4 -> P2O5 + 3H2O; 2HNO3 -> N2O5 + H2O.\n\nCách ghép oxit axit với axit tương ứng chỉ nên dùng cho các cặp đã biết trong chương trình. Một ngoại lệ cần nhớ là SiO2: oxit axit này tương ứng với axit silixic H2SiO3 nhưng KHÔNG tác dụng trực tiếp với nước ở điều kiện thường. Khi chuyển đổi oxit axit và axit tương ứng, phải giữ nguyên hoá trị của phi kim: S hoá trị IV trong SO2 ứng với H2SO3, còn S hoá trị VI trong SO3 mới ứng với H2SO4; không được viết nhầm SO2 + H2O -> H2SO4."
+        },
+        {
+          "id": "a2-l2-c9",
+          "heading": "Nâng cao: Quy trình gọi tên oxit kim loại nhiều hoá trị",
+          "body": "Bước 1: xác định hoá trị của kim loại từ công thức, dùng O có hoá trị II. Bước 2: đọc tên kim loại. Bước 3: ghi hoá trị bằng số La Mã trong ngoặc, rồi thêm \"oxit\". Ví dụ Cr2O3: 3 O cho tổng hoá trị VI, chia cho 2 Cr được III, nên tên là crom(III) oxit. Làm ngược quy trình này cũng lập được công thức: từ \"đồng(II) oxit\", ghép Cu(II) với O(II) rồi rút gọn thành CuO."
+        },
+        {
+          "id": "a2-l2-c10",
+          "heading": "Nâng cao: Quy tắc tiền tố khi gọi tên oxit phi kim",
+          "body": "Tên hệ thống của oxit phi kim dùng tiền tố chỉ số nguyên tử: mono = 1, đi = 2, tri = 3, tetra = 4, penta = 5. Nguyên tố đứng đầu (phi kim) chỉ thêm tiền tố khi chỉ số của nó từ 2 trở lên; chỉ số 1 thì bỏ tiền tố, ví dụ SO2 gọi là lưu huỳnh đioxit chứ không phải \"monolưu huỳnh đioxit\". Nguyên tố oxi luôn có tiền tố theo chỉ số của nó, nhưng \"mono\" ở oxi thường được lược bỏ trong cách gọi thông dụng, trừ trường hợp cần phân biệt rõ như CO là cacbon monoxit (giữ \"mono\" để phân biệt với CO2 là cacbon đioxit). Ví dụ khác: N2O3 là đinitơ trioxit, P2O5 là điphotpho pentaoxit."
+        },
+        {
+          "id": "a2-l2-c11",
+          "heading": "Nâng cao: Xác định công thức oxit từ dữ liệu số liệu: phân tử khối và phần trăm khối lượng oxi",
+          "body": "Nếu oxit RxOy có phân tử khối M, nguyên tử khối của R được tính bằng Ar(R) = (M − 16y)/x. Ví dụ R2O3 có M = 102 thì 2Ar(R) + 48 = 102, suy ra Ar(R) = 27, nên R là Al và oxit là Al2O3. Sau khi tìm được R, cần đối chiếu lại hoá trị suy từ công thức để kiểm tra đáp án có hợp lí.\n\nVới oxit RxOy, phần trăm khối lượng oxi là %O = [16y/(x×Ar(R) + 16y)] × 100%. Nếu đã biết dạng oxit, công thức này giúp tìm Ar(R); nếu đã biết kim loại nhưng chưa biết oxit nào, có thể tính %O lí thuyết của từng khả năng phù hợp hoá trị rồi so sánh với dữ kiện. Ví dụ FeO có %O = 16/72 × 100% ≈ 22,2%, còn Fe2O3 có %O = 48/160 × 100% = 30%, nên hai oxit dễ phân biệt bằng dữ kiện %O.\n\nKhi đề cho oxit chỉ gồm R và O với %O, có thể giả sử 100 g oxit: mO bằng đúng số gam phần trăm O, còn mR = 100 − mO. Đổi mỗi khối lượng ra số mol nguyên tử rồi chia cả hai số mol cho số nhỏ hơn để tìm tỉ lệ R : O tối giản. Ví dụ một oxit của Al chứa 47,06% O: trong 100 g có nAl ≈ 1,96 mol và nO ≈ 2,94 mol, tỉ lệ ≈ 2 : 3 nên công thức là Al2O3. Cần dùng mol nguyên tử O, không dùng mol phân tử O2."
         }
       ],
       "questions": [

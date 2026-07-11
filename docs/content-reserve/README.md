@@ -24,3 +24,5 @@ Mỗi file ghi rõ verdict fact-check của Gemini cho từng mục; mục
   khối chất khí (1 ứng viên dự trữ / 25 tổng, đã dùng 24)
 - [`a2-l1.md`](a2-l1.md) — Tính chất – điều chế oxi; phản ứng hoá hợp,
   phân huỷ (2 ứng viên dự trữ / 23 tổng, đã dùng 21)
+- [`a2-l2.md`](a2-l2.md) — Oxit: phân loại, gọi tên (mở đầu) (3 ứng
+  viên dự trữ / 19 tổng, đã dùng 16)
