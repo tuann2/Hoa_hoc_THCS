@@ -132,8 +132,8 @@ function validateAvailableLesson(lesson: Lesson, prefix: string): string[] {
     errors.push(`${prefix}: bài đang mở phải có ít nhất 1 thẻ lý thuyết.`);
   }
 
-  if (lesson.cards.length > 5) {
-    errors.push(`${prefix}: số thẻ lý thuyết vượt quá 5.`);
+  if (lesson.cards.length > 25) {
+    errors.push(`${prefix}: số thẻ lý thuyết vượt quá 25.`);
   }
 
   if (basicCount < 5 || basicCount > 8) {

@@ -15,18 +15,19 @@ của mỗi bài học (81 bài `available` trên 17 unit), do Codex (model
 **tuần tự từng bài một**, không xử lý hàng loạt, để đảm bảo nội dung
 được đào sâu, chính xác và không bị lặp/generic. Số thẻ mỗi bài không
 cố định 3 — tuỳ độ dài/số chủ đề nâng cao mà mở rộng `body` thẻ có sẵn
-hoặc thêm thẻ mới (tối đa 5 thẻ/bài, xem mục 3).
+hoặc thêm thẻ mới (tối đa 25 thẻ/bài, xem mục 3).
 
 ## 2. Current system analysis
 
-- Mỗi bài học hiện có `lesson.cards: {id, heading, body}[]`; trước khi
-  điều chỉnh, quy ước ở `CLAUDE.md` §Content authoring rules ghi cứng
-  "3 thẻ lý thuyết". **Đã xác nhận qua code**: `src/lib/contentValidation.ts`
-  chỉ ràng buộc `cards.length` trong khoảng 1–5 (dòng ~131–137), không
-  hardcode con số 3 ở đâu khác (`TheoryCard.tsx`/`LessonPlayer.tsx`
-  đều lấy `total = lesson.cards.length` động) — nên đổi từ "luôn đúng
-  3 thẻ" sang "1–5 thẻ tuỳ nội dung" **không cần sửa code**, chỉ cần
-  cập nhật quy ước nội dung (đã cập nhật `CLAUDE.md`).
+- Mỗi bài học hiện có `lesson.cards: {id, heading, body}[]`; ban đầu
+  quy ước ở `CLAUDE.md` §Content authoring rules ghi cứng "3 thẻ lý
+  thuyết", và `src/lib/contentValidation.ts` (dòng ~131–137) chặn cứng
+  `cards.length > 5`. `TheoryCard.tsx`/`LessonPlayer.tsx` đều lấy
+  `total = lesson.cards.length` động nên không cần đổi UI. Sau 2 lần
+  điều chỉnh theo yêu cầu người dùng (đầu tiên bỏ ràng buộc "luôn 3
+  thẻ" → 1–5 thẻ tuỳ nội dung; sau đó nâng trần lên 1–25) —
+  `contentValidation.ts` đã sửa để chặn ở `> 25` thay vì `> 5`.
+  `CLAUDE.md` đã cập nhật theo đúng giới hạn mới.
 - Sau FEATURE-011, mỗi câu hỏi có `category: 'theory' | 'calculation'`
   — 641 câu theory / 412 câu calculation trên 1053 câu. Nhiệm vụ này
   **không đổi câu hỏi**, chỉ đổi `cards` (mở rộng `body` thẻ có sẵn
@@ -48,7 +49,7 @@ hoặc thêm thẻ mới (tối đa 5 thẻ/bài, xem mục 3).
 ## 3. Assumptions (đã chốt với người dùng 2026-07-10)
 
 - **Hình thức bổ sung (đã điều chỉnh 2026-07-10 sau đợt thí điểm)**:
-  không còn cố định giữ đúng 3 thẻ. Số thẻ mỗi bài dao động 1–5 (giới
+  không còn cố định giữ đúng 3 thẻ. Số thẻ mỗi bài dao động 1–25 (giới
   hạn cứng của schema, xem `src/lib/contentValidation.ts`) tuỳ độ dài
   và số chủ đề nâng cao thực sự cần thêm. Khi một mảng kiến thức nâng
   cao đủ dài/độc lập (ví dụ một kĩ thuật biện luận riêng), **tách
@@ -235,7 +236,7 @@ Agent(subagent_type="codex:codex-rescue",
       prompt="--cwd /data/Projects/Hoa_hoc_THCS --write --model gpt-5.5
               <task: bổ sung kiến thức nâng cao cho lesson <id> trong
               content/units/<file>.json — mở rộng body thẻ có sẵn
-              hoặc thêm thẻ mới, tối đa 5 thẻ/bài>")
+              hoặc thêm thẻ mới, tối đa 25 thẻ/bài>")
 ```
 
 Yêu cầu cụ thể trong prompt cho mỗi bài:
