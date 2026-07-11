@@ -141,3 +141,18 @@ For these, run both Codex and Gemini review in parallel before committing.
 - Never accept agent output based only on its summary — always read the diff.
 - Never skip validation because an agent reports tests passed.
 - Never work directly on `main`; always use `feature/<FEATURE-ID>` branches.
+
+## Communication style during batch/long-running work
+
+- Khi thực hiện công việc lặp lại theo lô (ví dụ chạy tuần tự nhiều
+  bài học trong FEATURE-012), **không tường thuật từng bước trung
+  gian** (không cần báo "Codex đang chạy...", "Gemini tìm thấy...",
+  từng lần fact-check, từng lựa chọn thẻ...). Cứ chạy đúng quy trình
+  đã duyệt (đọc diff, validate, chọn lọc, commit) và lưu chi tiết vào
+  commit message / file dự trữ — đó là nơi lưu vết, không phải chat.
+- Chỉ nhắn người dùng khi: (1) thực sự cần xác nhận/quyết định (ví dụ
+  phát hiện lỗi không tự sửa được, hoặc một quyết định phạm vi mới
+  chưa có tiền lệ), hoặc (2) báo cáo tóm tắt theo mốc lớn (ví dụ xong
+  một unit, hoặc xong toàn bộ batch) — không báo cáo sau mỗi bài nhỏ.
+- Không hỏi lại những câu đã có câu trả lời rõ ràng trong plan đã
+  duyệt hoặc trong bộ nhớ dự án.
