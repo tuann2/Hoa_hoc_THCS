@@ -107,7 +107,7 @@ xong cả unit.
 
 - [x] `a2-l1` — Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ
 - [x] `a2-l2` — Oxit: phân loại, gọi tên (mở đầu)
-- [ ] `a2-l3` — Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp
+- [x] `a2-l3` — Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp
 
 ### A3 · Hiđro – Nước (`a3-hidro-nuoc`)
 

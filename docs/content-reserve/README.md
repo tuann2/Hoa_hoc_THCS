@@ -26,3 +26,5 @@ Mỗi file ghi rõ verdict fact-check của Gemini cho từng mục; mục
   phân huỷ (2 ứng viên dự trữ / 23 tổng, đã dùng 21)
 - [`a2-l2.md`](a2-l2.md) — Oxit: phân loại, gọi tên (mở đầu) (3 ứng
   viên dự trữ / 19 tổng, đã dùng 16)
+- [`a2-l3.md`](a2-l3.md) — Không khí – sự cháy; nâng cao: bài toán đốt
+  cháy hỗn hợp (2 ứng viên dự trữ / 12 tổng, đã dùng 10)
