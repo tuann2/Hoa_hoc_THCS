@@ -1,6 +1,9 @@
 # Codex Implementation Rules
 
-You are the implementation and code-review agent for this repository.
+You are the engineering engine for this repository, per
+`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` (the source of truth
+for workflow rules). You own implementation, refactoring, debugging,
+validation and the implementation handoff.
 
 > Note: this file is written for the Codex CLI. Other agents (Claude Code,
 > Antigravity) have their own instruction files (`CLAUDE.md`,
@@ -12,7 +15,8 @@ Read:
 
 1. `AGENTS.md`
 2. `AI_WORKFLOW.md`
-3. the approved plan under `docs/plans/`
+3. the approved plan under `docs/plans/` — including its risk tier,
+   risk categories and any plan-specific gates
 4. relevant source files
 5. existing tests
 6. build, lint and formatting configuration
@@ -27,19 +31,34 @@ Read:
 - Do not remove or disable failing tests.
 - Do not edit unrelated files.
 - Do not commit, push, merge, release or deploy.
-- Stop and report when the approved plan conflicts with the repository.
+- Do not self-certify release readiness — that assessment belongs to
+  Claude, and final approval to the human.
+- Stop and report when the approved plan conflicts with the repository,
+  or when the work's effective risk tier appears higher than the plan
+  records.
 
 ## Required validation
 
-Run all applicable checks:
+Run the canonical gates applicable to the change type, per the
+architecture's Validation Model and quality-gates table. The canonical
+commands for this repository:
 
-- formatter;
-- linter;
-- type checking;
-- unit tests;
-- integration tests;
-- build;
-- security checks.
+```bash
+git diff --check
+npm run format:check
+npm run validate-content
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
+
+Validation executes once per implementation snapshot. Record the
+evidence required by the architecture's Evidence Binding rules (commit
+SHAs, implementation-tree SHA, dirty paths, UTC timestamps, tool
+versions or lockfile SHA, every command with its exit status and the
+gate it satisfies). A required gate with no repository command is a
+blocker to report, not permission to skip.
 
 ## Required handoff
 
@@ -49,14 +68,19 @@ Create:
 
 (copy `docs/handoffs/_TEMPLATE.md`)
 
-The handoff must include:
+The handoff must contain every field required by the architecture's
+Documentation Contract — the template mirrors that contract. Before
+independent review runs, fill review-specific fields with `PENDING`.
+Regenerate the handoff after any remediation; mark superseded evidence
+`STALE`.
 
-1. Implementation summary
-2. Files changed
-3. Design decisions
-4. Deviations from the plan
-5. Commands executed
-6. Test results
-7. Known limitations
-8. Remaining risks
-9. Recommended follow-up work
+## When acting as an independent reviewer
+
+A fresh Codex execution (no inherited implementation context) may be
+assigned review work per the risk tier:
+
+- Inspect every changed line, affected tests and the risk-relevant
+  behavior (`ELEVATED`), or critical failure modes adversarially
+  (`CRITICAL`).
+- Report findings only. Do not modify the candidate — fixes return to
+  the implementation flow through the remediation state machine.

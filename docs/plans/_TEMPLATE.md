@@ -6,6 +6,11 @@
 - Owner: Claude Code
 - Approved by:
 - Approved date:
+- Risk tier: <!-- NORMAL | ELEVATED | CRITICAL, per the architecture's Risk Model -->
+- Risk categories: <!-- applicable categories, e.g. "numeric business logic", "public API"; "none" if NORMAL -->
+- Escalation rationale: <!-- why this tier; "n/a" if lowest plausible tier -->
+- Change type: <!-- per the architecture's quality-gates table: Documentation only | Learning content or content schema | Application source or runtime config | Tests only | Dependencies or lockfiles | Public API or complex/numeric logic | Auth, security or permissions | Migration or destructive operation | Infrastructure or deployment -->
+- Quality gates: <!-- canonical commands required for this change type, per the architecture's Validation Model; a required gate with no repository command is a blocker, not permission to skip -->
 
 ## 1. Objective
 
