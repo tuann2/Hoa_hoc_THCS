@@ -91,7 +91,7 @@ xong cả unit.
 - [x] `a1-l5` — Phản ứng hoá học; định luật bảo toàn khối lượng; cân bằng PTHH
 - [x] `a1-l6` — Mol – khối lượng mol – thể tích mol khí; tỉ khối chất khí
 - [x] `a1-l7` — Tính theo CTHH và PTHH: %m, chất dư – chất hết, hiệu suất
-- [ ] `a1-l8` — Nâng cao: biện luận tìm nguyên tố/CTHH; cân bằng phản ứng phức tạp
+- [x] `a1-l8` — Nâng cao: biện luận tìm nguyên tố/CTHH; cân bằng phản ứng phức tạp
 - [ ] `a1-l9` — Nâng cao: bài toán hỗn hợp; tăng – giảm khối lượng; bảo toàn
 
 ### A2 · Oxi – Không khí (`a2-oxi-khong-khi`)

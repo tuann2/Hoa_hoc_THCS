@@ -1366,6 +1366,46 @@
           "id": "a1-l8-c3",
           "heading": "Cân bằng phương trình hoá học phức tạp",
           "body": "Với phản ứng có nhiều nguyên tố, nên ưu tiên cân bằng nguyên tố xuất hiện ít lần trước (thường là kim loại), để nguyên tố oxi cân bằng sau cùng. Có thể dùng hệ số phân số tạm thời rồi quy đồng mẫu số chung để đưa về hệ số nguyên."
+        },
+        {
+          "id": "a1-l8-c4",
+          "heading": "Nâng cao: Từ % khối lượng đến công thức phân tử",
+          "body": "Với hợp chất AxBy, chỉ số x,y phải là số nguyên dương tối giản. Đổi % khối lượng thành tỉ lệ mol: x:y = (%A/nguyên tử khối A):(%B/nguyên tử khối B), chia cho số nhỏ nhất, nhân với 2/3/4 nếu cần để được tỉ lệ nguyên — kết quả là CÔNG THỨC ĐƠN GIẢN NHẤT, chưa chắc là công thức phân tử thật.\nMuốn chốt công thức phân tử cần thêm phân tử khối hoặc tỉ khối khí: tính khối lượng mol của công thức đơn giản nhất, lấy k = phân tử khối thật / khối lượng mol công thức đơn giản nhất, công thức phân tử = công thức đơn giản nhất × k. Ví dụ hiđrocacbon có 85,71% C và 14,29% H, tỉ khối so với H2 là 14: tỉ lệ C:H ≈ 1:2 cho công thức đơn giản nhất CH2 (M=14); tỉ khối cho M thật = 2×14 = 28, k=28/14=2, công thức phân tử là C2H4, không phải CH2."
+        },
+        {
+          "id": "a1-l8-c5",
+          "heading": "Nâng cao: Biện luận nguyên tố từ phản ứng và từ muối",
+          "body": "Khi kim loại M hoá trị n tác dụng với axit loãng giải phóng H2 (2M + 2nHCl → 2MCln + nH2), có quan hệ nH2 = n×nM/2, suy ra M = n×m kim loại/(2×nH2) — thử n=I,II,III rồi đối chiếu bảng nguyên tử khối. Ví dụ 5,4 g kim loại tạo 6,72 lít H2 đktc: nH2=0,30 mol, M=9n; với n=III thì M=27 khớp Al (n=I,II cho 9 hoặc 18, không phù hợp kim loại quen thuộc).\nVới muối, xem gốc axit như một khối có hoá trị riêng (Cl: I, NO3: I, SO4: II, CO3: II, PO4: III) — tổng hoá trị hai bên phải bằng nhau. Ví dụ muối sunfat kim loại hoá trị III dạng M2(SO4)3, nếu phân tử khối 342 thì 2M+3×96=342, suy ra M=27, kim loại Al. Nhìn gốc SO4 như một khối giúp không bị rối bởi 12 nguyên tử O trong công thức."
+        },
+        {
+          "id": "a1-l8-c6",
+          "heading": "Nâng cao: Công thức nhóm nguyên tử và tinh thể ngậm nước",
+          "body": "Ngoài oxit, đề HSG hay dùng công thức có nhóm nguyên tử: kim loại M hoá trị n tạo hiđroxit M(OH)n; gốc axit A hoá trị n tạo axit HnA; muối axit vẫn còn H trong gốc (HCO3, HSO4 đều hoá trị I). Tính phân tử khối phải nhân cả nhóm trong ngoặc — ví dụ M(OH)3 có phân tử khối 78 thì M+3×17=78, suy ra M=27, đó là Al(OH)3; quên nhân cả nhóm OH ba lần sẽ sai hoàn toàn.\nTinh thể ngậm nước dạng muối.nH2O: biết %H2O hoặc khối lượng giảm khi nung, đặt n rồi lập phương trình khối lượng (18n là phần nước, phần muối khan giữ nguyên). Ví dụ CuSO4.nH2O có %H2O=36,0%, M(CuSO4)=160: 18n/(160+18n)=0,36, giải ra n=5, công thức CuSO4.5H2O."
+        },
+        {
+          "id": "a1-l8-c7",
+          "heading": "Nâng cao: Xử lý số liệu làm tròn và dữ kiện kiểm tra",
+          "body": "Đề thi thường làm tròn % đến 1-2 chữ số thập phân nên tỉ lệ mol có thể ra 1,99 hay 2,98 thay vì đúng 2 hoặc 3 — không kết luận sai ngay, hãy quy về tỉ lệ nguyên nhỏ nhất hợp lí rồi kiểm tra lại bằng phân tử khối hoặc %tính ngược. Ví dụ Al2O3 có %Al=52,94%, %O=47,06%: tỉ lệ mol Al:O ≈ 1,961:2,941, chia số nhỏ hơn ra gần 1:1,5, nhân đôi thành 2:3 — kết quả hợp lí Al2O3.\nKhông phải mọi dữ kiện đều dùng để lập phương trình chính — có dữ kiện chỉ để kiểm tra nghiệm. Nếu hai dữ kiện cùng dẫn đến một công thức thì nghiệm chắc hơn; nếu mâu thuẫn phải xem lại giả thiết. Ví dụ R2O3 có phân tử khối 102 cho R=27; dữ kiện %R=52,94% không cần để tìm R nữa nhưng dùng để kiểm tra: 2×27/102×100%=52,94%, khớp — kiểu dữ kiện kép này buộc học sinh kiểm tra chứ không chỉ giải một phương trình."
+        },
+        {
+          "id": "a1-l8-c8",
+          "heading": "Nâng cao: Lập bảng thử hoá trị và loại nghiệm vô lí",
+          "body": "Khi oxit của kim loại M chưa biết hoá trị, đừng đoán ngay công thức — lập bảng theo hoá trị thường gặp (I→M2O, II→MO, III→M2O3, IV→MO2), mỗi dòng tính nguyên tử khối M từ dữ kiện %/phân tử khối rồi loại các dòng cho M âm, quá nhỏ/lớn hoặc không gần nguyên tử khối quen thuộc. Ví dụ oxit có %O=30%: nếu M hoá trị II, 16/(M+16)=0,30 → M≈37,3 không khớp kim loại quen thuộc; nếu hoá trị III, 48/(2M+48)=0,30 → M=56 khớp Fe, công thức Fe2O3.\nSau khi tính được nguyên tử khối theo từng trường hợp, luôn kiểm tra: có gần giá trị quen thuộc không, hoá trị có phù hợp công thức không, kim loại/phi kim có đúng loại hợp chất đề nêu không, và %tính ngược có khớp dữ kiện không — bước kiểm tra hoá học quan trọng không kém bước giải phương trình."
+        },
+        {
+          "id": "a1-l8-c9",
+          "heading": "Nâng cao: Tìm oxit từ khử kim loại và biện luận phi kim qua oxit cao nhất",
+          "body": "Nếu khử oxit kim loại bằng H2/CO thu được kim loại, khối lượng giảm chính là khối lượng oxi tách ra. Từ mO và mM, đổi ra số mol rồi lấy tỉ lệ M:O suy ra công thức oxit. Ví dụ khử hoàn toàn 16,0 g oxit M2O3 thu 11,2 g kim loại: mO=4,8 g, nO=0,30 mol; với M2O3, nM=2/3×nO=0,20 mol; M=11,2/0,20=56, oxit là Fe2O3.\nVới phi kim, oxit cao nhất phản ánh hoá trị cao của nguyên tố với oxi: S(VI)→SO3, P(V)→P2O5, C(IV)→CO2, N(V)→N2O5, Cl(VII)→Cl2O7 — không áp dụng máy móc mẫu oxit kim loại I/II/III. Ví dụ oxit cao nhất X2O5 có M=108: 2X+80=108, X=14, phù hợp N (N2O5). Với oxit MxOy, %oxi = 16y/(xM+16y)×100% — nếu chưa biết x:y, thử các tỉ lệ oxit thường gặp rồi đối chiếu M (oxit M2O5 có %O=56,34% cho M≈31, phù hợp P, công thức P2O5)."
+        },
+        {
+          "id": "a1-l8-c10",
+          "heading": "Nâng cao: Cân bằng bằng hệ số chữ và nhóm nguyên tử",
+          "body": "Với phản ứng nhiều chất, đặt hệ số chữ a,b,c,d rồi lập phương trình bảo toàn từng nguyên tố, chọn một ẩn thuận tiện (không nhất thiết bằng 1) để các hệ số còn lại ra số nguyên nhanh hơn. Ví dụ cân bằng FeS2 + O2 → Fe2O3 + SO2: đặt aFeS2+bO2→cFe2O3+dSO2; bảo toàn Fe: a=2c, S: 2a=d, O: 2b=3c+2d; chọn c=2 thì a=4, d=8, b=11: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2.\nNếu một nhóm nguyên tử (SO4, CO3, NO3, PO4, OH) xuất hiện nguyên vẹn ở hai vế, cân bằng cả nhóm như một đơn vị thay vì tách từng nguyên tố — rút ngắn nhiều phản ứng trao đổi (Al2(SO4)3 + 3BaCl2 → 3BaSO4 + 2AlCl3, giữ nguyên nhóm SO4). Với đơn chất hai nguyên tử (O2, H2, Cl2) dễ gây hệ số phân số nếu số nguyên tử phía kia lẻ — tạm dùng hệ số phân số rồi nhân đôi toàn bộ phương trình (C2H6+O2→CO2+H2O cho O2 hệ số 7/2, nhân đôi: 2C2H6+7O2→4CO2+6H2O)."
+        },
+        {
+          "id": "a1-l8-c11",
+          "heading": "Nâng cao: Cân bằng phản ứng oxi hoá-khử và tự oxi hoá-tự khử",
+          "body": "Một số phản ứng HSG cân bằng được bằng cách nhìn thay đổi số oxi hoá: chất tăng số oxi hoá nhường electron, chất giảm số oxi hoá nhận electron, số electron nhường-nhận phải bằng nhau; đặt hệ số chính theo electron rồi cân bằng các nguyên tố còn lại bằng bảo toàn nguyên tố. Ví dụ KMnO4+HCl→KCl+MnCl2+Cl2+H2O: Mn giảm từ +7 xuống +2 (nhận 5e); 2Cl trong HCl tăng lên 0 trong Cl2 (nhường 2e); cân bằng electron cho 2Mn và 5Cl2, rồi cân bằng K,H,O: 2KMnO4+16HCl→2KCl+2MnCl2+5Cl2+8H2O.\nCó phản ứng trong đó CÙNG một nguyên tố vừa tăng vừa giảm hoá trị (tự oxi hoá-tự khử) — phải tách hai vai trò rồi cân bằng theo từng sản phẩm. Ví dụ Cl2+NaOH→NaCl+NaClO+H2O: một Cl về NaCl, một Cl về NaClO nên đặt hệ số NaCl và NaClO bằng nhau, cân bằng tiếp Na,O,H: Cl2+2NaOH→NaCl+NaClO+H2O.\nSau khi cân bằng xong, luôn kiểm tra bằng bảng đếm nguyên tử từng nguyên tố hai vế — với 2KMnO4+16HCl→2KCl+2MnCl2+5Cl2+8H2O: K(2=2), Mn(2=2), O(8=8), H(16=16), Cl(16=2+4+10=16), khớp hoàn toàn."
         }
       ],
       "questions": [
