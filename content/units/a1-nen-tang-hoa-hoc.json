@@ -1580,6 +1580,41 @@
           "id": "a1-l9-c3",
           "heading": "Bảo toàn nguyên tố và bảo toàn khối lượng",
           "body": "Số mol một nguyên tố không đổi qua các phản ứng (bảo toàn nguyên tố). Tổng khối lượng chất tham gia bằng tổng khối lượng sản phẩm (bảo toàn khối lượng).\nHai định luật này giúp tính nhanh mà không cần viết đủ mọi phương trình trung gian."
+        },
+        {
+          "id": "a1-l9-c4",
+          "heading": "Nâng cao: Chọn ẩn và lập hệ phương trình cho bài hỗn hợp",
+          "body": "Không phải lúc nào ẩn cũng nên là số mol ban đầu — nếu có chất dư/chất trơ/phản ứng không hoàn toàn, hãy chọn ẩn là số mol THỰC SỰ đã phản ứng. Với hai kim loại cùng tạo H2 (đặt x,y là số mol từng kim loại): phương trình khối lượng M1.x+M2.y=m hỗn hợp, phương trình khí dựa vào hoá trị (kim loại hoá trị n tạo n/2 mol H2 trên 1 mol kim loại) — ví dụ Mg tạo 1 mol H2/1 mol Mg, Al tạo 1,5 mol H2/1 mol Al, nên nH2=x+1,5y (lỗi hay gặp: cho cả hai cùng tỉ lệ 1:1, thiếu hệ số 1,5 của Al).\nMột hệ phương trình tốt phải gồm các phương trình ĐỘC LẬP — trước khi giải nên tự hỏi mỗi dữ kiện đang cung cấp thông tin mới về đại lượng nào. Khi hỗn hợp có chất không phản ứng (ví dụ Fe và Cu gặp HCl dư: chỉ Fe tạo H2 và FeCl2, Cu không đổi), dữ kiện sản phẩm chỉ thuộc chất phản ứng — từ nH2 suy nFe, tính mFe rồi lấy m hỗn hợp trừ mFe để ra mCu; không được chia đều khối lượng hỗn hợp nếu chưa chứng minh cả hai cùng phản ứng."
+        },
+        {
+          "id": "a1-l9-c5",
+          "heading": "Nâng cao: Hỗn hợp phức tạp — kim loại + hợp chất, dùng lượng axit tiêu thụ",
+          "body": "Khi hỗn hợp có kim loại, oxit kim loại và muối cacbonat cùng tác dụng với axit, mỗi chất cho dấu hiệu khác nhau: kim loại tạo H2, muối cacbonat tạo CO2, oxit chỉ tạo muối và nước (không khí). Ví dụ Mg, MgO, MgCO3 gặp HCl dư: đổi riêng VH2 và VCO2 (đktc) bằng n=V/22,4 để tìm nMg và nMgCO3, dùng khối lượng hỗn hợp còn lại để tìm MgO.\nNếu đề cho số mol axit đã phản ứng, đó là phương trình rất mạnh vì mỗi loại chất tiêu thụ axit khác nhau: kim loại hoá trị II và oxit MO đều tiêu thụ 2 mol HCl/1 mol chất; muối MCO3 tiêu thụ 2 mol HCl/1 mol muối và tạo 1 mol CO2. Viết phương trình axit tổng (nHCl = tổng HCl từng chất tiêu thụ) — không chỉ dựa vào khí vì oxit/một số bazơ không tạo khí nhưng vẫn làm mất axit."
+        },
+        {
+          "id": "a1-l9-c6",
+          "heading": "Nâng cao: Phương pháp trung bình và biện luận khoảng giá trị",
+          "body": "Với hỗn hợp nhiều chất CÙNG LOẠI quan hệ với dữ kiện chung, dùng khối lượng mol trung bình Mtb = m hỗn hợp/n hỗn hợp — Mtb luôn nằm giữa M nhỏ nhất và lớn nhất của các chất, dùng để kiểm tra đáp số (hỗn hợp Mg,Zn hoá trị II tạo H2 tỉ lệ 1:1 với HCl dư: n kim loại=nH2, Mtb=m/nH2 phải nằm trong khoảng 24 đến 65).\nBiện luận khoảng giá trị giúp phát hiện sai nhanh: Mtb phải giữa M(A) và M(B); %khối lượng phải từ 0-100%; số mol phản ứng không vượt số mol ban đầu (nếu %Cu trong hỗn hợp Fe-Cu ra 120% thì chắc chắn đã tính sai).\nKHÔNG dùng trung bình khi các chất không cùng kiểu quan hệ với dữ kiện chung — Fe và Cu gặp HCl dư chỉ Fe tạo H2, không thể lấy Mtb=m hỗn hợp/nH2 rồi coi là trung bình của cả Fe và Cu; phải tách chất phản ứng/không phản ứng. Khi đề không nói axit dư hay phản ứng hoàn toàn, phải kiểm tra chất giới hạn bằng tỉ lệ mol theo PTHH, đặt ẩn là số mol đã phản ứng chứ không mặc định bằng số mol ban đầu."
+        },
+        {
+          "id": "a1-l9-c7",
+          "heading": "Nâng cao: Tăng giảm khối lượng — thanh kim loại và nhiều ion",
+          "body": "Khi nhúng kim loại A vào dung dịch muối B, độ đổi khối lượng thanh = khối lượng B bám − khối lượng A tan, phải dùng đúng tỉ lệ mol trong phương trình (không chỉ lấy M(B)−M(A) khi hệ số không phải 1:1). Ví dụ Fe+CuSO4→FeSO4+Cu (tỉ lệ 1:1): mỗi mol Fe làm thanh tăng 64−56=8 g. Nhưng 2Al+3CuSO4→Al2(SO4)3+3Cu: mỗi mol Al tan làm 1,5 mol Cu bám, thanh tăng 1,5×64−27=69 g — nhiều học sinh sai vì máy móc lấy 64−27.\nNếu dung dịch chứa nhiều ion kim loại (ví dụ Cu2+ và Ag+), kim loại mạnh hơn (Fe) có thể đẩy cả hai ra, dựa vào dãy hoạt động hoá học và chất giới hạn để biết ion nào phản ứng hết trước. Độ đổi khối lượng = tổng khối lượng kim loại bám − khối lượng kim loại tan (không gộp thành một hiệu M duy nhất): tăng khối lượng = mAg bám + mCu bám − mFe tan."
+        },
+        {
+          "id": "a1-l9-c8",
+          "heading": "Nâng cao: Tăng giảm khối lượng — kết tủa, nung chất rắn và khối lượng dung dịch",
+          "body": "Không chỉ phản ứng thế kim loại mới dùng tăng giảm khối lượng: trong phản ứng tạo kết tủa (BaCl2+Na2SO4→BaSO4↓+2NaCl), khối lượng dung dịch sau khi lọc = tổng khối lượng hai dung dịch ban đầu − khối lượng kết tủa (trừ thêm khối lượng khí nếu có khí thoát ra). Khi nung muối cacbonat/hiđroxit không tan, khối lượng chất rắn giảm đúng bằng phần khí/hơi thoát ra (CaCO3→CaO+CO2 giảm 44 g/mol; CuSO4.5H2O nung mất 5 mol H2O, giảm 90 g/mol) — khối lượng ban đầu = khối lượng chất rắn sau + khối lượng khí/hơi thoát ra.\nCông thức tổng quát cho khối lượng dung dịch sau phản ứng: m dung dịch sau = m dung dịch ban đầu + m chất thêm vào − m khí thoát ra − m kết tủa tách ra − m kim loại bám ra khỏi dung dịch (phần kim loại mới bám lên thanh không còn nằm trong dung dịch)."
+        },
+        {
+          "id": "a1-l9-c9",
+          "heading": "Nâng cao: Bảo toàn nguyên tố/nhóm/kim loại qua nhiều bước",
+          "body": "Nếu một nguyên tố kim loại đi qua nhiều hợp chất liên tiếp mà không mất mát, số mol nguyên tử kim loại được bảo toàn — có thể bỏ qua các phương trình trung gian. Ví dụ Fe→FeCl2→Fe(OH)2→FeO: nFe ban đầu = nFe trong mỗi hợp chất. Với Al→AlCl3→Al(OH)3→Al2O3: chú ý Al2O3 chứa 2 nguyên tử Al trong một công thức, nên nAl2O3 = nAl ban đầu/2 (lỗi thường gặp là quên chỉ số 2 này).\nVới nhóm nguyên tử bền không bị biến đổi (SO4, NO3), bảo toàn cả nhóm giúp giảm số phương trình: dung dịch chứa Na2SO4 và K2SO4 tác dụng BaCl2 dư tạo BaSO4, số mol BaSO4 = tổng số mol nhóm SO4 ban đầu. Khi nhóm BỊ biến đổi thành khí (ví dụ CO3 gặp axit tạo CO2), không còn nguyên nhóm nữa — khi đó bảo toàn theo NGUYÊN TỐ (C) thay vì bảo toàn nhóm.\nVới phản ứng axit tạo muối, gốc axit thường đi nguyên vẹn vào muối: mỗi mol H2SO4 cung cấp 1 mol nhóm SO4 (nếu toàn bộ đi vào BaSO4 thì nBaSO4=nH2SO4); tổng số mol Cl trong các muối clorua bằng nHCl đã phản ứng, dù số mol từng muối còn phụ thuộc hoá trị kim loại."
+        },
+        {
+          "id": "a1-l9-c10",
+          "heading": "Nâng cao: Các lỗi hay gặp trong bài hỗn hợp và bảo toàn",
+          "body": "Lỗi cần kiểm tra trước khi chốt đáp số: dùng toàn bộ khối lượng hỗn hợp cho chất duy nhất tạo khí; quên chất không phản ứng; dùng 22,4 cho chất không phải khí; quên đổi ml sang lít trước khi tính n=V/22,4; lấy hiệu M(kim loại bám)−M(kim loại tan) dù phương trình không có tỉ lệ 1:1; cộng nhầm khối lượng kết tủa vào dung dịch sau lọc thay vì trừ ra.\nMột lỗi tinh vi khác là bảo toàn nguyên tố sai đối tượng: phải bảo toàn số mol NGUYÊN TỬ, không phải số mol hợp chất — 1 mol Al2O3 chứa 2 mol Al, nên khi bảo toàn Al phải nhân/chia theo đúng chỉ số nguyên tử trong công thức."
         }
       ],
       "questions": [
