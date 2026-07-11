@@ -11,7 +11,7 @@
 
 Bổ sung kiến thức nâng cao (mức HSG cấp huyện/tỉnh) vào thẻ lý thuyết
 của mỗi bài học (81 bài `available` trên 17 unit), do Codex (model
-`gpt-5.5`) và Gemini (`agy`) cùng nghiên cứu, Claude tổng hợp — xử lý
+`gpt-5.6-terra`) và Gemini (`agy`) cùng nghiên cứu, Claude tổng hợp — xử lý
 **tuần tự từng bài một**, không xử lý hàng loạt, để đảm bảo nội dung
 được đào sâu, chính xác và không bị lặp/generic. Số thẻ mỗi bài không
 cố định 3 — tuỳ độ dài/số chủ đề nâng cao mà mở rộng `body` thẻ có sẵn
@@ -35,10 +35,12 @@ hoặc thêm thẻ mới (tối đa 25 thẻ/bài, xem mục 3).
 - Danh sách 81 bài available, đúng thứ tự xử lý A1→A12 rồi B1→B5, đã
   liệt kê đầy đủ ở mục 4 (checklist tracking).
 - Công cụ đã có sẵn trong dự án (theo `CLAUDE.md` §Agent delegation):
-  - `codex:codex-rescue` — cần chỉ định `--model gpt-5.5` (xác nhận
-    qua `codex-companion.mjs setup --json` và
-    `~/.codex/models_cache.json`: model cao nhất thực tế hiện có là
-    `gpt-5.5`, không tồn tại "5.6").
+  - `codex:codex-rescue` — cần chỉ định `--model gpt-5.6-terra`. Ban
+    đầu (10/07) cache model chỉ thấy tới `gpt-5.5`, không có "5.6";
+    sau khi cache CLI tự làm mới (11/07), họ `gpt-5.6` (sol/terra/
+    luna) xuất hiện — đã đổi từ `gpt-5.5` (dùng cho 9 bài A1) sang
+    `gpt-5.6-terra` theo lựa chọn của người dùng cho các bài từ A2 trở
+    đi. Xác nhận hoạt động qua `codex exec -m gpt-5.6-terra`.
   - `agy --model "Gemini 3.5 Flash (High)"` — dùng để nghiên cứu độc
     lập + fact-check, chạy đồng bộ (không background).
 - `scripts/validate-content.ts` hiện chỉ kiểm tra shape JSON (số thẻ,
@@ -59,8 +61,11 @@ hoặc thêm thẻ mới (tối đa 25 thẻ/bài, xem mục 3).
   authoring rules đã cập nhật theo quy tắc này.
 - **Thứ tự xử lý**: Vô cơ trước (A1→A12), rồi Hữu cơ (B1→B5), đúng thứ
   tự chương trình.
-- **Model Codex**: `gpt-5.5` (frontier hiện có, không phải "5.6" —
-  không tồn tại trong danh sách model thực tế của Codex CLI đã cài).
+- **Model Codex**: `gpt-5.6-terra`, reasoning effort `medium` (đổi từ
+  `gpt-5.5` sau khi cache model CLI tự làm mới ngày 11/07 và lộ ra họ
+  `gpt-5.6` — người dùng chọn `terra` + effort `medium`, dùng từ bài
+  A2 trở đi; 9 bài A1 đã soạn bằng `gpt-5.5` mặc định trước đó, không
+  cần chạy lại).
 - **Xử lý tuần tự từng bài** (không batch song song nhiều bài), để mỗi
   bài được nghiên cứu/viết đủ sâu thay vì lướt nhanh cho đủ số lượng.
 - **Phạm vi nâng cao = mức HSG cấp huyện/tỉnh**, nhất quán với quy ước
@@ -229,11 +234,12 @@ xong cả unit.
 Mỗi bài học đi qua đúng trình tự sau (lặp lại cho từng bài trong
 checklist, KHÔNG chạy song song nhiều bài để giữ chất lượng):
 
-### Bước 1 — Codex soạn thảo (model `gpt-5.5`)
+### Bước 1 — Codex soạn thảo (model `gpt-5.6-terra`, effort `medium`)
 
 ```
 Agent(subagent_type="codex:codex-rescue",
-      prompt="--cwd /data/Projects/Hoa_hoc_THCS --write --model gpt-5.5
+      prompt="--cwd /data/Projects/Hoa_hoc_THCS --write --model gpt-5.6-terra
+              --effort medium
               <task: nghiên cứu và soạn CÀNG NHIỀU kiến thức nâng cao
               càng tốt cho lesson <id>, viết ra file nháp riêng trước
               (không giới hạn số thẻ ở bước soạn thảo)>")
