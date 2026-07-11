@@ -17,17 +17,47 @@
         {
           "id": "a3-l1-c1",
           "heading": "Tính chất của hiđro",
-          "body": "H2 là chất khí không màu, không mùi, nhẹ nhất trong các khí (M = 2), ít tan trong nước.\nH2 tác dụng với oxi (nổ khi tỉ lệ đúng): 2H2 + O2 -> 2H2O.\nH2 khử được nhiều oxit kim loại ở nhiệt độ cao: H2 + CuO (nhiệt độ) -> Cu + H2O."
+          "body": "H2 là chất khí không màu, không mùi, nhẹ nhất trong các khí (M = 2), ít tan trong nước.\nH2 tác dụng với oxi (nổ khi tỉ lệ đúng): 2H2 + O2 -> 2H2O.\nH2 khử được nhiều oxit kim loại ở nhiệt độ cao: H2 + CuO (nhiệt độ) -> Cu + H2O.\nTỉ khối của H2 so với không khí: d(H2/kk) = 2/29 ≈ 0,069, tức H2 nhẹ hơn không khí khoảng 14,5 lần — là khí nhẹ nhất trong các chất khí. Do dễ cháy nổ, H2 không còn dùng bơm khinh khí cầu (thay bằng khí heli không cháy); H2 được dùng làm nhiên liệu (đèn xì oxi-hiđro hàn cắt kim loại, nhiệt độ ngọn lửa ~3000°C), nhiên liệu tên lửa và nguyên liệu sản xuất amoniac NH3.\nNhận biết khí H2: đưa que đóm đang cháy lại gần, H2 cháy với ngọn lửa xanh nhạt kèm tiếng nổ nhỏ, êm (khi khí tinh khiết) — khác O2 (làm que đóm bùng cháy sáng) và CO2 (làm tắt que đóm). Cách khác: dẫn khí qua CuO (bột đen) nung nóng, nếu là H2 thì CuO chuyển từ đen sang đỏ (Cu) kèm hơi nước ngưng trên thành ống nghiệm."
         },
         {
           "id": "a3-l1-c2",
           "heading": "Điều chế hiđro",
-          "body": "Trong phòng thí nghiệm: cho kim loại (Zn, Fe, Al...) tác dụng với dung dịch axit (HCl, H2SO4 loãng):\nZn + 2HCl -> ZnCl2 + H2\nTrong công nghiệp: điện phân nước."
+          "body": "Trong phòng thí nghiệm: cho kim loại (Zn, Fe, Al...) tác dụng với dung dịch axit (HCl, H2SO4 loãng):\nZn + 2HCl -> ZnCl2 + H2\nTrong công nghiệp: điện phân nước.\nThu khí H2 trong phòng thí nghiệm bằng hai cách: đẩy nước (do H2 hầu như không tan trong nước, thu được khí tinh khiết hơn) hoặc đẩy không khí với miệng bình úp xuống dưới (vì H2 nhẹ hơn không khí, ngược với cách thu các khí nặng hơn không khí như CO2 phải để ngửa miệng bình lên).\nTrong công nghiệp, ngoài điện phân nước (2H2O --điện phân--> 2H2 + O2, cho H2 có độ tinh khiết rất cao — tinh khiết hơn cả H2 điều chế trong phòng thí nghiệm bằng kim loại + axit, vốn dễ lẫn hơi nước, hơi axit), người ta còn cho hơi nước đi qua than nóng đỏ hoặc khí thiên nhiên (CH4) ở nhiệt độ cao có xúc tác để tách H2 — đây là nguồn H2 giá rẻ hơn điện phân (do điện phân tốn nhiều điện năng) nên thường được ưu tiên cho sản xuất công nghiệp quy mô lớn."
         },
         {
           "id": "a3-l1-c3",
           "heading": "Phản ứng thế",
-          "body": "Phản ứng thế là phản ứng giữa đơn chất và hợp chất, trong đó nguyên tử của đơn chất thay thế nguyên tử của một nguyên tố khác trong hợp chất.\nVí dụ: Zn + 2HCl -> ZnCl2 + H2; Fe + CuSO4 -> FeSO4 + Cu."
+          "body": "Phản ứng thế là phản ứng giữa đơn chất và hợp chất, trong đó nguyên tử của đơn chất thay thế nguyên tử của một nguyên tố khác trong hợp chất.\nVí dụ: Zn + 2HCl -> ZnCl2 + H2; Fe + CuSO4 -> FeSO4 + Cu.\nCách nhận diện nhanh phản ứng thế: đơn chất + hợp chất -> đơn chất mới + hợp chất mới. So sánh: phản ứng hoá hợp cho ra một chất mới từ hai hay nhiều chất tham gia (2H2 + O2 -> 2H2O — không có hợp chất ở vế trái nên không phải phản ứng thế); phản ứng phân huỷ là một chất sinh ra hai hay nhiều chất mới (CaCO3 (nhiệt độ) -> CaO + CO2). Riêng H2 + CuO (nhiệt độ) -> Cu + H2O vừa là phản ứng thế (H2 thay thế Cu trong CuO) vừa là phản ứng oxi hoá - khử (có nhường - nhận oxi) — một phản ứng có thể được gọi tên theo nhiều tiêu chí khác nhau."
+        },
+        {
+          "id": "a3-l1-c4",
+          "heading": "Nâng cao: An toàn khi đốt khí H2",
+          "body": "Hỗn hợp khí H2 và O2 theo đúng tỉ lệ phản ứng (VH2 : VO2 = 2 : 1 theo 2H2 + O2 -> 2H2O) là hỗn hợp nổ mạnh nhất vì phản ứng cháy xảy ra tức thời trên toàn bộ thể tích, sinh nhiệt và giãn nở khí đột ngột. Do không khí có khoảng 1/5 thể tích là O2, hỗn hợp H2 với không khí cũng gây nổ nếu tỉ lệ H2 nằm trong khoảng gây nổ (khoảng 4% đến 74% thể tích H2 trong không khí).\nVì vậy trước khi đốt khí H2 thoát ra từ ống dẫn, phải thử độ tinh khiết: úp ngược một ống nghiệm nhỏ để thu khí H2 sinh ra, rồi đưa miệng ống nghiệm lại gần ngọn lửa đèn cồn. Nếu nghe tiếng nổ nhẹ, êm (tiếng \"lụp\") thì khí đã tinh khiết, có thể đốt an toàn ở đầu ống dẫn khí; nếu nghe tiếng nổ to, chói (tiếng \"bụp\" mạnh) thì khí còn lẫn nhiều không khí, chưa được đốt, cần thu và thử lại đến khi tiếng nổ nhỏ. Đây là quy tắc an toàn bắt buộc mỗi khi làm thí nghiệm đốt khí H2 trong phòng thí nghiệm."
+        },
+        {
+          "id": "a3-l1-c5",
+          "heading": "Nâng cao: Chất khử – chất oxi hoá, sự khử – sự oxi hoá",
+          "body": "Trong phản ứng H2 + CuO (nhiệt độ) -> Cu + H2O: H2 chiếm lấy nguyên tố oxi của CuO nên H2 được gọi là chất khử (chất chiếm oxi); CuO bị H2 lấy mất oxi nên CuO được gọi là chất oxi hoá (chất nhường oxi). Sự tách oxi khỏi hợp chất gọi là sự khử (CuO bị khử thành Cu); sự tác dụng của oxi với một chất gọi là sự oxi hoá (H2 bị oxi hoá thành H2O). Phản ứng có đồng thời sự khử và sự oxi hoá gọi là phản ứng oxi hoá - khử. Đây là khái niệm nền tảng ở lớp 8, mức HSG THCS chỉ cần nhận diện đúng chất khử/chất oxi hoá trong các phản ứng H2 hoặc CO khử oxit kim loại."
+        },
+        {
+          "id": "a3-l1-c6",
+          "heading": "Nâng cao: Vì sao H2 không khử được oxit kim loại mạnh",
+          "body": "H2 chỉ khử được oxit của những kim loại có tính khử yếu hơn H2 — thường là các kim loại đứng sau nhôm (Al) trong dãy hoạt động hoá học: K, Na, Ba, Ca, Mg, Al, Zn, Fe, Pb, (Cu, Hg, Ag, Au...). Các oxit kim loại mạnh như Na2O, K2O, CaO, MgO, Al2O3 có liên kết ion giữa kim loại và oxi rất bền, H2 không đủ khả năng khử dù có đun nóng. Các oxit kim loại từ Zn trở về sau (ZnO, Fe2O3, Fe3O4, PbO, CuO, Ag2O...) có liên kết kém bền hơn, H2 khử được dễ dàng khi đun nóng, tạo kim loại tự do và hơi nước. Ghi nhớ nhanh cho HSG: \"H2 (và cả CO, C) khử được oxit kim loại đứng sau Al trong dãy hoạt động hoá học\"."
+        },
+        {
+          "id": "a3-l1-c7",
+          "heading": "Nâng cao: Xác định kim loại qua khối lượng mol (từ H2 sinh ra)",
+          "body": "Dạng bài quen thuộc: cho khối lượng (hoặc số mol) một kim loại M hoá trị n tác dụng hết với axit, biết thể tích/khối lượng H2 sinh ra, yêu cầu xác định tên kim loại M. Cách giải: viết phương trình tổng quát 2M + 2nHCl -> 2MCln + nH2 (hoặc với H2SO4 loãng: 2M + nH2SO4 -> M2(SO4)n + nH2), lập tỉ lệ mol giữa M và H2 theo hệ số phương trình, từ số mol H2 đã biết suy ra số mol M, rồi tính M = m(kim loại)/n(kim loại) để so sánh với bảng nguyên tử khối và xác định tên kim loại.\nVí dụ: Cho 5,4 g một kim loại M (hoá trị III) tác dụng hết với dung dịch HCl dư, thu được 6,72 lít khí H2 (đktc). Xác định M.\nGiải: nH2 = 6,72/22,4 = 0,3 mol. Phương trình: 2M + 6HCl -> 2MCl3 + 3H2 nên nM = (2/3) x nH2 = 0,2 mol. Suy ra M = 5,4/0,2 = 27 (g/mol) — đó là nhôm (Al)."
+        },
+        {
+          "id": "a3-l1-c8",
+          "heading": "Nâng cao: H2 dư/thiếu khi khử một oxit kim loại",
+          "body": "Dạng bài: cho một lượng khí H2 xác định đi qua một oxit kim loại đơn (chỉ một oxit; hỗn hợp nhiều oxit phức tạp hơn được xét ở bài Nâng cao khử hỗn hợp oxit), cần xác định chất nào phản ứng hết, chất nào dư. Cách giải: viết phương trình, tính số mol của cả oxit và H2 đã cho, lập tỉ lệ mol thực tế so với tỉ lệ hệ số trong phương trình để xác định chất hết trước (chất có tỉ lệ mol/hệ số nhỏ hơn), từ đó tính toán theo chất đã phản ứng hết.\nVí dụ: Dẫn 4,48 lít khí H2 (đktc) qua 24 g CuO nung nóng. Sau phản ứng, chất nào còn dư và dư bao nhiêu?\nGiải: nH2 = 4,48/22,4 = 0,2 mol; nCuO = 24/80 = 0,3 mol. Phương trình H2 + CuO (nhiệt độ) -> Cu + H2O có tỉ lệ 1:1, mà nH2 (0,2) < nCuO (0,3) nên CuO dư, H2 phản ứng hết. Số mol CuO phản ứng = 0,2 mol, CuO dư = 0,3 - 0,2 = 0,1 mol, tương ứng khối lượng CuO dư = 0,1 x 80 = 8 g."
+        },
+        {
+          "id": "a3-l1-c9",
+          "heading": "Nâng cao: Các lỗi sai thường gặp khi làm bài về H2",
+          "body": "Một số lỗi HSG hay mắc khi làm bài liên quan đến tính chất, điều chế H2 và phản ứng khử oxit:\n- Nhầm phản ứng thế với phản ứng hoá hợp: cho rằng 2H2 + O2 -> 2H2O là phản ứng thế vì có H2 — sai, vì vế trái không có hợp chất nào, đây là phản ứng hoá hợp.\n- Quên cân bằng hệ số khi kim loại hoá trị III hoặc II tác dụng với axit (ví dụ viết Al + HCl -> AlCl3 + H2 mà không cân bằng thành 2Al + 6HCl -> 2AlCl3 + 3H2), dẫn đến sai tỉ lệ mol khi tính toán.\n- Áp dụng nhầm tỉ lệ mol H2 : kim loại là 1:1 cho mọi kim loại — thực ra tỉ lệ phụ thuộc hoá trị kim loại (với kim loại hoá trị n, tỉ lệ nH2 : nkim loại = n : 2).\n- Cho rằng H2 khử được mọi oxit kim loại — quên rằng oxit của kim loại mạnh (Na2O, K2O, CaO, Al2O3, MgO...) không bị H2 khử kể cả ở nhiệt độ cao (khi nung nóng).\n- Nhầm chiều mũi tên chất khử/chất oxi hoá: gọi nhầm CuO là chất khử (đúng ra CuO là chất oxi hoá vì nó nhường oxi, còn H2 mới là chất khử vì nó chiếm oxi).\n- Quên điều kiện phản ứng (nhiệt độ) khi viết phương trình H2 + CuO -> Cu + H2O — phản ứng chỉ xảy ra khi đun nóng, không xảy ra ở nhiệt độ thường."
         }
       ],
       "questions": [
