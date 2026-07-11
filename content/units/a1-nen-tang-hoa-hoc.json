@@ -970,6 +970,36 @@
           "id": "a1-l6-c3",
           "heading": "Thể tích mol khí và tỉ khối",
           "body": "Ở điều kiện tiêu chuẩn (đktc: 0 độ C, 1 atm), 1 mol chất khí bất kì chiếm thể tích 22,4 lít.\nCông thức: n = V / 22,4, suy ra V = n x 22,4.\nTỉ khối của khí A so với khí B: d(A/B) = M_A / M_B."
+        },
+        {
+          "id": "a1-l6-c4",
+          "heading": "Nâng cao: Mol là cầu nối giữa vi mô và vĩ mô",
+          "body": "Mol nên được xem là cầu nối: từ số hạt N suy ra n = N/N_A, từ n suy ra khối lượng m = n×M hoặc thể tích khí ở đktc V = n×22,4. Khi nói 1 mol chất chứa 6,022×10^23 hạt, phải xác định đúng loại hạt: nguyên tử với đơn chất kim loại, phân tử với O2/CO2/H2O, hoặc đơn vị công thức với muối ion như NaCl — 1 mol O2 có 6,022×10^23 phân tử O2 nhưng có 2×6,022×10^23 nguyên tử O; sai loại hạt sẽ làm đáp số lệch theo hệ số công thức.\nTrong phương trình hoá học đã cân bằng, hệ số cho biết tỉ lệ số mol (và tỉ lệ số phân tử/nguyên tử), KHÔNG phải tỉ lệ khối lượng — muốn tìm khối lượng vẫn phải đổi qua mol rồi nhân với M. Nếu có n mol phân tử AxBy thì số mol nguyên tử A là x×n, số mol nguyên tử B là y×n — ví dụ 0,2 mol H2SO4 chứa 0,4 mol H, 0,2 mol S, 0,8 mol O, giúp tính nhanh khối lượng từng nguyên tố."
+        },
+        {
+          "id": "a1-l6-c5",
+          "heading": "Nâng cao: Mol là nút trung tâm khi đổi m – n – V, tránh lỗi công thức",
+          "body": "Không nên học các công thức theo một chiều riêng lẻ — hầu hết bài tính đều đi qua số mol: m→n bằng n=m/M; V khí đktc→n bằng n=V/22,4; rồi từ n đổi sang đại lượng cần tìm. M của một chất tinh khiết chỉ phụ thuộc công thức hoá học, không phụ thuộc lượng mẫu (9 g H2O là 0,5 mol, 18 g H2O là 1 mol, nhưng M(H2O) vẫn là 18 g/mol) — nếu tính được M=m/n của một mẫu chất, có thể dùng M để nhận dạng chất (M=44 g/mol có thể là CO2 hoặc N2O, cần thêm dữ kiện để kết luận duy nhất).\nVới đơn chất phân tử, chú ý phân tử gồm mấy nguyên tử: M(O)=16 là khối lượng mol NGUYÊN TỬ oxi, còn M(O2)=32 là khối lượng mol PHÂN TỬ khí oxi — nhầm O với O2 (hay H với H2) là lỗi rất hay gặp khi tính n=m/M.\nCác công thức mol rất nhạy với đơn vị: khối lượng phải tính bằng gam, thể tích khí theo công thức 22,4 phải tính bằng lít (560 ml đktc phải đổi thành 0,56 lít rồi mới tính n=0,56/22,4=0,025 mol). Tránh đảo ngược công thức — tự kiểm tra bằng đơn vị: V/22,4 có đơn vị lít/(lít/mol)=mol (đúng), còn V×22,4 không cho đơn vị mol; n×M có đơn vị mol×g/mol=g nên đó là công thức tính khối lượng, không phải n=V×22,4 hay m=n/M."
+        },
+        {
+          "id": "a1-l6-c6",
+          "heading": "Nâng cao: Thể tích mol khí — điều kiện và tỉ lệ",
+          "body": "Công thức V=n×22,4 ở đktc CHỈ dùng cho chất khí — không dùng cho nước lỏng, kim loại rắn hay dung dịch. Giá trị 22,4 lít/mol gắn với đktc theo quy ước THCS (0°C, 1 atm); nếu đề nói điều kiện khác mà không cho thể tích mol tương ứng, không được tự ý dùng 22,4 — ví dụ đề cho ở điều kiện đó 1 mol khí chiếm 24 lít thì phải dùng n=V/24 cho dữ kiện đang xét.\nỞ cùng nhiệt độ và áp suất, các khí có số mol bằng nhau sẽ có thể tích bằng nhau dù nặng hay nhẹ khác nhau — tỉ lệ thể tích khí cũng chính là tỉ lệ số mol khí (V_A/V_B = n_A/n_B khi đo cùng điều kiện). Đây là cơ sở để đổi phần trăm thể tích hỗn hợp khí thành phần trăm số mol."
+        },
+        {
+          "id": "a1-l6-c7",
+          "heading": "Nâng cao: Tỉ khối chất khí",
+          "body": "d(A/B) = M_A/M_B có thể hiểu là: cùng thể tích và cùng điều kiện, khí A nặng gấp d lần khí B. Nếu d(A/B) > 1 thì A nặng hơn B; nếu d(A/B) < 1 thì A nhẹ hơn B — cách hiểu này giúp giải nhanh bài hỏi khí nào bay lên/tích ở dưới, hoặc so sánh khối lượng hai bình khí cùng thể tích.\nKhi so với không khí, thường lấy M không khí xấp xỉ 29 g/mol: d(A/kk)=M_A/29, suy ra M_A=29×d(A/kk). Khí có M>29 thường nặng hơn không khí (CO2, SO2, Cl2); khí có M<29 thường nhẹ hơn (H2, CH4, NH3).\nTìm M từ tỉ khối: biết d(A/H2) thì nhân 2 để được M_A (vì M(H2)=2); biết d(A/O2) thì nhân 32; biết d(A/kk) thì nhân 29. Sau khi có M, cần đối chiếu với công thức hoặc dữ kiện phản ứng — cùng một M có thể ứng nhiều chất khác nhau nên không kết luận chỉ từ một con số nếu đề còn thiếu dữ kiện."
+        },
+        {
+          "id": "a1-l6-c8",
+          "heading": "Nâng cao: Hỗn hợp khí — khối lượng mol trung bình và tỉ khối hỗn hợp",
+          "body": "Với hỗn hợp khí, M trung bình = tổng khối lượng hỗn hợp / tổng số mol hỗn hợp = (n1M1 + n2M2 + ...)/(n1 + n2 + ...); M trung bình luôn nằm giữa M nhỏ nhất và M lớn nhất của các khí thành phần. Trong hỗn hợp đo cùng điều kiện, phần trăm thể tích bằng phần trăm số mol — ví dụ hỗn hợp 40% CO2 và 60% O2 theo thể tích: M trung bình = 0,40×44 + 0,60×32 = 36,8 g/mol. Nếu các khí có thể tích bằng nhau (cùng điều kiện) thì số mol bằng nhau, M trung bình là trung bình cộng — trộn cùng thể tích CO2 và O2 thì M trung bình = (44+32)/2 = 38 g/mol.\nPhần trăm khối lượng KHÔNG giống phần trăm thể tích: hỗn hợp 50% H2 và 50% CO2 theo thể tích có số mol bằng nhau, nhưng khối lượng CO2 lớn hơn nhiều vì M(CO2)=44 còn M(H2)=2 — muốn tính khối lượng từng khí phải đổi từ % thể tích sang mol rồi nhân M.\nTỉ khối hỗn hợp X so với khí B: d(X/B) = M trung bình của X / M_B — nếu biết d(X/H2)=15 thì M trung bình = 15×2 = 30 g/mol, từ đó lập phương trình tìm tỉ lệ mol các khí. M trung bình càng gần M của khí nào thì khí đó chiếm tỉ lệ mol càng lớn (M trung bình 35 giữa CO2=44 và O2=32, gần 32 hơn nên O2 nhiều mol hơn). Luôn kiểm tra đáp số hợp lí: M trung bình của hỗn hợp chỉ gồm CO2 và O2 không thể nhỏ hơn 32 hoặc lớn hơn 44."
+        },
+        {
+          "id": "a1-l6-c9",
+          "heading": "Nâng cao: Bài toán phản ứng khí — đổi về mol trước khi dùng tỉ lệ",
+          "body": "Nếu các khí đều ở cùng điều kiện, có thể dùng tỉ lệ thể tích như tỉ lệ mol trong phương trình. Nhưng khi đề cho lẫn khối lượng, thể tích và tỉ khối, cách chắc chắn nhất là đổi tất cả đại lượng cần thiết về mol trước, dùng tỉ lệ hệ số trong phương trình để tìm số mol chất cần, rồi mới đổi kết quả về khối lượng hoặc thể tích theo yêu cầu đề bài. Ví dụ: từ khối lượng CH4 đã cho, đổi ra nCH4, dùng phương trình cháy để suy ra nCO2, rồi đổi nCO2 sang thể tích ở đktc bằng V=n×22,4."
         }
       ],
       "questions": [
