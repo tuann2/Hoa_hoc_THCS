@@ -18,3 +18,5 @@ Mỗi file ghi rõ verdict fact-check của Gemini cho từng mục; mục
   nghĩa (2 ứng viên dự trữ / 22 tổng, đã dùng 20)
 - [`a1-l4.md`](a1-l4.md) — Hoá trị; lập CTHH theo hoá trị (12 ứng
   viên dự trữ / 22 tổng, đã dùng 10)
+- [`a1-l5.md`](a1-l5.md) — Phản ứng hoá học; bảo toàn khối lượng; cân
+  bằng PTHH (4 ứng viên dự trữ / 22 tổng, đã dùng 18)

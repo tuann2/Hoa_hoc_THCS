@@ -767,6 +767,31 @@
           "id": "a1-l5-c3",
           "heading": "Cân bằng phương trình hoá học",
           "body": "Các bước cân bằng PTHH: viết sơ đồ phản ứng với công thức đúng của các chất; thêm hệ số thích hợp trước công thức để số nguyên tử mỗi nguyên tố ở hai vế bằng nhau (không được đổi chỉ số trong công thức); kiểm tra lại."
+        },
+        {
+          "id": "a1-l5-c4",
+          "heading": "Nâng cao: Dấu hiệu và bản chất phản ứng hoá học",
+          "body": "Đổi màu, sinh khí, kết tủa, toả nhiệt hoặc phát sáng là dấu hiệu thường gặp, nhưng không nên kết luận máy móc nếu chưa xét có chất mới hay không — nước sôi có bọt khí nhưng đó là hơi nước tạo từ chính nước, không phải chất mới. Dấu hiệu càng có giá trị khi giải thích được chất mới sinh ra: cho axit vào muối cacbonat thấy sủi bọt vì tạo CO2; cho dung dịch BaCl2 vào dung dịch chứa gốc sunfat tạo kết tủa trắng BaSO4.\nMột thí nghiệm có thể gồm cả biến đổi vật lí và hoá học: khi đun nến, sáp nến nóng chảy là hiện tượng vật lí, nhưng hơi nến cháy tạo CO2 và H2O là hiện tượng hoá học. Cách phân biệt chắc chắn: thay đổi trạng thái, kích thước, hình dạng thường là vật lí; tạo chất mới với tính chất khác hẳn mới là hoá học.\nKí hiệu đun nóng, ánh sáng hoặc chất xúc tác ghi trên mũi tên phản ứng chỉ điều kiện phản ứng, không được cân bằng như chất tham gia hay sản phẩm, và không đưa vào tính bảo toàn khối lượng — chất xúc tác về nguyên tắc không bị tiêu hao sau phản ứng."
+        },
+        {
+          "id": "a1-l5-c5",
+          "heading": "Nâng cao: Bảo toàn khối lượng — hệ kín/hở, hỗn hợp, chất dư",
+          "body": "Định luật bảo toàn khối lượng đúng cho toàn bộ hệ phản ứng. Nếu bình kín, tổng khối lượng trước và sau phản ứng không đổi kể cả khi có khí sinh ra. Nếu bình hở, khí bay ra làm phần còn lại nhẹ đi, nhưng khối lượng đó không mất mà đã chuyển thành khối lượng khí thoát ra — khối lượng kim loại tăng sau khi đốt trong oxi chính là khối lượng oxi đã kết hợp vào oxit; khối lượng chất rắn giảm khi nung muối cacbonat chính là khối lượng CO2 thoát ra.\nCông thức m chất tham gia = m sản phẩm chỉ áp dụng gọn khi các chất phản ứng vừa đủ. Nếu có chất dư, khối lượng chất dư không biến mất mà vẫn nằm trong hỗn hợp sau phản ứng: khối lượng ban đầu của toàn hệ = khối lượng sản phẩm + khối lượng chất dư + khối lượng chất trơ không phản ứng. Với hỗn hợp, nếu đề chỉ hỏi tổng khối lượng thì không cần tách từng phản ứng — ví dụ nung hỗn hợp CaCO3 và cát, chỉ CaCO3 phân huỷ, phần khối lượng giảm khi cân chất rắn sau nung chính là CO2 thoát ra, không phải toàn bộ CaCO3."
+        },
+        {
+          "id": "a1-l5-c6",
+          "heading": "Nâng cao: Bảo toàn nguyên tố và tỉ lệ hệ số",
+          "body": "Trong phản ứng hoá học, nguyên tử không tự sinh ra hoặc mất đi, chỉ sắp xếp lại — mỗi nguyên tố phải có tổng số nguyên tử bằng nhau ở hai vế. Bảo toàn khối lượng là hệ quả trực tiếp của bảo toàn số nguyên tử từng nguyên tố. Khi gặp bài khó, kiểm tra theo từng nguyên tố thay vì chỉ nhìn tổng khối lượng giúp tránh cân đúng khối lượng tổng nhưng sai công thức hoặc sai hệ số.\nHệ số trong PTHH cho biết tỉ lệ số phân tử/nguyên tử/mol, KHÔNG phải tỉ lệ khối lượng trực tiếp. Từ 2H2 + O2 → 2H2O, không được kết luận 2 g H2 phản ứng với 1 g O2 — phải nhân hệ số với khối lượng mol/phân tử khối: 2H2 (4 phần) + O2 (32 phần) → 2H2O (36 phần), tổng 4 + 32 = 36 mới đúng bảo toàn khối lượng."
+        },
+        {
+          "id": "a1-l5-c7",
+          "heading": "Nâng cao: Kĩ thuật cân bằng phương trình nhanh",
+          "body": "Với phương trình nhiều chất, nên cân bằng nguyên tố xuất hiện ít chất trước (thường là kim loại), để H và O sau cùng nếu chúng xuất hiện ở nhiều chất — với phản ứng cháy chứa C, H, O thường cân bằng theo thứ tự C → H → O. Ví dụ C3H8 + O2 → CO2 + H2O: cân C được 3CO2, cân H được 4H2O, vế phải có 3×2+4=10 nguyên tử O nên cần 5O2.\nCó thể tạm dùng hệ số phân số để cân nhanh, rồi nhân cả phương trình với mẫu số chung để được hệ số nguyên tối giản (không để hệ số phân số ở đáp án cuối). Khi một nguyên tố ở dạng đơn chất 2 nguyên tử (O2, H2, N2, Cl2) mà vế kia cho số lẻ, thường cần nhân đôi chất chứa số lẻ đó — ví dụ Al + O2 → Al2O3: vế phải có 3 O trong Al2O3, đặt 2Al2O3 để có 6 O, từ đó cần 3O2 và 4Al, được 4Al + 3O2 → 2Al2O3 (không được đổi công thức Al2O3 thành AlO cho dễ cân).\nVới phản ứng phân huỷ tạo khí, dùng bội chung nhỏ nhất: KClO3 → KCl + O2, mỗi KClO3 có 3 O còn O2 có 2 O, BCNN(3,2)=6 nên đặt 2KClO3 để có 6 O, được 2KClO3 → 2KCl + 3O2. Sau khi cân xong, luôn kiểm tra ước chung lớn nhất của các hệ số và rút gọn về bộ số nguyên tối giản — ví dụ 6H2 + 3O2 → 6H2O phải rút gọn thành 2H2 + O2 → 2H2O."
+        },
+        {
+          "id": "a1-l5-c8",
+          "heading": "Nâng cao: Cân bằng các dạng phản ứng đặc biệt",
+          "body": "Nếu một nhóm nguyên tử (SO4, NO3, CO3, PO4, OH...) xuất hiện nguyên vẹn ở cả hai vế và không bị phân huỷ, có thể cân bằng cả nhóm như một đơn vị để giảm số bước. Ví dụ Al2(SO4)3 + BaCl2 → AlCl3 + BaSO4: 3 nhóm SO4 ở vế trái cần 3BaSO4, từ đó 3BaCl2 có 6Cl nên tạo 2AlCl3, đồng thời 2Al.\nVới phản ứng khử oxit kim loại bằng CO hoặc H2 (chưa cần số oxi hoá ở THCS), có thể nhìn như sự chuyển oxi: mỗi phân tử CO nhận thêm 1 nguyên tử O để thành CO2, mỗi H2 nhận 1 O để thành H2O. Fe2O3 có 3 nguyên tử O nên cần 3CO để tạo 3CO2, đồng thời tạo 2Fe: Fe2O3 + 3CO → 2Fe + 3CO2.\nVới chất hữu cơ CxHyOz cháy hoàn toàn tạo CO2 và H2O: cân C trước (→ xCO2), cân H (→ y/2 H2O), rồi tính O2 sau cùng từ tổng số O còn thiếu ở vế phải. Nếu tổng số O ở vế phải lẻ (hệ số O2 ra phân số), nhân đôi toàn bộ phương trình để được hệ số nguyên. Ví dụ C2H5OH + O2 → CO2 + H2O: cân C được 2CO2, cân H được 3H2O, vế phải có 4+3=7 O, trong C2H5OH đã có 1 O nên còn thiếu 6 O, cần 3O2.\nVới phương trình dài, kiểm tra bằng bảng đếm nguyên tử từng nguyên tố ở hai vế là cách ít sai nhất — nhớ hệ số nhân cho cả công thức đứng sau, và chỉ số ngoài ngoặc nhân cho cả nhóm trong ngoặc (2Al2(SO4)3 có 4Al, 6S và 24O)."
         }
       ],
       "questions": [
