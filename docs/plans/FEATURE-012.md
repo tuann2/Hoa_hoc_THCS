@@ -90,7 +90,7 @@ xong cả unit.
 - [x] `a1-l4` — Hoá trị; lập CTHH theo hoá trị
 - [x] `a1-l5` — Phản ứng hoá học; định luật bảo toàn khối lượng; cân bằng PTHH
 - [x] `a1-l6` — Mol – khối lượng mol – thể tích mol khí; tỉ khối chất khí
-- [ ] `a1-l7` — Tính theo CTHH và PTHH: %m, chất dư – chất hết, hiệu suất
+- [x] `a1-l7` — Tính theo CTHH và PTHH: %m, chất dư – chất hết, hiệu suất
 - [ ] `a1-l8` — Nâng cao: biện luận tìm nguyên tố/CTHH; cân bằng phản ứng phức tạp
 - [ ] `a1-l9` — Nâng cao: bài toán hỗn hợp; tăng – giảm khối lượng; bảo toàn
 

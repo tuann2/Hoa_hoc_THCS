@@ -1166,6 +1166,31 @@
           "id": "a1-l7-c3",
           "heading": "Chất dư – chất hết và hiệu suất phản ứng",
           "body": "Khi hai chất phản ứng với lượng cho trước, so sánh tỉ lệ mol thực tế với tỉ lệ mol theo phương trình để xác định chất phản ứng hết (dùng để tính sản phẩm) và chất còn dư.\nHiệu suất phản ứng: H% = (lượng thực tế thu được / lượng tính theo lí thuyết) x 100%."
+        },
+        {
+          "id": "a1-l7-c4",
+          "heading": "Nâng cao: %m nguyên tố — hiểu đúng và kết hợp với hỗn hợp/PTHH",
+          "body": "Khi tính %m, tử số là khối lượng của RIÊNG nguyên tố đó trong 1 mol hợp chất — với AxBy, phần khối lượng của A là x×(nguyên tử khối A), không chỉ lấy 1 lần. Ví dụ Al2O3: khối lượng phần Al = 2×27 = 54 g, M(Al2O3) = 102 g/mol, %Al = 54/102×100% ≈ 52,94%. Tổng %m các nguyên tố trong một công thức luôn bằng 100% (chấp nhận sai số làm tròn nhỏ) — có thể tính nguyên tố cuối bằng cách lấy 100% trừ các phần đã biết, nhưng chỉ khi các phần kia đã đúng.\nCần phân biệt %nguyên tố TRONG một hợp chất với %chất TRONG một hỗn hợp — hai kiểu phần trăm không dùng lẫn nhau. Nếu mẫu 10 g chứa 80% CaCO3 tinh khiết thì chỉ có 8 g CaCO3 thật sự tham gia phản ứng; còn trong chính CaCO3, %Ca = 40%. Bài tổng hợp thường có hai tầng: tách khối lượng chất tinh khiết từ hỗn hợp trước, rồi mới tính theo công thức hoặc PTHH — ví dụ Fe chiếm 70% khối lượng trong Fe2O3 (2×56/160×100%=70%), nên 20 g Fe2O3 chứa tối đa 14 g Fe; nếu khử với hiệu suất 80% thì Fe thực tế thu được là 14×0,80 = 11,2 g."
+        },
+        {
+          "id": "a1-l7-c5",
+          "heading": "Nâng cao: Trình tự giải bài toán tổng hợp theo PTHH",
+          "body": "Hệ số PTHH là tỉ lệ MOL, không phải tỉ lệ gam — không được lấy trực tiếp hệ số so sánh khối lượng (Zn + 2HCl → ZnCl2 + H2 nghĩa là 1 mol Zn : 2 mol HCl, tức 65 g Zn : 73 g HCl, không phải 1 g : 2 g).\nVới bài nhiều dữ kiện (khối lượng, thể tích khí, nồng độ, hiệu suất), giữ trình tự cố định: đổi mọi dữ kiện cần dùng ra mol → viết và cân bằng PTHH → xác định chất hết nếu có từ hai chất trở lên → tính lượng lí thuyết theo chất hết → áp dụng hiệu suất nếu có → đổi về đại lượng đề hỏi. Trình tự này tránh hai lỗi lớn: áp dụng hiệu suất quá sớm vào chất chưa phải chất giới hạn, hoặc đổi thẳng gam chất này sang gam chất kia mà bỏ qua tỉ lệ mol.\nDữ kiện khí phải theo cùng điều kiện — trong chương trình này dùng đktc: n=V/22,4 và V=n×22,4 (V tính bằng lít), không dùng công thức này cho chất lỏng/rắn/dung dịch. Sau khi tính theo PTHH, có thể kiểm tra lại bằng bảo toàn khối lượng cho phần đã phản ứng (không tính phần chất dư): ví dụ 0,10 mol Zn phản ứng hết với HCl cho 6,5+7,3 = 13,8 g ở hai vế, khớp bảo toàn khối lượng."
+        },
+        {
+          "id": "a1-l7-c6",
+          "heading": "Nâng cao: Xác định chất dư — chất hết",
+          "body": "Cách chắc nhất: với phản ứng aA + bB → sản phẩm, tính nA/a và nB/b — giá trị NHỎ HƠN cho biết chất đó hết trước, và giá trị đó cũng là \"mức phản ứng chung\" dùng để tính sản phẩm. Ví dụ Zn + 2HCl → ZnCl2 + H2, nếu nZn=0,20 và nHCl=0,30: nZn/1=0,20, nHCl/2=0,15 → 0,15 nhỏ hơn nên HCl hết trước, mọi sản phẩm tính theo 0,15 (không phải theo 0,20 mol Zn).\nCách khác: so sánh tỉ lệ mol thực tế với tỉ lệ cần theo PTHH (Zn+2HCl cần tỉ lệ nHCl/nZn=2; nếu thực tế 0,30/0,20=1,5 < 2 thì HCl thiếu, HCl hết, Zn dư).\nChất dư KHÔNG làm sản phẩm tăng thêm — sau khi xác định chất hết, dùng số mol chất hết để tính sản phẩm, số mol ban đầu của chất dư chỉ dùng để tính lượng còn lại (0,20 mol Zn gặp 0,30 mol HCl hết → nH2=nHCl/2=0,15 mol, V(H2) đktc=0,15×22,4=3,36 lít; Zn còn dư 0,05 mol). Hai chất phản ứng vừa đủ khi mọi tỉ lệ n/hệ số bằng nhau — khi đề cho dữ kiện như 13 g Zn và 200 ml dung dịch HCl 2M, phải đổi cẩn thận: nZn=13/65=0,20 mol, nHCl=2×0,200=0,40 mol (đổi ml sang lít trước khi dùng n=CM×V), lúc này nZn/1=0,20=nHCl/2=0,20 nên vừa đủ, không có chất dư."
+        },
+        {
+          "id": "a1-l7-c7",
+          "heading": "Nâng cao: Hiệu suất phản ứng — hai chiều và kết hợp chất dư/độ tinh khiết",
+          "body": "Trong H% = lượng thực tế/lượng lí thuyết×100%, tử số và mẫu số phải là CÙNG một chất, cùng đơn vị — không lấy gam sản phẩm thực tế chia cho mol sản phẩm lí thuyết, và không lấy khối lượng sản phẩm thực tế chia cho khối lượng chất ban đầu để gọi là hiệu suất (nung CaCO3, nếu CaO lí thuyết 14 g và thực tế 12,6 g thì H=12,6/14×100%=90%).\nHai chiều tính: biết lượng lí thuyết và H% → lượng thực tế = lí thuyết×H/100; biết lượng thực tế và H% → lượng lí thuyết = thực tế:(H/100) — dùng khi đề hỏi cần bao nhiêu nguyên liệu để thu một lượng sản phẩm thực tế cho trước (muốn thu 12,6 g CaO với H=90%, CaO lí thuyết cần = 12,6/0,90=14 g, suy ra cần 25 g CaCO3 tinh khiết).\nKhi bài vừa có chất dư vừa có hiệu suất: xác định chất hết trước để tính sản phẩm lí thuyết tối đa theo PTHH, RỒI mới nhân hiệu suất — không nhân hiệu suất vào cả hai chất tham gia rồi mới xét dư/hết. Hiệu suất nhỏ hơn 100% không có nghĩa PTHH cân bằng sai — có thể do phản ứng không hoàn toàn, hao hụt khi thu sản phẩm, hoặc điều kiện thí nghiệm chưa tối ưu; nếu tính ra hiệu suất lớn hơn 100% thì cần xem lại số mol/đơn vị/độ tinh khiết. Khi mẫu ban đầu không tinh khiết: xử lí độ tinh khiết trước (m chất tinh khiết = m mẫu×%tinh khiết/100) để tìm lượng chất thật tham gia, rồi mới áp hiệu suất sau khi tính sản phẩm lí thuyết từ chất tinh khiết đó."
+        },
+        {
+          "id": "a1-l7-c8",
+          "heading": "Nâng cao: Lỗi hay gặp khi giải toán theo PTHH",
+          "body": "Các lỗi cần tự kiểm tra trước khi chốt đáp số: chưa cân bằng PTHH mà đã lập tỉ lệ mol; lấy tỉ lệ hệ số làm tỉ lệ khối lượng; quên đổi ml sang lít khi tính n=CM×V hoặc n=V/22,4; dùng 22,4 lít/mol cho chất không phải khí; tính sản phẩm theo chất dư thay vì chất hết; quên nhân chỉ số nguyên tử khi tính %m; áp dụng hiệu suất hai lần hoặc quên chia cho 100 khi dùng H%. Một đáp số hợp lí thường phải đúng đơn vị, đúng số mol theo hệ số, và không cho hiệu suất vượt 100% trong bài lí tưởng."
         }
       ],
       "questions": [
