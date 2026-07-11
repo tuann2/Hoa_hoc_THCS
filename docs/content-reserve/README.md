@@ -14,3 +14,5 @@ Mỗi file ghi rõ verdict fact-check của Gemini cho từng mục; mục
   p – n – e (43 ứng viên dự trữ / 55 tổng, đã dùng 12 vào bài)
 - [`a1-l2.md`](a1-l2.md) — Nguyên tố hoá học – nguyên tử khối; sơ
   lược bảng tuần hoàn (11 ứng viên dự trữ / 21 tổng, đã dùng 10)
+- [`a1-l3.md`](a1-l3.md) — Đơn chất – hợp chất – phân tử; CTHH và ý
+  nghĩa (2 ứng viên dự trữ / 22 tổng, đã dùng 20)

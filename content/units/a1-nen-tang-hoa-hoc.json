@@ -393,6 +393,36 @@
           "id": "a1-l3-c3",
           "heading": "Công thức hoá học và ý nghĩa",
           "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98."
+        },
+        {
+          "id": "a1-l3-c4",
+          "heading": "Nâng cao: Đơn chất không đơn giản như tên gọi",
+          "body": "Một nguyên tố có thể tạo ra nhiều đơn chất khác nhau gọi là các dạng thù hình: O2 và O3 (ozon) đều chỉ gồm nguyên tố oxi nhưng là hai chất khác nhau; kim cương và than chì đều có thành phần là C nhưng cách sắp xếp nguyên tử khác nhau nên tính chất vật lí rất khác nhau.\nCác đơn chất khí quen thuộc ở THCS như H2, O2, N2, Cl2 thường tồn tại dưới dạng phân tử 2 nguyên tử, còn kí hiệu H, O, N, Cl chỉ nguyên tử/nguyên tố. Đơn chất cũng có thể có phân tử nhiều nguyên tử hơn: O3 gồm 3 nguyên tử O, photpho trắng thường gặp dạng P4, lưu huỳnh thường gặp dạng S8 — vẫn là đơn chất vì chỉ có một nguyên tố, khác với hợp chất (từ hai nguyên tố trở lên)."
+        },
+        {
+          "id": "a1-l3-c5",
+          "heading": "Nâng cao: Phân loại và đọc công thức cẩn thận",
+          "body": "Đơn chất/hợp chất phân loại một chất tinh khiết theo số nguyên tố; hỗn hợp là nhiều chất trộn lẫn. Không khí chứa chủ yếu N2 và O2 nên là hỗn hợp, không phải hợp chất của nitơ với oxi. Hai nguyên tố giống nhau nhưng tỉ lệ khác nhau tạo ra hợp chất khác nhau: CO (C:O = 1:1) khác CO2 (C:O = 1:2); SO2 khác SO3.\nKhi đọc công thức, phân biệt hệ số (đứng trước, nhân cả phân tử) với chỉ số (đứng sau kí hiệu, thuộc về một nguyên tố): O là 1 nguyên tử, O2 là 1 phân tử oxi (2 nguyên tử), 2O2 là hai phân tử O2 (tổng 4 nguyên tử), không được lấy hệ số nhân vào phân tử khối của một phân tử. Cũng cần phân biệt số nguyên tố (loại nguyên tố khác nhau) với tổng số nguyên tử: Al2(SO4)3 có 3 nguyên tố (Al, S, O) nhưng tổng 17 nguyên tử (2+3+12) — nhầm hai đại lượng này là lỗi rất hay gặp."
+        },
+        {
+          "id": "a1-l3-c6",
+          "heading": "Nâng cao: Công thức là quy ước biểu diễn tỉ lệ, không luôn là phân tử thật",
+          "body": "Không phải chất nào cũng tồn tại dưới dạng phân tử riêng rẽ đơn giản: kim loại như Fe, Cu gồm rất nhiều nguyên tử sắp xếp thành mạng; NaCl rắn gồm các ion Na+ và Cl- xen kẽ theo tỉ lệ 1:1. Công thức của các chất này cho biết tỉ lệ nguyên tử/ion, vẫn tính khối lượng công thức bình thường (NaCl: 23 + 35,5 = 58,5).\nMột số đơn chất có phân tử thực tế phức tạp hơn cách viết trong phương trình THCS — lưu huỳnh thường gặp dạng S8, nhưng nhiều phương trình vẫn viết S + O2 -> SO2 theo quy ước đơn giản hoá. Lưu ý: không tự rút gọn công thức phân tử theo ước chung — glucozơ có công thức phân tử C6H12O6 (không viết gọn thành CH2O dù tỉ lệ đơn giản nhất là CH2O), vì công thức phân tử phải phản ánh đúng số nguyên tử thật trong một phân tử. Chỉ số sau dấu ngoặc nhân cho cả nhóm: Al2(SO4)3 có khối lượng công thức = 2×27 + 3×(32+4×16) = 54 + 288 = 342, không được quên nhân S trong nhóm SO4."
+        },
+        {
+          "id": "a1-l3-c7",
+          "heading": "Nâng cao: Tìm nguyên tố từ công thức oxit và phân tử khối",
+          "body": "Với oxit thông thường RxOy (O = 16), phân tử khối M = x.R + 16y, suy ra R = (M - 16y) / x rồi đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: nếu R chỉ có một hoá trị trong công thức RxOy tối giản, hoá trị R = 2y/x (vì oxi hoá trị II). Ví dụ MgO: hoá trị Mg = 2×1/1 = II; Al2O3: hoá trị Al = 2×3/2 = III; SO3: hoá trị S = 2×3/1 = VI. Kết quả này phải hợp lí với nguyên tố vừa tìm được — nếu không hợp lí, cần xem lại công thức hoặc giả thiết.\nKết quả R không nhất thiết là số nguyên: một số nguyên tử khối ở THCS là số thập phân (Cl = 35,5). Ví dụ oxit R2O7 có M = 183 thì 2R + 7×16 = 183, suy ra R = 35,5, ứng với clo (Cl2O7, clo hoá trị VII trong oxit cao nhất)."
+        },
+        {
+          "id": "a1-l3-c8",
+          "heading": "Nâng cao: Từ hoá trị dự đoán dạng oxit và các trường hợp đặc biệt",
+          "body": "Vì O thường hoá trị II trong oxit, dạng công thức phụ thuộc hoá trị của R: hoá trị I → R2O; hoá trị II → RO; hoá trị III → R2O3; hoá trị IV → RO2; hoá trị V → R2O5; hoá trị VI → RO3. Ví dụ đề nói kim loại hoá trị III thì công thức oxit phải là R2O3, không phải RO3.\nKhông mặc định R luôn là kim loại — R2O5 gợi ý hoá trị V nhưng công thức này cũng đúng với photpho (phi kim quen thuộc, P2O5); cần tính R rồi đối chiếu, không loại đáp án phi kim chỉ vì thấy chữ R.\nLưu ý mức nâng cao: công thức kiểm tra hoá trị R = 2y/x dùng tốt khi R có một hoá trị duy nhất trong oxit đó. Một số oxit như Fe3O4 không cho ra một hoá trị nguyên duy nhất (có thể xem là FeO.Fe2O3, chứa cả Fe(II) và Fe(III)) — nếu tính ra hoá trị trung bình không nguyên (ví dụ 8/3), không vội kết luận sai công thức mà cần xem đó có phải oxit hỗn hợp hay trường hợp đặc biệt đã biết."
+        },
+        {
+          "id": "a1-l3-c9",
+          "heading": "Nâng cao: Tính phần trăm khối lượng và suy công thức từ tỉ lệ khối lượng",
+          "body": "Công thức chung: % nguyên tố = (khối lượng nguyên tố đó trong một công thức / khối lượng công thức) × 100%. Ví dụ CaCO3 có khối lượng công thức 40+12+3×16 = 100; Ca chiếm 40%, C chiếm 12%, O chiếm 48%.\nChiều ngược lại: nếu biết tỉ lệ khối lượng các nguyên tố, đổi về tỉ lệ số nguyên tử bằng cách chia cho nguyên tử khối tương ứng rồi rút gọn về số nguyên nhỏ nhất. Ví dụ một oxit sắt có tỉ lệ khối lượng Fe : O = 7 : 3, ta có nFe : nO = 7/56 : 3/16 = 0,125 : 0,1875 = 2 : 3, vậy công thức là Fe2O3. Đây là nền tảng cho các bài biện luận công thức ở mức HSG."
         }
       ],
       "questions": [
