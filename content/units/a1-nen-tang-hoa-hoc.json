@@ -28,6 +28,26 @@
           "id": "a1-l1-c3",
           "heading": "Cấu tạo nguyên tử",
           "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e)."
+        },
+        {
+          "id": "a1-l1-c4",
+          "heading": "Nâng cao: Nhận biết hỗn hợp và dung dịch cẩn thận",
+          "body": "Không nên kết luận một mẫu là chất tinh khiết chỉ vì nó trong suốt, một màu hoặc không thấy cặn — dung dịch muối ăn, dung dịch đường, không khí đều trông đồng nhất nhưng vẫn là hỗn hợp. Dấu hiệu đáng tin hơn là tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy, khối lượng riêng cố định trong điều kiện nhất định); hỗn hợp có các tính chất này thay đổi theo tỉ lệ thành phần.\nDung dịch là một loại hỗn hợp đồng nhất gồm chất tan và dung môi (ví dụ nước muối: muối ăn là chất tan, nước là dung môi). Điểm dễ nhầm: khi chất rắn đã tan hết trong nước thì không thể tách lại bằng lọc thông thường, vì hạt chất tan đi qua giấy lọc cùng dung môi — muốn thu lại chất tan rắn phải cô cạn hoặc kết tinh, muốn thu dung môi sạch phải chưng cất."
+        },
+        {
+          "id": "a1-l1-c5",
+          "heading": "Nâng cao: Thêm kĩ thuật tách chất",
+          "body": "Ngoài 4 phương pháp cơ bản, đề nâng cao có thể dùng thêm:\nHoà tan chọn lọc: cho dung môi vào hỗn hợp rắn để chỉ một chất tan, lọc bỏ phần không tan, rồi cô cạn dung dịch để thu lại chất đã tan (ví dụ: hỗn hợp muối ăn và cát — cho nước vào để muối tan, lọc bỏ cát, cô cạn thu muối). Đây thực chất là kết hợp hoà tan + lọc + cô cạn, không phải phương pháp chiết.\nDựa vào khối lượng riêng: chất lỏng nặng hơn thường nằm dưới, nhẹ hơn nổi lên (dầu ăn nổi trên nước); chất rắn nặng hơn và không tan thì lắng xuống (cát lắng trong nước). Cách này chỉ có ích khi các chất không tan lẫn hoặc không tạo dung dịch đồng nhất.\nThăng hoa: một số chất rắn khi đun nóng chuyển thẳng thành hơi rồi ngưng lại thành rắn ở nơi lạnh hơn (ví dụ iot lẫn cát: đun nhẹ, iot thăng hoa và ngưng lại thành tinh thể, cát không thăng hoa nên ở lại). Đây là phương pháp vật lí, không phải phản ứng hoá học."
+        },
+        {
+          "id": "a1-l1-c6",
+          "heading": "Nâng cao: Biện luận hạt (p – n – e)",
+          "body": "Gọi p là số proton, e là số electron, n là số nơtron. Nguyên tử trung hoà nên p = e, vì vậy tổng số hạt là p + e + n = 2p + n. Số hạt mang điện gồm proton và electron nên bằng 2p; số hạt không mang điện là n.\nCách lập hệ: dùng dữ kiện tổng số hạt để viết 2p + n = tổng. Dữ kiện so sánh sẽ cho phương trình thứ hai: \"số hạt mang điện nhiều hơn số hạt không mang điện là X\" nghĩa là 2p - n = X; \"số hạt mang điện gấp k lần số hạt không mang điện\" nghĩa là 2p = k.n. Giải hai phương trình để tìm p, rồi suy ra e = p và số hiệu nguyên tử cũng bằng p. Khi chỉ có một phương trình, có thể thử các giá trị p nguyên dương và kiểm tra n nguyên không âm; với nhiều nguyên tố nhẹ thường gặp ở THCS (trừ hiđro), tỉ lệ n/p thường nằm khoảng 1 đến 1,5 nên dùng được để loại nghiệm vô lí — đây chỉ là phép kiểm tra nhanh, không thay thế việc giải hệ."
+        },
+        {
+          "id": "a1-l1-c7",
+          "heading": "Nâng cao: Số khối và các bẫy thuật ngữ hay gặp",
+          "body": "Số khối A là đại lượng được định nghĩa đúng bằng tổng số proton và nơtron (A = p + n) — đây là số nguyên xác định, không phải giá trị tính gần đúng. Số khối khác với nguyên tử khối tương đối ghi trong bảng tuần hoàn (ví dụ Cl = 35,5), vốn là giá trị trung bình theo các đồng vị nên có thể không phải số nguyên.\nMột số bẫy khi đọc đề: \"hạt mang điện\" gồm cả proton và electron (không chỉ proton); \"hạt trong hạt nhân\" chỉ gồm proton và nơtron (không có electron); khi đề hỏi số khối thì trả lời p + n, không trả lời tổng số hạt (2p + n); khi đề hỏi số electron thì tìm p trước rồi kết luận e = p (với nguyên tử trung hoà)."
         }
       ],
       "questions": [
