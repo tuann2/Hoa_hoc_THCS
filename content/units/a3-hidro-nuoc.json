@@ -223,7 +223,7 @@
         {
           "id": "a3-l2-c1",
           "heading": "Thành phần và tính chất của nước",
-          "body": "Nước có công thức H2O, gồm 2 nguyên tử H và 1 nguyên tử O (tỉ lệ khối lượng H : O = 1 : 8).\nNước là chất lỏng không màu, không mùi, không vị, sôi ở 100 độ C, hoà tan được nhiều chất."
+          "body": "Nước có công thức H2O, gồm 2 nguyên tử H và 1 nguyên tử O (tỉ lệ khối lượng H : O = 1 : 8).\nNước là chất lỏng không màu, không mùi, không vị, sôi ở 100 độ C, hoà tan được nhiều chất.\nTừ tỉ lệ khối lượng H : O = 1 : 8, suy ra %H = 2/18 x 100% ≈ 11,11% và %O = 16/18 x 100% ≈ 88,89% — nước chứa oxi nhiều hơn hẳn về khối lượng dù số nguyên tử H gấp đôi số nguyên tử O. Khi tổng hợp nước từ khí H2 và O2 theo 2H2 + O2 -> 2H2O, tỉ lệ MOL giữa H2 và O2 là 2 : 1 — HSG cần phân biệt tỉ lệ khối lượng nguyên tố trong phân tử (1 : 8) với tỉ lệ mol/thể tích khí khi tổng hợp (2 : 1), tránh nhầm lẫn hai loại tỉ lệ này."
         },
         {
           "id": "a3-l2-c2",
@@ -233,7 +233,47 @@
         {
           "id": "a3-l2-c3",
           "heading": "Nước tác dụng với oxit",
-          "body": "Nước tác dụng với oxit bazơ của kim loại mạnh tạo bazơ tan (kiềm): Na2O + H2O -> 2NaOH.\nNước tác dụng với oxit axit tạo axit: CO2 + H2O -> H2CO3."
+          "body": "Nước tác dụng với oxit bazơ của kim loại mạnh tạo bazơ tan (kiềm): Na2O + H2O -> 2NaOH.\nNước tác dụng với oxit axit tạo axit: CO2 + H2O -> H2CO3.\nCó thể nhận biết dung dịch tạo thành bằng quỳ tím: dung dịch bazơ (từ oxit bazơ tan hoặc kim loại kiềm/kiềm thổ mạnh) làm quỳ tím hoá XANH; dung dịch axit (từ oxit axit) làm quỳ tím hoá ĐỎ. Quỳ tím không đổi màu với nước tinh khiết hoặc với oxit/kim loại không phản ứng với nước."
+        },
+        {
+          "id": "a3-l2-c4",
+          "heading": "Nâng cao: Kim loại nào phản ứng được với nước, các trường hợp đặc biệt và độ tan của bazơ tạo thành",
+          "body": "Ở nhiệt độ thường, chỉ các kim loại rất mạnh đứng đầu dãy hoạt động hoá học mới phản ứng được với nước: kim loại kiềm (Li, Na, K...) và một số kim loại kiềm thổ mạnh (Ca, Sr, Ba) — không kể Be, Mg. Phản ứng chung: kim loại kiềm R (hoá trị I) cho 2R + 2H2O -> 2ROH + H2; kim loại kiềm thổ M (hoá trị II, trừ Be, Mg) cho M + 2H2O -> M(OH)2 + H2.\nMg hầu như không phản ứng với nước lạnh ở nhiệt độ thường (phản ứng cực kì chậm do lớp MgO/Mg(OH)2 mỏng bám trên bề mặt cản trở), nhưng phản ứng khá nhanh với HƠI NƯỚC ở nhiệt độ cao: Mg + H2O (hơi, t°) -> MgO + H2.\nAl tuy đứng ngay sau Mg và về bản chất là kim loại khá mạnh, nhưng KHÔNG phản ứng với nước dù ở nhiệt độ thường hay đun nóng, vì bề mặt Al luôn có một lớp màng oxit Al2O3 rất mỏng, đặc khít và bền, bảo vệ kim loại bên trong không tiếp xúc được với nước — đây là điểm HSG rất hay hỏi để \"bẫy\" học sinh nhầm Al với kim loại kiềm/kiềm thổ.\nCác kim loại từ Zn trở về sau trong dãy hoạt động (Zn, Fe, Pb, Cu, Ag, Au...) không phản ứng với nước ở điều kiện thường; riêng Fe có thể phản ứng với HƠI NƯỚC ở nhiệt độ cao theo phản ứng thuận nghịch, với 2 trường hợp tuỳ nhiệt độ: dưới 570°C, 3Fe + 4H2O (hơi) <-> Fe3O4 + 4H2; trên 570°C, Fe + H2O (hơi) <-> FeO + H2 — đây là phản ứng thường gặp trong đề thi HSG khi nói về \"cho Fe tác dụng với hơi nước\", cần phân biệt với việc Fe hoàn toàn không phản ứng với nước lỏng ở nhiệt độ thường.\nKhông phải mọi bazơ sinh ra từ phản ứng của kim loại kiềm/kiềm thổ (hoặc oxit tương ứng) với nước đều tan tốt như nhau. NaOH, KOH, Ba(OH)2 tan rất tốt trong nước, tạo dung dịch trong suốt ở nồng độ khá cao. Riêng Ca(OH)2 chỉ tan ÍT trong nước (độ tan khoảng 0,17 g/100 g nước ở 20°C) — vì vậy khi cho CaO hoặc Ca dư tác dụng với nước, dung dịch thu được dễ bị đục do Ca(OH)2 dư không tan hết lơ lửng trong nước (gọi là \"vôi sữa\"); chỉ khi lọc bỏ phần không tan mới thu được dung dịch trong suốt gọi là \"nước vôi trong\" — đây là dung dịch Ca(OH)2 bão hoà, nồng độ rất loãng.\nGhi nhớ cho HSG: khi đề bài cho phản ứng \"kim loại kiềm thổ + nước dư\" hoặc \"oxit kim loại kiềm thổ + nước dư\", cần chú ý xem đề có ngầm định dung dịch đã được lọc (chỉ có phần tan) hay còn cả kết tủa Ca(OH)2 chưa tan — điều này ảnh hưởng đến việc tính khối lượng/nồng độ dung dịch sau phản ứng."
+        },
+        {
+          "id": "a3-l2-c5",
+          "heading": "Nâng cao: Oxit bazơ nào tan và phản ứng được với nước",
+          "body": "Chỉ oxit của các kim loại mạnh nhất mới tan và phản ứng được với nước ở điều kiện thường: oxit kim loại kiềm (Na2O, K2O, Li2O) và oxit của kim loại kiềm thổ mạnh (CaO, BaO, SrO — không kể BeO, MgO). Các oxit này phản ứng theo dạng chung: oxit + H2O -> bazơ tan tương ứng (kiềm), ví dụ Na2O + H2O -> 2NaOH; BaO + H2O -> Ba(OH)2.\nRiêng MgO tan trong nước rất ít, gần như không đáng kể ở điều kiện thường nên trong hầu hết bài tập THCS, MgO được coi là không phản ứng với nước.\nCác oxit bazơ còn lại — CuO, FeO, Fe2O3, Fe3O4, ZnO, PbO, Ag2O... (oxit của kim loại từ Mg/Al trở về sau trong dãy hoạt động) — đều KHÔNG tan và không phản ứng với nước ở bất kì điều kiện nào (kể cả đun nóng). Riêng Al2O3 và ZnO còn có tính lưỡng tính (vừa phản ứng được với axit vừa phản ứng được với kiềm mạnh) nhưng vẫn không phản ứng với nước — mức kiến thức lưỡng tính chỉ cần biết ở dạng HSG, không đi sâu."
+        },
+        {
+          "id": "a3-l2-c6",
+          "heading": "Nâng cao: Oxit axit và trường hợp ngoại lệ SiO2",
+          "body": "Hầu hết oxit axit đều phản ứng được với nước ở điều kiện thường, tạo axit tương ứng: CO2 + H2O -> H2CO3; SO2 + H2O -> H2SO3; SO3 + H2O -> H2SO4; N2O5 + H2O -> 2HNO3; P2O5 + 3H2O -> 2H3PO4.\nNgoại lệ quan trọng mà HSG rất hay khai thác: SiO2 (thành phần chính của cát, thạch anh) là một oxit axit (tương ứng với axit silixic H2SiO3) nhưng KHÔNG tan và không phản ứng với nước ở bất kì điều kiện thường nào — SiO2 chỉ phản ứng được với dung dịch kiềm đặc, nóng hoặc kiềm nóng chảy (NaOH nóng chảy), và với axit HF, không thể điều chế H2SiO3 bằng cách cho SiO2 tác dụng trực tiếp với nước. Đây là lí do vì sao cát/thuỷ tinh không bị nước hoà tan dù về bản chất là oxit axit."
+        },
+        {
+          "id": "a3-l2-c7",
+          "heading": "Nâng cao: Vai trò dung môi của nước",
+          "body": "Nước là dung môi phổ biến nhất, hoà tan được rất nhiều chất rắn (muối, đường, kiềm...), chất lỏng (axit, rượu...) và chất khí (CO2, SO2, NH3, HCl...) tạo thành dung dịch. Khả năng hoà tan (độ tan) của một chất trong nước phụ thuộc bản chất chất tan và nhiệt độ: đa số chất rắn có độ tan TĂNG khi nhiệt độ tăng (ví dụ NaCl, đường), trong khi hầu hết chất khí có độ tan GIẢM khi nhiệt độ tăng (ví dụ CO2 tan trong nước lạnh tốt hơn nước nóng — đây là lí do nước ngọt có ga phải được làm lạnh để giữ CO2 không thoát ra nhanh).\nCác đại lượng thường dùng để biểu diễn dung dịch nước: nồng độ phần trăm C% = (khối lượng chất tan / khối lượng dung dịch) x 100%, và nồng độ mol CM = số mol chất tan / thể tích dung dịch (lít). Khối lượng dung dịch = khối lượng chất tan + khối lượng dung môi (nước) khi không có khí thoát ra hoặc kết tủa tách ra; nếu có khí thoát ra hoặc kết tủa lắng xuống, phải TRỪ khối lượng phần đó khi tính khối lượng dung dịch còn lại — một điểm học sinh rất hay quên."
+        },
+        {
+          "id": "a3-l2-c8",
+          "heading": "Nâng cao: Bài toán hỗn hợp kim loại kiềm và oxit kim loại kiềm tác dụng với nước",
+          "body": "Dạng bài quen thuộc: cho hỗn hợp kim loại kiềm R và oxit R2O của chính kim loại đó tác dụng với nước dư, chỉ kim loại R phản ứng sinh khí H2 (còn R2O phản ứng với nước không sinh khí). Cách giải: từ thể tích/số mol H2 đã cho, dùng phương trình 2R + 2H2O -> 2ROH + H2 (tỉ lệ R : H2 = 2 : 1) để tính số mol và khối lượng R, sau đó lấy tổng khối lượng hỗn hợp trừ đi khối lượng R để ra khối lượng oxit R2O.\nVí dụ: Cho 7,8 g hỗn hợp K và K2O tác dụng với nước dư, thu được dung dịch KOH và 1,12 lít khí H2 (đktc, chỉ K phản ứng sinh khí). Tính khối lượng K2O trong hỗn hợp.\nGiải: nH2 = 1,12/22,4 = 0,05 mol. Theo 2K + 2H2O -> 2KOH + H2, tỉ lệ K : H2 = 2 : 1 nên nK = 0,1 mol, mK = 0,1 x 39 = 3,9 g. Suy ra mK2O = 7,8 - 3,9 = 3,9 g."
+        },
+        {
+          "id": "a3-l2-c9",
+          "heading": "Nâng cao: Bài toán oxit kim loại kiềm thổ hoà tan trong nước, tính nồng độ phần trăm",
+          "body": "Dạng bài: hoà tan hoàn toàn một oxit kim loại kiềm/kiềm thổ mạnh vào một khối lượng nước xác định, tính nồng độ phần trăm dung dịch bazơ thu được. Vì phản ứng oxit + nước không sinh khí, không có chất kết tủa tách ra, nên theo bảo toàn khối lượng: khối lượng dung dịch sau phản ứng = khối lượng oxit + khối lượng nước (cộng đơn giản, khác với trường hợp kim loại + nước có khí H2 thoát ra).\nVí dụ: Hoà tan hoàn toàn 7,65 g BaO vào 92,35 g nước. Tính nồng độ phần trăm dung dịch Ba(OH)2 thu được.\nGiải: nBaO = 7,65/153 = 0,05 mol. BaO + H2O -> Ba(OH)2 nên nBa(OH)2 = 0,05 mol, mBa(OH)2 = 0,05 x 171 = 8,55 g. Khối lượng dung dịch = 7,65 + 92,35 = 100 g (không có khí thoát ra nên cộng trực tiếp). C% = 8,55/100 x 100% = 8,55%."
+        },
+        {
+          "id": "a3-l2-c10",
+          "heading": "Nâng cao: Tính khối lượng dung dịch khi kim loại kiềm tác dụng với nước có khí thoát ra",
+          "body": "Khác với trường hợp oxit + nước (không sinh khí, khối lượng dung dịch = tổng khối lượng chất tan và nước), khi KIM LOẠI kiềm/kiềm thổ tác dụng với nước sinh ra khí H2 thoát ra khỏi dung dịch, khối lượng dung dịch sau phản ứng phải TRỪ ĐI khối lượng khí H2 đã thoát ra: m(dung dịch) = m(kim loại) + m(nước) − m(H2 thoát ra). Đây là lỗi rất phổ biến khi học sinh quên trừ khối lượng khí, dẫn đến tính sai nồng độ phần trăm.\nVí dụ: Cho 3,9 g K tác dụng với 96,1 g nước, khí H2 sinh ra thoát hoàn toàn ra khỏi dung dịch. Tính nồng độ phần trăm dung dịch KOH thu được.\nGiải: nK = 3,9/39 = 0,1 mol. 2K + 2H2O -> 2KOH + H2 nên nKOH = 0,1 mol, mKOH = 0,1 x 56 = 5,6 g; nH2 = 0,05 mol, mH2 = 0,05 x 2 = 0,1 g. Khối lượng dung dịch = 3,9 + 96,1 - 0,1 = 99,9 g. C% = 5,6/99,9 x 100% ≈ 5,61%."
+        },
+        {
+          "id": "a3-l2-c11",
+          "heading": "Nâng cao: Các lỗi sai thường gặp khi làm bài về tính chất của nước",
+          "body": "Một số lỗi HSG hay mắc khi làm bài liên quan đến tính chất của nước và phản ứng với kim loại/oxit:\n- Nhầm Al, Fe, Mg là kim loại phản ứng được với nước ở nhiệt độ thường như Na, K — thực ra chỉ kim loại kiềm và kiềm thổ mạnh (Ca, Sr, Ba) mới phản ứng ở điều kiện thường; Mg cần hơi nước nóng, Fe cần hơi nước rất nóng, còn Al không phản ứng do có lớp oxit bảo vệ.\n- Viết sai hệ số phương trình kim loại kiềm thổ (hoá trị II) + nước, ví dụ viết Ca + H2O -> CaOH + H2 thay vì Ca + 2H2O -> Ca(OH)2 + H2 (cân bằng đúng theo hoá trị II của Ca).\n- Cho rằng mọi oxit bazơ đều tan và phản ứng được với nước — quên rằng chỉ oxit của kim loại kiềm/kiềm thổ mạnh (Na2O, K2O, CaO, BaO) tan, còn CuO, Fe2O3, MgO, ZnO, Al2O3... không tan, không phản ứng với nước.\n- Áp dụng máy móc \"oxit axit + nước -> axit\" cho SiO2 — quên đây là ngoại lệ, SiO2 không phản ứng với nước dù là oxit axit.\n- Quên trừ khối lượng khí H2 thoát ra khi tính khối lượng dung dịch trong bài toán kim loại kiềm + nước (chỉ có phản ứng oxit + nước mới được cộng khối lượng đơn giản, không sinh khí).\n- Nhầm dung dịch Ca(OH)2 luôn trong suốt như NaOH — quên Ca(OH)2 tan ít, dễ tạo huyền phù đục (\"vôi sữa\") nếu lượng CaO/Ca dùng dư so với lượng nước."
         }
       ],
       "questions": [
