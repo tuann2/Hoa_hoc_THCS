@@ -61,11 +61,12 @@ hoặc thêm thẻ mới (tối đa 25 thẻ/bài, xem mục 3).
   authoring rules đã cập nhật theo quy tắc này.
 - **Thứ tự xử lý**: Vô cơ trước (A1→A12), rồi Hữu cơ (B1→B5), đúng thứ
   tự chương trình.
-- **Model Codex**: `gpt-5.6-terra`, reasoning effort `medium` (đổi từ
-  `gpt-5.5` sau khi cache model CLI tự làm mới ngày 11/07 và lộ ra họ
-  `gpt-5.6` — người dùng chọn `terra` + effort `medium`, dùng từ bài
-  A2 trở đi; 9 bài A1 đã soạn bằng `gpt-5.5` mặc định trước đó, không
-  cần chạy lại).
+- **Model Codex**: `gpt-5.6-terra` cho cả hai vai trò Codex, khác nhau
+  ở effort — Bước 1 (nghiên cứu/soạn ứng viên) dùng effort `medium`;
+  Bước 3 (chọn lọc + viết thẻ cuối, giao cho Codex thay Claude từ bài
+  A2) dùng effort `high`. Đổi từ `gpt-5.5` sau khi cache model CLI tự
+  làm mới ngày 11/07 và lộ ra họ `gpt-5.6`. 9 bài A1 đã soạn bằng
+  `gpt-5.5` mặc định với Claude tự chọn lọc, không cần chạy lại.
 - **Xử lý tuần tự từng bài** (không batch song song nhiều bài), để mỗi
   bài được nghiên cứu/viết đủ sâu thay vì lướt nhanh cho đủ số lượng.
 - **Phạm vi nâng cao = mức HSG cấp huyện/tỉnh**, nhất quán với quy ước
@@ -76,15 +77,18 @@ hoặc thêm thẻ mới (tối đa 25 thẻ/bài, xem mục 3).
   phát hiện thẻ cũ có lỗi/thiếu, được sửa kèm nhưng phải ghi rõ trong
   commit message.
 - Vì đây là **sửa nội dung đã duyệt trước đây** (rủi ro cao hơn thêm
-  mới), mỗi bài đều qua đủ 3 lớp kiểm định trước khi commit: Codex
-  soạn → Gemini nghiên cứu/fact-check độc lập → Claude đọc lại toàn bộ
-  diff và đối chiếu kiến thức hoá học trước khi chấp nhận.
+  mới), mỗi bài vẫn qua đủ 3 lớp: Codex soạn → Gemini fact-check độc
+  lập → Codex chọn lọc/viết thẻ cuối (từ A2 trở đi, effort `high`) —
+  nhưng Claude **không** tự đọc kỹ từng diff/đối chiếu hoá học mỗi bài
+  nữa (khác 9 bài A1 đầu). Rà soát sâu dồn vào **một lần duy nhất sau
+  khi cả 81 bài xong** (xem "Rà soát cuối cùng" ở mục 6).
 
 ## 4. Scope — Checklist tracking 81 bài (theo thứ tự xử lý)
 
 Đánh dấu `[x]` khi bài đã hoàn thành đủ chu trình (Codex soạn + Gemini
-review + Claude duyệt + validate-content pass + commit). File này là
-nguồn theo dõi tiến độ duy nhất — cập nhật ngay sau mỗi bài, không đợi
+fact-check + Codex chọn lọc/viết thẻ + Codex tự validate-content +
+Claude xác nhận phạm vi + commit). File này là nguồn theo dõi tiến độ
+duy nhất — cập nhật ngay sau mỗi bài, không đợi
 xong cả unit.
 
 ### A1 · Nền tảng hoá học (`a1-nen-tang-hoa-hoc`)
@@ -229,120 +233,128 @@ xong cả unit.
 - Không tự động hoá hoàn toàn không giám sát — mỗi bài vẫn qua Claude
   đọc lại trước khi commit (không giao phó 100% cho agent).
 
-## 6. Proposed design — quy trình 1 bài học
+## 6. Proposed design — quy trình 1 bài học (đã đổi 11/07: Codex viết thẳng, Claude chỉ điều phối)
 
-Mỗi bài học đi qua đúng trình tự sau (lặp lại cho từng bài trong
-checklist, KHÔNG chạy song song nhiều bài để giữ chất lượng):
+**Thay đổi quan trọng so với 9 bài A1 đầu tiên**: từ bài A2 trở đi,
+bước "chọn lọc + viết thẻ cuối" (trước đây Claude tự đọc từng ứng
+viên và gõ lại) được **giao cho Codex** để giảm token/thời gian của
+Claude. Vẫn giữ đủ 3 vai trò (Codex nghiên cứu → Gemini fact-check →
+chọn lọc/viết thẻ cuối), chỉ đổi ai làm vai trò thứ 3. Claude giờ chỉ
+**điều phối** (gửi task, chờ, xác nhận hoàn thành, cập nhật checklist,
+commit) — KHÔNG tự đọc/viết lại nội dung thẻ mỗi bài nữa, và KHÔNG rà
+soát sâu (đọc kỹ diff, tự kiểm tra hoá học) sau mỗi bài. Việc rà soát
+sâu dồn lại làm **một lần duy nhất sau khi cả 81 bài đã xong** (xem
+"Rà soát cuối cùng" bên dưới).
 
-### Bước 1 — Codex soạn thảo (model `gpt-5.6-terra`, effort `medium`)
+### Bước 1 — Codex nghiên cứu/soạn ứng viên (model `gpt-5.6-terra`, effort `medium`)
 
 ```
 Agent(subagent_type="codex:codex-rescue",
       prompt="--cwd /data/Projects/Hoa_hoc_THCS --write --model gpt-5.6-terra
               --effort medium
               <task: nghiên cứu và soạn CÀNG NHIỀU kiến thức nâng cao
-              càng tốt cho lesson <id>, viết ra file nháp riêng trước
-              (không giới hạn số thẻ ở bước soạn thảo)>")
+              càng tốt cho lesson <id>, viết ra file nháp riêng trước>")
 ```
 
-Yêu cầu cụ thể trong prompt cho mỗi bài:
+Yêu cầu như cũ: đọc thẻ + câu hỏi hiện có để không lặp/mâu thuẫn; viết
+thoải mái không tự giới hạn số lượng (kiến thức hoá học là tri thức
+phổ thông, không bản quyền, nhưng phải viết lại bằng lời văn riêng);
+ghi ra file nháp `/tmp/feature-012-draft-<lesson-id>.json` (mảng
+`{suggestedHeading, body, relatedBaseCard, standalone}`); KHÔNG chạm
+`content/units/*.json` ở bước này.
 
-- Đọc `body` hiện tại của tất cả thẻ + toàn bộ câu hỏi của bài (để
-  không lặp lại/mâu thuẫn nội dung quiz).
-- **Nghiên cứu và viết thoải mái, không tự giới hạn số lượng ở bước
-  này.** Kiến thức hoá học (khái niệm, công thức, kĩ thuật biện luận,
-  cơ chế phản ứng) là tri thức phổ thông, không bị bản quyền — được
-  phép tổng hợp từ nhiều nguồn, miễn viết lại bằng lời văn riêng (diễn
-  giải, không copy nguyên văn đoạn dài từ sách/website cụ thể).
-- Viết kết quả vào một **file nháp tạm** (ví dụ
-  `/tmp/feature-012-draft-<lesson-id>.json`, mảng các `{heading, body}`
-  ứng viên) thay vì ghi thẳng vào `content/units/<file>.json` — để
-  Claude quyết định ở Bước 3 cái nào vào bài, cái nào để dành.
-- Quyết định hình thức mỗi ứng viên theo độ dài/tính độc lập của chủ
-  đề: chủ đề ngắn, cùng mạch với một thẻ cơ bản đã có → gợi ý nối vào
-  cuối `body` thẻ đó (tiền tố "Nâng cao:"); chủ đề dài/là một kĩ thuật
-  riêng biệt → gợi ý thành thẻ mới.
-- Nội dung nâng cao ở mức HSG cấp huyện/tỉnh (cơ chế phản ứng sâu hơn,
-  trường hợp đặc biệt, mẹo biện luận, lưu ý hay gặp trong đề thi HSG).
-- Format: text đơn giản, công thức viết dạng CH2=CH2/CH≡CH (không
-  LaTeX), giữ giọng văn phù hợp học sinh THCS.
-- KHÔNG chạm vào `content/units/*.json`, `questions`, `id`/`heading`
-  của các thẻ cơ bản đã có — chỉ viết ra file nháp.
-
-### Bước 2 — Gemini nghiên cứu/fact-check độc lập
+### Bước 2 — Gemini fact-check độc lập
 
 ```bash
 agy --model "Gemini 3.5 Flash (High)" \
     --add-dir /data/Projects/Hoa_hoc_THCS \
-    -p "Nghiên cứu độc lập + fact-check TOÀN BỘ ứng viên nội dung nâng
-        cao trong file nháp /tmp/feature-012-draft-<lesson-id>.json
-        cho bài <id> (kể cả ứng viên có thể không được chọn vào bài,
-        vẫn cần fact-check để lưu trữ dùng sau), đối chiếu chương
-        trình Hoá 8/9 và đề thi HSG cấp huyện/tỉnh Việt Nam. CHỈ BÁO
-        CÁO phát hiện — không tự sửa file. Với mỗi ứng viên: xác nhận
-        đúng/sai cụ thể (phương trình sai/không cân bằng, khái niệm
-        sai, vượt quá phạm vi HSG THCS, mâu thuẫn với câu hỏi có sẵn
-        trong bài). Không cần khen, chỉ liệt kê vấn đề cụ thể."
+    -p "Fact-check TOÀN BỘ ứng viên trong file nháp
+        /tmp/feature-012-draft-<lesson-id>.json cho bài <id>, đối
+        chiếu chương trình Hoá 8/9 và đề thi HSG cấp huyện/tỉnh Việt
+        Nam. CHỈ BÁO CÁO — không tự sửa file. Với mỗi ứng viên: ĐÚNG/
+        SAI/CẦN SỬA kèm lý do cụ thể nếu có vấn đề."
 ```
 
-Chạy đồng bộ (không `run_in_background`), theo đúng lưu ý đã có trong
-bộ nhớ dự án (agy có thể treo với prompt nhiều phần — giữ prompt gọn,
-một nhiệm vụ). **Lưu ý**: dù đã yêu cầu chỉ báo cáo, `agy` từng tự ý
-sửa thẳng vào file ở bài thí điểm `a1-l3` — Claude vẫn phải đối chiếu
-diff/nội dung file sau mỗi lần gọi để phát hiện thay đổi ngoài dự kiến
-(dù nội dung sửa lần đó là đúng), không được bỏ qua bước kiểm tra này.
+Nếu file nháp quá dài (>15 ứng viên), chia theo `relatedBaseCard`
+thành 2-3 lần gọi để tránh treo (đã có tiền lệ ở 9 bài A1). Lưu output
+text của Gemini lại (không cần file riêng, giữ trong ngữ cảnh điều
+phối) để chuyển cho Codex ở Bước 3.
 
-### Bước 3 — Claude tổng hợp, chọn lọc và duyệt
+### Bước 3 — Codex chọn lọc + viết thẻ cuối (model `gpt-5.6-terra`, effort `high`)
 
-- Đọc file nháp + phát hiện của Gemini, loại bỏ ứng viên bị chỉ ra lỗi
-  hoá học không sửa được đơn giản; sửa trực tiếp nếu là lỗi nhỏ có thể
-  chỉnh (thuộc quyền "sửa lỗi số liệu/nội dung đã xác nhận" của Claude
-  theo `CLAUDE.md`).
-- Đếm tổng số thẻ nếu áp dụng hết ứng viên đã qua fact-check (thẻ cơ
-  bản có sẵn + ứng viên nâng cao đạt yêu cầu):
-  - **Nếu tổng ≤ 25**: đưa hết vào `content/units/<file>.json` theo
-    quy tắc "ngắn/cùng mạch → nối vào thẻ cũ, dài/độc lập → thẻ mới"
-    đã nêu ở Bước 1.
-  - **Nếu tổng > 25**: chọn giữ lại tối đa 25 thẻ theo **mức độ giá
-    trị/liên quan trực tiếp tới các câu hỏi HSG đã có sẵn trong bài**
-    (không chọn ngẫu nhiên) — ưu tiên nội dung khớp trực tiếp với kĩ
-    thuật cần để giải câu HSG hiện có, sau đó đến nội dung nền tảng
-    quan trọng. Phần ứng viên đã fact-check nhưng không được chọn ghi
-    vào file dự trữ `docs/content-reserve/<lesson-id>.md` (tạo mới,
-    xem mục 7) kèm ghi chú ngắn lý do chưa dùng — **không xoá bỏ**, để
-    dùng cho tính năng sau (ví dụ mở rộng thêm khi có nhu cầu, hoặc
-    làm nguồn cho câu hỏi mới).
-- Kiểm tra thủ công phần được chọn vào bài: phương trình cân bằng
-  đúng, không mâu thuẫn với câu hỏi/đáp án hiện có của bài, độ dài hợp
-  lý cho di động.
-- Xoá file nháp `/tmp/feature-012-draft-<lesson-id>.json` sau khi xử
-  lý xong (không commit file tạm).
-- Chạy `npm run validate-content && npx prettier --check
-content/units/<file>.json` độc lập.
+```
+Agent(subagent_type="codex:codex-rescue",
+      prompt="--cwd /data/Projects/Hoa_hoc_THCS --write --model gpt-5.6-terra
+              --effort high
+              <task: đọc file nháp /tmp/feature-012-draft-<lesson-id>.json
+              + báo cáo fact-check của Gemini (dán kèm trong prompt),
+              chọn lọc và ghi thẳng vào content/units/<file>.json>")
+```
 
-### Bước 4 — Commit theo từng bài
+Yêu cầu cụ thể trong prompt:
 
-- 1 commit / 1 bài học (dễ revert riêng lẻ nếu phát hiện lỗi sau này),
-  message dạng:
-  `content: FEATURE-012 — mở rộng lý thuyết nâng cao <lesson-id>`.
-- Cập nhật checklist ở mục 4 (đánh dấu `[x]`) trong CÙNG commit hoặc
-  commit theo dõi riêng mỗi vài bài — quyết định lúc chạy để không vỡ
-  nhịp, miễn checklist luôn phản ánh đúng trạng thái thật trước khi
-  kết thúc phiên làm việc.
+- Dán nguyên văn báo cáo fact-check của Gemini vào prompt (Codex không
+  tự gọi Gemini).
+- Loại bỏ ứng viên bị Gemini chỉ SAI không sửa được đơn giản; tự sửa
+  lỗi nhỏ (CẦN SỬA) theo đúng ghi chú trước khi dùng.
+- Gộp ý trùng lặp, ưu tiên nội dung khớp trực tiếp câu hỏi HSG có sẵn
+  trong bài, tránh nhồi hết mọi ứng viên nếu trùng ý — mục tiêu khoảng
+  **5–8 thẻ nâng cao/bài** (linh hoạt theo độ phong phú thật của nội
+  dung, không ép cứng).
+- Áp dụng đúng quy tắc format thẻ: chủ đề ngắn/cùng mạch → nối vào
+  cuối `body` thẻ cơ bản liên quan; chủ đề dài/kĩ thuật riêng → thẻ
+  mới `heading` dạng "Nâng cao: ...". Tổng số thẻ (gốc + mới) không
+  vượt 25 (trần schema).
+- Nếu ứng viên đã fact-check ĐÚNG nhưng không được chọn (trùng ý, hoặc
+  vượt trần), ghi vào `docs/content-reserve/<lesson-id>.md` theo đúng
+  format đã dùng ở các bài A1 (xem file mẫu `docs/content-reserve/
+a1-l1.md`) — không xoá bỏ.
+- KHÔNG áp dụng đề xuất đổi đktc/22,4 → đkc/24,79 nếu Gemini gợi ý
+  (toàn app dùng nhất quán đktc/22,4).
+- Không đổi `questions`, `id`/`heading` thẻ cơ bản, không đổi lesson
+  khác trong cùng file.
+- Tự chạy `npm run validate-content && npx prettier --write
+content/units/<file>.json` và sửa lỗi nếu có trước khi báo hoàn
+  thành. Xoá file nháp sau khi xử lý xong.
+- Báo cáo ngắn gọn: số thẻ cuối cùng, có tạo file dự trữ hay không.
+
+### Bước 4 — Claude điều phối: xác nhận + commit (KHÔNG đọc sâu)
+
+- Xác nhận task Codex báo thành công + `git status --short` chỉ đổi
+  đúng file/lesson dự kiến (không lan sang bài/unit khác) — đây là
+  kiểm tra phạm vi nhẹ, không phải đọc nội dung.
+- Cập nhật checklist mục 4 (đánh dấu `[x]`).
+- Commit 1 bài/1 commit (dễ revert), message ngắn gọn nêu số thẻ cuối
+  và có/không file dự trữ — KHÔNG cần liệt kê chi tiết nội dung từng
+  thẻ như các bài A1 trước đó (giảm tải, để dành chi tiết cho lúc rà
+  soát cuối).
+- KHÔNG tự chạy lại `npm test/lint/typecheck` sau mỗi bài (đã do Codex
+  tự chạy validate-content) — việc này dồn vào rà soát cuối cùng.
+
+### Rà soát cuối cùng (sau khi CẢ 81 bài đã commit)
+
+- Đọc lại toàn bộ diff tích luỹ (`git diff main...feature/FEATURE-012`
+  cho `content/units/`) — không cần đọc từng bài riêng lẻ nhưng phải
+  lướt qua toàn bộ để bắt lỗi rõ ràng (định dạng, thẻ trống, lặp lộ
+  liễu).
+- Chạy đầy đủ một lần: `npm run validate-content && npm test && npm
+run lint && npm run typecheck && npm run format:check`.
+- Chạy Gemini spot-check một mẫu ngẫu nhiên (ví dụ 8-10 bài rải đều
+  Vô cơ/Hữu cơ) để kiểm tra lại chất lượng tổng thể của quy trình mới
+  (Codex tự chọn lọc thay Claude) — nếu phát hiện vấn đề hệ thống, cân
+  nhắc rà soát thêm các bài cùng loại.
+- Sửa các lỗi phát hiện được, chạy `npm run dev` thử một vài bài trên
+  UI thật để chắc chắn không vỡ layout.
+- Chỉ sau bước này mới coi FEATURE-012 hoàn thành, sẵn sàng push/PR.
 
 ### Vận hành ở quy mô 81 bài
 
-- Vì khối lượng lớn, việc chạy toàn bộ 81 bài trải dài qua nhiều lượt
-  tương tác/nhiều phiên. File plan này (đặc biệt checklist mục 4) là
-  nguồn trạng thái bền vững — phiên sau đọc lại đúng chỗ đang dang dở.
-- Đề xuất **thí điểm 2-3 bài đầu tiên** (`a1-l1`, `a1-l2`, `a1-l3`)
-  trước, cho người dùng xem kết quả thực tế (diff + nhận xét chất
-  lượng) để xác nhận đúng "độ sâu" mong muốn, trước khi chạy tiếp hàng
-  loạt phần còn lại của A1 rồi các unit sau.
-- Không cần dừng hỏi lại người dùng giữa mỗi bài sau khi đã xác nhận
-  chất lượng ở bước thí điểm — chỉ dừng nếu Gemini/Claude phát hiện
-  vấn đề không tự xử lý được (ví dụ nội dung mơ hồ về mặt hoá học cần
-  người có chuyên môn quyết định).
+- File plan này (đặc biệt checklist mục 4) là nguồn trạng thái bền
+  vững — phiên sau đọc lại đúng chỗ đang dang dở.
+- Chạy tuần tự từng bài (không song song nhiều bài trong cùng file để
+  tránh xung đột ghi), nhưng KHÔNG dừng hỏi lại người dùng giữa các
+  bài — chỉ dừng nếu Codex báo lỗi không tự xử lý được, hoặc phát hiện
+  vấn đề hệ thống ở bước rà soát cuối.
 
 ## 6a. New technology
 
