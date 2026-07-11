@@ -118,7 +118,7 @@ xong cả unit.
 
 ### A4 · Dung dịch (`a4-dung-dich`)
 
-- [ ] `a4-l1` — Độ tan; các yếu tố ảnh hưởng
+- [x] `a4-l1` — Độ tan; các yếu tố ảnh hưởng
 - [ ] `a4-l2` — Nồng độ % và nồng độ mol; chuyển đổi
 - [ ] `a4-l3` — Pha chế – pha loãng dung dịch; quy tắc đường chéo
 - [ ] `a4-l4` — Nâng cao: tinh thể ngậm nước; bài toán kết tinh

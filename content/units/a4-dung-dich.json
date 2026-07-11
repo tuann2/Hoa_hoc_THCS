@@ -28,6 +28,41 @@
           "id": "a4-l1-c3",
           "heading": "Các yếu tố ảnh hưởng đến độ tan",
           "body": "Nhiệt độ: đa số chất rắn tan nhiều hơn khi nhiệt độ tăng; ngược lại, chất khí tan ít hơn khi nhiệt độ tăng.\nÁp suất: độ tan của chất khí tăng khi áp suất tăng; áp suất hầu như không ảnh hưởng đến độ tan của chất rắn, chất lỏng."
+        },
+        {
+          "id": "a4-l1-c4",
+          "heading": "Nâng cao: Công thức liên hệ giữa độ tan và nồng độ % của dung dịch bão hoà",
+          "body": "Với dung dịch bão hoà ở một nhiệt độ xác định, nếu độ tan là S (g/100 g nước) thì trong 100 g nước có S gam chất tan, tổng khối lượng dung dịch là (100+S) gam. Do đó nồng độ phần trăm của dung dịch bão hoà tính theo công thức: C% = S/(100+S) x 100.\nVí dụ: NaCl có độ tan 36 g ở 20 độ C thì dung dịch NaCl bão hoà ở 20 độ C có nồng độ C% = 36/(100+36) x 100 ≈ 26,5%.\nBiến đổi ngược lại, từ C% suy ra S: S = 100 x C%/(100 - C%). Ví dụ: hoà tan 50 g muối X vào 200 g nước ở một nhiệt độ, thu được đúng dung dịch bão hoà. Khối lượng dung dịch là 50+200=250 g nên C% = 50/250 x 100 = 20%. Tính theo định nghĩa độ tan: S = 50/200 x 100 = 25 g, khớp với công thức ngược S = 100x20/(100-20) = 25 g.\nLưu ý: công thức này CHỈ áp dụng cho dung dịch bão hoà; với dung dịch chưa bão hoà, phải tính C% trực tiếp theo khối lượng chất tan và khối lượng dung dịch thực tế, không dùng công thức trên. Dạng bài có thể cho C% để suy ra S, hoặc ngược lại, nên cần nhớ cả hai chiều biến đổi."
+        },
+        {
+          "id": "a4-l1-c5",
+          "heading": "Nâng cao: Đọc và so sánh đồ thị độ tan theo nhiệt độ",
+          "body": "Đồ thị độ tan biểu diễn độ tan S (trục tung, g/100 g nước) theo nhiệt độ (trục hoành, độ C). Với đa số chất rắn, đường biểu diễn đi lên; độ dốc của đường cho biết chất đó nhạy với nhiệt độ nhiều hay ít.\nVí dụ minh hoạ: NaCl có độ tan tăng chậm theo nhiệt độ (khoảng 36 g ở 20 độ C, khoảng 39 g ở 100 độ C, đường gần như nằm ngang); KNO3 tăng rất nhanh (khoảng 13 g ở 0 độ C, 32 g ở 20 độ C, có thể lên tới hơn 200 g ở gần 100 độ C, đường dốc đứng).\nHai đường biểu diễn độ tan của hai chất khác nhau có thể cắt nhau tại một nhiệt độ nào đó, tại điểm cắt hai chất có cùng độ tan; đây là dữ kiện thường gặp trong dạng bài đọc đồ thị của đề HSG."
+        },
+        {
+          "id": "a4-l1-c6",
+          "heading": "Nâng cao: Trường hợp đặc biệt — độ tan giảm khi nhiệt độ tăng",
+          "body": "Không phải mọi chất rắn đều tan nhiều hơn khi đun nóng. Ca(OH)2 (vôi tôi) là ví dụ điển hình đi ngược quy luật chung: độ tan của Ca(OH)2 GIẢM khi nhiệt độ tăng (khoảng 0,17 g/100 g nước ở 20 độ C, giảm còn khoảng 0,08-0,09 g/100 g nước ở gần 100 độ C).\nVì vậy, muốn thu được dung dịch nước vôi trong có nồng độ Ca(OH)2 cao nhất, nên hoà tan ở nhiệt độ THẤP (nước lạnh), không phải đun nóng như đa số muối/đường khác.\nĐây là một câu hỏi bẫy quen thuộc trong đề HSG: nếu không nhớ ngoại lệ này, học sinh dễ trả lời sai theo quy luật chung 'nhiệt độ tăng thì độ tan chất rắn tăng'."
+        },
+        {
+          "id": "a4-l1-c7",
+          "heading": "Nâng cao: Ảnh hưởng của nhiệt độ và áp suất đến độ tan của chất khí",
+          "body": "Áp suất khí trên bề mặt chất lỏng càng tăng thì độ tan của chất khí trong chất lỏng đó càng tăng; áp suất giảm thì độ tan khí giảm. Ứng dụng quen thuộc: nước ngọt có ga được nạp CO2 dưới áp suất cao trong chai/lon kín nên hoà tan được nhiều CO2. Khi mở nắp, áp suất giảm đột ngột về áp suất khí quyển nên độ tan CO2 giảm mạnh, khí CO2 thoát ra ngoài tạo bọt sủi.\nKhác với chất rắn, nhiệt độ tăng làm độ tan của CHẤT KHÍ trong nước GIẢM (không tăng). Ví dụ: nước càng nóng thì lượng oxi hoà tan trong nước càng ít, đó là lý do cá thường nổi lên mặt nước để thở khi nước bị đun nóng hoặc vào mùa hè oi bức, vì lượng oxi hoà tan giảm khiến cá thiếu oxi.\nLưu ý: áp suất hầu như không ảnh hưởng đến độ tan chất rắn và chất lỏng, chỉ ảnh hưởng đáng kể đến độ tan chất khí."
+        },
+        {
+          "id": "a4-l1-c8",
+          "heading": "Nâng cao: Trạng thái bão hoà, chưa bão hoà và quá bão hoà của dung dịch",
+          "body": "Dung dịch quá bão hoà là dung dịch chứa lượng chất tan NHIỀU HƠN mức bão hoà thông thường ở nhiệt độ đó, đây là trạng thái không bền (giả bền). Cách tạo: hoà tan chất tan tới bão hoà ở nhiệt độ cao, sau đó làm nguội từ từ, thật cẩn thận (không khuấy mạnh, không có mầm tinh thể hay bụi bẩn) để chất tan dư không kịp kết tinh ra ngay. Chỉ cần một tác động nhỏ (thả một mầm tinh thể chất tan vào, khuấy mạnh, hoặc va chạm) là phần chất tan dư sẽ kết tinh nhanh chóng trở lại trạng thái bão hoà bền, đây là hiện tượng dùng để giải thích một số thí nghiệm 'kết tinh tức thời' quen thuộc.\nVới dung dịch chưa bão hoà, khối lượng chất tan hiện có luôn nhỏ hơn mức tối đa mà độ tan cho phép ở nhiệt độ đó. Khối lượng cần thêm vào (giữ nguyên khối lượng dung môi) = khối lượng chất tan tối đa theo độ tan trừ khối lượng chất tan đã có. Ví dụ: ở 20 độ C, S(NaCl) = 36 g/100 g nước. Hoà tan 20 g NaCl vào 100 g nước được dung dịch chưa bão hoà (vì 20 < 36). Cần thêm 36 - 20 = 16 g NaCl nữa (giữ nguyên 100 g nước) để dung dịch đạt bão hoà. Nếu đổi khối lượng nước, phải tính lại khối lượng chất tan tối đa tương ứng theo tỉ lệ với 100 g nước trước khi trừ đi khối lượng đã hoà tan."
+        },
+        {
+          "id": "a4-l1-c9",
+          "heading": "Nâng cao: So sánh độ tan khi khối lượng dung môi khác nhau",
+          "body": "Không thể so sánh trực tiếp khối lượng chất tan tối đa giữa các thí nghiệm nếu khối lượng dung môi khác nhau, phải quy đổi tất cả về cùng 100 g nước (tức tính độ tan S) rồi mới so sánh.\nVí dụ: chất A tan tối đa 15 g trong 50 g nước -> S(A) = 15/50 x 100 = 30 g. Chất B tan tối đa 24 g trong 80 g nước -> S(B) = 24/80 x 100 = 30 g. Dù khối lượng tan tối đa khác nhau (15 g và 24 g), hai chất này thực ra có ĐỘ TAN BẰNG NHAU ở nhiệt độ đó.\nĐây là lỗi so sánh rất hay gặp: nhìn số gam chất tan lớn hơn rồi vội kết luận chất đó có độ tan lớn hơn, mà quên kiểm tra khối lượng dung môi tương ứng có bằng nhau hay không."
+        },
+        {
+          "id": "a4-l1-c10",
+          "heading": "Nâng cao: Các lỗi sai thường gặp khi làm bài về độ tan",
+          "body": "Một số lỗi hay gặp cần tự kiểm tra trước khi chốt đáp số:\n- Nhầm 100 g NƯỚC (dung môi) với 100 g DUNG DỊCH khi tính S, độ tan luôn quy về khối lượng dung môi, không phải khối lượng dung dịch.\n- Nói 'độ tan của chất X' mà không kèm nhiệt độ xác định, độ tan chỉ có ý nghĩa khi gắn với một nhiệt độ cụ thể.\n- Áp dụng công thức C% = 100S/(100+S) cho dung dịch CHƯA bão hoà, công thức này chỉ đúng với dung dịch bão hoà.\n- Nhầm chiều ảnh hưởng của nhiệt độ: cho rằng mọi chất khí cũng tan nhiều hơn khi nóng lên giống chất rắn (thực tế ngược lại), hoặc quên trường hợp đặc biệt Ca(OH)2.\n- So sánh độ tan giữa hai thí nghiệm có khối lượng dung môi khác nhau mà không quy đổi về cùng 100 g nước trước.\n- Khi làm lạnh dung dịch bão hoà chứa muối kết tinh dạng ngậm nước (như CuSO4.5H2O), quên trừ đi lượng nước bị giữ lại trong tinh thể kết tinh khi tính lại khối lượng nước còn lại trong dung dịch, sẽ được xử lý kỹ hơn ở bài về tinh thể ngậm nước."
         }
       ],
       "questions": [
