@@ -213,6 +213,21 @@
           "id": "a1-l2-c3",
           "heading": "Sơ lược bảng tuần hoàn",
           "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau."
+        },
+        {
+          "id": "a1-l2-c4",
+          "heading": "Nâng cao: Phân biệt nguyên tố, nguyên tử và kí hiệu",
+          "body": "Nguyên tố hoá học là khái niệm chỉ tập hợp các nguyên tử cùng số proton, không phải một nguyên tử riêng lẻ; bản thân tên nguyên tố không cho biết có bao nhiêu nguyên tử hay khối lượng cụ thể. Nguyên tử là một hạt cụ thể của nguyên tố đó, đếm được số lượng trong công thức. Ví dụ Na2O: phân tử có 2 nguyên tử Na và 1 nguyên tử O, được tạo bởi 2 nguyên tố là natri và oxi.\nDấu hiệu chắc chắn để nhận ra một nguyên tố là số proton (số hiệu nguyên tử), không phải số nơtron hay khối lượng — hai nguyên tử cùng số proton nhưng khác số nơtron vẫn là cùng một nguyên tố (đồng vị).\nKí hiệu hoá học (ví dụ O, H) chỉ một nguyên tử của nguyên tố; công thức hoá học (ví dụ O2, H2O) chỉ một phân tử, có thể gồm nhiều nguyên tử của một hay nhiều nguyên tố. Không nên nhầm kí hiệu nguyên tố với công thức của đơn chất tương ứng."
+        },
+        {
+          "id": "a1-l2-c5",
+          "heading": "Nâng cao: Tìm nguyên tử khối từ công thức và phân tử khối",
+          "body": "Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối mỗi nguyên tố nhân với chỉ số của nó rồi cộng lại (chỉ số là số nguyên tử trong công thức, khác với hệ số đứng trước công thức khi viết phương trình). Với công thức dạng RxOy, phân tử khối M = x.R + 16y (vì O = 16). Nếu biết M và công thức, lập phương trình để tìm nguyên tử khối chưa biết, rồi đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. Đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: với oxit RxOy, hoá trị của R suy ra được từ chỉ số theo quy tắc hoá trị (hoá trị R × x = II × y), phải hợp lí với nguyên tố vừa tìm được. \"Oxit cao nhất\" của một nguyên tố nhóm A là oxit trong đó nguyên tố có hoá trị cao nhất với oxi, hoá trị này bằng đúng số thứ tự nhóm A của nguyên tố — đây là một cách kiểm tra thêm, không chỉ là dữ kiện tính toán."
+        },
+        {
+          "id": "a1-l2-c6",
+          "heading": "Nâng cao: Quy luật nhóm và chu kì",
+          "body": "Số thứ tự chu kì bằng số lớp electron của nguyên tử — quy tắc này đúng cho MỌI nguyên tố (cả nhóm A và nhóm B), không chỉ riêng nhóm A.\nVới các nguyên tố nhóm A, số thứ tự nhóm A bằng số electron lớp ngoài cùng (ngoại lệ: khí hiếm heli He chỉ có 2 electron lớp ngoài cùng nhưng vẫn xếp ở nhóm VIIIA). Đây là lí do sâu xa khiến các nguyên tố cùng nhóm A có tính chất hoá học tương tự: số electron lớp ngoài cùng giống nhau nên cách nhường/nhận electron thường giống nhau — ví dụ Li, Na, K (nhóm IA) đều dễ nhường 1 electron, thường hoá trị I; F, Cl, Br (nhóm VIIA) đều dễ nhận thêm 1 electron.\nQuy tắc \"nhóm A = số electron lớp ngoài cùng\" chỉ áp dụng tốt cho nhóm A ở mức THCS — không áp dụng máy móc cho kim loại chuyển tiếp (nhóm B, ví dụ Fe, Cu), vì các kim loại này có thể có nhiều hoá trị khác nhau tuỳ hợp chất; với nhóm B nên dựa vào hoá trị đề cho, không suy trực tiếp từ số nhóm."
         }
       ],
       "questions": [
