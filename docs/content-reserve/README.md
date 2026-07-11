@@ -22,3 +22,5 @@ Mỗi file ghi rõ verdict fact-check của Gemini cho từng mục; mục
   bằng PTHH (4 ứng viên dự trữ / 22 tổng, đã dùng 18)
 - [`a1-l6.md`](a1-l6.md) — Mol – khối lượng mol – thể tích mol khí; tỉ
   khối chất khí (1 ứng viên dự trữ / 25 tổng, đã dùng 24)
+- [`a2-l1.md`](a2-l1.md) — Tính chất – điều chế oxi; phản ứng hoá hợp,
+  phân huỷ (2 ứng viên dự trữ / 23 tổng, đã dùng 21)

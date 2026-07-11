@@ -17,17 +17,57 @@
         {
           "id": "a2-l1-c1",
           "heading": "Tính chất của oxi",
-          "body": "Oxi là chất khí không màu, không mùi, ít tan trong nước, nặng hơn không khí (M = 32).\nOxi tác dụng với hầu hết kim loại, nhiều phi kim và nhiều hợp chất, đều là phản ứng cháy toả nhiệt.\nVí dụ: 3Fe + 2O2 (nhiệt độ) -> Fe3O4; S + O2 (nhiệt độ) -> SO2."
+          "body": "Oxi là chất khí không màu, không mùi, ít tan trong nước, nặng hơn không khí (M = 32).\nOxi tác dụng với hầu hết kim loại, nhiều phi kim và nhiều hợp chất, đều là phản ứng cháy toả nhiệt.\nVí dụ: 3Fe + 2O2 (nhiệt độ) -> Fe3O4; S + O2 (nhiệt độ) -> SO2.\nOxi duy trì sự cháy nhưng bản thân không phải là chất cháy: chất bị đốt cháy (C, S, Fe, H2...) mới là chất bị oxi hoá, còn O2 là chất tham gia làm xảy ra sự oxi hoá đó.\nSản phẩm khi đốt cháy có thể thay đổi theo lượng oxi: đủ O2, C + O2 (nhiệt độ) -> CO2; thiếu O2, 2C + O2 (nhiệt độ) -> 2CO, sau đó 2CO + O2 (nhiệt độ) -> 2CO2 nếu đủ oxi. Khi đề bài nói \"đốt cháy hoàn toàn\" hoặc \"oxi dư\" mới chọn sản phẩm oxi hoá hoàn toàn.\nCó thể nhận biết khí oxi bằng que đóm còn tàn đỏ: đưa que đóm vào bình khí, nếu tàn đỏ bùng cháy trở lại thì khí có oxi với lượng đủ lớn để duy trì sự cháy."
         },
         {
           "id": "a2-l1-c2",
           "heading": "Điều chế oxi",
-          "body": "Trong phòng thí nghiệm: nhiệt phân KMnO4 hoặc KClO3 (có xúc tác MnO2):\n2KMnO4 (nhiệt độ) -> K2MnO4 + MnO2 + O2\n2KClO3 (nhiệt độ, MnO2) -> 2KCl + 3O2\nTrong công nghiệp: chưng cất phân đoạn không khí lỏng, hoặc điện phân nước."
+          "body": "Trong phòng thí nghiệm: nhiệt phân KMnO4 hoặc KClO3 (có xúc tác MnO2):\n2KMnO4 (nhiệt độ) -> K2MnO4 + MnO2 + O2\n2KClO3 (nhiệt độ, MnO2) -> 2KCl + 3O2\nTrong công nghiệp: chưng cất phân đoạn không khí lỏng, hoặc điện phân nước.\nMnO2 là chất xúc tác trong phản ứng nhiệt phân KClO3: chỉ giúp phản ứng xảy ra nhanh hơn, không phải chất tham gia hay chất tạo thành nên không được tính vào tỉ lệ mol của phương trình.\nĐiện phân nước: 2H2O (điện phân) -> 2H2 + O2, ở cùng điều kiện nhiệt độ, áp suất thì VH2 : VO2 = 2 : 1 đúng theo hệ số phương trình."
         },
         {
           "id": "a2-l1-c3",
           "heading": "Phản ứng hoá hợp và phản ứng phân huỷ",
-          "body": "Phản ứng hoá hợp: từ hai hay nhiều chất tạo thành một chất mới (dạng A + B -> C).\nPhản ứng phân huỷ: từ một chất tạo thành hai hay nhiều chất mới (dạng A -> B + C).\nĐiều chế oxi trong phòng thí nghiệm bằng cách nhiệt phân KMnO4 hoặc KClO3 là phản ứng phân huỷ."
+          "body": "Phản ứng hoá hợp: từ hai hay nhiều chất tạo thành một chất mới (dạng A + B -> C).\nPhản ứng phân huỷ: từ một chất tạo thành hai hay nhiều chất mới (dạng A -> B + C).\nĐiều chế oxi trong phòng thí nghiệm bằng cách nhiệt phân KMnO4 hoặc KClO3 là phản ứng phân huỷ.\nKí hiệu nhiệt độ, xúc tác (như MnO2) ghi trên mũi tên phản ứng chỉ là điều kiện phản ứng, không phải chất tham gia, nên không làm thay đổi việc phân loại phản ứng: 2KClO3 (nhiệt độ, MnO2) -> 2KCl + 3O2 vẫn là phản ứng phân huỷ."
+        },
+        {
+          "id": "a2-l1-c4",
+          "heading": "Nâng cao: Thu khí oxi trong phòng thí nghiệm",
+          "body": "O2 ít tan và không phản ứng với nước nên có thể thu bằng phương pháp đẩy nước: đặt sẵn bình thu (úp ngược, đầy nước) trong chậu nước; lúc đầu để khí thoát ra một thời gian cho đẩy hết không khí trong ống dẫn, rồi mới đưa đầu ống dẫn khí vào miệng bình thu để thu khí, tránh mẫu khí lẫn nhiều không khí ban đầu.\nO2 cũng nặng hơn không khí nên có thể thu bằng cách đẩy không khí: dẫn khí xuống gần đáy bình đặt ngửa (không úp ngược như với khí nhẹ hơn không khí).\nKhi cần khí khá tinh khiết để làm thí nghiệm về sự cháy, phương pháp đẩy nước thường cho kết quả đáng tin cậy hơn."
+        },
+        {
+          "id": "a2-l1-c5",
+          "heading": "Nâng cao: Thí nghiệm đốt sắt trong khí oxi",
+          "body": "Dây sắt sạch quấn lò xo thường không tự bắt lửa dễ dàng nên phải quấn một mẩu que diêm hoặc mẩu gỗ nhỏ ở đầu dây, đốt cháy mẩu này làm mồi trước khi đưa vào bình oxi. Khi đưa vào bình O2, sắt cháy sáng, tóe tia lửa và tạo hạt nóng chảy của Fe3O4: 3Fe + 2O2 (nhiệt độ) -> Fe3O4. Cho một ít cát hoặc nước ở đáy bình để hứng hạt nóng chảy, tránh làm nứt đáy bình.\nCùng một chất, cháy trong bình O2 tinh khiết thường mạnh, sáng và nhanh hơn khi cháy trong không khí, vì nồng độ O2 lớn hơn và không bị N2 pha loãng, nhận bớt nhiệt. Đây là khác biệt về điều kiện phản ứng (nồng độ oxi), không có nghĩa là phương trình hoá học thay đổi.\nKhông suy diễn rằng mọi kim loại đều cháy giống nhau: Mg cháy rất mãnh liệt, còn Cu chỉ bị oxi hoá khi nung nóng chứ không cháy sáng như Fe hay Mg."
+        },
+        {
+          "id": "a2-l1-c6",
+          "heading": "Nâng cao: An toàn khi điều chế oxi bằng nhiệt phân",
+          "body": "Ống nghiệm phải khô, miệng hơi chúc xuống và không hướng vào người: hơi nước ngưng tụ ở đầu lạnh không chảy ngược về phần thuỷ tinh đang rất nóng. Chỉ đun một lượng hoá chất vừa phải, hơ nóng đều rồi mới tập trung đun vào chỗ có hoá chất để tránh nứt ống. Khi ngừng thí nghiệm thu khí bằng phương pháp đẩy nước, phải rút đầu ống dẫn khí ra khỏi nước trước khi tắt đèn cồn; nếu làm ngược lại, khí trong dụng cụ nguội đi co lại có thể hút nước ngược vào ống đang nóng, gây vỡ ống.\nKClO3 là chất oxi hoá mạnh ở dạng rắn: chỉ dùng lượng nhỏ, dụng cụ sạch và MnO2 đúng vai trò xúc tác. Không nghiền hay trộn KClO3 với lưu huỳnh, than, photpho, bột kim loại hoặc chất hữu cơ (các chất khử), vì hỗn hợp này có thể phản ứng rất mãnh liệt, thậm chí gây nổ, chỉ với ma sát hoặc va chạm nhẹ — không phải vì \"khí O2 sinh ra làm cháy dữ dội hơn\"."
+        },
+        {
+          "id": "a2-l1-c7",
+          "heading": "Nâng cao: H2O2 là nguồn O2 thuận tiện ở nhiệt độ thường",
+          "body": "Ngoài hai chất rắn cần đun nóng, có thể cho dung dịch H2O2 phân huỷ với MnO2 làm xúc tác: 2H2O2 (MnO2) -> 2H2O + O2. Phản ứng xảy ra ở nhiệt độ thường nên dễ điều khiển bằng tốc độ nhỏ dung dịch H2O2; MnO2 không phải sản phẩm và không bị tiêu hao theo phương trình.\nTuy nhiên H2O2 đậm đặc là chất oxi hoá mạnh, không được tự ý pha trộn với chất dễ cháy hay đun kín. Trong bài toán, 2 mol H2O2 chỉ tạo 1 mol O2."
+        },
+        {
+          "id": "a2-l1-c8",
+          "heading": "Nâng cao: Tách O2 từ không khí lỏng là sự biến đổi vật lí",
+          "body": "Không khí được nén, làm lạnh sâu để hoá lỏng rồi chưng cất phân đoạn. Các khí có nhiệt độ sôi khác nhau nên tách dần: N2 có nhiệt độ sôi thấp hơn O2, vì vậy N2 bay hơi trước khi tăng nhiệt từ không khí lỏng. Quá trình này không tạo chất mới, khác hẳn phản ứng phân huỷ; nó chỉ tách các cấu tử vốn có của hỗn hợp không khí. O2 công nghiệp cũng có thể được cô đặc bằng các hệ hấp phụ chọn lọc, nhưng đây không phải cách điều chế trong phòng thí nghiệm phổ thông."
+        },
+        {
+          "id": "a2-l1-c9",
+          "heading": "Nâng cao: Phân biệt phản ứng hoá hợp, phân huỷ qua nhiều dấu hiệu",
+          "body": "Phản ứng hoá hợp: tiêu chí là sau phản ứng chỉ thu được một chất mới, không phụ thuộc số nguyên tố hay số phân tử ở vế trái. Ví dụ CaO + H2O -> Ca(OH)2 vẫn là hoá hợp dù chất sản phẩm có ba nguyên tố; 2H2 + O2 -> 2H2O cũng là hoá hợp dù hệ số cân bằng làm số phân tử thay đổi. Ngược lại, Fe + 2HCl -> FeCl2 + H2 không phải hoá hợp vì tạo hai chất mới.\nPhản ứng phân huỷ: từ một chất ban đầu tạo ra hai hay nhiều chất mới, chẳng hạn CaCO3 -> CaO + CO2. Cần phân biệt với biến đổi vật lí: nước bay hơi thành hơi nước vẫn là H2O nên chỉ là biến đổi vật lí; chưng cất không khí lỏng tách ra O2 và N2 cũng là tách hỗn hợp bằng biến đổi vật lí vì các khí đã tồn tại sẵn trong không khí. Do đó không thể chỉ thấy \"một thứ thành nhiều thứ\" mà kết luận ngay là phản ứng phân huỷ.\nCác nhãn \"hoá hợp\", \"phân huỷ\", \"cháy\" mô tả những khía cạnh khác nhau của cùng một phản ứng. Chẳng hạn S + O2 -> SO2 vừa là phản ứng hoá hợp (hai chất tạo một chất), vừa là sự cháy của S trong O2. Còn 2KClO3 -> 2KCl + 3O2 là phản ứng phân huỷ, không phải phản ứng cháy. Khi đề hỏi loại phản ứng theo số chất trước–sau, cần trả lời theo đúng định nghĩa hoá hợp/phân huỷ, không thay bằng nhãn khác dù hiện tượng có toả nhiệt."
+        },
+        {
+          "id": "a2-l1-c10",
+          "heading": "Nâng cao: Bài toán nhiệt phân hỗn hợp KMnO4 và KClO3",
+          "body": "Từ các phương trình điều chế: n(O2) = 1/2 n(KMnO4); n(O2) = 3/2 n(KClO3); n(O2) = 1/2 n(H2O2). Với hỗn hợp các chất đều phân huỷ hoàn toàn, tổng số mol O2 bằng tổng phần đóng góp của từng chất. Cách làm an toàn là viết từng phương trình, đổi khối lượng ra mol rồi áp dụng hệ số; chỉ dùng công thức rút gọn sau khi đã nhớ đúng phương trình. Nếu đề cho hiệu suất H%, lượng O2 thực tế bằng lượng lí thuyết nhân H/100.\nKhi biện luận hỗn hợp KMnO4 và KClO3: gọi số mol lần lượt là x, y. Nếu biết khối lượng hỗn hợp m và số mol O2 là n, lập hệ: 158x + 122,5y = m; 0,5x + 1,5y = n. Giải hệ phải kèm điều kiện x ≥ 0, y ≥ 0; nghiệm âm cho biết dữ kiện không phù hợp hoặc giả thiết chưa đúng. Nếu đề chỉ cho một dữ kiện (chỉ m hoặc chỉ n(O2)) thường chưa xác định duy nhất được thành phần hỗn hợp.\nMột cách khác: khi nung hỗn hợp đến hoàn toàn, khối lượng giảm đúng bằng khối lượng O2 thoát ra: m(O2) = m(trước nung) - m(chất rắn sau nung), từ đó n(O2) = [m(trước) - m(sau)]/32 rồi ghép với phương trình khối lượng của hỗn hợp ban đầu để tìm x, y. Cách bảo toàn khối lượng này chỉ dùng trực tiếp khi toàn bộ khí bay ra được coi là O2 và không có chất rắn bị bắn ra hoặc hấp thụ thêm chất từ ngoài."
+        },
+        {
+          "id": "a2-l1-c11",
+          "heading": "Nâng cao: Xác định công thức oxit kim loại qua khối lượng oxi phản ứng",
+          "body": "Nếu kim loại M cháy hoàn toàn tạo oxit, độ tăng khối lượng của chất rắn chính là khối lượng O2 đã phản ứng: m(O2) = m(oxit) - m(kim loại). Công thức này đúng ngay cả khi phản ứng không hoàn toàn hoặc kim loại tạo hỗn hợp nhiều oxit khác nhau (ví dụ Fe tạo hỗn hợp FeO, Fe3O4, Fe2O3 và có thể còn Fe dư), miễn là mọi khối lượng tăng thêm chỉ do O2 kết hợp vào chất rắn. Công thức chỉ sai khi có chất rắn bị thất thoát ra ngoài hoặc kim loại phản ứng thêm với khí khác ngoài oxi. Với Mg: 2Mg + O2 -> 2MgO, cứ 48 g Mg làm khối lượng chất rắn tăng 32 g.\nKhi đốt kim loại hoá trị II tạo MO, tỉ lệ m(O) : m(M) = 16 : NTK(M); khi kim loại hoá trị III tạo M2O3, tỉ lệ này là 48 : [2 x NTK(M)]. Có thể dùng số mol kim loại và số mol nguyên tử O để tìm tỉ lệ nguyên tử tối giản, rồi viết công thức oxit. Ví dụ 4,8 g Mg tạo 8,0 g MgO: mO = 3,2 g, nMg : nO = 0,2 : 0,2 = 1 : 1 nên công thức là MgO. Phải dùng khối lượng của nguyên tố O (không phải n(O2)) khi lập tỉ lệ nguyên tử."
         }
       ],
       "questions": [

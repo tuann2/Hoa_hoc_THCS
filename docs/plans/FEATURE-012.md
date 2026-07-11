@@ -105,7 +105,7 @@ xong cả unit.
 
 ### A2 · Oxi – Không khí (`a2-oxi-khong-khi`)
 
-- [ ] `a2-l1` — Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ
+- [x] `a2-l1` — Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ
 - [ ] `a2-l2` — Oxit: phân loại, gọi tên (mở đầu)
 - [ ] `a2-l3` — Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp
 
