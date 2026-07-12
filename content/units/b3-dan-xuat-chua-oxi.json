@@ -47,7 +47,7 @@
         {
           "id": "b3-l1-c7",
           "heading": "Nâng cao: Tách nước tạo etilen",
-          "body": "Khi đun rượu etylic với H2SO4 đặc ở khoảng 170 do C, xảy ra phản ứng tách nước: C2H5OH -> C2H4 + H2O. H2SO4 đặc vừa tạo môi trường axit vừa hút nước.\nC2H4 sinh ra là etilen, có liên kết đôi nên làm mất màu dung dịch brom. Không được nhầm hiện tượng này với rượu etylic ban đầu: rượu etylic không làm mất màu dung dịch brom trong điều kiện thường.\nPhản ứng cho thấy có thể liên hệ qua lại giữa ancol và hiđrocacbon không no, đồng thời là cách kiểm tra bảo toàn nguyên tố C, H, O khi cân bằng phương trình hữu cơ."
+          "body": "Khi đun rượu etylic với H2SO4 đặc ở khoảng 170 độ C, xảy ra phản ứng tách nước: C2H5OH -> C2H4 + H2O. H2SO4 đặc vừa tạo môi trường axit vừa hút nước.\nC2H4 sinh ra là etilen, có liên kết đôi nên làm mất màu dung dịch brom. Không được nhầm hiện tượng này với rượu etylic ban đầu: rượu etylic không làm mất màu dung dịch brom trong điều kiện thường.\nPhản ứng cho thấy có thể liên hệ qua lại giữa ancol và hiđrocacbon không no, đồng thời là cách kiểm tra bảo toàn nguyên tố C, H, O khi cân bằng phương trình hữu cơ."
         },
         {
           "id": "b3-l1-c8",
@@ -118,7 +118,7 @@
           "type": "single-choice",
           "level": "basic",
           "category": "theory",
-          "prompt": "Rượu 40 do nghĩa là",
+          "prompt": "Rượu 40 độ nghĩa là",
           "options": [
             "Có 40 g C2H5OH trong 100 g dung dịch",
             "Có 40 ml C2H5OH nguyên chất trong 100 ml dung dịch",
@@ -126,42 +126,42 @@
             "Có 40 ml nước trong 100 ml dung dịch"
           ],
           "answer": 1,
-          "explanation": "B1. Độ rượu được định nghĩa theo phần trăm thể tích. B2. Rượu 40 do nghĩa là trong 100 ml dung dịch có 40 ml rượu etylic nguyên chất. B3. Vì vậy đáp án 2 đúng."
+          "explanation": "B1. Độ rượu được định nghĩa theo phần trăm thể tích. B2. Rượu 40 độ nghĩa là trong 100 ml dung dịch có 40 ml rượu etylic nguyên chất. B3. Vì vậy đáp án 2 đúng."
         },
         {
           "id": "b3-l1-q6",
           "type": "single-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Một chai rượu 250 ml, 40 do chứa thể tích rượu etylic nguyên chất là",
+          "prompt": "Một chai rượu 250 ml, 40 độ chứa thể tích rượu etylic nguyên chất là",
           "options": ["80 ml", "90 ml", "100 ml", "120 ml"],
           "answer": 2,
-          "explanation": "B1. Dùng công thức Vruou nguyen chat = do ruou x Vdung dich / 100. B2. Ta có V = 40 x 250 / 100 = 100 ml. B3. Vậy chai rượu chứa 100 ml rượu etylic nguyên chất."
+          "explanation": "B1. Dùng công thức V rượu nguyên chất = độ rượu x V dung dịch / 100. B2. Ta có V = 40 x 250 / 100 = 100 ml. B3. Vậy chai rượu chứa 100 ml rượu etylic nguyên chất."
         },
         {
           "id": "b3-l1-q7",
           "type": "fill-blank",
           "level": "applied",
           "category": "calculation",
-          "prompt": "500 ml rượu 12 do chứa ___ ml rượu etylic nguyên chất.",
+          "prompt": "500 ml rượu 12 độ chứa ___ ml rượu etylic nguyên chất.",
           "answer": "60",
           "placeholder": "Nhập thể tích",
-          "explanation": "B1. Vruou nguyen chat = 12 x 500 / 100. B2. Tính được V = 60 ml. B3. Vậy đáp án là 60."
+          "explanation": "B1. V rượu nguyên chất = 12 x 500 / 100. B2. Tính được V = 60 ml. B3. Vậy đáp án là 60."
         },
         {
           "id": "b3-l1-q8",
           "type": "multi-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Xét 200 ml rượu 46 do. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "prompt": "Xét 200 ml rượu 46 độ. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
           "options": [
             "Thể tích rượu etylic nguyên chất là 92 ml.",
             "Khối lượng rượu etylic nguyên chất là 73,6 g.",
             "Dung dịch trên chứa 108 ml nước và chất tan khác.",
-            "Độ rượu của dung dịch là 54 do."
+            "Độ rượu của dung dịch là 54 độ."
           ],
           "answers": [0, 1, 2],
-          "explanation": "B1. Thể tích rượu nguyên chất là 46 x 200 / 100 = 92 ml. B2. Khối lượng rượu etylic là 92 x 0,8 = 73,6 g. B3. Phần còn lại của 200 ml dung dịch là 200 - 92 = 108 ml. B4. Vì dung dịch đã cho là 46 do nên mệnh đề 4 sai."
+          "explanation": "B1. Thể tích rượu nguyên chất là 46 x 200 / 100 = 92 ml. B2. Khối lượng rượu etylic là 92 x 0,8 = 73,6 g. B3. Phần còn lại của 200 ml dung dịch là 200 - 92 = 108 ml. B4. Vì dung dịch đã cho là 46 độ nên mệnh đề 4 sai."
         },
         {
           "id": "b3-l1-q9",
@@ -189,7 +189,7 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Một bình chứa 250 ml rượu 92 do. Lấy D(C2H5OH) = 0,789 g/ml. Khối lượng rượu etylic nguyên chất là ___ g.",
+          "prompt": "Một bình chứa 250 ml rượu 92 độ. Lấy D(C2H5OH) = 0,789 g/ml. Khối lượng rượu etylic nguyên chất là ___ g.",
           "answer": "181,47",
           "acceptedAnswers": ["181.47"],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
@@ -212,16 +212,16 @@
           "type": "multi-choice",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Pha 300 ml rượu 40 do với 200 ml nước. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "prompt": "Pha 300 ml rượu 40 độ với 200 ml nước. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
           "options": [
             "Thể tích rượu etylic nguyên chất ban đầu là 120 ml.",
-            "Độ rượu của dung dịch sau khi pha là 24 do.",
+            "Độ rượu của dung dịch sau khi pha là 24 độ.",
             "Khối lượng rượu etylic có trong dung dịch sau pha là 96 g.",
             "Thể tích nước thêm vào là 200 ml."
           ],
           "answers": [0, 1, 2, 3],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
-          "explanation": "B1. Trong 300 ml rượu 40 do có 300 x 40 / 100 = 120 ml rượu etylic nguyên chất. B2. Sau khi pha thêm 200 ml nước, tổng thể tích là 500 ml nên độ rượu mới là 120 x 100 / 500 = 24 do. B3. Khối lượng rượu etylic không đổi, bằng 120 x 0,8 = 96 g. B4. Dữ kiện cũng cho biết đã thêm đúng 200 ml nước. Vì vậy cả 4 nhận xét đều đúng."
+          "explanation": "B1. Trong 300 ml rượu 40 độ có 300 x 40 / 100 = 120 ml rượu etylic nguyên chất. B2. Sau khi pha thêm 200 ml nước, tổng thể tích là 500 ml nên độ rượu mới là 120 x 100 / 500 = 24 độ. B3. Khối lượng rượu etylic không đổi, bằng 120 x 0,8 = 96 g. B4. Dữ kiện cũng cho biết đã thêm đúng 200 ml nước. Vì vậy cả 4 nhận xét đều đúng."
         }
       ]
     },
@@ -954,17 +954,17 @@
           "type": "single-choice",
           "level": "basic",
           "category": "calculation",
-          "prompt": "100 ml rượu 25 do chứa thể tích rượu etylic nguyên chất là",
+          "prompt": "100 ml rượu 25 độ chứa thể tích rượu etylic nguyên chất là",
           "options": ["20 ml", "25 ml", "40 ml", "75 ml"],
           "answer": 1,
-          "explanation": "B1. Vruou nguyen chat = 25 x 100 / 100 = 25 ml. B2. Vì vậy 100 ml rượu 25 do chứa 25 ml rượu etylic nguyên chất."
+          "explanation": "B1. V rượu nguyên chất = 25 x 100 / 100 = 25 ml. B2. Vì vậy 100 ml rượu 25 độ chứa 25 ml rượu etylic nguyên chất."
         },
         {
           "id": "b3-l5-q6",
           "type": "single-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Một chai rượu 250 ml, 40 do. Nếu lấy D(C2H5OH) = 0,8 g/ml thì khối lượng rượu etylic nguyên chất là",
+          "prompt": "Một chai rượu 250 ml, 40 độ. Nếu lấy D(C2H5OH) = 0,8 g/ml thì khối lượng rượu etylic nguyên chất là",
           "options": ["64 g", "72 g", "80 g", "96 g"],
           "answer": 2,
           "explanation": "B1. Thể tích rượu etylic nguyên chất là 40 x 250 / 100 = 100 ml. B2. Khối lượng rượu etylic là m = 100 x 0,8 = 80 g. B3. Vậy đáp án đúng là 80 g."
@@ -1021,7 +1021,7 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Muốn điều chế 230 ml rượu 40 do từ glucozơ bằng phản ứng lên men có hiệu suất 80%, lấy D(C2H5OH) = 0,8 g/ml. Khối lượng glucozơ cần dùng là ___ g.",
+          "prompt": "Muốn điều chế 230 ml rượu 40 độ từ glucozơ bằng phản ứng lên men có hiệu suất 80%, lấy D(C2H5OH) = 0,8 g/ml. Khối lượng glucozơ cần dùng là ___ g.",
           "answer": "180",
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
           "placeholder": "Nhập khối lượng glucozơ",
