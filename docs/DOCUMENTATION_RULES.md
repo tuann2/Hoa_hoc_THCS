@@ -34,11 +34,11 @@ Documentation work starts only after:
 
 ## Documentation → Revalidate
 
-Documentation files are release-affecting per the architecture's
-remediation state machine: writing or editing them after the
-implementation snapshot was validated invalidates that snapshot's prior
-validation and review evidence, exactly like any other post-validation
-change.
+Per the architecture's Remediation State Machine (v2.2, rule 3), a
+documentation-only post-validation change does **not** invalidate prior
+engineering validation or completed tier reviews — unlike a change to a
+release-artifact-affecting file (source, content, tests, config,
+dependencies, migrations, infrastructure or deployment), which does.
 
 So documentation is never the last step before release readiness.
 After Gemini/Claude finish the documentation files, run the

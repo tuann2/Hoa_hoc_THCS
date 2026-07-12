@@ -1,9 +1,15 @@
 # AI Workflow Architecture
 
-- Version: 2.1
+- Version: 2.2
 - Status: APPROVED
 - Owner: Human Project Owner
 - Reviewers: Claude, Codex, Gemini (conditional by risk tier)
+- Amendment history: v2.2 (WORKFLOW-003) — removed the unimplementable
+  tree-SHA evidence requirement, scoped documentation-only remediation to
+  match `docs/DOCUMENTATION_RULES.md`, condensed duplicated sections,
+  replaced unmeasurable success metrics with countable ones, and codified
+  the batch-content reviewer-applies-fixes exception. v2.1 (WORKFLOW-002)
+  — initial approved architecture.
 
 ---
 
@@ -62,31 +68,9 @@ Non-goals
 
 ## Architecture Overview
 
-Human
-↓
-
-Claude
-(Project Architect)
-
-↓
-
-Codex
-(Engineering Engine)
-
-↓
-
-Risk-Tier Reviewers
-(Independent Codex / Gemini)
-
-↓
-
-Claude
-(Release Readiness Assessment)
-
-↓
-
-Human
-(Final Approval)
+Human → Claude (Project Architect) → Codex (Engineering Engine) →
+Risk-Tier Reviewers (Independent Codex / Gemini) → Claude (Release
+Readiness Assessment) → Human (Final Approval).
 
 Claude is never the final approver.
 
@@ -208,6 +192,22 @@ return to the implementation and remediation flow. Successful validation MUST
 NOT be rerun by Claude merely to reproduce logs when valid, bound evidence or CI
 already satisfies the required gate.
 
+**Bounded exception — batch content review:** for `NORMAL`-tier learning
+content batch review only, the human may authorize a
+**reviewer-applies-fixes** mode (in the plan, or by direct mid-feature
+instruction) in which the reviewing execution also applies the fixes
+instead of only reporting them. This exception does not relax the
+"reviewers report findings only" rule for `CLAUDE.md` or `AGENTS.md`
+outside this specific case. Conditions: findings are still recorded (a
+consolidated findings file or per-commit messages); the handoff MUST
+record the authorization source (the plan section, or a quoted excerpt of
+the direct instruction) whenever this mode is used; any numeric/chemistry
+correction still requires independent re-verification of the corrected
+value **by an execution other than the one that applied the fix**; this
+mode MUST NOT be used for `ELEVATED` or `CRITICAL` work. Precedent:
+FEATURE-012 Phase B (`docs/plans/FEATURE-012.md`, "Workflow revision
+2026-07-12").
+
 ---
 
 ## Risk Model
@@ -228,7 +228,8 @@ Classification rules:
    overrides `NORMAL`.
 2. Any change that can affect production data, production availability,
    deployment, infrastructure, payment processing, credentials, trust
-   boundaries or security controls is `CRITICAL`.
+   boundaries, security controls, or this architecture itself is
+   `CRITICAL`.
 3. Authentication or authorization logic is `CRITICAL`. Presentation-only
    changes to an existing authentication UI may remain `NORMAL` only when they
    cannot change identity, session or access-control behavior.
@@ -242,146 +243,31 @@ Classification rules:
 
 ---
 
-### NORMAL
+### Examples by tier
 
-Examples
+| Tier       | Examples                                                                                                                                                                                           |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NORMAL`   | documentation, UI, styling, non-numeric learning content, wording, small refactoring                                                                                                               |
+| `ELEVATED` | chemistry algorithms, numeric calculations, public APIs, non-production or reversible migrations, non-production destructive operations, complex business logic                                    |
+| `CRITICAL` | production migration, authentication and authorization logic, security controls and trust boundaries, deployment, infrastructure, payment, architecture changes, production destructive operations |
 
-- documentation
-- UI
-- styling
-- non-numeric learning content
-- wording
-- small refactoring
+### Workflow by tier
 
-Workflow
+All tiers share the same 8-step shape; only the gate and review steps scale
+with risk. Each cell is the tier-specific variant of that step; the
+Independent Verification table above is the normative detail for step 6 —
+it is not repeated here.
 
-Plan
-
-↓
-
-Codex Implementation
-
-↓
-
-Validation
-
-↓
-
-Implementation Handoff
-
-↓
-
-Claude Lightweight Gate
-
-↓
-
-Independent Verification
-
-↓
-
-Release Readiness
-
-↓
-
-Human Approval
-
----
-
-### ELEVATED
-
-Examples
-
-- chemistry algorithms
-- numeric calculations
-- public APIs
-- non-production or reversible migrations
-- non-production destructive operations
-- complex business logic
-
-Workflow
-
-Plan
-
-↓
-
-Codex
-
-↓
-
-Validation
-
-↓
-
-Implementation Handoff
-
-↓
-
-Claude Scope Gate
-
-↓
-
-Fresh Codex Independent Review
-
-↓
-
-Release Readiness
-
-↓
-
-Human Approval
-
----
-
-### CRITICAL
-
-Examples
-
-- production migration
-- authentication and authorization logic
-- security controls and trust boundaries
-- deployment
-- infrastructure
-- payment
-- architecture changes
-- production destructive operations
-
-Workflow
-
-Plan
-
-↓
-
-Codex
-
-↓
-
-Validation
-
-↓
-
-Implementation Handoff
-
-↓
-
-Claude Scope Gate
-
-↓
-
-Fresh Gemini Independent Review
-
-↓
-
-Fresh Codex Adversarial Review
-
-↓
-
-Release Readiness
-
-↓
-
-Human Approval
-
----
+| Step                        | NORMAL                                 | ELEVATED                             | CRITICAL                                                 |
+| --------------------------- | -------------------------------------- | ------------------------------------ | -------------------------------------------------------- |
+| 1. Plan                     | Plan                                   | Plan                                 | Plan                                                     |
+| 2. Implementation           | Codex                                  | Codex                                | Codex                                                    |
+| 3. Validation               | Validation                             | Validation                           | Validation                                               |
+| 4. Handoff                  | Implementation Handoff                 | Implementation Handoff               | Implementation Handoff                                   |
+| 5. Claude gate              | Lightweight Gate                       | Scope Gate                           | Scope Gate                                               |
+| 6. Independent verification | see table above (CI or fresh reviewer) | see table above (fresh Codex review) | see table above (fresh Gemini + fresh Codex adversarial) |
+| 7. Release readiness        | Release Readiness                      | Release Readiness                    | Release Readiness                                        |
+| 8. Approval                 | Human Approval                         | Human Approval                       | Human Approval                                           |
 
 All tiers follow the remediation state machine. A finding or candidate change
 returns the work to implementation and validation rather than continuing to
@@ -429,25 +315,35 @@ Every validation record MUST contain:
 
 - base commit SHA (`HEAD` when validation started);
 - candidate commit SHA, or `UNCOMMITTED` before a candidate commit exists;
-- validated implementation-tree SHA;
-- dirty-worktree state and the exact paths that were dirty;
+- worktree state: `clean` (matches the named commit exactly), or, whenever
+  any tracked or untracked file differs from the named commit, `dirty` plus
+  the exact dirty paths **and** the output of `git add -A && git stash
+create` run against that worktree state (`git add -A` stages every
+  change, including new untracked files, without altering any file's
+  content; `git stash create` alone silently omits untracked files and
+  produces no output at all when only untracked files are dirty, so the
+  `git add -A` step is required — plain `git stash create` is not
+  sufficient). The resulting SHA captures the exact dirty content and is
+  the content-binding anchor for uncommitted or partially-committed
+  changes; re-running it after further edits MUST produce a different SHA,
+  which is how a stale re-presentation of old evidence is caught;
 - UTC validation start and completion timestamps in ISO 8601 format;
 - operating runtime and package-manager versions;
 - the version of every validation tool, or the lockfile SHA when the lockfile
   deterministically pins those versions;
 - every command executed, its exit status and the gate it satisfies.
 
-The validated implementation tree covers every release-affecting source,
-content, documentation, test, dependency, configuration, migration,
-infrastructure and deploy path. Its SHA is a Git tree-object ID produced by the
-repository's canonical evidence command. The handoff itself and generated
-validation logs are excluded to avoid a self-referential tree hash. The handoff
-MUST list the excluded paths. A reviewer MUST be able to recompute the
-implementation-tree SHA from the recorded base, dirty paths and exclusions.
-
-Once a candidate commit exists, CI evidence MUST name that exact commit SHA.
-Evidence from another commit or tree is stale even when the diff appears
-equivalent.
+Once a candidate commit exists and the worktree is clean, that commit SHA is
+the evidence anchor; a CI run reference for that exact SHA MUST be added
+when CI is required or available for the effective risk tier (see
+Independent Verification) — CI evidence MUST name that exact commit SHA, and
+evidence from another commit is stale even when the diff appears equivalent.
+Whenever the worktree is dirty — whether or not a candidate commit exists
+yet — the base or candidate commit SHA plus the dirty paths plus the
+`git add -A && git stash create` SHA is the evidence anchor. There is no
+separate tree-object requirement beyond this: both commands are ordinary,
+already-available git commands, so no undefined "canonical evidence
+command" is needed.
 
 ### Canonical Quality Gates
 
@@ -505,7 +401,8 @@ PLANNED
 
 VALIDATING -- failure --> REMEDIATION_REQUIRED
 REVIEWING -- finding --> REMEDIATION_REQUIRED
-ANY POST-VALIDATION CANDIDATE CHANGE --> REMEDIATION_REQUIRED
+ANY RELEASE-ARTIFACT CHANGE --> REMEDIATION_REQUIRED
+DOCUMENTATION-ONLY CHANGE --> scoped revalidation (see rule 3)
 REMEDIATION_REQUIRED -> IMPLEMENTING
 ANY STATE -- unrecoverable blocker --> BLOCKED
 ```
@@ -515,17 +412,26 @@ Transition rules:
 1. `VALIDATING` reaches `VALIDATED` only when every applicable gate passes and
    the evidence is bound to the implementation snapshot.
 2. `VALIDATED` reaches `REVIEWING` only when the handoff is complete.
-3. Any post-validation change to a release-affecting file, including source,
-   content, documentation, tests, dependencies, configuration, migrations,
-   infrastructure or deployment files, immediately invalidates all validation
-   and review evidence for the prior snapshot.
+3. A post-validation change to a **release-artifact-affecting file**
+   (application source, tests, learning content, runtime and toolchain
+   configuration, dependencies, migrations, infrastructure or deployment
+   files) immediately invalidates all validation and review evidence for
+   the prior snapshot. A post-validation change to **documentation only**
+   does not invalidate engineering validation or completed tier reviews;
+   it requires only the "Documentation only" gates on the changed files,
+   per `docs/DOCUMENTATION_RULES.md` → "Documentation → Revalidate".
+   Record the scoped revalidation result in the handoff without changing
+   the candidate's `Status`; only a failed scoped gate moves the
+   candidate to `REMEDIATION_REQUIRED`, and only for that documentation
+   fix.
 4. A review finding that requires a candidate change enters
    `REMEDIATION_REQUIRED`. After the fix, the candidate MUST repeat all
    applicable gates, regenerate its evidence and repeat every review required
    by its risk tier.
 5. Corrections limited to the handoff or generated evidence do not invalidate
-   engineering validation, but the corrected evidence MUST still bind to the
-   unchanged implementation-tree SHA.
+   engineering validation; the corrected evidence MUST still bind to the
+   unchanged candidate commit, or the unchanged base commit + dirty paths +
+   `git add -A && git stash create` SHA.
 6. `RELEASE_READY` is an assessment, not final approval. Only the human may
    approve release.
 
@@ -546,9 +452,8 @@ It must contain
 - files changed
 - base commit SHA
 - candidate commit SHA or `UNCOMMITTED`
-- validated implementation-tree SHA
-- implementation-tree exclusions
-- dirty-worktree state and exact dirty paths
+- worktree state: clean, or dirty with exact paths plus the
+  `git add -A && git stash create` SHA
 - `git diff --stat`
 - validation commands
 - command exit statuses and the quality gate satisfied by each command
@@ -556,6 +461,8 @@ It must contain
 - runtime, package-manager and validation-tool versions or lockfile SHA
 - independent verifier identity, execution identifier and independence method
 - review findings and their disposition
+- authorization source for the batch-content-review exception, when used
+  (see Independent Verification)
 - CI commit SHA and status when CI is required or available
 - blockers
 - deviations
@@ -564,7 +471,7 @@ It must contain
 
 The handoff is a living artifact. Before independent review, review-specific
 fields MUST be present with the value `PENDING`. Review outcomes update those
-fields without invalidating an unchanged implementation tree.
+fields without invalidating an unchanged candidate commit.
 
 The handoff MUST be regenerated after remediation. Historical evidence may be
 retained for audit, but it MUST be marked `STALE` and MUST NOT be presented as
@@ -593,42 +500,15 @@ Target investigation only.
 
 ## Session Lifecycle
 
-Each feature should follow an independent lifecycle.
+Each feature should follow an independent lifecycle:
 
-Session 1
-
-Planning
-
-↓
-
-End Session
-
-↓
-
-Codex executes asynchronously
-
-↓
-
-Implementation Handoff
-
-↓
-
-Session 2
-
-Independent Verification and Release Readiness Assessment
-
-↓
-
-If remediation is required, return asynchronously to Codex implementation,
-validation and an updated handoff before reassessment.
-
-↓
-
-Human Decision
-
-↓
-
-End Session
+1. **Session 1** — planning, then end session.
+2. Codex executes asynchronously and produces the implementation handoff.
+3. **Session 2** — independent verification and release-readiness
+   assessment, then human decision, then end session.
+4. If remediation is required, return asynchronously to Codex
+   implementation, validation and an updated handoff before reassessment
+   (repeat from step 2).
 
 Avoid multi-hour interactive Claude sessions.
 
@@ -636,68 +516,43 @@ Avoid multi-hour interactive Claude sessions.
 
 ## Success Metrics
 
-Current Baseline
+Metrics MUST be derived from repository artifacts (git history, handoffs),
+not estimated. Two metrics — Claude session count and context size — have
+no recorded instrument in this repository and cannot be measured
+retroactively; they can only be tracked prospectively starting with the
+next feature. Fabricating a value for them would violate the Trust Model.
 
-(Substitute with measured values)
+Tracked per feature
 
-- Claude Agent Usage: 52%
-- Long Sessions (>8h): 75%
-- Large Context (>150k): 64%
+- Codex implementation executions (target: 1 for `NORMAL`)
+- Claude sessions (target: ≤2 for `NORMAL`; not yet instrumented — track
+  going forward)
+- validation reruns by Claude of already-passed gates (target: 0)
+- review/remediation rounds
+- wall-clock from plan approval to `RELEASE_READY`
 
-Target
+Retrospective baseline (measured 2026-07-12 from git history; WORKFLOW-002
+Phase 3 closed by this measurement)
 
-- Agent usage <25%
-- Average context <60k
-- Normal feature = one Codex execution
-- No routine Claude validation rerun
-- Session duration <90 minutes
-- PASS/BLOCK decision <5 minutes after handoff
+| Feature     | Commits | Plan-approval → merge span          | Remediation rounds                                                  |
+| ----------- | ------- | ----------------------------------- | ------------------------------------------------------------------- |
+| FEATURE-011 | 5       | 2026-07-10, same day                | 1 (Gemini review caught a streak-merge regression)                  |
+| FEATURE-012 | 51      | 2026-07-10 → 2026-07-12 (multi-day) | recorded per-unit in commit messages (e.g. "sửa 9 điểm sau review") |
 
----
-
-## Migration Strategy
-
-Phase 1
-
-Architecture approval.
-
-No implementation changes.
-
----
-
-Phase 2
-
-Update
-
-- CLAUDE.md
-- AI_WORKFLOW.md
-- AGENTS.md
-- skills
-- runbooks
-- templates
-- canonical validation and evidence-binding commands
-
-to comply with this architecture.
+FEATURE-012 used the batch-content workflow (A5), not the standard
+single-Codex-delegation flow, so its commit count is not representative of
+a "normal feature" baseline — it is included for the remediation-round
+evidence in its commit messages, not as a session-count proxy.
 
 ---
 
-Phase 3
+## Migration History
 
-Dry-run
-
-Normal
-
-Elevated
-
-Critical
-
-Collect
-
-- token usage
-- context size
-- session duration
-- Codex executions
-- review quality
+- **v2.1 (WORKFLOW-002, 2026-07-11):** architecture approved; `CLAUDE.md`,
+  `AI_WORKFLOW.md`, `AGENTS.md`, skills and templates migrated to comply.
+  Phase 3 (dry-run measurement) deferred.
+- **v2.2 (WORKFLOW-003, 2026-07-12):** amendments A1–A5 (see header);
+  Phase 3 closed by the retrospective baseline above.
 
 ---
 

@@ -32,9 +32,17 @@ Mô tả ngắn kết quả triển khai.
 
 - Base commit SHA (`HEAD` when validation started): ...
 - Candidate commit SHA: ... | UNCOMMITTED
-- Validated implementation-tree SHA: ...
-- Implementation-tree exclusions: <!-- e.g. this handoff, generated validation logs -->
-- Dirty-worktree state and exact dirty paths: ...
+- Worktree state: clean | dirty
+  <!-- clean + candidate commit = evidence anchor; add CI run reference
+  when CI is required/available for this tier. Whenever dirty (with or
+  without a candidate commit), also record the dirty paths and the
+  output of `git add -A && git stash create` run against that worktree
+  — this is the content-binding anchor (plain `git stash create` alone
+  silently omits untracked files); re-running it after further edits
+  must produce a different SHA. -->
+- CI run reference for the candidate commit (when required/available): ...
+- Dirty paths and `git add -A && git stash create` SHA (when worktree is
+  dirty): ...
 - Validation start (UTC, ISO 8601): ...
 - Validation completion (UTC, ISO 8601): ...
 - Runtime / package-manager versions: ...
@@ -67,6 +75,9 @@ quality-gates table. A required gate with no command = blocker. -->
 - Independence method: PENDING <!-- CI on candidate commit / fresh read-only execution -->
 - CI commit SHA and status (when required or available): PENDING
 - Review findings and disposition: PENDING
+- Authorization source for the batch-content-review exception (only if
+  reviewer-applies-fixes mode was used — plan section or quoted direct
+  instruction): n/a | ...
 
 ## 8. Blockers
 
