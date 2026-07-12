@@ -17,17 +17,52 @@
         {
           "id": "b1-l1-c1",
           "heading": "Hợp chất hữu cơ và hoá học hữu cơ",
-          "body": "Hợp chất hữu cơ là hợp chất của cacbon, trừ một số hợp chất đơn giản của cacbon như CO, CO2, H2CO3, muối cacbonat và muối xianua.\nVí dụ: CH4, C2H5OH, CH3COOH là hợp chất hữu cơ; còn CO2 và CaCO3 không thuộc loại này.\nHoá học hữu cơ là ngành hoá học chuyên nghiên cứu các hợp chất hữu cơ."
+          "body": "Hợp chất hữu cơ là hợp chất của cacbon, trừ một số hợp chất đơn giản của cacbon như CO, CO2, H2CO3, muối cacbonat và muối xianua.\nVí dụ: CH4, C2H5OH, CH3COOH là hợp chất hữu cơ; còn CO2 và CaCO3 không thuộc loại này.\nHoá học hữu cơ là ngành hoá học chuyên nghiên cứu các hợp chất hữu cơ.\nKhông được suy luận máy móc rằng cứ có C là hữu cơ. Trong phạm vi phổ thông, các oxit của C, H2CO3 và muối cacbonat, xianua, cacbua được xếp vào hợp chất vô cơ; ngược lại, C là nguyên tố bắt buộc của hợp chất hữu cơ nhưng một số dẫn xuất halogen như CCl4 không chứa H."
         },
         {
           "id": "b1-l1-c2",
           "heading": "Phân loại hiđrocacbon",
-          "body": "Hiđrocacbon là hợp chất hữu cơ chỉ gồm hai nguyên tố C và H.\nVí dụ: CH4 là hiđrocacbon no; C2H4 là hiđrocacbon không no có liên kết đôi; C2H2 là hiđrocacbon không no có liên kết ba; C6H6 là hiđrocacbon thơm quen thuộc."
+          "body": "Hiđrocacbon là hợp chất hữu cơ chỉ gồm hai nguyên tố C và H.\nVí dụ: CH4 là hiđrocacbon no; C2H4 là hiđrocacbon không no có liên kết đôi; C2H2 là hiđrocacbon không no có liên kết ba; C6H6 là hiđrocacbon thơm quen thuộc.\nMuốn xếp chính xác vào hiđrocacbon no, không no hay thơm phải xét công thức cấu tạo: hiđrocacbon no chỉ có liên kết đơn C-C; hiđrocacbon không no có liên kết C=C hoặc C≡C; hiđrocacbon thơm có hệ vòng thơm đặc trưng."
         },
         {
           "id": "b1-l1-c3",
           "heading": "Dẫn xuất của hiđrocacbon",
-          "body": "Khi thay một hay nhiều nguyên tử H trong hiđrocacbon bằng nguyên tử hay nhóm nguyên tử khác, ta được dẫn xuất của hiđrocacbon.\nVí dụ: CH3-OH là rượu; CH3-COOH là axit hữu cơ; CH3-Cl là dẫn xuất halogen.\nNhờ có thêm O, Cl, N... nên dẫn xuất thường có tính chất khác rõ rệt so với hiđrocacbon ban đầu."
+          "body": "Khi thay một hay nhiều nguyên tử H trong hiđrocacbon bằng nguyên tử hay nhóm nguyên tử khác, ta được dẫn xuất của hiđrocacbon.\nVí dụ: CH3-OH là rượu; CH3-COOH là axit hữu cơ; CH3-Cl là dẫn xuất halogen.\nNhờ có thêm O, Cl, N... nên dẫn xuất thường có tính chất khác rõ rệt so với hiđrocacbon ban đầu.\nCách nói “thay H” là cách quy ước để phân loại, không khẳng định chất luôn được điều chế bằng một phản ứng thay thế trực tiếp. Bộ phận quyết định tính chất đặc trưng gọi là nhóm chức: -OH của rượu, -COOH của axit cacboxylic, -Cl của dẫn xuất halogen."
+        },
+        {
+          "id": "b1-l1-c4",
+          "heading": "Nâng cao: Mạch cacbon và cách gọi khung phân tử",
+          "body": "Các nguyên tử C có thể nối thành mạch hở không nhánh, mạch hở có nhánh hoặc mạch vòng. Ví dụ CH3-CH2-CH2-CH3 có mạch thẳng; CH3-CH(CH3)-CH3 có mạch nhánh; xiclopropan C3H6 có mạch vòng.\n“Mạch no” và “mạch vòng” là hai tiêu chí khác nhau: một chất vòng vẫn có thể là hiđrocacbon no nếu mọi liên kết C-C đều là liên kết đơn. Vì vậy không thể chỉ nhìn thấy vòng rồi kết luận chất đó không no hoặc thơm."
+        },
+        {
+          "id": "b1-l1-c5",
+          "heading": "Nâng cao: Công thức tổng quát và số nguyên tử H",
+          "body": "Với hiđrocacbon mạch hở chỉ có liên kết đơn, công thức tổng quát là CnH2n+2. Một liên kết đôi hoặc một vòng làm giảm 2 H so với mạch hở no; một liên kết ba làm giảm 4 H. Vì thế anken mạch hở một liên kết đôi và xicloankan một vòng đều có dạng CnH2n; ankin mạch hở một liên kết ba có dạng CnH2n-2.\nĐây là công thức của từng dãy riêng, không phải quy tắc nhận diện duy nhất. C3H6 có thể là propen có liên kết đôi hoặc xiclopropan có vòng; phải có công thức cấu tạo hay dữ kiện phản ứng mới phân biệt được."
+        },
+        {
+          "id": "b1-l1-c6",
+          "heading": "Nâng cao: Độ bất bão hoà - công cụ kiểm tra công thức",
+          "body": "Với chất chỉ chứa C, H, N, O và halogen X, độ bất bão hoà k = (2C + 2 + N - H - X)/2. O không làm thay đổi phép tính. Mỗi vòng hoặc liên kết đôi đóng góp 1 đơn vị k; mỗi liên kết ba đóng góp 2 đơn vị k.\nVí dụ C3H6 có k = 1, nên khung cacbon phải có một vòng hoặc một liên kết đôi. Nếu k âm hoặc không nguyên thì công thức phân tử đã cho không phù hợp với một phân tử trung hoà kiểu thông thường. k chỉ cho biết tổng số “thiếu H”, chưa tự xác định được công thức cấu tạo."
+        },
+        {
+          "id": "b1-l1-c7",
+          "heading": "Nâng cao: Hiđrocacbon thơm không phải chỉ là anken nhiều liên kết đôi",
+          "body": "Benzen C6H6 được xếp vào hiđrocacbon thơm vì có vòng thơm sáu C bền đặc biệt. Trên công thức cấu tạo thường biểu diễn bằng vòng sáu cạnh với ba liên kết đôi xen kẽ, nhưng các electron pi thực tế được phân bố trên cả vòng.\nDo tính bền đó, benzen có tính chất đặc trưng khác anken: phản ứng thế thường tiêu biểu hơn phản ứng cộng. Khi phân loại ở THCS, nhóm thơm được tách riêng, không gọi benzen đơn giản là hiđrocacbon không no có ba liên kết đôi."
+        },
+        {
+          "id": "b1-l1-c8",
+          "heading": "Nâng cao: Nhóm chức quyết định họ dẫn xuất",
+          "body": "Kí hiệu R dùng cho phần gốc hiđrocacbon. Theo nhóm chức, có thể nhận ra R-Cl là dẫn xuất halogen, R-OH là rượu, R-COOH là axit cacboxylic; các họ khác thường gặp là anđehit, xeton, este và amin.\nKhông nên chỉ đếm nguyên tố để kết luận họ chất. CH3CH2OH và CH3OCH3 cùng có công thức phân tử C2H6O nhưng chất đầu là rượu, chất sau là ete vì cách liên kết của O khác nhau. CH3COOH cũng chứa O nhưng thuộc axit do có nhóm -COOH, không phải rượu."
+        },
+        {
+          "id": "b1-l1-c9",
+          "heading": "Nâng cao: Dãy đồng đẳng và sự biến đổi theo CH2",
+          "body": "Một dãy đồng đẳng gồm các chất có cùng nhóm chức hoặc cùng kiểu liên kết đặc trưng, công thức tổng quát giống nhau và hai chất kế tiếp hơn kém nhau một nhóm CH2. Ví dụ CH4, C2H6, C3H8 thuộc dãy ankan; C2H4, C3H6, C4H8 thuộc dãy anken mạch hở một liên kết đôi.\nCác chất đồng đẳng có tính chất hoá học gần nhau nhưng tính chất vật lí biến đổi dần theo số C, như nhiệt độ sôi thường tăng khi phân tử lớn hơn. Cùng là hiđrocacbon chưa đủ để là đồng đẳng: CH4 và C2H4 thuộc hai dãy khác nhau."
+        },
+        {
+          "id": "b1-l1-c10",
+          "heading": "Nâng cao: Công thức phân tử không luôn quyết định một chất",
+          "body": "Những chất cùng công thức phân tử nhưng khác cách liên kết các nguyên tử gọi là đồng phân. Đồng phân có thể khác mạch C, vị trí liên kết bội hoặc nhóm chức, nên tên gọi và tính chất có thể khác đáng kể.\nVì vậy công thức phân tử chỉ giúp giới hạn khả năng và kiểm tra số nguyên tử; muốn phân loại chắc chắn phải dựa vào công thức cấu tạo hoặc dữ kiện phản ứng. C2H6O là ví dụ có thể ứng với rượu etylic hoặc đimetyl ete, còn C3H6 có thể ứng với propen hoặc xiclopropan."
         }
       ],
       "questions": [
@@ -200,17 +235,52 @@
         {
           "id": "b1-l2-c1",
           "heading": "Hoá trị quen thuộc trong hợp chất hữu cơ",
-          "body": "Trong hợp chất hữu cơ lớp 9, thường gặp C có hoá trị IV, H có hoá trị I, O có hoá trị II.\nVí dụ: CH4 viết được vì C tạo 4 liên kết với 4 H; CH3-OH viết được vì O tạo 2 liên kết, một với C và một với H."
+          "body": "Trong hợp chất hữu cơ lớp 9, thường gặp C có hoá trị IV, H có hoá trị I, O có hoá trị II.\nVí dụ: CH4 viết được vì C tạo 4 liên kết với 4 H; CH3-OH viết được vì O tạo 2 liên kết, một với C và một với H.\nKhi kiểm tra CTCT, coi liên kết đơn, đôi, ba lần lượt đóng góp 1, 2, 3 đơn vị hoá trị. Trong CH2=CH2, mỗi C có 2 đơn vị do liên kết đôi C=C và 2 đơn vị do hai liên kết C-H, nên vẫn đủ hoá trị IV."
         },
         {
           "id": "b1-l2-c2",
           "heading": "Mạch cacbon: thẳng, nhánh, vòng",
-          "body": "Nguyên tử C có thể liên kết với nhau thành nhiều kiểu mạch.\nVí dụ: CH3-CH2-CH3 là mạch thẳng; CH3-CH(CH3)-CH3 là mạch nhánh; benzen có mạch vòng gồm 6 nguyên tử C.\nKiểu mạch ảnh hưởng mạnh đến tính chất và số công thức cấu tạo của chất."
+          "body": "Nguyên tử C có thể liên kết với nhau thành nhiều kiểu mạch.\nVí dụ: CH3-CH2-CH3 là mạch thẳng; CH3-CH(CH3)-CH3 là mạch nhánh; benzen có mạch vòng gồm 6 nguyên tử C.\nKiểu mạch ảnh hưởng mạnh đến tính chất và số công thức cấu tạo của chất.\nKhông xét mạch theo hướng chữ viết mà xét số C liên kết với nhau: trong CH3-CH(CH3)-CH3, C ở giữa nối trực tiếp với ba nguyên tử C khác nên đó là mạch nhánh, dù có thể viết công thức theo nhiều hướng."
         },
         {
           "id": "b1-l2-c3",
           "heading": "Công thức cấu tạo cho biết điều gì",
-          "body": "Công thức cấu tạo cho biết thành phần phân tử, trật tự liên kết giữa các nguyên tử và kiểu liên kết đơn, đôi, ba.\nVí dụ: CH3-CH3 và CH2=CH2 đều có C và H nhưng công thức cấu tạo khác nhau nên tính chất khác nhau.\nKhi viết ở dạng text đơn giản, dấu - biểu thị liên kết đơn, dấu = biểu thị liên kết đôi."
+          "body": "Công thức cấu tạo cho biết thành phần phân tử, trật tự liên kết giữa các nguyên tử và kiểu liên kết đơn, đôi, ba.\nVí dụ: CH3-CH3 và CH2=CH2 đều có C và H nhưng công thức cấu tạo khác nhau nên tính chất khác nhau.\nKhi viết ở dạng text đơn giản, dấu - biểu thị liên kết đơn, dấu = biểu thị liên kết đôi, dấu ≡ biểu thị liên kết ba; ngoặc cho biết nhánh, như CH3-CH(CH3)-CH3. Cách viết CH3-C(=O)-OH làm lộ rõ liên kết đôi C=O trong nhóm -COOH."
+        },
+        {
+          "id": "b1-l2-c4",
+          "heading": "Nâng cao: Hai phép kiểm tra bắt buộc của CTCT",
+          "body": "Một CTCT chỉ chấp nhận được khi đồng thời đúng số nguyên tử và đúng hoá trị. Trước hết đếm lại từng nguyên tố để đối chiếu CTPT; sau đó cộng số liên kết tại từng nguyên tử.\nVí dụ CH3-C≡CH có CTPT C3H4. C thứ nhất có 3 liên kết C-H và 1 liên kết C-C; C ở giữa có 1 liên kết đơn và 1 liên kết ba; C cuối có 1 liên kết ba và 1 liên kết C-H. Mỗi C đều có tổng số liên kết bằng 4. Chỉ đúng CTPT mà sai hoá trị vẫn là CTCT sai."
+        },
+        {
+          "id": "b1-l2-c5",
+          "heading": "Nâng cao: Quy trình lập công thức cấu tạo từ công thức phân tử",
+          "body": "Khi đề cho CTPT kèm dữ kiện, hãy làm theo thứ tự: dựng tất cả khung C phù hợp; đặt liên kết bội hoặc nhóm nguyên tử mà đề yêu cầu; điền H để mỗi C đủ 4 liên kết và O đủ 2 liên kết; cuối cùng kiểm tra lại CTPT.\nĐể tránh bỏ sót, cần xét lần lượt từng khung C trước khi đổi vị trí nhóm chức. Để tránh đếm trùng, nhận ra rằng xoay hoặc đảo chiều cùng một mạch không tạo chất mới: HO-CH2-CH2-CH3 và CH3-CH2-CH2-OH chỉ là một CTCT."
+        },
+        {
+          "id": "b1-l2-c6",
+          "heading": "Nâng cao: Phân tích trọn vẹn ba CTCT của C3H8O",
+          "body": "C3H8O là phân tử no, mạch hở có một O. Nếu O tạo liên kết với H, thu được hai rượu: CH3-CH2-CH2-OH và CH3-CH(OH)-CH3; chúng khác vị trí nhóm -OH. Nếu O nối hai gốc hiđrocacbon, thu được ete CH3-O-CH2-CH3.\nBa chất cùng CTPT nhưng khác sự liên kết nên là ba đồng phân cấu tạo. Hai rượu là đồng phân vị trí, còn rượu và ete là đồng phân nhóm chức; không được gộp hai cách đặt -OH ở hai đầu mạch propan thành hai chất vì chúng trùng nhau khi đảo mạch."
+        },
+        {
+          "id": "b1-l2-c7",
+          "heading": "Nâng cao: Ví dụ đếm đồng phân C4H10O",
+          "body": "Nếu chỉ xét chất mạch hở, no, đơn chức có CTPT C4H10O thì có 7 CTCT. Bốn rượu là CH3-CH2-CH2-CH2-OH, CH3-CH(OH)-CH2-CH3, CH3-CH(CH3)-CH2-OH và (CH3)3C-OH.\nBa ete là CH3-O-CH2-CH2-CH3, CH3-O-CH(CH3)-CH3 và CH3-CH2-O-CH2-CH3. Cách tách theo rượu/ete trước, rồi xét khung C và vị trí O, giúp đếm có hệ thống thay vì đoán từng công thức rời rạc."
+        },
+        {
+          "id": "b1-l2-c8",
+          "heading": "Nâng cao: Đảo công thức không phải lúc nào cũng là đồng phân",
+          "body": "Hai cách viết là cùng một chất nếu có thể ghép từng nguyên tử của công thức này với nguyên tử tương ứng của công thức kia mà vẫn giữ nguyên mọi liên kết. Vì vậy HO-CH2-CH2-CH3 và CH3-CH2-CH2-OH chỉ khác chiều viết; tương tự CH3-CH(OH)-CH3 có hai đầu mạch tương đương.\nNgược lại, CH3-CH2-CH2-OH và CH3-CH(OH)-CH3 thật sự khác nhau vì O gắn vào C đầu mạch ở công thức đầu, còn gắn vào C giữa mạch ở công thức sau. Khi đếm đồng phân, luôn kiểm tra sự tương đương do đối xứng của khung C."
+        },
+        {
+          "id": "b1-l2-c9",
+          "heading": "Nâng cao: Liên kết đôi và đồng phân hình học",
+          "body": "Liên kết C=C cản trở sự quay tự do quanh trục liên kết. Khi mỗi C của liên kết đôi gắn với hai nhóm khác nhau, cùng một CTCT thu gọn có thể tồn tại hai cách sắp xếp trong không gian: hai nhóm giống nhau ở cùng phía gọi là cis, ở hai phía đối nhau gọi là trans.\nVí dụ CH3-CH=CH-CH3 có dạng cis và trans; còn CH2=CH-CH3 không có dạng này vì một C của liên kết đôi gắn hai H giống nhau. Cis/trans là đồng phân hình học: khác cách sắp xếp không gian, không khác trật tự liên kết trên CTCT thu gọn."
+        },
+        {
+          "id": "b1-l2-c10",
+          "heading": "Nâng cao: Từ CTCT suy ra nhóm chức và tính chất",
+          "body": "Khi đọc CTCT, cần nhận ra cả khung C lẫn cụm nguyên tử có liên kết đặc trưng. Chẳng hạn CH3-CH2-OH có nhóm -OH của rượu, CH3-O-CH3 có cầu -O- của ete, còn CH3-C(=O)-OH có nhóm -COOH của axit cacboxylic.\nCùng số nguyên tử O không bảo đảm cùng họ chất hay cùng tính chất. Vị trí và kiểu liên kết của O mới quyết định nhóm chức; vì thế CTCT là cơ sở tin cậy hơn CTPT để dự đoán phản ứng đặc trưng."
         }
       ],
       "questions": [
@@ -391,6 +461,41 @@
           "id": "b1-l3-c3",
           "heading": "Từ công thức đơn giản nhất đến công thức phân tử",
           "body": "Sau khi có công thức đơn giản nhất, dùng phân tử khối để tìm công thức phân tử.\nVí dụ: công thức đơn giản nhất là CH2, khối lượng mol là 14. Nếu phân tử khối bằng 28 thì hệ số nhân là 28/14 = 2, suy ra công thức phân tử là C2H4.\nVới hiđrocacbon, có thể đối chiếu nhanh với các dạng CnH2n+2, CnH2n, CnH2n-2 để nhận ra chất no hay chưa no."
+        },
+        {
+          "id": "b1-l3-c4",
+          "heading": "Nâng cao: Xử lí tỉ lệ mol chưa nguyên khi tìm công thức đơn giản nhất",
+          "body": "Sau khi chia các số mol cho số nhỏ nhất, chỉ được làm tròn khi tỉ lệ rất gần số nguyên. Nếu gặp 1 : 1,5 : 1 thì nhân đồng thời cả ba số với 2 để được 2 : 3 : 2; gặp 1 : 1,25 : 1 thì nhân với 4 để được 4 : 5 : 4.\nKhông được tự ý nhân hoặc làm tròn một chỉ số riêng lẻ, vì sẽ phá vỡ tỉ lệ nguyên tử. Trước khi chốt công thức đơn giản nhất, nên thay lại để kiểm tra tỉ lệ mol thu được có khớp dữ kiện ban đầu trong sai số làm tròn hay không."
+        },
+        {
+          "id": "b1-l3-c5",
+          "heading": "Nâng cao: Tìm oxi bằng hiệu khối lượng và điều kiện áp dụng",
+          "body": "Với chất chỉ chứa C, H, O, có thể tính trực tiếp mC = 12nCO2 = 12mCO2/44 và mH = 2nH2O = mH2O/9. Khi đó mO = mX - mC - mH, rồi nO = mO/16. Cách làm này gộp bảo toàn nguyên tố C, H với bảo toàn khối lượng nên rất nhanh.\nPhép lấy phần khối lượng còn lại làm O chỉ đúng khi đề khẳng định X không chứa nguyên tố nào khác. Nếu X còn có N, halogen hoặc nguyên tố khác, phần còn lại là tổng khối lượng của các nguyên tố chưa biết; phải có thêm dữ kiện để tách chúng."
+        },
+        {
+          "id": "b1-l3-c6",
+          "heading": "Nâng cao: Lập trực tiếp chỉ số nguyên tử từ số mol chất đã đốt",
+          "body": "Nếu biết nX mol chất CxHyOz đã cháy hoàn toàn, không cần quy về 100 g: x = nCO2/nX và y = 2nH2O/nX. Khi biết MX, chỉ số O được tính bằng z = (MX - 12x - y)/16.\nVí dụ 0,10 mol X tạo 0,20 mol CO2 và 0,30 mol H2O; MX = 46. Suy ra x = 2, y = 6, z = (46 - 24 - 6)/16 = 1, nên X là C2H6O. Công thức này chỉ dùng nguyên vẹn khi X gồm C, H, O."
+        },
+        {
+          "id": "b1-l3-c7",
+          "heading": "Nâng cao: Dùng tỉ khối để chuyển công thức đơn giản nhất thành CTPT",
+          "body": "Từ tỉ khối khí có thể suy ra phân tử khối: dX/H2 = MX/2, còn dX/kk = MX/29. Sau khi đã có công thức đơn giản nhất A với khối lượng mol MA, tính k = MX/MA; CTPT là Ak.\nHệ số k phải là số nguyên dương. Nếu số liệu thí nghiệm cho giá trị gần một số nguyên, hãy chỉ làm tròn sau khi kiểm tra CTPT tạo thành có đúng thành phần phần trăm và phù hợp loại chất mà đề bài nêu hay không."
+        },
+        {
+          "id": "b1-l3-c8",
+          "heading": "Nâng cao: Khai thác tỉ số CO2 và H2O của hiđrocacbon",
+          "body": "Với hiđrocacbon CxHy, khi đốt cùng một lượng chất thì nCO2 : nH2O = x : y/2. Vì vậy tỉ số H/C của chất được tính nhanh theo H/C = 2nH2O/nCO2, không phụ thuộc khối lượng mẫu đã lấy.\nChẳng hạn nếu nH2O = nCO2 thì H/C = 2, công thức đơn giản nhất là CH2; còn nếu nH2O : nCO2 = 2 : 1 thì H/C = 4, công thức đơn giản nhất là CH4. Tỉ số này chỉ cho công thức đơn giản nhất, muốn có CTPT vẫn cần phân tử khối hoặc dữ kiện tương đương."
+        },
+        {
+          "id": "b1-l3-c9",
+          "heading": "Nâng cao: Công thức tổng quát của phản ứng đốt cháy và lượng oxi",
+          "body": "Phản ứng cháy hoàn toàn của CxHyOz được biểu diễn: CxHyOz + (x + y/4 - z/2)O2 -> xCO2 + y/2H2O. Khi cân bằng để viết phương trình, có thể nhân toàn bộ hệ số để khử phân số.\nSố mol CO2 chỉ phụ thuộc số C, số mol H2O chỉ phụ thuộc số H; còn O có sẵn trong X làm giảm lượng O2 cần dùng. Nhờ đó, nếu đã biết CTPT, có thể kiểm tra độc lập dữ kiện O2 tiêu thụ hoặc tính lượng không khí cần cho phản ứng cháy."
+        },
+        {
+          "id": "b1-l3-c10",
+          "heading": "Nâng cao: Đổi thể tích khí ở đktc và tự kiểm tra kết quả",
+          "body": "Nếu CO2, H2O ở thể khí hoặc O2 được cho theo thể tích ở đktc thì dùng n = V/22,4, với V tính bằng lít. Chỉ đổi thể tích sang mol sau khi đọc rõ điều kiện đo khí; mọi tỉ lệ nCO2, nH2O, nO2 đều phải được lập trên cùng đơn vị mol.\nBa phép kiểm tra cuối rất hữu ích: tổng phần trăm khối lượng phải xấp xỉ 100%; chỉ số trong CTĐGN và CTPT phải là số nguyên dương; mCO2 + mH2O không cần bằng mX vì sản phẩm cháy còn nhận oxi từ O2."
         }
       ],
       "questions": [

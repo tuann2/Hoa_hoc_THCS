@@ -257,9 +257,9 @@ commit).
 
 ### B1 · Đại cương về hợp chất hữu cơ (`b1-dai-cuong-huu-co`)
 
-- [ ] `b1-l1` — Khái niệm; phân loại hiđrocacbon/dẫn xuất
-- [ ] `b1-l2` — Cấu tạo phân tử hợp chất hữu cơ; CTCT
-- [ ] `b1-l3` — Nâng cao: lập CTPT từ % khối lượng, sản phẩm đốt cháy
+- [x] `b1-l1` — Khái niệm; phân loại hiđrocacbon/dẫn xuất
+- [x] `b1-l2` — Cấu tạo phân tử hợp chất hữu cơ; CTCT
+- [x] `b1-l3` — Nâng cao: lập CTPT từ % khối lượng, sản phẩm đốt cháy
 
 ### B2 · Hiđrocacbon – Nhiên liệu (`b2-hidrocacbon-nhien-lieu`)
 
