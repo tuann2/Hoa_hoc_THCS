@@ -242,11 +242,11 @@ commit).
 
 ### A11 · Phi kim (`a11-phi-kim`)
 
-- [ ] `a11-l1` — Tính chất chung của phi kim
-- [ ] `a11-l2` — Clo; điều chế và ứng dụng; nước Gia-ven, clorua vôi
-- [ ] `a11-l3` — Cacbon và các oxit của cacbon; muối cacbonat
-- [ ] `a11-l4` — Silic – công nghiệp silicat
-- [ ] `a11-l5` — Nâng cao: CO khử oxit; muối cacbonat + axit
+- [x] `a11-l1` — Tính chất chung của phi kim
+- [x] `a11-l2` — Clo; điều chế và ứng dụng; nước Gia-ven, clorua vôi
+- [x] `a11-l3` — Cacbon và các oxit của cacbon; muối cacbonat
+- [x] `a11-l4` — Silic – công nghiệp silicat
+- [x] `a11-l5` — Nâng cao: CO khử oxit; muối cacbonat + axit
 
 ### A12 · Chuyên đề tổng hợp Vô cơ (`a12-tong-hop-vo-co`)
 
