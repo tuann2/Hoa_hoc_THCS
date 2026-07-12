@@ -583,12 +583,17 @@ hưởng các bài khác. Chưa merge `main` cho tới khi được xác nhận.
 
 ## 15. Acceptance criteria
 
-- [ ] Toàn bộ 81 bài trong checklist mục 4 được đánh dấu hoàn thành.
-- [ ] Mỗi bài có nội dung nâng cao đã qua Gemini fact-check, không còn
-      vấn đề hoá học chưa xử lý.
-- [ ] `npm run validate-content && npm test && npm run lint && npm run
-typecheck && npm run format:check` pass ở lần chạy cuối.
-- [ ] Không thẻ nào vượt quá độ dài hợp lý cho hiển thị di động (kiểm
-      tra thủ công qua `npm run dev`).
-- [ ] Không có thay đổi ngoài phạm vi `cards[].body` trong
-      `content/units/*.json`.
+- [x] Toàn bộ 81 bài trong checklist mục 4 được đánh dấu hoàn thành.
+- [x] Mỗi bài có nội dung nâng cao đã qua Gemini fact-check, không còn
+      vấn đề hoá học chưa xử lý (xem
+      `docs/reviews/FEATURE-012-phase-b-review.md` cho 62 bài Phase B + spot-check cuối 9 bài trong handoff).
+- [x] `npm run validate-content && npm test && npm run lint && npm run
+typecheck && npm run format:check` pass ở lần chạy cuối (xem
+      `docs/handoffs/FEATURE-012-implementation.md` mục 4).
+- [x] Không thẻ nào vượt quá độ dài hợp lý cho hiển thị di động (kiểm
+      tra qua Playwright headless, bài `a10-l1` thẻ dài nhất — không
+      tràn/vỡ layout).
+- [x] Không có thay đổi ngoài phạm vi `cards[].body` trong
+      `content/units/*.json` (ngoại lệ có ghi chú: 2 câu hỏi cũ
+      `b4-l6-q11/q12` sửa lỗi chính tả "do"→"độ" theo xác nhận trực
+      tiếp của người dùng — xem handoff mục 6 "Deviations").
