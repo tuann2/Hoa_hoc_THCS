@@ -452,8 +452,8 @@ It must contain
 - files changed
 - base commit SHA
 - candidate commit SHA or `UNCOMMITTED`
-- worktree state: clean, or dirty with exact paths plus the `git stash
-create` SHA
+- worktree state: clean, or dirty with exact paths plus the
+  `git add -A && git stash create` SHA
 - `git diff --stat`
 - validation commands
 - command exit statuses and the quality gate satisfied by each command
