@@ -250,10 +250,10 @@ commit).
 
 ### A12 · Chuyên đề tổng hợp Vô cơ (`a12-tong-hop-vo-co`)
 
-- [ ] `a12-l1` — Chuỗi phản ứng – điều chế nhiều bước
-- [ ] `a12-l2` — Nhận biết không giới hạn/giới hạn thuốc thử; tách chất
-- [ ] `a12-l3` — Bài tập biện luận theo điều kiện
-- [ ] `a12-l4` — Đề tổng hợp vô cơ theo cấu trúc đề thi chuyên
+- [x] `a12-l1` — Chuỗi phản ứng – điều chế nhiều bước
+- [x] `a12-l2` — Nhận biết không giới hạn/giới hạn thuốc thử; tách chất
+- [x] `a12-l3` — Bài tập biện luận theo điều kiện
+- [x] `a12-l4` — Đề tổng hợp vô cơ theo cấu trúc đề thi chuyên
 
 ### B1 · Đại cương về hợp chất hữu cơ (`b1-dai-cuong-huu-co`)
 

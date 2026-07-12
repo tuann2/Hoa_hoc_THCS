@@ -17,17 +17,52 @@
         {
           "id": "a12-l1-c1",
           "heading": "Tách chuỗi dài thành các mắt xích gần nhau",
-          "body": "Với chuỗi dài, hãy biến đổi từng bước sao cho chất sau luôn suy ra trực tiếp từ chất trước.\nVí dụ: CaCO3 -> CaO -> Ca(OH)2 -> CaCO3 -> CaCl2.\nPTHH: CaCO3 -> CaO + CO2; CaO + H2O -> Ca(OH)2; Ca(OH)2 + CO2 -> CaCO3 + H2O; CaCO3 + 2HCl -> CaCl2 + H2O + CO2."
+          "body": "Với chuỗi dài, hãy biến đổi từng bước sao cho chất sau luôn suy ra trực tiếp từ chất trước.\nVí dụ: CaCO3 -> CaO -> Ca(OH)2 -> CaCO3 -> CaCl2.\nPTHH: CaCO3 -> CaO + CO2; CaO + H2O -> Ca(OH)2; Ca(OH)2 + CO2 -> CaCO3 + H2O; CaCO3 + 2HCl -> CaCl2 + H2O + CO2.\n\nKhi làm dạng HSG, ghi ngay trên mỗi mũi tên thuốc thử, điều kiện và, nếu cần, cách tách sản phẩm. Một mũi tên chỉ được chấp nhận khi phản ứng có lực đẩy rõ ràng: tạo kết tủa, khí, nước, chất bay hơi hoặc cần nung/điện phân. Nếu hai chất ở xa nhau, hãy chèn chất trung gian quen thuộc thay vì cố viết một phản ứng không xảy ra.\n\nCó thể suy ngược từ chất đích: muốn có CaCl2, nghĩ đến CaO hoặc CaCO3 tác dụng HCl; muốn có CaO, nghĩ đến nhiệt phân CaCO3. Sau khi tìm được đường đi, kiểm tra lại từng phương trình theo thứ tự: nguyên tố, hệ số, điều kiện và trạng thái chất."
         },
         {
           "id": "a12-l1-c2",
           "heading": "Điều chế nhiều bước từ nguyên liệu quen thuộc",
-          "body": "Từ đá vôi và muối ăn có thể đi tới nhiều sản phẩm khác nhau nếu chọn đúng nhánh trung gian.\nVí dụ điều chế clorua vôi: CaCO3 -> CaO -> Ca(OH)2; đồng thời điện phân dung dịch NaCl bão hoà có màng ngăn để thu Cl2; sau đó Ca(OH)2 + Cl2 -> CaOCl2 + H2O."
+          "body": "Từ đá vôi và muối ăn có thể đi tới nhiều sản phẩm khác nhau nếu chọn đúng nhánh trung gian.\nVí dụ điều chế clorua vôi: CaCO3 -> CaO -> Ca(OH)2; đồng thời điện phân dung dịch NaCl bão hoà có màng ngăn để thu Cl2; sau đó Ca(OH)2 + Cl2 -> CaOCl2 + H2O.\n\nTrong phạm vi bài học, clorua vôi được biểu diễn là CaOCl2. Khi viết chuỗi, phải giữ hai nhánh độc lập cho đến bước ghép: nhánh đá vôi cung cấp Ca(OH)2, còn nhánh NaCl cung cấp Cl2. Tổng hợp các bước và khử chất trung gian cho phương trình toàn quá trình: CaCO3 + 2NaCl + 2H2O -> CaOCl2 + CO2 + 2NaOH + H2. Phương trình gộp là cách kiểm tra bảo toàn, không thay cho việc nêu đủ các công đoạn.\n\nĐiều kiện cũng quyết định sản phẩm: để điều chế clorua vôi, cho Cl2 khô đi qua Ca(OH)2 khô; không thay bằng việc trộn tuỳ ý các dung dịch chứa NaOH và Cl2."
         },
         {
           "id": "a12-l1-c3",
           "heading": "Chuỗi oxi hoá lưu huỳnh từ quặng pirit",
-          "body": "Muốn điều chế H2SO4 từ FeS2, phải đi qua ba chặng: tạo SO2, oxi hoá thành SO3, rồi hấp thụ nước.\nPTHH tiêu biểu: 4FeS2 + 11O2 -> 2Fe2O3 + 8SO2; 2SO2 + O2 -> 2SO3; SO3 + H2O -> H2SO4."
+          "body": "Muốn điều chế H2SO4 từ FeS2, phải đi qua ba chặng: tạo SO2, oxi hoá thành SO3, rồi hấp thụ nước.\nPTHH tiêu biểu: 4FeS2 + 11O2 -> 2Fe2O3 + 8SO2; 2SO2 + O2 -> 2SO3; SO3 + H2O -> H2SO4.\n\nĐể tính nhanh trong chuỗi lí tưởng, theo dõi nguyên tố S: 1 mol FeS2 chứa 2 mol S nên có thể tạo tối đa 2 mol H2SO4. Fe chỉ đi vào Fe2O3, không làm thay đổi hệ số quy đổi S -> H2SO4. Nếu có quặng, hiệu suất chung hay nồng độ dung dịch, chỉ áp dụng chúng sau khi đã xác định đúng lượng FeS2 tinh khiết và lượng H2SO4 lí thuyết."
+        },
+        {
+          "id": "a12-l1-c4",
+          "heading": "Nâng cao: Nhận diện oxi hoá - khử để chọn thuốc thử",
+          "body": "Trong chuỗi vô cơ, trước khi chọn thuốc thử hãy xét số oxi hoá của nguyên tố cần biến đổi. Khi nung FeS2, S chuyển từ -1 lên +4 trong SO2; sau đó lên +6 trong SO3 và H2SO4. Vì vậy cả hai chặng đầu đều cần chất oxi hoá là O2.\n\nClo cho một kiểu biến đổi khác: Cl2 có số oxi hoá 0, khi tác dụng với Ca(OH)2 tạo clorua vôi theo quy ước CaOCl2, clo đồng thời có phần ở dạng Cl- và phần ở dạng ClO-. Đây là sự tự oxi hoá - tự khử. Nhận ra kiểu biến đổi này giúp tránh chọn nhầm một axit hay bazơ không thể thay đổi số oxi hoá cần thiết.\n\nQuy tắc thực hành: nếu số oxi hoá tăng, tìm chất oxi hoá; nếu giảm, tìm chất khử; nếu không đổi, ưu tiên nghĩ đến phản ứng trao đổi, axit - bazơ, nhiệt phân hoặc tạo phức/kết tủa."
+        },
+        {
+          "id": "a12-l1-c5",
+          "heading": "Nâng cao: Liều lượng CO2 tạo hai nhánh cacbonat khác nhau",
+          "body": "Cùng một bộ chất CaO, Ca(OH)2, CO2 nhưng lượng CO2 quyết định mắt xích của chuỗi. Sục CO2 vừa đủ vào nước vôi trong: Ca(OH)2 + CO2 -> CaCO3 + H2O, xuất hiện kết tủa. Sục CO2 dư, kết tủa tan: CaCO3 + CO2 + H2O -> Ca(HCO3)2.\n\nMuối hiđrocacbonat không bền khi đun nóng: Ca(HCO3)2 -> CaCO3 + CO2 + H2O. Vì thế có thể dựng chuỗi có hiện tượng tan - xuất hiện kết tủa trở lại: CaCO3 -> Ca(HCO3)2 -> CaCO3. Các từ khoá vừa đủ, dư và đun nóng phải đặt trên mũi tên; bỏ chúng thường làm chuỗi sai sản phẩm."
+        },
+        {
+          "id": "a12-l1-c6",
+          "heading": "Nâng cao: Bản chất điện phân dung dịch NaCl có màng ngăn",
+          "body": "Ở anot, ion clorua nhường electron: 2Cl- -> Cl2 + 2e. Ở catot, nước nhận electron: 2H2O + 2e -> H2 + 2OH-. Ion Na+ kết hợp với OH- tạo NaOH trong dung dịch; Na+ không bị khử thành Na khi điện phân dung dịch nước.\n\nMàng ngăn tách Cl2 ở anot khỏi NaOH ở catot. Nếu chúng tiếp xúc, có thể xảy ra Cl2 + 2NaOH -> NaCl + NaClO + H2O, làm hao Cl2 và NaOH, đồng thời tạo nước Gia-ven thay vì thu riêng các sản phẩm. Vì thế trong bài toán điều chế clorua vôi từ NaCl, chỉ lấy Cl2 của bình điện phân có màng ngăn để ghép với Ca(OH)2.\n\nTừ phương trình tổng quát 2NaCl + 2H2O -> 2NaOH + H2 + Cl2, suy ra n(H2) = n(Cl2) = n(NaCl)/2. Nếu đề cho thể tích khí ở đktc thì V = 22,4n (L)."
+        },
+        {
+          "id": "a12-l1-c7",
+          "heading": "Nâng cao: Điều chế HCl từ NaCl cần đúng điều kiện nhiệt độ",
+          "body": "Khi cho NaCl rắn tác dụng H2SO4 đặc và đun nóng, sản phẩm muối phụ thuộc nhiệt độ. Ở nhiệt độ thấp hơn, có thể viết NaCl + H2SO4 -> NaHSO4 + HCl. Khi đun nóng mạnh để phản ứng đi đến muối trung hoà, phương trình tổng quát là 2NaCl + H2SO4 -> Na2SO4 + 2HCl.\n\nDo đó không nên dùng phương trình tổng quát một cách máy móc khi đề đã nêu NaHSO4 hoặc điều kiện nhiệt độ. Khí HCl sinh ra rất tan trong nước, nên trong thí nghiệm không thu bằng cách đẩy nước; muốn thu khí khô phải dùng cách làm khô và dụng cụ phù hợp."
+        },
+        {
+          "id": "a12-l1-c8",
+          "heading": "Nâng cao: Quy trình tiếp xúc từ SO2 đến H2SO4",
+          "body": "Phản ứng 2SO2 + O2 -> 2SO3 là thuận nghịch và toả nhiệt. Trong quy trình tiếp xúc, hỗn hợp khí sạch, khô được cho qua chất xúc tác V2O5 ở nhiệt độ thích hợp khoảng 450 độ C để tạo SO3 với hiệu suất tốt. Điều kiện này là kiến thức dùng để giải thích mũi tên SO2 -> SO3, không phải một hệ số trong phương trình.\n\nỞ mức phương trình học đường có thể viết SO3 + H2O -> H2SO4. Trong công nghiệp, SO3 thường được hấp thụ vào H2SO4 đặc tạo oleum: SO3 + H2SO4 -> H2S2O7; sau đó H2S2O7 + H2O -> 2H2SO4. Cách hấp thụ này hạn chế tạo sương axit và cho phép điều chỉnh nồng độ axit."
+        },
+        {
+          "id": "a12-l1-c9",
+          "heading": "Nâng cao: Quy về chất trung gian chung khi hai nhánh gặp nhau",
+          "body": "Với chuỗi phân nhánh, không tính khối lượng sản phẩm ngay từ từng nguyên liệu. Trước hết quy mọi nhánh về số mol chất sẽ phản ứng ở nút ghép, rồi so sánh theo tỉ lệ phương trình. Ví dụ, CaCO3 -> Ca(OH)2 theo tỉ lệ 1 : 1; còn 2NaCl -> Cl2 theo tỉ lệ 2 : 1. Ở bước Ca(OH)2 + Cl2 -> CaOCl2 + H2O, số mol CaOCl2 bằng số mol nhỏ hơn giữa Ca(OH)2 và Cl2.\n\nNếu một nhánh có nhiều hiệu suất liên tiếp h1, h2, ... thì hiệu suất của chính nhánh đó là h1 x h2 x ... khi các h được viết dưới dạng phần thập phân. Sau khi đã tính lượng thực tế ở từng nhánh, mới xác định chất giới hạn tại nút ghép; không nhân thêm hiệu suất chung lần nữa nếu nó đã được phân bổ vào các chặng."
+        },
+        {
+          "id": "a12-l1-c10",
+          "heading": "Nâng cao: Kiểm tra nhanh chuỗi và phương trình gộp",
+          "body": "Sau khi hoàn thành chuỗi, hãy cộng các phương trình và triệt tiêu mọi chất trung gian xuất hiện ở hai vế. Phương trình gộp phải bảo toàn nguyên tố, điện tích (nếu viết ion) và phản ánh đúng các chất đầu - cuối. Đây là cách phát hiện nhanh việc quên H2O, O2, axit hoặc ghi thừa một chất trung gian.\n\nTuy nhiên, phương trình gộp không thể hiện điều kiện riêng của từng bước. Một chuỗi chỉ hoàn chỉnh khi mỗi mắt xích đều có phương trình đúng, điều kiện phù hợp, và sản phẩm của bước trước được dùng hay tách ra hợp lí ở bước sau. Đặc biệt kiểm tra các từ quyết định sản phẩm: dư/vừa đủ, nóng/lạnh, dung dịch/khí khô, có/không có màng ngăn."
         }
       ],
       "questions": [
@@ -197,17 +232,52 @@
         {
           "id": "a12-l2-c1",
           "heading": "Một thuốc thử nhưng phải tạo ra nhiều hiện tượng",
-          "body": "Khi chỉ có một thuốc thử, cần chọn thuốc thử tạo hiện tượng khác nhau rõ rệt giữa các mẫu.\nVí dụ dùng H2SO4 loãng cho ba dung dịch BaCl2, Na2CO3, NaCl: với BaCl2 xuất hiện kết tủa trắng BaSO4; với Na2CO3 sủi bọt CO2; với NaCl không hiện tượng."
+          "body": "Khi chỉ có một thuốc thử, cần chọn thuốc thử tạo hiện tượng khác nhau rõ rệt giữa các mẫu.\nVí dụ dùng H2SO4 loãng cho ba dung dịch BaCl2, Na2CO3, NaCl: với BaCl2 xuất hiện kết tủa trắng BaSO4; với Na2CO3 sủi bọt CO2; với NaCl không hiện tượng.\n\nVới mỗi lọ phải lấy một phần nhỏ vào ống nghiệm riêng, không thử trực tiếp trên cả lọ. Ghi kết quả ngay sau từng phép thử và chỉ kết luận khi mỗi mẫu có dấu hiệu riêng; phần mẫu chưa dùng được giữ lại để thử tiếp hoặc đối chiếu."
         },
         {
           "id": "a12-l2-c2",
           "heading": "Không giới hạn thuốc thử: nhận từ nhóm dễ trước",
-          "body": "Nếu có nhiều thuốc thử, nên nhận axit và bazơ trước bằng quỳ tím hoặc phenolphthalein, rồi mới xét các dung dịch trung tính.\nVí dụ: trong bộ HCl, NaOH, Na2CO3, Na2SO4, dùng quỳ tím để nhận HCl và hai dung dịch bazơ; dùng HCl để tách riêng Na2CO3; cuối cùng dùng BaCl2 để nhận Na2SO4."
+          "body": "Nếu có nhiều thuốc thử, nên nhận axit và bazơ trước bằng quỳ tím hoặc phenolphthalein, rồi mới xét các dung dịch trung tính.\nVí dụ: trong bộ HCl, NaOH, Na2CO3, Na2SO4, dùng quỳ tím để nhận HCl và hai dung dịch bazơ; dùng HCl để tách riêng Na2CO3; cuối cùng dùng BaCl2 để nhận Na2SO4.\n\nKhông chọn thuốc thử chỉ vì nó tạo kết tủa: cần xem kết tủa đó có riêng cho một mẫu hay không. Mỗi bước nên làm giảm số khả năng còn lại, đồng thời tạo được một dung dịch đã biết có thể dùng làm thuốc thử ở bước sau."
         },
         {
           "id": "a12-l2-c3",
           "heading": "Tách và tinh chế phải giữ chất cần thu",
-          "body": "Luôn ưu tiên phương pháp vật lí trước: nam châm, hoà tan chọn lọc, lọc, cô cạn. Chỉ dùng phản ứng hoá học khi chất cần thu không bị mất.\nVí dụ tách hỗn hợp Fe, NaCl, cát: dùng nam châm hút Fe; hoà tan phần còn lại vào nước; lọc lấy cát; cô cạn dịch lọc thu NaCl."
+          "body": "Luôn ưu tiên phương pháp vật lí trước: nam châm, hoà tan chọn lọc, lọc, cô cạn. Chỉ dùng phản ứng hoá học khi chất cần thu không bị mất.\nVí dụ tách hỗn hợp Fe, NaCl, cát: dùng nam châm hút Fe; hoà tan phần còn lại vào nước; lọc lấy cát; cô cạn dịch lọc thu NaCl.\n\nỞ mỗi công đoạn phải nêu rõ chất nằm ở phần nào: chất rắn trên giấy lọc, dung dịch lọc hay tinh thể sau cô cạn. Rửa chất rắn bằng lượng nhỏ dung môi thích hợp rồi làm khô giúp loại dung dịch mẹ bám ngoài, nhưng rửa quá nhiều có thể làm hao chất cần thu."
+        },
+        {
+          "id": "a12-l2-c4",
+          "heading": "Nâng cao: Lập ma trận hiện tượng trước khi nhận biết",
+          "body": "Trước khi làm, lập bảng gồm các mẫu ở hàng và các thuốc thử được phép ở cột; điền dự đoán: đổi màu, có khí, có kết tủa, kết tủa tan hay không hiện tượng. Chọn phép thử đầu tiên chia bộ mẫu thành nhiều nhóm rõ nhất, không nhất thiết là phép thử quen thuộc nhất.\n\nSau mỗi kết quả, gạch các khả năng không phù hợp rồi chọn phép thử kế tiếp chỉ trên một phần mới của các mẫu còn chưa rõ. Hai mẫu có mọi dấu hiệu giống nhau trong các phép thử được phép thì sơ đồ đó không thể gọi tên riêng cả hai; phải bổ sung thuốc thử hoặc nêu kết luận là chưa đủ dữ kiện. Đây là tiêu chuẩn kiểm tra tính khả thi của một phương án nhận biết."
+        },
+        {
+          "id": "a12-l2-c5",
+          "heading": "Nâng cao: Phá nhiễu khi nhận biết anion",
+          "body": "Kết tủa trắng với BaCl2 chưa đủ để khẳng định có SO4^2-, vì CO3^2- cũng có thể tạo BaCO3 trắng. Nếu mẫu có thể chứa cả cacbonat và sunfat, chia mẫu thành hai phần. Phần một cho axit loãng để nhận CO3^2- qua khí CO2: CO3^2- + 2H+ -> CO2 + H2O.\n\nVới phần hai, axit hoá bằng HCl đến khi hết sủi bọt rồi mới thêm BaCl2. Kết tủa trắng còn lại là BaSO4: Ba2+ + SO4^2- -> BaSO4. Không dùng H2SO4 để axit hoá trong phép thử này vì chính axit đó đưa SO4^2- vào mẫu và gây dương tính giả."
+        },
+        {
+          "id": "a12-l2-c6",
+          "heading": "Nâng cao: Khi nào một thuốc thử là không đủ",
+          "body": "Trong bài chỉ được dùng một thuốc thử ngoài bộ mẫu, mỗi dung dịch phải cho một “dấu vân tay” quan sát được khác nhau: khí, kết tủa, màu, sự tan của kết tủa hoặc không hiện tượng. Nếu hai mẫu cùng cho một hiện tượng, không được gán tên cho chúng chỉ từ phép thử đó.\n\nVí dụ, AgNO3 đều tạo kết tủa AgCl trắng với HCl và NaCl, nên chỉ AgNO3 không phân biệt được hai dung dịch này. “Không hiện tượng” vẫn là một kết quả có giá trị, nhưng chỉ hữu ích khi các mẫu khác đã có hiện tượng khác biệt. Phải nêu rõ giới hạn này thay vì cố suy đoán tên lọ."
+        },
+        {
+          "id": "a12-l2-c7",
+          "heading": "Nâng cao: Dùng phản ứng chọn lọc để tách kim loại",
+          "body": "Phản ứng hoá học chỉ là cách tách tốt khi chất cần giữ không phản ứng, còn chất cần loại chuyển sang pha khác. Chẳng hạn, muốn thu Cu từ hỗn hợp Al và Cu, cho NaOH dư để Al tan tạo muối aluminat, còn Cu ở lại ở dạng rắn; lọc, rửa và sấy chất rắn thu được Cu.\n\nVới hỗn hợp Fe, Al, Cu, nên dùng nam châm tách Fe trước rồi mới dùng NaOH dư cho phần Al, Cu. Quy trình này thu riêng Fe và Cu, nhưng Al đã chuyển thành chất tan nên chưa thu lại được Al kim loại. Vì vậy phải đọc đúng yêu cầu: “loại tạp chất”, “thu một chất tinh khiết” và “tách riêng mọi chất” là ba mục tiêu khác nhau."
+        },
+        {
+          "id": "a12-l2-c8",
+          "heading": "Nâng cao: Tách ion bằng kết tủa vừa đủ",
+          "body": "Để loại Ba2+ khỏi dung dịch lẫn NaCl, thêm Na2SO4 vừa đủ: BaCl2 + Na2SO4 -> BaSO4 + 2NaCl; sau đó lọc bỏ BaSO4. Nếu Na2SO4 đúng vừa đủ, dịch lọc chỉ còn NaCl hoà tan (cùng nước), nên cô cạn có thể thu NaCl.\n\nKhông được tự ý dùng dư thuốc thử kết tủa: Na2SO4 dư sẽ ở lại trong dịch lọc và làm NaCl kém tinh khiết. Khi đề không bảo đảm lượng vừa đủ, phải nêu bước xử lí thuốc thử dư hoặc chọn một cách tách khác. Luôn xét cả ion do thuốc thử đưa vào, không chỉ xét chất kết tủa tạo thành."
+        },
+        {
+          "id": "a12-l2-c9",
+          "heading": "Nâng cao: Kết tinh phân đoạn không phải cô cạn đến khô",
+          "body": "Hai muối cùng tan không tách được bằng lọc thông thường, nhưng có thể tách tương đối nhờ độ tan thay đổi khác nhau theo nhiệt độ. Hoà tan hỗn hợp trong lượng nước nóng tối thiểu, lọc nóng nếu có chất không tan, rồi để nguội để muối có độ tan giảm mạnh kết tinh trước. Lọc lấy tinh thể và rửa nhanh bằng ít nước lạnh.\n\nVí dụ, với hỗn hợp KNO3 và NaCl, nếu dung dịch được pha sao cho KNO3 bão hoà khi làm nguội thì tinh thể đầu thường giàu KNO3 vì độ tan của KNO3 thay đổi mạnh hơn theo nhiệt độ. Không được kết luận tinh thể đã tinh khiết tuyệt đối: một phần NaCl vẫn có thể cùng kết tinh. Kết tinh lại nhiều lần tăng độ tinh khiết nhưng làm giảm lượng chất thu hồi."
+        },
+        {
+          "id": "a12-l2-c10",
+          "heading": "Nâng cao: Kiểm tra độ tinh khiết và hiệu suất tách",
+          "body": "Sau sơ đồ tách, kiểm tra hai tiêu chí độc lập: độ tinh khiết cho biết mẫu thu còn lẫn tạp chất không; hiệu suất cho biết đã thu lại được bao nhiêu so với lượng chất có ban đầu. Nếu biết khối lượng chất cần thu ban đầu, hiệu suất thu hồi = khối lượng chất tinh khiết thực tế thu được / khối lượng chất đó ban đầu x 100%.\n\nKhối lượng bị giảm sau lọc, chuyển cốc, rửa hay kết tinh không tự động chứng minh đã tách sạch; đó có thể là hao hụt thao tác. Ngược lại, thu được khối lượng lớn bất thường có thể do tinh thể ngậm dung dịch mẹ hoặc còn ẩm. Vì vậy bài giải tốt luôn theo dõi chất ở từng pha và nêu thao tác rửa, làm khô trước khi cân."
         }
       ],
       "questions": [
@@ -386,6 +456,46 @@
           "id": "a12-l3-c3",
           "heading": "Biện luận công thức từ oxit hoặc muối",
           "body": "Nếu biết oxit có dạng MO hay M2O3, hãy dùng khối lượng mol hợp chất hoặc tỉ lệ khối lượng kim loại - oxi để tìm M.\nVí dụ: oxit MO có phân tử khối 80 thì M = 80 - 16 = 64, suy ra M là Cu."
+        },
+        {
+          "id": "a12-l3-c4",
+          "heading": "Nâng cao: Bảo toàn electron trong bài kim loại - axit",
+          "body": "Với axit không có tính oxi hoá mạnh, kim loại M có hoá trị z nhường z electron: M -> M^z+ + ze; ion H+ nhận electron tạo H2. Vì 2H+ + 2e -> H2 nên z.nM = 2.nH2, hay nH2 = z.nM/2. Công thức này bao quát các trường hợp hoá trị II và III đã học.\n\nVới hỗn hợp nhiều kim loại đều phản ứng, không cần viết ngay mọi phương trình: tổng số electron nhường bằng tổng số electron nhận, tức z1.n1 + z2.n2 + ... = 2.nH2. Chẳng hạn 0,10 mol Al tạo 0,15 mol H2 vì 3 x 0,10 = 2 x 0,15. Chỉ dùng cách quy đổi này sau khi đã xác nhận khí sinh ra thực sự là H2."
+        },
+        {
+          "id": "a12-l3-c5",
+          "heading": "Nâng cao: Điều kiện quyết định có được quy về H2 hay không",
+          "body": "Quy tắc kim loại + axit -> muối + H2 chỉ dùng cho kim loại đứng trước H và các axit không oxi hoá như HCl hoặc H2SO4 loãng. Cu không tạo H2 với hai axit này; vì vậy trong hỗn hợp Fe, Cu tác dụng H2SO4 loãng, Cu thường còn lại ở chất rắn.\n\nKhông áp dụng máy móc công thức nH2 = z.nM/2 với HNO3, H2SO4 đặc nóng hoặc khi đề nêu sự thụ động hoá: các điều kiện đó có thể cho khí khác H2 hay làm Fe, Al, Cr hầu như không phản ứng. Trước khi lập số mol, phải gạch chân cả tên axit, nồng độ, nhiệt độ và các từ “dư”, “vừa đủ”, “thiếu”."
+        },
+        {
+          "id": "a12-l3-c6",
+          "heading": "Nâng cao: Đọc đúng chất rắn còn lại khi axit thiếu",
+          "body": "Nếu chỉ có một kim loại phản ứng và axit thiếu, khối lượng kim loại đã tan là m ban đầu - m chất rắn còn lại; từ đó suy ra số mol H2. Tuy nhiên với hỗn hợp, chất rắn sau phản ứng có thể gồm cả phần kim loại chưa phản ứng và kim loại vốn không phản ứng với axit đã dùng.\n\nVí dụ, cho Fe và Cu vào HCl thiếu thì phần rắn có thể chứa Fe dư lẫn Cu; không được lấy toàn bộ khối lượng rắn để trừ cho Fe ban đầu. Muốn tách dữ kiện, cần kết hợp thêm thể tích H2, một phép thử nhận biết, hoặc điều kiện “HCl vừa đủ hoà tan Fe”. Luôn mô tả thành phần dự kiến của từng pha trước khi lập phương trình."
+        },
+        {
+          "id": "a12-l3-c7",
+          "heading": "Nâng cao: Lập hệ theo khối lượng và lượng khí",
+          "body": "Gọi số mol các kim loại là a, b, ...; phương trình khối lượng có dạng A1.a + A2.b + ... = m hỗn hợp. Phương trình khí lấy từ hệ số phản ứng hoặc bảo toàn electron. Với hai kim loại hoá trị II, a + b = nH2; với Mg và Al, a + 3b/2 = nH2.\n\nHệ chỉ đáng tin khi nghiệm không âm và phù hợp điều kiện đề bài. Sau khi giải, phải kiểm tra lại khối lượng từng chất, số mol H2 và chất dư. Nếu một ẩn âm, thường do đã coi nhầm mọi kim loại đều phản ứng, dùng sai hoá trị hoặc bỏ sót điều kiện axit thiếu/dư."
+        },
+        {
+          "id": "a12-l3-c8",
+          "heading": "Nâng cao: Khai thác dữ kiện nồng độ axit",
+          "body": "Trong phản ứng tạo H2, cứ 1 mol H2 tương ứng 2 mol H+ đã bị khử. Vì vậy nếu HCl là axit phản ứng thì nHCl đã dùng = 2.nH2; với H2SO4 loãng, nH2SO4 đã dùng = nH2. Khi đề cho dung dịch, đổi trước bằng n = CM.V, trong đó V tính bằng lít.\n\nTừ đây biện luận điều kiện: axit vừa đủ khi lượng axit ban đầu bằng lượng đã dùng; axit dư khi lớn hơn; axit thiếu khi nhỏ hơn lượng cần để hoà tan toàn bộ kim loại. Kết luận “vừa đủ” phải đồng thời khớp dữ kiện về chất rắn còn lại, nếu có, chứ không chỉ dựa vào một phương trình khí."
+        },
+        {
+          "id": "a12-l3-c9",
+          "heading": "Nâng cao: Suy lượng muối từ lượng kim loại đã phản ứng",
+          "body": "Khi cô cạn dung dịch sau phản ứng, chỉ tính muối tạo bởi phần kim loại thực sự đã tan; kim loại dư không đi vào muối. Với M hoá trị z tác dụng HCl, nMClz = nM phản ứng và m(MClz) = mM phản ứng + 35,5.z.nM phản ứng.\n\nCó thể kiểm tra bằng bảo toàn khối lượng: phần tăng từ kim loại thành muối khan chính là khối lượng Cl- đi vào muối. Cách này đặc biệt hữu ích khi đề cho khối lượng chất rắn dư hoặc lượng H2. Nếu dung dịch còn axit dư, khi hỏi khối lượng muối khan vẫn chỉ cộng phần anion đã tạo muối, không cộng axit dư hay nước bay hơi."
+        },
+        {
+          "id": "a12-l3-c10",
+          "heading": "Nâng cao: Biện luận oxit và muối bằng tỉ lệ mol",
+          "body": "Với oxit MxOy, từ một mẫu chất hãy tính nM = mM/M và nO = mO/16. Tỉ lệ nM : nO phải rút gọn về x : y; ngược lại, nếu đã biết dạng oxit thì tỉ lệ khối lượng phải thỏa mM : mO = x.M : 16y. Đây là cách kiểm tra độc lập ngoài việc dùng phân tử khối.\n\nVới muối, trước hết xác định điện tích ion để viết đúng công thức, rồi mới dùng tỉ lệ khối lượng. Ví dụ ion M2+ kết hợp SO4^2- theo tỉ lệ 1 : 1, còn M3+ kết hợp SO4^2- cho M2(SO4)3. Không suy nguyên tử khối chỉ từ một tỉ lệ khối lượng nếu công thức chất chưa được biện luận rõ."
+        },
+        {
+          "id": "a12-l3-c11",
+          "heading": "Nâng cao: Chặn nghiệm sai bằng giá trị trung bình và giới hạn",
+          "body": "Nếu hỗn hợp chỉ gồm các kim loại hoá trị II phản ứng hoàn toàn với axit, tổng số mol kim loại bằng nH2. Khi đó nguyên tử khối trung bình A trung bình = m hỗn hợp/nH2 và phải nằm giữa nguyên tử khối của các kim loại thành phần. Điều kiện này giúp loại nhanh cặp kim loại không thể có trước khi giải hệ.\n\nVí dụ hỗn hợp Mg và Zn phải có A trung bình nằm từ 24 đến 65; nếu số liệu cho giá trị ngoài khoảng này thì giả thiết “chỉ gồm Mg và Zn, phản ứng hoàn toàn” mâu thuẫn. Quy tắc không dùng trực tiếp khi các kim loại khác hoá trị, axit thiếu hoặc có chất không phản ứng; khi đó phải quay lại phương trình electron và các điều kiện thực tế."
         }
       ],
       "questions": [
@@ -555,6 +665,46 @@
           "id": "a12-l4-c3",
           "heading": "Kiểm tra chất giới hạn sau từng chặng",
           "body": "Khi đề ghép nhiều phản ứng liên tiếp, chất giới hạn ở chặng đầu có thể quyết định toàn bộ chặng sau.\nVí dụ: Fe + CuSO4 -> FeSO4 + Cu. Nếu Fe còn dư sau chặng này, phần Fe dư mới tiếp tục phản ứng với HCl để tạo H2; đồng sinh ra thì không phản ứng với HCl loãng."
+        },
+        {
+          "id": "a12-l4-c4",
+          "heading": "Nâng cao: Lập bảng dòng chất trước khi đặt ẩn",
+          "body": "Với đề nhiều thao tác, hãy lập một bảng theo thứ tự thí nghiệm: ở mỗi chặng ghi chất đưa vào, phản ứng xảy ra, chất còn dư và phần nào được chuyển sang chặng kế. Chỉ chất thật sự được lấy, lọc hoặc dẫn đi mới được dùng tiếp; không được mang theo cả hệ phản ứng một cách mặc định.\n\nVí dụ khi lọc sau phản ứng thế Fe + CuSO4 -> FeSO4 + Cu, dung dịch lọc chứa các chất tan còn lại, còn chất rắn là Cu mới sinh cùng Fe chưa phản ứng (nếu có). Nếu đề lấy chất rắn cho HCl thì CuSO4 và FeSO4 đã không còn trong chặng sau. Bảng dòng chất giúp phân biệt rõ phản ứng nối tiếp với các thí nghiệm làm trên mẫu riêng."
+        },
+        {
+          "id": "a12-l4-c5",
+          "heading": "Nâng cao: Gắn số liệu với đúng pha được cân hoặc đo",
+          "body": "Mỗi con số trong đề chỉ nói về một pha xác định. “Khối lượng kết tủa” là phần rắn sau lọc và rửa; “khối lượng muối khan” không gồm nước dung môi hay chất rắn không tan; khí đã thoát khỏi bình không còn thuộc khối lượng dung dịch. Vì vậy, trước khi lập bảo toàn khối lượng phải khoanh rõ hệ đang xét.\n\nĐặc biệt, nung chất rắn đến khối lượng không đổi nghĩa là các chất bay hơi như H2O, CO2 đã bị loại khỏi mẫu cân và chất rắn có thể đã đổi dạng. Không thể dùng trực tiếp khối lượng trước nung thay cho khối lượng sau nung, cũng không thể cộng khối lượng dung dịch lọc vào khối lượng kết tủa nếu đề chỉ hỏi một trong hai phần."
+        },
+        {
+          "id": "a12-l4-c6",
+          "heading": "Nâng cao: Dùng chặng sau để định lượng chất dư ở chặng trước",
+          "body": "Một phép thử ở cuối đề thường được thiết kế để chỉ phản ứng với một thành phần còn lại. Khi đó hãy truy ngược từ hiện tượng cuối về lượng chất dư của chặng ngay trước nó, rồi mới trở về lượng đã phản ứng ban đầu. Đây là cách biến dữ kiện định tính thành một phương trình định lượng.\n\nChẳng hạn sau khi Fe đẩy Cu khỏi CuSO4, chất rắn có thể gồm Fe dư và Cu. Cho chất rắn vào HCl dư, chỉ Fe tạo H2: Fe + 2HCl -> FeCl2 + H2; Cu không tạo H2 với HCl. Do đó n(Fe dư) = n(H2), còn số mol Fe đã phản ứng với CuSO4 được suy ra bằng n(Fe ban đầu) - n(Fe dư). Phải nêu rõ tính chọn lọc này trước khi dùng tỉ lệ mol."
+        },
+        {
+          "id": "a12-l4-c7",
+          "heading": "Nâng cao: Quy toàn bộ sắt về Fe2O3 sau khi nung trong không khí",
+          "body": "Trong một chuỗi có Fe và Fe2O3 ban đầu, HCl có thể tạo đồng thời Fe2+ từ Fe và Fe3+ từ Fe2O3. Khi thêm NaOH, hai ion cho Fe(OH)2 và Fe(OH)3; nếu lọc rồi nung trong không khí đến khối lượng không đổi, cả hai cuối cùng đều cho Fe2O3. Vì vậy khối lượng Fe2O3 cuối chỉ cho tổng số mol nguyên tử Fe của toàn hệ: n(Fe nguyên tử) = 2.n(Fe2O3 cuối).\n\nDữ kiện H2 ở chặng hoà tan lại tách riêng được Fe kim loại ban đầu vì Fe + 2HCl -> FeCl2 + H2, còn Fe2O3 + 6HCl -> 2FeCl3 + 3H2O không sinh H2. Kết hợp hai “dấu vết” này sẽ tìm được từng thành phần, thay vì nhầm Fe2O3 sau nung là đúng lượng Fe2O3 có từ đầu."
+        },
+        {
+          "id": "a12-l4-c8",
+          "heading": "Nâng cao: Phân biệt thí nghiệm nối tiếp và các mẫu song song",
+          "body": "Các cụm “lấy dung dịch sau phản ứng”, “lọc lấy chất rắn rồi...” báo hiệu thao tác nối tiếp: thành phần ở bước sau phải đúng là thành phần còn lại ở bước trước. Ngược lại, “cho cùng lượng hỗn hợp X tác dụng với...” thường mô tả một thí nghiệm song song trên một phần mẫu tương đương; kết quả của thí nghiệm thứ nhất không được mang sang thí nghiệm thứ hai.\n\nNếu đề nói chia hỗn hợp thành hai phần, phải đặt ẩn cho lượng ở mỗi phần hoặc dùng đúng tỉ lệ chia. Chỉ khi nói hai phần bằng nhau mới được coi số mol mỗi phần bằng một nửa ban đầu. Đọc sai quan hệ giữa các mẫu có thể làm mọi phương trình hoá học đều đúng nhưng đáp số vẫn sai gấp đôi hoặc sai hẳn."
+        },
+        {
+          "id": "a12-l4-c9",
+          "heading": "Nâng cao: Chọn các phương trình độc lập trong đề tổng hợp",
+          "body": "Số ẩn quyết định số dữ kiện định lượng độc lập cần có. Với hỗn hợp hai chất, thường dùng một phương trình khối lượng và một phương trình xuất phát từ khí, kết tủa, lượng axit/kiềm đã dùng hoặc khối lượng chất rắn sau biến đổi. Hai công thức cùng suy từ một phép đo không tạo thêm thông tin mới.\n\nTrước khi giải, ghi ý nghĩa của từng phương trình: phương trình nào bảo toàn khối lượng ban đầu, phương trình nào đếm một nguyên tố, và phương trình nào mô tả mức độ phản ứng. Nếu hai phương trình chỉ là hai cách viết của cùng một bảo toàn, hệ thiếu dữ kiện; cần tìm số liệu ở chặng khác thay vì cố giải."
+        },
+        {
+          "id": "a12-l4-c10",
+          "heading": "Nâng cao: Kiểm tra miền nghiệm bằng mức độ phản ứng",
+          "body": "Khi đặt x là số mol đã phản ứng ở một chặng, x không chỉ không âm mà còn phải không vượt quá lượng của mọi chất tham gia sau khi chia cho hệ số của chúng. Viết ngay điều kiện 0 <= x <= min(n chất thứ nhất/hệ số, n chất thứ hai/hệ số) giúp phát hiện sớm giả thiết sai về chất dư.\n\nSau khi giải hệ, phải kiểm tra từng lượng còn lại có không âm không và có khớp với từ khoá “dư”, “vừa đủ”, “hết” hay không. Một nghiệm đại số âm, hoặc một lượng chất còn dư trái với hiện tượng đề cho, không phải đáp án gần đúng mà là dấu hiệu đã gán sai sản phẩm, sai pha lấy đi hoặc dùng nhầm phản ứng ở một chặng."
+        },
+        {
+          "id": "a12-l4-c11",
+          "heading": "Nâng cao: Trình bày lời giải đề chuyên để không mất điểm",
+          "body": "Một lời giải tổng hợp nên có bốn lớp rõ ràng: viết phương trình và điều kiện của từng chặng; lập bảng số mol hoặc bảng dòng chất; dùng dữ kiện để tính; cuối cùng đối chiếu hiện tượng và kết luận. Không nên chỉ ghi một hệ phương trình không nguồn gốc, vì người chấm cần thấy vì sao chất đó được coi là dư hay bị loại sau lọc.\n\nTrước khi chốt đáp số, tự kiểm tra: phương trình đã cân bằng chưa; chất dùng ở bước sau có đúng pha được lấy ra không; số mol có âm không; khối lượng và đơn vị có hợp lí không. Nếu đổi thể tích khí ở đktc, dùng V = 22,4n (L). Bước rà soát ngắn này đặc biệt hữu ích với đề có nhiều thao tác nhưng mỗi thao tác chỉ sai một hệ số là kéo sai toàn bộ kết quả."
         }
       ],
       "questions": [
