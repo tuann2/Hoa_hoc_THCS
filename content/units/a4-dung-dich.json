@@ -638,17 +638,52 @@
         {
           "id": "a4-l4-c1",
           "heading": "Tinh thể ngậm nước",
-          "body": "Nhiều muối kết tinh ở dạng ngậm một số phân tử nước cố định, kí hiệu dạng ...·nH2O.\nVí dụ: CuSO4·5H2O (M = 250), Na2CO3·10H2O (M = 286), FeSO4·7H2O (M = 278)."
+          "body": "Nhiều muối kết tinh ở dạng ngậm một số phân tử nước cố định, kí hiệu dạng ...·nH2O.\nVí dụ: CuSO4·5H2O (M = 250), Na2CO3·10H2O (M = 286), FeSO4·7H2O (M = 278).\n\nDấu chấm không có nghĩa là hỗn hợp tuỳ ý: 1 mol đơn vị công thức X·nH2O luôn đi với 1 mol X và n mol H2O. Nước kết tinh là một phần của tinh thể nên phải tính vào khối lượng mol của tinh thể. Khi hoà tan, X và lượng nước này đều đi vào dung dịch; khi đun, chỉ được coi khối lượng giảm là nước kết tinh nếu đề bài nói rõ muối không bị phân huỷ hay mất chất khác."
         },
         {
           "id": "a4-l4-c2",
           "heading": "Tính khối lượng chất tan và nước từ tinh thể ngậm nước",
-          "body": "Khi hoà tan m gam tinh thể X·nH2O vào nước, khối lượng chất tan khan (X) và khối lượng nước do tinh thể mang vào dung dịch đều tính theo tỉ lệ mol và phân tử khối tương ứng của X và H2O trong công thức."
+          "body": "Khi hoà tan m gam tinh thể X·nH2O vào nước, khối lượng chất tan khan (X) và khối lượng nước do tinh thể mang vào dung dịch đều tính theo tỉ lệ mol và phân tử khối tương ứng của X và H2O trong công thức.\n\nĐặt Mtt = M(X·nH2O). Khi đó mX = m x M(X)/Mtt và mnước kết tinh = m x 18n/Mtt. Hai phần này phải cộng lại đúng bằng m. Nếu đề hỏi nồng độ của X sau khi hoà tan tinh thể, tử số là mX chứ không phải toàn bộ khối lượng tinh thể; còn khối lượng dung dịch thường gồm tinh thể ban đầu cộng với nước đã thêm."
         },
         {
           "id": "a4-l4-c3",
           "heading": "Bài toán kết tinh",
-          "body": "Khi làm nguội hoặc làm bay hơi bớt nước của dung dịch bão hoà, một phần chất tan tách ra (kết tinh) do độ tan giảm. Phần dung dịch còn lại vẫn bão hoà ở điều kiện mới.\nDùng bảo toàn khối lượng chất tan và nước để tính khối lượng chất kết tinh tách ra."
+          "body": "Khi làm nguội hoặc làm bay hơi bớt nước của dung dịch bão hoà, một phần chất tan tách ra (kết tinh) do độ tan giảm. Phần dung dịch còn lại vẫn bão hoà ở điều kiện mới.\nDùng bảo toàn khối lượng chất tan và nước để tính khối lượng chất kết tinh tách ra.\n\nCần phân biệt hai tình huống: nếu tinh thể tách ra là muối khan thì nước chỉ thay đổi khi đề cho bay hơi; nếu tinh thể là X·nH2O thì mỗi mol tinh thể lấy đồng thời X và 18n gam nước ra khỏi dung dịch. Vì vậy không thể chỉ bảo toàn riêng khối lượng chất tan trong mọi bài kết tinh ngậm nước."
+        },
+        {
+          "id": "a4-l4-c4",
+          "heading": "Nâng cao: Quy đổi giữa muối khan và tinh thể ngậm nước",
+          "body": "Với tinh thể X·nH2O, đặt Mtt = M(X) + 18n. Trong m gam tinh thể, phần trăm khối lượng muối khan là M(X)/Mtt x 100%, còn phần trăm nước kết tinh là 18n/Mtt x 100%; hai phần trăm phải có tổng 100%.\n\nMuốn điều chế một dung dịch chứa a gam X từ tinh thể, cần mtt = a x Mtt/M(X) gam tinh thể. Lượng nước kết tinh đã có trong phần tinh thể này không phải nước thêm từ bên ngoài, nhưng vẫn góp vào khối lượng dung dịch. Việc tách riêng hai phần ngay từ đầu giúp tránh nhầm m gam CuSO4·5H2O là m gam CuSO4."
+        },
+        {
+          "id": "a4-l4-c5",
+          "heading": "Nâng cao: Xác định số phân tử nước kết tinh",
+          "body": "Khi đun m0 gam X·nH2O đến khối lượng không đổi và giả sử chỉ mất nước kết tinh, khối lượng nước mất là m0 - mkhan. Tính nX = mkhan/M(X), nH2O = (m0 - mkhan)/18, rồi n = nH2O/nX. Viết công thức với n là số nguyên tối giản.\n\nKhông được vội làm tròn nếu tỉ số lệch xa số nguyên: có thể mẫu chưa mất hết nước, chất rắn đã bị phân huỷ hoặc số liệu có sai số. Trong bài phổ thông, chỉ dùng phương pháp này khi đề khẳng định chất rắn sau đun là X khan và không có chất bay hơi nào khác."
+        },
+        {
+          "id": "a4-l4-c6",
+          "heading": "Nâng cao: Làm nguội dung dịch bão hoà",
+          "body": "Độ tan S g/100 g nước nghĩa là trong 100 g nước có tối đa S g chất tan ở nhiệt độ đang xét. Nếu làm nguội dung dịch bão hoà của cùng một muối từ nhiệt độ có độ tan S1 xuống S2 và không có nước bay hơi, khối lượng nước không đổi. Với mw gam nước, khối lượng muối khan kết tinh là mw x (S1 - S2)/100.\n\nNếu đề cho mdd gam dung dịch bão hoà ban đầu, trước hết tách lượng nước: mw = 100 x mdd/(100 + S1). Sau đó mới dùng công thức trên. Không lấy trực tiếp mdd nhân với độ tan vì độ tan luôn quy về 100 g nước, không phải 100 g dung dịch."
+        },
+        {
+          "id": "a4-l4-c7",
+          "heading": "Nâng cao: Cô đặc ở cùng nhiệt độ",
+          "body": "Khi bay hơi e gam nước từ dung dịch chứa một muối ở nhiệt độ có độ tan S, lượng nước còn lại là mw - e. Nếu dung dịch sau cùng bão hoà và tinh thể tách ra là muối khan, lượng muối còn tan tối đa là S x (mw - e)/100; phần muối vượt quá giá trị đó sẽ kết tinh.\n\nCách làm tổng quát là ghi hai đại lượng riêng: nước giảm vì bay hơi, còn muối không mất theo hơi nước. Nếu sau cô đặc dung dịch chưa bão hoà thì chưa có tinh thể; nếu đã có chất rắn dư, phần dung dịch lỏng luôn có tỉ lệ muối : nước bằng S : 100 ở nhiệt độ đó."
+        },
+        {
+          "id": "a4-l4-c8",
+          "heading": "Nâng cao: Kết tinh dưới dạng X·nH2O",
+          "body": "Khi t mol tinh thể X·nH2O tách ra, dung dịch mất t x M(X) gam X và đồng thời mất 18nt gam nước. Vì cả hai thành phần thay đổi, phải lập hai dòng bảo toàn thay vì áp dụng ngay công thức cho muối khan.\n\nNếu ở trạng thái cuối dung dịch bão hoà với độ tan S2, từ lượng ban đầu mX và mw có phương trình: mX - t x M(X) = S2 x (mw - 18nt)/100. Giải t rồi tính khối lượng tinh thể bằng t x [M(X) + 18n]. Phương trình chỉ có ý nghĩa khi lượng nước còn lại dương và dung dịch mẹ thực sự bão hoà ở nhiệt độ cuối."
+        },
+        {
+          "id": "a4-l4-c9",
+          "heading": "Nâng cao: Kết tinh phân đoạn và độ tinh khiết",
+          "body": "Một hỗn hợp hai muối có thể được tách tương đối nhờ độ tan thay đổi khác nhau theo nhiệt độ. Hoà tan ở nhiệt độ cao, rồi hạ nhiệt có kiểm soát: muối giảm độ tan mạnh hơn thường kết tinh trước, còn muối kia chủ yếu ở lại trong dung dịch mẹ.\n\nỞ mức bài toán, phải tính riêng lượng tối đa của từng muối còn tan theo độ tan của chính muối đó. Chỉ được coi các muối không ảnh hưởng lẫn nhau khi đề bài cho phép hoặc ngầm giả thiết; ngoài thực nghiệm, tinh thể thu được có thể lẫn tạp chất nên thường cần lọc, rửa nhanh bằng lượng nhỏ dung môi lạnh và kết tinh lại để tăng độ tinh khiết."
+        },
+        {
+          "id": "a4-l4-c10",
+          "heading": "Nâng cao: Lập bảng trước – sau và kiểm tra đáp số",
+          "body": "Với bài kết tinh, nên lập bảng gồm nước, chất tan khan và tinh thể. Ở mỗi giai đoạn ghi rõ: ban đầu có bao nhiêu gam nước và chất tan; nước bay hơi bao nhiêu; tinh thể lấy đi bao nhiêu muối khan và bao nhiêu nước. Cách này đặc biệt an toàn khi đề chuyển từ dung dịch bão hoà sang tinh thể ngậm nước.\n\nKiểm tra cuối: khối lượng nước và chất tan còn lại không âm; dung dịch mẹ bão hoà phải thỏa m chất tan/m nước = S/100 tại nhiệt độ cuối; khối lượng tinh thể phải khớp công thức đã cho. Nếu kết quả cho lượng tinh thể âm hoặc dung dịch cuối vượt độ tan mà không có lý do, cần xem lại điều kiện bão hoà hay nhầm giữa muối khan với tinh thể ngậm nước."
         }
       ],
       "questions": [
@@ -820,6 +855,36 @@
           "id": "a4-l5-c3",
           "heading": "Các bước giải bài toán dung dịch tổng hợp",
           "body": "B1. Đổi dữ kiện ra số mol. B2. Viết phương trình hoá học, xác định chất dư/hết.\nB3. Tính khối lượng dung dịch sau phản ứng: mdd sau = tổng khối lượng các dung dịch trộn (+ chất rắn tan thêm nếu có) - khối lượng kết tủa - khối lượng khí thoát ra.\nB4. Tính nồng độ % hoặc CM của chất cần tìm."
+        },
+        {
+          "id": "a4-l5-c4",
+          "heading": "Nâng cao: Bảng số mol trước – phản ứng – sau",
+          "body": "Với các dung dịch có phản ứng, hãy lập bảng số mol cho từng chất hoặc ion phản ứng: ghi số mol ban đầu, lượng biến thiên theo phương trình, rồi suy ra số mol còn lại và số mol sản phẩm. Chất có tỉ số n/hệ số nhỏ hơn là chất hết; chất kia là chất dư.\n\nKhông nên cộng ngay các nồng độ hoặc khối lượng chất tan trước khi biết phản ứng xảy ra đến đâu. Sau phản ứng, dung dịch thường chứa cả chất dư lẫn muối tạo thành; mỗi chất được tính nồng độ riêng. Các ion không tham gia phản ứng vẫn ở trong dung dịch, nên không được tự ý bỏ khỏi kết quả chỉ vì chúng không xuất hiện trong phương trình ion rút gọn."
+        },
+        {
+          "id": "a4-l5-c5",
+          "heading": "Nâng cao: Chất dư và nhiều chất tan trong dung dịch sau trung hoà",
+          "body": "Ví dụ, trộn 100 g dung dịch HCl 7,3% với 100 g dung dịch NaOH 4,0%. Ban đầu có nHCl = 7,3/36,5 = 0,20 mol và nNaOH = 4,0/40 = 0,10 mol. Theo HCl + NaOH → NaCl + H2O, NaOH hết; dung dịch sau chứa 0,10 mol HCl dư (3,65 g) và 0,10 mol NaCl (5,85 g).\n\nKhông có khí hay kết tủa nên khối lượng dung dịch là 200 g. Do đó C%(HCl) = 3,65/200 x 100% = 1,825% và C%(NaCl) = 5,85/200 x 100% = 2,925%. Hai nồng độ này mô tả hai chất khác nhau trong cùng một dung dịch; không cộng chúng rồi gọi là nồng độ của một chất."
+        },
+        {
+          "id": "a4-l5-c6",
+          "heading": "Nâng cao: Kết tủa, dung dịch lọc và chất tan còn lại",
+          "body": "Khi có kết tủa, phải phân biệt hỗn hợp sau phản ứng với dung dịch lọc. Nếu cần nồng độ chất tan, lấy khối lượng dung dịch đã tách kết tủa làm mẫu số. Ví dụ, 100 g dung dịch BaCl2 20,8% có 0,10 mol BaCl2; 100 g dung dịch Na2SO4 14,2% có 0,10 mol Na2SO4. Phản ứng tạo 0,10 mol BaSO4, tức 23,3 g kết tủa.\n\nKhối lượng dung dịch lọc là 200 - 23,3 = 176,7 g. Trong đó có 0,20 mol NaCl, khối lượng 11,7 g; vì vậy C%(NaCl) = 11,7/176,7 x 100% ≈ 6,62%. Chỉ khi đề nói rửa hoặc lấy thêm dung dịch bám trên kết tủa mới được thay đổi khối lượng dung dịch lọc theo dữ kiện đó."
+        },
+        {
+          "id": "a4-l5-c7",
+          "heading": "Nâng cao: Phản ứng sinh khí và liên hệ thể tích khí",
+          "body": "Ở bài toán axit – muối cacbonat, phải tính khí theo phương trình rồi mới trừ khối lượng khí khỏi dung dịch. Chẳng hạn, cho 10,6 g Na2CO3 vào 100 g dung dịch HCl 7,3%: nNa2CO3 = 10,6/106 = 0,10 mol, nHCl = 7,3/36,5 = 0,20 mol. Phản ứng Na2CO3 + 2HCl → 2NaCl + H2O + CO2 xảy ra vừa đủ, tạo 0,10 mol CO2.\n\nKhí CO2 có khối lượng 4,4 g nên khối lượng dung dịch cuối là 100 + 10,6 - 4,4 = 106,2 g. Nếu đề yêu cầu thể tích CO2 ở đktc, dùng V = 0,10 x 22,4 = 2,24 L."
+        },
+        {
+          "id": "a4-l5-c8",
+          "heading": "Nâng cao: Bảo toàn nguyên tố để kiểm tra nhanh",
+          "body": "Sau khi đã xác định phản ứng và chất hết, bảo toàn nguyên tố giúp kiểm tra số mol sản phẩm. Ví dụ, toàn bộ Na trong Na2CO3 ban đầu phải đi vào NaCl nếu HCl vừa đủ; từ 0,10 mol Na2CO3 suy ra 0,20 mol NaCl. Cách kiểm tra này đặc biệt hữu ích khi phương trình tạo nhiều sản phẩm hoặc khi đề yêu cầu nồng độ của muối sau phản ứng.\n\nBảo toàn nguyên tố không thay thế bước xác định chất dư. Nếu một chất phản ứng chưa hết, nguyên tố của nó sẽ được phân bố giữa chất dư và sản phẩm. Vì vậy, hãy lập bảng mol trước – sau trước, rồi dùng bảo toàn để đối chiếu kết quả thay vì suy luận tắt từ đầu."
+        },
+        {
+          "id": "a4-l5-c9",
+          "heading": "Nâng cao: Kim loại tác dụng dung dịch muối",
+          "body": "Khi kim loại phản ứng với dung dịch muối, khối lượng dung dịch không nhất thiết tăng đúng bằng khối lượng kim loại cho vào: một lượng kim loại mới tan vào dung dịch đồng thời có kim loại khác tách thành chất rắn. Ví dụ, 6,5 g Zn phản ứng vừa đủ với 100 g dung dịch CuSO4 16,0%: nZn = 6,5/65 = 0,10 mol và nCuSO4 = 16,0/160 = 0,10 mol.\n\nTheo Zn + CuSO4 → ZnSO4 + Cu, tạo 0,10 mol Cu, tức 6,4 g chất rắn. Khối lượng dung dịch sau khi tách Cu là 100 + 6,5 - 6,4 = 100,1 g; trong đó có 0,10 mol ZnSO4, tương ứng 16,1 g. Vậy C%(ZnSO4) = 16,1/100,1 x 100% ≈ 16,08%. Nếu kim loại ban đầu còn dư và được lấy ra, cũng phải trừ phần rắn dư đó khỏi khối lượng dung dịch."
         }
       ],
       "questions": [
