@@ -211,11 +211,11 @@ commit).
 
 ### A7 · Bazơ (`a7-bazo`)
 
-- [ ] `a7-l1` — Tính chất hoá học chung của bazơ; bazơ tan và không tan
-- [ ] `a7-l2` — Natri hiđroxit NaOH; điều chế
-- [ ] `a7-l3` — Canxi hiđroxit Ca(OH)2; ứng dụng
-- [ ] `a7-l4` — Nâng cao: CO2/SO2 tác dụng với dung dịch kiềm
-- [ ] `a7-l5` — Nâng cao: hiđroxit lưỡng tính Al(OH)3, Zn(OH)2
+- [x] `a7-l1` — Tính chất hoá học chung của bazơ; bazơ tan và không tan
+- [x] `a7-l2` — Natri hiđroxit NaOH; điều chế
+- [x] `a7-l3` — Canxi hiđroxit Ca(OH)2; ứng dụng
+- [x] `a7-l4` — Nâng cao: CO2/SO2 tác dụng với dung dịch kiềm
+- [x] `a7-l5` — Nâng cao: hiđroxit lưỡng tính Al(OH)3, Zn(OH)2
 
 ### A8 · Muối – Phân bón hoá học (`a8-muoi-phan-bon`)
 

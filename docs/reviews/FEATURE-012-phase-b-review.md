@@ -256,11 +256,12 @@ lặp lại lỗi như `a4-l5-c7`).
   mạnh); `c6` màu kết tủa hiđroxit kim loại (Cu(OH)2 xanh, Fe(OH)2
   trắng xanh hoá nâu đỏ ngoài không khí, Al(OH)3 trắng keo); `c9`
   bảo toàn khối lượng khi nhiệt phân hiđroxit.
-- **a7-l2** (9 thẻ, `c1..c10` trừ `c9` có lỗi): đa số ĐÚNG. 1 finding
-  CẦN SỬA (chính tả, không phải hoá học):
-  - **`a7-l2-c9`** — lỗi gõ "bảo **quan** kín" → phải là "bảo **quản**
-    kín". Nội dung hoá học (NaOH không dùng làm chất chuẩn gốc vì
-    hút ẩm/CO2) đúng, chỉ là lỗi chính tả.
+- **a7-l2** (9 thẻ `c1..c10` trừ `c9`... thực tế đủ 9 thẻ `c1..c9`):
+  **ĐÚNG 100%** — Gemini báo 1 finding ở `a7-l2-c9` ("bảo quan kín"
+  → "bảo quản kín") nhưng **đã đối chiếu lại file thật lúc Bước 2: sai,
+  chữ đã viết đúng "bảo quản kín" sẵn** — false positive (giống các
+  trường hợp `a9-l2-c9`, `a10-l5-c9`, `b2-l5-c7`, `b3-l3-c4`,
+  `b3-l4-c8`), không cần sửa.
   - Còn lại ĐÚNG: `c4`/`c5` điện phân dung dịch NaCl có màng ngăn
     (vai trò từng điện cực, vai trò màng ngăn); `c7` tỉ lệ khối
     lượng 71 Cl2 : 2 H2 : 80 NaOH; `c8` ne=2nCl2=2nH2=nNaOH.
