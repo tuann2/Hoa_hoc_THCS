@@ -1204,23 +1204,23 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Muốn điều chế 10 lít rượu 46 do từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 75%, cần dùng ___ kg tinh bột tính theo mắt xích C6H10O5.",
+          "prompt": "Muốn điều chế 10 lít rượu 46 độ từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 75%, cần dùng ___ kg tinh bột tính theo mắt xích C6H10O5.",
           "answer": "10,8",
           "acceptedAnswers": ["10.8"],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
           "placeholder": "Nhập khối lượng tinh bột",
-          "explanation": "B1. Rượu 46 do nghĩa là trong 10 lít dung dịch có 4,6 lít etanol nguyên chất. B2. m etanol cần có = 4600 x 0,8 = 3680 g, suy ra n etanol = 3680/46 = 80 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,75 = 1,2n. B4. Giải 1,2n = 80 được n = 66,666... mol. B5. m tinh bột = 66,666... x 162 = 10800 g = 10,8 kg."
+          "explanation": "B1. Rượu 46 độ nghĩa là trong 10 lít dung dịch có 4,6 lít etanol nguyên chất. B2. m etanol cần có = 4600 x 0,8 = 3680 g, suy ra n etanol = 3680/46 = 80 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,75 = 1,2n. B4. Giải 1,2n = 80 được n = 66,666... mol. B5. m tinh bột = 66,666... x 162 = 10800 g = 10,8 kg."
         },
         {
           "id": "b4-l6-q12",
           "type": "single-choice",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Muốn điều chế 4,6 lít rượu 40 do từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 80%, cần dùng khối lượng tinh bột tính theo mắt xích C6H10O5 là",
+          "prompt": "Muốn điều chế 4,6 lít rượu 40 độ từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 80%, cần dùng khối lượng tinh bột tính theo mắt xích C6H10O5 là",
           "options": ["2,43 kg", "3,24 kg", "4,05 kg", "5,40 kg"],
           "answer": 2,
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
-          "explanation": "B1. Rượu 40 do nghĩa là có 1,84 lít etanol nguyên chất trong 4,6 lít dung dịch. B2. m etanol = 1840 x 0,8 = 1472 g, suy ra n etanol = 1472/46 = 32 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,80 = 1,28n. B4. Giải 1,28n = 32 được n = 25 mol. B5. m tinh bột = 25 x 162 = 4050 g = 4,05 kg."
+          "explanation": "B1. Rượu 40 độ nghĩa là có 1,84 lít etanol nguyên chất trong 4,6 lít dung dịch. B2. m etanol = 1840 x 0,8 = 1472 g, suy ra n etanol = 1472/46 = 32 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,80 = 1,28n. B4. Giải 1,28n = 32 được n = 25 mol. B5. m tinh bột = 25 x 162 = 4050 g = 4,05 kg."
         },
         {
           "id": "b4-l6-q13",
