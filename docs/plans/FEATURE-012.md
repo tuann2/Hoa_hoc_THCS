@@ -219,11 +219,11 @@ commit).
 
 ### A8 · Muối – Phân bón hoá học (`a8-muoi-phan-bon`)
 
-- [ ] `a8-l1` — Tính chất hoá học của muối; phản ứng trao đổi
-- [ ] `a8-l2` — Một số muối quan trọng: NaCl, KNO3, muối cacbonat
-- [ ] `a8-l3` — Muối axit và muối trung hoà; chuyển đổi qua lại
-- [ ] `a8-l4` — Phân bón hoá học
-- [ ] `a8-l5` — Nâng cao: bài toán muối + muối/axit/kiềm
+- [x] `a8-l1` — Tính chất hoá học của muối; phản ứng trao đổi
+- [x] `a8-l2` — Một số muối quan trọng: NaCl, KNO3, muối cacbonat
+- [x] `a8-l3` — Muối axit và muối trung hoà; chuyển đổi qua lại
+- [x] `a8-l4` — Phân bón hoá học
+- [x] `a8-l5` — Nâng cao: bài toán muối + muối/axit/kiềm
 
 ### A9 · Mối quan hệ giữa các hợp chất vô cơ (`a9-moi-quan-he-hop-chat-vo-co`)
 
