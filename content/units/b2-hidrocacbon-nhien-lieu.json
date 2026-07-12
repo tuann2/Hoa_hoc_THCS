@@ -17,17 +17,52 @@
         {
           "id": "b2-l1-c1",
           "heading": "Cấu tạo phân tử metan",
-          "body": "Metan có công thức phân tử CH4. Trong phân tử, nguyên tử C liên kết đơn với 4 nguyên tử H và 4 liên kết này hướng về 4 đỉnh của một hình tứ diện đều.\nVì các liên kết phân bố đều trong không gian nên metan là hiđrocacbon no đơn giản nhất."
+          "body": "Metan có công thức phân tử CH4. Trong phân tử, nguyên tử C liên kết đơn với 4 nguyên tử H và 4 liên kết này hướng về 4 đỉnh của một hình tứ diện đều.\nVì các liên kết phân bố đều trong không gian nên metan là hiđrocacbon no đơn giản nhất. Góc giữa hai liên kết C-H bất kì xấp xỉ 109°28'; không được vẽ CH4 thành phân tử phẳng rồi suy ra các liên kết khác nhau."
         },
         {
           "id": "b2-l1-c2",
           "heading": "Tính chất hoá học tiêu biểu",
-          "body": "Metan cháy trong oxi tạo CO2 và H2O, toả nhiều nhiệt: CH4 + 2O2 -> CO2 + 2H2O.\nMetan còn tham gia phản ứng thế với clo khi có ánh sáng: CH4 + Cl2 -> CH3Cl + HCl.\nPhản ứng thế xảy ra vì nguyên tử H trong metan bị nguyên tử Cl thay thế."
+          "body": "Metan cháy trong oxi tạo CO2 và H2O, toả nhiều nhiệt: CH4 + 2O2 -> CO2 + 2H2O.\nMetan còn tham gia phản ứng thế với clo khi có ánh sáng: CH4 + Cl2 -> CH3Cl + HCl.\nPhản ứng thế xảy ra vì nguyên tử H trong metan bị nguyên tử Cl thay thế. Ánh sáng chỉ là điều kiện khơi mào, không phải chất tham gia; trong tối ở điều kiện thường phản ứng hầu như không diễn ra."
         },
         {
           "id": "b2-l1-c3",
           "heading": "Nguồn gốc và ứng dụng",
-          "body": "Metan là thành phần chính của khí thiên nhiên, khí mỏ dầu và có nhiều trong khí biogas.\nNhờ cháy tốt, metan được dùng làm nhiên liệu đun nấu, phát điện và làm nguyên liệu điều chế một số chất hữu cơ khác.\nKhi sử dụng cần tránh rò rỉ vì metan tạo hỗn hợp dễ nổ với không khí."
+          "body": "Metan là thành phần chính của khí thiên nhiên, khí mỏ dầu và có nhiều trong khí biogas.\nNhờ cháy tốt, metan được dùng làm nhiên liệu đun nấu, phát điện và làm nguyên liệu điều chế một số chất hữu cơ khác.\nKhi sử dụng cần tránh rò rỉ vì metan tạo hỗn hợp dễ nổ với không khí. Trong không khí, hỗn hợp chứa khoảng 5% đến 15% metan theo thể tích có thể bắt cháy, nổ khi gặp nguồn mồi; vì vậy không dùng ngọn lửa để dò chỗ rò."
+        },
+        {
+          "id": "b2-l1-c4",
+          "heading": "Nâng cao: Tính đối xứng và số sản phẩm thế",
+          "body": "Bốn nguyên tử H trong CH4 ở các vị trí hoàn toàn tương đương. Vì thế, dù Cl thay thế nguyên tử H nào thì sản phẩm thế một lần vẫn chỉ là một chất CH3Cl, không có đồng phân vị trí. Khi xét một hiđrocacbon khác, phải đếm các loại H không tương đương để dự đoán số sản phẩm thế một halogen; không thể áp dụng máy móc kết quả của CH4."
+        },
+        {
+          "id": "b2-l1-c5",
+          "heading": "Nâng cao: Phản ứng thế xảy ra theo nhiều nấc",
+          "body": "Phản ứng thế giữa metan và clo cần ánh sáng để bắt đầu và diễn biến qua nhiều nấc nối tiếp. Vì sản phẩm sau mỗi nấc vẫn có thể tiếp tục tham gia phản ứng, sản phẩm thực tế thường là hỗn hợp các chất có mức độ thế khác nhau; các phương trình clo hoá từng lần được trình bày ở thẻ liền sau. Khi làm bài, cần dựa vào dữ kiện để xác định phản ứng dừng ở mức thế nào."
+        },
+        {
+          "id": "b2-l1-c6",
+          "heading": "Nâng cao: Clo hoá nhiều lần",
+          "body": "CH3Cl vẫn còn liên kết C-H nên có thể tiếp tục thế: CH3Cl + Cl2 -> CH2Cl2 + HCl; CH2Cl2 + Cl2 -> CHCl3 + HCl; CHCl3 + Cl2 -> CCl4 + HCl. Vì vậy clo hoá metan thực tế thường cho hỗn hợp CH3Cl, CH2Cl2, CHCl3 và CCl4, chứ không tự dừng hoàn toàn ở CH3Cl. Dùng CH4 dư và kiểm soát thời gian phản ứng chỉ giúp tăng phần sản phẩm thế một lần, không bảo đảm thu duy nhất một chất."
+        },
+        {
+          "id": "b2-l1-c7",
+          "heading": "Nâng cao: Biện luận tỉ lượng phản ứng thế",
+          "body": "Nếu có x nguyên tử H của một phân tử CH4 bị thế bởi Cl, phương trình tổng quát là CH4 + xCl2 -> CH(4-x)Clx + xHCl, với x nhận các giá trị từ 1 đến 4. Do đó số mol Cl2 đã phản ứng luôn bằng số mol HCl tạo thành trong mỗi mức thế. Chỉ khi đề bài quy ước sản phẩm hữu cơ là CH3Cl mới dùng tỉ lệ mol CH4 : Cl2 : CH3Cl : HCl = 1 : 1 : 1 : 1; nếu đề nói chung chung về clo hoá, cần xét khả năng thế tiếp."
+        },
+        {
+          "id": "b2-l1-c8",
+          "heading": "Nâng cao: Cháy đủ và thiếu oxi",
+          "body": "Khi đủ O2, CH4 cháy hoàn toàn tạo CO2 và H2O. Khi thiếu O2, có thể tạo CO hoặc C cùng H2O: 2CH4 + 3O2 -> 2CO + 4H2O; CH4 + O2 -> C + 2H2O. Trong thực tế, sản phẩm cháy thiếu thường là hỗn hợp, nên chỉ được chọn một trong các phương trình trên khi dữ kiện bài toán cho phép. CO rất độc vì gắn bền với hemoglobin, còn C làm xuất hiện muội đen."
+        },
+        {
+          "id": "b2-l1-c9",
+          "heading": "Nâng cao: Nhìn phản ứng cháy theo số oxi hoá",
+          "body": "Trong CH4, H có số oxi hoá +1 nên C có số oxi hoá -4. Trong CO2, C có số oxi hoá +4; như vậy C bị oxi hoá và mỗi mol CH4 nhường 8 mol electron. O trong O2 chuyển từ 0 xuống -2 nên bị khử; 2 mol O2 nhận vừa đủ 8 mol electron. Cách kiểm tra này giải thích vì sao phản ứng cháy đồng thời là phản ứng oxi hoá - khử."
+        },
+        {
+          "id": "b2-l1-c10",
+          "heading": "Nâng cao: Tính chất vật lí và thu khí",
+          "body": "Metan nguyên chất không màu, không mùi, rất ít tan trong nước và có M = 16 g/mol, nhỏ hơn khối lượng mol trung bình của không khí (xấp xỉ 29 g/mol). Vì vậy CH4 nhẹ hơn không khí, có thể thu bằng cách đẩy không khí với bình úp hoặc bằng cách đẩy nước. Mùi cảnh báo của khí dùng dân dụng là do chất tạo mùi được thêm vào, không phải mùi vốn có của CH4."
         }
       ],
       "questions": [
@@ -210,12 +245,47 @@
         {
           "id": "b2-l2-c2",
           "heading": "Phản ứng cộng đặc trưng",
-          "body": "Etilen làm mất màu dung dịch brom do xảy ra phản ứng cộng: C2H4 + Br2 -> C2H4Br2.\nEtilen cũng cộng hiđro: C2H4 + H2 -> C2H6 và cộng hiđro clorua: C2H4 + HCl -> C2H5Cl.\nCác phản ứng này đều xảy ra tại liên kết đôi C=C."
+          "body": "Etilen làm mất màu dung dịch brom do xảy ra phản ứng cộng: C2H4 + Br2 -> C2H4Br2.\nEtilen cũng cộng hiđro: C2H4 + H2 -> C2H6 và cộng hiđro clorua: C2H4 + HCl -> C2H5Cl.\nCác phản ứng này đều xảy ra tại liên kết đôi C=C.\nVì mỗi phân tử etilen chỉ có một liên kết đôi nên khi phản ứng hoàn toàn, 1 mol C2H4 cộng vừa đủ 1 mol H2, HCl hoặc Br2 tương ứng. Phản ứng cộng H2 cần đun nóng và chất xúc tác như Ni; còn phản ứng với brom xảy ra dễ hơn ở điều kiện thường."
         },
         {
           "id": "b2-l2-c3",
           "heading": "Phản ứng trùng hợp",
-          "body": "Nhiều phân tử etilen có thể cộng hợp liên tiếp tạo polietilen (PE): nC2H4 -> (-CH2-CH2-)n.\nPE là chất dẻo rất thông dụng để sản xuất túi nilon, chai lọ, vỏ bọc dây điện và nhiều đồ gia dụng.\nPhản ứng trùng hợp làm mất liên kết đôi của các phân tử etilen ban đầu."
+          "body": "Nhiều phân tử etilen có thể cộng hợp liên tiếp tạo polietilen (PE): nC2H4 -> (-CH2-CH2-)n.\nPE là chất dẻo rất thông dụng để sản xuất túi nilon, chai lọ, vỏ bọc dây điện và nhiều đồ gia dụng.\nPhản ứng trùng hợp làm mất liên kết đôi của các phân tử etilen ban đầu.\nĐây là phản ứng cộng hợp nên không tách ra phân tử nhỏ nào. Vì vậy, khối lượng PE bằng khối lượng etilen thực sự đã tham gia phản ứng; nếu hiệu suất là H% thì mPE = mC2H4 ban đầu x H/100."
+        },
+        {
+          "id": "b2-l2-c4",
+          "heading": "Nâng cao: Bản chất liên kết đôi C=C",
+          "body": "Liên kết đôi giữa hai nguyên tử C gồm một liên kết bền và một liên kết kém bền hơn. Trong phản ứng cộng, liên kết kém bền bị phá vỡ, còn liên kết C-C bền vẫn được giữ lại; vì thế C=C chuyển thành C-C. Đặc điểm này giải thích vì sao etilen dễ tham gia phản ứng cộng."
+        },
+        {
+          "id": "b2-l2-c5",
+          "heading": "Nâng cao: Phép thử brom và cách kết luận",
+          "body": "Dung dịch brom có màu nâu đỏ bị nhạt rồi mất màu khi Br2 bị etilen tiêu thụ trong phản ứng cộng. Phép thử này phân biệt được etilen với metan hoặc etan nếu các khí khác không có chất làm mất màu brom.\nKhông được kết luận chắc chắn là etilen chỉ từ hiện tượng mất màu brom: axetilen và nhiều hiđrocacbon không no khác cũng có thể cho hiện tượng này. Muốn nhận biết một chất trong hỗn hợp phải kết hợp thêm dữ kiện, chẳng hạn thành phần hỗn hợp, phản ứng cháy hoặc thuốc thử khác."
+        },
+        {
+          "id": "b2-l2-c6",
+          "heading": "Nâng cao: Oxi hoá nhẹ bằng KMnO4",
+          "body": "Ở điều kiện lạnh, dung dịch KMnO4 loãng có thể oxi hoá etilen thành etilen glicol HO-CH2-CH2-OH; màu tím của KMnO4 mất đi và thường xuất hiện kết tủa nâu MnO2: 3C2H4 + 2KMnO4 + 4H2O -> 3C2H6O2 + 2MnO2 + 2KOH.\nĐây cũng là dấu hiệu của liên kết không no, nhưng không đặc hiệu riêng cho etilen. Khi đề bài nêu thuốc tím bị mất màu hoặc có MnO2, cần chú ý điều kiện phản ứng và không nhầm với phản ứng cháy."
+        },
+        {
+          "id": "b2-l2-c7",
+          "heading": "Nâng cao: Hiđrat hoá etilen và chuỗi chuyển hoá",
+          "body": "Etilen có thể cộng nước để tạo rượu etylic: C2H4 + H2O -> C2H5OH. Phản ứng cần điều kiện công nghiệp thích hợp như xúc tác axit, nhiệt độ và áp suất, nên không xảy ra đáng kể chỉ vì sục etilen vào nước.\nPhản ứng này tạo mối liên hệ quan trọng: etilen -> rượu etylic -> axit axetic. Khi viết chuỗi chuyển hoá, phải ghi đúng chất tham gia và điều kiện cần thiết, không thay mũi tên phản ứng bằng dấu bằng."
+        },
+        {
+          "id": "b2-l2-c8",
+          "heading": "Nâng cao: Công thức chung và giới hạn suy luận",
+          "body": "Anken mạch hở chỉ có một liên kết đôi có công thức chung CnH2n, với n từ 2 trở lên; etilen là trường hợp n = 2. So với ankan cùng số nguyên tử C, anken ít hơn 2 nguyên tử H vì có một liên kết đôi.\nTuy nhiên chỉ từ công thức CnH2n chưa khẳng định chất là anken: một xicloankan cũng có thể có cùng công thức phân tử. Muốn kết luận phải dựa vào công thức cấu tạo hoặc tính chất hoá học; etilen làm mất màu brom vì có C=C, còn xicloankan no thông thường không phản ứng cộng brom ở điều kiện thường."
+        },
+        {
+          "id": "b2-l2-c9",
+          "heading": "Nâng cao: Monome, mắt xích và độ trùng hợp",
+          "body": "Etilen là monome, còn đoạn lặp -CH2-CH2- là mắt xích của PE. Kí hiệu n trong (-CH2-CH2-)n là số mắt xích trong một mạch, gọi là độ trùng hợp; n không phải là hệ số cố định của một phương trình thông thường.\nCác mạch PE tạo thành thường có độ dài khác nhau nên mẫu PE là hỗn hợp các phân tử có khối lượng mol không hoàn toàn giống nhau. Vì phản ứng trùng hợp cộng không tạo chất phụ, khi tính khối lượng chỉ cần tính lượng monome đã phản ứng, không được nhân thêm hay bớt khối lượng vì n."
+        },
+        {
+          "id": "b2-l2-c10",
+          "heading": "Nâng cao: Tỉ lượng phản ứng cháy của etilen",
+          "body": "Etilen cháy hoàn toàn theo phương trình: C2H4 + 3O2 -> 2CO2 + 2H2O. Do đó 1 mol C2H4 cần 3 mol O2, tạo 2 mol CO2 và 2 mol H2O.\nNếu mọi chất khí được đo ở cùng nhiệt độ và áp suất, tỉ lệ thể tích cũng là 1 : 3 : 2 : 2. Riêng với etilen, số mol CO2 bằng số mol H2O; dấu hiệu này hữu ích khi kiểm tra kết quả bài toán đốt cháy, nhưng với hỗn hợp phải xét thành phần từng chất trước khi kết luận."
         }
       ],
       "questions": [
@@ -389,17 +459,52 @@
         {
           "id": "b2-l3-c1",
           "heading": "Cấu tạo và tính chất chung",
-          "body": "Axetilen có công thức phân tử C2H2, công thức cấu tạo thu gọn có thể viết là CH≡CH.\nGiữa hai nguyên tử C có một liên kết ba nên axetilen là hiđrocacbon không no mạnh hơn etilen.\nAxetilen là chất khí, ít tan trong nước và cháy cho ngọn lửa sáng."
+          "body": "Axetilen có công thức phân tử C2H2, công thức cấu tạo thu gọn có thể viết là CH≡CH.\nGiữa hai nguyên tử C có một liên kết ba gồm một liên kết bền và hai liên kết kém bền; vì có hai liên kết kém bền, axetilen là hiđrocacbon không no và có thể tham gia phản ứng cộng.\nAxetilen là chất khí, ít tan trong nước và cháy cho ngọn lửa sáng."
         },
         {
           "id": "b2-l3-c2",
           "heading": "Phản ứng cộng của axetilen",
-          "body": "Axetilen làm mất màu dung dịch brom. Nếu brom không dư: C2H2 + Br2 -> C2H2Br2.\nNếu brom dư, phản ứng tiếp tục: C2H2 + 2Br2 -> C2H2Br4.\nAxetilen cũng cộng hiđro theo từng bước và có thể cộng tối đa 2 mol H2 để tạo etan."
+          "body": "Axetilen làm mất màu dung dịch brom. Nếu brom không dư: C2H2 + Br2 -> C2H2Br2.\nNếu brom dư, phản ứng tiếp tục: C2H2 + 2Br2 -> C2H2Br4.\nAxetilen cũng cộng hiđro theo từng bước và có thể cộng tối đa 2 mol H2 để tạo etan. Cộng H2 cần đun nóng và chất xúc tác như Ni, còn brom cộng dễ hơn ở điều kiện thường."
         },
         {
           "id": "b2-l3-c3",
           "heading": "Điều chế axetilen",
-          "body": "Trong phòng thí nghiệm, axetilen thường được điều chế bằng cách cho canxi cacbua tác dụng với nước:\nCaC2 + 2H2O -> C2H2 + Ca(OH)2.\nPhản ứng này tạo ra khí axetilen và chất rắn Ca(OH)2."
+          "body": "Trong phòng thí nghiệm, axetilen thường được điều chế bằng cách cho canxi cacbua tác dụng với nước:\nCaC2 + 2H2O -> C2H2 + Ca(OH)2.\nPhản ứng này tạo ra khí axetilen và chất rắn Ca(OH)2. Phản ứng toả nhiệt và giải phóng khí nhanh, nên nước phải được cho vào có kiểm soát; không đốt khí khi chưa đẩy hết không khí trong dụng cụ."
+        },
+        {
+          "id": "b2-l3-c4",
+          "heading": "Nâng cao: Dạng hình học và độ không no",
+          "body": "Hai nguyên tử C trong CH≡CH và hai nguyên tử H nằm thẳng hàng, nên góc H-C-C là 180°. Với ankin mạch hở chỉ có một liên kết ba, công thức chung là CnH2n-2 (n từ 2 trở lên). So với ankan cùng số C, chất này ít hơn 4 H vì liên kết ba tương ứng với hai mức độ không no. Tuy vậy, chỉ từ công thức CnH2n-2 chưa thể khẳng định chất là ankin: một đien mạch hở cũng có thể có công thức đó."
+        },
+        {
+          "id": "b2-l3-c5",
+          "heading": "Nâng cao: Hai nấc cộng và cách tính nhanh",
+          "body": "Liên kết ba có hai liên kết kém bền nên phản ứng cộng xảy ra tối đa qua hai nấc. Với H2: C2H2 + H2 -> C2H4, rồi C2H4 + H2 -> C2H6. Vì vậy 1 mol C2H2 cộng tối đa 2 mol H2 hoặc 2 mol Br2. Nếu đề cho lượng thuốc thử chỉ đủ 1 mol trên 1 mol C2H2 thì chỉ dùng tỉ lệ 1 : 1; nếu thuốc thử không đủ hoặc phản ứng chưa hoàn toàn, sản phẩm có thể là hỗn hợp và không được tự ý coi là cộng hoàn toàn."
+        },
+        {
+          "id": "b2-l3-c6",
+          "heading": "Nâng cao: Cộng HCl và cộng nước",
+          "body": "Axetilen cộng một mol HCl tạo vinyl clorua CH2=CHCl; chất này có thể trùng hợp thành PVC: nCH2=CHCl -> (-CH2-CHCl-)n. Đây là phản ứng cộng nên liên kết ba mới chỉ chuyển thành liên kết đôi. Trong điều kiện xúc tác axit thích hợp, C2H2 cộng H2O rồi sản phẩm ban đầu nhanh chóng chuyển thành anđehit axetic CH3CHO: C2H2 + H2O -> CH3CHO. Không được viết sản phẩm của phản ứng cộng nước là etan."
+        },
+        {
+          "id": "b2-l3-c7",
+          "heading": "Nâng cao: Trime hoá tạo benzen",
+          "body": "Khi đun nóng có chất xúc tác thích hợp, ba phân tử axetilen có thể kết hợp tạo một phân tử benzen: 3C2H2 -> C6H6. Phản ứng này gọi là trime hoá vì ba phân tử cùng loại ghép lại, khác với phản ứng trùng hợp tạo mạch dài có số mắt xích biến thiên. Nó là một mắt xích hữu ích trong chuỗi chuyển hoá từ axetilen sang benzen, nhưng không xảy ra chỉ bằng cách để axetilen ở điều kiện thường."
+        },
+        {
+          "id": "b2-l3-c8",
+          "heading": "Nâng cao: Nhận biết H linh động ở đầu mạch",
+          "body": "Hai H trong HC≡CH gắn trực tiếp với C của liên kết ba nên linh động hơn H của ankan và anken. Axetilen phản ứng với dung dịch AgNO3 trong NH3 tạo kết tủa bạc axetylua: C2H2 + 2AgNO3 + 2NH3 -> Ag2C2↓ + 2NH4NO3. Phép thử này nhận biết ankin có H ở đầu liên kết ba; ankin có liên kết ba ở giữa mạch không có H kiểu đó nên không cho kết quả tương tự. Bạc axetylua khô rất dễ nổ, vì vậy đây chỉ là kiến thức nhận biết và không tự thực hiện ngoài phòng thí nghiệm được kiểm soát."
+        },
+        {
+          "id": "b2-l3-c9",
+          "heading": "Nâng cao: Nguồn CaC2 và độ tinh khiết của khí",
+          "body": "Canxi cacbua được sản xuất ở nhiệt độ rất cao trong lò điện: CaO + 3C -> CaC2 + CO. Vì vậy CaC2 là nguyên liệu công nghiệp quan trọng để tạo axetilen khi thuỷ phân, chứ không phải một hỗn hợp đơn giản của Ca và than. Mẫu CaC2 kỹ thuật có thể chứa tạp chất, nên khí thu được có thể lẫn khí có mùi; trong thí nghiệm cần làm sạch khí theo quy trình của giáo viên trước khi khảo sát tính chất."
+        },
+        {
+          "id": "b2-l3-c10",
+          "heading": "Nâng cao: Cháy, hàn cắt và an toàn",
+          "body": "Axetilen cháy hoàn toàn: 2C2H2 + 5O2 -> 4CO2 + 2H2O. Do đó ở cùng nhiệt độ và áp suất, 2 thể tích C2H2 cần 5 thể tích O2; cháy trong không khí thường dễ thiếu O2 nên có ngọn lửa sáng và muội. Trộn axetilen với O2 theo thiết bị chuyên dụng tạo ngọn lửa rất nóng, dùng trong hàn cắt kim loại. Axetilen rất dễ cháy nổ; khí thương phẩm được chứa hoà tan trong axeton ở bình chuyên dụng, không được nén hay sử dụng tuỳ tiện."
         }
       ],
       "questions": [
@@ -564,17 +669,52 @@
         {
           "id": "b2-l4-c1",
           "heading": "Cấu tạo đặc biệt của benzen",
-          "body": "Benzen có công thức phân tử C6H6. Sáu nguyên tử C liên kết thành một vòng 6 cạnh khép kín.\nTrong chương trình THCS, benzen được mô tả là hiđrocacbon thơm có cấu tạo vòng bền hơn so với các hiđrocacbon mạch hở không no.\nVì vậy benzen có tính chất hoá học riêng, không giống hoàn toàn etilen hay axetilen."
+          "body": "Benzen có công thức phân tử C6H6. Sáu nguyên tử C liên kết thành một vòng 6 cạnh khép kín.\nTrong chương trình THCS, benzen được mô tả là hiđrocacbon thơm có cấu tạo vòng bền hơn so với các hiđrocacbon mạch hở không no.\nVì vậy benzen có tính chất hoá học riêng, không giống hoàn toàn etilen hay axetilen.\nCông thức thường vẽ ba liên kết đôi xen kẽ chỉ là một cách biểu diễn. Thực tế, sáu liên kết C-C trong vòng có độ dài bằng nhau và electron phân bố đều trên toàn vòng, nhờ đó vòng benzen bền."
         },
         {
           "id": "b2-l4-c2",
           "heading": "Phản ứng thế với brom",
-          "body": "Benzen phản ứng với brom theo kiểu thế khi có bột sắt hoặc Fe làm xúc tác:\nC6H6 + Br2 -> C6H5Br + HBr.\nKhác với etilen, benzen không làm mất màu dung dịch brom ở điều kiện thường nếu không có xúc tác thích hợp."
+          "body": "Benzen phản ứng với brom theo kiểu thế khi có bột sắt hoặc Fe làm xúc tác:\nC6H6 + Br2 -> C6H5Br + HBr.\nKhác với etilen, benzen không làm mất màu dung dịch brom ở điều kiện thường nếu không có xúc tác thích hợp.\nTrong phản ứng, một H trên vòng bị thay bằng Br. Phản ứng thế được ưu tiên hơn phản ứng cộng vì vẫn giữ nguyên được vòng bền của benzen."
         },
         {
           "id": "b2-l4-c3",
           "heading": "Phản ứng cộng khó xảy ra hơn",
-          "body": "Benzen có thể cộng hiđro tạo xiclohexan: C6H6 + 3H2 -> C6H12.\nTuy nhiên phản ứng này khó xảy ra hơn phản ứng cộng của etilen vì vòng benzen bền hơn.\nBenzen là chất lỏng không màu, độc, cần hạn chế tiếp xúc trực tiếp."
+          "body": "Benzen có thể cộng hiđro tạo xiclohexan: C6H6 + 3H2 -> C6H12.\nTuy nhiên phản ứng này khó xảy ra hơn phản ứng cộng của etilen vì sáu liên kết C-C dài bằng nhau làm vòng benzen bền. Phản ứng cần xúc tác kim loại như Ni hoặc Pt cùng nhiệt độ và áp suất cao; phản ứng cộng làm mất cấu trúc vòng bền đó.\nBenzen là chất lỏng không màu, độc, cần hạn chế tiếp xúc trực tiếp. Hơi benzen cũng độc và benzen được xếp là chất gây ung thư, vì vậy không được ngửi trực tiếp hay tự tiến hành thí nghiệm với benzen."
+        },
+        {
+          "id": "b2-l4-c4",
+          "heading": "Nâng cao: Độ bất bão hoà và công thức dãy đồng đẳng",
+          "body": "Với hiđrocacbon CxHy, độ bất bão hoà I = (2x + 2 - y)/2. Với C6H6, I = 4: một đơn vị ứng với vòng và ba đơn vị còn lại ứng với hệ pi của vòng benzen. Kết quả này cho biết phân tử thiếu 8 H so với ankan mạch hở C6H14, nhưng không được hiểu là benzen chứa ba liên kết đôi cố định tách biệt.\nAnkylbenzen chỉ có một vòng benzen, không có thêm vòng hay liên kết pi khác, có công thức chung CnH2n-6, n từ 6 trở lên. Chẳng hạn C6H6 là benzen, C7H8 là metylbenzen. Công thức chung chỉ dùng khi các điều kiện cấu tạo nêu trên được thỏa mãn."
+        },
+        {
+          "id": "b2-l4-c5",
+          "heading": "Nâng cao: Tỉ lượng phản ứng thế brom",
+          "body": "Ở phản ứng thế một lần, tỉ lệ mol C6H6 : Br2 : C6H5Br : HBr là 1 : 1 : 1 : 1. Vì vậy phải so sánh nC6H6 và nBr2 để tìm chất giới hạn trước khi tính lượng brombenzen hoặc HBr.\nM(C6H6) = 78 g/mol, M(Br2) = 160 g/mol và M(C6H5Br) = 157 g/mol. Nếu hiệu suất phản ứng là H%, số mol C6H5Br thực tế bằng số mol sản phẩm lí thuyết nhân H/100; không được lấy khối lượng benzen ban đầu nhân trực tiếp với H/100."
+        },
+        {
+          "id": "b2-l4-c6",
+          "heading": "Nâng cao: Nitro hoá benzen",
+          "body": "Một phản ứng thế quan trọng khác là nitro hoá: C6H6 + HNO3 -> C6H5NO2 + H2O, dùng H2SO4 đặc làm xúc tác và đun nóng thích hợp. Sản phẩm C6H5NO2 là nitrobenzen.\nKhi giải bài chuỗi phản ứng, cần nhận ra đây là phản ứng thế: nhóm NO2 thay cho một H của vòng, nên khung C6 vẫn được giữ nguyên. Không cộng cả HNO3 vào vòng rồi viết sản phẩm có nhiều hơn 6 H."
+        },
+        {
+          "id": "b2-l4-c7",
+          "heading": "Nâng cao: Đồng phân vị trí trên vòng benzen",
+          "body": "Trong benzen chưa thế, sáu H hoàn toàn tương đương nên thế một H chỉ cho một sản phẩm duy nhất, ví dụ chỉ có một brombenzen C6H5Br. Khi vòng đã có một nhóm thế, nguyên tử mới có thể vào ba vị trí khác nhau: 1,2- gọi là ortho (o-), 1,3- gọi là meta (m-), 1,4- gọi là para (p-).\nDo đó chất có hai nhóm thế khác loại trên vòng thường có tối đa ba đồng phân vị trí. Với các nhóm như CH3, phản ứng thế tiếp trên vòng thường ưu tiên vị trí ortho và para hơn meta; đây là quy tắc định hướng hữu ích, còn tỉ lệ chính xác của các sản phẩm phụ thuộc điều kiện phản ứng."
+        },
+        {
+          "id": "b2-l4-c8",
+          "heading": "Nâng cao: Cộng halogen trong điều kiện đặc biệt",
+          "body": "Không nên phát biểu rằng benzen hoàn toàn không thể cộng. Dưới ánh sáng mạnh, benzen có thể cộng clo: C6H6 + 3Cl2 -> C6H6Cl6. Phản ứng này phá vỡ tính bền thơm của vòng nên khác hẳn phản ứng thế Br2 có Fe.\nVì thế, khi gặp halogen phải đọc kĩ điều kiện: Br2 với Fe dẫn đến thế trên vòng; Cl2 dưới ánh sáng có thể dẫn đến cộng. Không suy luận chỉ từ tên chất phản ứng mà bỏ qua xúc tác, ánh sáng và nhiệt độ."
+        },
+        {
+          "id": "b2-l4-c9",
+          "heading": "Nâng cao: Bài toán đốt cháy benzen",
+          "body": "Phương trình cháy hoàn toàn của benzen là 2C6H6 + 15O2 -> 12CO2 + 6H2O. Vì vậy 1 mol C6H6 cần 7,5 mol O2, tạo 6 mol CO2 và 3 mol H2O; tỉ lệ nCO2 : nH2O luôn là 2 : 1.\nNếu đốt cháy n mol benzen thì mCO2 = 264n g và mH2O = 54n g. Khi thể tích khí được cho ở đktc, phải đổi theo V = 22,4n (L), rồi mới dùng tỉ lệ phương trình; không áp dụng công thức thể tích mol của điều kiện khác."
+        },
+        {
+          "id": "b2-l4-c10",
+          "heading": "Nâng cao: Nhận biết và giới hạn của phép thử",
+          "body": "Nước brom có thể giúp phân biệt benzen với etilen hoặc axetilen ở điều kiện thường: các hiđrocacbon mạch hở không no làm brom mất màu do phản ứng cộng, còn benzen không phản ứng nếu không có xúc tác. Tuy nhiên benzen có thể hòa tan brom làm màu chuyển sang lớp benzen; đó là hiện tượng hòa tan, không phải brom đã bị tiêu thụ.\nDung dịch KMnO4 loãng, lạnh cũng thường bị etilen hoặc axetilen làm mất màu, còn vòng benzen không phản ứng trong phép thử thông thường. Kết luận nhận biết chỉ có giá trị khi mẫu không lẫn các chất khử hoặc hiđrocacbon không no khác."
         }
       ],
       "questions": [
@@ -742,17 +882,57 @@
         {
           "id": "b2-l5-c1",
           "heading": "Dầu mỏ và chưng cất phân đoạn",
-          "body": "Dầu mỏ là hỗn hợp rất nhiều hiđrocacbon ở thể lỏng, sánh, thường có màu nâu đen.\nNgười ta tách dầu mỏ thành các phân đoạn nhờ chưng cất phân đoạn dựa vào sự khác nhau về nhiệt độ sôi.\nMột số sản phẩm chính là xăng, dầu hoả, dầu diesel, mazut..."
+          "body": "Dầu mỏ là hỗn hợp rất nhiều hiđrocacbon ở thể lỏng, sánh, thường có màu nâu đen.\nNgười ta tách dầu mỏ thành các phân đoạn nhờ chưng cất phân đoạn dựa vào sự khác nhau về nhiệt độ sôi.\nMột số sản phẩm chính là xăng, dầu hoả, dầu diesel, mazut... Mỗi phân đoạn vẫn là hỗn hợp nhiều chất có nhiệt độ sôi gần nhau, không phải một chất tinh khiết duy nhất."
         },
         {
           "id": "b2-l5-c2",
           "heading": "Khí thiên nhiên và nhiên liệu khí",
-          "body": "Khí thiên nhiên là hỗn hợp khí, trong đó metan CH4 chiếm thành phần chủ yếu.\nNgoài ra còn có một lượng nhỏ etan, propan, butan... Tuỳ mục đích sử dụng, khí có thể được nén hoặc hoá lỏng.\nMetan cháy toả nhiều nhiệt nên khí thiên nhiên là nguồn nhiên liệu quan trọng."
+          "body": "Khí thiên nhiên là hỗn hợp khí, trong đó metan CH4 chiếm thành phần chủ yếu.\nNgoài ra còn có một lượng nhỏ etan, propan, butan... Tuỳ mục đích sử dụng, khí có thể được nén hoặc hoá lỏng.\nMetan cháy toả nhiều nhiệt nên khí thiên nhiên là nguồn nhiên liệu quan trọng. Khí khai thác từ mỏ cần được xử lí trước khi dùng vì có thể lẫn hơi nước và các khí không mong muốn."
         },
         {
           "id": "b2-l5-c3",
           "heading": "Sử dụng nhiên liệu hiệu quả",
-          "body": "Nhiên liệu gồm than, củi, xăng, dầu, khí đốt... Khi cháy, nhiên liệu giải phóng nhiệt để đun nấu, chạy động cơ, phát điện.\nMuốn sử dụng nhiên liệu hiệu quả cần cung cấp đủ không khí, dùng thiết bị phù hợp, hạn chế thất thoát nhiệt và giảm khói bụi.\nĐốt nhiên liệu không hoàn toàn vừa lãng phí vừa gây ô nhiễm môi trường."
+          "body": "Nhiên liệu gồm than, củi, xăng, dầu, khí đốt... Khi cháy, nhiên liệu giải phóng nhiệt để đun nấu, chạy động cơ, phát điện.\nMuốn sử dụng nhiên liệu hiệu quả cần cung cấp đủ không khí, dùng thiết bị phù hợp, hạn chế thất thoát nhiệt và giảm khói bụi.\nĐốt nhiên liệu không hoàn toàn vừa lãng phí vừa gây ô nhiễm môi trường. Một quá trình cháy tốt cần đủ oxi, nhiên liệu được trộn đều với không khí và nhiệt độ đủ để duy trì sự cháy."
+        },
+        {
+          "id": "b2-l5-c4",
+          "heading": "Nâng cao: Thành phần và nguồn gốc của dầu mỏ",
+          "body": "Dầu mỏ không chỉ chứa ankan mà còn có xicloankan, hiđrocacbon thơm và một lượng nhỏ hợp chất chứa S, N, O, nước, muối khoáng. Thành phần này thay đổi theo mỏ dầu, vì vậy dầu thô không có một công thức hoá học xác định.\nDầu mỏ và khí thiên nhiên được hình thành rất chậm từ xác sinh vật bị chôn vùi, chịu tác dụng lâu dài của nhiệt độ và áp suất trong lòng đất. Chúng là nhiên liệu hoá thạch, không thể tái tạo trong thang thời gian của con người."
+        },
+        {
+          "id": "b2-l5-c5",
+          "heading": "Nâng cao: Bản chất của chưng cất phân đoạn",
+          "body": "Trong tháp chưng cất, dầu thô được đun nóng để một phần hoá hơi. Hơi của các chất dễ sôi đi lên cao hơn rồi ngưng tụ ở các vị trí khác nhau; phần có nhiệt độ sôi cao hơn ở thấp hơn. Vì thế, phân đoạn nhẹ thường thu ở phía trên, còn phân đoạn nặng ở gần đáy.\nChưng cất phân đoạn chỉ là sự tách vật lí dựa trên nhiệt độ sôi, không làm thay đổi công thức phân tử của các hiđrocacbon. Không được nhầm nó với cracking, là quá trình có biến đổi hoá học."
+        },
+        {
+          "id": "b2-l5-c6",
+          "heading": "Nâng cao: Cracking và reforming dầu mỏ",
+          "body": "Cracking bẻ gãy các phân tử hiđrocacbon mạch dài của phân đoạn nặng thành các phân tử nhỏ hơn, thường tạo đồng thời ankan và anken. Ví dụ minh hoạ: C10H22 -> C5H12 + C5H10. Quá trình cần nhiệt độ cao và thường có xúc tác, giúp tăng lượng nhiên liệu nhẹ và tạo nguyên liệu cho công nghiệp hoá dầu.\nReforming chủ yếu sắp xếp lại cấu tạo của hiđrocacbon nhẹ để tạo các cấu tử xăng chống kích nổ tốt hơn. Cả cracking lẫn reforming đều khác với chưng cất vì đã làm thay đổi phân tử ban đầu."
+        },
+        {
+          "id": "b2-l5-c7",
+          "heading": "Nâng cao: Chỉ số octan của xăng",
+          "body": "Chỉ số octan biểu thị khả năng chống tự bốc cháy sớm của xăng trong động cơ nén; chỉ số càng lớn thì xăng càng chống kích nổ tốt. Quy ước thang so sánh dùng 2,2,4-trimetylpentan (isooctan) có chỉ số 100 và n-heptan có chỉ số 0.\nChỉ số octan không phải là phần trăm octan có trong xăng, cũng không trực tiếp nói xăng toả nhiều nhiệt hơn. Cần dùng loại xăng có chỉ số phù hợp khuyến cáo của động cơ; xăng chỉ số cao không mặc nhiên làm mọi động cơ tiết kiệm hơn."
+        },
+        {
+          "id": "b2-l5-c8",
+          "heading": "Nâng cao: Làm sạch và thu hồi khí thiên nhiên",
+          "body": "Khí vừa khai thác có thể chứa CH4 cùng etan, propan, butan, hơi nước, CO2, N2 và đôi khi H2S. H2S độc, có tính ăn mòn; CO2 và hơi nước cũng cần được loại bớt để khí đạt yêu cầu vận chuyển và sử dụng.\nSau xử lí, phần CH4 giàu hơn được đưa vào đường ống hoặc dùng làm nhiên liệu. Các hiđrocacbon C2-C5 tách ra không phải chất thải: chúng có thể là nhiên liệu hoặc nguyên liệu hoá dầu. Khí đi kèm mỏ dầu gọi là khí đồng hành, không nên đồng nhất hoàn toàn với khí thiên nhiên đã xử lí tới tiêu chuẩn tiêu dùng."
+        },
+        {
+          "id": "b2-l5-c9",
+          "heading": "Nâng cao: Phân biệt LPG, CNG, LNG và biogas",
+          "body": "LPG (khí dầu mỏ hoá lỏng) chủ yếu là propan và butan, được hoá lỏng dưới áp suất để chứa trong bình. CNG là khí thiên nhiên, chủ yếu CH4, được nén ở áp suất cao; LNG là khí thiên nhiên được làm lạnh sâu thành chất lỏng. Các cách nén hay hoá lỏng này không tạo chất mới.\nBiogas sinh ra khi chất hữu cơ phân huỷ yếm khí, thường gồm CH4 và CO2, có thể lẫn H2S và hơi nước. Hàm lượng CH4 của biogas thay đổi nên không được coi biogas là CH4 tinh khiết hoặc tự ý áp dụng thành phần cố định nếu đề bài không cho."
+        },
+        {
+          "id": "b2-l5-c10",
+          "heading": "Nâng cao: Nguồn gốc các chất ô nhiễm khi đốt nhiên liệu",
+          "body": "Khi hiđrocacbon cháy hoàn toàn, sản phẩm chính là CO2 và H2O. Thiếu oxi hoặc trộn kém có thể sinh CO và muội C; CO rất độc, còn bụi muội gây hại hô hấp. CO2 không phải khí độc cấp tính nhưng là khí nhà kính.\nLưu huỳnh có trong nhiên liệu có thể tạo SO2; ở nhiệt độ cháy cao, N2 trong không khí có thể tạo các oxit nitơ NOx. Vì vậy giảm ô nhiễm không chỉ là tăng không khí: còn cần dùng nhiên liệu ít S, bảo dưỡng thiết bị, xử lí khí thải và tránh rò rỉ CH4."
+        },
+        {
+          "id": "b2-l5-c11",
+          "heading": "Nâng cao: An toàn với nhiên liệu khí",
+          "body": "CH4 và LPG nguyên chất hầu như không mùi; khí dân dụng thường được pha chất tạo mùi để dễ phát hiện rò rỉ. LPG nặng hơn không khí nên dễ tích ở chỗ thấp, còn CH4 nhẹ hơn không khí nên có xu hướng bay lên; cả hai đều có thể tạo hỗn hợp cháy nổ với không khí.\nKhi nghi rò rỉ, phải khoá van nếu làm được an toàn, mở cửa thông gió và tránh mọi nguồn mồi cháy. Không bật/tắt công tắc điện, không dùng bật lửa hay ngọn lửa để thử rò; rời khỏi khu vực và báo người có chuyên môn khi cần."
         }
       ],
       "questions": [
@@ -931,12 +1111,47 @@
         {
           "id": "b2-l6-c2",
           "heading": "Khối lượng mol trung bình của hỗn hợp khí",
-          "body": "Khối lượng mol trung bình của hỗn hợp khí được tính theo công thức Mbar = m hỗn hợp / n hỗn hợp.\nNếu hỗn hợp gồm hai khí A và B thì Mbar luôn nằm giữa MA và MB.\nNhờ đó có thể suy ra tỉ lệ mol hoặc biện luận thành phần hỗn hợp."
+          "body": "Khối lượng mol trung bình của hỗn hợp khí được tính theo công thức M_tb = m hỗn hợp / n hỗn hợp.\nNếu hỗn hợp gồm hai khí A và B thì M_tb luôn nằm giữa MA và MB.\nNhờ đó có thể suy ra tỉ lệ mol hoặc biện luận thành phần hỗn hợp."
         },
         {
           "id": "b2-l6-c3",
           "heading": "Biện luận theo dãy đồng đẳng",
           "body": "Với ankan CnH2n+2, khi đốt cháy 1 mol chất luôn cho số mol H2O lớn hơn số mol CO2 đúng 1 mol.\nVới anken CnH2n, số mol CO2 bằng số mol H2O. Với ankin mạch hở CnH2n-2, số mol CO2 lớn hơn số mol H2O đúng 1 mol.\nCác dấu hiệu này rất hữu ích khi xác định dãy đồng đẳng của hiđrocacbon hoặc hỗn hợp cùng dãy."
+        },
+        {
+          "id": "b2-l6-c4",
+          "heading": "Nâng cao: Bảo toàn C, H và tính nhanh lượng oxi",
+          "body": "Đốt cháy hoàn toàn một hỗn hợp chỉ gồm hiđrocacbon thì không cần tách từng chất để khai thác sản phẩm. Toàn bộ C đi vào CO2 nên nC = nCO2; toàn bộ H đi vào H2O nên nH = 2nH2O. Vì thế khối lượng hỗn hợp hiđrocacbon là m = 12nCO2 + 2nH2O (g). Số mol O2 đã phản ứng là nO2 = nCO2 + 1/2 nH2O, suy ra từ số nguyên tử O trong CO2 và H2O. Các hệ thức này chỉ dùng khi cháy hoàn toàn và chất đem đốt chỉ chứa C, H; có CO, muội C hoặc chất chứa O thì phải lập lại cân bằng nguyên tố theo dữ kiện thực tế."
+        },
+        {
+          "id": "b2-l6-c5",
+          "heading": "Nâng cao: Công thức trung bình của hỗn hợp hiđrocacbon",
+          "body": "Nếu hỗn hợp có tổng nX mol hiđrocacbon, có thể đặt số nguyên tử trung bình là x_tb = nCO2/nX và y_tb = 2nH2O/nX. Khi đó M_tb = 12x_tb + y_tb; đây cũng là cách kiểm tra chéo với M_tb = mX/nX. Kí hiệu Cx_tbHy_tb chỉ là công thức trung bình phục vụ tính toán, nên x_tb và y_tb có thể không nguyên và không biểu diễn một phân tử có thật. Không được lấy công thức trung bình có chỉ số phân số rồi gọi ngay tên một hiđrocacbon riêng lẻ."
+        },
+        {
+          "id": "b2-l6-c6",
+          "heading": "Nâng cao: Hai chất kế tiếp trong cùng dãy đồng đẳng",
+          "body": "Với nX mol hỗn hợp của Cn... và C(n+1)... trong cùng một dãy, mỗi mol chất lần lượt tạo n và n+1 mol CO2. Do đó n < nCO2/nX < n+1 nếu cả hai chất đều có mặt; số C trung bình giúp xác định ngay hai chỉ số kế tiếp. Số mol chất có n C là a = (n+1)nX - nCO2, còn số mol chất có n+1 C là b = nCO2 - n×nX. Sau khi tìm được a, b, phải thay vào dữ kiện H2O hoặc khối lượng để kiểm tra đúng dãy đồng đẳng; chỉ biết CO2 chưa đủ kết luận dãy là ankan, anken hay ankin."
+        },
+        {
+          "id": "b2-l6-c7",
+          "heading": "Nâng cao: Thu CO2 và H2O bằng bình hấp thụ",
+          "body": "Trong bài đốt cháy có cân bình hấp thụ, cho khí cháy đi qua bình hút H2O trước, chẳng hạn CaCl2 khan hoặc H2SO4 đặc, rồi qua bình KOH để giữ CO2. Độ tăng khối lượng của bình thứ nhất cho mH2O, bình thứ hai cho mCO2; đổi ra mol rồi dùng bảo toàn C, H. Thứ tự này quan trọng vì dung dịch KOH cũng có thể giữ hơi nước. Không được đồng nhất độ tăng khối lượng của nước vôi trong với khối lượng CO2 nếu đề không nói bình được cân và CO2 được hấp thụ hoàn toàn."
+        },
+        {
+          "id": "b2-l6-c8",
+          "heading": "Nâng cao: Hỗn hợp có oxi dư hoặc khí trơ",
+          "body": "Khi đốt hỗn hợp hiđrocacbon với O2 dư, sau khi làm nguội để H2O ngưng tụ, khí còn lại gồm CO2, O2 dư và các khí trơ ban đầu như N2. Dẫn phần khí này qua KOH dư thì độ giảm số mol chính là nCO2; nếu đo các thể tích ở đktc, nCO2 = ΔV/22,4. Nếu chỉ biết các thể tích ở cùng một điều kiện khác đktc, dùng tỉ lệ thể tích thay cho tỉ lệ mol, không tự đổi bằng một thể tích mol cố định. N2 không tham gia cháy và không bị KOH hấp thụ, nên phải được giữ trong ẩn số hoặc triệt tiêu bằng hiệu thể tích phù hợp."
+        },
+        {
+          "id": "b2-l6-c9",
+          "heading": "Nâng cao: Biến thiên thể tích khi cháy và ngưng tụ nước",
+          "body": "Xét 1 mol CxHy cháy vừa đủ bằng O2 tinh khiết: CxHy + (x + y/4)O2 -> xCO2 + y/2H2O. Nếu mọi chất đều là khí ở cùng nhiệt độ, áp suất, số mol khí tăng hoặc giảm một lượng y/4 - 1; chẳng hạn CH4 không đổi tổng số mol khí, còn C2H6 tăng 0,5 mol. Nếu sau phản ứng làm lạnh cho nước ngưng tụ hoàn toàn, số mol khí giảm so với ban đầu một lượng 1 + y/4. Quy tắc này không áp dụng nguyên xi khi có O2 dư, không khí, khí trơ hoặc nước chưa ngưng tụ hết; khi đó phải liệt kê từng khí còn lại."
+        },
+        {
+          "id": "b2-l6-c10",
+          "heading": "Nâng cao: Lập hệ, chọn ẩn và kiểm tra nghiệm",
+          "body": "Với hỗn hợp hai khí A, B, thường đặt a, b là số mol rồi viết phương trình tổng số mol a + b, khối lượng MAa + MBb hoặc số mol CO2 tạo ra. Chỉ sử dụng M_tb như một phương trình khối lượng: MAa + MBb = M_tb(a + b), không coi đó là dữ kiện độc lập nếu tổng khối lượng và tổng số mol đã biết. Nghiệm hợp lí phải có a, b không âm; đồng thời M_tb nằm giữa MA và MB nếu chỉ có hai khí. Nếu kết quả cho chỉ số C, H không nguyên hoặc trái công thức dãy đã cho, cần xem lại giả thiết cháy hoàn toàn, chất dư và điều kiện đo thể tích trước khi kết luận."
         }
       ],
       "questions": [
@@ -992,10 +1207,10 @@
           "type": "single-choice",
           "level": "basic",
           "category": "calculation",
-          "prompt": "Một hỗn hợp khí có khối lượng 5,8 g và tổng số mol là 0,20 mol. Giá trị Mbar của hỗn hợp là",
+          "prompt": "Một hỗn hợp khí có khối lượng 5,8 g và tổng số mol là 0,20 mol. Giá trị M_tb của hỗn hợp là",
           "options": ["23", "29", "58", "116"],
           "answer": 1,
-          "explanation": "B1. Mbar = m/n. B2. Với m = 5,8 g và n = 0,20 mol, ta có Mbar = 5,8/0,20 = 29 g/mol."
+          "explanation": "B1. M_tb = m/n. B2. Với m = 5,8 g và n = 0,20 mol, ta có M_tb = 5,8/0,20 = 29 g/mol."
         },
         {
           "id": "b2-l6-q6",
@@ -1023,7 +1238,7 @@
           "type": "multi-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Hỗn hợp X gồm CH4 và C2H4 có tổng số mol 0,30 mol và Mbar = 22 g/mol. Chọn các kết luận đúng.",
+          "prompt": "Hỗn hợp X gồm CH4 và C2H4 có tổng số mol 0,30 mol và M_tb = 22 g/mol. Chọn các kết luận đúng.",
           "options": [
             "Số mol CH4 là 0,15 mol.",
             "Số mol C2H4 là 0,15 mol.",
@@ -1031,7 +1246,7 @@
             "Dẫn hỗn hợp qua dung dịch brom dư thì còn lại 0,15 mol khí."
           ],
           "answers": [0, 1, 2, 3],
-          "explanation": "B1. Gọi số mol CH4 là a, C2H4 là b. Khi đó a + b = 0,30 và 16a + 28b = 22 x 0,30 = 6,6. B2. Từ 16a + 28b = 22a + 22b suy ra 6b = 6a nên a = b. B3. Do a + b = 0,30 nên a = b = 0,15 mol. B4. Khối lượng hỗn hợp là Mbar x n = 22 x 0,30 = 6,6 g. B5. Brom giữ lại toàn bộ 0,15 mol C2H4, còn lại 0,15 mol CH4."
+          "explanation": "B1. Gọi số mol CH4 là a, C2H4 là b. Khi đó a + b = 0,30 và 16a + 28b = 22 x 0,30 = 6,6. B2. Từ 16a + 28b = 22a + 22b suy ra 6b = 6a nên a = b. B3. Do a + b = 0,30 nên a = b = 0,15 mol. B4. Khối lượng hỗn hợp là M_tb x n = 22 x 0,30 = 6,6 g. B5. Brom giữ lại toàn bộ 0,15 mol C2H4, còn lại 0,15 mol CH4."
         },
         {
           "id": "b2-l6-q9",
@@ -1059,7 +1274,7 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Hỗn hợp X gồm CH4 và C2H6 có Mbar = 21,6 g/mol. Phần trăm thể tích của CH4 trong X là ___%.",
+          "prompt": "Hỗn hợp X gồm CH4 và C2H6 có M_tb = 21,6 g/mol. Phần trăm thể tích của CH4 trong X là ___%.",
           "answer": "60",
           "acceptedAnswers": ["60,0", "60.0"],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",

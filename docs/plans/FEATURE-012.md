@@ -263,12 +263,12 @@ commit).
 
 ### B2 · Hiđrocacbon – Nhiên liệu (`b2-hidrocacbon-nhien-lieu`)
 
-- [ ] `b2-l1` — Metan: cấu tạo, phản ứng thế
-- [ ] `b2-l2` — Etilen: liên kết đôi, phản ứng cộng, trùng hợp
-- [ ] `b2-l3` — Axetilen: liên kết ba, phản ứng cộng; điều chế
-- [ ] `b2-l4` — Benzen: cấu tạo vòng, thế/cộng
-- [ ] `b2-l5` — Dầu mỏ – khí thiên nhiên – nhiên liệu
-- [ ] `b2-l6` — Nâng cao: bài toán đốt cháy hiđrocacbon, hỗn hợp khí
+- [x] `b2-l1` — Metan: cấu tạo, phản ứng thế
+- [x] `b2-l2` — Etilen: liên kết đôi, phản ứng cộng, trùng hợp
+- [x] `b2-l3` — Axetilen: liên kết ba, phản ứng cộng; điều chế
+- [x] `b2-l4` — Benzen: cấu tạo vòng, thế/cộng
+- [x] `b2-l5` — Dầu mỏ – khí thiên nhiên – nhiên liệu
+- [x] `b2-l6` — Nâng cao: bài toán đốt cháy hiđrocacbon, hỗn hợp khí
 
 ### B3 · Dẫn xuất chứa oxi (`b3-dan-xuat-chua-oxi`)
 
