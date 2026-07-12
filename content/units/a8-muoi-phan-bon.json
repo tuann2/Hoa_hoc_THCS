@@ -17,17 +17,57 @@
         {
           "id": "a8-l1-c1",
           "heading": "Muối có thể phản ứng với gì?",
-          "body": "Muối có thể phản ứng với kim loại mạnh hơn, với axit, với bazơ và với muối khác. Tuy nhiên không phải lúc nào cũng xảy ra; cần xét điều kiện tạo kết tủa, tạo khí hoặc tạo chất điện li yếu."
+          "body": "Muối có thể phản ứng với kim loại mạnh hơn, với axit, với bazơ và với muối khác. Tuy nhiên không phải lúc nào cũng xảy ra; cần xét điều kiện tạo kết tủa, tạo khí hoặc tạo chất điện li yếu.\n\nVới kim loại, đây là phản ứng thế chứ không phải phản ứng trao đổi: kim loại đưa vào phải đứng trước kim loại trong muối trong dãy hoạt động hoá học, và muối thường phải ở dạng dung dịch để có ion kim loại. Ví dụ: Fe + CuSO4 -> FeSO4 + Cu; còn Cu không đẩy được Fe khỏi FeSO4. Không thả trực tiếp K, Na, Ca, Ba vào dung dịch muối để xét quy tắc này vì chúng phản ứng mạnh với nước trước."
         },
         {
           "id": "a8-l1-c2",
           "heading": "Phản ứng trao đổi xảy ra khi nào?",
-          "body": "Trong dung dịch, phản ứng trao đổi giữa hai chất điện li xảy ra khi sản phẩm có kết tủa, có khí bay lên hoặc có nước tạo thành.\nVí dụ: BaCl2 + Na2SO4 -> BaSO4 + 2NaCl."
+          "body": "Trong dung dịch, phản ứng trao đổi giữa hai chất điện li xảy ra khi sản phẩm có kết tủa, có khí bay lên hoặc có nước tạo thành.\nVí dụ: BaCl2 + Na2SO4 -> BaSO4 + 2NaCl.\n\nNói chính xác hơn, phản ứng được kéo theo một chiều khi ion bị lấy khỏi dung dịch dưới dạng chất rắn, chất khí hoặc chất điện li yếu (thường gặp là H2O). Nếu sau khi hoán đổi mọi chất vẫn tan và điện li mạnh, các ion trước và sau thực chất không đổi; không viết phương trình phản ứng."
         },
         {
           "id": "a8-l1-c3",
           "heading": "Đừng quên độ tan",
-          "body": "Muốn dự đoán phản ứng muối + muối hoặc muối + bazơ, phải nhớ chất nào tan, chất nào kết tủa. Ví dụ AgCl, BaSO4, CaCO3 không tan nên thường là lực đẩy phản ứng."
+          "body": "Muốn dự đoán phản ứng muối + muối hoặc muối + bazơ, phải nhớ chất nào tan, chất nào kết tủa. Ví dụ AgCl, BaSO4, CaCO3 không tan nên thường là lực đẩy phản ứng.\n\nCác quy tắc tắt rất hữu ích: mọi muối nitrat và đa số muối Na+, K+, NH4+ đều tan; Cl- thường tan trừ AgCl; SO4^2- thường tan nhưng BaSO4, PbSO4 không tan và CaSO4 ít tan; CO3^2- đa số không tan, trừ muối của Na+, K+, NH4+. Khi làm bài vẫn phải đối chiếu đúng chất cụ thể, không suy từ màu dung dịch hay từ tên muối."
+        },
+        {
+          "id": "a8-l1-c4",
+          "heading": "Nâng cao: Phương trình ion rút gọn",
+          "body": "Phương trình phân tử cho biết các chất ban đầu; phương trình ion rút gọn chỉ giữ các tiểu phân thực sự biến đổi trong dung dịch. Cách làm: viết phương trình phân tử đã cân bằng, tách các chất tan điện li mạnh thành ion, giữ nguyên kết tủa, khí, nước và chất điện li yếu, rồi khử các ion giống hệt ở hai vế.\n\nVí dụ từ BaCl2 + Na2SO4 -> BaSO4 + 2NaCl thu được: Ba2+ + SO4^2- -> BaSO4. Na+ và Cl- là ion khán giả. Phương trình ion rút gọn phải bảo toàn đồng thời số nguyên tử và tổng điện tích; đây là cách kiểm tra nhanh các phương trình HSG."
+        },
+        {
+          "id": "a8-l1-c5",
+          "heading": "Nâng cao: Sàng lọc phản ứng trao đổi",
+          "body": "Gặp hai dung dịch, không nên viết ngay phương trình. Hãy làm theo bốn bước: (1) xác định các ion có mặt; (2) ghép chéo cation với anion để dự đoán sản phẩm; (3) tra độ tan và xét khả năng tạo khí hoặc nước; (4) chỉ khi có lực đẩy mới cân bằng phương trình.\n\nChẳng hạn NaCl và KNO3 chỉ cho Na+, Cl-, K+, NO3-; mọi chất ghép lại đều tan nên không phản ứng. Trái lại, AgNO3 và NaCl tạo AgCl không tan nên phản ứng xảy ra. Cách xét theo ion giúp tránh sai lầm cứ đổi chỗ là có phản ứng."
+        },
+        {
+          "id": "a8-l1-c6",
+          "heading": "Nâng cao: Ba lực đẩy thường gặp dưới dạng ion",
+          "body": "Nắm vài phương trình ion lõi sẽ nhận ra phản ứng rất nhanh: H+ + OH- -> H2O; CO3^2- + 2H+ -> CO2 + H2O; HCO3- + H+ -> CO2 + H2O; M^n+ + nOH- -> M(OH)n (kết tủa, nếu hiđroxit đó không tan).\n\nVới muối amoni, khi đun nóng cùng kiềm mạnh: NH4+ + OH- -> NH3 + H2O. Khí NH3 có mùi khai, làm quỳ tím ẩm hoá xanh; đây là dấu hiệu quan trọng để nhận ra NH4+ và cũng giải thích vì sao phản ứng muối amoni với kiềm có thể xảy ra."
+        },
+        {
+          "id": "a8-l1-c7",
+          "heading": "Nâng cao: Điều kiện của phản ứng kim loại với muối",
+          "body": "Phản ứng M + M'X -> MX + M' chỉ xảy ra khi M hoạt động hoá học mạnh hơn M'. Cần đọc đúng hoá trị của ion kim loại trong muối: Fe đẩy Cu2+ trong CuSO4 tạo Fe2+ trong FeSO4, không phải Fe2(SO4)3. Chất rắn mới sinh có thể bám trên bề mặt kim loại ban đầu.\n\nNếu kim loại ban đầu dư, chất rắn sau phản ứng là hỗn hợp kim loại dư và kim loại được giải phóng. Nếu dung dịch muối dư, kim loại ban đầu có thể tan hết. Riêng Fe + CuSO4, khối lượng thanh tăng vì 1 mol Fe (56 g) tan đi thì 1 mol Cu (64 g) bám vào. Với các cặp kim loại khác, phải xét tỉ lệ phương trình và khối lượng mol, không đoán chỉ theo hiện tượng bám kim loại."
+        },
+        {
+          "id": "a8-l1-c8",
+          "heading": "Nâng cao: Kết tủa gặp axit",
+          "body": "Không tan trong nước không đồng nghĩa với không phản ứng với axit. Kết tủa cacbonat như CaCO3, BaCO3 tan trong axit vì CO3^2- bị H+ chuyển thành CO2 và H2O; do đó kết tủa sủi bọt rồi biến mất: CaCO3 + 2HCl -> CaCl2 + CO2 + H2O.\n\nNgược lại, BaSO4 không tan trong axit loãng nên vẫn còn khi thêm HCl loãng. Tính chất khác nhau này cho phép phân biệt kết tủa chứa CO3^2- với kết tủa BaSO4. Khi bài cho thêm axit dư, luôn xét tiếp số phận của kết tủa đã tạo ở bước trước."
+        },
+        {
+          "id": "a8-l1-c9",
+          "heading": "Nâng cao: Nhận biết CO3^2- và SO4^2-",
+          "body": "Để phân biệt hai anion này trong các dung dịch riêng, có thể nhỏ dung dịch chứa Ba2+ vào từng mẫu: cả hai đều có thể cho kết tủa trắng BaCO3 hoặc BaSO4. Sau đó thêm HCl loãng vào kết tủa: BaCO3 tan và giải phóng CO2, còn BaSO4 không tan.\n\nVì vậy, không được kết luận chỉ từ việc xuất hiện kết tủa trắng. Phép thử phải gồm cả bước xác nhận thứ hai. Khi nhận biết nhiều mẫu, dùng lượng nhỏ mỗi mẫu và ghi rõ hiện tượng ở từng bước để tránh thuốc thử đưa vào làm lẫn kết quả."
+        },
+        {
+          "id": "a8-l1-c10",
+          "heading": "Nâng cao: Biện luận dung dịch sau phản ứng",
+          "body": "Sau phản ứng trao đổi, dung dịch không nhất thiết chỉ còn một muối. Hãy viết phương trình ion rút gọn, so sánh số mol các ion tham gia theo tỉ lệ phương trình, rồi xác định ion nào dư và các ion khán giả còn lại. Kết tủa, khí hoặc nước không được tính là ion còn trong dung dịch.\n\nVí dụ trộn BaCl2 thiếu với Na2SO4 dư: Ba2+ bị kết tủa hết thành BaSO4; dung dịch sau phản ứng còn Na+, Cl- và SO4^2- dư. Cách theo dõi ion giúp giải chính xác các câu hỏi về thuốc thử thêm vào sau đó, thay vì chỉ nhớ tên một muối sản phẩm."
+        },
+        {
+          "id": "a8-l1-c11",
+          "heading": "Nâng cao: Tách ion bằng kết tủa chọn lọc",
+          "body": "Nguyên tắc tách trong chương trình THCS là chọn thuốc thử tạo kết tủa với ion cần loại, còn các ion khác vẫn ở trong dung dịch; sau đó lọc lấy phần rắn hoặc phần nước lọc theo mục tiêu. Ví dụ có thể dùng dung dịch chứa SO4^2- để loại Ba2+ dưới dạng BaSO4, vì BaSO4 rất ít tan.\n\nMột sơ đồ tách phải nêu đủ: thuốc thử, phương trình phản ứng, chất nằm ở kết tủa hay nước lọc và thao tác lọc. Không chọn thuốc thử chỉ vì có phản ứng; nếu nó tạo kết tủa với cả ion cần giữ thì phép tách không còn chọn lọc."
         }
       ],
       "questions": [
@@ -201,7 +241,7 @@
         {
           "id": "a8-l2-c1",
           "heading": "NaCl và KNO3",
-          "body": "NaCl là muối ăn, nguyên liệu quan trọng cho công nghiệp hoá chất. KNO3 là muối tan, cung cấp cả K và N cho cây, đồng thời là chất oxi hoá trong một số hỗn hợp."
+          "body": "NaCl là muối ăn, nguyên liệu quan trọng cho công nghiệp hoá chất. KNO3 là muối tan, cung cấp cả K và N cho cây, đồng thời là chất oxi hoá trong một số hỗn hợp.\n\nĐộ tan của KNO3 tăng mạnh khi nhiệt độ tăng, nên có thể thu tinh thể KNO3 bằng cách hoà tan nhiều chất ở nóng rồi làm nguội dung dịch bão hoà; đây là nguyên lí kết tinh lại. Trái lại, không thể chỉ dựa vào chữ \"muối tan\" để kết luận độ tan của mọi muối thay đổi giống nhau theo nhiệt độ."
         },
         {
           "id": "a8-l2-c2",
@@ -212,6 +252,46 @@
           "id": "a8-l2-c3",
           "heading": "Nhận biết nhanh",
           "body": "Muối cacbonat hoặc hiđrocacbonat gặp axit giải phóng CO2. Nhiều muối cacbonat kim loại kiềm tan, còn đa số cacbonat kim loại khác không tan."
+        },
+        {
+          "id": "a8-l2-c4",
+          "heading": "Nâng cao: CO2 làm đục rồi làm trong nước vôi",
+          "body": "Sục CO2 từ từ vào Ca(OH)2, dung dịch ban đầu vẩn đục vì tạo CaCO3 kết tủa: CO2 + Ca(OH)2 -> CaCO3 + H2O. Nếu CO2 tiếp tục dư, kết tủa tan dần do tạo muối hiđrocacbonat tan: CaCO3 + CO2 + H2O -> Ca(HCO3)2.\n\nVì thế hiện tượng \"đục rồi trong\" chứng tỏ lượng CO2 đã đi từ thiếu sang dư. Khi đun nóng dung dịch Ca(HCO3)2, phản ứng đảo chiều một phần: Ca(HCO3)2 -> CaCO3 + CO2 + H2O, nên lại có thể xuất hiện cặn CaCO3."
+        },
+        {
+          "id": "a8-l2-c5",
+          "heading": "Nâng cao: Hai nấc của Na2CO3 với axit",
+          "body": "CO3^2- nhận H+ theo hai nấc. Khi HCl chưa đủ, Na2CO3 chuyển thành NaHCO3: Na2CO3 + HCl -> NaHCO3 + NaCl; chưa có CO2 thoát ra. Chỉ khi có thêm axit, NaHCO3 mới tạo CO2: NaHCO3 + HCl -> NaCl + CO2 + H2O. Cộng hai nấc thu được Na2CO3 + 2HCl -> 2NaCl + CO2 + H2O.\n\nDo đó trong bài cho HCl từ từ vào dung dịch Na2CO3, số mol HCl trước khi bắt đầu có khí bằng số mol Na2CO3 ban đầu. Phải đọc đúng thứ tự thêm chất: nếu nhỏ dung dịch Na2CO3 vào axit dư thì mỗi phần CO3^2- vừa vào đã gặp H+ dư và có thể giải phóng CO2 ngay."
+        },
+        {
+          "id": "a8-l2-c6",
+          "heading": "Nâng cao: Dấu vết nhiệt phân của cacbonat",
+          "body": "NaHCO3 kém bền nhiệt: 2NaHCO3 -> Na2CO3 + CO2 + H2O. Vì vậy khi nung NaHCO3, khối lượng chất rắn giảm; khí thoát ra gồm CO2 và hơi nước. CaCO3 chỉ bị nhiệt phân rõ ở nhiệt độ cao: CaCO3 -> CaO + CO2, còn Na2CO3 bền khi đun nóng theo điều kiện thí nghiệm thông thường ở THCS.\n\nTrong hỗn hợp Na2CO3 và NaHCO3, chỉ phần NaHCO3 gây giảm khối lượng khi nung hoàn toàn. Đây là cơ sở biện luận: từ khối lượng giảm hoặc số mol CO2 khi nung xác định được số mol NaHCO3, rồi suy ra lượng Na2CO3 còn lại."
+        },
+        {
+          "id": "a8-l2-c7",
+          "heading": "Nâng cao: Tính kiềm của dung dịch cacbonat",
+          "body": "Na2CO3 là muối của bazơ mạnh và axit yếu nên ion CO3^2- thuỷ phân một phần: CO3^2- + H2O <-> HCO3- + OH-. Vì tạo OH-, dung dịch Na2CO3 có tính kiềm và làm quỳ tím hoá xanh hoặc phenolphtalein chuyển hồng.\n\nNaHCO3 cũng cho dung dịch kiềm yếu hơn, dù ion HCO3- còn có khả năng nhường H+. Vì vậy không gọi Na2CO3 là bazơ: chất này vẫn là muối, nhưng dung dịch của nó có môi trường kiềm do thuỷ phân. Cần phân biệt tính chất dung dịch với bản chất chất tan khi giải thích chỉ thị màu."
+        },
+        {
+          "id": "a8-l2-c8",
+          "heading": "Nâng cao: Soda và nước cứng",
+          "body": "Nước cứng chứa nhiều ion Ca2+ hoặc Mg2+. Nước cứng tạm thời thường chứa Ca(HCO3)2, Mg(HCO3)2; đun sôi có thể tạo cặn cacbonat, ví dụ Ca(HCO3)2 -> CaCO3 + CO2 + H2O.\n\nNa2CO3 (soda) làm mềm được nhiều loại nước cứng vì kết tủa ion gây cứng: CaSO4 + Na2CO3 -> CaCO3 + Na2SO4. Sau phản ứng phải lọc bỏ CaCO3 hoặc MgCO3. Điều này giải thích ứng dụng của soda trong giặt rửa, đồng thời cho thấy không nên coi mọi cặn trắng đều là cùng một chất."
+        },
+        {
+          "id": "a8-l2-c9",
+          "heading": "Nâng cao: Biện luận hỗn hợp Na2CO3 và NaHCO3",
+          "body": "Cho hỗn hợp Na2CO3 và NaHCO3 tác dụng với axit dư, mỗi mol muối đều tạo đúng 1 mol CO2. Vì vậy nCO2 cho tổng số mol hai muối, không tự tách riêng được từng muối. Nếu chỉ có dữ kiện này thì bài toán thiếu một phương trình độc lập.\n\nDữ kiện thứ hai thường là khối lượng hỗn hợp, khối lượng chất rắn sau nung hoặc lượng khí khi nung. Đặt x, y lần lượt là số mol Na2CO3, NaHCO3: với axit dư có x + y = nCO2; còn khi nung hoàn toàn chỉ y tạo CO2 và Na2CO3 theo tỉ lệ y : 2. Cách đặt ẩn theo số mol giúp các bảo toàn khối lượng và nguyên tố trở nên rõ ràng."
+        },
+        {
+          "id": "a8-l2-c10",
+          "heading": "Nâng cao: Điện phân dung dịch NaCl",
+          "body": "Dung dịch NaCl bão hoà (nước muối) là nguyên liệu của công nghiệp clo-kiềm. Khi điện phân có màng ngăn để tách sản phẩm, phương trình tổng quát là: 2NaCl + 2H2O -> 2NaOH + H2 + Cl2. Vì vậy từ nước muối có thể thu được NaOH, H2 và Cl2.\n\nTrong dung dịch, nước bị khử ở catot tạo H2 và OH-, còn Cl- bị oxi hoá ở anot tạo Cl2; không viết Na kim loại sinh ra như khi điện phân NaCl nóng chảy. Màng ngăn quan trọng vì nếu Cl2 tiếp xúc lâu với NaOH, các sản phẩm có thể tiếp tục phản ứng."
+        },
+        {
+          "id": "a8-l2-c11",
+          "heading": "Nâng cao: KNO3 và vai trò chất oxi hoá",
+          "body": "Khi đun KNO3, muối có thể phân huỷ theo phương trình: 2KNO3 -> 2KNO2 + O2. KNO3 không phải chất cháy, nhưng O2 sinh ra có thể làm sự cháy của chất khác diễn ra mạnh hơn; đó là ý nghĩa của việc gọi KNO3 là chất oxi hoá trong các phản ứng thích hợp.\n\nTrong bài tập, không suy diễn rằng mọi muối nitrat đều nhiệt phân theo cùng một phương trình, vì sản phẩm còn phụ thuộc cation kim loại. Với KNO3 ở mức THCS, cần dùng đúng tỉ lệ 2 mol KNO3 tạo 1 mol O2 và nhớ chỉ áp dụng khi có điều kiện đun nóng."
         }
       ],
       "questions": [
@@ -375,17 +455,52 @@
         {
           "id": "a8-l3-c1",
           "heading": "Muối axit và muối trung hoà khác nhau ở đâu?",
-          "body": "Muối trung hoà không còn H có khả năng thay thế bằng kim loại. Muối axit vẫn còn H trong gốc axit, ví dụ NaHCO3, NaHSO4, KH2PO4."
+          "body": "Muối trung hoà không còn H có khả năng thay thế bằng kim loại. Muối axit vẫn còn H trong gốc axit, ví dụ NaHCO3, NaHSO4, KH2PO4.\n\nDấu hiệu phải xét là H thuộc gốc axit chứ không chỉ là sự có mặt của nguyên tử H trong công thức. Chẳng hạn NH4Cl có H trong ion NH4+ nhưng không phải muối axit; còn Na2HPO4 vẫn là muối axit vì gốc HPO4^2- còn một H có thể bị thay bằng Na."
         },
         {
           "id": "a8-l3-c2",
           "heading": "Chuyển đổi qua lại",
-          "body": "Tăng lượng axit có thể chuyển muối trung hoà thành muối axit, còn tăng bazơ có thể chuyển muối axit thành muối trung hoà.\nVí dụ: Na2CO3 + HCl -> NaHCO3 + NaCl; NaHCO3 + NaOH -> Na2CO3 + H2O."
+          "body": "Tăng lượng axit có thể chuyển muối trung hoà thành muối axit, còn tăng bazơ có thể chuyển muối axit thành muối trung hoà.\nVí dụ: Na2CO3 + HCl -> NaHCO3 + NaCl; NaHCO3 + NaOH -> Na2CO3 + H2O.\n\nMỗi mol H+ hoặc OH- chỉ làm gốc axit chuyển một nấc. Vì vậy phải ghi rõ muối đích rồi mới so tỉ lệ, không suy ra rằng cứ thêm axit vào mọi muối trung hoà trong dung dịch là chắc chắn có phản ứng."
         },
         {
           "id": "a8-l3-c3",
           "heading": "Cách xét bài toán",
-          "body": "Trước tiên xác định axit đa nấc hay đơn nấc. Sau đó so lượng H^+ hoặc OH^- cung cấp với nhu cầu của gốc axit. Riêng hệ CO3^2- / HCO3^- rất hay ra đề biện luận."
+          "body": "Trước tiên xác định axit đa nấc hay đơn nấc. Sau đó so lượng H^+ hoặc OH^- cung cấp với nhu cầu của gốc axit. Riêng hệ CO3^2- / HCO3^- rất hay ra đề biện luận.\n\nLuôn quy đổi về số mol H+ hoặc OH- thực tế: 1 mol H2SO4 có thể cung cấp 2 mol H+ khi trung hoà hoàn toàn, còn 1 mol Ba(OH)2 cung cấp 2 mol OH-. Với một muối axit, số mol OH- cần dùng bằng số H còn có thể thay thế trong gốc axit."
+        },
+        {
+          "id": "a8-l3-c4",
+          "heading": "Nâng cao: Dãy muối của axit ba nấc",
+          "body": "H3PO4 tạo được ba muối natri theo mức thay thế H: NaH2PO4, Na2HPO4 và Na3PO4. Hai chất đầu là muối axit; NaH2PO4 còn 2 H có thể thay thế, còn Na2HPO4 còn 1 H. Na3PO4 là muối trung hoà vì cả 3 H của H3PO4 đã được thay thế.\n\nCó thể tự kiểm tra công thức bằng điện tích gốc: H2PO4^- cần 1Na+, HPO4^2- cần 2Na+, còn PO4^3- cần 3Na+. Cách kiểm tra này ngăn lỗi viết nhầm NaHPO4 hoặc Na2H2PO4."
+        },
+        {
+          "id": "a8-l3-c5",
+          "heading": "Nâng cao: Tạo muối bằng trung hoà từng nấc",
+          "body": "Con đường chắc chắn để điều chế muối axit là trung hoà không hoàn toàn một axit nhiều nấc bằng bazơ. Ví dụ: H2SO4 + NaOH -> NaHSO4 + H2O; H2SO4 + 2NaOH -> Na2SO4 + 2H2O. Với H3PO4, lần lượt có: H3PO4 + NaOH -> NaH2PO4 + H2O; H3PO4 + 2NaOH -> Na2HPO4 + 2H2O; H3PO4 + 3NaOH -> Na3PO4 + 3H2O.\n\nCác phương trình cho thấy loại muối không phụ thuộc vào tên axit hay tên bazơ, mà phụ thuộc chính xác vào số mol OH- đã dùng trên một mol axit."
+        },
+        {
+          "id": "a8-l3-c6",
+          "heading": "Nâng cao: Biện luận sản phẩm của H3PO4 và NaOH",
+          "body": "Gọi a là số mol H3PO4, b là số mol NaOH. Nếu b = a, chỉ tạo NaH2PO4; nếu b = 2a, chỉ tạo Na2HPO4; nếu b = 3a, chỉ tạo Na3PO4. Khi a < b < 2a, sản phẩm là hỗn hợp NaH2PO4 và Na2HPO4, trong đó n(Na2HPO4) = b - a, n(NaH2PO4) = 2a - b.\n\nKhi 2a < b < 3a, hỗn hợp gồm Na2HPO4 và Na3PO4: n(Na3PO4) = b - 2a, n(Na2HPO4) = 3a - b. Nếu b > 3a thì NaOH còn dư. Đây là mẫu biện luận theo từng khoảng rất hay dùng với axit ba nấc."
+        },
+        {
+          "id": "a8-l3-c7",
+          "heading": "Nâng cao: Đương lượng OH- của muối axit",
+          "body": "Muốn chuyển hết một muối axit thành muối trung hoà, hãy đếm H còn thay thế được trong gốc. 1 mol NaHSO4, NaHCO3 hoặc Na2HPO4 cần 1 mol NaOH; 1 mol NaH2PO4 cần 2 mol NaOH. Ví dụ hai bước của photphat là: NaH2PO4 + NaOH -> Na2HPO4 + H2O; Na2HPO4 + NaOH -> Na3PO4 + H2O.\n\nVới hỗn hợp, tổng nOH- cần bằng tổng số mol H còn thay thế được của từng thành phần. Đây là dữ kiện định lượng độc lập với khối lượng hoặc tổng số mol, nên thường dùng để lập hệ tìm thành phần hỗn hợp muối."
+        },
+        {
+          "id": "a8-l3-c8",
+          "heading": "Nâng cao: Muối axit không đồng nghĩa dung dịch axit",
+          "body": "Tên gọi “muối axit” chỉ mô tả thành phần: anion vẫn còn H có thể thay thế. Nó không tự quyết định môi trường dung dịch. NaHSO4 cho dung dịch axit vì HSO4^- còn có thể nhường H+; trái lại dung dịch NaHCO3 thường có tính kiềm yếu vì HCO3^- nhận H+ của nước ở một mức độ nhất định, tạo OH-.\n\nDo đó không được dùng màu chỉ thị để phân loại một chất là muối axit hay muối trung hoà. Phân loại dựa vào công thức và gốc axit; tính axit, bazơ của dung dịch là một câu hỏi khác."
+        },
+        {
+          "id": "a8-l3-c9",
+          "heading": "Nâng cao: Chọn đúng đường chuyển hoá",
+          "body": "Phép chuyển Na2CO3 -> NaHCO3 bằng HCl có cơ sở vì CO3^2- nhận H+ theo từng nấc. Nhưng không được máy móc áp dụng “muối trung hoà + axit -> muối axit” cho mọi trường hợp trong dung dịch. Chẳng hạn trộn Na2SO4 và HCl loãng không được xem là phản ứng trao đổi có chiều rõ để điều chế NaHSO4.\n\nKhi đề yêu cầu tạo NaHSO4, cách viết chắc chắn là trung hoà một phần H2SO4 bằng NaOH. Chiều ngược NaHSO4 -> Na2SO4 được thực hiện bằng NaOH: NaHSO4 + NaOH -> Na2SO4 + H2O. Luôn chọn phương trình có chất phản ứng và lực đẩy phản ứng phù hợp điều kiện đề bài."
+        },
+        {
+          "id": "a8-l3-c10",
+          "heading": "Nâng cao: Theo dõi điểm dừng khi thêm kiềm",
+          "body": "Với x mol NaH2PO4, nếu thêm y mol NaOH thì phải xét hai điểm dừng y = x và y = 2x. Khi 0 < y < x, một phần NaH2PO4 mới chuyển thành Na2HPO4; khi x < y < 2x, NaH2PO4 đã hết và một phần Na2HPO4 tiếp tục thành Na3PO4. Chỉ từ y >= 2x mới có Na3PO4 là muối duy nhất; nếu y > 2x, NaOH dư.\n\nKĩ thuật “chia chặng” này áp dụng cho mọi muối axit có nhiều H còn thay thế: xử lí hết nấc thứ nhất rồi mới dùng OH- còn lại cho nấc tiếp theo. Nó tránh sai lầm cho rằng chỉ cần có NaOH là muối axit luôn biến ngay thành muối trung hoà."
         }
       ],
       "questions": [
@@ -544,17 +659,57 @@
         {
           "id": "a8-l4-c1",
           "heading": "Ba nhóm phân chính",
-          "body": "Phân đạm cung cấp N, phân lân cung cấp P, phân kali cung cấp K. Ngoài ra còn có phân hỗn hợp như NPK và phân vi lượng."
+          "body": "Phân đạm cung cấp N, phân lân cung cấp P, phân kali cung cấp K. Ngoài ra còn có phân hỗn hợp như NPK và phân vi lượng.\n\nN là nguyên tố cần nhiều khi cây phát triển thân, lá; P gắn với sự phát triển rễ và quá trình tạo hạt; K giúp điều hoà nước, làm cây cứng cáp và tăng sức chống chịu. Cây không chỉ cần đủ từng nguyên tố mà cần tỉ lệ phù hợp: bón thừa một loại không bù được sự thiếu loại khác."
         },
         {
           "id": "a8-l4-c2",
           "heading": "Ví dụ quen thuộc",
-          "body": "Đạm urê CO(NH2)2, amoni nitrat NH4NO3; lân supephotphat chứa Ca(H2PO4)2; kali clorua KCl, kali nitrat KNO3. NPK phối hợp nhiều nguyên tố để bón cân đối."
+          "body": "Đạm urê CO(NH2)2, amoni nitrat NH4NO3; lân supephotphat chứa Ca(H2PO4)2; kali clorua KCl, kali nitrat KNO3. NPK phối hợp nhiều nguyên tố để bón cân đối.\n\nMột chất có thể đồng thời thuộc nhiều nhóm dinh dưỡng: KNO3 cung cấp cả N và K, còn NH4H2PO4 cung cấp N và P. Vì vậy, khi phân loại phải xét các nguyên tố dinh dưỡng mà chất cung cấp, không chỉ dựa vào tên gọi của phân."
         },
         {
           "id": "a8-l4-c3",
           "heading": "Dùng phân đúng cách",
-          "body": "Không bón quá nhiều một loại phân vì dễ làm đất chua, cây mất cân đối dinh dưỡng hoặc thất thoát. Đất chua thường cần bón vôi CaCO3 hoặc CaO để cải tạo trước khi bón phân."
+          "body": "Không bón quá nhiều một loại phân vì dễ làm đất chua, cây mất cân đối dinh dưỡng hoặc thất thoát. Đất chua thường cần bón vôi CaCO3 hoặc CaO để cải tạo trước khi bón phân.\n\nKhông trộn hoặc bón sát thời điểm phân amoni với vôi, tro bếp hay chất kiềm mạnh. Môi trường kiềm có thể chuyển NH4+ thành NH3 bay hơi, làm mất đạm; vì thế cải tạo đất bằng vôi và bón phân đạm cần được bố trí thành các đợt riêng."
+        },
+        {
+          "id": "a8-l4-c4",
+          "heading": "Nâng cao: Hàm lượng dinh dưỡng của phân đạm",
+          "body": "Độ giàu dinh dưỡng của một phân đạm được so sánh bằng %N, không chỉ bằng việc nó có chứa N. Với chất tinh khiết: %N = (khối lượng N trong 1 mol chất / khối lượng mol chất) x 100%.\n\nCác giá trị cần nhớ và biết tự kiểm tra: urê CO(NH2)2 có %N = 28/60 x 100% = 46,67%; NH4NO3 có 35,00% N; (NH4)2SO4 có 28/132 x 100% = 21,21% N; NH4Cl có 14/53,5 x 100% = 26,17% N. Nếu cùng khối lượng và đều tinh khiết, urê cung cấp nhiều N nhất trong bốn chất trên; nhưng chọn phân còn phải xét loại đất và khả năng thất thoát."
+        },
+        {
+          "id": "a8-l4-c5",
+          "heading": "Nâng cao: Đọc nhãn N-P2O5-K2O",
+          "body": "Trên nhãn NPK, ba số thường lần lượt là %N, %P2O5 quy đổi và %K2O quy đổi theo khối lượng. Chúng là quy ước biểu thị dinh dưỡng; không được suy ra chắc chắn trong hạt phân đang có P2O5 hoặc K2O tự do.\n\nKhi đề hỏi khối lượng nguyên tố P, K thật sự, dùng: %P = %P2O5 x 62/142 và %K = %K2O x 78/94. Ví dụ phân 16-16-8 chứa 16% N; %P xấp xỉ 16 x 62/142 = 6,99%; %K xấp xỉ 8 x 78/94 = 6,64%. Viết đúng đại lượng cần tính là điểm then chốt của bài toán HSG về phân bón."
+        },
+        {
+          "id": "a8-l4-c6",
+          "heading": "Nâng cao: Vì sao phải chế biến quặng photphat?",
+          "body": "Ca3(PO4)2 trong quặng photphat rất ít tan nên cây khó sử dụng trực tiếp. Khi xử lí bằng H2SO4, nó chuyển thành dạng dễ tan hơn: Ca3(PO4)2 + 2H2SO4 -> Ca(H2PO4)2 + 2CaSO4.\n\nSản phẩm của phản ứng này là supephotphat đơn, gồm Ca(H2PO4)2 và CaSO4; thành phần cung cấp P quan trọng là Ca(H2PO4)2. Đừng viết supephotphat đơn là một chất tinh khiết chỉ có Ca(H2PO4)2."
+        },
+        {
+          "id": "a8-l4-c7",
+          "heading": "Nâng cao: Thất thoát đạm amoni",
+          "body": "Ion NH4+ trong phân amoni gặp môi trường kiềm có thể tạo NH3 bay hơi: NH4+ + OH- -> NH3 + H2O. Ví dụ: (NH4)2SO4 + Ca(OH)2 -> 2NH3 + CaSO4 + 2H2O.\n\nĐây là lí do hoá học để không trộn phân amoni với CaO, Ca(OH)2, tro bếp hoặc các chất kiềm. Khi bài toán cho lượng NH3 thoát ra, hãy dùng đúng tỉ lệ phương trình: 1 mol (NH4)2SO4 tạo tối đa 2 mol NH3 nếu chất kiềm đủ."
+        },
+        {
+          "id": "a8-l4-c8",
+          "heading": "Nâng cao: Dạng đạm và đường thất thoát",
+          "body": "Urê sau khi vào đất không giữ nguyên mãi mà dần chuyển thành các dạng chứa NH4+ rồi NO3-. NH4+ dễ bị chuyển thành NH3 ở môi trường kiềm; còn NO3- tan và di chuyển theo nước nên dễ bị rửa trôi khi mưa hoặc tưới quá nhiều.\n\nVì vậy, phân đạm thường được chia lần bón và nên vùi hoặc đưa vào vùng rễ thay vì rải lâu trên mặt đất khô. Đây không phải mẹo ghi nhớ đơn thuần: cách dùng xuất phát từ tính tan, tính bay hơi và sự chuyển hoá của các dạng nitơ."
+        },
+        {
+          "id": "a8-l4-c9",
+          "heading": "Nâng cao: Hoá học của việc bón vôi",
+          "body": "Đất chua có nồng độ H+ cao. CaCO3 làm giảm độ chua theo phương trình ion: CaCO3 + 2H+ -> Ca2+ + CO2 + H2O. Với vôi sống, trước hết xảy ra CaO + H2O -> Ca(OH)2, rồi OH- trung hoà H+: H+ + OH- -> H2O.\n\nVôi là chất cải tạo đất, không thay thế phân NPK. Bài toán nhận biết cần phân biệt hai vai trò này: CaCO3 có thể vừa cung cấp Ca vừa làm giảm độ chua, nhưng không phải phân đạm, lân hay kali."
+        },
+        {
+          "id": "a8-l4-c10",
+          "heading": "Nâng cao: Dinh dưỡng trung lượng và vi lượng",
+          "body": "Ngoài N, P, K, cây còn cần các nguyên tố trung lượng như Ca, Mg, S và vi lượng như B, Zn, Fe, Mn, Cu, Mo. Từ “vi lượng” chỉ lượng cây cần nhỏ, không có nghĩa là chúng vô ích: thiếu một nguyên tố vi lượng vẫn có thể làm cây sinh trưởng kém.\n\nKhông được suy luận “bón càng nhiều càng tốt”. Chẩn đoán loại đất, biểu hiện thiếu dinh dưỡng hoặc kết quả phân tích đất mới quyết định có cần bổ sung hay không; bón thừa muối khoáng có thể làm tăng nồng độ dung dịch đất và gây bất lợi cho rễ."
+        },
+        {
+          "id": "a8-l4-c11",
+          "heading": "Nâng cao: Chọn cách bón theo tính chất ion",
+          "body": "Khi lập luận về bón lót và bón thúc, hãy gắn với tính chất hoá học thay vì học thuộc. Phân lân thường được bón gần vùng rễ từ sớm vì ion photphat ít di chuyển trong đất; phân đạm dễ thất thoát hoặc bị rửa trôi nên thường chia lượng bón theo giai đoạn cây cần; phân kali cũng cần cân đối với N và P.\n\nMột phương án bón hợp lí phải trả lời đồng thời: cây đang cần nguyên tố nào, đất có tính chua hay kiềm ra sao, dạng phân có nguy cơ bay hơi hoặc rửa trôi không. Đây là cách giải thích được cả câu hỏi lí thuyết lẫn tình huống thực tiễn trong đề HSG."
         }
       ],
       "questions": [
@@ -729,6 +884,36 @@
           "id": "a8-l5-c3",
           "heading": "Dùng bảo toàn nhanh",
           "body": "Bảo toàn nguyên tố và điện tích giúp rút ngắn lời giải. Với hỗn hợp cacbonat, tổng số mol CO2 sau khi phản ứng hết bằng tổng số mol gốc CO3 tương ứng đã bị axit phân huỷ."
+        },
+        {
+          "id": "a8-l5-c4",
+          "heading": "Nâng cao: Một lần trộn có thể tạo hai kết tủa",
+          "body": "Đừng mặc định hai dung dịch chỉ cho một chất rắn. Khi trộn FeSO4 với Ba(OH)2, cả hai cặp ion đều tạo chất ít tan: FeSO4 + Ba(OH)2 -> Fe(OH)2 + BaSO4. Phương trình ion rút gọn tương ứng cho thấy đồng thời có Fe2+ + 2OH- -> Fe(OH)2 và Ba2+ + SO4^2- -> BaSO4.\n\nNếu phản ứng hoàn toàn từ x mol FeSO4 và Ba(OH)2 vừa đủ, tạo x mol Fe(OH)2 và x mol BaSO4. Khối lượng kết tủa phải là tổng khối lượng của cả hai chất: m = x × (90 + 233), không được chỉ tính một kết tủa. Trước khi lập tỉ lệ, hãy kiểm tra toàn bộ các cation và anion có khả năng tạo chất không tan."
+        },
+        {
+          "id": "a8-l5-c5",
+          "heading": "Nâng cao: Suy ngược lượng muối từ kết tủa",
+          "body": "Khi thuốc thử được dùng dư và chỉ có một ion của mẫu bị kết tủa chọn lọc, khối lượng kết tủa có thể cho trực tiếp lượng ion đó. Ví dụ, BaCl2 dư thu hết SO4^2- thành BaSO4 nên n(SO4^2-) = n(BaSO4) và m(SO4^2-) = 96/233 x m(BaSO4). Điều kiện “dư” rất quan trọng: nếu Ba2+ thiếu thì số mol BaSO4 chỉ phản ánh lượng Ba2+ đã thêm.\n\nVới hỗn hợp Na2SO4 và NaCl, cho BaCl2 dư rồi lọc, n(Na2SO4) = n(BaSO4) theo tỉ lệ 1 : 1. Từ đó tính m(Na2SO4), lấy khối lượng hỗn hợp ban đầu trừ đi sẽ được m(NaCl). Đây là cách lập hệ ngầm: kết tủa cung cấp một dữ kiện độc lập, còn bảo toàn khối lượng cung cấp dữ kiện còn lại."
+        },
+        {
+          "id": "a8-l5-c6",
+          "heading": "Nâng cao: Loại ion gây nhiễu trước khi định lượng",
+          "body": "Dung dịch cùng chứa CO3^2- và SO4^2- đều có thể tạo kết tủa trắng với Ba2+, nên không được thêm BaCl2 ngay nếu cần xác định riêng sunfat. Hãy axit hoá bằng HCl loãng đến khi hết sủi bọt để chuyển CO3^2- thành CO2 và H2O, rồi mới cho BaCl2 dư. Kết tủa thu được khi đó là BaSO4.\n\nThứ tự thuốc thử chính là một phần của lời giải: axit phải được dùng trước để loại cacbonat, còn BaSO4 không tan trong HCl loãng nên vẫn có thể kết tủa sau đó. Kĩ thuật này tránh gán nhầm tổng khối lượng BaCO3 và BaSO4 cho riêng ion SO4^2-."
+        },
+        {
+          "id": "a8-l5-c7",
+          "heading": "Nâng cao: Hỗn hợp muối gặp axit tạo hai khí",
+          "body": "Với hỗn hợp Na2CO3 và FeS tác dụng HCl dư, hai phản ứng đều tiêu thụ 2 mol HCl trên 1 mol muối nhưng tạo khí khác nhau: Na2CO3 + 2HCl -> 2NaCl + CO2 + H2O; FeS + 2HCl -> FeCl2 + H2S. Gọi số mol hai muối lần lượt là x, y thì tổng số mol khí là x + y; khối lượng hỗn hợp ban đầu cho phương trình 106x + 88y = m.\n\nNếu chỉ biết thể tích hỗn hợp khí ở đktc, dùng n(khí) = V/22,4 để lập phương trình x + y. Không được xem toàn bộ khí là CO2; H2S là khí độc, có mùi trứng thối và không được nhận biết bằng cách ngửi trực tiếp. Khi đề cho dữ kiện hấp thụ hoặc khối lượng từng khí, hãy quy về đúng khí mà thuốc thử giữ lại."
+        },
+        {
+          "id": "a8-l5-c8",
+          "heading": "Nâng cao: Khối lượng dung dịch sau khi lọc kết tủa",
+          "body": "Trộn các dung dịch chỉ tạo kết tủa rồi lọc, khối lượng nước lọc bằng tổng khối lượng các dung dịch ban đầu trừ khối lượng kết tủa đã tách: m(nước lọc) = m(các dung dịch ban đầu) - m(kết tủa). Muối tan vẫn ở trong nước lọc nên không được trừ khối lượng của chúng lần nữa.\n\nCông thức trên chỉ dùng khi không có khí thoát ra, không làm bay hơi dung môi và không làm đổ mất mẫu. Nếu phản ứng còn giải phóng khí, khối lượng hệ sau phản ứng phải trừ thêm khối lượng khí đã thoát. Tách rõ “khối lượng cả hệ” và “khối lượng phần dung dịch sau lọc” giúp tránh nhầm trong bài toán nhiều bước."
+        },
+        {
+          "id": "a8-l5-c9",
+          "heading": "Nâng cao: Phân tích hỗn hợp hai kết tủa bằng axit",
+          "body": "Hỗn hợp BaCO3 và BaSO4 là dạng biện luận điển hình vì đều trắng nhưng phản ứng khác nhau với HCl loãng. Cho HCl dư: BaCO3 + 2HCl -> BaCl2 + CO2 + H2O, còn BaSO4 không tan. Sau phản ứng, chất rắn còn lại là BaSO4; n(CO2) chính là n(BaCO3) ban đầu.\n\nVì vậy, có thể dùng khối lượng cặn sau phản ứng để tìm BaSO4 và dùng lượng CO2 để tìm BaCO3, hoặc dùng một trong hai dữ kiện kết hợp với khối lượng hỗn hợp ban đầu. Sai lầm thường gặp là coi khối lượng chất rắn giảm bằng khối lượng CO2: thực ra toàn bộ BaCO3 đã chuyển thành BaCl2 tan, CO2 và H2O nên khối lượng cặn giảm đúng bằng khối lượng BaCO3 ban đầu."
         }
       ],
       "questions": [

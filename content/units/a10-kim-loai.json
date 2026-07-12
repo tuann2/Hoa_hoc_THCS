@@ -22,12 +22,52 @@
         {
           "id": "a10-l1-c2",
           "heading": "Tính chất hoá học chung của kim loại",
-          "body": "Tác dụng với phi kim (oxi, clo...) tạo oxit hoặc muối.\nTác dụng với dung dịch axit (kim loại đứng trước H) tạo muối và khí H2.\nTác dụng với dung dịch muối: kim loại mạnh hơn đẩy được kim loại yếu hơn ra khỏi dung dịch muối của nó."
+          "body": "Tác dụng với phi kim (oxi, clo...) tạo oxit hoặc muối.\nTác dụng với dung dịch axit (kim loại đứng trước H) tạo muối và khí H2.\nTác dụng với dung dịch muối: kim loại mạnh hơn đẩy được kim loại yếu hơn ra khỏi dung dịch muối của nó.\n\nVề bản chất, nguyên tử kim loại có xu hướng nhường electron để thành ion dương, nên kim loại thường là chất khử. Chẳng hạn trong phản ứng Zn + CuSO4 -> ZnSO4 + Cu, Zn nhường electron cho Cu2+; Zn bị oxi hoá thành Zn2+, còn Cu2+ bị khử thành Cu."
         },
         {
           "id": "a10-l1-c3",
           "heading": "Dãy hoạt động hoá học của kim loại",
-          "body": "K, Na, Mg, Al, Zn, Fe, Pb, (H), Cu, Ag, Au — mức độ hoạt động giảm dần từ trái sang phải.\nKim loại đứng trước đẩy được kim loại đứng sau ra khỏi dung dịch muối; kim loại đứng trước Mg phản ứng với nước ở nhiệt độ thường; kim loại đứng trước H phản ứng với axit (HCl, H2SO4 loãng) giải phóng H2."
+          "body": "K, Na, Mg, Al, Zn, Fe, Pb, (H), Cu, Ag, Au — mức độ hoạt động giảm dần từ trái sang phải.\nKim loại đứng trước đẩy được kim loại đứng sau ra khỏi dung dịch muối; kim loại đứng trước Mg phản ứng với nước ở nhiệt độ thường; kim loại đứng trước H phản ứng với axit (HCl, H2SO4 loãng) giải phóng H2.\n\nH chỉ là mốc so sánh, không phải kim loại. Dãy cho biết khả năng phản ứng trong những điều kiện thông dụng; khi đề nêu axit đặc, chất oxi hoá, màng oxit hoặc nhiệt độ, phải xét thêm điều kiện đó, không áp dụng máy móc một quy tắc của dãy."
+        },
+        {
+          "id": "a10-l1-c4",
+          "heading": "Nâng cao: Dãy hoạt động dưới góc nhìn electron",
+          "body": "Kim loại càng ở bên trái dãy càng dễ nhường electron, nên tính khử càng mạnh. Với một cặp Mn+/M, kim loại M là chất khử vì có thể nhường electron; ion Mn+ có thể nhận electron nên đóng vai trò chất oxi hoá.\n\nVí dụ: Zn -> Zn2+ + 2e và Cu2+ + 2e -> Cu. Cộng hai quá trình thu được Zn + Cu2+ -> Zn2+ + Cu. Cách tách electron giúp kiểm tra đúng chiều phản ứng thế: electron phải đi từ kim loại mạnh hơn sang ion của kim loại yếu hơn, chứ không đi theo chiều ngược lại."
+        },
+        {
+          "id": "a10-l1-c5",
+          "heading": "Nâng cao: Kim loại tác dụng với nước và hơi nước",
+          "body": "Ở nhiệt độ thường, K, Na và Ca phản ứng mạnh với nước, tạo bazơ và H2. Mg phản ứng rất chậm với nước lạnh nhưng rõ hơn với nước nóng; Al, Zn, Fe không phản ứng đáng kể với nước lạnh do hoạt tính không đủ hoặc bề mặt được bảo vệ.\n\nKhi đun nóng với hơi nước, một số kim loại vẫn phản ứng tạo oxit và H2, thí dụ 3Fe + 4H2O -> Fe3O4 + 4H2. Vì vậy phải đọc chính xác đề cho nước lạnh, nước nóng hay hơi nước: chỉ thay đổi điều kiện đã có thể làm thay đổi kết luận và sản phẩm."
+        },
+        {
+          "id": "a10-l1-c6",
+          "heading": "Nâng cao: Giới hạn của quy tắc kim loại đứng trước H",
+          "body": "Quy tắc “đứng trước H thì giải phóng H2” được dùng trực tiếp với HCl và H2SO4 loãng. Không suy rộng nó thành “mọi axit”: Cu, Ag đứng sau H vẫn có thể bị axit có tính oxi hoá tác dụng, nhưng thường không sinh H2; sản phẩm phụ thuộc bản chất và nồng độ axit.\n\nNgược lại, Pb đứng trước H nhưng phản ứng với HCl hoặc H2SO4 loãng có thể chậm vì lớp PbCl2 hoặc PbSO4 ít tan bám trên bề mặt. Al và Fe có thể bị thụ động trong HNO3 đặc nguội hoặc H2SO4 đặc nguội. Dãy hoạt động dự báo xu hướng, còn hiện tượng thực tế phải xét cả màng bảo vệ và môi trường phản ứng."
+        },
+        {
+          "id": "a10-l1-c7",
+          "heading": "Nâng cao: Điều kiện để phản ứng thế trong dung dịch muối xảy ra",
+          "body": "Muốn viết phản ứng kim loại + dung dịch muối theo dãy hoạt động, trước hết muối phải tan để có ion kim loại trong dung dịch; kim loại đưa vào phải đứng trước kim loại trong muối. Sau đó mới lập phương trình theo đúng hoá trị, ví dụ 2Al + 3CuSO4 -> Al2(SO4)3 + 3Cu.\n\nKhông áp dụng kiểu phản ứng này cho K, Na, Ca trong dung dịch nước: các kim loại đó phản ứng với nước trước, nên không thể chỉ viết kim loại đẩy Cu khỏi CuSO4. Lớp oxit bền, lượng dung dịch quá ít hoặc sự tạo lớp chất rắn bám cũng có thể làm phản ứng chậm hay dừng trước khi phản ứng hết."
+        },
+        {
+          "id": "a10-l1-c8",
+          "heading": "Nâng cao: Khối lượng thanh kim loại sau phản ứng thế",
+          "body": "Khi nhúng thanh kim loại A vào dung dịch chứa ion B và B bám lại hoàn toàn trên thanh, độ biến thiên khối lượng thanh bằng khối lượng B bám trừ khối lượng A tan. Với phương trình aA + bB^n+ -> aA^m+ + bB, gọi x là số mol A đã phản ứng thì số mol B bám là bx/a và delta m(thanh) = x[bM(B)/a - M(A)].\n\nVới Fe + CuSO4 -> FeSO4 + Cu, 1 mol Fe tan làm 1 mol Cu bám; thanh tăng 64 - 56 = 8 g. Dấu của delta m rất quan trọng: thanh có thể tăng, giảm hoặc không đổi; không được mặc định kim loại bám vào thì khối lượng thanh luôn tăng."
+        },
+        {
+          "id": "a10-l1-c9",
+          "heading": "Nâng cao: Xác định chất rắn sau phản ứng kim loại – muối",
+          "body": "Trước khi tính khối lượng chất rắn, phải so sánh số mol theo phương trình để tìm chất giới hạn. Nếu kim loại ban đầu dư, chất rắn cuối gồm kim loại chưa phản ứng và kim loại mới bám. Nếu dung dịch muối dư, kim loại đưa vào có thể hết và chất rắn chỉ là kim loại được giải phóng; khi vừa đủ cũng chỉ còn kim loại mới bám.\n\nVí dụ với Fe và CuSO4, không thể luôn lấy khối lượng Cu làm khối lượng chất rắn cuối. Khi Fe dư, phải tính m(rắn cuối) = m(Fe còn) + m(Cu tạo thành). Cách liệt kê thành phần rắn trước rồi mới đặt phép tính tránh nhầm rất thường gặp trong bài toán nhúng thanh kim loại."
+        },
+        {
+          "id": "a10-l1-c10",
+          "heading": "Nâng cao: Biện luận kim loại bằng thí nghiệm phản ứng thế",
+          "body": "Mỗi hiện tượng phản ứng hoặc không phản ứng cho một bất đẳng thức về vị trí trong dãy. Nếu kim loại X đẩy được Cu khỏi CuSO4 thì X đứng trước Cu; nếu X không đẩy được Zn khỏi ZnSO4 thì X đứng sau hoặc trùng với Zn. Giao các điều kiện sẽ thu hẹp vị trí của X trong dãy.\n\nKhi dùng kết quả “không phản ứng”, phải loại trừ các nguyên nhân khác như muối không tan, kim loại có màng bảo vệ hoặc kim loại phản ứng mạnh với nước. Vì vậy đề HSG thường nêu rõ dung dịch muối, điều kiện nhúng và hiện tượng để phép suy luận từ dãy hoạt động là hợp lệ."
+        },
+        {
+          "id": "a10-l1-c11",
+          "heading": "Nâng cao: Hỗn hợp muối và chiến lược giải bài tập",
+          "body": "Với một kim loại cho vào dung dịch chứa nhiều muối, dãy hoạt động cho biết ion nào có thể bị kim loại đó khử và là công cụ biện luận thứ tự ưu tiên mặc định ở THCS: kim loại mạnh khử ion có tính oxi hoá mạnh nhất trước. Tuy nhiên, dãy không tự cung cấp lượng từng phản ứng hay thành phần chất rắn cuối; muốn kết luận duy nhất phải dùng thêm dữ kiện số mol, khối lượng, nồng độ và hiện tượng của đề.\n\nQuy trình an toàn là: viết các phản ứng có thể xảy ra trong điều kiện đề; xếp các ion mà kim loại khử được theo thứ tự tính oxi hoá giảm dần; tính lần lượt từng chặng, dùng bảo toàn nguyên tố, khối lượng và điều kiện chất dư để loại nghiệm không phù hợp; cuối cùng kiểm tra lại các ion và chất rắn còn lại. Nếu đề cho điều kiện hoặc quy ước đặc biệt thì phải ưu tiên dữ kiện đó."
         }
       ],
       "questions": [
@@ -187,17 +227,57 @@
         {
           "id": "a10-l2-c1",
           "heading": "Nhôm (Al)",
-          "body": "Nhôm là kim loại nhẹ, màu trắng bạc, dẫn điện dẫn nhiệt tốt, có lớp Al2O3 mỏng bảo vệ bề mặt.\nTác dụng với dung dịch axit: 2Al + 3H2SO4 -> Al2(SO4)3 + 3H2\nTác dụng với dung dịch kiềm (vì Al2O3, Al(OH)3 lưỡng tính): 2Al + 2NaOH + 2H2O -> 2NaAlO2 + 3H2\nPhản ứng nhiệt nhôm: 2Al + Fe2O3 (nhiệt độ) -> Al2O3 + 2Fe"
+          "body": "Nhôm là kim loại nhẹ, màu trắng bạc, dẫn điện dẫn nhiệt tốt, có lớp Al2O3 mỏng bảo vệ bề mặt.\nTác dụng với dung dịch axit: 2Al + 3H2SO4 -> Al2(SO4)3 + 3H2\nTác dụng với dung dịch kiềm (vì Al2O3, Al(OH)3 lưỡng tính): 2Al + 2NaOH + 2H2O -> 2NaAlO2 + 3H2\nPhản ứng nhiệt nhôm: 2Al + Fe2O3 (nhiệt độ) -> Al2O3 + 2Fe\n\nLớp Al2O3 rất mỏng nhưng bền, ngăn O2 và nước tiếp xúc với kim loại nên nhôm bền trong không khí. Khi lớp này bị axit hoặc kiềm phá huỷ, Al lộ ra và tiếp tục phản ứng; vì thế không được suy từ vẻ ngoài “không gỉ” rằng Al không hoạt động hoá học."
         },
         {
           "id": "a10-l2-c2",
           "heading": "Sắt (Fe)",
-          "body": "Sắt có ánh kim màu trắng xám, dẫn điện dẫn nhiệt tốt, có tính nhiễm từ. Sắt có 2 hoá trị II và III trong hợp chất.\nVới axit và kim loại yếu hơn: Fe + 2HCl -> FeCl2 + H2 (tạo hợp chất Fe hoá trị II)\nVới phi kim mạnh: 2Fe + 3Cl2 -> 2FeCl3 (tạo hợp chất Fe hoá trị III)"
+          "body": "Sắt có ánh kim màu trắng xám, dẫn điện dẫn nhiệt tốt, có tính nhiễm từ. Sắt có 2 hoá trị II và III trong hợp chất.\nVới axit và kim loại yếu hơn: Fe + 2HCl -> FeCl2 + H2 (tạo hợp chất Fe hoá trị II)\nVới phi kim mạnh: 2Fe + 3Cl2 -> 2FeCl3 (tạo hợp chất Fe hoá trị III)\n\nSắt kim loại là chất khử: Fe có thể nhường 2e để thành Fe2+ hoặc, khi gặp chất oxi hoá mạnh như Cl2, nhường 3e để thành Fe3+. Vì vậy muốn dự đoán muối sắt, phải xét chất phản ứng và điều kiện chứ không chỉ nhớ một hoá trị cố định."
         },
         {
           "id": "a10-l2-c3",
           "heading": "Hợp kim gang – thép",
-          "body": "Gang là hợp kim của Fe với C (2-5% C) và một số nguyên tố khác, cứng và giòn. Sản xuất gang trong lò cao bằng cách khử Fe2O3 bằng CO.\nThép là hợp kim của Fe với C (dưới 2% C), đàn hồi và bền hơn gang. Thép được sản xuất bằng cách oxi hoá bớt cacbon và tạp chất trong gang."
+          "body": "Gang là hợp kim của Fe với C (2-5% C) và một số nguyên tố khác, cứng và giòn. Sản xuất gang trong lò cao bằng cách khử Fe2O3 bằng CO.\nThép là hợp kim của Fe với C (dưới 2% C), đàn hồi và bền hơn gang. Thép được sản xuất bằng cách oxi hoá bớt cacbon và tạp chất trong gang.\n\nCacbon xen giữa các lớp nguyên tử sắt, làm các lớp khó trượt lên nhau: độ cứng tăng nhưng độ dẻo giảm. Do đó gang nhiều C dễ đúc nhưng giòn; thép ít C hơn dẻo dai hơn. Tính chất thực tế còn chịu ảnh hưởng của các nguyên tố hợp kim và quá trình nhiệt luyện."
+        },
+        {
+          "id": "a10-l2-c4",
+          "heading": "Nâng cao: Tính lưỡng tính của hợp chất nhôm",
+          "body": "Al2O3 và Al(OH)3 đều phản ứng được với axit lẫn kiềm mạnh: Al2O3 + 6HCl -> 2AlCl3 + 3H2O; Al2O3 + 2NaOH -> 2NaAlO2 + H2O. Tương tự, Al(OH)3 + 3HCl -> AlCl3 + 3H2O và Al(OH)3 + NaOH -> NaAlO2 + 2H2O.\n\nKhi gặp axit, chúng thể hiện tính bazơ; khi gặp kiềm, chúng thể hiện tính axit. Trong dung dịch nước, sản phẩm aluminat có thể được biểu diễn theo dạng NaAlO2 hoặc dạng phức hiđroxoaluminat; ở mức THCS, cần dùng nhất quán công thức theo quy ước đề bài."
+        },
+        {
+          "id": "a10-l2-c5",
+          "heading": "Nâng cao: Thụ động hoá nhôm và cách đọc điều kiện phản ứng",
+          "body": "Ở nhiệt độ thường, Al có thể trở nên thụ động trong HNO3 đặc nguội hoặc H2SO4 đặc nguội vì bề mặt hình thành màng bảo vệ rất bền. Đây là ngoại lệ theo điều kiện, không phủ định việc Al đứng trước H và phản ứng với HCl hoặc H2SO4 loãng.\n\nKhi giải bài, phải ghi đồng thời bản chất và trạng thái của axit: “H2SO4 loãng”, “H2SO4 đặc nguội” là hai tình huống khác nhau. Không tự viết Al + axit -> muối + H2 nếu đề đã nêu môi trường gây thụ động hoá."
+        },
+        {
+          "id": "a10-l2-c6",
+          "heading": "Nâng cao: Bản chất và tỉ lệ khối lượng của phản ứng nhiệt nhôm",
+          "body": "Trong 2Al + Fe2O3 -> Al2O3 + 2Fe, Al bị oxi hoá từ 0 lên +3, còn Fe3+ trong Fe2O3 bị khử về Fe. Phản ứng toả nhiệt rất mạnh; nhiệt ban đầu chỉ để mồi, sau khi cháy phản ứng tự cung cấp nhiệt và có thể tạo Fe nóng chảy. Vì nguy hiểm, đây chỉ là kiến thức nguyên lí, không tự tiến hành thí nghiệm.\n\nTheo phương trình, 54 g Al phản ứng vừa đủ với 160 g Fe2O3, tạo 112 g Fe. Với chất kia dư và hiệu suất 100%, có thể dùng trực tiếp tỉ lệ m(Al) : m(Fe2O3) : m(Fe) = 54 : 160 : 112; nếu đề có hiệu suất hoặc chất dư, phải tìm chất giới hạn trước."
+        },
+        {
+          "id": "a10-l2-c7",
+          "heading": "Nâng cao: Hoá trị của sắt phụ thuộc chất oxi hoá",
+          "body": "Sắt không luôn cho cùng một sản phẩm. Với axit không có tính oxi hoá mạnh: Fe + 2HCl -> FeCl2 + H2; đun nóng với lưu huỳnh: Fe + S -> FeS. Khi cháy trong O2, sản phẩm thường là Fe3O4: 3Fe + 2O2 -> Fe3O4; với Cl2 dư tạo FeCl3: 2Fe + 3Cl2 -> 2FeCl3.\n\nMẹo biện luận là xác định trước chất nào nhận electron. Chất oxi hoá càng mạnh càng có khả năng đưa Fe lên mức oxi hoá cao hơn; do đó không thể chọn FeCl2 chỉ vì phản ứng bắt đầu từ Fe kim loại."
+        },
+        {
+          "id": "a10-l2-c8",
+          "heading": "Nâng cao: Ba oxit quan trọng của sắt",
+          "body": "FeO chứa Fe(II), Fe2O3 chứa Fe(III), còn Fe3O4 đồng thời có Fe(II) và Fe(III). Dấu hiệu này giúp dự đoán muối khi cho oxit tan trong axit: FeO + 2HCl -> FeCl2 + H2O; Fe2O3 + 6HCl -> 2FeCl3 + 3H2O; Fe3O4 + 8HCl -> FeCl2 + 2FeCl3 + 4H2O.\n\nVì vậy Fe3O4 không nên xem là oxit của chỉ một hoá trị. Khi bài cho hỗn hợp oxit sắt, trước hết hãy xác định số mol Fe và số mol O, hoặc viết các phản ứng riêng rồi dùng bảo toàn nguyên tố; tránh gộp tuỳ tiện mọi oxit thành Fe2O3."
+        },
+        {
+          "id": "a10-l2-c9",
+          "heading": "Nâng cao: Vai trò từng chất trong lò cao luyện gang",
+          "body": "Quặng sắt, than cốc và đá vôi được nạp từ đỉnh lò; không khí nóng thổi từ dưới lên. Than cốc vừa cung cấp nhiệt vừa tạo CO là chất khử: C + O2 -> CO2, rồi CO2 + C -> 2CO; Fe2O3 + 3CO -> 2Fe + 3CO2.\n\nĐá vôi không khử quặng. Nó tạo chất chảy để loại tạp SiO2: CaCO3 (nhiệt độ) -> CaO + CO2; CaO + SiO2 -> CaSiO3. Xỉ CaSiO3 nhẹ hơn gang lỏng nên nổi lên trên, tách ra được và đồng thời hạn chế gang tiếp xúc với không khí."
+        },
+        {
+          "id": "a10-l2-c10",
+          "heading": "Nâng cao: Từ gang đến thép",
+          "body": "Gang lỏng từ lò cao còn nhiều C và tạp chất như Si, Mn, P, S. Khi thổi O2, các chất này bị oxi hoá; oxit tạp chất kết hợp với chất tạo xỉ để tách khỏi kim loại. Mục tiêu không phải loại sạch mọi cacbon mà điều chỉnh lượng C xuống mức phù hợp với loại thép cần sản xuất.\n\nVì thế, lò cao chủ yếu tạo gang, còn luyện thép là công đoạn tinh luyện tiếp theo. Nếu đề hỏi “chất khử trong lò cao” đáp án là CO; nếu hỏi “quá trình chuyển gang thành thép”, ý chính là oxi hoá bớt C và tạp chất."
+        },
+        {
+          "id": "a10-l2-c11",
+          "heading": "Nâng cao: Tách hỗn hợp nhôm và sắt bằng kiềm",
+          "body": "Có thể tách Al khỏi Fe bằng dung dịch NaOH dư ở điều kiện thường: Al tan, giải phóng H2 và tạo aluminat, còn Fe không tan đáng kể. Lọc hỗn hợp sau phản ứng: chất rắn trên giấy lọc là Fe; dung dịch lọc chứa hợp chất aluminat.\n\nTrình tự giải dạng bài này là viết phản ứng của Al trước, xác định chất rắn còn lại rồi mới tính toán. Không dùng HCl để tách vì cả Al và Fe đều phản ứng với HCl loãng, đều làm thay đổi thành phần hỗn hợp rắn."
         }
       ],
       "questions": [
@@ -369,17 +449,57 @@
         {
           "id": "a10-l3-c1",
           "heading": "Sự ăn mòn kim loại",
-          "body": "Sự ăn mòn kim loại là sự phá huỷ kim loại, hợp kim do tác dụng hoá học của môi trường xung quanh (oxi, hơi nước, các chất trong môi trường).\nVí dụ: sắt bị gỉ tạo thành Fe2O3.nH2O (gỉ sắt)."
+          "body": "Sự ăn mòn kim loại là sự phá huỷ kim loại, hợp kim do tác dụng hoá học của môi trường xung quanh (oxi, hơi nước, các chất trong môi trường).\nVí dụ: sắt bị gỉ tạo thành Fe2O3.nH2O (gỉ sắt).\n\nĂn mòn không chỉ làm vật mất vẻ sáng bóng mà còn làm mỏng tiết diện, giảm độ bền và có thể gây thủng, gãy. Với sắt thép, lớp gỉ xốp, dễ bong nên không che kín được bề mặt; khi lớp gỉ nứt hoặc rơi đi, phần sắt mới lại tiếp tục bị ăn mòn."
         },
         {
           "id": "a10-l3-c2",
           "heading": "Các yếu tố ảnh hưởng đến sự ăn mòn",
-          "body": "Sự ăn mòn xảy ra nhanh hơn trong môi trường ẩm, có nhiều oxi, có muối (như nước biển), nhiệt độ cao, hoặc khi kim loại tiếp xúc với kim loại yếu hơn (ăn mòn điện hoá)."
+          "body": "Sự ăn mòn xảy ra nhanh hơn trong môi trường ẩm, có nhiều oxi, có muối (như nước biển), nhiệt độ cao, hoặc khi kim loại tiếp xúc với kim loại yếu hơn (ăn mòn điện hoá).\n\nMuối, axit hoặc kiềm tan làm dung dịch dẫn điện tốt hơn nên thường thúc đẩy ăn mòn điện hoá. Khi hai kim loại khác nhau tiếp xúc trong môi trường có chất điện li, kim loại hoạt động mạnh hơn thường là nơi bị oxi hoá và bị ăn mòn; vì vậy không nên ghép trực tiếp sắt với đồng trong chỗ ẩm mà không có biện pháp cách điện hay bảo vệ thích hợp."
         },
         {
           "id": "a10-l3-c3",
           "heading": "Biện pháp bảo vệ kim loại khỏi ăn mòn",
-          "body": "Ngăn không cho kim loại tiếp xúc với môi trường (sơn, mạ, bôi dầu mỡ); chế tạo hợp kim ít bị ăn mòn (thép không gỉ); dùng phương pháp bảo vệ điện hoá (gắn kim loại hoạt động mạnh hơn, ví dụ kẽm, vào vỏ tàu thép để bảo vệ)."
+          "body": "Ngăn không cho kim loại tiếp xúc với môi trường (sơn, mạ, bôi dầu mỡ); chế tạo hợp kim ít bị ăn mòn (thép không gỉ); dùng phương pháp bảo vệ điện hoá (gắn kim loại hoạt động mạnh hơn, ví dụ kẽm, vào vỏ tàu thép để bảo vệ).\n\nChọn biện pháp phải dựa vào môi trường và khả năng lớp bảo vệ bị xước. Với chi tiết ngập nước biển hoặc chôn trong đất ẩm, sơn đơn thuần dễ hỏng theo thời gian nên thường phối hợp sơn với bảo vệ điện hoá."
+        },
+        {
+          "id": "a10-l3-c4",
+          "heading": "Nâng cao: Phân biệt ăn mòn hoá học và ăn mòn điện hoá",
+          "body": "Ăn mòn hoá học là kim loại phản ứng trực tiếp với chất trong môi trường, thường gặp khi kim loại tiếp xúc khí khô ở nhiệt độ cao; electron được chuyển ngay tại cùng vị trí phản ứng. Ví dụ, sắt bị oxi hoá khi nung nóng trong oxi.\n\nĂn mòn điện hoá xảy ra khi có môi trường chất điện li như nước ẩm, dung dịch muối hoặc axit và xuất hiện hai vùng có vai trò khác nhau. Ở vùng anot, kim loại nhường electron và bị tan; electron chuyển đến vùng catot, nơi chất oxi hoá trong môi trường nhận electron. Dạng này rất quan trọng với sắt thép trong không khí ẩm và nước biển."
+        },
+        {
+          "id": "a10-l3-c5",
+          "heading": "Nâng cao: Cơ chế điện hoá của gỉ sắt",
+          "body": "Trên bề mặt sắt ẩm có thể hình thành các vi pin. Ở anot: Fe -> Fe2+ + 2e. Ở vùng catot có oxi hoà tan, trong môi trường trung tính hoặc kiềm: O2 + 2H2O + 4e -> 4OH-. Ion Fe2+ kết hợp với OH- tạo Fe(OH)2; chất này tiếp tục bị oxi hoá, biến đổi qua các hiđroxit/oxit ngậm nước và cuối cùng cho lớp gỉ có thành phần gần đúng Fe2O3.nH2O.\n\nCác phương trình trên mô tả các bước chính, không có nghĩa mọi mẫu gỉ đều có đúng một công thức duy nhất. Thành phần gỉ thực tế phụ thuộc lượng nước, oxi, muối và thời gian ăn mòn."
+        },
+        {
+          "id": "a10-l3-c6",
+          "heading": "Nâng cao: Điều kiện cần cho ăn mòn điện hoá",
+          "body": "Muốn kết luận có ăn mòn điện hoá, cần nhận ra đồng thời: có hai vùng điện cực khác nhau (có thể là hai kim loại tiếp xúc, hoặc các vùng khác nhau trên cùng hợp kim), có tiếp xúc điện giữa chúng và có môi trường chất điện li nối các vùng. Chỉ đặt hai kim loại cạnh nhau trong không khí khô chưa đủ tạo một pin điện hoá hoạt động.\n\nCác vùng khác nhau trên một thanh kim loại cũng có thể tạo vi pin do tạp chất, chỗ thiếu oxi, ứng suất hoặc khác biệt cấu tạo. Vì vậy thép không thuần nhất vẫn có thể gỉ trong nước ẩm dù không hề nối với một kim loại thứ hai."
+        },
+        {
+          "id": "a10-l3-c7",
+          "heading": "Nâng cao: Cặp kim loại tiếp xúc và ảnh hưởng diện tích",
+          "body": "Trong cặp hai kim loại tiếp xúc ở môi trường điện li, kim loại hoạt động mạnh hơn là anot và thường bị ăn mòn, còn kim loại yếu hơn là catot. Ví dụ Fe tiếp xúc Cu trong nước muối: Fe là anot nên bị ăn mòn nhanh hơn.\n\nMức độ nguy hiểm còn phụ thuộc tỉ lệ diện tích. Một anot nhỏ nối với catot lớn phải cung cấp electron cho vùng catot rộng nên mật độ ăn mòn trên anot tăng mạnh. Vì thế một đinh tán thép nhỏ gắn vào tấm đồng lớn trong môi trường ẩm dễ hỏng hơn nhiều so với tình huống diện tích hai kim loại tương đương."
+        },
+        {
+          "id": "a10-l3-c8",
+          "heading": "Nâng cao: Mạ kẽm và mạ thiếc khi lớp mạ bị xước",
+          "body": "Kẽm đứng trước Fe nên khi lớp mạ kẽm trên thép bị xước và có nước điện li, Zn vẫn là anot, bị oxi hoá trước; sắt ở chỗ hở được bảo vệ phần nào. Đó là lí do tôn mạ kẽm phù hợp cho nhiều vật dụng ngoài trời.\n\nThiếc đứng sau Fe. Lớp thiếc còn nguyên vẹn vẫn cách li sắt với môi trường, nhưng nếu bị xước sâu trong chỗ ẩm, Fe có thể trở thành anot khi tiếp xúc Sn và bị ăn mòn nhanh ở vết xước. Không được kết luận mọi lớp mạ đều bảo vệ giống nhau sau khi bị hỏng."
+        },
+        {
+          "id": "a10-l3-c9",
+          "heading": "Nâng cao: Bảo vệ điện hoá bằng anot hi sinh",
+          "body": "Gắn Zn hoặc Mg vào kết cấu thép rồi để chúng tiếp xúc điện trong môi trường ẩm làm Zn hoặc Mg trở thành anot hi sinh: chúng nhường electron, còn thép nhận electron và khó bị oxi hoá hơn. Kim loại hi sinh phải đứng trước Fe trong dãy hoạt động và được nối điện tốt với phần thép cần bảo vệ.\n\nCác tấm Zn/Mg sẽ hao dần nên phải kiểm tra và thay định kì. Biện pháp này dùng cho vỏ tàu, đường ống, bồn chứa và kết cấu ngầm; nó không thay thế việc làm sạch, sơn phủ hay kiểm soát môi trường khi các biện pháp đó vẫn cần thiết."
+        },
+        {
+          "id": "a10-l3-c10",
+          "heading": "Nâng cao: Màng bảo vệ và hợp kim chống ăn mòn",
+          "body": "Al, Zn và Cr có thể tạo màng oxit bám chắc, khá kín trên bề mặt, làm chậm sự tiếp xúc tiếp theo của kim loại với O2 và nước. Trái lại, gỉ sắt thường xốp và không bền nên không có tác dụng bảo vệ lâu dài. Đây là lí do không thể chỉ dựa vào màu của lớp bề mặt để đoán kim loại đã được bảo vệ hay chưa.\n\nThép không gỉ chứa Cr tạo màng giàu oxit crom rất mỏng nhưng bền; Ni thường được thêm để tăng độ bền ăn mòn và cơ tính. “Không gỉ” không có nghĩa là không bị ăn mòn trong mọi điều kiện: môi trường có ion clorua đậm đặc, axit mạnh hoặc khe hở ẩm vẫn có thể làm vật liệu bị hư hại."
+        },
+        {
+          "id": "a10-l3-c11",
+          "heading": "Nâng cao: Cách biện luận thí nghiệm ăn mòn",
+          "body": "Khi so sánh các mẫu sắt, hãy tách từng biến số: có nước hay không, có oxi hoà tan hay không, dung dịch có chất điện li hay không, có tiếp xúc với kim loại khác hay không. Mẫu trong không khí khô thiếu nước; mẫu ngâm nước đã đun sôi và phủ dầu thiếu oxi; mẫu trong nước muối vừa có nước, oxi vừa có chất điện li nên thường gỉ nhanh.\n\nTrong bài HSG, hiện tượng “gỉ nhiều hơn” chỉ cho biết tốc độ ăn mòn lớn hơn, không tự xác định chính xác công thức mọi sản phẩm. Muốn giải thích thuyết phục phải nêu đúng điều kiện làm thay đổi quá trình anot, catot hoặc khả năng tiếp xúc của kim loại với môi trường."
         }
       ],
       "questions": [
@@ -576,12 +696,47 @@
         {
           "id": "a10-l4-c2",
           "heading": "Biện luận khi kim loại tác dụng với nhiều muối",
-          "body": "Nếu kim loại M tác dụng với dung dịch chứa 2 muối (ví dụ AgNO3 và Cu(NO3)2), M sẽ phản ứng lần lượt với muối của kim loại có tính oxi hoá mạnh hơn trước (Ag+ trước, rồi mới đến Cu2+)."
+          "body": "Nếu kim loại M tác dụng với dung dịch chứa 2 muối (ví dụ AgNO3 và Cu(NO3)2), M sẽ phản ứng lần lượt với muối của kim loại có tính oxi hoá mạnh hơn trước (Ag+ trước, rồi mới đến Cu2+).\n\nTrong bài toán THCS, “phản ứng trước” là quy ước biện luận để xét mức độ ưu tiên và tính lượng theo từng chặng, không phải khẳng định mọi hạt trong cốc chỉ va chạm theo một thời điểm tuyệt đối. Chỉ xếp thứ tự giữa các ion mà M thực sự có thể khử; nếu M hết ở một chặng thì dừng, không tự cho phản ứng với các muối còn lại."
         },
         {
           "id": "a10-l4-c3",
           "heading": "Xác định chất rắn sau phản ứng",
-          "body": "Tuỳ theo lượng kim loại M và các muối, chất rắn thu được có thể chỉ là 1 kim loại (nếu M vừa đủ hoặc dư ít), hoặc hỗn hợp nhiều kim loại (nếu M dư sau khi đã phản ứng hết với các muối theo đúng thứ tự)."
+          "body": "Tuỳ theo lượng kim loại M và các muối, chất rắn thu được có thể chỉ là kim loại mới sinh hoặc là hỗn hợp kim loại mới sinh với M còn dư. Với một muối của M': nếu M hết hoặc vừa đủ, chất rắn chỉ có M'; nếu M dư sau khi M' trong dung dịch đã hết, chất rắn gồm M' và M dư.\n\nKhông được kết luận chỉ từ chữ “dư ít”: chỉ cần M còn dù rất ít thì vẫn phải kể M vào chất rắn. Với nhiều muối, liệt kê từng kim loại đã được tạo ra ở các chặng đã xảy ra, rồi cuối cùng mới xét M ban đầu còn hay hết."
+        },
+        {
+          "id": "a10-l4-c4",
+          "heading": "Nâng cao: Bản chất oxi hoá – khử và phương trình ion rút gọn",
+          "body": "Phản ứng thế kim loại trong dung dịch là phản ứng oxi hoá – khử: kim loại mạnh nhường electron, còn ion kim loại yếu nhận electron. Ví dụ: Fe -> Fe2+ + 2e và 2Ag+ + 2e -> 2Ag; cộng hai bán phản ứng được Fe + 2Ag+ -> Fe2+ + 2Ag.\n\nNO3- hoặc SO4^2- thường chỉ là ion đi kèm trong dạng bài này, nên không xuất hiện trong phương trình ion rút gọn. Từ phương trình ion mới viết phương trình phân tử: Fe + 2AgNO3 -> Fe(NO3)2 + 2Ag. Cách làm này giúp tránh nhầm hệ số khi hai ion kim loại có điện tích khác nhau."
+        },
+        {
+          "id": "a10-l4-c5",
+          "heading": "Nâng cao: Ba tình huống lượng chất với một muối",
+          "body": "Xét phản ứng tổng quát bM + aB^b+ -> bM^a+ + aB, trong đó M nhường a electron mỗi nguyên tử, còn B^b+ nhận b electron mỗi ion. Tỉ lệ cần dùng là n(M) : n(B^b+) = b : a; phải so sánh số mol theo tỉ lệ này, không so sánh trực tiếp số mol ban đầu.\n\nNếu M thiếu, M tan hết và ion B^b+ còn dư; chất rắn chỉ có B mới sinh. Nếu vừa đủ, M cũng tan hết và chất rắn vẫn chỉ có B. Nếu M thừa, B^b+ hết còn M dư nên chất rắn là hỗn hợp B và M. Ví dụ Fe + 2Ag+ -> Fe2+ + 2Ag có tỉ lệ n(Fe) : n(Ag+) = 1 : 2."
+        },
+        {
+          "id": "a10-l4-c6",
+          "heading": "Nâng cao: Thuật toán biện luận dung dịch nhiều ion kim loại",
+          "body": "Trước hết, viết các ion kim loại có mặt và gạch những ion của kim loại mạnh hơn hoặc bằng M vì M không đẩy được chúng. Với các ion còn lại, xếp theo chiều tính oxi hoá giảm dần: ion của kim loại càng đứng sau trong dãy hoạt động càng được xét trước; chẳng hạn Ag+ trước Cu2+, rồi mới đến Fe2+.\n\nTính lần lượt từng chặng. Ở mỗi chặng, xác định chất giới hạn theo phương trình ion: nếu M hết thì kết thúc; nếu ion đang xét hết thì chuyển sang ion kế tiếp; nếu M còn sau tất cả các chặng thì M là chất rắn dư. Viết bảng “trước phản ứng – biến đổi – sau phản ứng” giúp không bỏ sót ion hoặc kim loại."
+        },
+        {
+          "id": "a10-l4-c7",
+          "heading": "Nâng cao: Độ tăng, giảm khối lượng thanh kim loại",
+          "body": "Khối lượng chất rắn thay đổi vì một lượng M tan vào dung dịch, đồng thời kim loại B bám lên. Với bM + aB^b+ -> bM^a+ + aB, gọi x là số mol M đã phản ứng thì số mol B bám là ax/b. Do đó khối lượng chất rắn thay đổi một lượng: Δm = x[aM(B)/b - M(M)]. Trong đó M(B), M(M) là khối lượng mol của B và M.\n\nVí dụ Fe + Cu2+ -> Fe2+ + Cu: mỗi 1 mol Fe phản ứng làm chất rắn tăng 64 - 56 = 8 g. Với Fe + 2Ag+ -> Fe2+ + 2Ag, mỗi 1 mol Fe phản ứng làm tăng 2 x 108 - 56 = 160 g. Công thức vẫn dùng được khi Fe còn dư, vì phần Fe không phản ứng có mặt ở cả trước và sau nên tự triệt tiêu khi tính Δm."
+        },
+        {
+          "id": "a10-l4-c8",
+          "heading": "Nâng cao: Suy ra thành phần dung dịch và chất rắn",
+          "body": "Sau phản ứng phải xét riêng hai pha. Pha rắn chỉ gồm kim loại bám ra và kim loại ban đầu còn dư; ion kim loại không thể “ở lại” dưới dạng chất rắn nếu chưa bị khử. Pha dung dịch luôn có anion của muối ban đầu, đồng thời có ion M^a+ tạo bởi phần M đã tan và có thể còn ion kim loại chưa phản ứng hết.\n\nVí dụ cho Fe vào CuSO4: nếu Cu2+ còn dư thì Fe đã hết, dung dịch có Fe2+ và Cu2+, chất rắn chỉ có Cu. Nếu Fe còn dư thì Cu2+ đã hết, dung dịch có Fe2+, còn chất rắn có Cu và Fe. Màu dung dịch chỉ là dấu hiệu phụ; kết luận phải dựa vào số mol sau phản ứng."
+        },
+        {
+          "id": "a10-l4-c9",
+          "heading": "Nâng cao: Bảo toàn electron trong bài toán hỗn hợp",
+          "body": "Khi một kim loại M khử nhiều ion, có thể đặt số mol từng kim loại bám ra là x1, x2, ... rồi dùng bảo toàn electron. Tổng electron M nhường bằng tổng electron các ion nhận: a.n(M đã phản ứng) = b1.x1 + b2.x2 + ... . Đây là cách gọn hơn viết nhiều phương trình riêng, nhất là khi đã biết khối lượng chất rắn sau phản ứng.\n\nPhương trình khối lượng cho chất rắn là m(sau) = m(M ban đầu) - m(M đã tan) + tổng m(kim loại bám). Kết hợp bảo toàn electron, bảo toàn nguyên tố và các điều kiện mỗi x1, x2, ... không âm, không vượt quá số mol ion tương ứng ban đầu sẽ chọn được nghiệm phù hợp. Sau khi có nghiệm vẫn phải kiểm tra thứ tự ưu tiên phản ứng mà đề bài quy ước."
+        },
+        {
+          "id": "a10-l4-c10",
+          "heading": "Nâng cao: Điều kiện áp dụng và các bẫy thường gặp",
+          "body": "Quy tắc thế áp dụng trực tiếp cho dung dịch có ion kim loại và kim loại tiếp xúc được với dung dịch. Lớp oxit bám trên bề mặt có thể làm hiện tượng chậm hoặc khó quan sát, nhưng không làm đảo ngược thứ tự hoạt động hoá học. Muối không tan hầu như không cho lượng ion cần thiết trong dung dịch để xét theo mô hình này.\n\nKhông áp dụng máy móc cho mọi dung dịch ghi tên muối. Na, K, Ca phản ứng với nước trước; nếu dung dịch có axit, kim loại đứng trước H còn có thể phản ứng với H+. Khi đề không nêu các tác nhân phụ và dùng các muối tan thông thường, mới dùng mô hình phản ứng thế kim loại – ion kim loại để biện luận."
         }
       ],
       "questions": [
@@ -767,6 +922,41 @@
           "id": "a10-l5-c3",
           "heading": "Mẹo tính nhanh bằng số mol H2",
           "body": "Với kim loại hoá trị n, số mol H2 sinh ra = (n/2) x số mol kim loại phản ứng.\nVới hỗn hợp kim loại hoá trị khác nhau (ví dụ Fe hoá trị II, Al hoá trị III), cần xét riêng từng kim loại rồi cộng số mol H2 lại."
+        },
+        {
+          "id": "a10-l5-c4",
+          "heading": "Nâng cao: Quy về H+ và bảo toàn electron",
+          "body": "Với HCl hoặc H2SO4 loãng, bản chất chung là 2H+ + 2e -> H2. Vì thế tổng electron các kim loại nhường luôn bằng 2n(H2), hay tổng số mol H+ đã phản ứng cũng bằng 2n(H2). Cách viết này gộp được hỗn hợp có kim loại hoá trị khác nhau mà không cần nhớ từng phương trình phân tử.\n\nNếu kim loại M tạo ion M^z+, phần M đã tan nhường z.n(M) mol electron. Do đó, với hỗn hợp các kim loại đều phản ứng: z1.n(M1) + z2.n(M2) + ... = 2n(H2). Chỉ sau khi đã tìm được lượng H+ tiêu thụ mới đổi về axit: HCl dùng 1 mol cho 1 mol H+ nên n(HCl) phản ứng = 2n(H2); H2SO4 loãng cung cấp 2H+ nên n(H2SO4) phản ứng = n(H2)."
+        },
+        {
+          "id": "a10-l5-c5",
+          "heading": "Nâng cao: Dấu hiệu nhận ra axit dư, vừa đủ hay thiếu",
+          "body": "Nếu biết hỗn hợp kim loại tan hoàn toàn, có thể lập lượng axit cần từ từng phương trình hoặc từ 2n(H2). So sánh với lượng axit ban đầu: lớn hơn lượng cần thì axit dư; bằng nhau thì vừa đủ; nhỏ hơn thì axit hết trước. Không được chỉ so sánh trực tiếp số mol axit với tổng số mol kim loại vì hệ số axit khác nhau, chẳng hạn 1 mol Fe cần 2 mol HCl còn 1 mol Al cần 3 mol HCl.\n\nKhi HCl là chất giới hạn và toàn bộ HCl đã phản ứng, lượng khí được xác định ngay: n(H2) = n(HCl ban đầu)/2. Tương tự, khi H2SO4 loãng là chất giới hạn thì n(H2) = n(H2SO4 ban đầu). Kết luận này không cần biết hỗn hợp gồm những kim loại nào, miễn là các kim loại thực sự phản ứng theo mô hình đã cho."
+        },
+        {
+          "id": "a10-l5-c6",
+          "heading": "Nâng cao: Axit thiếu không tự cho biết từng kim loại còn lại",
+          "body": "Khi axit thiếu đối với hỗn hợp từ hai kim loại cùng có thể phản ứng, dữ kiện “axit hết” chỉ xác định tổng lượng H+ đã nhận electron, không mặc nhiên cho biết kim loại nào tan hết trước hay mỗi kim loại đã tan bao nhiêu. Trong thực tế các kim loại có thể cùng phản ứng; ở mức bài toán, không được tự đặt một thứ tự tiêu thụ axit nếu đề không nêu điều kiện hay dữ kiện phụ.\n\nVì vậy, nếu đề hỏi thành phần chất rắn sau phản ứng với axit thiếu, cần có thêm thông tin như khối lượng chất rắn, lượng một kim loại đã tan hết, thí nghiệm tiếp theo hoặc điều kiện chọn lọc. Nếu không, chỉ kết luận chắc chắn được axit đã hết và lượng H2 theo axit đã dùng; ngay cả tổng khối lượng kim loại còn lại cũng có thể chưa xác định vì cùng một lượng electron có thể do các kim loại có khối lượng mol khác nhau nhường ra."
+        },
+        {
+          "id": "a10-l5-c7",
+          "heading": "Nâng cao: Kim loại không giải phóng H2 và thí nghiệm hai chặng",
+          "body": "Trong hỗn hợp tác dụng với HCl hoặc H2SO4 loãng, Cu, Ag, Au không tạo H2 vì đứng sau H; chúng có thể còn nguyên trong chất rắn ngay cả khi axit còn dư. Vì vậy câu “axit dư” không luôn đồng nghĩa “mọi kim loại tan hết”: phải hiểu là mọi kim loại có khả năng phản ứng trong điều kiện đã nêu tan hết.\n\nMột cách khai thác HSG là cho hỗn hợp vào axit không oxi hoá dư, lọc chất rắn rồi cân. Phần chất rắn có thể là kim loại không phản ứng; khối lượng ban đầu trừ khối lượng chất rắn là khối lượng kim loại đã tan. Kết hợp đại lượng này với n(H2) tạo hai phương trình độc lập để xác định thành phần phần kim loại phản ứng."
+        },
+        {
+          "id": "a10-l5-c8",
+          "heading": "Nâng cao: Khối lượng dung dịch và chất rắn sau phản ứng",
+          "body": "Nếu chỉ có khí H2 thoát khỏi hệ và không có bắn tóe hay kết tủa, khối lượng dung dịch sau phản ứng bằng khối lượng dung dịch axit ban đầu cộng khối lượng kim loại đã tan, rồi trừ khối lượng H2 bay ra: m(dung dịch sau) = m(dung dịch đầu) + m(kim loại phản ứng) - 2n(H2). Kim loại không phản ứng hoặc còn dư là chất rắn tách riêng, không được cộng vào dung dịch.\n\nNgược lại, khối lượng chất rắn cuối bằng khối lượng hỗn hợp kim loại ban đầu trừ khối lượng kim loại đã tan. Hai công thức đặc biệt hữu ích khi đề cho khối lượng dung dịch hoặc chất rắn thay vì cho trực tiếp số mol từng kim loại; luôn xác định rõ hệ nào được cân trước khi áp dụng bảo toàn khối lượng."
+        },
+        {
+          "id": "a10-l5-c9",
+          "heading": "Nâng cao: Trung bình đương lượng và kiểm tra dữ kiện",
+          "body": "Với phần kim loại đã phản ứng, mỗi mol H2 tương ứng 2 mol electron mà kim loại đã nhường. Do đó m(kim loại đã tan)/n(H2) là trung bình có trọng số của các giá trị 2M/z, trong đó M là khối lượng mol kim loại và z là hoá trị của ion tạo thành. Giá trị trung bình này phải nằm giữa các giá trị 2M/z của những kim loại đã phản ứng.\n\nVí dụ, Mg cho 2M/z = 24, Fe cho 56 và Al cho 18. Nếu một hỗn hợp chỉ gồm Al và Fe, m kim loại tan/n(H2) phải nằm từ 18 đến 56 g/mol H2. Kết quả ra ngoài khoảng đó báo hiệu lập phương trình sai, dùng sai điều kiện axit hoặc giả thiết thành phần hỗn hợp không đúng. Đây là phép thử nhanh trước khi tin nghiệm của hệ."
+        },
+        {
+          "id": "a10-l5-c10",
+          "heading": "Nâng cao: Điều kiện áp dụng và quy trình giải an toàn",
+          "body": "Các công thức khí H2 ở bài này áp dụng cho axit không có tính oxi hoá mạnh, thường là HCl hoặc H2SO4 loãng, và kim loại ở trạng thái có thể phản ứng. Không dùng chúng cho HNO3, H2SO4 đặc nóng hoặc trường hợp Al, Fe bị thụ động trong axit đặc nguội, vì khi đó có thể không tạo H2 hoặc phản ứng bị ngăn bởi màng bảo vệ.\n\nQuy trình chắc chắn: liệt kê kim loại nào phản ứng; viết phương trình hoặc quy về electron; đổi mọi dữ kiện về mol; xác định chất giới hạn; rồi mới lập hệ khối lượng, H2 và khối lượng chất rắn/dung dịch. Sau khi giải, kiểm tra mọi số mol không âm, không vượt lượng ban đầu và nếu đổi thể tích H2 ở đktc thì dùng V = 22,4n."
         }
       ],
       "questions": [

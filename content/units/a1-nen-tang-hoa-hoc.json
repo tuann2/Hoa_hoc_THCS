@@ -28,6 +28,26 @@
           "id": "a1-l1-c3",
           "heading": "Cấu tạo nguyên tử",
           "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e)."
+        },
+        {
+          "id": "a1-l1-c4",
+          "heading": "Nâng cao: Nhận biết hỗn hợp và dung dịch cẩn thận",
+          "body": "Không nên kết luận một mẫu là chất tinh khiết chỉ vì nó trong suốt, một màu hoặc không thấy cặn — dung dịch muối ăn, dung dịch đường, không khí đều trông đồng nhất nhưng vẫn là hỗn hợp. Dấu hiệu đáng tin hơn là tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy, khối lượng riêng cố định trong điều kiện nhất định); hỗn hợp có các tính chất này thay đổi theo tỉ lệ thành phần.\nDung dịch là một loại hỗn hợp đồng nhất gồm chất tan và dung môi (ví dụ nước muối: muối ăn là chất tan, nước là dung môi). Điểm dễ nhầm: khi chất rắn đã tan hết trong nước thì không thể tách lại bằng lọc thông thường, vì hạt chất tan đi qua giấy lọc cùng dung môi — muốn thu lại chất tan rắn phải cô cạn hoặc kết tinh, muốn thu dung môi sạch phải chưng cất."
+        },
+        {
+          "id": "a1-l1-c5",
+          "heading": "Nâng cao: Thêm kĩ thuật tách chất",
+          "body": "Ngoài 4 phương pháp cơ bản, đề nâng cao có thể dùng thêm:\nHoà tan chọn lọc: cho dung môi vào hỗn hợp rắn để chỉ một chất tan, lọc bỏ phần không tan, rồi cô cạn dung dịch để thu lại chất đã tan (ví dụ: hỗn hợp muối ăn và cát — cho nước vào để muối tan, lọc bỏ cát, cô cạn thu muối). Đây thực chất là kết hợp hoà tan + lọc + cô cạn, không phải phương pháp chiết.\nDựa vào khối lượng riêng: chất lỏng nặng hơn thường nằm dưới, nhẹ hơn nổi lên (dầu ăn nổi trên nước); chất rắn nặng hơn và không tan thì lắng xuống (cát lắng trong nước). Cách này chỉ có ích khi các chất không tan lẫn hoặc không tạo dung dịch đồng nhất.\nThăng hoa: một số chất rắn khi đun nóng chuyển thẳng thành hơi rồi ngưng lại thành rắn ở nơi lạnh hơn (ví dụ iot lẫn cát: đun nhẹ, iot thăng hoa và ngưng lại thành tinh thể, cát không thăng hoa nên ở lại). Đây là phương pháp vật lí, không phải phản ứng hoá học."
+        },
+        {
+          "id": "a1-l1-c6",
+          "heading": "Nâng cao: Biện luận hạt (p – n – e)",
+          "body": "Gọi p là số proton, e là số electron, n là số nơtron. Nguyên tử trung hoà nên p = e, vì vậy tổng số hạt là p + e + n = 2p + n. Số hạt mang điện gồm proton và electron nên bằng 2p; số hạt không mang điện là n.\nCách lập hệ: dùng dữ kiện tổng số hạt để viết 2p + n = tổng. Dữ kiện so sánh sẽ cho phương trình thứ hai: \"số hạt mang điện nhiều hơn số hạt không mang điện là X\" nghĩa là 2p - n = X; \"số hạt mang điện gấp k lần số hạt không mang điện\" nghĩa là 2p = k.n. Giải hai phương trình để tìm p, rồi suy ra e = p và số hiệu nguyên tử cũng bằng p. Khi chỉ có một phương trình, có thể thử các giá trị p nguyên dương và kiểm tra n nguyên không âm; với nhiều nguyên tố nhẹ thường gặp ở THCS (trừ hiđro), tỉ lệ n/p thường nằm khoảng 1 đến 1,5 nên dùng được để loại nghiệm vô lí — đây chỉ là phép kiểm tra nhanh, không thay thế việc giải hệ."
+        },
+        {
+          "id": "a1-l1-c7",
+          "heading": "Nâng cao: Số khối và các bẫy thuật ngữ hay gặp",
+          "body": "Số khối A là đại lượng được định nghĩa đúng bằng tổng số proton và nơtron (A = p + n) — đây là số nguyên xác định, không phải giá trị tính gần đúng. Số khối khác với nguyên tử khối tương đối ghi trong bảng tuần hoàn (ví dụ Cl = 35,5), vốn là giá trị trung bình theo các đồng vị nên có thể không phải số nguyên.\nMột số bẫy khi đọc đề: \"hạt mang điện\" gồm cả proton và electron (không chỉ proton); \"hạt trong hạt nhân\" chỉ gồm proton và nơtron (không có electron); khi đề hỏi số khối thì trả lời p + n, không trả lời tổng số hạt (2p + n); khi đề hỏi số electron thì tìm p trước rồi kết luận e = p (với nguyên tử trung hoà)."
         }
       ],
       "questions": [
@@ -193,6 +213,21 @@
           "id": "a1-l2-c3",
           "heading": "Sơ lược bảng tuần hoàn",
           "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau."
+        },
+        {
+          "id": "a1-l2-c4",
+          "heading": "Nâng cao: Phân biệt nguyên tố, nguyên tử và kí hiệu",
+          "body": "Nguyên tố hoá học là khái niệm chỉ tập hợp các nguyên tử cùng số proton, không phải một nguyên tử riêng lẻ; bản thân tên nguyên tố không cho biết có bao nhiêu nguyên tử hay khối lượng cụ thể. Nguyên tử là một hạt cụ thể của nguyên tố đó, đếm được số lượng trong công thức. Ví dụ Na2O: phân tử có 2 nguyên tử Na và 1 nguyên tử O, được tạo bởi 2 nguyên tố là natri và oxi.\nDấu hiệu chắc chắn để nhận ra một nguyên tố là số proton (số hiệu nguyên tử), không phải số nơtron hay khối lượng — hai nguyên tử cùng số proton nhưng khác số nơtron vẫn là cùng một nguyên tố (đồng vị).\nKí hiệu hoá học (ví dụ O, H) chỉ một nguyên tử của nguyên tố; công thức hoá học (ví dụ O2, H2O) chỉ một phân tử, có thể gồm nhiều nguyên tử của một hay nhiều nguyên tố. Không nên nhầm kí hiệu nguyên tố với công thức của đơn chất tương ứng."
+        },
+        {
+          "id": "a1-l2-c5",
+          "heading": "Nâng cao: Tìm nguyên tử khối từ công thức và phân tử khối",
+          "body": "Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối mỗi nguyên tố nhân với chỉ số của nó rồi cộng lại (chỉ số là số nguyên tử trong công thức, khác với hệ số đứng trước công thức khi viết phương trình). Với công thức dạng RxOy, phân tử khối M = x.R + 16y (vì O = 16). Nếu biết M và công thức, lập phương trình để tìm nguyên tử khối chưa biết, rồi đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. Đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: với oxit RxOy, hoá trị của R suy ra được từ chỉ số theo quy tắc hoá trị (hoá trị R × x = II × y), phải hợp lí với nguyên tố vừa tìm được. \"Oxit cao nhất\" của một nguyên tố nhóm A là oxit trong đó nguyên tố có hoá trị cao nhất với oxi, hoá trị này bằng đúng số thứ tự nhóm A của nguyên tố — đây là một cách kiểm tra thêm, không chỉ là dữ kiện tính toán."
+        },
+        {
+          "id": "a1-l2-c6",
+          "heading": "Nâng cao: Quy luật nhóm và chu kì",
+          "body": "Số thứ tự chu kì bằng số lớp electron của nguyên tử — quy tắc này đúng cho MỌI nguyên tố (cả nhóm A và nhóm B), không chỉ riêng nhóm A.\nVới các nguyên tố nhóm A, số thứ tự nhóm A bằng số electron lớp ngoài cùng (ngoại lệ: khí hiếm heli He chỉ có 2 electron lớp ngoài cùng nhưng vẫn xếp ở nhóm VIIIA). Đây là lí do sâu xa khiến các nguyên tố cùng nhóm A có tính chất hoá học tương tự: số electron lớp ngoài cùng giống nhau nên cách nhường/nhận electron thường giống nhau — ví dụ Li, Na, K (nhóm IA) đều dễ nhường 1 electron, thường hoá trị I; F, Cl, Br (nhóm VIIA) đều dễ nhận thêm 1 electron.\nQuy tắc \"nhóm A = số electron lớp ngoài cùng\" chỉ áp dụng tốt cho nhóm A ở mức THCS — không áp dụng máy móc cho kim loại chuyển tiếp (nhóm B, ví dụ Fe, Cu), vì các kim loại này có thể có nhiều hoá trị khác nhau tuỳ hợp chất; với nhóm B nên dựa vào hoá trị đề cho, không suy trực tiếp từ số nhóm."
         }
       ],
       "questions": [
@@ -358,6 +393,36 @@
           "id": "a1-l3-c3",
           "heading": "Công thức hoá học và ý nghĩa",
           "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98."
+        },
+        {
+          "id": "a1-l3-c4",
+          "heading": "Nâng cao: Đơn chất không đơn giản như tên gọi",
+          "body": "Một nguyên tố có thể tạo ra nhiều đơn chất khác nhau gọi là các dạng thù hình: O2 và O3 (ozon) đều chỉ gồm nguyên tố oxi nhưng là hai chất khác nhau; kim cương và than chì đều có thành phần là C nhưng cách sắp xếp nguyên tử khác nhau nên tính chất vật lí rất khác nhau.\nCác đơn chất khí quen thuộc ở THCS như H2, O2, N2, Cl2 thường tồn tại dưới dạng phân tử 2 nguyên tử, còn kí hiệu H, O, N, Cl chỉ nguyên tử/nguyên tố. Đơn chất cũng có thể có phân tử nhiều nguyên tử hơn: O3 gồm 3 nguyên tử O, photpho trắng thường gặp dạng P4, lưu huỳnh thường gặp dạng S8 — vẫn là đơn chất vì chỉ có một nguyên tố, khác với hợp chất (từ hai nguyên tố trở lên)."
+        },
+        {
+          "id": "a1-l3-c5",
+          "heading": "Nâng cao: Phân loại và đọc công thức cẩn thận",
+          "body": "Đơn chất/hợp chất phân loại một chất tinh khiết theo số nguyên tố; hỗn hợp là nhiều chất trộn lẫn. Không khí chứa chủ yếu N2 và O2 nên là hỗn hợp, không phải hợp chất của nitơ với oxi. Hai nguyên tố giống nhau nhưng tỉ lệ khác nhau tạo ra hợp chất khác nhau: CO (C:O = 1:1) khác CO2 (C:O = 1:2); SO2 khác SO3.\nKhi đọc công thức, phân biệt hệ số (đứng trước, nhân cả phân tử) với chỉ số (đứng sau kí hiệu, thuộc về một nguyên tố): O là 1 nguyên tử, O2 là 1 phân tử oxi (2 nguyên tử), 2O2 là hai phân tử O2 (tổng 4 nguyên tử), không được lấy hệ số nhân vào phân tử khối của một phân tử. Cũng cần phân biệt số nguyên tố (loại nguyên tố khác nhau) với tổng số nguyên tử: Al2(SO4)3 có 3 nguyên tố (Al, S, O) nhưng tổng 17 nguyên tử (2+3+12) — nhầm hai đại lượng này là lỗi rất hay gặp."
+        },
+        {
+          "id": "a1-l3-c6",
+          "heading": "Nâng cao: Công thức là quy ước biểu diễn tỉ lệ, không luôn là phân tử thật",
+          "body": "Không phải chất nào cũng tồn tại dưới dạng phân tử riêng rẽ đơn giản: kim loại như Fe, Cu gồm rất nhiều nguyên tử sắp xếp thành mạng; NaCl rắn gồm các ion Na+ và Cl- xen kẽ theo tỉ lệ 1:1. Công thức của các chất này cho biết tỉ lệ nguyên tử/ion, vẫn tính khối lượng công thức bình thường (NaCl: 23 + 35,5 = 58,5).\nMột số đơn chất có phân tử thực tế phức tạp hơn cách viết trong phương trình THCS — lưu huỳnh thường gặp dạng S8, nhưng nhiều phương trình vẫn viết S + O2 -> SO2 theo quy ước đơn giản hoá. Lưu ý: không tự rút gọn công thức phân tử theo ước chung — glucozơ có công thức phân tử C6H12O6 (không viết gọn thành CH2O dù tỉ lệ đơn giản nhất là CH2O), vì công thức phân tử phải phản ánh đúng số nguyên tử thật trong một phân tử. Chỉ số sau dấu ngoặc nhân cho cả nhóm: Al2(SO4)3 có khối lượng công thức = 2×27 + 3×(32+4×16) = 54 + 288 = 342, không được quên nhân S trong nhóm SO4."
+        },
+        {
+          "id": "a1-l3-c7",
+          "heading": "Nâng cao: Tìm nguyên tố từ công thức oxit và phân tử khối",
+          "body": "Với oxit thông thường RxOy (O = 16), phân tử khối M = x.R + 16y, suy ra R = (M - 16y) / x rồi đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: nếu R chỉ có một hoá trị trong công thức RxOy tối giản, hoá trị R = 2y/x (vì oxi hoá trị II). Ví dụ MgO: hoá trị Mg = 2×1/1 = II; Al2O3: hoá trị Al = 2×3/2 = III; SO3: hoá trị S = 2×3/1 = VI. Kết quả này phải hợp lí với nguyên tố vừa tìm được — nếu không hợp lí, cần xem lại công thức hoặc giả thiết.\nKết quả R không nhất thiết là số nguyên: một số nguyên tử khối ở THCS là số thập phân (Cl = 35,5). Ví dụ oxit R2O7 có M = 183 thì 2R + 7×16 = 183, suy ra R = 35,5, ứng với clo (Cl2O7, clo hoá trị VII trong oxit cao nhất)."
+        },
+        {
+          "id": "a1-l3-c8",
+          "heading": "Nâng cao: Từ hoá trị dự đoán dạng oxit và các trường hợp đặc biệt",
+          "body": "Vì O thường hoá trị II trong oxit, dạng công thức phụ thuộc hoá trị của R: hoá trị I → R2O; hoá trị II → RO; hoá trị III → R2O3; hoá trị IV → RO2; hoá trị V → R2O5; hoá trị VI → RO3. Ví dụ đề nói kim loại hoá trị III thì công thức oxit phải là R2O3, không phải RO3.\nKhông mặc định R luôn là kim loại — R2O5 gợi ý hoá trị V nhưng công thức này cũng đúng với photpho (phi kim quen thuộc, P2O5); cần tính R rồi đối chiếu, không loại đáp án phi kim chỉ vì thấy chữ R.\nLưu ý mức nâng cao: công thức kiểm tra hoá trị R = 2y/x dùng tốt khi R có một hoá trị duy nhất trong oxit đó. Một số oxit như Fe3O4 không cho ra một hoá trị nguyên duy nhất (có thể xem là FeO.Fe2O3, chứa cả Fe(II) và Fe(III)) — nếu tính ra hoá trị trung bình không nguyên (ví dụ 8/3), không vội kết luận sai công thức mà cần xem đó có phải oxit hỗn hợp hay trường hợp đặc biệt đã biết."
+        },
+        {
+          "id": "a1-l3-c9",
+          "heading": "Nâng cao: Tính phần trăm khối lượng và suy công thức từ tỉ lệ khối lượng",
+          "body": "Công thức chung: % nguyên tố = (khối lượng nguyên tố đó trong một công thức / khối lượng công thức) × 100%. Ví dụ CaCO3 có khối lượng công thức 40+12+3×16 = 100; Ca chiếm 40%, C chiếm 12%, O chiếm 48%.\nChiều ngược lại: nếu biết tỉ lệ khối lượng các nguyên tố, đổi về tỉ lệ số nguyên tử bằng cách chia cho nguyên tử khối tương ứng rồi rút gọn về số nguyên nhỏ nhất. Ví dụ một oxit sắt có tỉ lệ khối lượng Fe : O = 7 : 3, ta có nFe : nO = 7/56 : 3/16 = 0,125 : 0,1875 = 2 : 3, vậy công thức là Fe2O3. Đây là nền tảng cho các bài biện luận công thức ở mức HSG."
         }
       ],
       "questions": [
@@ -522,6 +587,26 @@
           "id": "a1-l4-c3",
           "heading": "Lập CTHH theo hoá trị",
           "body": "Các bước: gọi công thức hoá học dạng AxBy; áp dụng quy tắc hoá trị a.x = b.y; đưa về tỉ lệ tối giản x : y = b : a.\nVí dụ: Al (III) và O (II) cho tỉ lệ x : y = 2 : 3, công thức đúng là Al2O3."
+        },
+        {
+          "id": "a1-l4-c4",
+          "heading": "Nâng cao: Nhóm nguyên tử có hoá trị riêng",
+          "body": "Với nhiều gốc axit quen thuộc, hoá trị của nhóm bằng số nguyên tử H có thể thay thế trong axit tương ứng: HNO3 → nhóm NO3 hoá trị I; H2SO4 → nhóm SO4 hoá trị II; H2CO3 → nhóm CO3 hoá trị II; H3PO4 → nhóm PO4 hoá trị III.\nMột số nhóm vẫn còn H nhưng vẫn được xem là một nhóm nguyên tử với hoá trị riêng: HSO4 (I), HCO3 (I), HPO4 (II), H2PO4 (I). Ví dụ Na(I) với HCO3(I) tạo NaHCO3, còn Ca(II) với HCO3(I) tạo Ca(HCO3)2 — không được lấy hoá trị II của CO3 để thay cho HCO3. Nhóm NH4 (amoni) có hoá trị I, thường gặp trong muối amoni như NH4Cl, (NH4)2SO4.\nNhiều hợp chất có từ ba nguyên tố trở lên nhưng khi lập theo hoá trị chỉ cần xét hai phần: kim loại/gốc và nhóm nguyên tử. Na2CO3 = Na(I) với CO3(II); Ca(OH)2 = Ca(II) với OH(I); AlPO4 = Al(III) với PO4(III) — không xử lí từng nguyên tố C, O, H riêng lẻ trong nhóm."
+        },
+        {
+          "id": "a1-l4-c5",
+          "heading": "Nâng cao: Nguyên tố nhiều hoá trị — xác định đúng hoá trị đang dùng",
+          "body": "Fe, Cu, S, N... có thể có nhiều hoá trị, nhưng trong một hợp chất cụ thể phải xác định theo đúng công thức đã cho, không chọn tuỳ ý: CuO có Cu hoá trị II, còn Cu2O có Cu hoá trị I; SO2 có S hoá trị IV, còn SO3 có S hoá trị VI. Chọn sai hoá trị sẽ lập ra công thức khác hoàn toàn.\nNếu đề nói một nguyên tố có hoá trị không đổi và cho nhiều hợp chất của nó, hoá trị suy ra từ các công thức đó phải trùng nhau — đây là cách kiểm tra chéo hữu ích. Ví dụ nguyên tố X tạo được cả XCl3 (Cl hoá trị I → X hoá trị III) và X2O3 (O hoá trị II → X hoá trị III): hai dữ kiện cùng cho hoá trị III nên phù hợp. Nếu một dữ kiện cho hoá trị II còn dữ kiện khác cho hoá trị III thì phải xem lại giả thiết, công thức hoặc đáp án."
+        },
+        {
+          "id": "a1-l4-c6",
+          "heading": "Nâng cao: Bản chất quy tắc hoá trị và lỗi hay gặp",
+          "body": "Quy tắc a.x = b.y thể hiện tổng khả năng liên kết của phần A phải bằng tổng khả năng liên kết của phần B trong một hợp chất trung hoà — khi kiểm tra CTHH, phải so sánh hai TÍCH hoá trị (a.x và b.y) chứ không so sánh riêng từng chỉ số.\nKhi viết phép nhân trong bài làm, nên dùng dấu × (ví dụ 2 × 3) thay vì dấu chấm sát nhau như 2.3, để tránh học sinh đọc nhầm thành số thập phân.\nKhông dùng quy tắc hoá trị để giải thích chỉ số trong công thức đơn chất (ví dụ không suy ra chỉ số 2 của O2 từ hoá trị của oxi) — quy tắc hoá trị chỉ áp dụng cho hợp chất gồm từ hai nguyên tố trở lên."
+        },
+        {
+          "id": "a1-l4-c7",
+          "heading": "Nâng cao: Tìm nguyên tử khối và biện luận công thức từ hoá trị, phân tử khối",
+          "body": "Khi công thức đã biết, lập phương trình phân tử khối bằng tổng khối lượng các nguyên tử và nhóm nguyên tử. Ví dụ R2O3 có phân tử khối 102: 2R + 3×16 = 102, suy ra R = 27 (nhôm Al). Với MSO4 có phân tử khối 120 và nhóm SO4 có khối lượng 96: M + 96 = 120, suy ra M = 24 (magie Mg).\nNếu đề chỉ nói nguyên tố R tạo oxit mà chưa cho hoá trị, có thể liệt kê nhanh theo hoá trị của R (O hoá trị II): R(I) → R2O; R(II) → RO; R(III) → R2O3; R(IV) → RO2; R(V) → R2O5; R(VI) → RO3; R(VII) → R2O7. Thử từng hoá trị rồi tính R, đối chiếu bảng nguyên tử khối quen thuộc — kết quả âm, phân số vô lí hoặc không khớp nguyên tố quen thuộc ở THCS thì loại trường hợp đó."
         }
       ],
       "questions": [
@@ -682,6 +767,31 @@
           "id": "a1-l5-c3",
           "heading": "Cân bằng phương trình hoá học",
           "body": "Các bước cân bằng PTHH: viết sơ đồ phản ứng với công thức đúng của các chất; thêm hệ số thích hợp trước công thức để số nguyên tử mỗi nguyên tố ở hai vế bằng nhau (không được đổi chỉ số trong công thức); kiểm tra lại."
+        },
+        {
+          "id": "a1-l5-c4",
+          "heading": "Nâng cao: Dấu hiệu và bản chất phản ứng hoá học",
+          "body": "Đổi màu, sinh khí, kết tủa, toả nhiệt hoặc phát sáng là dấu hiệu thường gặp, nhưng không nên kết luận máy móc nếu chưa xét có chất mới hay không — nước sôi có bọt khí nhưng đó là hơi nước tạo từ chính nước, không phải chất mới. Dấu hiệu càng có giá trị khi giải thích được chất mới sinh ra: cho axit vào muối cacbonat thấy sủi bọt vì tạo CO2; cho dung dịch BaCl2 vào dung dịch chứa gốc sunfat tạo kết tủa trắng BaSO4.\nMột thí nghiệm có thể gồm cả biến đổi vật lí và hoá học: khi đun nến, sáp nến nóng chảy là hiện tượng vật lí, nhưng hơi nến cháy tạo CO2 và H2O là hiện tượng hoá học. Cách phân biệt chắc chắn: thay đổi trạng thái, kích thước, hình dạng thường là vật lí; tạo chất mới với tính chất khác hẳn mới là hoá học.\nKí hiệu đun nóng, ánh sáng hoặc chất xúc tác ghi trên mũi tên phản ứng chỉ điều kiện phản ứng, không được cân bằng như chất tham gia hay sản phẩm, và không đưa vào tính bảo toàn khối lượng — chất xúc tác về nguyên tắc không bị tiêu hao sau phản ứng."
+        },
+        {
+          "id": "a1-l5-c5",
+          "heading": "Nâng cao: Bảo toàn khối lượng — hệ kín/hở, hỗn hợp, chất dư",
+          "body": "Định luật bảo toàn khối lượng đúng cho toàn bộ hệ phản ứng. Nếu bình kín, tổng khối lượng trước và sau phản ứng không đổi kể cả khi có khí sinh ra. Nếu bình hở, khí bay ra làm phần còn lại nhẹ đi, nhưng khối lượng đó không mất mà đã chuyển thành khối lượng khí thoát ra — khối lượng kim loại tăng sau khi đốt trong oxi chính là khối lượng oxi đã kết hợp vào oxit; khối lượng chất rắn giảm khi nung muối cacbonat chính là khối lượng CO2 thoát ra.\nCông thức m chất tham gia = m sản phẩm chỉ áp dụng gọn khi các chất phản ứng vừa đủ. Nếu có chất dư, khối lượng chất dư không biến mất mà vẫn nằm trong hỗn hợp sau phản ứng: khối lượng ban đầu của toàn hệ = khối lượng sản phẩm + khối lượng chất dư + khối lượng chất trơ không phản ứng. Với hỗn hợp, nếu đề chỉ hỏi tổng khối lượng thì không cần tách từng phản ứng — ví dụ nung hỗn hợp CaCO3 và cát, chỉ CaCO3 phân huỷ, phần khối lượng giảm khi cân chất rắn sau nung chính là CO2 thoát ra, không phải toàn bộ CaCO3."
+        },
+        {
+          "id": "a1-l5-c6",
+          "heading": "Nâng cao: Bảo toàn nguyên tố và tỉ lệ hệ số",
+          "body": "Trong phản ứng hoá học, nguyên tử không tự sinh ra hoặc mất đi, chỉ sắp xếp lại — mỗi nguyên tố phải có tổng số nguyên tử bằng nhau ở hai vế. Bảo toàn khối lượng là hệ quả trực tiếp của bảo toàn số nguyên tử từng nguyên tố. Khi gặp bài khó, kiểm tra theo từng nguyên tố thay vì chỉ nhìn tổng khối lượng giúp tránh cân đúng khối lượng tổng nhưng sai công thức hoặc sai hệ số.\nHệ số trong PTHH cho biết tỉ lệ số phân tử/nguyên tử/mol, KHÔNG phải tỉ lệ khối lượng trực tiếp. Từ 2H2 + O2 → 2H2O, không được kết luận 2 g H2 phản ứng với 1 g O2 — phải nhân hệ số với khối lượng mol/phân tử khối: 2H2 (4 phần) + O2 (32 phần) → 2H2O (36 phần), tổng 4 + 32 = 36 mới đúng bảo toàn khối lượng."
+        },
+        {
+          "id": "a1-l5-c7",
+          "heading": "Nâng cao: Kĩ thuật cân bằng phương trình nhanh",
+          "body": "Với phương trình nhiều chất, nên cân bằng nguyên tố xuất hiện ít chất trước (thường là kim loại), để H và O sau cùng nếu chúng xuất hiện ở nhiều chất — với phản ứng cháy chứa C, H, O thường cân bằng theo thứ tự C → H → O. Ví dụ C3H8 + O2 → CO2 + H2O: cân C được 3CO2, cân H được 4H2O, vế phải có 3×2+4=10 nguyên tử O nên cần 5O2.\nCó thể tạm dùng hệ số phân số để cân nhanh, rồi nhân cả phương trình với mẫu số chung để được hệ số nguyên tối giản (không để hệ số phân số ở đáp án cuối). Khi một nguyên tố ở dạng đơn chất 2 nguyên tử (O2, H2, N2, Cl2) mà vế kia cho số lẻ, thường cần nhân đôi chất chứa số lẻ đó — ví dụ Al + O2 → Al2O3: vế phải có 3 O trong Al2O3, đặt 2Al2O3 để có 6 O, từ đó cần 3O2 và 4Al, được 4Al + 3O2 → 2Al2O3 (không được đổi công thức Al2O3 thành AlO cho dễ cân).\nVới phản ứng phân huỷ tạo khí, dùng bội chung nhỏ nhất: KClO3 → KCl + O2, mỗi KClO3 có 3 O còn O2 có 2 O, BCNN(3,2)=6 nên đặt 2KClO3 để có 6 O, được 2KClO3 → 2KCl + 3O2. Sau khi cân xong, luôn kiểm tra ước chung lớn nhất của các hệ số và rút gọn về bộ số nguyên tối giản — ví dụ 6H2 + 3O2 → 6H2O phải rút gọn thành 2H2 + O2 → 2H2O."
+        },
+        {
+          "id": "a1-l5-c8",
+          "heading": "Nâng cao: Cân bằng các dạng phản ứng đặc biệt",
+          "body": "Nếu một nhóm nguyên tử (SO4, NO3, CO3, PO4, OH...) xuất hiện nguyên vẹn ở cả hai vế và không bị phân huỷ, có thể cân bằng cả nhóm như một đơn vị để giảm số bước. Ví dụ Al2(SO4)3 + BaCl2 → AlCl3 + BaSO4: 3 nhóm SO4 ở vế trái cần 3BaSO4, từ đó 3BaCl2 có 6Cl nên tạo 2AlCl3, đồng thời 2Al.\nVới phản ứng khử oxit kim loại bằng CO hoặc H2 (chưa cần số oxi hoá ở THCS), có thể nhìn như sự chuyển oxi: mỗi phân tử CO nhận thêm 1 nguyên tử O để thành CO2, mỗi H2 nhận 1 O để thành H2O. Fe2O3 có 3 nguyên tử O nên cần 3CO để tạo 3CO2, đồng thời tạo 2Fe: Fe2O3 + 3CO → 2Fe + 3CO2.\nVới chất hữu cơ CxHyOz cháy hoàn toàn tạo CO2 và H2O: cân C trước (→ xCO2), cân H (→ y/2 H2O), rồi tính O2 sau cùng từ tổng số O còn thiếu ở vế phải. Nếu tổng số O ở vế phải lẻ (hệ số O2 ra phân số), nhân đôi toàn bộ phương trình để được hệ số nguyên. Ví dụ C2H5OH + O2 → CO2 + H2O: cân C được 2CO2, cân H được 3H2O, vế phải có 4+3=7 O, trong C2H5OH đã có 1 O nên còn thiếu 6 O, cần 3O2.\nVới phương trình dài, kiểm tra bằng bảng đếm nguyên tử từng nguyên tố ở hai vế là cách ít sai nhất — nhớ hệ số nhân cho cả công thức đứng sau, và chỉ số ngoài ngoặc nhân cho cả nhóm trong ngoặc (2Al2(SO4)3 có 4Al, 6S và 24O)."
         }
       ],
       "questions": [
@@ -860,6 +970,36 @@
           "id": "a1-l6-c3",
           "heading": "Thể tích mol khí và tỉ khối",
           "body": "Ở điều kiện tiêu chuẩn (đktc: 0 độ C, 1 atm), 1 mol chất khí bất kì chiếm thể tích 22,4 lít.\nCông thức: n = V / 22,4, suy ra V = n x 22,4.\nTỉ khối của khí A so với khí B: d(A/B) = M_A / M_B."
+        },
+        {
+          "id": "a1-l6-c4",
+          "heading": "Nâng cao: Mol là cầu nối giữa vi mô và vĩ mô",
+          "body": "Mol nên được xem là cầu nối: từ số hạt N suy ra n = N/N_A, từ n suy ra khối lượng m = n×M hoặc thể tích khí ở đktc V = n×22,4. Khi nói 1 mol chất chứa 6,022×10^23 hạt, phải xác định đúng loại hạt: nguyên tử với đơn chất kim loại, phân tử với O2/CO2/H2O, hoặc đơn vị công thức với muối ion như NaCl — 1 mol O2 có 6,022×10^23 phân tử O2 nhưng có 2×6,022×10^23 nguyên tử O; sai loại hạt sẽ làm đáp số lệch theo hệ số công thức.\nTrong phương trình hoá học đã cân bằng, hệ số cho biết tỉ lệ số mol (và tỉ lệ số phân tử/nguyên tử), KHÔNG phải tỉ lệ khối lượng — muốn tìm khối lượng vẫn phải đổi qua mol rồi nhân với M. Nếu có n mol phân tử AxBy thì số mol nguyên tử A là x×n, số mol nguyên tử B là y×n — ví dụ 0,2 mol H2SO4 chứa 0,4 mol H, 0,2 mol S, 0,8 mol O, giúp tính nhanh khối lượng từng nguyên tố."
+        },
+        {
+          "id": "a1-l6-c5",
+          "heading": "Nâng cao: Mol là nút trung tâm khi đổi m – n – V, tránh lỗi công thức",
+          "body": "Không nên học các công thức theo một chiều riêng lẻ — hầu hết bài tính đều đi qua số mol: m→n bằng n=m/M; V khí đktc→n bằng n=V/22,4; rồi từ n đổi sang đại lượng cần tìm. M của một chất tinh khiết chỉ phụ thuộc công thức hoá học, không phụ thuộc lượng mẫu (9 g H2O là 0,5 mol, 18 g H2O là 1 mol, nhưng M(H2O) vẫn là 18 g/mol) — nếu tính được M=m/n của một mẫu chất, có thể dùng M để nhận dạng chất (M=44 g/mol có thể là CO2 hoặc N2O, cần thêm dữ kiện để kết luận duy nhất).\nVới đơn chất phân tử, chú ý phân tử gồm mấy nguyên tử: M(O)=16 là khối lượng mol NGUYÊN TỬ oxi, còn M(O2)=32 là khối lượng mol PHÂN TỬ khí oxi — nhầm O với O2 (hay H với H2) là lỗi rất hay gặp khi tính n=m/M.\nCác công thức mol rất nhạy với đơn vị: khối lượng phải tính bằng gam, thể tích khí theo công thức 22,4 phải tính bằng lít (560 ml đktc phải đổi thành 0,56 lít rồi mới tính n=0,56/22,4=0,025 mol). Tránh đảo ngược công thức — tự kiểm tra bằng đơn vị: V/22,4 có đơn vị lít/(lít/mol)=mol (đúng), còn V×22,4 không cho đơn vị mol; n×M có đơn vị mol×g/mol=g nên đó là công thức tính khối lượng, không phải n=V×22,4 hay m=n/M."
+        },
+        {
+          "id": "a1-l6-c6",
+          "heading": "Nâng cao: Thể tích mol khí — điều kiện và tỉ lệ",
+          "body": "Công thức V=n×22,4 ở đktc CHỈ dùng cho chất khí — không dùng cho nước lỏng, kim loại rắn hay dung dịch. Giá trị 22,4 lít/mol gắn với đktc theo quy ước THCS (0°C, 1 atm); nếu đề nói điều kiện khác mà không cho thể tích mol tương ứng, không được tự ý dùng 22,4 — ví dụ đề cho ở điều kiện đó 1 mol khí chiếm 24 lít thì phải dùng n=V/24 cho dữ kiện đang xét.\nỞ cùng nhiệt độ và áp suất, các khí có số mol bằng nhau sẽ có thể tích bằng nhau dù nặng hay nhẹ khác nhau — tỉ lệ thể tích khí cũng chính là tỉ lệ số mol khí (V_A/V_B = n_A/n_B khi đo cùng điều kiện). Đây là cơ sở để đổi phần trăm thể tích hỗn hợp khí thành phần trăm số mol."
+        },
+        {
+          "id": "a1-l6-c7",
+          "heading": "Nâng cao: Tỉ khối chất khí",
+          "body": "d(A/B) = M_A/M_B có thể hiểu là: cùng thể tích và cùng điều kiện, khí A nặng gấp d lần khí B. Nếu d(A/B) > 1 thì A nặng hơn B; nếu d(A/B) < 1 thì A nhẹ hơn B — cách hiểu này giúp giải nhanh bài hỏi khí nào bay lên/tích ở dưới, hoặc so sánh khối lượng hai bình khí cùng thể tích.\nKhi so với không khí, thường lấy M không khí xấp xỉ 29 g/mol: d(A/kk)=M_A/29, suy ra M_A=29×d(A/kk). Khí có M>29 thường nặng hơn không khí (CO2, SO2, Cl2); khí có M<29 thường nhẹ hơn (H2, CH4, NH3).\nTìm M từ tỉ khối: biết d(A/H2) thì nhân 2 để được M_A (vì M(H2)=2); biết d(A/O2) thì nhân 32; biết d(A/kk) thì nhân 29. Sau khi có M, cần đối chiếu với công thức hoặc dữ kiện phản ứng — cùng một M có thể ứng nhiều chất khác nhau nên không kết luận chỉ từ một con số nếu đề còn thiếu dữ kiện."
+        },
+        {
+          "id": "a1-l6-c8",
+          "heading": "Nâng cao: Hỗn hợp khí — khối lượng mol trung bình và tỉ khối hỗn hợp",
+          "body": "Với hỗn hợp khí, M trung bình = tổng khối lượng hỗn hợp / tổng số mol hỗn hợp = (n1M1 + n2M2 + ...)/(n1 + n2 + ...); M trung bình luôn nằm giữa M nhỏ nhất và M lớn nhất của các khí thành phần. Trong hỗn hợp đo cùng điều kiện, phần trăm thể tích bằng phần trăm số mol — ví dụ hỗn hợp 40% CO2 và 60% O2 theo thể tích: M trung bình = 0,40×44 + 0,60×32 = 36,8 g/mol. Nếu các khí có thể tích bằng nhau (cùng điều kiện) thì số mol bằng nhau, M trung bình là trung bình cộng — trộn cùng thể tích CO2 và O2 thì M trung bình = (44+32)/2 = 38 g/mol.\nPhần trăm khối lượng KHÔNG giống phần trăm thể tích: hỗn hợp 50% H2 và 50% CO2 theo thể tích có số mol bằng nhau, nhưng khối lượng CO2 lớn hơn nhiều vì M(CO2)=44 còn M(H2)=2 — muốn tính khối lượng từng khí phải đổi từ % thể tích sang mol rồi nhân M.\nTỉ khối hỗn hợp X so với khí B: d(X/B) = M trung bình của X / M_B — nếu biết d(X/H2)=15 thì M trung bình = 15×2 = 30 g/mol, từ đó lập phương trình tìm tỉ lệ mol các khí. M trung bình càng gần M của khí nào thì khí đó chiếm tỉ lệ mol càng lớn (M trung bình 35 giữa CO2=44 và O2=32, gần 32 hơn nên O2 nhiều mol hơn). Luôn kiểm tra đáp số hợp lí: M trung bình của hỗn hợp chỉ gồm CO2 và O2 không thể nhỏ hơn 32 hoặc lớn hơn 44."
+        },
+        {
+          "id": "a1-l6-c9",
+          "heading": "Nâng cao: Bài toán phản ứng khí — đổi về mol trước khi dùng tỉ lệ",
+          "body": "Nếu các khí đều ở cùng điều kiện, có thể dùng tỉ lệ thể tích như tỉ lệ mol trong phương trình. Nhưng khi đề cho lẫn khối lượng, thể tích và tỉ khối, cách chắc chắn nhất là đổi tất cả đại lượng cần thiết về mol trước, dùng tỉ lệ hệ số trong phương trình để tìm số mol chất cần, rồi mới đổi kết quả về khối lượng hoặc thể tích theo yêu cầu đề bài. Ví dụ: từ khối lượng CH4 đã cho, đổi ra nCH4, dùng phương trình cháy để suy ra nCO2, rồi đổi nCO2 sang thể tích ở đktc bằng V=n×22,4."
         }
       ],
       "questions": [
@@ -1026,6 +1166,31 @@
           "id": "a1-l7-c3",
           "heading": "Chất dư – chất hết và hiệu suất phản ứng",
           "body": "Khi hai chất phản ứng với lượng cho trước, so sánh tỉ lệ mol thực tế với tỉ lệ mol theo phương trình để xác định chất phản ứng hết (dùng để tính sản phẩm) và chất còn dư.\nHiệu suất phản ứng: H% = (lượng thực tế thu được / lượng tính theo lí thuyết) x 100%."
+        },
+        {
+          "id": "a1-l7-c4",
+          "heading": "Nâng cao: %m nguyên tố — hiểu đúng và kết hợp với hỗn hợp/PTHH",
+          "body": "Khi tính %m, tử số là khối lượng của RIÊNG nguyên tố đó trong 1 mol hợp chất — với AxBy, phần khối lượng của A là x×(nguyên tử khối A), không chỉ lấy 1 lần. Ví dụ Al2O3: khối lượng phần Al = 2×27 = 54 g, M(Al2O3) = 102 g/mol, %Al = 54/102×100% ≈ 52,94%. Tổng %m các nguyên tố trong một công thức luôn bằng 100% (chấp nhận sai số làm tròn nhỏ) — có thể tính nguyên tố cuối bằng cách lấy 100% trừ các phần đã biết, nhưng chỉ khi các phần kia đã đúng.\nCần phân biệt %nguyên tố TRONG một hợp chất với %chất TRONG một hỗn hợp — hai kiểu phần trăm không dùng lẫn nhau. Nếu mẫu 10 g chứa 80% CaCO3 tinh khiết thì chỉ có 8 g CaCO3 thật sự tham gia phản ứng; còn trong chính CaCO3, %Ca = 40%. Bài tổng hợp thường có hai tầng: tách khối lượng chất tinh khiết từ hỗn hợp trước, rồi mới tính theo công thức hoặc PTHH — ví dụ Fe chiếm 70% khối lượng trong Fe2O3 (2×56/160×100%=70%), nên 20 g Fe2O3 chứa tối đa 14 g Fe; nếu khử với hiệu suất 80% thì Fe thực tế thu được là 14×0,80 = 11,2 g."
+        },
+        {
+          "id": "a1-l7-c5",
+          "heading": "Nâng cao: Trình tự giải bài toán tổng hợp theo PTHH",
+          "body": "Hệ số PTHH là tỉ lệ MOL, không phải tỉ lệ gam — không được lấy trực tiếp hệ số so sánh khối lượng (Zn + 2HCl → ZnCl2 + H2 nghĩa là 1 mol Zn : 2 mol HCl, tức 65 g Zn : 73 g HCl, không phải 1 g : 2 g).\nVới bài nhiều dữ kiện (khối lượng, thể tích khí, nồng độ, hiệu suất), giữ trình tự cố định: đổi mọi dữ kiện cần dùng ra mol → viết và cân bằng PTHH → xác định chất hết nếu có từ hai chất trở lên → tính lượng lí thuyết theo chất hết → áp dụng hiệu suất nếu có → đổi về đại lượng đề hỏi. Trình tự này tránh hai lỗi lớn: áp dụng hiệu suất quá sớm vào chất chưa phải chất giới hạn, hoặc đổi thẳng gam chất này sang gam chất kia mà bỏ qua tỉ lệ mol.\nDữ kiện khí phải theo cùng điều kiện — trong chương trình này dùng đktc: n=V/22,4 và V=n×22,4 (V tính bằng lít), không dùng công thức này cho chất lỏng/rắn/dung dịch. Sau khi tính theo PTHH, có thể kiểm tra lại bằng bảo toàn khối lượng cho phần đã phản ứng (không tính phần chất dư): ví dụ 0,10 mol Zn phản ứng hết với HCl cho 6,5+7,3 = 13,8 g ở hai vế, khớp bảo toàn khối lượng."
+        },
+        {
+          "id": "a1-l7-c6",
+          "heading": "Nâng cao: Xác định chất dư — chất hết",
+          "body": "Cách chắc nhất: với phản ứng aA + bB → sản phẩm, tính nA/a và nB/b — giá trị NHỎ HƠN cho biết chất đó hết trước, và giá trị đó cũng là \"mức phản ứng chung\" dùng để tính sản phẩm. Ví dụ Zn + 2HCl → ZnCl2 + H2, nếu nZn=0,20 và nHCl=0,30: nZn/1=0,20, nHCl/2=0,15 → 0,15 nhỏ hơn nên HCl hết trước, mọi sản phẩm tính theo 0,15 (không phải theo 0,20 mol Zn).\nCách khác: so sánh tỉ lệ mol thực tế với tỉ lệ cần theo PTHH (Zn+2HCl cần tỉ lệ nHCl/nZn=2; nếu thực tế 0,30/0,20=1,5 < 2 thì HCl thiếu, HCl hết, Zn dư).\nChất dư KHÔNG làm sản phẩm tăng thêm — sau khi xác định chất hết, dùng số mol chất hết để tính sản phẩm, số mol ban đầu của chất dư chỉ dùng để tính lượng còn lại (0,20 mol Zn gặp 0,30 mol HCl hết → nH2=nHCl/2=0,15 mol, V(H2) đktc=0,15×22,4=3,36 lít; Zn còn dư 0,05 mol). Hai chất phản ứng vừa đủ khi mọi tỉ lệ n/hệ số bằng nhau — khi đề cho dữ kiện như 13 g Zn và 200 ml dung dịch HCl 2M, phải đổi cẩn thận: nZn=13/65=0,20 mol, nHCl=2×0,200=0,40 mol (đổi ml sang lít trước khi dùng n=CM×V), lúc này nZn/1=0,20=nHCl/2=0,20 nên vừa đủ, không có chất dư."
+        },
+        {
+          "id": "a1-l7-c7",
+          "heading": "Nâng cao: Hiệu suất phản ứng — hai chiều và kết hợp chất dư/độ tinh khiết",
+          "body": "Trong H% = lượng thực tế/lượng lí thuyết×100%, tử số và mẫu số phải là CÙNG một chất, cùng đơn vị — không lấy gam sản phẩm thực tế chia cho mol sản phẩm lí thuyết, và không lấy khối lượng sản phẩm thực tế chia cho khối lượng chất ban đầu để gọi là hiệu suất (nung CaCO3, nếu CaO lí thuyết 14 g và thực tế 12,6 g thì H=12,6/14×100%=90%).\nHai chiều tính: biết lượng lí thuyết và H% → lượng thực tế = lí thuyết×H/100; biết lượng thực tế và H% → lượng lí thuyết = thực tế:(H/100) — dùng khi đề hỏi cần bao nhiêu nguyên liệu để thu một lượng sản phẩm thực tế cho trước (muốn thu 12,6 g CaO với H=90%, CaO lí thuyết cần = 12,6/0,90=14 g, suy ra cần 25 g CaCO3 tinh khiết).\nKhi bài vừa có chất dư vừa có hiệu suất: xác định chất hết trước để tính sản phẩm lí thuyết tối đa theo PTHH, RỒI mới nhân hiệu suất — không nhân hiệu suất vào cả hai chất tham gia rồi mới xét dư/hết. Hiệu suất nhỏ hơn 100% không có nghĩa PTHH cân bằng sai — có thể do phản ứng không hoàn toàn, hao hụt khi thu sản phẩm, hoặc điều kiện thí nghiệm chưa tối ưu; nếu tính ra hiệu suất lớn hơn 100% thì cần xem lại số mol/đơn vị/độ tinh khiết. Khi mẫu ban đầu không tinh khiết: xử lí độ tinh khiết trước (m chất tinh khiết = m mẫu×%tinh khiết/100) để tìm lượng chất thật tham gia, rồi mới áp hiệu suất sau khi tính sản phẩm lí thuyết từ chất tinh khiết đó."
+        },
+        {
+          "id": "a1-l7-c8",
+          "heading": "Nâng cao: Lỗi hay gặp khi giải toán theo PTHH",
+          "body": "Các lỗi cần tự kiểm tra trước khi chốt đáp số: chưa cân bằng PTHH mà đã lập tỉ lệ mol; lấy tỉ lệ hệ số làm tỉ lệ khối lượng; quên đổi ml sang lít khi tính n=CM×V hoặc n=V/22,4; dùng 22,4 lít/mol cho chất không phải khí; tính sản phẩm theo chất dư thay vì chất hết; quên nhân chỉ số nguyên tử khi tính %m; áp dụng hiệu suất hai lần hoặc quên chia cho 100 khi dùng H%. Một đáp số hợp lí thường phải đúng đơn vị, đúng số mol theo hệ số, và không cho hiệu suất vượt 100% trong bài lí tưởng."
         }
       ],
       "questions": [
@@ -1201,6 +1366,46 @@
           "id": "a1-l8-c3",
           "heading": "Cân bằng phương trình hoá học phức tạp",
           "body": "Với phản ứng có nhiều nguyên tố, nên ưu tiên cân bằng nguyên tố xuất hiện ít lần trước (thường là kim loại), để nguyên tố oxi cân bằng sau cùng. Có thể dùng hệ số phân số tạm thời rồi quy đồng mẫu số chung để đưa về hệ số nguyên."
+        },
+        {
+          "id": "a1-l8-c4",
+          "heading": "Nâng cao: Từ % khối lượng đến công thức phân tử",
+          "body": "Với hợp chất AxBy, chỉ số x,y phải là số nguyên dương tối giản. Đổi % khối lượng thành tỉ lệ mol: x:y = (%A/nguyên tử khối A):(%B/nguyên tử khối B), chia cho số nhỏ nhất, nhân với 2/3/4 nếu cần để được tỉ lệ nguyên — kết quả là CÔNG THỨC ĐƠN GIẢN NHẤT, chưa chắc là công thức phân tử thật.\nMuốn chốt công thức phân tử cần thêm phân tử khối hoặc tỉ khối khí: tính khối lượng mol của công thức đơn giản nhất, lấy k = phân tử khối thật / khối lượng mol công thức đơn giản nhất, công thức phân tử = công thức đơn giản nhất × k. Ví dụ hiđrocacbon có 85,71% C và 14,29% H, tỉ khối so với H2 là 14: tỉ lệ C:H ≈ 1:2 cho công thức đơn giản nhất CH2 (M=14); tỉ khối cho M thật = 2×14 = 28, k=28/14=2, công thức phân tử là C2H4, không phải CH2."
+        },
+        {
+          "id": "a1-l8-c5",
+          "heading": "Nâng cao: Biện luận nguyên tố từ phản ứng và từ muối",
+          "body": "Khi kim loại M hoá trị n tác dụng với axit loãng giải phóng H2 (2M + 2nHCl → 2MCln + nH2), có quan hệ nH2 = n×nM/2, suy ra M = n×m kim loại/(2×nH2) — thử n=I,II,III rồi đối chiếu bảng nguyên tử khối. Ví dụ 5,4 g kim loại tạo 6,72 lít H2 đktc: nH2=0,30 mol, M=9n; với n=III thì M=27 khớp Al (n=I,II cho 9 hoặc 18, không phù hợp kim loại quen thuộc).\nVới muối, xem gốc axit như một khối có hoá trị riêng (Cl: I, NO3: I, SO4: II, CO3: II, PO4: III) — tổng hoá trị hai bên phải bằng nhau. Ví dụ muối sunfat kim loại hoá trị III dạng M2(SO4)3, nếu phân tử khối 342 thì 2M+3×96=342, suy ra M=27, kim loại Al. Nhìn gốc SO4 như một khối giúp không bị rối bởi 12 nguyên tử O trong công thức."
+        },
+        {
+          "id": "a1-l8-c6",
+          "heading": "Nâng cao: Công thức nhóm nguyên tử và tinh thể ngậm nước",
+          "body": "Ngoài oxit, đề HSG hay dùng công thức có nhóm nguyên tử: kim loại M hoá trị n tạo hiđroxit M(OH)n; gốc axit A hoá trị n tạo axit HnA; muối axit vẫn còn H trong gốc (HCO3, HSO4 đều hoá trị I). Tính phân tử khối phải nhân cả nhóm trong ngoặc — ví dụ M(OH)3 có phân tử khối 78 thì M+3×17=78, suy ra M=27, đó là Al(OH)3; quên nhân cả nhóm OH ba lần sẽ sai hoàn toàn.\nTinh thể ngậm nước dạng muối.nH2O: biết %H2O hoặc khối lượng giảm khi nung, đặt n rồi lập phương trình khối lượng (18n là phần nước, phần muối khan giữ nguyên). Ví dụ CuSO4.nH2O có %H2O=36,0%, M(CuSO4)=160: 18n/(160+18n)=0,36, giải ra n=5, công thức CuSO4.5H2O."
+        },
+        {
+          "id": "a1-l8-c7",
+          "heading": "Nâng cao: Xử lý số liệu làm tròn và dữ kiện kiểm tra",
+          "body": "Đề thi thường làm tròn % đến 1-2 chữ số thập phân nên tỉ lệ mol có thể ra 1,99 hay 2,98 thay vì đúng 2 hoặc 3 — không kết luận sai ngay, hãy quy về tỉ lệ nguyên nhỏ nhất hợp lí rồi kiểm tra lại bằng phân tử khối hoặc %tính ngược. Ví dụ Al2O3 có %Al=52,94%, %O=47,06%: tỉ lệ mol Al:O ≈ 1,961:2,941, chia số nhỏ hơn ra gần 1:1,5, nhân đôi thành 2:3 — kết quả hợp lí Al2O3.\nKhông phải mọi dữ kiện đều dùng để lập phương trình chính — có dữ kiện chỉ để kiểm tra nghiệm. Nếu hai dữ kiện cùng dẫn đến một công thức thì nghiệm chắc hơn; nếu mâu thuẫn phải xem lại giả thiết. Ví dụ R2O3 có phân tử khối 102 cho R=27; dữ kiện %R=52,94% không cần để tìm R nữa nhưng dùng để kiểm tra: 2×27/102×100%=52,94%, khớp — kiểu dữ kiện kép này buộc học sinh kiểm tra chứ không chỉ giải một phương trình."
+        },
+        {
+          "id": "a1-l8-c8",
+          "heading": "Nâng cao: Lập bảng thử hoá trị và loại nghiệm vô lí",
+          "body": "Khi oxit của kim loại M chưa biết hoá trị, đừng đoán ngay công thức — lập bảng theo hoá trị thường gặp (I→M2O, II→MO, III→M2O3, IV→MO2), mỗi dòng tính nguyên tử khối M từ dữ kiện %/phân tử khối rồi loại các dòng cho M âm, quá nhỏ/lớn hoặc không gần nguyên tử khối quen thuộc. Ví dụ oxit có %O=30%: nếu M hoá trị II, 16/(M+16)=0,30 → M≈37,3 không khớp kim loại quen thuộc; nếu hoá trị III, 48/(2M+48)=0,30 → M=56 khớp Fe, công thức Fe2O3.\nSau khi tính được nguyên tử khối theo từng trường hợp, luôn kiểm tra: có gần giá trị quen thuộc không, hoá trị có phù hợp công thức không, kim loại/phi kim có đúng loại hợp chất đề nêu không, và %tính ngược có khớp dữ kiện không — bước kiểm tra hoá học quan trọng không kém bước giải phương trình."
+        },
+        {
+          "id": "a1-l8-c9",
+          "heading": "Nâng cao: Tìm oxit từ khử kim loại và biện luận phi kim qua oxit cao nhất",
+          "body": "Nếu khử oxit kim loại bằng H2/CO thu được kim loại, khối lượng giảm chính là khối lượng oxi tách ra. Từ mO và mM, đổi ra số mol rồi lấy tỉ lệ M:O suy ra công thức oxit. Ví dụ khử hoàn toàn 16,0 g oxit M2O3 thu 11,2 g kim loại: mO=4,8 g, nO=0,30 mol; với M2O3, nM=2/3×nO=0,20 mol; M=11,2/0,20=56, oxit là Fe2O3.\nVới phi kim, oxit cao nhất phản ánh hoá trị cao của nguyên tố với oxi: S(VI)→SO3, P(V)→P2O5, C(IV)→CO2, N(V)→N2O5, Cl(VII)→Cl2O7 — không áp dụng máy móc mẫu oxit kim loại I/II/III. Ví dụ oxit cao nhất X2O5 có M=108: 2X+80=108, X=14, phù hợp N (N2O5). Với oxit MxOy, %oxi = 16y/(xM+16y)×100% — nếu chưa biết x:y, thử các tỉ lệ oxit thường gặp rồi đối chiếu M (oxit M2O5 có %O=56,34% cho M≈31, phù hợp P, công thức P2O5)."
+        },
+        {
+          "id": "a1-l8-c10",
+          "heading": "Nâng cao: Cân bằng bằng hệ số chữ và nhóm nguyên tử",
+          "body": "Với phản ứng nhiều chất, đặt hệ số chữ a,b,c,d rồi lập phương trình bảo toàn từng nguyên tố, chọn một ẩn thuận tiện (không nhất thiết bằng 1) để các hệ số còn lại ra số nguyên nhanh hơn. Ví dụ cân bằng FeS2 + O2 → Fe2O3 + SO2: đặt aFeS2+bO2→cFe2O3+dSO2; bảo toàn Fe: a=2c, S: 2a=d, O: 2b=3c+2d; chọn c=2 thì a=4, d=8, b=11: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2.\nNếu một nhóm nguyên tử (SO4, CO3, NO3, PO4, OH) xuất hiện nguyên vẹn ở hai vế, cân bằng cả nhóm như một đơn vị thay vì tách từng nguyên tố — rút ngắn nhiều phản ứng trao đổi (Al2(SO4)3 + 3BaCl2 → 3BaSO4 + 2AlCl3, giữ nguyên nhóm SO4). Với đơn chất hai nguyên tử (O2, H2, Cl2) dễ gây hệ số phân số nếu số nguyên tử phía kia lẻ — tạm dùng hệ số phân số rồi nhân đôi toàn bộ phương trình (C2H6+O2→CO2+H2O cho O2 hệ số 7/2, nhân đôi: 2C2H6+7O2→4CO2+6H2O)."
+        },
+        {
+          "id": "a1-l8-c11",
+          "heading": "Nâng cao: Cân bằng phản ứng oxi hoá-khử và tự oxi hoá-tự khử",
+          "body": "Một số phản ứng HSG cân bằng được bằng cách nhìn thay đổi số oxi hoá: chất tăng số oxi hoá nhường electron, chất giảm số oxi hoá nhận electron, số electron nhường-nhận phải bằng nhau; đặt hệ số chính theo electron rồi cân bằng các nguyên tố còn lại bằng bảo toàn nguyên tố. Ví dụ KMnO4+HCl→KCl+MnCl2+Cl2+H2O: Mn giảm từ +7 xuống +2 (nhận 5e); 2Cl trong HCl tăng lên 0 trong Cl2 (nhường 2e); cân bằng electron cho 2Mn và 5Cl2, rồi cân bằng K,H,O: 2KMnO4+16HCl→2KCl+2MnCl2+5Cl2+8H2O.\nCó phản ứng trong đó CÙNG một nguyên tố vừa tăng vừa giảm hoá trị (tự oxi hoá-tự khử) — phải tách hai vai trò rồi cân bằng theo từng sản phẩm. Ví dụ Cl2+NaOH→NaCl+NaClO+H2O: một Cl về NaCl, một Cl về NaClO nên đặt hệ số NaCl và NaClO bằng nhau, cân bằng tiếp Na,O,H: Cl2+2NaOH→NaCl+NaClO+H2O.\nSau khi cân bằng xong, luôn kiểm tra bằng bảng đếm nguyên tử từng nguyên tố hai vế — với 2KMnO4+16HCl→2KCl+2MnCl2+5Cl2+8H2O: K(2=2), Mn(2=2), O(8=8), H(16=16), Cl(16=2+4+10=16), khớp hoàn toàn."
         }
       ],
       "questions": [
@@ -1375,6 +1580,41 @@
           "id": "a1-l9-c3",
           "heading": "Bảo toàn nguyên tố và bảo toàn khối lượng",
           "body": "Số mol một nguyên tố không đổi qua các phản ứng (bảo toàn nguyên tố). Tổng khối lượng chất tham gia bằng tổng khối lượng sản phẩm (bảo toàn khối lượng).\nHai định luật này giúp tính nhanh mà không cần viết đủ mọi phương trình trung gian."
+        },
+        {
+          "id": "a1-l9-c4",
+          "heading": "Nâng cao: Chọn ẩn và lập hệ phương trình cho bài hỗn hợp",
+          "body": "Không phải lúc nào ẩn cũng nên là số mol ban đầu — nếu có chất dư/chất trơ/phản ứng không hoàn toàn, hãy chọn ẩn là số mol THỰC SỰ đã phản ứng. Với hai kim loại cùng tạo H2 (đặt x,y là số mol từng kim loại): phương trình khối lượng M1.x+M2.y=m hỗn hợp, phương trình khí dựa vào hoá trị (kim loại hoá trị n tạo n/2 mol H2 trên 1 mol kim loại) — ví dụ Mg tạo 1 mol H2/1 mol Mg, Al tạo 1,5 mol H2/1 mol Al, nên nH2=x+1,5y (lỗi hay gặp: cho cả hai cùng tỉ lệ 1:1, thiếu hệ số 1,5 của Al).\nMột hệ phương trình tốt phải gồm các phương trình ĐỘC LẬP — trước khi giải nên tự hỏi mỗi dữ kiện đang cung cấp thông tin mới về đại lượng nào. Khi hỗn hợp có chất không phản ứng (ví dụ Fe và Cu gặp HCl dư: chỉ Fe tạo H2 và FeCl2, Cu không đổi), dữ kiện sản phẩm chỉ thuộc chất phản ứng — từ nH2 suy nFe, tính mFe rồi lấy m hỗn hợp trừ mFe để ra mCu; không được chia đều khối lượng hỗn hợp nếu chưa chứng minh cả hai cùng phản ứng."
+        },
+        {
+          "id": "a1-l9-c5",
+          "heading": "Nâng cao: Hỗn hợp phức tạp — kim loại + hợp chất, dùng lượng axit tiêu thụ",
+          "body": "Khi hỗn hợp có kim loại, oxit kim loại và muối cacbonat cùng tác dụng với axit, mỗi chất cho dấu hiệu khác nhau: kim loại tạo H2, muối cacbonat tạo CO2, oxit chỉ tạo muối và nước (không khí). Ví dụ Mg, MgO, MgCO3 gặp HCl dư: đổi riêng VH2 và VCO2 (đktc) bằng n=V/22,4 để tìm nMg và nMgCO3, dùng khối lượng hỗn hợp còn lại để tìm MgO.\nNếu đề cho số mol axit đã phản ứng, đó là phương trình rất mạnh vì mỗi loại chất tiêu thụ axit khác nhau: kim loại hoá trị II và oxit MO đều tiêu thụ 2 mol HCl/1 mol chất; muối MCO3 tiêu thụ 2 mol HCl/1 mol muối và tạo 1 mol CO2. Viết phương trình axit tổng (nHCl = tổng HCl từng chất tiêu thụ) — không chỉ dựa vào khí vì oxit/một số bazơ không tạo khí nhưng vẫn làm mất axit."
+        },
+        {
+          "id": "a1-l9-c6",
+          "heading": "Nâng cao: Phương pháp trung bình và biện luận khoảng giá trị",
+          "body": "Với hỗn hợp nhiều chất CÙNG LOẠI quan hệ với dữ kiện chung, dùng khối lượng mol trung bình Mtb = m hỗn hợp/n hỗn hợp — Mtb luôn nằm giữa M nhỏ nhất và lớn nhất của các chất, dùng để kiểm tra đáp số (hỗn hợp Mg,Zn hoá trị II tạo H2 tỉ lệ 1:1 với HCl dư: n kim loại=nH2, Mtb=m/nH2 phải nằm trong khoảng 24 đến 65).\nBiện luận khoảng giá trị giúp phát hiện sai nhanh: Mtb phải giữa M(A) và M(B); %khối lượng phải từ 0-100%; số mol phản ứng không vượt số mol ban đầu (nếu %Cu trong hỗn hợp Fe-Cu ra 120% thì chắc chắn đã tính sai).\nKHÔNG dùng trung bình khi các chất không cùng kiểu quan hệ với dữ kiện chung — Fe và Cu gặp HCl dư chỉ Fe tạo H2, không thể lấy Mtb=m hỗn hợp/nH2 rồi coi là trung bình của cả Fe và Cu; phải tách chất phản ứng/không phản ứng. Khi đề không nói axit dư hay phản ứng hoàn toàn, phải kiểm tra chất giới hạn bằng tỉ lệ mol theo PTHH, đặt ẩn là số mol đã phản ứng chứ không mặc định bằng số mol ban đầu."
+        },
+        {
+          "id": "a1-l9-c7",
+          "heading": "Nâng cao: Tăng giảm khối lượng — thanh kim loại và nhiều ion",
+          "body": "Khi nhúng kim loại A vào dung dịch muối B, độ đổi khối lượng thanh = khối lượng B bám − khối lượng A tan, phải dùng đúng tỉ lệ mol trong phương trình (không chỉ lấy M(B)−M(A) khi hệ số không phải 1:1). Ví dụ Fe+CuSO4→FeSO4+Cu (tỉ lệ 1:1): mỗi mol Fe làm thanh tăng 64−56=8 g. Nhưng 2Al+3CuSO4→Al2(SO4)3+3Cu: mỗi mol Al tan làm 1,5 mol Cu bám, thanh tăng 1,5×64−27=69 g — nhiều học sinh sai vì máy móc lấy 64−27.\nNếu dung dịch chứa nhiều ion kim loại (ví dụ Cu2+ và Ag+), kim loại mạnh hơn (Fe) có thể đẩy cả hai ra, dựa vào dãy hoạt động hoá học và chất giới hạn để biết ion nào phản ứng hết trước. Độ đổi khối lượng = tổng khối lượng kim loại bám − khối lượng kim loại tan (không gộp thành một hiệu M duy nhất): tăng khối lượng = mAg bám + mCu bám − mFe tan."
+        },
+        {
+          "id": "a1-l9-c8",
+          "heading": "Nâng cao: Tăng giảm khối lượng — kết tủa, nung chất rắn và khối lượng dung dịch",
+          "body": "Không chỉ phản ứng thế kim loại mới dùng tăng giảm khối lượng: trong phản ứng tạo kết tủa (BaCl2+Na2SO4→BaSO4↓+2NaCl), khối lượng dung dịch sau khi lọc = tổng khối lượng hai dung dịch ban đầu − khối lượng kết tủa (trừ thêm khối lượng khí nếu có khí thoát ra). Khi nung muối cacbonat/hiđroxit không tan, khối lượng chất rắn giảm đúng bằng phần khí/hơi thoát ra (CaCO3→CaO+CO2 giảm 44 g/mol; CuSO4.5H2O nung mất 5 mol H2O, giảm 90 g/mol) — khối lượng ban đầu = khối lượng chất rắn sau + khối lượng khí/hơi thoát ra.\nCông thức tổng quát cho khối lượng dung dịch sau phản ứng: m dung dịch sau = m dung dịch ban đầu + m chất thêm vào − m khí thoát ra − m kết tủa tách ra − m kim loại bám ra khỏi dung dịch (phần kim loại mới bám lên thanh không còn nằm trong dung dịch)."
+        },
+        {
+          "id": "a1-l9-c9",
+          "heading": "Nâng cao: Bảo toàn nguyên tố/nhóm/kim loại qua nhiều bước",
+          "body": "Nếu một nguyên tố kim loại đi qua nhiều hợp chất liên tiếp mà không mất mát, số mol nguyên tử kim loại được bảo toàn — có thể bỏ qua các phương trình trung gian. Ví dụ Fe→FeCl2→Fe(OH)2→FeO: nFe ban đầu = nFe trong mỗi hợp chất. Với Al→AlCl3→Al(OH)3→Al2O3: chú ý Al2O3 chứa 2 nguyên tử Al trong một công thức, nên nAl2O3 = nAl ban đầu/2 (lỗi thường gặp là quên chỉ số 2 này).\nVới nhóm nguyên tử bền không bị biến đổi (SO4, NO3), bảo toàn cả nhóm giúp giảm số phương trình: dung dịch chứa Na2SO4 và K2SO4 tác dụng BaCl2 dư tạo BaSO4, số mol BaSO4 = tổng số mol nhóm SO4 ban đầu. Khi nhóm BỊ biến đổi thành khí (ví dụ CO3 gặp axit tạo CO2), không còn nguyên nhóm nữa — khi đó bảo toàn theo NGUYÊN TỐ (C) thay vì bảo toàn nhóm.\nVới phản ứng axit tạo muối, gốc axit thường đi nguyên vẹn vào muối: mỗi mol H2SO4 cung cấp 1 mol nhóm SO4 (nếu toàn bộ đi vào BaSO4 thì nBaSO4=nH2SO4); tổng số mol Cl trong các muối clorua bằng nHCl đã phản ứng, dù số mol từng muối còn phụ thuộc hoá trị kim loại."
+        },
+        {
+          "id": "a1-l9-c10",
+          "heading": "Nâng cao: Các lỗi hay gặp trong bài hỗn hợp và bảo toàn",
+          "body": "Lỗi cần kiểm tra trước khi chốt đáp số: dùng toàn bộ khối lượng hỗn hợp cho chất duy nhất tạo khí; quên chất không phản ứng; dùng 22,4 cho chất không phải khí; quên đổi ml sang lít trước khi tính n=V/22,4; lấy hiệu M(kim loại bám)−M(kim loại tan) dù phương trình không có tỉ lệ 1:1; cộng nhầm khối lượng kết tủa vào dung dịch sau lọc thay vì trừ ra.\nMột lỗi tinh vi khác là bảo toàn nguyên tố sai đối tượng: phải bảo toàn số mol NGUYÊN TỬ, không phải số mol hợp chất — 1 mol Al2O3 chứa 2 mol Al, nên khi bảo toàn Al phải nhân/chia theo đúng chỉ số nguyên tử trong công thức."
         }
       ],
       "questions": [

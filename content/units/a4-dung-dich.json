@@ -28,6 +28,41 @@
           "id": "a4-l1-c3",
           "heading": "Các yếu tố ảnh hưởng đến độ tan",
           "body": "Nhiệt độ: đa số chất rắn tan nhiều hơn khi nhiệt độ tăng; ngược lại, chất khí tan ít hơn khi nhiệt độ tăng.\nÁp suất: độ tan của chất khí tăng khi áp suất tăng; áp suất hầu như không ảnh hưởng đến độ tan của chất rắn, chất lỏng."
+        },
+        {
+          "id": "a4-l1-c4",
+          "heading": "Nâng cao: Công thức liên hệ giữa độ tan và nồng độ % của dung dịch bão hoà",
+          "body": "Với dung dịch bão hoà ở một nhiệt độ xác định, nếu độ tan là S (g/100 g nước) thì trong 100 g nước có S gam chất tan, tổng khối lượng dung dịch là (100+S) gam. Do đó nồng độ phần trăm của dung dịch bão hoà tính theo công thức: C% = S/(100+S) x 100.\nVí dụ: NaCl có độ tan 36 g ở 20 độ C thì dung dịch NaCl bão hoà ở 20 độ C có nồng độ C% = 36/(100+36) x 100 ≈ 26,5%.\nBiến đổi ngược lại, từ C% suy ra S: S = 100 x C%/(100 - C%). Ví dụ: hoà tan 50 g muối X vào 200 g nước ở một nhiệt độ, thu được đúng dung dịch bão hoà. Khối lượng dung dịch là 50+200=250 g nên C% = 50/250 x 100 = 20%. Tính theo định nghĩa độ tan: S = 50/200 x 100 = 25 g, khớp với công thức ngược S = 100x20/(100-20) = 25 g.\nLưu ý: công thức này CHỈ áp dụng cho dung dịch bão hoà; với dung dịch chưa bão hoà, phải tính C% trực tiếp theo khối lượng chất tan và khối lượng dung dịch thực tế, không dùng công thức trên. Dạng bài có thể cho C% để suy ra S, hoặc ngược lại, nên cần nhớ cả hai chiều biến đổi."
+        },
+        {
+          "id": "a4-l1-c5",
+          "heading": "Nâng cao: Đọc và so sánh đồ thị độ tan theo nhiệt độ",
+          "body": "Đồ thị độ tan biểu diễn độ tan S (trục tung, g/100 g nước) theo nhiệt độ (trục hoành, độ C). Với đa số chất rắn, đường biểu diễn đi lên; độ dốc của đường cho biết chất đó nhạy với nhiệt độ nhiều hay ít.\nVí dụ minh hoạ: NaCl có độ tan tăng chậm theo nhiệt độ (khoảng 36 g ở 20 độ C, khoảng 39 g ở 100 độ C, đường gần như nằm ngang); KNO3 tăng rất nhanh (khoảng 13 g ở 0 độ C, 32 g ở 20 độ C, có thể lên tới hơn 200 g ở gần 100 độ C, đường dốc đứng).\nHai đường biểu diễn độ tan của hai chất khác nhau có thể cắt nhau tại một nhiệt độ nào đó, tại điểm cắt hai chất có cùng độ tan; đây là dữ kiện thường gặp trong dạng bài đọc đồ thị của đề HSG."
+        },
+        {
+          "id": "a4-l1-c6",
+          "heading": "Nâng cao: Trường hợp đặc biệt — độ tan giảm khi nhiệt độ tăng",
+          "body": "Không phải mọi chất rắn đều tan nhiều hơn khi đun nóng. Ca(OH)2 (vôi tôi) là ví dụ điển hình đi ngược quy luật chung: độ tan của Ca(OH)2 GIẢM khi nhiệt độ tăng (khoảng 0,17 g/100 g nước ở 20 độ C, giảm còn khoảng 0,08-0,09 g/100 g nước ở gần 100 độ C).\nVì vậy, muốn thu được dung dịch nước vôi trong có nồng độ Ca(OH)2 cao nhất, nên hoà tan ở nhiệt độ THẤP (nước lạnh), không phải đun nóng như đa số muối/đường khác.\nĐây là một câu hỏi bẫy quen thuộc trong đề HSG: nếu không nhớ ngoại lệ này, học sinh dễ trả lời sai theo quy luật chung 'nhiệt độ tăng thì độ tan chất rắn tăng'."
+        },
+        {
+          "id": "a4-l1-c7",
+          "heading": "Nâng cao: Ảnh hưởng của nhiệt độ và áp suất đến độ tan của chất khí",
+          "body": "Áp suất khí trên bề mặt chất lỏng càng tăng thì độ tan của chất khí trong chất lỏng đó càng tăng; áp suất giảm thì độ tan khí giảm. Ứng dụng quen thuộc: nước ngọt có ga được nạp CO2 dưới áp suất cao trong chai/lon kín nên hoà tan được nhiều CO2. Khi mở nắp, áp suất giảm đột ngột về áp suất khí quyển nên độ tan CO2 giảm mạnh, khí CO2 thoát ra ngoài tạo bọt sủi.\nKhác với chất rắn, nhiệt độ tăng làm độ tan của CHẤT KHÍ trong nước GIẢM (không tăng). Ví dụ: nước càng nóng thì lượng oxi hoà tan trong nước càng ít, đó là lý do cá thường nổi lên mặt nước để thở khi nước bị đun nóng hoặc vào mùa hè oi bức, vì lượng oxi hoà tan giảm khiến cá thiếu oxi.\nLưu ý: áp suất hầu như không ảnh hưởng đến độ tan chất rắn và chất lỏng, chỉ ảnh hưởng đáng kể đến độ tan chất khí."
+        },
+        {
+          "id": "a4-l1-c8",
+          "heading": "Nâng cao: Trạng thái bão hoà, chưa bão hoà và quá bão hoà của dung dịch",
+          "body": "Dung dịch quá bão hoà là dung dịch chứa lượng chất tan NHIỀU HƠN mức bão hoà thông thường ở nhiệt độ đó, đây là trạng thái không bền (giả bền). Cách tạo: hoà tan chất tan tới bão hoà ở nhiệt độ cao, sau đó làm nguội từ từ, thật cẩn thận (không khuấy mạnh, không có mầm tinh thể hay bụi bẩn) để chất tan dư không kịp kết tinh ra ngay. Chỉ cần một tác động nhỏ (thả một mầm tinh thể chất tan vào, khuấy mạnh, hoặc va chạm) là phần chất tan dư sẽ kết tinh nhanh chóng trở lại trạng thái bão hoà bền, đây là hiện tượng dùng để giải thích một số thí nghiệm 'kết tinh tức thời' quen thuộc.\nVới dung dịch chưa bão hoà, khối lượng chất tan hiện có luôn nhỏ hơn mức tối đa mà độ tan cho phép ở nhiệt độ đó. Khối lượng cần thêm vào (giữ nguyên khối lượng dung môi) = khối lượng chất tan tối đa theo độ tan trừ khối lượng chất tan đã có. Ví dụ: ở 20 độ C, S(NaCl) = 36 g/100 g nước. Hoà tan 20 g NaCl vào 100 g nước được dung dịch chưa bão hoà (vì 20 < 36). Cần thêm 36 - 20 = 16 g NaCl nữa (giữ nguyên 100 g nước) để dung dịch đạt bão hoà. Nếu đổi khối lượng nước, phải tính lại khối lượng chất tan tối đa tương ứng theo tỉ lệ với 100 g nước trước khi trừ đi khối lượng đã hoà tan."
+        },
+        {
+          "id": "a4-l1-c9",
+          "heading": "Nâng cao: So sánh độ tan khi khối lượng dung môi khác nhau",
+          "body": "Không thể so sánh trực tiếp khối lượng chất tan tối đa giữa các thí nghiệm nếu khối lượng dung môi khác nhau, phải quy đổi tất cả về cùng 100 g nước (tức tính độ tan S) rồi mới so sánh.\nVí dụ: chất A tan tối đa 15 g trong 50 g nước -> S(A) = 15/50 x 100 = 30 g. Chất B tan tối đa 24 g trong 80 g nước -> S(B) = 24/80 x 100 = 30 g. Dù khối lượng tan tối đa khác nhau (15 g và 24 g), hai chất này thực ra có ĐỘ TAN BẰNG NHAU ở nhiệt độ đó.\nĐây là lỗi so sánh rất hay gặp: nhìn số gam chất tan lớn hơn rồi vội kết luận chất đó có độ tan lớn hơn, mà quên kiểm tra khối lượng dung môi tương ứng có bằng nhau hay không."
+        },
+        {
+          "id": "a4-l1-c10",
+          "heading": "Nâng cao: Các lỗi sai thường gặp khi làm bài về độ tan",
+          "body": "Một số lỗi hay gặp cần tự kiểm tra trước khi chốt đáp số:\n- Nhầm 100 g NƯỚC (dung môi) với 100 g DUNG DỊCH khi tính S, độ tan luôn quy về khối lượng dung môi, không phải khối lượng dung dịch.\n- Nói 'độ tan của chất X' mà không kèm nhiệt độ xác định, độ tan chỉ có ý nghĩa khi gắn với một nhiệt độ cụ thể.\n- Áp dụng công thức C% = 100S/(100+S) cho dung dịch CHƯA bão hoà, công thức này chỉ đúng với dung dịch bão hoà.\n- Nhầm chiều ảnh hưởng của nhiệt độ: cho rằng mọi chất khí cũng tan nhiều hơn khi nóng lên giống chất rắn (thực tế ngược lại), hoặc quên trường hợp đặc biệt Ca(OH)2.\n- So sánh độ tan giữa hai thí nghiệm có khối lượng dung môi khác nhau mà không quy đổi về cùng 100 g nước trước.\n- Khi làm lạnh dung dịch bão hoà chứa muối kết tinh dạng ngậm nước (như CuSO4.5H2O), quên trừ đi lượng nước bị giữ lại trong tinh thể kết tinh khi tính lại khối lượng nước còn lại trong dung dịch, sẽ được xử lý kỹ hơn ở bài về tinh thể ngậm nước."
         }
       ],
       "questions": [
@@ -197,17 +232,42 @@
         {
           "id": "a4-l2-c1",
           "heading": "Nồng độ phần trăm (C%)",
-          "body": "Nồng độ phần trăm là khối lượng chất tan có trong 100 g dung dịch.\nCông thức: C% = (mct/mdd) x 100%, trong đó mdd = mct + mdm (khi không có phản ứng tạo khí hay kết tủa)."
+          "body": "Nồng độ phần trăm là khối lượng chất tan có trong 100 g dung dịch.\nCông thức: C% = (mct/mdd) x 100%; với dung dịch đang xét, mdd = mdm + tổng khối lượng các chất tan.\n\nSuy ra: mct = C% x mdd/100 và mdd = mct x 100/C%. Luôn xác định mẫu số là khối lượng dung dịch cuối cùng, không nhầm với khối lượng nước. Nếu quá trình có khí bay ra, kết tủa bị tách khỏi dung dịch hoặc dung môi bay hơi thì phải tính lại mdd theo khối lượng thực còn trong dung dịch."
         },
         {
           "id": "a4-l2-c2",
           "heading": "Nồng độ mol (CM)",
-          "body": "Nồng độ mol là số mol chất tan có trong 1 lít dung dịch.\nCông thức: CM = n/V, trong đó V tính bằng lít."
+          "body": "Nồng độ mol là số mol chất tan có trong 1 lít dung dịch.\nCông thức: CM = n/V, trong đó V tính bằng lít.\n\nCác hệ thức dùng ngược: n = CM x V và mct = CM x V x M. V là thể tích của dung dịch sau khi pha, không phải thể tích nước đã lấy ban đầu; phải đổi ml sang lít trước khi thay số. Khi nhiệt độ thay đổi đáng kể, thể tích dung dịch và vì vậy CM có thể thay đổi, dù số mol chất tan không đổi."
         },
         {
           "id": "a4-l2-c3",
           "heading": "Chuyển đổi giữa C% và CM",
-          "body": "Cần biết khối lượng riêng D (g/ml) của dung dịch để chuyển đổi:\nCM = (10 x D x C%) / M, trong đó M là khối lượng mol của chất tan."
+          "body": "Cần biết khối lượng riêng D (g/ml) của dung dịch để chuyển đổi:\nCM = (10 x D x C%) / M, trong đó M là khối lượng mol của chất tan.\n\nCông thức ngược: C% = CM x M/(10 x D). Chỉ được dùng các công thức này khi D là khối lượng riêng của đúng dung dịch đang xét, ở điều kiện nêu trong đề; không mặc định D = 1 g/ml nếu đề không cho hoặc không cho phép làm tròn."
+        },
+        {
+          "id": "a4-l2-c4",
+          "heading": "Nâng cao: Chọn cơ sở tính để đơn giản hoá bài toán",
+          "body": "Với dung dịch có C%, thường chọn 100 g dung dịch làm cơ sở: khi đó mct đúng bằng giá trị C% tính theo gam; đối với dung dịch chỉ chứa một chất tan, mdm = 100 - C% gam. Với dung dịch có CM, thường chọn 1 lít dung dịch: khi đó số mol chất tan đúng bằng CM.\n\nNếu đề cho đồng thời C%, CM và D, chọn 1 lít dung dịch là thuận lợi nhất vì mdd = 1000 x D (g). Từ đây tính mct = C% x 1000 x D/100, đổi ra mol rồi so với CM. Cách chọn cơ sở chỉ là quy ước tính toán; phải nhân hoặc chia mọi đại lượng cùng một hệ số khi quay về lượng dung dịch thực tế."
+        },
+        {
+          "id": "a4-l2-c5",
+          "heading": "Nâng cao: Suy ra công thức chuyển đổi và kiểm tra đơn vị",
+          "body": "Xét 1 lít dung dịch có D g/ml. Khối lượng dung dịch là 1000D g; khối lượng chất tan là 10D x C% g; số mol chất tan là 10D x C%/M. Vì thể tích đã chọn là 1 lít, giá trị số mol này chính là CM, suy ra CM = 10 x D x C%/M.\n\nTừ công thức có thể biện luận ngược: M = 10 x D x C%/CM hoặc D = CM x M/(10 x C%). Khi thế số, dùng C% dưới dạng số phần trăm, chẳng hạn 20 chứ không phải 0,20; còn D phải tính bằng g/ml. Sai đơn vị hoặc đổi 20% thành 0,20 trong công thức trên thường làm kết quả lệch 100 lần."
+        },
+        {
+          "id": "a4-l2-c6",
+          "heading": "Nâng cao: Lấy một phần dung dịch đồng nhất",
+          "body": "Dung dịch đồng nhất có cùng thành phần ở mọi phần. Lấy ra một phần có thể tích V lít thì số mol chất tan của phần đó là n = CM x V; lấy ra phần có khối lượng m g thì khối lượng chất tan là mct = C% x m/100. Phần còn lại có lượng chất tan giảm đúng bằng lượng đã lấy ra.\n\nTuy nhiên, nếu chỉ rót/lấy dung dịch đồng nhất, không cho chất phản ứng, không làm bay hơi dung môi và không làm kết tinh, C% và CM của phần lấy ra cũng như phần còn lại vẫn bằng nồng độ ban đầu. Đây là căn cứ để giải các bài toán lấy một phần dung dịch mà không phải lập lại nồng độ mới."
+        },
+        {
+          "id": "a4-l2-c7",
+          "heading": "Nâng cao: Dung dịch có nhiều chất tan",
+          "body": "Trong dung dịch chứa nhiều chất tan, mỗi chất có một nồng độ phần trăm riêng trên cùng khối lượng dung dịch: C%(A) = mA/mdd x 100%, C%(B) = mB/mdd x 100%. Không lấy khối lượng của chất này chia cho khối lượng chất kia.\n\nNếu các chất tan đều đã biết và không có thành phần rắn lơ lửng, tổng các C% của chất tan bằng phần trăm khối lượng toàn bộ chất tan; phần còn lại đến 100% là dung môi. Nồng độ mol cũng phải ghi kèm tên chất: dung dịch có thể đồng thời là 0,10M NaCl và 0,20M HCl, không được cộng hai giá trị ấy để gọi là CM của một chất không xác định."
+        },
+        {
+          "id": "a4-l2-c8",
+          "heading": "Nâng cao: Biện luận dữ kiện và tự kiểm tra kết quả",
+          "body": "Với dung dịch thông thường, 0 < C% < 100 và CM > 0. Khi C%, M và D đều dương, công thức chuyển đổi phải cho CM dương; khi các đại lượng khác không đổi, C% tăng hoặc D tăng thì CM tăng, còn M tăng thì CM giảm. Những quan hệ này giúp phát hiện đáp số vô lí trước khi tính lại.\n\nTrước khi chốt bài, kiểm tra ba điểm: đại lượng khối lượng dùng gam, thể tích trong CM dùng lít, và D dùng g/ml; C% luôn dựa trên dung dịch cuối cùng. Với dữ kiện C%, CM, D, M cùng được cho, thay ngược vào công thức chuyển đổi là cách kiểm tra nhanh xem các số liệu có cùng nói về một dung dịch hay không."
         }
       ],
       "questions": [
@@ -368,17 +428,47 @@
         {
           "id": "a4-l3-c1",
           "heading": "Pha chế dung dịch theo nồng độ cho trước",
-          "body": "Từ chất tan rắn: tính khối lượng chất tan cần dùng (m = C% x mdd/100, hoặc n = CM x V), cân đủ lượng rồi hoà tan vào nước cho đủ thể tích hoặc khối lượng dung dịch yêu cầu."
+          "body": "Từ chất tan rắn: tính khối lượng chất tan cần dùng (m = C% x mdd/100, hoặc n = CM x V), cân đủ lượng rồi hoà tan vào nước cho đủ thể tích hoặc khối lượng dung dịch yêu cầu.\n\nNếu đề yêu cầu thể tích chính xác, không đong ngay toàn bộ lượng nước cần dùng: hoà tan chất rắn trong một phần nước, chuyển định lượng sang bình định mức, tráng cốc và gộp nước tráng, rồi thêm nước đến vạch. Đọc đáy mặt khum ở ngang tầm mắt; sau khi lắc đều, thể tích dung dịch mới đúng bằng thể tích định mức."
         },
         {
           "id": "a4-l3-c2",
           "heading": "Pha loãng dung dịch",
-          "body": "Khi thêm nước vào dung dịch, khối lượng (hoặc số mol) chất tan không đổi:\nC1.V1 = C2.V2 (đối với nồng độ mol); m1.C%1 = m2.C%2 (đối với nồng độ phần trăm)."
+          "body": "Khi thêm nước vào dung dịch, khối lượng (hoặc số mol) chất tan không đổi:\nC1.V1 = C2.V2 (đối với nồng độ mol); m1.C%1 = m2.C%2 (đối với nồng độ phần trăm).\n\nTrước khi dùng công thức, phải chọn đúng đại lượng bảo toàn: nồng độ mol đi với số mol và thể tích tính bằng L; nồng độ phần trăm đi với khối lượng chất tan và khối lượng dung dịch. Với axit đặc, luôn rót từ từ axit vào nước, khuấy đều và để nguội khi cần; không làm ngược lại vì nhiệt toả ra mạnh có thể làm dung dịch bắn ra ngoài."
         },
         {
           "id": "a4-l3-c3",
           "heading": "Quy tắc đường chéo",
-          "body": "Dùng để tính nhanh tỉ lệ pha trộn hai dung dịch có nồng độ khác nhau để được dung dịch nồng độ mong muốn C.\nVới dung dịch 1 nồng độ C1 và dung dịch 2 nồng độ C2 (C1 < C < C2): tỉ lệ khối lượng m1 : m2 = (C2 - C) : (C - C1)."
+          "body": "Dùng để tính nhanh tỉ lệ pha trộn hai dung dịch có nồng độ khác nhau để được dung dịch nồng độ mong muốn C.\nVới dung dịch 1 nồng độ C1 và dung dịch 2 nồng độ C2 (C1 < C < C2): tỉ lệ khối lượng m1 : m2 = (C2 - C) : (C - C1).\n\nHai hiệu chéo luôn đặt cạnh dung dịch ở phía đối diện: dung dịch loãng hơn nhận hiệu C2 - C, dung dịch đậm đặc hơn nhận hiệu C - C1. Sau khi có tỉ lệ, có thể nhân đồng thời hai số với cùng một hệ số để chọn lượng pha thực tế."
+        },
+        {
+          "id": "a4-l3-c4",
+          "heading": "Nâng cao: sơ đồ bảo toàn để chọn công thức",
+          "body": "Mọi bài pha chế nên bắt đầu bằng sơ đồ trước – sau và xét chất nào đi vào, đi ra. Thêm nước hoặc cô bớt nước: chất tan không bay hơi được bảo toàn. Thêm chất tan rắn: cả khối lượng chất tan lẫn khối lượng dung dịch tăng. Trộn các dung dịch cùng chất tan: khối lượng chất tan sau bằng tổng khối lượng chất tan ban đầu.\n\nVì vậy, với m0 gam dung dịch C0% pha loãng thành C% (C < C0), khối lượng dung dịch sau là m = m0.C0/C và lượng nước thêm là m - m0. Nếu cô bớt nước để đạt C% (C > C0), công thức m = m0.C0/C vẫn cho khối lượng dung dịch còn lại; lượng nước bay hơi là m0 - m. Chỉ dùng kết quả này khi chất tan không bay hơi, không bị phân huỷ và không kết tinh tách ra."
+        },
+        {
+          "id": "a4-l3-c5",
+          "heading": "Nâng cao: liên hệ nồng độ phần trăm, mol và khối lượng riêng",
+          "body": "Công thức chuyển đổi đã học: CM = 10.D.C%/M và C% = CM.M/(10.D), với D tính bằng g/ml. Trong bài pha chế, công thức này giúp đổi dung dịch thương phẩm cho theo C% và D sang CM để tính số mol hoặc thể tích dung dịch gốc cần lấy.\n\nKhi dùng kết quả để pha loãng theo CM, vẫn phải thống nhất đơn vị: M dùng g/mol, CM dùng mol/L, V dùng L. Không thay trực tiếp ml vào công thức số mol n = CM.V nếu V chưa đổi sang L."
+        },
+        {
+          "id": "a4-l3-c6",
+          "heading": "Nâng cao: điều kiện và bản chất của đường chéo",
+          "body": "Đường chéo là dạng rút gọn của bảo toàn chất tan, chỉ áp dụng trực tiếp khi trộn hai dung dịch của cùng một chất tan, không có phản ứng và nồng độ cần đạt nằm giữa hai nồng độ ban đầu. Nếu C trùng C1 hoặc C2 thì chỉ cần dùng dung dịch tương ứng; nếu C nằm ngoài khoảng đó thì không thể đạt chỉ bằng cách trộn hai dung dịch ấy.\n\nVới C%, đường chéo cho tỉ lệ khối lượng. Với CM của cùng chất tan, đường chéo cho tỉ lệ thể tích khi đề bài cho phép coi thể tích các dung dịch cộng được. Nước có thể xem là dung dịch 0% hoặc 0M, nên pha loãng bằng nước cũng là một trường hợp đặc biệt của đường chéo. Khi hai dung dịch chứa chất tan khác nhau có phản ứng, hãy viết phương trình và tính theo số mol thay vì dùng đường chéo máy móc."
+        },
+        {
+          "id": "a4-l3-c7",
+          "heading": "Nâng cao: trộn nhiều dung dịch và kiểm tra đáp số",
+          "body": "Khi trộn nhiều dung dịch cùng chất tan, nên cộng lượng chất tan trước. Theo nồng độ phần trăm: C% sau = (m1.C1% + m2.C2% + ...)/(m1 + m2 + ...) với các C% được dùng theo trị số phần trăm. Theo nồng độ mol: CM sau = (CM1.V1 + CM2.V2 + ...)/(V1 + V2 + ...) nếu thể tích cộng được và đều đã đổi về cùng đơn vị.\n\nKhông cần nhớ nhiều công thức nếu luôn làm theo hai bước: tính tổng chất tan, rồi chia cho tổng dung dịch. Khi không có phản ứng hay thất thoát, nồng độ sau khi trộn phải nằm giữa nồng độ nhỏ nhất và lớn nhất ban đầu; đáp số nằm ngoài khoảng này thường báo hiệu đảo tỉ lệ, quên cộng khối lượng/thể tích hoặc dùng sai đơn vị."
+        },
+        {
+          "id": "a4-l3-c8",
+          "heading": "Nâng cao: thêm chất tan và thay một phần dung dịch",
+          "body": "Thêm x gam chất tan nguyên chất vào m0 gam dung dịch C0% để được dung dịch C% thì: x = m0.(C - C0)/(100 - C), với C > C0 và các nồng độ viết theo %. Công thức xuất phát từ m chất tan sau = m0.C0/100 + x và m dung dịch sau = m0 + x.\n\nDạng khó hơn: lấy ra x gam dung dịch đồng nhất từ bình chứa M gam rồi bù đúng x gam nước. Sau một lần, nồng độ giảm theo hệ số (M - x)/M. Lặp k lần giống hệt nhau: Ck% = C0%.[(M - x)/M]^k. Điều kiện then chốt là phải khuấy đều trước mỗi lần lấy để phần lấy ra có đúng nồng độ của dung dịch trong bình."
+        },
+        {
+          "id": "a4-l3-c9",
+          "heading": "Nâng cao: xử lí đề pha chế thực nghiệm",
+          "body": "Đề pha chế từ dung dịch gốc thường yêu cầu xác định lượng dung dịch gốc cần lấy. Với CM, tính Vgốc = CM_đích.Vđích/CM_gốc. Khi pha bằng bình định mức, lấy đúng Vgốc dung dịch gốc rồi thêm nước đến vạch định mức; không đo riêng lượng nước bằng phép trừ thể tích. Với C%, nếu chỉ cho khối lượng thì phải dùng khối lượng; muốn đổi sang thể tích phải có khối lượng riêng.\n\nKhông nhầm “thêm a ml nước” với “pha thành a ml dung dịch”: trường hợp thứ nhất có thể tích cuối là Vban đầu + a (theo giả thiết cộng thể tích), còn trường hợp thứ hai thể tích cuối được ấn định là a. Chỉ dùng Vnước = Vđích - Vgốc như một ước lượng gần đúng khi không dùng bình định mức, chẳng hạn đong bằng ống đong và giả thiết thể tích cộng được. Nếu dung dịch gốc quá đậm đặc và việc pha loãng toả nhiệt, cần để dung dịch trở về nhiệt độ thường rồi mới chỉnh đến vạch định mức."
         }
       ],
       "questions": [
@@ -548,17 +638,52 @@
         {
           "id": "a4-l4-c1",
           "heading": "Tinh thể ngậm nước",
-          "body": "Nhiều muối kết tinh ở dạng ngậm một số phân tử nước cố định, kí hiệu dạng ...·nH2O.\nVí dụ: CuSO4·5H2O (M = 250), Na2CO3·10H2O (M = 286), FeSO4·7H2O (M = 278)."
+          "body": "Nhiều muối kết tinh ở dạng ngậm một số phân tử nước cố định, kí hiệu dạng ...·nH2O.\nVí dụ: CuSO4·5H2O (M = 250), Na2CO3·10H2O (M = 286), FeSO4·7H2O (M = 278).\n\nDấu chấm không có nghĩa là hỗn hợp tuỳ ý: 1 mol đơn vị công thức X·nH2O luôn đi với 1 mol X và n mol H2O. Nước kết tinh là một phần của tinh thể nên phải tính vào khối lượng mol của tinh thể. Khi hoà tan, X và lượng nước này đều đi vào dung dịch; khi đun, chỉ được coi khối lượng giảm là nước kết tinh nếu đề bài nói rõ muối không bị phân huỷ hay mất chất khác."
         },
         {
           "id": "a4-l4-c2",
           "heading": "Tính khối lượng chất tan và nước từ tinh thể ngậm nước",
-          "body": "Khi hoà tan m gam tinh thể X·nH2O vào nước, khối lượng chất tan khan (X) và khối lượng nước do tinh thể mang vào dung dịch đều tính theo tỉ lệ mol và phân tử khối tương ứng của X và H2O trong công thức."
+          "body": "Khi hoà tan m gam tinh thể X·nH2O vào nước, khối lượng chất tan khan (X) và khối lượng nước do tinh thể mang vào dung dịch đều tính theo tỉ lệ mol và phân tử khối tương ứng của X và H2O trong công thức.\n\nĐặt Mtt = M(X·nH2O). Khi đó mX = m x M(X)/Mtt và mnước kết tinh = m x 18n/Mtt. Hai phần này phải cộng lại đúng bằng m. Nếu đề hỏi nồng độ của X sau khi hoà tan tinh thể, tử số là mX chứ không phải toàn bộ khối lượng tinh thể; còn khối lượng dung dịch thường gồm tinh thể ban đầu cộng với nước đã thêm."
         },
         {
           "id": "a4-l4-c3",
           "heading": "Bài toán kết tinh",
-          "body": "Khi làm nguội hoặc làm bay hơi bớt nước của dung dịch bão hoà, một phần chất tan tách ra (kết tinh) do độ tan giảm. Phần dung dịch còn lại vẫn bão hoà ở điều kiện mới.\nDùng bảo toàn khối lượng chất tan và nước để tính khối lượng chất kết tinh tách ra."
+          "body": "Khi làm nguội hoặc làm bay hơi bớt nước của dung dịch bão hoà, một phần chất tan tách ra (kết tinh) do độ tan giảm. Phần dung dịch còn lại vẫn bão hoà ở điều kiện mới.\nDùng bảo toàn khối lượng chất tan và nước để tính khối lượng chất kết tinh tách ra.\n\nCần phân biệt hai tình huống: nếu tinh thể tách ra là muối khan thì nước chỉ thay đổi khi đề cho bay hơi; nếu tinh thể là X·nH2O thì mỗi mol tinh thể lấy đồng thời X và 18n gam nước ra khỏi dung dịch. Vì vậy không thể chỉ bảo toàn riêng khối lượng chất tan trong mọi bài kết tinh ngậm nước."
+        },
+        {
+          "id": "a4-l4-c4",
+          "heading": "Nâng cao: Quy đổi giữa muối khan và tinh thể ngậm nước",
+          "body": "Với tinh thể X·nH2O, đặt Mtt = M(X) + 18n. Trong m gam tinh thể, phần trăm khối lượng muối khan là M(X)/Mtt x 100%, còn phần trăm nước kết tinh là 18n/Mtt x 100%; hai phần trăm phải có tổng 100%.\n\nMuốn điều chế một dung dịch chứa a gam X từ tinh thể, cần mtt = a x Mtt/M(X) gam tinh thể. Lượng nước kết tinh đã có trong phần tinh thể này không phải nước thêm từ bên ngoài, nhưng vẫn góp vào khối lượng dung dịch. Việc tách riêng hai phần ngay từ đầu giúp tránh nhầm m gam CuSO4·5H2O là m gam CuSO4."
+        },
+        {
+          "id": "a4-l4-c5",
+          "heading": "Nâng cao: Xác định số phân tử nước kết tinh",
+          "body": "Khi đun m0 gam X·nH2O đến khối lượng không đổi và giả sử chỉ mất nước kết tinh, khối lượng nước mất là m0 - mkhan. Tính nX = mkhan/M(X), nH2O = (m0 - mkhan)/18, rồi n = nH2O/nX. Viết công thức với n là số nguyên tối giản.\n\nKhông được vội làm tròn nếu tỉ số lệch xa số nguyên: có thể mẫu chưa mất hết nước, chất rắn đã bị phân huỷ hoặc số liệu có sai số. Trong bài phổ thông, chỉ dùng phương pháp này khi đề khẳng định chất rắn sau đun là X khan và không có chất bay hơi nào khác."
+        },
+        {
+          "id": "a4-l4-c6",
+          "heading": "Nâng cao: Làm nguội dung dịch bão hoà",
+          "body": "Độ tan S g/100 g nước nghĩa là trong 100 g nước có tối đa S g chất tan ở nhiệt độ đang xét. Nếu làm nguội dung dịch bão hoà của cùng một muối từ nhiệt độ có độ tan S1 xuống S2 và không có nước bay hơi, khối lượng nước không đổi. Với mw gam nước, khối lượng muối khan kết tinh là mw x (S1 - S2)/100.\n\nNếu đề cho mdd gam dung dịch bão hoà ban đầu, trước hết tách lượng nước: mw = 100 x mdd/(100 + S1). Sau đó mới dùng công thức trên. Không lấy trực tiếp mdd nhân với độ tan vì độ tan luôn quy về 100 g nước, không phải 100 g dung dịch."
+        },
+        {
+          "id": "a4-l4-c7",
+          "heading": "Nâng cao: Cô đặc ở cùng nhiệt độ",
+          "body": "Khi bay hơi e gam nước từ dung dịch chứa một muối ở nhiệt độ có độ tan S, lượng nước còn lại là mw - e. Nếu dung dịch sau cùng bão hoà và tinh thể tách ra là muối khan, lượng muối còn tan tối đa là S x (mw - e)/100; phần muối vượt quá giá trị đó sẽ kết tinh.\n\nCách làm tổng quát là ghi hai đại lượng riêng: nước giảm vì bay hơi, còn muối không mất theo hơi nước. Nếu sau cô đặc dung dịch chưa bão hoà thì chưa có tinh thể; nếu đã có chất rắn dư, phần dung dịch lỏng luôn có tỉ lệ muối : nước bằng S : 100 ở nhiệt độ đó."
+        },
+        {
+          "id": "a4-l4-c8",
+          "heading": "Nâng cao: Kết tinh dưới dạng X·nH2O",
+          "body": "Khi t mol tinh thể X·nH2O tách ra, dung dịch mất t x M(X) gam X và đồng thời mất 18nt gam nước. Vì cả hai thành phần thay đổi, phải lập hai dòng bảo toàn thay vì áp dụng ngay công thức cho muối khan.\n\nNếu ở trạng thái cuối dung dịch bão hoà với độ tan S2, từ lượng ban đầu mX và mw có phương trình: mX - t x M(X) = S2 x (mw - 18nt)/100. Giải t rồi tính khối lượng tinh thể bằng t x [M(X) + 18n]. Phương trình chỉ có ý nghĩa khi lượng nước còn lại dương và dung dịch mẹ thực sự bão hoà ở nhiệt độ cuối."
+        },
+        {
+          "id": "a4-l4-c9",
+          "heading": "Nâng cao: Kết tinh phân đoạn và độ tinh khiết",
+          "body": "Một hỗn hợp hai muối có thể được tách tương đối nhờ độ tan thay đổi khác nhau theo nhiệt độ. Hoà tan ở nhiệt độ cao, rồi hạ nhiệt có kiểm soát: muối giảm độ tan mạnh hơn thường kết tinh trước, còn muối kia chủ yếu ở lại trong dung dịch mẹ.\n\nỞ mức bài toán, phải tính riêng lượng tối đa của từng muối còn tan theo độ tan của chính muối đó. Chỉ được coi các muối không ảnh hưởng lẫn nhau khi đề bài cho phép hoặc ngầm giả thiết; ngoài thực nghiệm, tinh thể thu được có thể lẫn tạp chất nên thường cần lọc, rửa nhanh bằng lượng nhỏ dung môi lạnh và kết tinh lại để tăng độ tinh khiết."
+        },
+        {
+          "id": "a4-l4-c10",
+          "heading": "Nâng cao: Lập bảng trước – sau và kiểm tra đáp số",
+          "body": "Với bài kết tinh, nên lập bảng gồm nước, chất tan khan và tinh thể. Ở mỗi giai đoạn ghi rõ: ban đầu có bao nhiêu gam nước và chất tan; nước bay hơi bao nhiêu; tinh thể lấy đi bao nhiêu muối khan và bao nhiêu nước. Cách này đặc biệt an toàn khi đề chuyển từ dung dịch bão hoà sang tinh thể ngậm nước.\n\nKiểm tra cuối: khối lượng nước và chất tan còn lại không âm; dung dịch mẹ bão hoà phải thỏa m chất tan/m nước = S/100 tại nhiệt độ cuối; khối lượng tinh thể phải khớp công thức đã cho. Nếu kết quả cho lượng tinh thể âm hoặc dung dịch cuối vượt độ tan mà không có lý do, cần xem lại điều kiện bão hoà hay nhầm giữa muối khan với tinh thể ngậm nước."
         }
       ],
       "questions": [
@@ -730,6 +855,36 @@
           "id": "a4-l5-c3",
           "heading": "Các bước giải bài toán dung dịch tổng hợp",
           "body": "B1. Đổi dữ kiện ra số mol. B2. Viết phương trình hoá học, xác định chất dư/hết.\nB3. Tính khối lượng dung dịch sau phản ứng: mdd sau = tổng khối lượng các dung dịch trộn (+ chất rắn tan thêm nếu có) - khối lượng kết tủa - khối lượng khí thoát ra.\nB4. Tính nồng độ % hoặc CM của chất cần tìm."
+        },
+        {
+          "id": "a4-l5-c4",
+          "heading": "Nâng cao: Bảng số mol trước – phản ứng – sau",
+          "body": "Với các dung dịch có phản ứng, hãy lập bảng số mol cho từng chất hoặc ion phản ứng: ghi số mol ban đầu, lượng biến thiên theo phương trình, rồi suy ra số mol còn lại và số mol sản phẩm. Chất có tỉ số n/hệ số nhỏ hơn là chất hết; chất kia là chất dư.\n\nKhông nên cộng ngay các nồng độ hoặc khối lượng chất tan trước khi biết phản ứng xảy ra đến đâu. Sau phản ứng, dung dịch thường chứa cả chất dư lẫn muối tạo thành; mỗi chất được tính nồng độ riêng. Các ion không tham gia phản ứng vẫn ở trong dung dịch, nên không được tự ý bỏ khỏi kết quả chỉ vì chúng không xuất hiện trong phương trình ion rút gọn."
+        },
+        {
+          "id": "a4-l5-c5",
+          "heading": "Nâng cao: Chất dư và nhiều chất tan trong dung dịch sau trung hoà",
+          "body": "Ví dụ, trộn 100 g dung dịch HCl 7,3% với 100 g dung dịch NaOH 4,0%. Ban đầu có nHCl = 7,3/36,5 = 0,20 mol và nNaOH = 4,0/40 = 0,10 mol. Theo HCl + NaOH → NaCl + H2O, NaOH hết; dung dịch sau chứa 0,10 mol HCl dư (3,65 g) và 0,10 mol NaCl (5,85 g).\n\nKhông có khí hay kết tủa nên khối lượng dung dịch là 200 g. Do đó C%(HCl) = 3,65/200 x 100% = 1,825% và C%(NaCl) = 5,85/200 x 100% = 2,925%. Hai nồng độ này mô tả hai chất khác nhau trong cùng một dung dịch; không cộng chúng rồi gọi là nồng độ của một chất."
+        },
+        {
+          "id": "a4-l5-c6",
+          "heading": "Nâng cao: Kết tủa, dung dịch lọc và chất tan còn lại",
+          "body": "Khi có kết tủa, phải phân biệt hỗn hợp sau phản ứng với dung dịch lọc. Nếu cần nồng độ chất tan, lấy khối lượng dung dịch đã tách kết tủa làm mẫu số. Ví dụ, 100 g dung dịch BaCl2 20,8% có 0,10 mol BaCl2; 100 g dung dịch Na2SO4 14,2% có 0,10 mol Na2SO4. Phản ứng tạo 0,10 mol BaSO4, tức 23,3 g kết tủa.\n\nKhối lượng dung dịch lọc là 200 - 23,3 = 176,7 g. Trong đó có 0,20 mol NaCl, khối lượng 11,7 g; vì vậy C%(NaCl) = 11,7/176,7 x 100% ≈ 6,62%. Chỉ khi đề nói rửa hoặc lấy thêm dung dịch bám trên kết tủa mới được thay đổi khối lượng dung dịch lọc theo dữ kiện đó."
+        },
+        {
+          "id": "a4-l5-c7",
+          "heading": "Nâng cao: Phản ứng sinh khí và liên hệ thể tích khí",
+          "body": "Ở bài toán axit – muối cacbonat, phải tính khí theo phương trình rồi mới trừ khối lượng khí khỏi dung dịch. Chẳng hạn, cho 10,6 g Na2CO3 vào 100 g dung dịch HCl 7,3%: nNa2CO3 = 10,6/106 = 0,10 mol, nHCl = 7,3/36,5 = 0,20 mol. Phản ứng Na2CO3 + 2HCl → 2NaCl + H2O + CO2 xảy ra vừa đủ, tạo 0,10 mol CO2.\n\nKhí CO2 có khối lượng 4,4 g nên khối lượng dung dịch cuối là 100 + 10,6 - 4,4 = 106,2 g. Nếu đề yêu cầu thể tích CO2 ở đktc, dùng V = 0,10 x 22,4 = 2,24 L."
+        },
+        {
+          "id": "a4-l5-c8",
+          "heading": "Nâng cao: Bảo toàn nguyên tố để kiểm tra nhanh",
+          "body": "Sau khi đã xác định phản ứng và chất hết, bảo toàn nguyên tố giúp kiểm tra số mol sản phẩm. Ví dụ, toàn bộ Na trong Na2CO3 ban đầu phải đi vào NaCl nếu HCl vừa đủ; từ 0,10 mol Na2CO3 suy ra 0,20 mol NaCl. Cách kiểm tra này đặc biệt hữu ích khi phương trình tạo nhiều sản phẩm hoặc khi đề yêu cầu nồng độ của muối sau phản ứng.\n\nBảo toàn nguyên tố không thay thế bước xác định chất dư. Nếu một chất phản ứng chưa hết, nguyên tố của nó sẽ được phân bố giữa chất dư và sản phẩm. Vì vậy, hãy lập bảng mol trước – sau trước, rồi dùng bảo toàn để đối chiếu kết quả thay vì suy luận tắt từ đầu."
+        },
+        {
+          "id": "a4-l5-c9",
+          "heading": "Nâng cao: Kim loại tác dụng dung dịch muối",
+          "body": "Khi kim loại phản ứng với dung dịch muối, khối lượng dung dịch không nhất thiết tăng đúng bằng khối lượng kim loại cho vào: một lượng kim loại mới tan vào dung dịch đồng thời có kim loại khác tách thành chất rắn. Ví dụ, 6,5 g Zn phản ứng vừa đủ với 100 g dung dịch CuSO4 16,0%: nZn = 6,5/65 = 0,10 mol và nCuSO4 = 16,0/160 = 0,10 mol.\n\nTheo Zn + CuSO4 → ZnSO4 + Cu, tạo 0,10 mol Cu, tức 6,4 g chất rắn. Khối lượng dung dịch sau khi tách Cu là 100 + 6,5 - 6,4 = 100,1 g; trong đó có 0,10 mol ZnSO4, tương ứng 16,1 g. Vậy C%(ZnSO4) = 16,1/100,1 x 100% ≈ 16,08%. Nếu kim loại ban đầu còn dư và được lấy ra, cũng phải trừ phần rắn dư đó khỏi khối lượng dung dịch."
         }
       ],
       "questions": [

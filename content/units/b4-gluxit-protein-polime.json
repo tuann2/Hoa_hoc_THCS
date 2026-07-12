@@ -17,17 +17,37 @@
         {
           "id": "b4-l1-c1",
           "heading": "Công thức và đặc điểm chung",
-          "body": "Glucozơ có công thức phân tử C6H12O6. Đây là một loại gluxit đơn giản, tan tốt trong nước và có nhiều trong quả chín, mật ong.\nTrong chương trình THCS, glucozơ được nhấn mạnh ở hai tính chất đặc trưng là phản ứng tráng gương và phản ứng lên men rượu."
+          "body": "Glucozơ có công thức phân tử C6H12O6. Đây là một loại gluxit đơn giản, tan tốt trong nước và có nhiều trong quả chín, mật ong.\nTrong chương trình THCS, glucozơ được nhấn mạnh ở hai tính chất đặc trưng là phản ứng tráng gương và phản ứng lên men rượu.\nNâng cao: mạch hở của glucozơ có cấu tạo CH2OH-CHOH-CHOH-CHOH-CHOH-CHO, gồm 5 nhóm hiđroxyl (-OH) và 1 nhóm chức anđehit (-CHO) ở đầu mạch. Chính nhóm -CHO tạo nên tính khử (phản ứng tráng gương), còn dãy nhiều nhóm -OH kề nhau tạo nên tính chất tương tự ancol đa chức."
         },
         {
           "id": "b4-l1-c2",
           "heading": "Phản ứng tráng gương",
-          "body": "Glucozơ phản ứng với thuốc thử bạc trong môi trường amoniac, tạo lớp bạc sáng bám trên thành ống nghiệm.\nCó thể viết dạng đơn giản: C6H12O6 + Ag2O -> C6H12O7 + 2Ag.\nDấu hiệu nhận biết là xuất hiện bạc kim loại màu trắng sáng."
+          "body": "Glucozơ phản ứng với thuốc thử bạc trong môi trường amoniac, tạo lớp bạc sáng bám trên thành ống nghiệm.\nCó thể viết dạng đơn giản: C6H12O6 + Ag2O -> C6H12O7 + 2Ag.\nDấu hiệu nhận biết là xuất hiện bạc kim loại màu trắng sáng.\nNâng cao: ngoài thuốc thử bạc, nhóm -CHO của glucozơ còn bị nước brom oxi hoá, làm nhạt màu dung dịch brom — một cách nhận biết khác hay gặp trong đề nâng cao. Dạng đơn giản: C6H12O6 + Br2 + H2O -> C6H12O7 + 2HBr."
         },
         {
           "id": "b4-l1-c3",
           "heading": "Phản ứng lên men",
           "body": "Khi có enzim men rượu, glucozơ lên men tạo rượu etylic và khí cacbon đioxit: C6H12O6 -> 2C2H5OH + 2CO2.\nTừ 1 mol glucozơ thu được 2 mol etanol và 2 mol CO2.\nĐây là cơ sở của nhiều bài toán tính khối lượng glucozơ cần dùng hoặc lượng rượu, CO2 tạo thành."
+        },
+        {
+          "id": "b4-l1-c4",
+          "heading": "Nâng cao: Phản ứng của glucozơ với Cu(OH)2",
+          "body": "Nhờ có nhiều nhóm -OH kề nhau, ở nhiệt độ thường glucozơ hoà tan Cu(OH)2 tạo thành dung dịch có màu xanh lam đặc trưng, tương tự tính chất nhận biết của các ancol đa chức như glixerol hay etylen glicol.\nKhi đun nóng trong môi trường kiềm, nhóm chức anđehit (-CHO) của glucozơ lại bị Cu(OH)2 oxi hoá, tạo kết tủa đỏ gạch Cu2O. Dạng đơn giản: C6H12O6 + 2Cu(OH)2 -> C6H12O7 + Cu2O + 2H2O (đun nóng).\nNhư vậy chỉ với một thuốc thử Cu(OH)2, glucozơ vừa thể hiện tính chất ancol đa chức (ở nhiệt độ thường) vừa thể hiện tính khử của nhóm anđehit (khi đun nóng) — đây là điểm hay được khai thác trong các câu hỏi nhận biết, phân biệt ở đề thi HSG."
+        },
+        {
+          "id": "b4-l1-c5",
+          "heading": "Nâng cao: CO2 sinh ra từ lên men tác dụng với dung dịch kiềm",
+          "body": "Khí CO2 thoát ra từ phản ứng lên men glucozơ thường được dẫn tiếp vào dung dịch kiềm (Ca(OH)2, Ba(OH)2 hoặc NaOH) trong các bài toán tổng hợp, đòi hỏi biện luận sản phẩm theo tỉ lệ số mol.\nVới Ca(OH)2: nếu n CO2 nhỏ hơn hoặc bằng n Ca(OH)2 thì chỉ tạo CaCO3; nếu n CO2 lớn hơn hoặc bằng 2 lần n Ca(OH)2 thì chỉ tạo Ca(HCO3)2 (CO2 dư); nếu n CO2 nằm giữa hai giá trị đó thì tạo đồng thời cả hai muối, với n CaCO3 = 2 n Ca(OH)2 - n CO2.\nVí dụ: lên men hoàn toàn 45 g glucozơ thu được 0,50 mol CO2, dẫn vào 300 ml dung dịch Ca(OH)2 1M (0,30 mol). Vì 0,30 < 0,50 < 0,60 nên tạo hỗn hợp hai muối: n CaCO3 = 2 x 0,30 - 0,50 = 0,10 mol, tương ứng 10 g kết tủa; lượng Ca còn lại (0,20 mol) nằm trong dung dịch dưới dạng Ca(HCO3)2."
+        },
+        {
+          "id": "b4-l1-c6",
+          "heading": "Nâng cao: Hiệu suất phản ứng và độ tinh khiết nguyên liệu",
+          "body": "Đề bài nâng cao thường phân biệt hai đại lượng dễ nhầm: hiệu suất phản ứng (tỉ lệ sản phẩm thực tế so với lí thuyết) và độ tinh khiết của nguyên liệu (tỉ lệ khối lượng glucozơ nguyên chất trong tổng khối lượng nguyên liệu, phần còn lại là tạp chất trơ không phản ứng).\nCách xử lí: tính khối lượng glucozơ nguyên chất cần dùng theo lí thuyết trước (dựa vào hiệu suất phản ứng), sau đó suy ra khối lượng nguyên liệu ban đầu bằng cách chia cho độ tinh khiết.\nVí dụ: nguyên liệu chứa 90% glucozơ (còn lại là tạp chất trơ), lên men với hiệu suất phản ứng 80%, thu được 18,4 g rượu etylic. Ta có n etanol thực tế = 18,4/46 = 0,40 mol; vì hiệu suất 80% nên n etanol lí thuyết = 0,40/0,8 = 0,50 mol; suy ra n glucozơ nguyên chất cần dùng = 0,50/2 = 0,25 mol, tức 45 g. Vì nguyên liệu chỉ chứa 90% glucozơ nên khối lượng nguyên liệu ban đầu là 45/0,9 = 50 g."
+        },
+        {
+          "id": "b4-l1-c7",
+          "heading": "Nâng cao: Nồng độ dung dịch glucozơ trong bài toán lên men",
+          "body": "Một số bài toán cho dữ kiện dung dịch glucozơ qua nồng độ phần trăm C% và khối lượng riêng D (thường tính bằng g/ml) thay vì cho trực tiếp khối lượng hoặc số mol. Khi đó cần tính khối lượng dung dịch trước: m dung dịch = V x D, rồi suy ra khối lượng chất tan: m glucozơ = m dung dịch x C%.\nVí dụ: lấy 250 ml dung dịch glucozơ 20%, khối lượng riêng D = 1,08 g/ml, đem lên men hoàn toàn. Khối lượng dung dịch là 250 x 1,08 = 270 g, khối lượng glucozơ là 270 x 20% = 54 g, tương ứng n glucozơ = 54/180 = 0,30 mol. Theo phương trình lên men, khối lượng rượu etylic thu được là 0,30 x 2 x 46 = 27,6 g."
         }
       ],
       "questions": [
@@ -205,12 +225,37 @@
         {
           "id": "b4-l2-c2",
           "heading": "Tính chất đáng chú ý",
-          "body": "Saccarozơ không trực tiếp tham gia phản ứng tráng gương như glucozơ.\nVì vậy nếu chỉ cho saccarozơ tác dụng với thuốc thử bạc trong amoniac thì không xuất hiện lớp bạc sáng."
+          "body": "Saccarozơ không trực tiếp tham gia phản ứng tráng gương như glucozơ.\nVì vậy nếu chỉ cho saccarozơ tác dụng với thuốc thử bạc trong amoniac thì không xuất hiện lớp bạc sáng.\nNâng cao: sở dĩ saccarozơ không tráng gương và cũng không tạo kết tủa đỏ gạch với Cu(OH)2 khi đun nóng là vì trong phân tử không còn nhóm chức anđehit (-CHO) tự do — gốc glucozơ và gốc fructozơ đã liên kết với nhau đúng tại hai vị trí nhóm chức khử của chúng (liên kết glicozit), khiến saccarozơ trở thành một đisaccarit không có tính khử."
         },
         {
           "id": "b4-l2-c3",
           "heading": "Phản ứng thuỷ phân",
-          "body": "Khi đun nóng với axit loãng hoặc dưới tác dụng của enzim, saccarozơ bị thuỷ phân:\nC12H22O11 + H2O -> C6H12O6 + C6H12O6.\nHai monosaccarit thu được là glucozơ và fructozơ. Sau thuỷ phân, hỗn hợp mới có khả năng tham gia phản ứng tráng gương."
+          "body": "Khi đun nóng với axit loãng hoặc dưới tác dụng của enzim, saccarozơ bị thuỷ phân:\nC12H22O11 + H2O -> C6H12O6 + C6H12O6.\nHai monosaccarit thu được là glucozơ và fructozơ. Sau thuỷ phân, hỗn hợp mới có khả năng tham gia phản ứng tráng gương.\nNâng cao: phản ứng thuỷ phân có thể xảy ra nhờ axit vô cơ loãng (H2SO4, HCl) đun nóng hoặc nhờ enzim invertaza có sẵn trong cơ thể người và nhiều vi sinh vật — đó là lí do đường mía vẫn được tiêu hoá dù dạ dày không dùng axit mạnh đun nóng. Vì nước cũng tham gia phản ứng, khối lượng saccarozơ đem thuỷ phân cộng khối lượng nước phản ứng luôn bằng tổng khối lượng hai monosaccarit tạo thành (bảo toàn khối lượng): ví dụ 342 g saccarozơ (1 mol) phản ứng vừa đủ với 18 g nước (1 mol) tạo ra đúng 360 g hỗn hợp glucozơ và fructozơ (mỗi chất 1 mol, tức 180 g)."
+        },
+        {
+          "id": "b4-l2-c4",
+          "heading": "Nâng cao: Saccarozơ tác dụng với Cu(OH)2",
+          "body": "Dù không có nhóm -CHO, saccarozơ vẫn có nhiều nhóm -OH liền kề trong phân tử (giống glucozơ, glixerol) nên ở nhiệt độ thường vẫn hoà tan được Cu(OH)2, tạo dung dịch phức đồng-saccarat màu xanh lam trong suốt.\nTuy nhiên nếu đun nóng hỗn hợp này thì không xuất hiện kết tủa đỏ gạch Cu2O như glucozơ, vì saccarozơ không có nhóm chức khử để bị oxi hoá.\nĐây là cách phân biệt nhanh: cả glucozơ và saccarozơ đều hoà tan Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam, nhưng chỉ glucozơ mới cho kết tủa đỏ gạch khi đun nóng."
+        },
+        {
+          "id": "b4-l2-c5",
+          "heading": "Nâng cao: Đường nghịch chuyển sau khi thuỷ phân",
+          "body": "Hỗn hợp glucozơ và fructozơ thu được sau khi thuỷ phân saccarozơ được gọi là 'đường nghịch chuyển' (invert sugar) — tên gọi gắn với hiện tượng chiều quay ánh sáng phân cực của dung dịch đổi ngược so với dung dịch saccarozơ ban đầu, do đóng góp của fructozơ.\nVề vị giác, hỗn hợp đường nghịch chuyển ngọt hơn saccarozơ ban đầu vì fructozơ là loại đường có độ ngọt cao nhất trong các gluxit thường gặp; nhờ vậy đường nghịch chuyển được dùng trong công nghiệp bánh kẹo, làm mật ong nhân tạo và mứt để tăng độ ngọt, chống kết tinh đường."
+        },
+        {
+          "id": "b4-l2-c6",
+          "heading": "Nâng cao: Mantozơ — đồng phân của saccarozơ",
+          "body": "Mantozơ (đường mạch nha) có cùng công thức phân tử C12H22O11 với saccarozơ nên là đồng phân của nhau, nhưng cấu tạo và tính chất hoá học lại khác nhau rõ rệt.\nMantozơ được tạo từ hai gốc glucozơ liên kết với nhau, trong đó chỉ một gốc dùng nhóm chức khử để liên kết, gốc còn lại vẫn giữ nguyên nhóm chức khử tự do. Vì vậy, khác với saccarozơ, mantozơ vẫn tham gia được phản ứng tráng gương và tạo kết tủa đỏ gạch Cu2O với Cu(OH)2 khi đun nóng, tương tự glucozơ.\nMuốn phân biệt saccarozơ với mantozơ (cùng công thức phân tử C12H22O11), người ta dùng chính phản ứng tráng gương: mantozơ cho kết quả dương tính, còn saccarozơ thì không."
+        },
+        {
+          "id": "b4-l2-c7",
+          "heading": "Nâng cao: Nồng độ dung dịch và khối lượng riêng trong bài toán thuỷ phân",
+          "body": "Một dạng bài hay gặp là cho dữ kiện dung dịch saccarozơ qua nồng độ phần trăm C% và khối lượng riêng D (g/ml) thay vì cho trực tiếp khối lượng saccarozơ. Khi đó cần tính khối lượng dung dịch trước: m dung dịch = V x D, rồi suy khối lượng saccarozơ: m saccarozơ = m dung dịch x C%.\nVí dụ: lấy 200 ml dung dịch saccarozơ 15%, khối lượng riêng D = 1,14 g/ml, đem thuỷ phân hoàn toàn. Khối lượng dung dịch là 200 x 1,14 = 228 g, khối lượng saccarozơ là 228 x 15% = 34,2 g, tương ứng n saccarozơ = 34,2/342 = 0,10 mol. Theo phương trình thuỷ phân, khối lượng glucozơ riêng tạo thành là 0,10 x 180 = 18 g."
+        },
+        {
+          "id": "b4-l2-c8",
+          "heading": "Nâng cao: Hiệu suất phản ứng thuỷ phân",
+          "body": "Trong thực tế, phản ứng thuỷ phân saccarozơ bằng axit loãng hoặc enzim không phải lúc nào cũng đạt 100%, nên đề bài thường cho thêm hiệu suất phản ứng H%. Khi đó khối lượng (hay số mol) sản phẩm thực tế chỉ bằng H% so với lượng tính theo lí thuyết (giả sử phản ứng hoàn toàn).\nVí dụ: thuỷ phân 34,2 g saccarozơ (0,10 mol) với hiệu suất phản ứng 80%. Nếu phản ứng hoàn toàn sẽ thu được 0,10 mol glucozơ; vì hiệu suất chỉ đạt 80% nên số mol glucozơ thực tế là 0,10 x 0,8 = 0,08 mol, tức khối lượng thực tế là 0,08 x 180 = 14,4 g."
         }
       ],
       "questions": [
@@ -382,17 +427,37 @@
         {
           "id": "b4-l3-c1",
           "heading": "Điểm giống nhau",
-          "body": "Tinh bột và xenlulozơ đều là polisaccarit, có công thức dạng chung (C6H10O5)n.\nCả hai đều có nguồn gốc từ thực vật và khi thuỷ phân hoàn toàn đều tạo glucozơ."
+          "body": "Tinh bột và xenlulozơ đều là polisaccarit, có công thức dạng chung (C6H10O5)n.\nCả hai đều có nguồn gốc từ thực vật và khi thuỷ phân hoàn toàn đều tạo glucozơ.\nNâng cao: hệ số n không cố định mà thay đổi tuỳ nguồn nguyên liệu và điều kiện sinh trưởng của cây, nên tinh bột và xenlulozơ thực chất là hỗn hợp các phân tử có mạch dài ngắn khác nhau; n của xenlulozơ thường lớn hơn nhiều so với n của tinh bột, đây là một lí do khiến mạch xenlulozơ bền và dai hơn. Phân tử khối trung bình tính gần đúng theo công thức M = 162n, từ đó có thể ước lượng n khi biết M."
         },
         {
           "id": "b4-l3-c2",
           "heading": "Tinh bột",
-          "body": "Tinh bột có nhiều trong gạo, ngô, khoai, sắn. Hồ tinh bột tác dụng với iot cho màu xanh tím, đây là phản ứng nhận biết đặc trưng.\nTinh bột bị thuỷ phân dưới tác dụng của axit hoặc enzim để tạo glucozơ."
+          "body": "Tinh bột có nhiều trong gạo, ngô, khoai, sắn. Hồ tinh bột tác dụng với iot cho màu xanh tím, đây là phản ứng nhận biết đặc trưng.\nTinh bột bị thuỷ phân dưới tác dụng của axit hoặc enzim để tạo glucozơ.\nNâng cao: tinh bột thực chất gồm hai loại mạch xen lẫn nhau là amilozơ (mạch không phân nhánh, cuộn xoắn như lò xo, chiếm khoảng 20-30%) và amilopectin (mạch phân nhánh, chiếm phần còn lại). Mạch xoắn của amilozơ tạo ra các khoang rỗng vừa khít để giữ phân tử iot bên trong, sinh ra phức chất màu xanh tím; khi đun nóng mạch xoắn duỗi ra nên màu nhạt dần hoặc mất, để nguội màu lại xuất hiện. Trong tự nhiên, tinh bột được cây xanh tổng hợp từ khí cacbonic và nước nhờ quang hợp: 6nCO2 + 5nH2O -> (C6H10O5)n + 6nO2 (ánh sáng, chất diệp lục) — đây là nguồn gốc giải thích vì sao tinh bột luôn có ở thực vật."
         },
         {
           "id": "b4-l3-c3",
           "heading": "Xenlulozơ",
-          "body": "Xenlulozơ là thành phần chính của sợi bông, gỗ, tre nứa và nhiều loại sợi thực vật. Cấu trúc của xenlulozơ bền hơn tinh bột nên không cho màu xanh tím với iot.\nXenlulozơ được dùng để sản xuất giấy, vải sợi và cũng có thể thuỷ phân tạo glucozơ."
+          "body": "Xenlulozơ là thành phần chính của sợi bông, gỗ, tre nứa và nhiều loại sợi thực vật. Cấu trúc của xenlulozơ bền hơn tinh bột nên không cho màu xanh tím với iot.\nXenlulozơ được dùng để sản xuất giấy, vải sợi và cũng có thể thuỷ phân tạo glucozơ.\nNâng cao: khác tinh bột, xenlulozơ chỉ có mạch thẳng, không phân nhánh, xếp song song và liên kết chặt với nhau bằng nhiều liên kết hiđro giữa các nhóm -OH của các mạch kề nhau; cấu trúc bó sợi này khiến xenlulozơ không tan trong nước, không tạo khoang xoắn giữ iot (nên không đổi màu với I2) và rất bền cơ học, bền hoá học so với tinh bột. Mỗi mắt xích C6H10O5 còn 3 nhóm -OH tự do (ở các vị trí 2, 3, 6 của vòng glucozơ) nên công thức đầy đủ hay viết là [C6H7O2(OH)3]n; ba nhóm -OH này chính là vị trí xảy ra các phản ứng este hoá, ete hoá tạo dẫn xuất của xenlulozơ."
+        },
+        {
+          "id": "b4-l3-c4",
+          "heading": "Nâng cao: Xenlulozơ phản ứng với axit nitric",
+          "body": "Nhờ 3 nhóm -OH tự do trong mỗi mắt xích, xenlulozơ phản ứng este hoá được với axit nitric đặc (xúc tác axit sunfuric đặc, đun nóng nhẹ):\n[C6H7O2(OH)3]n + 3nHNO3 (đặc) -> [C6H7O2(ONO2)3]n + 3nH2O.\nSản phẩm xenlulozơ trinitrat rất dễ cháy và nổ mạnh khi gặp tia lửa, được dùng làm thuốc súng không khói. Nếu chỉ một phần nhóm -OH bị este hoá thì sản phẩm là xenlulozơ đinitrat hoặc mononitrat, có độ nổ yếu hơn nhiều.\nNgoài ra, cho xenlulozơ phản ứng với anhiđrit axetic thu được xenlulozơ axetat — nguyên liệu để sản xuất tơ axetat (tơ nhân tạo) và phim ảnh không cháy."
+        },
+        {
+          "id": "b4-l3-c5",
+          "heading": "Nâng cao: Sản xuất rượu từ tinh bột qua hai giai đoạn",
+          "body": "Trong công nghiệp, rượu etylic thường được sản xuất từ tinh bột (gạo, ngô, sắn) qua hai giai đoạn nối tiếp: (1) thuỷ phân tinh bột thành glucozơ nhờ axit hoặc enzim, (2) lên men glucozơ thành rượu etylic. Khi mỗi giai đoạn có hiệu suất riêng H1% và H2%, hiệu suất chung của cả quá trình bằng tích hai hiệu suất thành phần: H = H1 x H2.\nVí dụ: từ 162 kg tinh bột tính theo mắt xích C6H10O5 (tương ứng 1 kmol), hiệu suất thuỷ phân là 90% và hiệu suất lên men là 80%. Bước 1: n glucozơ thực tế = 1 x 0,9 = 0,9 kmol. Bước 2: nếu lên men hoàn toàn 0,9 kmol glucozơ sẽ tạo 1,8 kmol etanol (lí thuyết), thực tế chỉ đạt 1,8 x 0,8 = 1,44 kmol. Khối lượng rượu etylic thu được là 1,44 x 46 = 66,24 kg."
+        },
+        {
+          "id": "b4-l3-c6",
+          "heading": "Nâng cao: Phối hợp thuốc thử để phân biệt các gluxit",
+          "body": "Khi đề bài yêu cầu phân biệt đồng thời nhiều dung dịch/hỗn hợp gluxit quen thuộc (glucozơ, saccarozơ, hồ tinh bột), nên phối hợp thuốc thử theo thứ tự hợp lí: dùng dung dịch I2 trước để nhận ra hồ tinh bột — chất duy nhất trong nhóm này cho màu xanh tím; sau đó dùng dung dịch AgNO3 trong NH3 (đun nhẹ) để nhận ra glucozơ — chất duy nhất còn lại có nhóm -CHO tự do nên tạo lớp Ag sáng; saccarozơ là chất còn lại, không phản ứng với cả hai thuốc thử trên.\nNếu cần phân biệt sâu hơn, có thể dùng thêm Cu(OH)2: glucozơ và saccarozơ đều hoà tan Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam (do có nhiều nhóm -OH kề nhau), nhưng chỉ glucozơ mới tạo thêm kết tủa đỏ gạch Cu2O khi đun nóng, còn saccarozơ thì không."
+        },
+        {
+          "id": "b4-l3-c7",
+          "heading": "Nâng cao: Tiêu hoá tinh bột và xenlulozơ trong cơ thể",
+          "body": "Trong cơ thể người, tinh bột được tiêu hoá nhờ hệ enzim amilaza (bắt đầu từ nước bọt, tiếp tục ở ruột non), thuỷ phân dần mạch tinh bột để tạo glucozơ — về bản chất đây là phản ứng thuỷ phân tương tự C6H10O5 + H2O -> C6H12O6, nhưng xảy ra êm dịu ở nhiệt độ cơ thể nhờ xúc tác sinh học. Glucozơ tạo thành được hấp thụ vào máu để cung cấp năng lượng, phần dư được gan và cơ dự trữ dưới dạng glicogen.\nNgược lại, cơ thể người không có enzim phân giải xenlulozơ (enzim xenlulaza) nên xenlulozơ đi qua hệ tiêu hoá mà không bị hấp thụ, đóng vai trò chất xơ hỗ trợ nhu động ruột. Một số động vật ăn cỏ như trâu, bò tiêu hoá được xenlulozơ nhờ hệ vi sinh vật cộng sinh trong dạ dày có khả năng tiết enzim xenlulaza."
         }
       ],
       "questions": [
@@ -570,17 +635,37 @@
         {
           "id": "b4-l4-c1",
           "heading": "Thành phần và cấu tạo",
-          "body": "Protein là hợp chất hữu cơ phức tạp, thường chứa các nguyên tố C, H, O, N; nhiều protein còn chứa thêm S hoặc P.\nĐơn vị cấu tạo cơ bản của protein là các axit amin liên kết với nhau thành chuỗi dài."
+          "body": "Protein là hợp chất hữu cơ phức tạp, thường chứa các nguyên tố C, H, O, N; nhiều protein còn chứa thêm S hoặc P.\nĐơn vị cấu tạo cơ bản của protein là các axit amin liên kết với nhau thành chuỗi dài.\nNâng cao: Các axit amin nối với nhau bằng liên kết peptit -CO-NH- (nhóm -COOH của axit amin này phản ứng với nhóm -NH2 của axit amin kế tiếp, tách ra một phân tử nước). Rất nhiều liên kết peptit lặp lại liên tiếp tạo thành mạch polipeptit dài — đó chính là bộ khung của phân tử protein."
         },
         {
           "id": "b4-l4-c2",
           "heading": "Tính chất hoá học cơ bản",
-          "body": "Protein bị đông tụ hoặc biến tính khi đun nóng, gặp axit mạnh hoặc cồn. Đây là hiện tượng thường gặp khi luộc trứng hoặc khi sữa gặp axit.\nProtein còn bị thuỷ phân tạo thành các axit amin. Trong bài học này chỉ cần biết phản ứng màu biure là một phản ứng nhận biết protein."
+          "body": "Protein bị đông tụ hoặc biến tính khi đun nóng, gặp axit mạnh hoặc cồn. Đây là hiện tượng thường gặp khi luộc trứng hoặc khi sữa gặp axit.\nProtein còn bị thuỷ phân tạo thành các axit amin. Trong bài học này chỉ cần biết phản ứng màu biure là một phản ứng nhận biết protein.\nNâng cao: Trong phản ứng màu biure, Cu(OH)2 (tạo ra từ CuSO4 và NaOH hoặc KOH) tác dụng với các liên kết peptit trong mạch protein, tạo phức chất có màu tím đặc trưng. Phản ứng chỉ xảy ra với hợp chất có nhiều liên kết peptit trở lên, nên không dùng để nhận biết một axit amin đơn lẻ."
         },
         {
           "id": "b4-l4-c3",
           "heading": "Vai trò và nguồn thực phẩm",
           "body": "Protein là chất dinh dưỡng rất quan trọng, tham gia xây dựng tế bào, mô, enzim và nhiều chất sinh học khác.\nNguồn protein quen thuộc trong thực phẩm là thịt, cá, trứng, sữa, tôm, cua, đậu nành."
+        },
+        {
+          "id": "b4-l4-c4",
+          "heading": "Nâng cao: Biến tính và thuỷ phân — hai hiện tượng dễ nhầm",
+          "body": "Mạch polipeptit của protein không nằm thẳng mà còn cuộn xoắn, gấp lại theo những cách sắp xếp không gian riêng để tạo nên hình dạng hoạt động của phân tử. Khi đun nóng, gặp axit mạnh hoặc cồn, các cách sắp xếp không gian này bị phá vỡ khiến protein đông tụ, mất hoạt tính sinh học — đó là hiện tượng biến tính; tuy nhiên mạch polipeptit (các liên kết peptit) vẫn còn nguyên vẹn.\nNgược lại, khi thuỷ phân (nhờ axit, kiềm hoặc enzim ở nhiệt độ thích hợp), chính các liên kết peptit bị cắt đứt, mạch bị bẻ nhỏ dần cho đến khi thu được các axit amin riêng lẻ. Vì vậy biến tính chỉ làm thay đổi hình dạng phân tử, còn thuỷ phân mới thực sự phá vỡ mạch protein."
+        },
+        {
+          "id": "b4-l4-c5",
+          "heading": "Nâng cao: Nhận biết tơ protein bằng phản ứng đốt cháy",
+          "body": "Một cách nhận biết định tính hay gặp trong đề thi là dùng phản ứng đốt cháy để phân biệt tơ có nguồn gốc protein (tơ tằm, len) với tơ tổng hợp. Do protein chứa N (và thường có thêm S), khi đốt sợi tơ tằm hoặc sợi len sẽ cháy chậm, xoăn lại và toả ra mùi khét đặc trưng giống mùi tóc cháy.\nTrong khi đó, các loại tơ tổng hợp như tơ nilon hay tơ capron có bản chất là polime tổng hợp (không phải protein) nên khi đốt không cho mùi khét kiểu tóc cháy, sợi tơ thường bị chảy vón cục ở đầu ngọn lửa. Đây là cách phân biệt không cần thuốc thử hoá học."
+        },
+        {
+          "id": "b4-l4-c6",
+          "heading": "Nâng cao: Enzim — protein làm nhiệm vụ xúc tác sinh học",
+          "body": "Đa số enzim trong cơ thể sống có bản chất là protein. Enzim xúc tác rất chọn lọc: mỗi loại enzim thường chỉ xúc tác cho một phản ứng hoặc một nhóm phản ứng nhất định, ví dụ enzim amilaza trong nước bọt xúc tác thuỷ phân tinh bột thành đường mantozơ.\nVì bản chất là protein nên hoạt tính của enzim rất nhạy với nhiệt độ và độ pH: đun nóng quá mức hoặc gặp môi trường axit, kiềm mạnh sẽ làm enzim bị biến tính, mất khả năng xúc tác. Đây là lí do các loại men tiêu hoá, men rượu... chỉ hoạt động tốt trong một khoảng nhiệt độ và pH nhất định."
+        },
+        {
+          "id": "b4-l4-c7",
+          "heading": "Nâng cao: Ước lượng hàm lượng protein qua hàm lượng nitơ",
+          "body": "Vì nitơ hầu như chỉ có mặt trong protein (rất ít trong gluxit, lipit), người ta có thể xác định gián tiếp hàm lượng protein trong một mẫu thực phẩm bằng cách đo hàm lượng nitơ rồi nhân với một hệ số quy đổi.\nTrung bình protein chứa khoảng 16% N về khối lượng, nên hệ số quy đổi thường dùng là 100 : 16 ≈ 6,25. Ví dụ: nếu phân tích một mẫu bột đậu nành thấy chứa 3,2% N về khối lượng thì hàm lượng protein ước tính trong mẫu là 3,2% × 6,25 = 20%. Đây là nguyên tắc cơ bản của phương pháp Kjeldahl, được dùng phổ biến trong kiểm nghiệm thực phẩm."
         }
       ],
       "questions": [
@@ -758,17 +843,32 @@
         {
           "id": "b4-l5-c1",
           "heading": "Khái niệm polime",
-          "body": "Polime là những phân tử khổng lồ do nhiều mắt xích nhỏ liên kết lặp đi lặp lại tạo nên.\nCó polime thiên nhiên như tinh bột, xenlulozơ, protein, cao su thiên nhiên và polime tổng hợp như PE, PVC, nilon."
+          "body": "Polime là những phân tử khổng lồ do nhiều mắt xích nhỏ liên kết lặp đi lặp lại tạo nên.\nCó polime thiên nhiên như tinh bột, xenlulozơ, protein, cao su thiên nhiên và polime tổng hợp như PE, PVC, nilon.\nNâng cao: Có hai kiểu phản ứng chính tạo ra polime. Trùng hợp là quá trình nhiều phân tử monome có liên kết đôi (như etilen, vinyl clorua) mở liên kết đôi rồi nối liên tiếp với nhau thành mạch dài, không tách ra phân tử nhỏ nào. Trùng ngưng là quá trình các monome có nhiều nhóm chức (ví dụ -NH2, -COOH) phản ứng liên tiếp với nhau, mỗi lần tạo liên kết mới thường tách ra một phân tử nhỏ (thường là nước); ví dụ tơ nilon-6,6 được tạo thành từ phản ứng trùng ngưng giữa hexametylenđiamin H2N-(CH2)6-NH2 và axit ađipic HOOC-(CH2)4-COOH. Số mắt xích monome có trong một phân tử polime gọi là hệ số trùng hợp (kí hiệu n); nếu biết phân tử khối trung bình của polime (M) và phân tử khối của một mắt xích (M0) thì n = M : M0. Chẳng hạn một mẫu PE có phân tử khối trung bình khoảng 420000, mắt xích -CH2-CH2- có phân tử khối 28, vậy hệ số trùng hợp n = 420000 : 28 = 15000."
         },
         {
           "id": "b4-l5-c2",
           "heading": "Chất dẻo thông dụng",
-          "body": "PE được điều chế từ etilen bằng phản ứng trùng hợp và dùng làm túi, chai lọ, màng bọc.\nPVC được điều chế từ vinyl clorua CH2=CHCl, dùng làm ống dẫn, vỏ bọc dây điện và nhiều đồ gia dụng."
+          "body": "PE được điều chế từ etilen bằng phản ứng trùng hợp và dùng làm túi, chai lọ, màng bọc.\nPVC được điều chế từ vinyl clorua CH2=CHCl, dùng làm ống dẫn, vỏ bọc dây điện và nhiều đồ gia dụng.\nNâng cao: Theo khả năng chịu nhiệt khi gia công, chất dẻo được chia thành hai loại. Chất dẻo nhiệt dẻo (như PE, PVC) khi đun nóng sẽ hoá mềm, nóng chảy và có thể tạo hình lại nhiều lần. Chất dẻo nhiệt rắn (ví dụ nhựa bakelit — nhựa phenol-fomanđehit, dùng làm vỏ ổ cắm điện, tay cầm nồi) sau khi đã định hình lần đầu thì rắn chắc vĩnh viễn, đun nóng quá mức chỉ bị cháy hoặc phân huỷ chứ không chảy mềm trở lại. Có thể phân biệt nhanh PE và PVC bằng cách đốt: PE cháy được, chảy thành giọt như nến, sản phẩm cháy không có mùi xốc đặc biệt; còn PVC khi đốt sinh ra khí hiđro clorua (HCl) có mùi xốc, làm giấy quỳ tím ẩm chuyển sang màu đỏ do PVC có chứa nguyên tố clo trong mắt xích."
         },
         {
           "id": "b4-l5-c3",
           "heading": "Tơ và cao su",
-          "body": "Tơ tằm là tơ thiên nhiên, còn nilon là tơ tổng hợp thường được điều chế từ caprolactam.\nCao su thiên nhiên liên quan đến monome isopren C5H8. Khi lưu hoá, cao su trở nên bền, đàn hồi và chịu mài mòn tốt hơn."
+          "body": "Tơ tằm là tơ thiên nhiên, còn nilon là tơ tổng hợp thường được điều chế từ caprolactam.\nCao su thiên nhiên liên quan đến monome isopren C5H8. Khi lưu hoá, cao su trở nên bền, đàn hồi và chịu mài mòn tốt hơn.\nNâng cao: Xét theo nguồn gốc, tơ được chia thành ba nhóm: tơ thiên nhiên có sẵn trong tự nhiên (tơ tằm, bông, len); tơ nhân tạo (tơ bán tổng hợp) được chế biến bằng phương pháp hoá học từ polime thiên nhiên, ví dụ tơ visco, tơ axetat chế từ xenlulozơ; và tơ tổng hợp được tổng hợp hoàn toàn từ các chất hoá học, ví dụ nilon. Về cơ chế lưu hoá: cao su thiên nhiên gồm các mạch mắt xích isopren riêng lẻ, dễ trượt lên nhau nên độ bền và độ đàn hồi còn hạn chế; khi đun nóng cao su với một lượng nhỏ lưu huỳnh, các nguyên tử S tạo thành những cầu nối -S-S- giữa các mạch cao su ở gần nhau, hình thành mạng lưới không gian giữ cho các mạch khó trượt tự do lên nhau. Nhờ vậy cao su lưu hoá bền hơn, đàn hồi tốt hơn, chịu nhiệt và chịu mài mòn tốt hơn cao su sống (cao su chưa lưu hoá)."
+        },
+        {
+          "id": "b4-l5-c4",
+          "heading": "Nâng cao: Cao su tổng hợp (cao su buna)",
+          "body": "Ngoài cao su thiên nhiên, con người còn tổng hợp được cao su nhân tạo, phổ biến nhất là cao su buna. Monome dùng để trùng hợp cao su buna là buta-1,3-đien, công thức CH2=CH-CH=CH2 (thường gọi tắt là butađien), được điều chế từ các nguồn hiđrocacbon trong công nghiệp dầu khí.\nKhi đồng trùng hợp buta-1,3-đien với stiren (C6H5-CH=CH2) thu được cao su buna-S có độ bền cơ học cao hơn, thường dùng làm lốp xe; khi đồng trùng hợp với acrilonitrin (CH2=CH-CN) thu được cao su buna-N có khả năng chịu dầu mỡ tốt, dùng làm các chi tiết cao su tiếp xúc với xăng dầu. Cao su buna và các loại cao su tổng hợp khác cũng có thể được lưu hoá bằng lưu huỳnh giống như cao su thiên nhiên để tăng độ bền."
+        },
+        {
+          "id": "b4-l5-c5",
+          "heading": "Nâng cao: Ô nhiễm trắng và vi nhựa",
+          "body": "Ưu điểm bền, nhẹ, khó bị ăn mòn của chất dẻo cũng chính là nguyên nhân gây ra vấn đề môi trường nghiêm trọng. Đa số chất dẻo tổng hợp như PE, PVC rất khó bị vi sinh vật phân huỷ trong tự nhiên, có thể tồn tại hàng trăm năm ngoài môi trường; rác thải nhựa chất đống ở bãi rác, sông, biển gây ra hiện tượng thường được gọi là \"ô nhiễm trắng\".\nDưới tác động của ánh sáng, nhiệt độ và va đập cơ học, rác thải nhựa dần vỡ vụn thành những mảnh rất nhỏ (thường có kích thước dưới 5 mm) gọi là vi nhựa (microplastic). Vi nhựa có thể phát tán vào đất, nguồn nước, thậm chí đi vào chuỗi thức ăn của sinh vật. Một số biện pháp giảm thiểu thường được nhắc tới là phân loại và tái chế rác thải nhựa, hạn chế dùng đồ nhựa dùng một lần, ưu tiên vật liệu dễ phân huỷ sinh học."
+        },
+        {
+          "id": "b4-l5-c6",
+          "heading": "Nâng cao: Vật liệu compozit",
+          "body": "Nhiều vật liệu polime hiện đại thực chất là compozit: gồm một polime đóng vai trò chất nền (matrix) kết hợp với một hoặc nhiều loại chất độn (sợi thuỷ tinh, sợi cacbon, bột đá...) để tăng cường tính chất cơ học. Ví dụ quen thuộc là nhựa composite (sợi thuỷ tinh + nhựa polieste) dùng làm vỏ ca nô, thùng chứa hoá chất, mũ bảo hiểm — nhẹ hơn kim loại nhưng vẫn đảm bảo độ cứng và độ bền cần thiết.\nSo với polime nguyên chất, vật liệu compozit thường có độ bền cơ học, khả năng chịu lực và chịu va đập cao hơn hẳn, trong khi vẫn giữ được đặc tính nhẹ và khó bị ăn mòn hoá học của polime nền."
         }
       ],
       "questions": [
@@ -946,12 +1046,37 @@
         {
           "id": "b4-l6-c2",
           "heading": "Cách tính hiệu suất nhiều giai đoạn",
-          "body": "Nếu quá trình có nhiều bước liên tiếp thì phải nhân lần lượt từng hiệu suất, không được cộng hiệu suất.\nVí dụ khối lượng etanol thực tế = khối lượng etanol lí thuyết x h1 x h2 khi gồm hai bước thuỷ phân và lên men."
+          "body": "Nếu quá trình có nhiều bước liên tiếp thì phải nhân lần lượt từng hiệu suất, không được cộng hiệu suất.\nVí dụ khối lượng etanol thực tế = khối lượng etanol lí thuyết x h1 x h2 khi gồm hai bước thuỷ phân và lên men.\nNgược lại, nếu đề đã cho hiệu suất chung của toàn bộ quá trình và hiệu suất của một số giai đoạn, có thể tìm hiệu suất giai đoạn còn lại bằng phép chia: hiệu suất còn thiếu = hiệu suất chung : (tích các hiệu suất đã biết). Ví dụ hiệu suất chung của hai giai đoạn thuỷ phân và lên men là 60%, biết hiệu suất thuỷ phân là 75% thì hiệu suất lên men là 60% : 75% = 80%."
         },
         {
           "id": "b4-l6-c3",
           "heading": "Biện luận trước và sau thuỷ phân",
           "body": "Saccarozơ và tinh bột không trực tiếp tham gia phản ứng tráng gương. Sau khi thuỷ phân thành glucozơ hoặc hỗn hợp monosaccarit, chúng mới có khả năng tham gia phản ứng này.\nKhi làm bài, cần xét đúng trạng thái của chất là trước hay sau thuỷ phân."
+        },
+        {
+          "id": "b4-l6-c4",
+          "heading": "Nâng cao: Độ rượu và cách quy đổi sang khối lượng etanol nguyên chất",
+          "body": "Độ rượu (đơn vị 'độ', kí hiệu %V) là số ml etanol nguyên chất có trong 100 ml dung dịch rượu, không phải nồng độ phần trăm theo khối lượng. Với dung dịch rượu thể tích V (ml) và độ rượu a độ, thể tích etanol nguyên chất là V x a/100 (ml); nhân tiếp với khối lượng riêng của etanol nguyên chất D (thường lấy 0,8 g/ml) sẽ ra khối lượng etanol, từ đó suy ra số mol để làm tiếp các bước hiệu suất phía sau.\nVí dụ: một chai ghi 'rượu 46 độ', thể tích 125 ml, D(C2H5OH) = 0,8 g/ml. Thể tích etanol nguyên chất là 125 x 46/100 = 57,5 ml, khối lượng etanol là 57,5 x 0,8 = 46 g, tương ứng đúng 1 mol etanol."
+        },
+        {
+          "id": "b4-l6-c5",
+          "heading": "Nâng cao: Pha trộn hai dung dịch rượu khác độ — quy tắc đường chéo",
+          "body": "Khi trộn V1 lít rượu độ rượu a với V2 lít rượu độ rượu b (a lớn hơn b) để được hỗn hợp độ rượu c (nằm giữa a và b), lượng etanol nguyên chất được bảo toàn nên V1(a - c) = V2(c - b), suy ra V1 : V2 = (c - b) : (a - c). Đây chính là quy tắc đường chéo quen thuộc, áp dụng được vì độ rượu tỉ lệ thuận với thể tích etanol nguyên chất trong cùng một thể tích dung dịch.\nVí dụ: cần trộn rượu 60 độ với rượu 20 độ theo tỉ lệ thể tích nào để được rượu 40 độ? Áp dụng V1 : V2 = (40 - 20) : (60 - 40) = 20 : 20 = 1 : 1, tức phải lấy hai loại rượu với thể tích bằng nhau."
+        },
+        {
+          "id": "b4-l6-c6",
+          "heading": "Nâng cao: Bảo toàn nguyên tố cacbon trong chuỗi chuyển hoá nhiều giai đoạn",
+          "body": "Các phản ứng thuỷ phân, lên men và oxi hoá rượu etylic trong chuỗi này không làm mất nguyên tử cacbon ra ngoài chuỗi (kể cả khí CO2 sinh ra vẫn được tính), nên có thể dùng bảo toàn nguyên tố C để kiểm tra nhanh kết quả thay vì tính riêng từng chất qua từng phương trình. Mỗi mắt xích C6H10O5 mang 6 nguyên tử C; khi 1 mol mắt xích phản ứng hết theo chuỗi tinh bột -> glucozơ -> rượu etylic sẽ cho 2 mol C2H5OH (4 nguyên tử C) cùng 2 mol CO2 (2 nguyên tử C) thoát ra lúc lên men, tổng đúng bằng 4 + 2 = 6 nguyên tử C.\nKhi bài toán có hiệu suất, chỉ phần mắt xích đã thực sự phản ứng hết chuỗi mới tuân theo bảo toàn C này; phần nguyên liệu chưa phản ứng do hao hụt hiệu suất không được tính vào. Đối chiếu tổng mol C trong etanol và CO2 thu được với 6 lần số mol mắt xích đã phản ứng là một cách kiểm tra chéo hữu ích trước khi kết luận đáp số."
+        },
+        {
+          "id": "b4-l6-c7",
+          "heading": "Nâng cao: Lên men giấm không hoàn toàn — hỗn hợp sau phản ứng còn etanol dư",
+          "body": "Phản ứng oxi hoá rượu etylic thành axit axetic (lên men giấm) trong thực tế thường không xảy ra hoàn toàn: chỉ một phần etanol chuyển hoá thành axit axetic, phần còn lại vẫn còn nguyên trong hỗn hợp sau phản ứng. Khi tính bài toán loại này, cần cộng cả khối lượng axit axetic sinh ra lẫn khối lượng etanol dư chưa phản ứng, không được coi toàn bộ etanol ban đầu đã biến thành axit.\nVí dụ: có 46 g etanol (1 mol), chỉ 60% lượng etanol phản ứng oxi hoá thành axit axetic. Số mol etanol phản ứng là 1 x 0,6 = 0,6 mol, tạo ra 0,6 mol axit axetic tương ứng 0,6 x 60 = 36 g; số mol etanol còn dư là 1 - 0,6 = 0,4 mol, tương ứng 0,4 x 46 = 18,4 g. Hỗn hợp lỏng sau phản ứng gồm cả axit axetic lẫn etanol dư (chưa kể nước)."
+        },
+        {
+          "id": "b4-l6-c8",
+          "heading": "Nâng cao: Thu hồi CO2 và bã rượu trong sản xuất công nghiệp",
+          "body": "Trong công nghiệp sản xuất rượu etylic từ tinh bột, khí CO2 sinh ra ở giai đoạn lên men thường được thu hồi, làm sạch rồi nén lại để dùng sản xuất nước giải khát có gas hoặc làm chất làm lạnh, thay vì thải bỏ trực tiếp ra môi trường. Phần bã rắn còn lại sau khi lọc dịch lên men (gọi là bỗng rượu) vẫn còn tinh bột chưa chuyển hoá hết cùng protein và các chất dinh dưỡng khác, nên thường được tận dụng làm thức ăn chăn nuôi thay vì bỏ đi.\nViệc tận dụng này vừa giảm thất thoát nguyên liệu, vừa giảm chi phí xử lí chất thải, và cũng lí giải vì sao hiệu suất thực tế của quy trình sản xuất luôn được quan tâm tính toán kĩ trong các bài toán hoá học."
         }
       ],
       "questions": [
@@ -1079,23 +1204,23 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Muốn điều chế 10 lít rượu 46 do từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 75%, cần dùng ___ kg tinh bột tính theo mắt xích C6H10O5.",
+          "prompt": "Muốn điều chế 10 lít rượu 46 độ từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 75%, cần dùng ___ kg tinh bột tính theo mắt xích C6H10O5.",
           "answer": "10,8",
           "acceptedAnswers": ["10.8"],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
           "placeholder": "Nhập khối lượng tinh bột",
-          "explanation": "B1. Rượu 46 do nghĩa là trong 10 lít dung dịch có 4,6 lít etanol nguyên chất. B2. m etanol cần có = 4600 x 0,8 = 3680 g, suy ra n etanol = 3680/46 = 80 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,75 = 1,2n. B4. Giải 1,2n = 80 được n = 66,666... mol. B5. m tinh bột = 66,666... x 162 = 10800 g = 10,8 kg."
+          "explanation": "B1. Rượu 46 độ nghĩa là trong 10 lít dung dịch có 4,6 lít etanol nguyên chất. B2. m etanol cần có = 4600 x 0,8 = 3680 g, suy ra n etanol = 3680/46 = 80 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,75 = 1,2n. B4. Giải 1,2n = 80 được n = 66,666... mol. B5. m tinh bột = 66,666... x 162 = 10800 g = 10,8 kg."
         },
         {
           "id": "b4-l6-q12",
           "type": "single-choice",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Muốn điều chế 4,6 lít rượu 40 do từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 80%, cần dùng khối lượng tinh bột tính theo mắt xích C6H10O5 là",
+          "prompt": "Muốn điều chế 4,6 lít rượu 40 độ từ tinh bột, biết D(C2H5OH) = 0,8 g/ml, hiệu suất thuỷ phân là 80% và hiệu suất lên men là 80%, cần dùng khối lượng tinh bột tính theo mắt xích C6H10O5 là",
           "options": ["2,43 kg", "3,24 kg", "4,05 kg", "5,40 kg"],
           "answer": 2,
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
-          "explanation": "B1. Rượu 40 do nghĩa là có 1,84 lít etanol nguyên chất trong 4,6 lít dung dịch. B2. m etanol = 1840 x 0,8 = 1472 g, suy ra n etanol = 1472/46 = 32 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,80 = 1,28n. B4. Giải 1,28n = 32 được n = 25 mol. B5. m tinh bột = 25 x 162 = 4050 g = 4,05 kg."
+          "explanation": "B1. Rượu 40 độ nghĩa là có 1,84 lít etanol nguyên chất trong 4,6 lít dung dịch. B2. m etanol = 1840 x 0,8 = 1472 g, suy ra n etanol = 1472/46 = 32 mol. B3. Gọi n là số mol mắt xích tinh bột, số mol etanol thực tế là 2n x 0,80 x 0,80 = 1,28n. B4. Giải 1,28n = 32 được n = 25 mol. B5. m tinh bột = 25 x 162 = 4050 g = 4,05 kg."
         },
         {
           "id": "b4-l6-q13",

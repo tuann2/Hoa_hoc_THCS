@@ -17,17 +17,52 @@
         {
           "id": "b3-l1-c1",
           "heading": "Cấu tạo phân tử rượu etylic",
-          "body": "Rượu etylic có công thức phân tử C2H6O, thường viết dưới dạng C2H5OH hoặc CH3-CH2-OH.\nTrong phân tử có nhóm -OH gắn với gốc etyl C2H5-, nên rượu etylic thuộc loại ancol.\nNhóm -OH là phần quyết định nhiều tính chất đặc trưng của rượu etylic."
+          "body": "Rượu etylic có công thức phân tử C2H6O, thường viết dưới dạng C2H5OH hoặc CH3-CH2-OH.\nTrong phân tử có nhóm -OH gắn với gốc etyl C2H5-, nên rượu etylic thuộc loại ancol.\nNhóm -OH là phần quyết định nhiều tính chất đặc trưng của rượu etylic.\nỞ mức cấu tạo, nguyên tử O tạo hai liên kết đơn C-O và O-H; hai liên kết này phân cực mạnh. Giữa các phân tử rượu etylic, cũng như giữa rượu và nước, có thể hình thành liên kết hiđro. Điều đó góp phần giải thích rượu etylic tan vô hạn trong nước và có nhiệt độ sôi cao hơn hiđrocacbon có khối lượng mol gần tương đương."
         },
         {
           "id": "b3-l1-c2",
           "heading": "Tính chất hoá học tiêu biểu",
-          "body": "Rượu etylic tác dụng với natri giải phóng khí hiđro: 2C2H5OH + 2Na -> 2C2H5ONa + H2.\nRượu etylic cháy trong oxi tạo khí cacbonic và hơi nước: C2H5OH + 3O2 -> 2CO2 + 3H2O.\nNgoài ra, rượu etylic là chất lỏng không màu, tan vô hạn trong nước và nhẹ hơn nước."
+          "body": "Rượu etylic tác dụng với natri giải phóng khí hiđro: 2C2H5OH + 2Na -> 2C2H5ONa + H2.\nRượu etylic cháy trong oxi tạo khí cacbonic và hơi nước: C2H5OH + 3O2 -> 2CO2 + 3H2O.\nNgoài ra, rượu etylic là chất lỏng không màu, tan vô hạn trong nước và nhẹ hơn nước.\nKhi phản ứng với Na, chỉ H trong nhóm -OH bị thay thế, không phải mọi nguyên tử H của phân tử đều cho H2. Rượu etylic có tính axit rất yếu: không làm đổi màu quỳ tím và không giải phóng CO2 từ muối cacbonat trong điều kiện thông thường."
         },
         {
           "id": "b3-l1-c3",
           "heading": "Độ rượu và cách tính",
-          "body": "Độ rượu cho biết số ml rượu etylic nguyên chất có trong 100 ml dung dịch rượu.\nCông thức tính nhanh: Vruou nguyen chat = do ruou x Vdung dich / 100.\nNếu cần đổi sang khối lượng, phải dùng khối lượng riêng của rượu etylic; phổ biến là D = 0,789 g/ml hoặc lấy gần đúng D = 0,8 g/ml khi đề bài cho phép."
+          "body": "Độ rượu cho biết số ml rượu etylic nguyên chất có trong 100 ml dung dịch rượu.\nCông thức tính nhanh: Vruou nguyen chat = do ruou x Vdung dich / 100.\nNếu cần đổi sang khối lượng, phải dùng khối lượng riêng của rượu etylic; phổ biến là D = 0,789 g/ml hoặc lấy gần đúng D = 0,8 g/ml khi đề bài cho phép.\nĐộ rượu là phần trăm thể tích, không phải phần trăm khối lượng. Khi pha loãng chỉ lượng rượu etylic được bảo toàn; phải dùng thể tích dung dịch sau pha để tính độ rượu mới. Chỉ khi đề cho hoặc ngầm quy ước thể tích cộng được mới lấy V sau pha bằng tổng các thể tích ban đầu."
+        },
+        {
+          "id": "b3-l1-c4",
+          "heading": "Nâng cao: C2H6O không chỉ có một công thức cấu tạo",
+          "body": "Cùng công thức phân tử C2H6O còn có đimetyl ete CH3-O-CH3. C2H5OH và CH3-O-CH3 là đồng phân cấu tạo: cùng số nguyên tử mỗi loại nhưng cách liên kết khác nhau.\nMuốn khẳng định là rượu etylic, cần thấy nhóm -OH gắn trực tiếp với C. Đimetyl ete không có liên kết O-H nên không có phản ứng đặc trưng giải phóng H2 với Na như rượu etylic. Vì vậy trong bài biện luận, công thức phân tử C2H6O một mình chưa đủ để kết luận chất là rượu etylic."
+        },
+        {
+          "id": "b3-l1-c5",
+          "heading": "Nâng cao: Hệ thức mol trong phản ứng với natri",
+          "body": "Từ 2C2H5OH + 2Na -> 2C2H5ONa + H2 suy ra n(Na phản ứng) = n(C2H5OH phản ứng) và n(H2) = 1/2 n(C2H5OH phản ứng).\nNếu cả Na và rượu đều được cho, phải xác định chất giới hạn trước khi tính H2. Có thể so sánh trực tiếp số mol vì hệ số của C2H5OH và Na đều là 2.\nVới rượu etylic tinh khiết, n(C2H5OH) = m/46 hoặc n = D x V/46, trong đó D tính bằng g/ml và V tính bằng ml. Ở đktc, V(H2) = 22,4 x n(H2) lít."
+        },
+        {
+          "id": "b3-l1-c6",
+          "heading": "Nâng cao: Oxi hoá rượu etylic bằng CuO",
+          "body": "Đun nóng rượu etylic với đồng(II) oxit, rượu bị oxi hoá thành anđehit axetic (etanal): C2H5OH + CuO -> CH3CHO + Cu + H2O.\nDấu hiệu quan sát là CuO màu đen chuyển dần thành Cu màu đỏ. Trong phản ứng này, CuO là chất oxi hoá và bị khử; rượu etylic là chất khử.\nRượu etylic thuộc ancol bậc một nên sản phẩm oxi hoá đầu tiên là anđehit. Nếu tiếp tục bị oxi hoá trong những điều kiện phù hợp, anđehit axetic có thể chuyển thành axit axetic."
+        },
+        {
+          "id": "b3-l1-c7",
+          "heading": "Nâng cao: Tách nước tạo etilen",
+          "body": "Khi đun rượu etylic với H2SO4 đặc ở khoảng 170 độ C, xảy ra phản ứng tách nước: C2H5OH -> C2H4 + H2O. H2SO4 đặc vừa tạo môi trường axit vừa hút nước.\nC2H4 sinh ra là etilen, có liên kết đôi nên làm mất màu dung dịch brom. Không được nhầm hiện tượng này với rượu etylic ban đầu: rượu etylic không làm mất màu dung dịch brom trong điều kiện thường.\nPhản ứng cho thấy có thể liên hệ qua lại giữa ancol và hiđrocacbon không no, đồng thời là cách kiểm tra bảo toàn nguyên tố C, H, O khi cân bằng phương trình hữu cơ."
+        },
+        {
+          "id": "b3-l1-c8",
+          "heading": "Nâng cao: Hệ thức nhanh khi đốt cháy rượu etylic",
+          "body": "Từ C2H5OH + 3O2 -> 2CO2 + 3H2O, với 1 mol rượu etylic cháy hoàn toàn cần 3 mol O2, tạo 2 mol CO2 và 3 mol H2O. Vì thế n(C2H5OH) = n(CO2)/2 = n(H2O)/3.\nNếu biết lượng CO2 thì m(C2H5OH) = 23 x n(CO2); nếu biết lượng H2O thì m(C2H5OH) = 46 x n(H2O)/3. Đây là các hệ thức hữu ích khi đề cho sản phẩm cháy thay vì cho trực tiếp lượng rượu.\nTỉ lệ thể tích CO2 : H2O bằng 2 : 3 chỉ dùng khi cả hai đều ở thể khí và được đo ở cùng nhiệt độ, áp suất. Ở đktc, nước không được xem là hơi nên không thể tùy tiện coi thể tích hơi nước là 3 phần."
+        },
+        {
+          "id": "b3-l1-c9",
+          "heading": "Nâng cao: Độ rượu trong bài toán khối lượng và pha loãng",
+          "body": "Với V ml rượu a do, thể tích etanol là a x V/100 ml; do đó m(C2H5OH) = a x V x D/100 và n(C2H5OH) = a x V x D/4600. Các biểu thức này chỉ đúng khi D là khối lượng riêng của etanol nguyên chất theo đơn vị g/ml.\nKhi thêm nước, khối lượng và số mol etanol không đổi. Độ rượu sau pha phải tính theo a mới = 100 x V(etanol)/V(dung dịch sau pha).\nNếu đề yêu cầu phần trăm khối lượng hoặc khối lượng nước, phải có thêm khối lượng riêng của dung dịch rượu hoặc dữ kiện tương đương. Không được lấy phần thể tích còn lại rồi mặc định bằng khối lượng nước nếu đề chưa cho phép."
+        },
+        {
+          "id": "b3-l1-c10",
+          "heading": "Nâng cao: Lên men glucozơ và hiệu suất tạo rượu",
+          "body": "Rượu etylic có thể điều chế bằng lên men glucozơ nhờ men rượu: C6H12O6 -> 2C2H5OH + 2CO2. Theo phương trình, 1 mol glucozơ đã phản ứng tạo số mol C2H5OH bằng số mol CO2.\nVề lí thuyết, 180 g glucozơ tạo 92 g rượu etylic, nên m(C2H5OH lí thuyết) = 92 x m(glucozơ)/180. Nếu glucozơ chỉ chiếm w phần trăm khối lượng dung dịch ban đầu, trước hết phải tính m(glucozơ) = w x m(dung dịch)/100.\nHiệu suất lên men H phần trăm được tính bằng m(rượu thực tế) x 100 / m(rượu lí thuyết), hoặc bằng số mol thực tế chia số mol lí thuyết rồi nhân 100 khi cùng một chất."
         }
       ],
       "questions": [
@@ -83,7 +118,7 @@
           "type": "single-choice",
           "level": "basic",
           "category": "theory",
-          "prompt": "Rượu 40 do nghĩa là",
+          "prompt": "Rượu 40 độ nghĩa là",
           "options": [
             "Có 40 g C2H5OH trong 100 g dung dịch",
             "Có 40 ml C2H5OH nguyên chất trong 100 ml dung dịch",
@@ -91,42 +126,42 @@
             "Có 40 ml nước trong 100 ml dung dịch"
           ],
           "answer": 1,
-          "explanation": "B1. Độ rượu được định nghĩa theo phần trăm thể tích. B2. Rượu 40 do nghĩa là trong 100 ml dung dịch có 40 ml rượu etylic nguyên chất. B3. Vì vậy đáp án 2 đúng."
+          "explanation": "B1. Độ rượu được định nghĩa theo phần trăm thể tích. B2. Rượu 40 độ nghĩa là trong 100 ml dung dịch có 40 ml rượu etylic nguyên chất. B3. Vì vậy đáp án 2 đúng."
         },
         {
           "id": "b3-l1-q6",
           "type": "single-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Một chai rượu 250 ml, 40 do chứa thể tích rượu etylic nguyên chất là",
+          "prompt": "Một chai rượu 250 ml, 40 độ chứa thể tích rượu etylic nguyên chất là",
           "options": ["80 ml", "90 ml", "100 ml", "120 ml"],
           "answer": 2,
-          "explanation": "B1. Dùng công thức Vruou nguyen chat = do ruou x Vdung dich / 100. B2. Ta có V = 40 x 250 / 100 = 100 ml. B3. Vậy chai rượu chứa 100 ml rượu etylic nguyên chất."
+          "explanation": "B1. Dùng công thức V rượu nguyên chất = độ rượu x V dung dịch / 100. B2. Ta có V = 40 x 250 / 100 = 100 ml. B3. Vậy chai rượu chứa 100 ml rượu etylic nguyên chất."
         },
         {
           "id": "b3-l1-q7",
           "type": "fill-blank",
           "level": "applied",
           "category": "calculation",
-          "prompt": "500 ml rượu 12 do chứa ___ ml rượu etylic nguyên chất.",
+          "prompt": "500 ml rượu 12 độ chứa ___ ml rượu etylic nguyên chất.",
           "answer": "60",
           "placeholder": "Nhập thể tích",
-          "explanation": "B1. Vruou nguyen chat = 12 x 500 / 100. B2. Tính được V = 60 ml. B3. Vậy đáp án là 60."
+          "explanation": "B1. V rượu nguyên chất = 12 x 500 / 100. B2. Tính được V = 60 ml. B3. Vậy đáp án là 60."
         },
         {
           "id": "b3-l1-q8",
           "type": "multi-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Xét 200 ml rượu 46 do. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "prompt": "Xét 200 ml rượu 46 độ. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
           "options": [
             "Thể tích rượu etylic nguyên chất là 92 ml.",
             "Khối lượng rượu etylic nguyên chất là 73,6 g.",
             "Dung dịch trên chứa 108 ml nước và chất tan khác.",
-            "Độ rượu của dung dịch là 54 do."
+            "Độ rượu của dung dịch là 54 độ."
           ],
           "answers": [0, 1, 2],
-          "explanation": "B1. Thể tích rượu nguyên chất là 46 x 200 / 100 = 92 ml. B2. Khối lượng rượu etylic là 92 x 0,8 = 73,6 g. B3. Phần còn lại của 200 ml dung dịch là 200 - 92 = 108 ml. B4. Vì dung dịch đã cho là 46 do nên mệnh đề 4 sai."
+          "explanation": "B1. Thể tích rượu nguyên chất là 46 x 200 / 100 = 92 ml. B2. Khối lượng rượu etylic là 92 x 0,8 = 73,6 g. B3. Phần còn lại của 200 ml dung dịch là 200 - 92 = 108 ml. B4. Vì dung dịch đã cho là 46 độ nên mệnh đề 4 sai."
         },
         {
           "id": "b3-l1-q9",
@@ -154,7 +189,7 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Một bình chứa 250 ml rượu 92 do. Lấy D(C2H5OH) = 0,789 g/ml. Khối lượng rượu etylic nguyên chất là ___ g.",
+          "prompt": "Một bình chứa 250 ml rượu 92 độ. Lấy D(C2H5OH) = 0,789 g/ml. Khối lượng rượu etylic nguyên chất là ___ g.",
           "answer": "181,47",
           "acceptedAnswers": ["181.47"],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
@@ -177,16 +212,16 @@
           "type": "multi-choice",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Pha 300 ml rượu 40 do với 200 ml nước. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "prompt": "Pha 300 ml rượu 40 độ với 200 ml nước. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
           "options": [
             "Thể tích rượu etylic nguyên chất ban đầu là 120 ml.",
-            "Độ rượu của dung dịch sau khi pha là 24 do.",
+            "Độ rượu của dung dịch sau khi pha là 24 độ.",
             "Khối lượng rượu etylic có trong dung dịch sau pha là 96 g.",
             "Thể tích nước thêm vào là 200 ml."
           ],
           "answers": [0, 1, 2, 3],
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
-          "explanation": "B1. Trong 300 ml rượu 40 do có 300 x 40 / 100 = 120 ml rượu etylic nguyên chất. B2. Sau khi pha thêm 200 ml nước, tổng thể tích là 500 ml nên độ rượu mới là 120 x 100 / 500 = 24 do. B3. Khối lượng rượu etylic không đổi, bằng 120 x 0,8 = 96 g. B4. Dữ kiện cũng cho biết đã thêm đúng 200 ml nước. Vì vậy cả 4 nhận xét đều đúng."
+          "explanation": "B1. Trong 300 ml rượu 40 độ có 300 x 40 / 100 = 120 ml rượu etylic nguyên chất. B2. Sau khi pha thêm 200 ml nước, tổng thể tích là 500 ml nên độ rượu mới là 120 x 100 / 500 = 24 độ. B3. Khối lượng rượu etylic không đổi, bằng 120 x 0,8 = 96 g. B4. Dữ kiện cũng cho biết đã thêm đúng 200 ml nước. Vì vậy cả 4 nhận xét đều đúng."
         }
       ]
     },
@@ -211,6 +246,31 @@
           "id": "b3-l2-c3",
           "heading": "Phản ứng este hoá",
           "body": "Axit axetic tác dụng với rượu etylic tạo etyl axetat và nước: CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O.\nPhản ứng này là phản ứng thuận nghịch, thường cần H2SO4 đặc làm xúc tác và phải đun nóng.\nEtyl axetat có mùi thơm, là este đơn giản được học ở THCS."
+        },
+        {
+          "id": "b3-l2-c4",
+          "heading": "Nâng cao: Dãy đồng đẳng axit cacboxylic no, đơn chức",
+          "body": "Axit axetic thuộc dãy đồng đẳng axit cacboxylic no, đơn chức, mạch hở, công thức chung CnH2n+1COOH (n từ 0 trở lên), hay viết theo công thức phân tử là CmH2mO2 (m từ 1 trở lên). Mỗi chất trong dãy hơn kém nhau một nhóm CH2 và có tính chất hoá học tương tự nhau.\nChất đơn giản nhất của dãy là axit fomic HCOOH (ứng với n = 0), tiếp theo là axit axetic CH3COOH (n = 1).\nĐiểm cần lưu ý khi làm bài phân biệt hai axit này: HCOOH có cấu tạo đặc biệt H-COOH, trong đó ẩn chứa nhóm -CHO của anđehit, nên ngoài tính axit thông thường, HCOOH còn có phản ứng tráng gương với dung dịch AgNO3 trong NH3 giống anđehit axetic. Axit axetic CH3COOH không có phản ứng tráng gương này vì không còn liên kết C-H gắn trực tiếp vào nhóm cacboxyl."
+        },
+        {
+          "id": "b3-l2-c5",
+          "heading": "Nâng cao: So sánh lực axit và phạm vi phản ứng với muối",
+          "body": "Trong các axit thường gặp ở THCS, lực axit giảm dần theo thứ tự: axit vô cơ mạnh như HCl, H2SO4, HNO3 mạnh hơn axit axetic (một axit hữu cơ), và axit axetic lại mạnh hơn axit cacbonic H2CO3.\nMột axit chỉ đẩy được axit yếu hơn nó ra khỏi muối. Vì CH3COOH mạnh hơn H2CO3 nên phản ứng được với muối cacbonat, hiđrocacbonat như Na2CO3, NaHCO3, CaCO3 và giải phóng khí CO2; nhưng CH3COOH yếu hơn HCl, H2SO4 nên không thể đẩy các axit này ra khỏi muối clorua hay muối sunfat.\nAxit axetic có đầy đủ tính chất chung của một axit (tác dụng với kim loại đứng trước hiđro, oxit bazơ, bazơ, một số muối) nhưng mức độ phản ứng yếu hơn axit vô cơ mạnh ở cùng nồng độ, do trong dung dịch axit axetic chỉ phân li một phần thành ion."
+        },
+        {
+          "id": "b3-l2-c6",
+          "heading": "Nâng cao: Đốt cháy axit axetic",
+          "body": "Phương trình đốt cháy axit axetic: CH3COOH + 2O2 -> 2CO2 + 2H2O.\nVì axit axetic là hợp chất no, đơn chức nên khi đốt cháy hoàn toàn, số mol CO2 sinh ra bằng số mol H2O: n(CO2) = n(H2O). Đây là dấu hiệu quen thuộc để nhận ra một hợp chất hữu cơ no, đơn chức khi đề bài chỉ cho biết sản phẩm cháy.\nTừ số mol CO2 hoặc H2O, có thể suy ra số mol axit axetic đã đốt: n(CH3COOH) = n(CO2)/2 = n(H2O)/2, từ đó tính khối lượng theo m = 60 x n. Cần phân biệt với đốt cháy rượu etylic (nCO2 khác nH2O) để không áp nhầm hệ thức khi đề cho hỗn hợp nhiều chất hữu cơ."
+        },
+        {
+          "id": "b3-l2-c7",
+          "heading": "Nâng cao: Yếu tố ảnh hưởng hiệu suất phản ứng este hoá",
+          "body": "Phản ứng este hoá CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O là phản ứng thuận nghịch nên không bao giờ đạt hiệu suất 100% nếu để phản ứng tự do; đây chính là lí do các bài toán luôn cho hiệu suất H% nhỏ hơn 100%.\nTrong thực tế, để tăng lượng este thu được, người ta thường dùng dư một trong hai chất (axit axetic hoặc rượu etylic), dùng H2SO4 đặc vừa làm xúc tác vừa hút bớt nước sinh ra, hoặc chưng cất tách este ra khỏi hỗn hợp ngay khi nó hình thành. Cả ba cách đều làm cân bằng chuyển dịch theo chiều tạo thêm este.\nKhi giải bài toán, nếu axit và rượu được cho với số mol không bằng nhau, phải xác định chất phản ứng hết trước dựa theo tỉ lệ mol 1:1 của phản ứng, sau đó mới nhân khối lượng este lí thuyết với hiệu suất để được khối lượng este thực tế."
+        },
+        {
+          "id": "b3-l2-c8",
+          "heading": "Nâng cao: Bài toán hỗn hợp chứa axit axetic",
+          "body": "Với hỗn hợp gồm axit axetic và rượu etylic (chưa phản ứng este hoá với nhau) tác dụng với Na dư, cả hai chất đều giải phóng H2 theo cùng tỉ lệ mol 2:1 (chất : H2), vì nguyên tử H linh động chỉ nằm ở nhóm -COOH và -OH: 2CH3COOH + 2Na -> 2CH3COONa + H2 và 2C2H5OH + 2Na -> 2C2H5ONa + H2.\nKhi đề chỉ cho tổng khối lượng hỗn hợp và tổng thể tích H2, cần đặt ẩn số mol từng chất (dùng khối lượng mol 60 và 46), rồi lập hệ hai phương trình: một phương trình về khối lượng, một phương trình suy từ số mol H2 (bằng nửa tổng số mol hai chất), để giải ra số mol từng thành phần.\nVới hỗn hợp axit axetic và axit fomic, có thể tách riêng đóng góp của từng chất nhờ phản ứng tráng gương: chỉ HCOOH phản ứng với AgNO3 trong NH3, từ đó tính được số mol HCOOH; số mol CH3COOH còn lại suy ra từ khối lượng hỗn hợp hoặc từ số mol NaOH dùng để trung hoà toàn bộ hỗn hợp."
         }
       ],
       "questions": [
@@ -390,6 +450,36 @@
           "id": "b3-l3-c3",
           "heading": "Ý nghĩa thực tiễn của chuỗi chuyển hoá",
           "body": "Từ etilen của công nghiệp dầu mỏ có thể tạo rượu etylic dùng làm dung môi, nhiên liệu sinh học và nguyên liệu hữu cơ.\nTừ glucozơ của nông sản có thể lên men tạo rượu; từ rượu lại oxi hoá tạo giấm.\nCác chuỗi phản ứng này thường xuất hiện trong bài tập nhận biết, điều chế và tính theo sơ đồ chuyển hoá."
+        },
+        {
+          "id": "b3-l3-c4",
+          "heading": "Nâng cao: Bảo toàn nguyên tố cacbon xuyên suốt chuỗi chuyển hoá",
+          "body": "Etilen C2H4, rượu etylic C2H5OH và axit axetic CH3COOH đều có đúng 2 nguyên tử C trong phân tử, nên khi các phản ứng trong chuỗi xảy ra với hiệu suất 100% và theo đúng tỉ lệ mol 1:1:1, số mol C2H4 ban đầu bằng số mol C2H5OH sinh ra và bằng số mol CH3COOH cuối cùng.\nNhờ đó có thể tính nhanh n(CH3COOH) = n(C2H4 phản ứng) mà không cần viết tách hai phương trình liên tiếp, miễn là đề không nêu hiệu suất riêng cho từng giai đoạn.\nVới nhánh đi từ glucozơ, 1 mol C6H12O6 (6C) phân chia thành 2 mol C2H5OH (2 x 2 = 4C) và 2 mol CO2 (2C); vì vậy không phải toàn bộ C trong glucozơ đều đi vào rượu, và không được áp dụng hệ thức 1:1:1 như đối với nhánh etilen."
+        },
+        {
+          "id": "b3-l3-c5",
+          "heading": "Nâng cao: Hiệu suất nhiều giai đoạn liên tiếp trong chuỗi",
+          "body": "Khi chuỗi etilen -> rượu etylic -> axit axetic trải qua hai giai đoạn, mỗi giai đoạn có hiệu suất riêng H1 (cộng nước) và H2 (oxi hoá), thì hiệu suất chung của cả chuỗi bằng H1 x H2 (nhân hai số ở dạng thập phân), không phải cộng hay lấy trung bình hai hiệu suất.\nKhối lượng axit axetic thực tế thu được tính theo m(CH3COOH thực tế) = n(C2H4 ban đầu) x H1 x H2 x 60.\nNếu chuỗi bắt đầu từ glucozơ với hiệu suất lên men H1 và hiệu suất oxi hoá rượu H2, công thức tương ứng là m(CH3COOH thực tế) = n(glucozơ) x 2 x H1 x H2 x 60, do 1 mol glucozơ theo lí thuyết cho 2 mol rượu."
+        },
+        {
+          "id": "b3-l3-c6",
+          "heading": "Nâng cao: Phân biệt etilen, rượu etylic, axit axetic bằng thuốc thử",
+          "body": "Có thể phân biệt ba chất trong chuỗi bằng quỳ tím và dung dịch brom: axit axetic là chất duy nhất làm quỳ tím hoá đỏ do có nhóm -COOH; etilen và rượu etylic không làm đổi màu quỳ tím.\nTrong hai chất còn lại, chỉ etilen làm mất màu dung dịch brom nhờ phản ứng cộng vào liên kết đôi C=C: C2H4 + Br2 -> C2H4Br2; rượu etylic không có liên kết đôi nên không phản ứng với dung dịch brom.\nVì vậy thứ tự nhận biết hợp lí là dùng quỳ tím trước để tách axit axetic ra khỏi hai chất còn lại, sau đó dùng dung dịch brom để phân biệt etilen với rượu etylic."
+        },
+        {
+          "id": "b3-l3-c7",
+          "heading": "Nâng cao: Bài toán ngược - suy ngược từ sản phẩm cuối chuỗi",
+          "body": "Có dạng bài cho biết khối lượng axit axetic thu được ở cuối chuỗi cùng hiệu suất từng giai đoạn, yêu cầu tính ngược ra thể tích etilen hoặc khối lượng glucozơ ban đầu; khi đó phải chia cho hiệu suất thay vì nhân.\nTừ khối lượng CH3COOH thực tế suy ra n(CH3COOH), rồi n(C2H4 ban đầu) = n(CH3COOH thực tế) / (H1 x H2); thể tích etilen ở đktc là V = 22,4 x n(C2H4 ban đầu).\nNếu xuất phát từ glucozơ, công thức tương ứng là n(glucozơ) = n(CH3COOH thực tế) / (2 x H1 x H2), sau đó nhân với 180 để ra khối lượng glucozơ ban đầu."
+        },
+        {
+          "id": "b3-l3-c8",
+          "heading": "Nâng cao: Etilen lẫn tạp chất trong phản ứng cộng nước",
+          "body": "Nếu khí etilen ban đầu không tinh khiết mà lẫn một khí không phản ứng với nước (ví dụ CH4 hoặc khí trơ), chỉ có phần C2H4 nguyên chất tham gia phản ứng cộng nước; phải dùng phần trăm thể tích etilen trong hỗn hợp để tính đúng số mol etilen phản ứng trước khi tiếp tục chuỗi.\nCụ thể, nếu hỗn hợp khí có thể tích V lít ở đktc và etilen chiếm x phần trăm thể tích, thì n(C2H4 tinh khiết) = (x/100) x V/22,4; từ số mol này mới áp dụng các hệ thức của chuỗi chuyển hoá.\nCần phân biệt phần trăm thể tích etilen trong hỗn hợp khí ban đầu với hiệu suất phản ứng cộng nước; đề bài có thể cho cả hai đại lượng cùng lúc, và phải nhân liên tiếp cả hai để ra lượng rượu etylic thực tế."
+        },
+        {
+          "id": "b3-l3-c9",
+          "heading": "Nâng cao: Hỗn hợp hai nguồn nguyên liệu cùng tạo rượu etylic",
+          "body": "Có dạng bài cho một hỗn hợp gồm cả etilen và glucozơ cùng được chuyển hoá thành rượu etylic rồi oxi hoá tiếp thành axit axetic; khi đó phải tính riêng lượng rượu sinh ra từ mỗi nguồn rồi cộng lại trước khi tính axit axetic.\nTừ n(C2H4) mol etilen với hiệu suất H1a sinh ra n(C2H4) x H1a mol rượu; từ n(glucozơ) mol glucozơ với hiệu suất H1b sinh ra 2 x n(glucozơ) x H1b mol rượu; tổng số mol rượu etylic thực tế là tổng hai giá trị này.\nToàn bộ lượng rượu etylic thu được, không phân biệt nguồn gốc, mới được đưa vào phản ứng oxi hoá với hiệu suất H2 để tính khối lượng axit axetic cuối cùng: m(CH3COOH) = [n(C2H4) x H1a + 2 x n(glucozơ) x H1b] x H2 x 60."
         }
       ],
       "questions": [
@@ -567,6 +657,31 @@
           "id": "b3-l4-c3",
           "heading": "Phản ứng xà phòng hoá",
           "body": "Khi đun chất béo với dung dịch kiềm như NaOH, chất béo bị thuỷ phân tạo muối natri của axit béo và glixerol.\nPhương trình tổng quát: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3.\nMuối RCOONa là thành phần chính của xà phòng, còn C3H5(OH)3 là glixerol."
+        },
+        {
+          "id": "b3-l4-c4",
+          "heading": "Nâng cao: Thuỷ phân chất béo trong môi trường axit",
+          "body": "Ngoài phản ứng với dung dịch kiềm (xà phòng hoá), chất béo còn có thể bị thuỷ phân khi đun nóng với nước có xúc tác axit.\nPhương trình tổng quát: (RCOO)3C3H5 + 3H2O <-> 3RCOOH + C3H5(OH)3; đây là phản ứng thuận nghịch nên thường không xảy ra hoàn toàn.\nSản phẩm ở đây là axit béo tự do RCOOH chứ không phải muối RCOONa, do đó thuỷ phân bằng axit KHÔNG trực tiếp tạo ra xà phòng - chỉ phản ứng với kiềm (NaOH, KOH) một chiều mới gọi đúng là phản ứng xà phòng hoá và mới thu được xà phòng."
+        },
+        {
+          "id": "b3-l4-c5",
+          "heading": "Nâng cao: Bảo toàn khối lượng trong phản ứng xà phòng hoá",
+          "body": "Vì phản ứng xà phòng hoá không sinh ra hay mất đi nguyên tử nào, có thể áp dụng định luật bảo toàn khối lượng: khối lượng chất béo + khối lượng NaOH phản ứng = khối lượng muối (xà phòng) + khối lượng glixerol.\nNhờ vậy, khi biết khối lượng chất béo và số mol NaOH đã dùng, có thể tính nhanh khối lượng xà phòng thu được mà không cần biết cụ thể gốc R.\nVí dụ: xà phòng hoá hoàn toàn 17,8 gam một chất béo (RCOO)3C3H5 bằng vừa đủ 0,06 mol NaOH. Vì tỉ lệ chất béo : NaOH : glixerol là 1 : 3 : 1 nên n(chất béo) = n(glixerol) = 0,06/3 = 0,02 mol, suy ra m(glixerol) = 0,02 x 92 = 1,84 gam; m(NaOH) = 0,06 x 40 = 2,4 gam. Theo bảo toàn khối lượng, m(muối) = 17,8 + 2,4 - 1,84 = 18,36 gam."
+        },
+        {
+          "id": "b3-l4-c6",
+          "heading": "Nâng cao: Dầu thực vật, mỡ động vật và phản ứng hiđro hoá",
+          "body": "Chất béo tồn tại ở thể lỏng (dầu thực vật) hay thể rắn (mỡ động vật) tuỳ vào gốc axit béo tạo nên nó: mỡ động vật chứa nhiều gốc axit béo no (như axit stearic C17H35COOH, axit panmitic C15H31COOH, mạch cacbon chỉ có liên kết đơn) nên đông đặc ở nhiệt độ thường; dầu thực vật chứa nhiều gốc axit béo không no (như axit oleic C17H33COOH, có một liên kết đôi C=C trong mạch) nên ở thể lỏng.\nVì có liên kết đôi C=C, dầu thực vật có thể tham gia phản ứng cộng H2 (xúc tác Ni, đun nóng) để no hoá gốc axit béo, chuyển dầu lỏng thành chất béo rắn - đây là nguyên lí sản xuất bơ thực vật (margarine) trong công nghiệp thực phẩm.\nLưu ý phân biệt: dầu ăn (chất béo, có nhóm este) khác hẳn dầu nhớt bôi trơn máy hay dầu hoả (hỗn hợp hiđrocacbon, không có nhóm este) - dầu nhớt không bị xà phòng hoá và không phản ứng với dung dịch kiềm."
+        },
+        {
+          "id": "b3-l4-c7",
+          "heading": "Nâng cao: Vì sao xà phòng tẩy rửa được vết dầu mỡ",
+          "body": "Phân tử xà phòng RCOONa có hai phần trái tính chất: đầu -COONa ưa nước (tan tốt trong nước), còn đuôi gốc hiđrocacbon R dài thì kị nước nhưng lại dễ hoà lẫn vào dầu mỡ.\nKhi giặt rửa, đuôi kị nước của nhiều phân tử xà phòng chui vào bên trong hạt dầu mỡ bám trên vải hay da, còn đầu ưa nước quay ra ngoài tiếp xúc với nước, tạo thành những hạt hình cầu nhỏ (mixen) lơ lửng, phân tán đều trong nước thay vì bám dính trên bề mặt.\nNhờ đó vết bẩn dầu mỡ bị tách rời khỏi vải, da và bị cuốn trôi theo nước khi xả - đó chính là cơ chế làm sạch của xà phòng."
+        },
+        {
+          "id": "b3-l4-c8",
+          "heading": "Nâng cao: Xác định axit béo từ số liệu phản ứng xà phòng hoá",
+          "body": "Một số bài toán cho khối lượng chất béo và số mol NaOH phản ứng vừa đủ, yêu cầu suy ngược ra loại axit béo đã tạo nên chất béo đó.\nCách làm: từ n(NaOH) suy ra n(chất béo) theo tỉ lệ 1 : 3, rồi tính M(chất béo) = m(chất béo)/n(chất béo). Vì chất béo (RCOO)3C3H5 được tạo từ glixerol C3H5(OH)3 (M = 92) và 3 phân tử axit béo RCOOH (mất đi 3 phân tử H2O khi este hoá) nên M(chất béo) = 3.M(RCOOH) + 92 - 3.18 = 3.M(RCOOH) + 38, từ đó suy ra M(RCOOH).\nVí dụ: xà phòng hoá hoàn toàn 8,84 gam một chất béo (RCOO)3C3H5 cần vừa đủ 0,03 mol NaOH. Ta có n(chất béo) = 0,03/3 = 0,01 mol nên M(chất béo) = 8,84/0,01 = 884 g/mol. Suy ra M(RCOOH) = (884 - 38)/3 = 282 g/mol, đúng bằng khối lượng mol của axit oleic C17H33COOH - vậy chất béo này là este của glixerol với axit oleic (một axit béo không no)."
         }
       ],
       "questions": [
@@ -754,6 +869,31 @@
           "id": "b3-l5-c3",
           "heading": "Hiệu suất lên men và bài toán nhiều giai đoạn",
           "body": "Lên men glucozơ: C6H12O6 -> 2C2H5OH + 2CO2, trong đó M(C6H12O6) = 180 và M(C2H5OH) = 46.\nNếu hiệu suất lên men là h%, lượng rượu thực tế bằng lượng lí thuyết nhân h/100.\nỞ bài toán nhiều giai đoạn như lên men rồi este hoá, cần tính lần lượt từng bước và có thể gộp thành hiệu suất chung bằng tích các hiệu suất thành phần."
+        },
+        {
+          "id": "b3-l5-c4",
+          "heading": "Nâng cao: Suy ngược hiệu suất từng giai đoạn khi biết hiệu suất chung",
+          "body": "Nhiều bài toán không cho sẵn hiệu suất từng bước mà chỉ cho hiệu suất chung của cả quá trình (ví dụ từ glucozơ ra đến este) cùng với hiệu suất của một giai đoạn đã biết; khi đó hiệu suất giai đoạn còn lại được tính bằng H(giai đoạn cần tìm) = H(chung)/H(đã biết) (tính theo số thập phân rồi đổi lại phần trăm), suy trực tiếp từ công thức H(chung) = H1 x H2 đã học.\nCần chú ý: kết quả tìm được phải nằm trong khoảng 0 đến 100%; nếu tính ra lớn hơn 100% thì chắc chắn đã nhầm vai trò tử số - mẫu số hoặc đọc sai dữ kiện đề bài.\nDạng bài này thường xuất hiện khi đề mô tả quy trình lên men rồi chưng cất/tinh chế rượu: hiệu suất lên men chuyển hoá glucozơ thành rượu là một giai đoạn, hiệu suất thu hồi rượu nguyên chất sau chưng cất là giai đoạn còn lại, và hiệu suất chung của toàn bộ quy trình sản xuất bằng tích hai hiệu suất đó."
+        },
+        {
+          "id": "b3-l5-c5",
+          "heading": "Nâng cao: Quy tắc đường chéo cho bài toán pha trộn hai loại rượu khác độ",
+          "body": "Khi trộn V1 ml rượu a1 độ với V2 ml rượu a2 độ (a1 < a2) để được V1 + V2 ml rượu a độ, nếu coi thể tích cộng tính (thể tích dung dịch sau khi pha bằng tổng hai thể tích đem trộn), ta có a x (V1 + V2) = a1 x V1 + a2 x V2, vì độ rượu chính là phần trăm thể tích rượu nguyên chất.\nBiến đổi biểu thức trên cho V1 x (a - a1) = V2 x (a2 - a), tức là V1/V2 = (a2 - a)/(a - a1) - đúng dạng quy tắc đường chéo đã quen thuộc với nồng độ dung dịch, chỉ khác là áp dụng cho độ rượu.\nCách này cũng dùng được khi một trong hai loại là nước cất (a1 = 0 độ, tức pha loãng bằng nước), khi đó công thức trở về đúng dạng bài toán pha loãng đã học."
+        },
+        {
+          "id": "b3-l5-c6",
+          "heading": "Nâng cao: Giả thiết cộng tính thể tích khi pha rượu với nước",
+          "body": "Trên thực tế, khi trộn rượu etylic với nước, các phân tử hai chất tạo liên kết hiđro với nhau khiến thể tích dung dịch thu được hơi nhỏ hơn tổng thể tích rượu và nước đem trộn (hiện tượng co thể tích khi pha trộn hai chất lỏng phân cực).\nVì hiện tượng này khó tính chính xác bằng công cụ THCS, các bài toán về độ rượu luôn ngầm định hoặc nói rõ giả thiết \"coi thể tích dung dịch sau khi pha trộn bằng tổng thể tích các chất đem trộn\"; toàn bộ công thức về độ rượu và quy tắc đường chéo ở thẻ trên đều dựa trên giả thiết này.\nKhi trình bày bài giải, nên nêu rõ một câu về giả thiết cộng tính thể tích trước khi lập phương trình, để bài làm chặt chẽ và tránh bị trừ điểm ở các đề thi HSG yêu cầu lập luận đầy đủ."
+        },
+        {
+          "id": "b3-l5-c7",
+          "heading": "Nâng cao: Xác định hiệu suất lên men qua khí CO2 hấp thụ vào dung dịch kiềm",
+          "body": "Phản ứng lên men rượu C6H12O6 -> 2C2H5OH + 2CO2 sinh ra CO2 với số mol đúng bằng số mol rượu etylic tạo thành; đây là điểm mấu chốt để xác định hiệu suất khi đề bài không cho trực tiếp khối lượng rượu mà cho dữ kiện về khí CO2.\nNếu dẫn toàn bộ khí CO2 sinh ra vào dung dịch nước vôi trong hoặc dung dịch kiềm dư, số mol CO2 thực tế được suy ra từ số mol kết tủa CaCO3 hoặc từ khối lượng muối cacbonat thu được, theo bảo toàn nguyên tố cacbon.\nTừ n(CO2 thực tế) suy ra n(C2H5OH thực tế) bằng đúng số mol đó, rồi so với n(C2H5OH lí thuyết) tính theo n(glucozơ) ban đầu để có hiệu suất lên men - cách làm này tránh phải cân đo trực tiếp lượng rượu, phù hợp với các đề kết hợp kiến thức vô cơ đã học."
+        },
+        {
+          "id": "b3-l5-c8",
+          "heading": "Nâng cao: Lượng chất dư sau phản ứng este hoá khi hiệu suất nhỏ hơn 100%",
+          "body": "Khi hiệu suất phản ứng nhỏ hơn 100%, số mol chất đã thực sự phản ứng chỉ bằng H/100 lần số mol chất giới hạn, không phải toàn bộ số mol chất giới hạn ban đầu.\nCụ thể, với phản ứng tỉ lệ mol 1:1 giữa axit và rượu: nếu chất giới hạn (số mol nhỏ hơn) là n(gh), thì số mol đã phản ứng là n(gh) x H/100; chất giới hạn còn dư lại n(gh) x (1 - H/100) mol, còn chất lấy dư ban đầu (số mol n(dư)) chỉ mất đi đúng n(gh) x H/100 mol nên còn lại n(dư) - n(gh) x H/100 mol.\nĐây là điểm học sinh dễ nhầm nhất: không được lấy số mol chất giới hạn trừ thẳng cho số mol sản phẩm để suy ra chất dư, mà phải nhân thêm hệ số H/100 vào lượng đã phản ứng trước khi trừ."
         }
       ],
       "questions": [
@@ -814,17 +954,17 @@
           "type": "single-choice",
           "level": "basic",
           "category": "calculation",
-          "prompt": "100 ml rượu 25 do chứa thể tích rượu etylic nguyên chất là",
+          "prompt": "100 ml rượu 25 độ chứa thể tích rượu etylic nguyên chất là",
           "options": ["20 ml", "25 ml", "40 ml", "75 ml"],
           "answer": 1,
-          "explanation": "B1. Vruou nguyen chat = 25 x 100 / 100 = 25 ml. B2. Vì vậy 100 ml rượu 25 do chứa 25 ml rượu etylic nguyên chất."
+          "explanation": "B1. V rượu nguyên chất = 25 x 100 / 100 = 25 ml. B2. Vì vậy 100 ml rượu 25 độ chứa 25 ml rượu etylic nguyên chất."
         },
         {
           "id": "b3-l5-q6",
           "type": "single-choice",
           "level": "applied",
           "category": "calculation",
-          "prompt": "Một chai rượu 250 ml, 40 do. Nếu lấy D(C2H5OH) = 0,8 g/ml thì khối lượng rượu etylic nguyên chất là",
+          "prompt": "Một chai rượu 250 ml, 40 độ. Nếu lấy D(C2H5OH) = 0,8 g/ml thì khối lượng rượu etylic nguyên chất là",
           "options": ["64 g", "72 g", "80 g", "96 g"],
           "answer": 2,
           "explanation": "B1. Thể tích rượu etylic nguyên chất là 40 x 250 / 100 = 100 ml. B2. Khối lượng rượu etylic là m = 100 x 0,8 = 80 g. B3. Vậy đáp án đúng là 80 g."
@@ -881,7 +1021,7 @@
           "type": "fill-blank",
           "level": "hsg",
           "category": "calculation",
-          "prompt": "Muốn điều chế 230 ml rượu 40 do từ glucozơ bằng phản ứng lên men có hiệu suất 80%, lấy D(C2H5OH) = 0,8 g/ml. Khối lượng glucozơ cần dùng là ___ g.",
+          "prompt": "Muốn điều chế 230 ml rượu 40 độ từ glucozơ bằng phản ứng lên men có hiệu suất 80%, lấy D(C2H5OH) = 0,8 g/ml. Khối lượng glucozơ cần dùng là ___ g.",
           "answer": "180",
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
           "placeholder": "Nhập khối lượng glucozơ",

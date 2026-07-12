@@ -7,12 +7,19 @@ Codex + Gemini (antigravity-cli).
 
 ```
 Claude Code (claude CLI)
-  ├── Orchestrator, reviewer, committer
+  ├── Architect: planning, risk classification, orchestration,
+  │     gates, release-readiness assessment (không tự implement)
   ├── Gọi Codex qua subagent codex:codex-rescue
   │     └── node codex-companion.mjs (shared runtime, sandbox write)
+  │     └── Codex = engineering engine: implement, validate, handoff
   └── Gọi Gemini qua agy CLI (antigravity-cli)
-        └── Gemini 3.5 Flash / 3.1 Pro (review, docs)
+        └── Gemini 3.5 Flash / 3.1 Pro (independent review — bắt buộc
+              cho CRITICAL, docs)
 ```
+
+Luật gốc: `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` (khi
+`Status: APPROVED`, tài liệu này là nguồn chân lý duy nhất; các file bên
+dưới chỉ ghi lại cơ chế/tool cụ thể của project).
 
 ---
 
@@ -28,14 +35,15 @@ brew install claude-code
 
 ### Cấu hình cho repo mới
 
-Mỗi repo cần 3 file để Claude biết vai trò:
+Mỗi repo cần 4 file để Claude biết vai trò:
 
-| File                          | Mục đích                        |
-| ----------------------------- | ------------------------------- |
-| `CLAUDE.md`                   | Vai trò và luật của Claude Code |
-| `AGENTS.md`                   | Luật của Codex                  |
-| `docs/DOCUMENTATION_RULES.md` | Luật của Antigravity/Gemini     |
-| `AI_WORKFLOW.md`              | Pipeline chung cho mọi agent    |
+| File                                            | Mục đích                                                   |
+| ----------------------------------------------- | ---------------------------------------------------------- |
+| `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` | Kiến trúc nguồn — luật gốc khi `Status: APPROVED`          |
+| `CLAUDE.md`                                     | Vai trò và luật của Claude Code (Architect)                |
+| `AGENTS.md`                                     | Luật của Codex (engineering engine)                        |
+| `docs/DOCUMENTATION_RULES.md`                   | Luật của Antigravity/Gemini                                |
+| `AI_WORKFLOW.md`                                | Cơ chế project-cụ thể; luật chung tham chiếu tới kiến trúc |
 
 Copy từ repo này làm template (xem mục 5).
 
@@ -202,7 +210,10 @@ claude
 
 ### Bước 2 — Lên plan
 
-Claude soạn `docs/plans/FEATURE-XXX.md`, user approve.
+Claude soạn `docs/plans/FEATURE-XXX.md` (bao gồm risk tier, risk
+categories, escalation rationale, change type và quality gates áp dụng
+— xem `docs/plans/_TEMPLATE.md`), user approve. Approval của user cũng
+là approval cho risk tier đã ghi trong plan.
 
 ### Bước 3 — Delegate cho Codex
 
@@ -224,22 +235,34 @@ Agent(subagent_type="codex:codex-rescue", run_in_background=True,
 # Tiết kiệm ~3x thời gian so với tuần tự
 ```
 
-### Bước 4 — Review kép (cho nội dung rủi ro cao)
+### Bước 4 — Independent verification theo risk tier
+
+Codex chạy validation và viết implementation handoff trước
+(`docs/handoffs/<FEATURE-ID>-implementation.md`, evidence bound theo
+snapshot). Sau đó, mức độ review độc lập theo tier
+(xem architecture's Independent Verification table):
 
 ```
-# Song song:
-Codex  → re-solves, fixes in-place
-agy    → independent cross-check, reports only
+NORMAL    → CI trên đúng candidate commit; nếu chưa có CI, một fresh
+            read-only reviewer soi targeted diff + rerun gate liên quan
+ELEVATED  → một fresh Codex review execution soi mọi dòng đổi
+CRITICAL  → fresh Gemini review (agy, độc lập) + fresh Codex
+            adversarial review — cả hai đều chạy song song
 
-# Claude reconciles, commits
+# Reviewer chỉ báo cáo finding, không tự sửa candidate.
+# Finding xác nhận → quay lại Codex qua remediation state machine.
 ```
 
-### Bước 5 — Validate và commit
+### Bước 5 — Claude gate và commit
+
+Claude không rerun validation đã pass; chỉ đọc handoff + `git diff
+--stat`, kiểm tra scope/acceptance criteria/blocker/deviation/evidence
+binding (soi từng dòng chỉ khi ELEVATED/CRITICAL, scope mismatch,
+validation fail, user yêu cầu, hoặc thay đổi đáng ngờ). Sau khi mọi gate
+bắt buộc pass và user đã authorize:
 
 ```bash
 cd /path/to/repo
-npm run validate-content && npx prettier --write <file> \
-  && npm test && npm run lint && npm run typecheck
 git add <specific-files>
 git commit -m "content: add <unit> (FEATURE-XXX)"
 git push
@@ -253,10 +276,11 @@ User review PR trên GitHub, merge, GitHub Actions deploy tự động.
 
 ## 5. Template files để copy cho project mới
 
-Khi bắt đầu project mới với cùng AI workflow, copy 4 file sau và chỉnh
+Khi bắt đầu project mới với cùng AI workflow, copy 5 file sau và chỉnh
 phần "Project context" / validation commands:
 
 ```bash
+cp docs/architecture/AI_WORKFLOW_ARCHITECTURE.md /new-project/docs/architecture/AI_WORKFLOW_ARCHITECTURE.md
 cp CLAUDE.md /new-project/CLAUDE.md
 cp AGENTS.md /new-project/AGENTS.md
 cp AI_WORKFLOW.md /new-project/AI_WORKFLOW.md
@@ -265,11 +289,12 @@ cp docs/DOCUMENTATION_RULES.md /new-project/docs/DOCUMENTATION_RULES.md
 
 Điều chỉnh bắt buộc trong mỗi file:
 
-| File             | Điều chỉnh                                           |
-| ---------------- | ---------------------------------------------------- |
-| `CLAUDE.md`      | Project context, đường dẫn repo, validation commands |
-| `AGENTS.md`      | Validation commands (npm/cargo/python tùy stack)     |
-| `AI_WORKFLOW.md` | Validation commands, đường dẫn repo trong ví dụ      |
+| File                                            | Điều chỉnh                                                      |
+| ----------------------------------------------- | --------------------------------------------------------------- |
+| `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` | Giữ `Status: DRAFT` cho tới khi human duyệt lại cho project mới |
+| `CLAUDE.md`                                     | Project context, đường dẫn repo, validation commands            |
+| `AGENTS.md`                                     | Validation commands (npm/cargo/python tùy stack)                |
+| `AI_WORKFLOW.md`                                | Validation commands, đường dẫn repo trong ví dụ                 |
 
 ---
 

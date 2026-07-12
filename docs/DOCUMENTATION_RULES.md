@@ -32,6 +32,33 @@ Documentation work starts only after:
 - the implementation handoff exists under `docs/handoffs/`;
 - Claude Code confirmed the implementation matches the approved plan.
 
+## Documentation → Revalidate
+
+Documentation files are release-affecting per the architecture's
+remediation state machine: writing or editing them after the
+implementation snapshot was validated invalidates that snapshot's prior
+validation and review evidence, exactly like any other post-validation
+change.
+
+So documentation is never the last step before release readiness.
+After Gemini/Claude finish the documentation files, run the
+"Documentation only" gates from the architecture's quality-gates table
+on the changed doc files before the candidate can be marked
+`RELEASE_READY`:
+
+```bash
+git diff --check
+npm run format:check
+```
+
+plus a check that any changed links, paths and documented commands are
+still valid. This revalidation is scoped to the changed documentation
+files — it does not require rerunning the code-focused gates (lint,
+typecheck, tests, build), since documentation content does not affect
+their applicability or outcome. Record the revalidation result in the
+implementation handoff; if it fails, the fix returns to documentation
+and the revalidation repeats.
+
 ## Allowed files
 
 - `README.md`

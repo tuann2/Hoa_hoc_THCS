@@ -1,8 +1,18 @@
 # <FEATURE-ID> Implementation Handoff
 
+<!--
+The only post-implementation orchestration artifact (architecture
+Documentation Contract). Living document: fill review fields with
+PENDING before independent review; update them with outcomes.
+Regenerate after remediation; mark superseded evidence STALE.
+-->
+
 ## Status
 
-COMPLETED | PARTIAL | BLOCKED
+- Remediation state: PLANNED | IMPLEMENTING | VALIDATING | VALIDATED | REVIEWING | RELEASE_READY | REMEDIATION_REQUIRED | BLOCKED
+- Risk tier: NORMAL | ELEVATED | CRITICAL
+- Risk categories: <!-- per the architecture Risk Model -->
+- Escalation rationale: <!-- why this tier; "n/a" if lowest applicable -->
 
 ## 1. Summary
 
@@ -10,46 +20,66 @@ Mô tả ngắn kết quả triển khai.
 
 ## 2. Files changed
 
-| File        | Change |
-| ----------- | ------ |
-| `src/...`   | ...    |
-| `tests/...` | ...    |
+| File      | Change |
+| --------- | ------ |
+| `src/...` | ...    |
 
-## 3. Design decisions
+```text
+<git diff --stat output>
+```
 
-- Quyết định 1
-- Quyết định 2
+## 3. Evidence binding
 
-## 4. Deviations from the approved plan
+- Base commit SHA (`HEAD` when validation started): ...
+- Candidate commit SHA: ... | UNCOMMITTED
+- Validated implementation-tree SHA: ...
+- Implementation-tree exclusions: <!-- e.g. this handoff, generated validation logs -->
+- Dirty-worktree state and exact dirty paths: ...
+- Validation start (UTC, ISO 8601): ...
+- Validation completion (UTC, ISO 8601): ...
+- Runtime / package-manager versions: ...
+- Validation-tool versions or lockfile SHA: ...
+
+## 4. Validation commands and gates
+
+| Command                    | Exit status | Quality gate satisfied |
+| -------------------------- | ----------- | ---------------------- |
+| `git diff --check`         | 0           | Baseline               |
+| `npm run format:check`     | 0           | Baseline               |
+| `npm run validate-content` | 0           | Content/schema         |
+| ...                        | ...         | ...                    |
+
+<!-- Only gates applicable to the change type per the architecture
+quality-gates table. A required gate with no command = blocker. -->
+
+## 5. Design decisions
+
+- ...
+
+## 6. Deviations from the approved plan
 
 - None
 
-<!-- Hoặc mô tả từng khác biệt và lý do. -->
+## 7. Independent verification
 
-## 5. Commands executed
+- Verifier identity: PENDING <!-- e.g. fresh Codex review / fresh Gemini review / CI -->
+- Execution identifier: PENDING
+- Independence method: PENDING <!-- CI on candidate commit / fresh read-only execution -->
+- CI commit SHA and status (when required or available): PENDING
+- Review findings and disposition: PENDING
 
-```bash
-npm run lint
-npm test
-npm run build
-```
+## 8. Blockers
 
-## 6. Validation results
+- None
 
-| Check      | Result |
-| ---------- | ------ |
-| Lint       | PASS   |
-| Unit tests | PASS   |
-| Build      | PASS   |
-
-## 7. Known limitations
+## 9. Known limitations
 
 - ...
 
-## 8. Remaining risks
+## 10. Remaining risks
 
 - ...
 
-## 9. Follow-up work
+## 11. Follow-up work
 
 - ...
