@@ -120,7 +120,7 @@ xong cả unit.
 
 - [x] `a4-l1` — Độ tan; các yếu tố ảnh hưởng
 - [x] `a4-l2` — Nồng độ % và nồng độ mol; chuyển đổi
-- [ ] `a4-l3` — Pha chế – pha loãng dung dịch; quy tắc đường chéo
+- [x] `a4-l3` — Pha chế – pha loãng dung dịch; quy tắc đường chéo
 - [ ] `a4-l4` — Nâng cao: tinh thể ngậm nước; bài toán kết tinh
 - [ ] `a4-l5` — Nâng cao: bài toán dung dịch tổng hợp
 

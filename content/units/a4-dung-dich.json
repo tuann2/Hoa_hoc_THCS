@@ -428,17 +428,47 @@
         {
           "id": "a4-l3-c1",
           "heading": "Pha chế dung dịch theo nồng độ cho trước",
-          "body": "Từ chất tan rắn: tính khối lượng chất tan cần dùng (m = C% x mdd/100, hoặc n = CM x V), cân đủ lượng rồi hoà tan vào nước cho đủ thể tích hoặc khối lượng dung dịch yêu cầu."
+          "body": "Từ chất tan rắn: tính khối lượng chất tan cần dùng (m = C% x mdd/100, hoặc n = CM x V), cân đủ lượng rồi hoà tan vào nước cho đủ thể tích hoặc khối lượng dung dịch yêu cầu.\n\nNếu đề yêu cầu thể tích chính xác, không đong ngay toàn bộ lượng nước cần dùng: hoà tan chất rắn trong một phần nước, chuyển định lượng sang bình định mức, tráng cốc và gộp nước tráng, rồi thêm nước đến vạch. Đọc đáy mặt khum ở ngang tầm mắt; sau khi lắc đều, thể tích dung dịch mới đúng bằng thể tích định mức."
         },
         {
           "id": "a4-l3-c2",
           "heading": "Pha loãng dung dịch",
-          "body": "Khi thêm nước vào dung dịch, khối lượng (hoặc số mol) chất tan không đổi:\nC1.V1 = C2.V2 (đối với nồng độ mol); m1.C%1 = m2.C%2 (đối với nồng độ phần trăm)."
+          "body": "Khi thêm nước vào dung dịch, khối lượng (hoặc số mol) chất tan không đổi:\nC1.V1 = C2.V2 (đối với nồng độ mol); m1.C%1 = m2.C%2 (đối với nồng độ phần trăm).\n\nTrước khi dùng công thức, phải chọn đúng đại lượng bảo toàn: nồng độ mol đi với số mol và thể tích tính bằng L; nồng độ phần trăm đi với khối lượng chất tan và khối lượng dung dịch. Với axit đặc, luôn rót từ từ axit vào nước, khuấy đều và để nguội khi cần; không làm ngược lại vì nhiệt toả ra mạnh có thể làm dung dịch bắn ra ngoài."
         },
         {
           "id": "a4-l3-c3",
           "heading": "Quy tắc đường chéo",
-          "body": "Dùng để tính nhanh tỉ lệ pha trộn hai dung dịch có nồng độ khác nhau để được dung dịch nồng độ mong muốn C.\nVới dung dịch 1 nồng độ C1 và dung dịch 2 nồng độ C2 (C1 < C < C2): tỉ lệ khối lượng m1 : m2 = (C2 - C) : (C - C1)."
+          "body": "Dùng để tính nhanh tỉ lệ pha trộn hai dung dịch có nồng độ khác nhau để được dung dịch nồng độ mong muốn C.\nVới dung dịch 1 nồng độ C1 và dung dịch 2 nồng độ C2 (C1 < C < C2): tỉ lệ khối lượng m1 : m2 = (C2 - C) : (C - C1).\n\nHai hiệu chéo luôn đặt cạnh dung dịch ở phía đối diện: dung dịch loãng hơn nhận hiệu C2 - C, dung dịch đậm đặc hơn nhận hiệu C - C1. Sau khi có tỉ lệ, có thể nhân đồng thời hai số với cùng một hệ số để chọn lượng pha thực tế."
+        },
+        {
+          "id": "a4-l3-c4",
+          "heading": "Nâng cao: sơ đồ bảo toàn để chọn công thức",
+          "body": "Mọi bài pha chế nên bắt đầu bằng sơ đồ trước – sau và xét chất nào đi vào, đi ra. Thêm nước hoặc cô bớt nước: chất tan không bay hơi được bảo toàn. Thêm chất tan rắn: cả khối lượng chất tan lẫn khối lượng dung dịch tăng. Trộn các dung dịch cùng chất tan: khối lượng chất tan sau bằng tổng khối lượng chất tan ban đầu.\n\nVì vậy, với m0 gam dung dịch C0% pha loãng thành C% (C < C0), khối lượng dung dịch sau là m = m0.C0/C và lượng nước thêm là m - m0. Nếu cô bớt nước để đạt C% (C > C0), công thức m = m0.C0/C vẫn cho khối lượng dung dịch còn lại; lượng nước bay hơi là m0 - m. Chỉ dùng kết quả này khi chất tan không bay hơi, không bị phân huỷ và không kết tinh tách ra."
+        },
+        {
+          "id": "a4-l3-c5",
+          "heading": "Nâng cao: liên hệ nồng độ phần trăm, mol và khối lượng riêng",
+          "body": "Công thức chuyển đổi đã học: CM = 10.D.C%/M và C% = CM.M/(10.D), với D tính bằng g/ml. Trong bài pha chế, công thức này giúp đổi dung dịch thương phẩm cho theo C% và D sang CM để tính số mol hoặc thể tích dung dịch gốc cần lấy.\n\nKhi dùng kết quả để pha loãng theo CM, vẫn phải thống nhất đơn vị: M dùng g/mol, CM dùng mol/L, V dùng L. Không thay trực tiếp ml vào công thức số mol n = CM.V nếu V chưa đổi sang L."
+        },
+        {
+          "id": "a4-l3-c6",
+          "heading": "Nâng cao: điều kiện và bản chất của đường chéo",
+          "body": "Đường chéo là dạng rút gọn của bảo toàn chất tan, chỉ áp dụng trực tiếp khi trộn hai dung dịch của cùng một chất tan, không có phản ứng và nồng độ cần đạt nằm giữa hai nồng độ ban đầu. Nếu C trùng C1 hoặc C2 thì chỉ cần dùng dung dịch tương ứng; nếu C nằm ngoài khoảng đó thì không thể đạt chỉ bằng cách trộn hai dung dịch ấy.\n\nVới C%, đường chéo cho tỉ lệ khối lượng. Với CM của cùng chất tan, đường chéo cho tỉ lệ thể tích khi đề bài cho phép coi thể tích các dung dịch cộng được. Nước có thể xem là dung dịch 0% hoặc 0M, nên pha loãng bằng nước cũng là một trường hợp đặc biệt của đường chéo. Khi hai dung dịch chứa chất tan khác nhau có phản ứng, hãy viết phương trình và tính theo số mol thay vì dùng đường chéo máy móc."
+        },
+        {
+          "id": "a4-l3-c7",
+          "heading": "Nâng cao: trộn nhiều dung dịch và kiểm tra đáp số",
+          "body": "Khi trộn nhiều dung dịch cùng chất tan, nên cộng lượng chất tan trước. Theo nồng độ phần trăm: C% sau = (m1.C1% + m2.C2% + ...)/(m1 + m2 + ...) với các C% được dùng theo trị số phần trăm. Theo nồng độ mol: CM sau = (CM1.V1 + CM2.V2 + ...)/(V1 + V2 + ...) nếu thể tích cộng được và đều đã đổi về cùng đơn vị.\n\nKhông cần nhớ nhiều công thức nếu luôn làm theo hai bước: tính tổng chất tan, rồi chia cho tổng dung dịch. Khi không có phản ứng hay thất thoát, nồng độ sau khi trộn phải nằm giữa nồng độ nhỏ nhất và lớn nhất ban đầu; đáp số nằm ngoài khoảng này thường báo hiệu đảo tỉ lệ, quên cộng khối lượng/thể tích hoặc dùng sai đơn vị."
+        },
+        {
+          "id": "a4-l3-c8",
+          "heading": "Nâng cao: thêm chất tan và thay một phần dung dịch",
+          "body": "Thêm x gam chất tan nguyên chất vào m0 gam dung dịch C0% để được dung dịch C% thì: x = m0.(C - C0)/(100 - C), với C > C0 và các nồng độ viết theo %. Công thức xuất phát từ m chất tan sau = m0.C0/100 + x và m dung dịch sau = m0 + x.\n\nDạng khó hơn: lấy ra x gam dung dịch đồng nhất từ bình chứa M gam rồi bù đúng x gam nước. Sau một lần, nồng độ giảm theo hệ số (M - x)/M. Lặp k lần giống hệt nhau: Ck% = C0%.[(M - x)/M]^k. Điều kiện then chốt là phải khuấy đều trước mỗi lần lấy để phần lấy ra có đúng nồng độ của dung dịch trong bình."
+        },
+        {
+          "id": "a4-l3-c9",
+          "heading": "Nâng cao: xử lí đề pha chế thực nghiệm",
+          "body": "Đề pha chế từ dung dịch gốc thường yêu cầu xác định lượng dung dịch gốc cần lấy. Với CM, tính Vgốc = CM_đích.Vđích/CM_gốc. Khi pha bằng bình định mức, lấy đúng Vgốc dung dịch gốc rồi thêm nước đến vạch định mức; không đo riêng lượng nước bằng phép trừ thể tích. Với C%, nếu chỉ cho khối lượng thì phải dùng khối lượng; muốn đổi sang thể tích phải có khối lượng riêng.\n\nKhông nhầm “thêm a ml nước” với “pha thành a ml dung dịch”: trường hợp thứ nhất có thể tích cuối là Vban đầu + a (theo giả thiết cộng thể tích), còn trường hợp thứ hai thể tích cuối được ấn định là a. Chỉ dùng Vnước = Vđích - Vgốc như một ước lượng gần đúng khi không dùng bình định mức, chẳng hạn đong bằng ống đong và giả thiết thể tích cộng được. Nếu dung dịch gốc quá đậm đặc và việc pha loãng toả nhiệt, cần để dung dịch trở về nhiệt độ thường rồi mới chỉnh đến vạch định mức."
         }
       ],
       "questions": [
