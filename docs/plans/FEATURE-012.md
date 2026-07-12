@@ -196,10 +196,10 @@ commit).
 
 ### A5 · Oxit (`a5-oxit`)
 
-- [ ] `a5-l1` — Phân loại oxit và gọi tên
-- [ ] `a5-l2` — Tính chất hoá học của oxit bazơ; CaO – vôi
-- [ ] `a5-l3` — Tính chất hoá học của oxit axit; SO2
-- [ ] `a5-l4` — Nâng cao: oxit lưỡng tính; bài toán oxit + axit/kiềm
+- [x] `a5-l1` — Phân loại oxit và gọi tên
+- [x] `a5-l2` — Tính chất hoá học của oxit bazơ; CaO – vôi
+- [x] `a5-l3` — Tính chất hoá học của oxit axit; SO2
+- [x] `a5-l4` — Nâng cao: oxit lưỡng tính; bài toán oxit + axit/kiềm
 
 ### A6 · Axit (`a6-axit`)
 

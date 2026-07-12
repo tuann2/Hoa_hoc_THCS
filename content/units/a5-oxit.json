@@ -17,17 +17,52 @@
         {
           "id": "a5-l1-c1",
           "heading": "Oxit là gì? Bốn loại oxit",
-          "body": "Oxit là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Dựa vào tính chất hoá học, oxit chia thành 4 loại:\n- Oxit bazơ: thường là oxit kim loại, tương ứng với một bazơ. Ví dụ: Na2O, CaO, CuO.\n- Oxit axit: thường là oxit phi kim, tương ứng với một axit. Ví dụ: CO2, SO2, P2O5.\n- Oxit lưỡng tính: tác dụng được cả với axit và kiềm. Ví dụ: Al2O3, ZnO.\n- Oxit trung tính (không tạo muối): không tác dụng với axit, bazơ, nước. Ví dụ: CO, NO."
+          "body": "Oxit là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Dựa vào tính chất hoá học, oxit chia thành 4 loại:\n- Oxit bazơ: thường là oxit kim loại, tương ứng với một bazơ. Ví dụ: Na2O, CaO, CuO.\n- Oxit axit: thường là oxit phi kim, tương ứng với một axit. Ví dụ: CO2, SO2, P2O5.\n- Oxit lưỡng tính: tác dụng được cả với axit và kiềm. Ví dụ: Al2O3, ZnO.\n- Oxit trung tính (không tạo muối): không tác dụng với axit, bazơ, nước. Ví dụ: CO, NO.\n\nMẹo “oxit kim loại thường bazơ, oxit phi kim thường axit” chỉ là định hướng ban đầu, không phải tiêu chuẩn kết luận. Tiêu chuẩn chắc chắn là cách oxit phản ứng với axit và kiềm. Vì thế Al2O3, ZnO tuy là oxit kim loại vẫn là lưỡng tính; CO, NO tuy là oxit phi kim lại trung tính. Ở mức mở rộng, oxit của cùng một nguyên tố ở số oxi hoá cao hơn thường có tính axit tăng lên."
         },
         {
           "id": "a5-l1-c2",
           "heading": "Cách gọi tên oxit",
-          "body": "Oxit kim loại: tên kim loại (kèm hoá trị nếu kim loại nhiều hoá trị) + oxit.\nVí dụ: FeO là sắt(II) oxit; Fe2O3 là sắt(III) oxit; CuO là đồng(II) oxit.\nOxit phi kim: dùng tiền tố chỉ số nguyên tử (mono, đi, tri, tetra, penta).\nVí dụ: SO2 là lưu huỳnh đioxit; SO3 là lưu huỳnh trioxit; P2O5 là điphotpho pentaoxit."
+          "body": "Oxit kim loại: tên kim loại (kèm hoá trị nếu kim loại nhiều hoá trị) + oxit.\nVí dụ: FeO là sắt(II) oxit; Fe2O3 là sắt(III) oxit; CuO là đồng(II) oxit.\nOxit phi kim: dùng tiền tố chỉ số nguyên tử (mono, đi, tri, tetra, penta).\nVí dụ: SO2 là lưu huỳnh đioxit; SO3 là lưu huỳnh trioxit; P2O5 là điphotpho pentaoxit.\n\nKhi gọi tên oxit của kim loại nhiều hoá trị, phải tính hoá trị (hay số oxi hoá trong các oxit thông thường) trước rồi mới ghi số La Mã. Chẳng hạn trong Fe2O3, 3O có tổng hoá trị VI nên mỗi Fe có hoá trị III. Không gọi Fe2O3 là “sắt oxit” vì tên này không phân biệt được với FeO. Với kim loại chỉ có một hoá trị quen thuộc ở THCS như Na, Ca, Al, thường không cần ghi số La Mã: natri oxit, canxi oxit, nhôm oxit."
         },
         {
           "id": "a5-l1-c3",
           "heading": "Oxit tương ứng với bazơ và axit",
-          "body": "Mỗi oxit bazơ tương ứng một bazơ, mỗi oxit axit tương ứng một axit:\nNa2O ứng với NaOH; CaO ứng với Ca(OH)2; CO2 ứng với H2CO3; SO3 ứng với H2SO4; P2O5 ứng với H3PO4.\nMẹo giải nhanh: bài toán tìm nguyên tố trong oxit thường dựa vào phần trăm khối lượng của oxi — lập biểu thức %O theo nguyên tử khối rồi giải."
+          "body": "Mỗi oxit bazơ tương ứng một bazơ, mỗi oxit axit tương ứng một axit:\nNa2O ứng với NaOH; CaO ứng với Ca(OH)2; CO2 ứng với H2CO3; SO3 ứng với H2SO4; P2O5 ứng với H3PO4.\nMẹo giải nhanh: bài toán tìm nguyên tố trong oxit thường dựa vào phần trăm khối lượng của oxi — lập biểu thức %O theo nguyên tử khối rồi giải.\n\n“Tương ứng” không đồng nghĩa oxit nào cũng phản ứng ngay với nước. CaO + H2O -> Ca(OH)2 và SO3 + H2O -> H2SO4, nhưng CuO, Fe2O3 không tác dụng trực tiếp với nước; chúng vẫn tương ứng với Cu(OH)2, Fe(OH)3 theo kim loại và hoá trị. Tương tự, SiO2 được xem là oxit axit tương ứng với H2SiO3 dù không phản ứng đáng kể với nước ở điều kiện thường."
+        },
+        {
+          "id": "a5-l1-c4",
+          "heading": "Nâng cao: Chứng minh loại oxit bằng phản ứng đặc trưng",
+          "body": "Phân loại oxit là phân loại theo tính axit – bazơ, vì vậy nên chứng minh bằng phản ứng thay vì chỉ nhìn nguyên tố tạo oxit. Oxit bazơ phản ứng với axit tạo muối và nước, ví dụ: CuO + 2HCl -> CuCl2 + H2O. Oxit axit phản ứng với kiềm tạo muối và nước, ví dụ: SO2 + 2NaOH -> Na2SO3 + H2O.\n\nOxit lưỡng tính phải thể hiện được cả hai mặt: ZnO + 2HCl -> ZnCl2 + H2O và ZnO + 2NaOH -> Na2ZnO2 + H2O. Phản ứng thứ hai thường cần kiềm mạnh, có thể đun nóng; trong dung dịch, sản phẩm có thể được biểu diễn dưới dạng phức hiđroxo của kẽm. Ở mức bài tập THCS, dạng muối zincat Na2ZnO2 là cách viết quy ước quen thuộc.\n\nOxit trung tính như CO, NO không cho phản ứng tạo muối với axit hoặc kiềm trong điều kiện thường. Đừng suy ngược rằng oxit trung tính “không phản ứng gì”: CO vẫn có tính khử khi đun nóng với một số oxit kim loại."
+        },
+        {
+          "id": "a5-l1-c5",
+          "heading": "Nâng cao: Sơ đồ nhận dạng một oxit chưa biết",
+          "body": "Khi đề cho một oxit X chưa biết loại, có thể dùng hai thuốc thử đối chứng là dung dịch axit mạnh (như HCl) và dung dịch kiềm mạnh (như NaOH). X phản ứng với HCl nhưng không phản ứng với NaOH: hướng tới oxit bazơ. X phản ứng với NaOH nhưng không phản ứng với HCl: hướng tới oxit axit. X phản ứng với cả hai: oxit lưỡng tính. X không phản ứng với cả hai trong điều kiện nêu trong đề: có thể là oxit trung tính.\n\nKết luận phải gắn với điều kiện phản ứng. Không thấy hiện tượng ở nhiệt độ thường chưa đủ để gọi là oxit trung tính: SiO2 là oxit axit nhưng cần kiềm đặc hoặc đun nóng mới phản ứng rõ. Thử với nước và quỳ tím cũng chỉ là phép thử phụ: CaO làm môi trường bazơ, CO2 làm môi trường axit, còn CuO không tan trong nước nhưng vẫn là oxit bazơ vì phản ứng được với axit."
+        },
+        {
+          "id": "a5-l1-c6",
+          "heading": "Nâng cao: Hoá trị, số oxi hoá và công thức oxit",
+          "body": "Với oxit thông thường MxOy, coi O có số oxi hoá -II. Nếu M có hoá trị (số oxi hoá) là k trong oxit đó thì x.k = 2y, do tổng số oxi hoá trong hợp chất bằng 0. Ví dụ: FeO có k = II; Fe2O3 có k = III; Mn2O7 có k = VII. Công thức cũng cho phép kiểm tra nhanh tên gọi đã chọn có hợp lí hay chưa.\n\nKhi biết hoá trị n của kim loại M, oxit đơn giản thường có dạng: n = I: M2O; n = II: MO; n = III: M2O3; n = IV: MO2. Đây là hệ quả của quy tắc hoá trị chéo rồi rút gọn tỉ lệ. Tuy nhiên, không được áp dụng máy móc cho mọi oxit: có oxit chứa cùng một nguyên tố ở nhiều số oxi hoá khác nhau, nên phép chia chỉ cho giá trị trung bình."
+        },
+        {
+          "id": "a5-l1-c7",
+          "heading": "Nâng cao: Oxit hỗn hợp Fe3O4 và cách gọi đúng",
+          "body": "Fe3O4 là trường hợp quan trọng không thể gọi là sắt(8/3) oxit. Công thức này có thể xem là FeO.Fe2O3: trong một đơn vị công thức có 1Fe(II) và 2Fe(III). Tổng điện tích dương là 2 + 2x3 = 8, vừa đủ cân bằng 4O2- có tổng điện tích -8.\n\nVì vậy Fe3O4 được gọi là sắt(II,III) oxit hoặc oxit sắt từ. Bài học rút ra: khi số oxi hoá tính trung bình không nguyên, cần nghĩ tới oxit hỗn hợp thay vì ghi một hoá trị phân số. Khi cân bằng hay tính khối lượng, vẫn dùng công thức Fe3O4 với M = 3x56 + 4x16 = 232 g/mol."
+        },
+        {
+          "id": "a5-l1-c8",
+          "heading": "Nâng cao: Quy luật biến đổi tính axit – bazơ của oxit",
+          "body": "Trong cùng một chu kì, từ trái sang phải, oxit thường chuyển dần từ bazơ sang lưỡng tính rồi axit. Ví dụ dãy oxit ở chu kì 3 có thể hình dung: Na2O, MgO thiên bazơ; Al2O3 lưỡng tính; SiO2, P2O5, SO3 thiên axit. Quy luật này giải thích vì sao không nên chia cứng tất cả oxit thành “kim loại = bazơ” và “phi kim = axit”.\n\nVới cùng một nguyên tố, số oxi hoá càng cao thì oxit thường càng thiên axit. Dãy MnO, Mn2O3, MnO2, Mn2O7 minh hoạ chiều tăng đó. Đây là quy luật dự đoán cho bài HSG, không thay thế việc kiểm tra dữ kiện phản ứng; đề bài vẫn có thể xét điều kiện đặc biệt hoặc một oxit hỗn hợp."
+        },
+        {
+          "id": "a5-l1-c9",
+          "heading": "Nâng cao: Anhiđrit axit, anhiđrit bazơ và phản ứng giữa các oxit",
+          "body": "Anhiđrit nghĩa là chất “mất nước” so với axit hoặc bazơ tương ứng. SO3 là anhiđrit của H2SO4 vì SO3 + H2O -> H2SO4; P2O5 là anhiđrit của H3PO4 vì P2O5 + 3H2O -> 2H3PO4. CaO là anhiđrit bazơ của Ca(OH)2 vì CaO + H2O -> Ca(OH)2. Khái niệm này giúp dự đoán sản phẩm nhưng luôn phải xét oxit có phản ứng với nước hay không.\n\nOxit axit và oxit bazơ còn có thể phản ứng trực tiếp với nhau tạo muối: CaO + CO2 -> CaCO3; Na2O + SO3 -> Na2SO4. Khi lập phương trình, hãy ghép cation của oxit bazơ với gốc axit tương ứng của oxit axit rồi kiểm tra lại số nguyên tử O. Oxit lưỡng tính không nên tự động xếp vào một trong hai vế của quy tắc này nếu đề chưa cho điều kiện."
+        },
+        {
+          "id": "a5-l1-c10",
+          "heading": "Nâng cao: Biện luận nguyên tố từ phần trăm khối lượng oxi",
+          "body": "Nếu công thức oxit MxOy đã biết và phần trăm khối lượng O là p%, đặt Ar(M) = A. Khi đó: p = 16y/(xA + 16y) x 100. Suy ra A = 16y(100 - p)/(px), trong đó p được dùng dưới dạng số phần trăm. Ví dụ với M2O3 chứa 30% O: A = 16x3x(100 - 30)/(30x2) = 56, nên M là Fe.\n\nNếu công thức oxit chưa biết, không được chọn bừa M2O3 để thế vào công thức. Hãy khai thác thêm hoá trị, khối lượng oxit, khối lượng kim loại sau khi khử hoặc tỉ lệ mol M:O; sau đó thử các dạng oxit hợp lí và kiểm tra ngược bằng phần trăm khối lượng. Bước kiểm tra cuối giúp loại các nghiệm số học không phù hợp hoá học."
         }
       ],
       "questions": [
@@ -195,17 +230,52 @@
         {
           "id": "a5-l2-c1",
           "heading": "Ba tính chất hoá học của oxit bazơ",
-          "body": "1) Tác dụng với nước tạo dung dịch kiềm (chỉ với Na2O, K2O, CaO, BaO):\nNa2O + H2O -> 2NaOH\n2) Tác dụng với axit tạo muối và nước:\nCuO + 2HCl -> CuCl2 + H2O\n3) Tác dụng với oxit axit tạo muối:\nCaO + CO2 -> CaCO3\nLưu ý: các oxit bazơ không tan (CuO, FeO, Fe2O3...) không tác dụng với nước."
+          "body": "1) Tác dụng với nước tạo dung dịch kiềm (chỉ với Na2O, K2O, CaO, BaO):\nNa2O + H2O -> 2NaOH\n2) Tác dụng với axit tạo muối và nước:\nCuO + 2HCl -> CuCl2 + H2O\n3) Tác dụng với oxit axit tạo muối:\nCaO + CO2 -> CaCO3\nLưu ý: các oxit bazơ không tan (CuO, FeO, Fe2O3...) không tác dụng với nước.\n\nỞ bản chất, ion O2- trong oxit bazơ nhận H+ của axit để tạo H2O; cation kim loại ghép với anion axit thành muối. Vì vậy khi viết phản ứng oxit bazơ + axit, cần xác định đúng hoá trị kim loại: Fe2O3 + 6HCl -> 2FeCl3 + 3H2O, còn FeO + 2HCl -> FeCl2 + H2O.\n\nPhản ứng với oxit axit thường thể hiện rõ khi đun nóng hoặc trong quá trình công nghiệp. Chẳng hạn CaO + SiO2 -> CaSiO3; CaO đóng vai trò chất trợ dung, biến SiO2 là tạp chất có tính axit thành xỉ silicat dễ tách. Không được suy ra rằng mọi oxit bazơ đều phản ứng với mọi oxit axit ngay ở nhiệt độ thường; phải nêu điều kiện nếu đề bài yêu cầu."
         },
         {
           "id": "a5-l2-c2",
           "heading": "CaO – vôi sống",
-          "body": "CaO (vôi sống) là chất rắn màu trắng, tác dụng mạnh với nước và toả nhiều nhiệt (tôi vôi):\nCaO + H2O -> Ca(OH)2\nỨng dụng: khử chua đất trồng, xử lí nước thải, sát trùng, làm vật liệu xây dựng.\nĐể lâu trong không khí, CaO hấp thụ CO2 hoá rắn thành CaCO3 nên phải bảo quản kín."
+          "body": "CaO (vôi sống) là chất rắn màu trắng, tác dụng mạnh với nước và toả nhiều nhiệt (tôi vôi):\nCaO + H2O -> Ca(OH)2\nỨng dụng: khử chua đất trồng, xử lí nước thải, sát trùng, làm vật liệu xây dựng.\nĐể lâu trong không khí, CaO hấp thụ CO2 hoá rắn thành CaCO3 nên phải bảo quản kín.\n\nPhản ứng tôi vôi rất toả nhiệt. Nếu cho nước vào lượng CaO lớn hoặc đổ CaO vào ít nước, hỗn hợp có thể nóng mạnh, bắn văng và gây bỏng; trong thực hành phải thêm từ từ, tránh tiếp xúc trực tiếp với da và mắt. Ca(OH)2 tạo ra tan ít: hỗn hợp đục còn chất rắn lơ lửng gọi là vôi sữa, còn phần dung dịch trong sau khi để lắng/lọc là nước vôi trong.\n\nCaO hút cả hơi nước lẫn các khí có tính axit như CO2, SO2, HCl nên chỉ dùng làm chất làm khô cho khí không phản ứng với nó, ví dụ NH3, O2 hoặc H2 khô. Không dùng CaO để làm khô CO2 hay SO2, vì khi đó khí cần thu đã bị CaO giữ lại bằng phản ứng hoá học."
         },
         {
           "id": "a5-l2-c3",
           "heading": "Sản xuất vôi sống",
-          "body": "Nung đá vôi ở khoảng 900 độ C trong lò nung vôi:\nCaCO3 -> CaO + CO2\nMẹo giải bài toán nung đá vôi: số mol CaO = số mol CO2 = số mol CaCO3 bị phân huỷ; nếu nung không hoàn toàn thì chất rắn sau nung gồm cả CaO và CaCO3 dư."
+          "body": "Nung đá vôi ở khoảng 900 độ C trong lò nung vôi:\nCaCO3 -> CaO + CO2\nMẹo giải bài toán nung đá vôi: số mol CaO = số mol CO2 = số mol CaCO3 bị phân huỷ; nếu nung không hoàn toàn thì chất rắn sau nung gồm cả CaO và CaCO3 dư.\n\nĐây là phản ứng phân huỷ thu nhiệt. Muốn đá vôi phân huỷ tốt phải duy trì nhiệt độ đủ cao và tạo điều kiện cho CO2 thoát khỏi vùng phản ứng; CO2 tích lại làm cân bằng CaCO3 <-> CaO + CO2 kém dịch theo chiều tạo CaO. Đá vôi lẫn đất, cát hoặc tạp chất không bay hơi sẽ còn lại trong chất rắn sau nung, nên không được mặc định toàn bộ chất rắn là CaO nếu đề cho độ tinh khiết.\n\nTỉ lệ khối lượng của phần CaCO3 thực sự bị phân huỷ là: 100 g CaCO3 tạo 56 g CaO và 44 g CO2. Do đó, khi chỉ có CO2 thoát ra, độ giảm khối lượng của chất rắn đúng bằng khối lượng CO2; nhận xét này rất hữu ích để kiểm tra kết quả bài toán nung."
+        },
+        {
+          "id": "a5-l2-c4",
+          "heading": "Nâng cao: Chu trình vôi và hiện tượng CO2 dư",
+          "body": "Ba chất CaCO3, CaO và Ca(OH)2 chuyển hoá theo một chu trình quen thuộc: CaCO3 --nung--> CaO --H2O--> Ca(OH)2. Khi sục CO2 vào nước vôi trong, ban đầu xuất hiện kết tủa trắng: Ca(OH)2 + CO2 -> CaCO3 + H2O. Đây là phản ứng nhận biết CO2.\n\nNếu tiếp tục cho CO2 dư, kết tủa CaCO3 tan dần vì tạo muối hiđrocacbonat tan: CaCO3 + CO2 + H2O -> Ca(HCO3)2. Khi đun nóng dung dịch Ca(HCO3)2, phản ứng đảo chiều và CaCO3 lại kết tủa: Ca(HCO3)2 -> CaCO3 + CO2 + H2O. Vì vậy hiện tượng “đục rồi trong” chỉ xảy ra khi CO2 thực sự dư; không được dùng phương trình tạo Ca(HCO3)2 ngay từ đầu khi CO2 còn thiếu.\n\nNước cứng tạm thời có thể chứa Ca(HCO3)2. Khi đun sôi, CaCO3 kết tủa tạo cặn ấm đun nước, là một ứng dụng trực tiếp của chu trình trên."
+        },
+        {
+          "id": "a5-l2-c5",
+          "heading": "Nâng cao: Phản ứng của CaO với oxit axit và khí thải",
+          "body": "CaO là oxit bazơ mạnh nên có thể cố định nhiều oxit axit thành muối rắn. Ví dụ: CaO + SO2 -> CaSO3; 2CaSO3 + O2 -> 2CaSO4. Trong xử lí khí thải chứa SO2, các bước này giải thích vì sao vôi hoặc đá vôi được dùng để giảm khí gây mưa axit; sản phẩm cuối có thể là CaSO4.\n\nCần phân biệt CO2 với CO. CO2 là oxit axit nên phản ứng với CaO tạo CaCO3, còn CO là oxit trung tính và không được coi là phản ứng với CaO trong điều kiện học ở THCS. Tương tự, SiO2 là oxit axit nhưng bền, phản ứng với CaO chủ yếu ở nhiệt độ cao trong lò luyện kim: CaO + SiO2 -> CaSiO3.\n\nKhi đề cho một chất là “xỉ”, hãy kiểm tra xem đó có phải muối silicat tạo bởi oxit bazơ với SiO2 hay không. Xỉ nhẹ hơn kim loại nóng chảy nên nổi lên trên, giúp tách tạp chất ra khỏi kim loại."
+        },
+        {
+          "id": "a5-l2-c6",
+          "heading": "Nâng cao: Bảo toàn khối lượng khi nung đá vôi",
+          "body": "Với CaCO3 tinh khiết bị nung hoàn toàn, có thể dùng ngay các hệ số tỉ lượng: nCaCO3 phản ứng = nCaO = nCO2. Theo khối lượng, mCaO = 56/100 x mCaCO3 phản ứng và mCO2 = 44/100 x mCaCO3 phản ứng. Khối lượng CaO thu được luôn nhỏ hơn khối lượng CaCO3 đã phân huỷ vì một phần khối lượng đã thoát đi dưới dạng CO2.\n\nNếu biết khối lượng chất rắn giảm từ m1 xuống m2 và chỉ có CO2 thoát ra, đặt mCO2 = m1 - m2. Khi đó nCaCO3 đã phân huỷ = (m1 - m2)/44, không cần biết trực tiếp khối lượng CaO. Cách bảo toàn này vẫn dùng được khi nung chưa hoàn toàn, miễn là các tạp chất không bay hơi và CaO tạo thành chưa kịp hút ẩm hay hấp thụ CO2 trở lại.\n\nVới mẫu đá vôi có độ tinh khiết p%, phải đổi trước thành mCaCO3 tinh khiết = m mẫu x p/100; phần còn lại không tự nhiên tạo CaO. Nếu hiệu suất tạo CaO là H%, hãy tính lượng CaO lí thuyết từ CaCO3 tinh khiết rồi nhân H/100 ở bước cuối."
+        },
+        {
+          "id": "a5-l2-c7",
+          "heading": "Nâng cao: Biện luận hỗn hợp CaO và CaCO3 bằng axit",
+          "body": "Cho hỗn hợp CaO và CaCO3 tác dụng với axit mạnh dư, cả hai chất đều tiêu thụ axit nhưng chỉ CaCO3 sinh CO2:\nCaO + 2HCl -> CaCl2 + H2O\nCaCO3 + 2HCl -> CaCl2 + CO2 + H2O.\nVì vậy, nếu đặt số mol CaO và CaCO3 lần lượt là x, y thì nCO2 = y. Biết khối lượng hỗn hợp m, lập 56x + 100y = m để tìm x; đây là cách nhanh nhất khi đề cho lượng CO2.\n\nNếu đề còn cho lượng HCl vừa đủ, có thêm hệ thức nHCl = 2x + 2y. Hai phương trình này cho tổng số mol hỗn hợp và phần cacbonat, không cần phỏng đoán chất nào phản ứng trước. Nếu axit không dư, phải xét dữ kiện về lượng axit cẩn thận: không được tự động lấy nCO2 bằng nCaCO3 ban đầu khi CaCO3 có thể chưa phản ứng hết.\n\nDấu hiệu có khí không chứng minh CaO không phản ứng: CaO vẫn tan trong axit nhưng không tạo khí. Khí CO2 chính là dữ kiện định lượng riêng cho thành phần CaCO3."
+        },
+        {
+          "id": "a5-l2-c8",
+          "heading": "Nâng cao: Phân biệt vôi sống, vôi tôi và đá vôi",
+          "body": "Vôi sống là CaO, vôi tôi là Ca(OH)2, còn đá vôi chủ yếu là CaCO3. Ba tên thông thường này dễ gây nhầm công thức và tính chất. CaO gặp nước phản ứng toả nhiệt mạnh; Ca(OH)2 chỉ tan ít nhưng phần tan làm quỳ tím hoá xanh; CaCO3 hầu như không tan trong nước và phản ứng với axit tạo CO2.\n\nMột sơ đồ nhận biết đơn giản cần dựa trên hiện tượng đặc trưng: cho từng mẫu vào nước, mẫu nóng lên rõ là CaO; với các mẫu còn lại, thêm axit loãng, mẫu sủi bọt CO2 là CaCO3, còn mẫu không sủi bọt là Ca(OH)2. Trong bài thực hành, phải lấy lượng nhỏ và dùng thuốc thử mới cho từng mẫu để tránh lẫn chéo.\n\nKhi tính toán, đừng thay thế tuỳ tiện một chất bằng chất kia: 1 mol CaO có khối lượng 56 g, 1 mol Ca(OH)2 là 74 g, còn 1 mol CaCO3 là 100 g. Sự chênh lệch này lần lượt do thêm H2O hoặc CO2 vào hệ vôi."
+        },
+        {
+          "id": "a5-l2-c9",
+          "heading": "Nâng cao: Khử chua và xử lí môi trường bằng CaO",
+          "body": "Trong đất hoặc nước thải có tính axit, CaO trước hết tạo Ca(OH)2 rồi OH- trung hoà H+: CaO + H2O -> Ca(OH)2; Ca(OH)2 + 2HCl -> CaCl2 + 2H2O. Viết gộp với một axit hai nấc như H2SO4: CaO + H2SO4 -> CaSO4 + H2O. Vì vậy CaO làm tăng pH và giảm độ chua.\n\nMôi trường kiềm tạo ra còn có thể kết tủa một số ion kim loại dưới dạng hiđroxit, ví dụ Cu2+ + 2OH- -> Cu(OH)2. Đây là cơ sở hoá học của việc dùng vôi trong một số quy trình xử lí nước thải, nhưng lượng vôi phải được kiểm soát để tránh làm nước trở nên quá kiềm.\n\nTrong nông nghiệp, không bón vôi chỉ theo cảm tính: đất đã kiềm hoặc bón quá nhiều vôi có thể làm pH tăng quá cao, ảnh hưởng khả năng hấp thụ dinh dưỡng của cây. Khi giải thích ứng dụng, cần nêu đúng hai bước “CaO tạo Ca(OH)2, rồi bazơ trung hoà axit”, thay vì viết CaO là axit hoặc gọi CaO là muối."
+        },
+        {
+          "id": "a5-l2-c10",
+          "heading": "Nâng cao: Điều kiện phản ứng và các bẫy thường gặp",
+          "body": "Không phải cứ nhìn thấy CaO là luôn dùng cả ba tính chất của oxit bazơ. CaO phản ứng với nước, axit và oxit axit; nhưng CuO, Fe2O3 là oxit bazơ chỉ thể hiện chắc chắn phản ứng với axit ở mức THCS, không phản ứng với nước. Với CaO trong nước dư, sản phẩm hoá học là Ca(OH)2 nhưng không phải toàn bộ Ca(OH)2 đều tan để tạo dung dịch trong suốt.\n\nTrong bài nung, “nung đến khối lượng không đổi” là dấu hiệu CaCO3 đã phân huỷ hết nếu mẫu chỉ gồm CaCO3 và tạp chất trơ; còn cụm “nung không hoàn toàn” buộc phải giữ CaCO3 dư trong chất rắn. Sau khi nung, CaO để ngoài không khí có thể tăng khối lượng trở lại do hút H2O rồi CO2, vì vậy số đo khối lượng phải gắn với thời điểm và điều kiện đề bài cho.\n\nKhi cân bằng phản ứng oxit bazơ + axit, không tạo H2. H2 chỉ thường xuất hiện khi kim loại đứng trước H phản ứng với axit loãng. Ví dụ đúng là CaO + 2HCl -> CaCl2 + H2O, không phải CaO + HCl -> CaCl2 + H2."
         }
       ],
       "questions": [
@@ -359,17 +429,52 @@
         {
           "id": "a5-l3-c1",
           "heading": "Ba tính chất hoá học của oxit axit",
-          "body": "1) Tác dụng với nước tạo axit:\nSO2 + H2O -> H2SO3; SO3 + H2O -> H2SO4; P2O5 + 3H2O -> 2H3PO4\n2) Tác dụng với dung dịch kiềm tạo muối và nước:\nCO2 + 2NaOH -> Na2CO3 + H2O\n3) Tác dụng với oxit bazơ tạo muối:\nCO2 + CaO -> CaCO3"
+          "body": "1) Tác dụng với nước tạo axit:\nSO2 + H2O -> H2SO3; SO3 + H2O -> H2SO4; P2O5 + 3H2O -> 2H3PO4\n2) Tác dụng với dung dịch kiềm tạo muối và nước:\nCO2 + 2NaOH -> Na2CO3 + H2O\n3) Tác dụng với oxit bazơ tạo muối:\nCO2 + CaO -> CaCO3\n\nKhông được hiểu máy móc rằng mọi oxit axit đều phản ứng ngay với nước. SiO2 là oxit axit nhưng hầu như không tác dụng với nước ở điều kiện thường; nó thể hiện tính axit rõ khi phản ứng với kiềm đặc hoặc nóng: SiO2 + 2NaOH -> Na2SiO3 + H2O. Vì vậy, khi chứng minh một oxit là oxit axit, phản ứng với kiềm thường là căn cứ đáng tin cậy hơn phản ứng với nước."
         },
         {
           "id": "a5-l3-c2",
           "heading": "Lưu huỳnh đioxit SO2",
-          "body": "SO2 là khí không màu, mùi hắc, độc, nặng hơn không khí; là một trong các khí chính gây mưa axit.\nSO2 mang đầy đủ tính chất của oxit axit:\nSO2 + H2O -> H2SO3\nSO2 + 2NaOH -> Na2SO3 + H2O\nSO2 + CaO -> CaSO3"
+          "body": "SO2 là khí không màu, mùi hắc, độc, nặng hơn không khí; là một trong các khí chính gây mưa axit.\nSO2 mang đầy đủ tính chất của oxit axit:\nSO2 + H2O -> H2SO3\nSO2 + 2NaOH -> Na2SO3 + H2O\nSO2 + CaO -> CaSO3\n\nH2SO3 là axit yếu, chỉ bền trong dung dịch nên thường được xem là dạng SO2 hoà tan trong nước. Axit này có thể tạo hai loại muối: muối axit chứa HSO3- (ví dụ NaHSO3) và muối trung hoà chứa SO3^2- (ví dụ Na2SO3). Sự khác nhau giữa hai loại muối chính là cơ sở để biện luận khi lượng kiềm chưa đủ hoặc dư."
         },
         {
           "id": "a5-l3-c3",
           "heading": "Điều chế SO2 và mẹo bài toán khí + kiềm",
-          "body": "Trong công nghiệp: đốt lưu huỳnh hoặc quặng pirit:\nS + O2 -> SO2\nTrong phòng thí nghiệm: cho muối sunfit tác dụng với axit mạnh:\nNa2SO3 + H2SO4 -> Na2SO4 + SO2 + H2O\nMẹo: bài toán CO2/SO2 + kiềm xét tỉ lệ T = nOH- / nkhí. T >= 2: chỉ muối trung hoà; T <= 1: chỉ muối axit; 1 < T < 2: hai muối, khi đó n(muối trung hoà) = nOH- - nkhí."
+          "body": "Trong công nghiệp: đốt lưu huỳnh hoặc quặng pirit:\nS + O2 -> SO2\nTrong phòng thí nghiệm: cho muối sunfit tác dụng với axit mạnh:\nNa2SO3 + H2SO4 -> Na2SO4 + SO2 + H2O\nMẹo: bài toán CO2/SO2 + kiềm xét tỉ lệ T = nOH- / nkhí. T >= 2: chỉ muối trung hoà; T <= 1: chỉ muối axit; 1 < T < 2: hai muối, khi đó n(muối trung hoà) = nOH- - nkhí.\n\nKhông thu SO2 bằng cách đẩy nước vì khí này tan và phản ứng với nước. Khi cần thu trong thí nghiệm, có thể dùng cách đẩy không khí vì SO2 nặng hơn không khí. Do SO2 độc, thí nghiệm phải làm với lượng nhỏ, nơi thông khí tốt và dẫn khí dư vào dung dịch kiềm hoặc nước vôi để hấp thụ."
+        },
+        {
+          "id": "a5-l3-c4",
+          "heading": "Nâng cao: SO2 vừa có tính khử vừa có tính oxi hoá",
+          "body": "Trong SO2, S có số oxi hoá +IV, là mức trung gian. Vì vậy S có thể bị oxi hoá lên +VI hoặc bị khử xuống thấp hơn. Khi gặp chất oxi hoá như nước brom, SO2 là chất khử: SO2 + Br2 + 2H2O -> H2SO4 + 2HBr. SO2 cũng làm mất màu dung dịch KMnO4; ở môi trường axit có thể biểu diễn bằng: 5SO2 + 2MnO4- + 2H2O -> 5SO4^2- + 4H+ + 2Mn2+.\n\nNgược lại, gặp H2S là chất khử mạnh, SO2 nhận electron và trở thành chất oxi hoá: SO2 + 2H2S -> 3S + 2H2O. Khi giải bài oxi hoá – khử, hãy so sánh số oxi hoá của S trước và sau phản ứng: +IV -> +VI nghĩa là SO2 đã khử chất khác; +IV -> 0 nghĩa là SO2 đã oxi hoá chất khác."
+        },
+        {
+          "id": "a5-l3-c5",
+          "heading": "Nâng cao: Tẩy màu bằng SO2 và giới hạn của tính chất này",
+          "body": "SO2 tan trong nước tạo môi trường có tính khử, nên có thể làm mất màu một số chất màu hữu cơ. Tính tẩy màu chỉ rõ khi có nước; SO2 khô hầu như không thể hiện tác dụng này. Đây là tẩy màu do khử, khác với sự phá huỷ bền vững chất màu bởi chất oxi hoá mạnh như nước Gia-ven.\n\nMàu của vật đã tẩy bằng SO2 có thể xuất hiện lại khi để ngoài không khí vì oxi có thể oxi hoá dần sản phẩm không màu. Do đó không được kết luận mọi hiện tượng mất màu đều giống nhau: với nước brom hoặc KMnO4, SO2 phản ứng hoá học với chất oxi hoá; với phẩm màu hữu cơ, kết quả còn phụ thuộc bản chất chất màu và điều kiện có nước."
+        },
+        {
+          "id": "a5-l3-c6",
+          "heading": "Nâng cao: Nhận biết và phân biệt SO2 với CO2",
+          "body": "Cả SO2 và CO2 đều là oxit axit, đều có thể làm đục nước vôi trong khi lượng khí chưa dư. Vì vậy chỉ dùng Ca(OH)2 không đủ để phân biệt hai khí. Hãy dẫn từng khí qua nước brom hoặc dung dịch KMnO4 loãng: SO2 làm mất màu do có tính khử, còn CO2 không làm mất màu trong điều kiện thường.\n\nVới muối sunfit, thêm axit loãng sẽ giải phóng SO2, rồi dùng nước brom hoặc KMnO4 để nhận ra khí tạo thành. Muối sunfat không cho hiện tượng này khi thêm axit loãng. Trong sơ đồ nhận biết, cần đặt thuốc thử oxi hoá ở sau bình tạo khí để quan sát đúng tính khử của SO2, không đổ trực tiếp nhiều thuốc thử vào hỗn hợp chưa tách."
+        },
+        {
+          "id": "a5-l3-c7",
+          "heading": "Nâng cao: SO2 dư qua nước vôi trong",
+          "body": "Sục SO2 từ từ vào Ca(OH)2, ban đầu xuất hiện kết tủa trắng CaSO3:\nSO2 + Ca(OH)2 -> CaSO3 + H2O. Nếu tiếp tục sục SO2 dư, kết tủa tan do tạo muối axit tan:\nCaSO3 + SO2 + H2O -> Ca(HSO3)2. Phương trình gộp là: 2SO2 + Ca(OH)2 -> Ca(HSO3)2.\n\nHiện tượng “đục rồi trong” vì thế không chỉ có ở CO2 mà cũng gặp với SO2. Muốn kết luận khí là CO2 hay SO2 phải dùng thêm dấu hiệu riêng, chẳng hạn khả năng làm mất màu nước brom/KMnO4 của SO2. Khi đề chỉ nói lượng khí ít hoặc vừa đủ, không được tự ý viết sản phẩm muối axit."
+        },
+        {
+          "id": "a5-l3-c8",
+          "heading": "Nâng cao: Biện luận SO2 hấp thụ vào kiềm một hoá trị",
+          "body": "Với dung dịch MOH (M là Na hoặc K), SO2 có hai phản ứng giới hạn:\nSO2 + MOH -> MHSO3\nSO2 + 2MOH -> M2SO3 + H2O. Đặt nSO2 = a, nOH- = b. Nếu a < b < 2a, tạo đồng thời hai muối; số mol M2SO3 = b - a, còn số mol MHSO3 = 2a - b. Các biểu thức này suy ra từ bảo toàn S: x + y = a và bảo toàn OH-: 2x + y = b.\n\nNếu b <= a, kiềm là chất giới hạn: chỉ tạo MHSO3 với số mol bằng b, SO2 còn dư. Nếu b >= 2a, toàn bộ SO2 thành M2SO3; khi b > 2a, kiềm còn dư. Luôn kiểm tra miền điều kiện trước khi thay số, vì công thức ở trường hợp hỗn hợp không dùng được cho hai biên hoặc khi một chất còn dư."
+        },
+        {
+          "id": "a5-l3-c9",
+          "heading": "Nâng cao: Từ SO2 đến H2SO4 trong công nghiệp",
+          "body": "SO2 là nguyên liệu trung gian quan trọng để sản xuất H2SO4. Sau khi tạo SO2, oxi hoá thuận nghịch khí này: 2SO2 + O2 <=> 2SO3. Quá trình công nghiệp dùng xúc tác V2O5 và nhiệt độ thích hợp để tốc độ đủ lớn mà cân bằng vẫn cho hiệu suất tốt. SO3 sau đó được hấp thụ vào H2SO4 đặc tạo oleum, rồi pha loãng có kiểm soát để thu H2SO4.\n\nKhông hấp thụ trực tiếp toàn bộ SO3 vào nước trong công nghiệp vì dễ tạo sương mù H2SO4 khó thu hồi. Trong bài THCS, phương trình SO3 + H2O -> H2SO4 vẫn đúng để biểu diễn tính chất hoá học của SO3; điểm cần phân biệt là cách vận hành thực tế của quy trình sản xuất."
+        },
+        {
+          "id": "a5-l3-c10",
+          "heading": "Nâng cao: SO2, mưa axit và xử lí khí thải",
+          "body": "Trong khí quyển, SO2 có thể bị oxi hoá tiếp thành SO3 rồi tạo H2SO4 trong các giọt nước mây. Axit làm giảm pH nước mưa và có thể ăn mòn đá vôi, đá hoa chứa CaCO3: CaCO3 + H2SO4 -> CaSO4 + CO2 + H2O. Vì vậy tác hại của SO2 không chỉ là mùi hắc mà còn liên quan đến công trình và hệ sinh thái.\n\nMột hướng xử lí là hấp thụ SO2 bằng CaO hoặc Ca(OH)2 tạo CaSO3, rồi oxi hoá thành CaSO4 bền hơn:\nCaO + SO2 -> CaSO3\n2CaSO3 + O2 -> 2CaSO4. Khi viết bài về xử lí khí thải, phải phân biệt bước hấp thụ oxit axit với bước oxi hoá tiếp muối sunfit; không gộp chúng thành một phương trình nếu đề yêu cầu nêu từng quá trình."
         }
       ],
       "questions": [
@@ -544,6 +649,41 @@
           "id": "a5-l4-c3",
           "heading": "Bài toán hỗn hợp oxit",
           "body": "Các bước giải bài toán hỗn hợp hai oxit:\nB1. Gọi số mol từng oxit là x, y.\nB2. Lập hệ hai phương trình: một theo khối lượng hỗn hợp, một theo số mol axit (hoặc số mol muối, khí).\nB3. Giải hệ tìm x, y rồi tính đại lượng đề hỏi.\nVới hỗn hợp chứa oxit lưỡng tính tác dụng với kiềm, chỉ oxit lưỡng tính phản ứng."
+        },
+        {
+          "id": "a5-l4-c4",
+          "heading": "Nâng cao: Hai cách biểu diễn muối aluminat và zincat",
+          "body": "Ở dạng bài THCS, thường viết gọn phản ứng của oxit lưỡng tính với NaOH dư:\nAl2O3 + 2NaOH -> 2NaAlO2 + H2O\nZnO + 2NaOH -> Na2ZnO2 + H2O.\nCác phương trình này cho ngay tỉ lệ quan trọng: 1 mol Al2O3 hoặc 1 mol ZnO tiêu thụ 2 mol NaOH. Kiềm phải đủ mạnh; với Al2O3 rắn, thường cần đun nóng để phản ứng thể hiện rõ.\n\nTrong dung dịch nước dư NaOH, aluminat và zincat có thể được mô tả chính xác hơn dưới dạng ion phức hiđroxo: Al2O3 + 2NaOH + 3H2O -> 2Na[Al(OH)4]; ZnO + 2NaOH + H2O -> Na2[Zn(OH)4]. Hai lối viết biểu diễn cùng bản chất hoà tan trong kiềm, nhưng không được ghép nửa phương trình theo cách này với nửa phương trình theo cách kia. Khi giải bài tính theo chương trình THCS, dùng nhất quán dạng NaAlO2, Na2ZnO2 như đề bài quy ước."
+        },
+        {
+          "id": "a5-l4-c5",
+          "heading": "Nâng cao: Tách oxit lưỡng tính bằng dung dịch kiềm",
+          "body": "Dung dịch NaOH dư có thể dùng làm thuốc thử chọn lọc trong hỗn hợp gồm oxit lưỡng tính và oxit bazơ không lưỡng tính. Chẳng hạn, khi cho hỗn hợp Al2O3 và CuO vào NaOH dư, Al2O3 tan tạo aluminat còn CuO không phản ứng theo phạm vi THCS. Lọc hỗn hợp, chất rắn còn lại là CuO; phần dung dịch chứa muối aluminat.\n\nVề định lượng, nếu ban đầu chỉ có Al2O3 và một oxit không phản ứng với NaOH, số mol Al2O3 = nNaOH đã phản ứng / 2. Khi biết khối lượng hỗn hợp m, khối lượng phần oxit không lưỡng tính bằng m - 102nAl2O3. Cách làm này không cần giả định oxit nào tan trước, vì tính chọn lọc đã do thuốc thử quyết định.\n\nKhông suy rộng rằng NaOH tách được mọi oxit khỏi nhau: Al2O3 và ZnO đều tan trong NaOH dư, nên chúng không thể được phân biệt chỉ bằng bước này. Muốn kết luận thành phần sau phản ứng, phải đối chiếu xem từng oxit có thực sự phản ứng với kiềm trong điều kiện đề cho hay không."
+        },
+        {
+          "id": "a5-l4-c6",
+          "heading": "Nâng cao: Bảo toàn oxi và lượng H+ của axit",
+          "body": "Trong phản ứng axit - bazơ thông thường của oxit với axit loãng, mỗi nguyên tử O2- của oxit nhận 2H+ để thành H2O. Vì vậy với bất kì hỗn hợp oxit nào phản ứng hoàn toàn mà không có phản ứng oxi hoá - khử kèm theo: nH+ đã dùng = 2nO(trong oxit). Đây là nguồn gốc của các công thức nhanh nHCl = 2nO và nH2SO4 = nO khi dùng H2SO4 loãng vừa đủ.\n\nNếu hỗn hợp chứa a mol MxOy và b mol RpOq thì nO = ay + bq. Ví dụ, 0,10 mol Fe2O3 và 0,20 mol CuO chứa 0,50 mol nguyên tử O, nên cần 1,00 mol HCl hoặc 0,50 mol H2SO4 loãng. Không cần viết riêng từng phương trình nếu chỉ hỏi lượng axit.\n\nQuy tắc này chỉ dùng cho phản ứng trung hoà của oxit. Không áp dụng máy móc với axit có xảy ra oxi hoá - khử, với chất không phải oxit, hoặc khi đề nói axit không đủ. Trước khi bảo toàn, phải xác định rõ lượng axit đã phản ứng hoàn toàn với oxit và số mol H+ mà mỗi mol axit cung cấp."
+        },
+        {
+          "id": "a5-l4-c7",
+          "heading": "Nâng cao: Tính muối từ tổng số mol oxi",
+          "body": "Khi hoà tan hoàn toàn hỗn hợp oxit bằng HCl, mỗi mol nguyên tử O trong oxit bị thay bằng 2Cl trong muối clorua. Khối lượng tăng cho mỗi mol O là 2 x 35,5 - 16 = 55 g. Do đó: m hỗn hợp muối clorua = m hỗn hợp oxit + 55nO. Công thức cho kết quả trực tiếp dù chưa biết từng oxit là gì.\n\nTương tự, với H2SO4 loãng tạo các muối sunfat, mỗi mol O được thay bởi một gốc SO4 có khối lượng 96 g. Vì vậy: m hỗn hợp muối sunfat = m hỗn hợp oxit + 80nO. Các hệ thức này chính là bảo toàn kim loại kết hợp với bảo toàn khối lượng, không phải công thức cần học thuộc tách rời.\n\nVí dụ, 20,0 g hỗn hợp oxit chứa 0,25 mol O tác dụng hết với HCl tạo 20,0 + 55 x 0,25 = 33,75 g muối clorua khan. Cần chắc rằng đề hỏi khối lượng muối khan sau cô cạn; nếu hỏi khối lượng dung dịch sau phản ứng thì phải tính cả nước, axit dư và dung môi."
+        },
+        {
+          "id": "a5-l4-c8",
+          "heading": "Nâng cao: Axit thiếu và giới hạn của dữ kiện",
+          "body": "Nếu axit chỉ đủ một phần, số mol O đã bị trung hoà vẫn tính được từ nO phản ứng = nH+ đã phản ứng / 2. Tuy nhiên, điều đó thường chỉ cho tổng lượng oxit đã phản ứng chứ chưa cho biết riêng từng oxit phản ứng bao nhiêu. Với hỗn hợp hai oxit đều phản ứng với HCl, không được tự chọn một oxit phản ứng hết trước nếu đề không nêu thứ tự hay hiện tượng phân tách.\n\nChẳng hạn, hỗn hợp MgO và CuO gặp 0,20 mol HCl chỉ cho biết tổng số mol oxit đã phản ứng là 0,10 mol, vì mỗi mol oxit cần 2 mol HCl. Nếu không có thêm khối lượng chất rắn còn lại, lượng muối riêng hoặc một dữ kiện độc lập khác, thành phần phần đã tan không xác định duy nhất. Nhận ra bài toán thiếu dữ kiện là một bước biện luận quan trọng.\n\nNgược lại, nếu thuốc thử chỉ phản ứng chọn lọc, có thể xác định được thành phần ngay cả khi nó thiếu. Ví dụ NaOH chỉ hoà tan Al2O3 trong hỗn hợp Al2O3 và CuO theo quy ước THCS; khi NaOH là chất giới hạn, lượng NaOH phản ứng vẫn liên hệ trực tiếp với lượng Al2O3 đã tan."
+        },
+        {
+          "id": "a5-l4-c9",
+          "heading": "Nâng cao: Fe3O4 tác dụng với axit tạo hai muối sắt",
+          "body": "Fe3O4 là oxit hỗn hợp FeO.Fe2O3, gồm một phần Fe(II) và hai phần Fe(III). Khi hoà tan trong axit không có chất oxi hoá hoặc chất khử kèm theo, hai trạng thái này được giữ nguyên; vì thế không được viết chỉ một loại muối sắt. Với HCl: Fe3O4 + 8HCl -> FeCl2 + 2FeCl3 + 4H2O.\n\nVới H2SO4 loãng, phương trình tương ứng là: Fe3O4 + 4H2SO4 -> FeSO4 + Fe2(SO4)3 + 4H2O. Tỉ lệ mol sản phẩm luôn là nFeSO4 : nFe2(SO4)3 = 1 : 1, còn tổng số mol ion Fe là 3 mol trên 1 mol Fe3O4.\n\nBảo toàn oxi vẫn hoàn toàn đúng: 1 mol Fe3O4 chứa 4 mol O nên cần 8 mol HCl hoặc 4 mol H2SO4 loãng. Điểm khó của dạng này không nằm ở lượng axit mà ở việc nhận ra muối Fe(II) và Fe(III) cùng xuất hiện."
+        },
+        {
+          "id": "a5-l4-c10",
+          "heading": "Nâng cao: Ghép dữ kiện nồng độ với bài toán oxit",
+          "body": "Khi axit cho dưới dạng dung dịch, luôn đổi về số mol chất tan trước: n = CM x V, trong đó V tính bằng lít. Sau đó mới dùng tỉ lệ phản ứng hoặc bảo toàn O. Ví dụ, 200 mL HCl 1,50 M chứa 0,300 mol HCl, đủ hoà tan hỗn hợp oxit chứa tối đa 0,150 mol O nếu HCl vừa đủ.\n\nVới H2SO4 loãng, 1 mol H2SO4 cung cấp 2 mol H+ trong bài toán trung hoà oxit, nên số mol oxi có thể phản ứng bằng số mol H2SO4 đã dùng. Nếu dung dịch axit còn dư, cần phân biệt n axit ban đầu với n axit đã phản ứng; chỉ lượng đã phản ứng mới được thay vào công thức bảo toàn oxi.\n\nMột cách kiểm tra nhanh là xét đơn vị: CM x V cho mol, còn khối lượng muối phải ra gam. Không được lấy thể tích dung dịch làm thể tích khí hoặc dùng 22,4 L/mol cho bất kì bước nào của bài này; bài toán oxit với axit/kiềm ở đây được giải hoàn toàn bằng mol, khối lượng và nồng độ dung dịch."
         }
       ],
       "questions": [
