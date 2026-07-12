@@ -232,17 +232,42 @@
         {
           "id": "a4-l2-c1",
           "heading": "Nồng độ phần trăm (C%)",
-          "body": "Nồng độ phần trăm là khối lượng chất tan có trong 100 g dung dịch.\nCông thức: C% = (mct/mdd) x 100%, trong đó mdd = mct + mdm (khi không có phản ứng tạo khí hay kết tủa)."
+          "body": "Nồng độ phần trăm là khối lượng chất tan có trong 100 g dung dịch.\nCông thức: C% = (mct/mdd) x 100%; với dung dịch đang xét, mdd = mdm + tổng khối lượng các chất tan.\n\nSuy ra: mct = C% x mdd/100 và mdd = mct x 100/C%. Luôn xác định mẫu số là khối lượng dung dịch cuối cùng, không nhầm với khối lượng nước. Nếu quá trình có khí bay ra, kết tủa bị tách khỏi dung dịch hoặc dung môi bay hơi thì phải tính lại mdd theo khối lượng thực còn trong dung dịch."
         },
         {
           "id": "a4-l2-c2",
           "heading": "Nồng độ mol (CM)",
-          "body": "Nồng độ mol là số mol chất tan có trong 1 lít dung dịch.\nCông thức: CM = n/V, trong đó V tính bằng lít."
+          "body": "Nồng độ mol là số mol chất tan có trong 1 lít dung dịch.\nCông thức: CM = n/V, trong đó V tính bằng lít.\n\nCác hệ thức dùng ngược: n = CM x V và mct = CM x V x M. V là thể tích của dung dịch sau khi pha, không phải thể tích nước đã lấy ban đầu; phải đổi ml sang lít trước khi thay số. Khi nhiệt độ thay đổi đáng kể, thể tích dung dịch và vì vậy CM có thể thay đổi, dù số mol chất tan không đổi."
         },
         {
           "id": "a4-l2-c3",
           "heading": "Chuyển đổi giữa C% và CM",
-          "body": "Cần biết khối lượng riêng D (g/ml) của dung dịch để chuyển đổi:\nCM = (10 x D x C%) / M, trong đó M là khối lượng mol của chất tan."
+          "body": "Cần biết khối lượng riêng D (g/ml) của dung dịch để chuyển đổi:\nCM = (10 x D x C%) / M, trong đó M là khối lượng mol của chất tan.\n\nCông thức ngược: C% = CM x M/(10 x D). Chỉ được dùng các công thức này khi D là khối lượng riêng của đúng dung dịch đang xét, ở điều kiện nêu trong đề; không mặc định D = 1 g/ml nếu đề không cho hoặc không cho phép làm tròn."
+        },
+        {
+          "id": "a4-l2-c4",
+          "heading": "Nâng cao: Chọn cơ sở tính để đơn giản hoá bài toán",
+          "body": "Với dung dịch có C%, thường chọn 100 g dung dịch làm cơ sở: khi đó mct đúng bằng giá trị C% tính theo gam; đối với dung dịch chỉ chứa một chất tan, mdm = 100 - C% gam. Với dung dịch có CM, thường chọn 1 lít dung dịch: khi đó số mol chất tan đúng bằng CM.\n\nNếu đề cho đồng thời C%, CM và D, chọn 1 lít dung dịch là thuận lợi nhất vì mdd = 1000 x D (g). Từ đây tính mct = C% x 1000 x D/100, đổi ra mol rồi so với CM. Cách chọn cơ sở chỉ là quy ước tính toán; phải nhân hoặc chia mọi đại lượng cùng một hệ số khi quay về lượng dung dịch thực tế."
+        },
+        {
+          "id": "a4-l2-c5",
+          "heading": "Nâng cao: Suy ra công thức chuyển đổi và kiểm tra đơn vị",
+          "body": "Xét 1 lít dung dịch có D g/ml. Khối lượng dung dịch là 1000D g; khối lượng chất tan là 10D x C% g; số mol chất tan là 10D x C%/M. Vì thể tích đã chọn là 1 lít, giá trị số mol này chính là CM, suy ra CM = 10 x D x C%/M.\n\nTừ công thức có thể biện luận ngược: M = 10 x D x C%/CM hoặc D = CM x M/(10 x C%). Khi thế số, dùng C% dưới dạng số phần trăm, chẳng hạn 20 chứ không phải 0,20; còn D phải tính bằng g/ml. Sai đơn vị hoặc đổi 20% thành 0,20 trong công thức trên thường làm kết quả lệch 100 lần."
+        },
+        {
+          "id": "a4-l2-c6",
+          "heading": "Nâng cao: Lấy một phần dung dịch đồng nhất",
+          "body": "Dung dịch đồng nhất có cùng thành phần ở mọi phần. Lấy ra một phần có thể tích V lít thì số mol chất tan của phần đó là n = CM x V; lấy ra phần có khối lượng m g thì khối lượng chất tan là mct = C% x m/100. Phần còn lại có lượng chất tan giảm đúng bằng lượng đã lấy ra.\n\nTuy nhiên, nếu chỉ rót/lấy dung dịch đồng nhất, không cho chất phản ứng, không làm bay hơi dung môi và không làm kết tinh, C% và CM của phần lấy ra cũng như phần còn lại vẫn bằng nồng độ ban đầu. Đây là căn cứ để giải các bài toán lấy một phần dung dịch mà không phải lập lại nồng độ mới."
+        },
+        {
+          "id": "a4-l2-c7",
+          "heading": "Nâng cao: Dung dịch có nhiều chất tan",
+          "body": "Trong dung dịch chứa nhiều chất tan, mỗi chất có một nồng độ phần trăm riêng trên cùng khối lượng dung dịch: C%(A) = mA/mdd x 100%, C%(B) = mB/mdd x 100%. Không lấy khối lượng của chất này chia cho khối lượng chất kia.\n\nNếu các chất tan đều đã biết và không có thành phần rắn lơ lửng, tổng các C% của chất tan bằng phần trăm khối lượng toàn bộ chất tan; phần còn lại đến 100% là dung môi. Nồng độ mol cũng phải ghi kèm tên chất: dung dịch có thể đồng thời là 0,10M NaCl và 0,20M HCl, không được cộng hai giá trị ấy để gọi là CM của một chất không xác định."
+        },
+        {
+          "id": "a4-l2-c8",
+          "heading": "Nâng cao: Biện luận dữ kiện và tự kiểm tra kết quả",
+          "body": "Với dung dịch thông thường, 0 < C% < 100 và CM > 0. Khi C%, M và D đều dương, công thức chuyển đổi phải cho CM dương; khi các đại lượng khác không đổi, C% tăng hoặc D tăng thì CM tăng, còn M tăng thì CM giảm. Những quan hệ này giúp phát hiện đáp số vô lí trước khi tính lại.\n\nTrước khi chốt bài, kiểm tra ba điểm: đại lượng khối lượng dùng gam, thể tích trong CM dùng lít, và D dùng g/ml; C% luôn dựa trên dung dịch cuối cùng. Với dữ kiện C%, CM, D, M cùng được cho, thay ngược vào công thức chuyển đổi là cách kiểm tra nhanh xem các số liệu có cùng nói về một dung dịch hay không."
         }
       ],
       "questions": [
