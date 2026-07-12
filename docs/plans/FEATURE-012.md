@@ -227,10 +227,10 @@ commit).
 
 ### A9 · Mối quan hệ giữa các hợp chất vô cơ (`a9-moi-quan-he-hop-chat-vo-co`)
 
-- [ ] `a9-l1` — Sơ đồ mối quan hệ oxit – axit – bazơ – muối
-- [ ] `a9-l2` — Chuỗi phản ứng vô cơ; điều chế nhiều bước
-- [ ] `a9-l3` — Nâng cao: nhận biết – tách – tinh chế chất vô cơ
-- [ ] `a9-l4` — Nâng cao: bài tập tổng hợp 4 loại hợp chất
+- [x] `a9-l1` — Sơ đồ mối quan hệ oxit – axit – bazơ – muối
+- [x] `a9-l2` — Chuỗi phản ứng vô cơ; điều chế nhiều bước
+- [x] `a9-l3` — Nâng cao: nhận biết – tách – tinh chế chất vô cơ
+- [x] `a9-l4` — Nâng cao: bài tập tổng hợp 4 loại hợp chất
 
 ### A10 · Kim loại (`a10-kim-loai`)
 
