@@ -146,16 +146,15 @@ không bắt buộc với tier `NORMAL`):
   (`a1-l5`, `a3-l4`, `a5-l1`, `a8-l4`, `a10-l1`, `a12-l3`, `b2-l4`,
   `b3-l1`, `b5-l3`) — xem transcript trong phiên, kết quả tóm tắt ở
   mục 4
-- Independence method: NORMAL fallback (chưa push, CI chưa chạy cho
-  candidate commit) — một fresh read-only reviewer (Gemini) soi diff
-  - Claude rerun toàn bộ 6 gate liên quan (mục 4), theo đúng
-    `.claude/skills/feature-delivery/SKILL.md` §NORMAL
-- CI commit SHA and status: PENDING — chưa push lên remote; sẽ cập
-  nhật handoff này sau khi push và CI chạy xong cho
-  `8174cb4472500a106f324e7e278e8e38d8bddcd9` (hoặc SHA mới nếu có
-  thay đổi tiếp theo)
-- Review findings and disposition: 9/9 bài PASS, không có finding mới
-  cần xử lý
+- Independence method: fresh Gemini spot-check (trước khi push) +
+  GitHub Actions CI trên candidate commit sau khi push, theo đúng
+  `.claude/skills/feature-delivery/SKILL.md` §NORMAL
+- CI commit SHA and status: `49f3b18b9cd7554bc82e2217693c8eab9c4f3d1b`
+  — **success** (run `29195536489`, nhánh `feature/FEATURE-012`, xác
+  nhận qua `gh run view`)
+- Review findings and disposition: Gemini spot-check 9/9 bài PASS,
+  không có finding mới cần xử lý; CI (build + test + lint + typecheck
+  - validate-content + format:check) pass cho đúng candidate commit
 
 ## 8. Blockers
 
@@ -167,8 +166,8 @@ không bắt buộc với tier `NORMAL`):
   câu, trường bắt buộc...), không kiểm tra tính đúng đắn hoá học —
   việc đó do Gemini fact-check + Claude đối chiếu thủ công đảm nhiệm,
   không phải gate tự động.
-- CI chưa chạy cho candidate commit (chưa push) — Independent
-  Verification dùng fallback NORMAL, chưa có xác nhận CI chính thức.
+- Đã push và CI pass cho candidate commit cuối
+  (`49f3b18b9cd7554bc82e2217693c8eab9c4f3d1b`, xem mục 7).
 
 ## 10. Remaining risks
 
@@ -180,7 +179,6 @@ không bắt buộc với tier `NORMAL`):
 
 ## 11. Follow-up work
 
-- Push nhánh `feature/FEATURE-012` lên remote và xác nhận GitHub
-  Actions CI pass cho đúng candidate commit SHA (cập nhật mục 7 sau
-  khi có kết quả) — cần xác nhận của người dùng trước khi push.
-- Sau khi CI xác nhận: người dùng quyết định mở PR / merge `main`.
+- Đã push nhánh `feature/FEATURE-012` và CI pass (mục 7). Theo yêu cầu
+  người dùng, mở PR vào `main` để deploy nội dung mới — người dùng vẫn
+  là người duyệt merge cuối cùng (Claude không tự merge).
