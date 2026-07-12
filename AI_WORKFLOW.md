@@ -153,6 +153,12 @@ requirements. Project mapping:
 Historical note: this dual-review pattern caught a multi-choice answers
 bug (b3-l5-q8) that single-pass review missed.
 
+For `NORMAL`-tier learning-content batch review, the architecture's
+Independent Verification section defines a bounded
+reviewer-applies-fixes exception (human-authorized, findings still
+recorded, numeric/chemistry fixes still independently re-verified) —
+see the architecture, not restated here.
+
 ## Validation commands (this project)
 
 Canonical commands per the architecture's Validation Model:

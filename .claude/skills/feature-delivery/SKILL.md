@@ -112,13 +112,14 @@ This skill adds:
 ## Remediation (all tiers)
 
 Follow the architecture's remediation state machine: a confirmed review
-finding, or any modification to a release-affecting file (source,
-content, documentation, tests, dependencies, configuration, migrations,
+finding, or any modification to a **release-artifact-affecting** file
+(source, content, tests, dependencies, configuration, migrations,
 infrastructure, deployment) made after validation or review already ran
 invalidates that snapshot's evidence and moves the candidate to
-`REMEDIATION_REQUIRED`, regardless of tier. Send Codex a numbered list
-of specific issues via `/codex:rescue --resume` — never "fix
-everything".
+`REMEDIATION_REQUIRED`, regardless of tier. A **documentation-only**
+change after validation does not invalidate engineering/review
+evidence — see "Documentation" below. Send Codex a numbered list of
+specific issues via `/codex:rescue --resume` — never "fix everything".
 
 ## Documentation (when applicable)
 
@@ -126,35 +127,33 @@ Coordinate documentation per `docs/DOCUMENTATION_RULES.md` — not a
 mandatory gate for every feature, only when the feature's scope actually
 requires a doc update.
 
-Documentation is release-affecting: a documentation change made after
-validation or review already ran follows the same remediation path as
-any other post-validation change (see "Remediation", above). Claude does
-NOT resume directly at release readiness:
+Per the architecture's Remediation State Machine rule 3, a
+documentation-only change made after validation or review already ran
+does **not** invalidate the engineering validation or completed tier
+reviews — it only requires the scoped "Documentation only" gates on the
+changed files:
 
 ```
-Documentation
+Documentation change
   ↓
-Previous evidence becomes STALE
+Run baseline + link/path/command checks on the changed doc files only
   ↓
-Return to the implementation owner
-  ↓
-Regenerate implementation handoff
-  ↓
-Run the applicable validation gates
-  ↓
-Repeat every review required by the current risk tier
+Record the scoped revalidation result in the handoff
   ↓
 Claude Release Readiness Gate
   ↓
 Human
 ```
 
+A change to a release-artifact-affecting file (not documentation) still
+follows the full "Remediation" path above.
+
 **Ownership**: the execution that made the documentation change (Codex,
-Antigravity, or whichever execution touched the files) owns
-documentation validation, the regenerated handoff and the regenerated
-evidence — per `docs/DOCUMENTATION_RULES.md` → "Documentation →
-Revalidate". Claude does not become the validator merely because
-documentation changed; Claude's role stays the Release Readiness Gate.
+Antigravity, or whichever execution touched the files) owns the scoped
+documentation validation and its record in the handoff — per
+`docs/DOCUMENTATION_RULES.md` → "Documentation → Revalidate". Claude
+does not become the validator merely because documentation changed;
+Claude's role stays the Release Readiness Gate.
 
 ## Deliver
 

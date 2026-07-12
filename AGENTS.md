@@ -54,10 +54,12 @@ npm run build
 ```
 
 Validation executes once per implementation snapshot. Record the
-evidence required by the architecture's Evidence Binding rules (commit
-SHAs, implementation-tree SHA, dirty paths, UTC timestamps, tool
-versions or lockfile SHA, every command with its exit status and the
-gate it satisfies). A required gate with no repository command is a
+evidence required by the architecture's Evidence Binding rules: once a
+candidate commit exists, that commit SHA plus a CI run reference for
+the exact same SHA; before a candidate commit exists, the base commit
+SHA plus the exact dirty-path list. Also record UTC timestamps, tool
+versions or lockfile SHA, and every command with its exit status and
+the gate it satisfies. A required gate with no repository command is a
 blocker to report, not permission to skip.
 
 ## Required handoff

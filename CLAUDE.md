@@ -136,8 +136,11 @@ the architecture's Validation Model. Key rules:
   when valid, snapshot-bound evidence or CI already satisfies the gate.
 - Evidence that is not bound to the exact implementation snapshot is not
   release evidence.
-- Any post-validation change to a release-affecting file invalidates the
-  prior evidence and re-enters remediation.
+- A post-validation change to a release-artifact-affecting file (source,
+  content, config, dependencies, migrations, infra/deploy) invalidates
+  the prior evidence and re-enters remediation. A documentation-only
+  change does not — it only needs the scoped revalidation in
+  `docs/DOCUMENTATION_RULES.md`.
 
 ## Content authoring rules
 
@@ -156,21 +159,12 @@ the architecture's Validation Model. Key rules:
   độ, hiệu suất...). Dùng `scripts/tag-question-category.ts` để gợi ý
   tag cho câu mới, rồi rà soát lại tay trước khi commit.
 
-## Risk tiers (project mapping)
+## Risk tiers
 
-Risk classification and per-tier workflows are defined by the
-architecture's Risk Model. Typical mappings for this repository:
-
-- `NORMAL` — documentation, UI/styling, wording, non-numeric learning
-  content, small refactoring.
-- `ELEVATED` — chemistry numeric problems and algorithms, public APIs,
-  reversible/non-production migrations, complex business logic.
-- `CRITICAL` — authentication/authorization, production migrations,
-  deployment/infrastructure, security controls, architecture changes.
-
-The highest applicable tier wins; uncertainty classifies at the next
-higher plausible tier. Reassess when scope changes — if the tier
-increases, stop until the revised plan is approved.
+Risk classification, per-tier workflows and tier examples are defined by
+the architecture's Risk Model and "Examples by tier" table — see
+`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`. This project has no
+tier mapping that differs from the architecture's examples.
 
 ## Restrictions
 
