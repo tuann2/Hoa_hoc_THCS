@@ -673,6 +673,13 @@ tiếng Anh thật sự (đã tự đối chiếu, không lặp lại kiểu fal
     số chuẩn (V1 nhân (a-c)), không mơ hồ như "n nX" đã gặp ở
     `b2-l6-c6`** — không cần sửa.
 
+**Ghi chú follow-up ngoài phạm vi FEATURE-012** (phát hiện khi Bước 2
+xử lý unit B4, KHÔNG sửa trong feature này vì đụng tới `questions` —
+plan mục 5 "Out of scope" nêu rõ "không đổi câu hỏi"): cùng lỗi "do"
+thiếu dấu (phải là "độ") còn xuất hiện ở 2 câu hỏi CŨ, không thuộc
+diff Phase A — `b4-l6-q12` ("rượu 46 do") và `b4-l6-q13` ("rượu 40
+do"). Nên sửa trong một thay đổi nhỏ riêng, ngoài phạm vi FEATURE-012.
+
 ---
 
 ## b5-l1 → b5-l3 (unit b5-tong-hop-huu-co)

@@ -280,12 +280,12 @@ commit).
 
 ### B4 · Gluxit – Protein – Polime (`b4-gluxit-protein-polime`)
 
-- [ ] `b4-l1` — Glucozơ; phản ứng tráng gương; lên men
-- [ ] `b4-l2` — Saccarozơ; thuỷ phân
-- [ ] `b4-l3` — Tinh bột và xenlulozơ
-- [ ] `b4-l4` — Protein
-- [ ] `b4-l5` — Polime – chất dẻo, tơ, cao su
-- [ ] `b4-l6` — Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men – hiệu suất nhiều giai đoạn
+- [x] `b4-l1` — Glucozơ; phản ứng tráng gương; lên men
+- [x] `b4-l2` — Saccarozơ; thuỷ phân
+- [x] `b4-l3` — Tinh bột và xenlulozơ
+- [x] `b4-l4` — Protein
+- [x] `b4-l5` — Polime – chất dẻo, tơ, cao su
+- [x] `b4-l6` — Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men – hiệu suất nhiều giai đoạn
 
 ### B5 · Chuyên đề tổng hợp Hữu cơ (`b5-tong-hop-huu-co`)
 
