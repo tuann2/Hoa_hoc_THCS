@@ -234,11 +234,11 @@ commit).
 
 ### A10 · Kim loại (`a10-kim-loai`)
 
-- [ ] `a10-l1` — Tính chất chung; dãy hoạt động hoá học
-- [ ] `a10-l2` — Nhôm; sắt; hợp kim gang – thép
-- [ ] `a10-l3` — Ăn mòn kim loại và bảo vệ
-- [ ] `a10-l4` — Nâng cao: kim loại + dung dịch muối (biện luận)
-- [ ] `a10-l5` — Nâng cao: hỗn hợp kim loại + axit; chất dư
+- [x] `a10-l1` — Tính chất chung; dãy hoạt động hoá học
+- [x] `a10-l2` — Nhôm; sắt; hợp kim gang – thép
+- [x] `a10-l3` — Ăn mòn kim loại và bảo vệ
+- [x] `a10-l4` — Nâng cao: kim loại + dung dịch muối (biện luận)
+- [x] `a10-l5` — Nâng cao: hỗn hợp kim loại + axit; chất dư
 
 ### A11 · Phi kim (`a11-phi-kim`)
 
