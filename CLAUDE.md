@@ -106,7 +106,11 @@ agy --model "Gemini 3.5 Flash (High)" \
   requested. If Gemini is unavailable for `CRITICAL` work, the review
   gate is blocked until the human approves an equally independent
   replacement — never silently skipped.
-- Reviewers report findings only; they do not modify the candidate.
+- Reviewers report findings only; they do not modify the candidate,
+  except the architecture's bounded reviewer-applies-fixes exception
+  for `NORMAL`-tier learning-content batch review (never `ELEVATED`/
+  `CRITICAL`) — see the architecture's Independent Verification
+  section.
 
 See `AI_WORKFLOW.md` for full delegation patterns.
 
@@ -137,9 +141,10 @@ the architecture's Validation Model. Key rules:
 - Evidence that is not bound to the exact implementation snapshot is not
   release evidence.
 - A post-validation change to a release-artifact-affecting file (source,
-  content, config, dependencies, migrations, infra/deploy) invalidates
-  the prior evidence and re-enters remediation. A documentation-only
-  change does not — it only needs the scoped revalidation in
+  tests, content, config, dependencies, migrations, infra/deploy)
+  invalidates the prior evidence and re-enters remediation. A
+  documentation-only change does not — it only needs the scoped
+  revalidation in
   `docs/DOCUMENTATION_RULES.md`.
 
 ## Content authoring rules

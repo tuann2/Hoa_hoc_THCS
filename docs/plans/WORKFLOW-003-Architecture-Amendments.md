@@ -110,17 +110,30 @@ rules — and the strict reading forces a full Gemini + Codex re-review
 of a `CRITICAL` feature after a one-line README edit.
 
 **Change:** amend rule 3 so that only changes to
-**release-artifact-affecting files** (application source, `content/`,
-runtime configuration, dependencies, migrations,
+**release-artifact-affecting files** (application source, tests,
+`content/`, runtime/toolchain configuration, dependencies, migrations,
 infrastructure/deployment files) invalidate engineering validation and
 tier reviews. Documentation-only post-validation changes require only
 the "Documentation only" gates on the changed files, recorded in the
-handoff — exactly as `DOCUMENTATION_RULES.md` already specifies.
-`DOCUMENTATION_RULES.md` is the reference text and does not change.
+handoff.
+
+**Deviation recorded during remediation:** this plan originally assumed
+`DOCUMENTATION_RULES.md` already stated the target rule and would not
+need to change. Both independent reviews (Gemini and Codex adversarial)
+independently found that assumption wrong: the file's literal opening
+sentence ("writing or editing them after the implementation snapshot
+was validated invalidates that snapshot's prior validation and review
+evidence, exactly like any other post-validation change") directly
+contradicts the amended architecture. `docs/DOCUMENTATION_RULES.md` was
+therefore also amended (its opening paragraph only) to state the same
+rule as the architecture — it is documentation Claude may edit directly
+per `CLAUDE.md`.
 
 **Files:** architecture (Remediation State Machine),
-`.claude/skills/feature-delivery/SKILL.md` (Remediation +
-Documentation sections).
+`.claude/skills/feature-delivery/SKILL.md` (Remediation + Documentation
+sections), `docs/DOCUMENTATION_RULES.md` (deviation — see above),
+`CLAUDE.md` and `AGENTS.md` (release-artifact list + A5 pointer, added
+during remediation).
 
 ### A3 — Condense the instruction corpus (editorial; no rule change)
 
@@ -244,19 +257,37 @@ evidence rules: candidate commit SHA + CI run for that SHA.
 
 ## 9. Acceptance criteria
 
-- [ ] All five amendments applied; architecture reads v2.2.
-- [ ] No requirement remains in the corpus without an executable
-      repository method (the tree-SHA class of rule is gone).
-- [ ] Architecture, `feature-delivery` skill and
-      `DOCUMENTATION_RULES.md` state the same rule for post-validation
-      documentation changes.
+- [x] All five amendments applied; architecture reads v2.2.
+- [x] The tree-SHA class of evidence requirement is gone (A1) and
+      replaced with commit-bound evidence plus `git stash create` for
+      dirty-content binding. This criterion is scoped to that specific
+      requirement class — it does not claim every gate in the
+      pre-existing Canonical Quality Gates table has a repository
+      command (e.g. the "Documentation only" link/path-check gate and
+      the dependency/security/infra gates lacked commands before this
+      plan and still do; unchanged, tracked as a follow-up, not a
+      regression introduced here).
+- [x] Architecture, `feature-delivery` skill, `CLAUDE.md`, `AGENTS.md`
+      and `DOCUMENTATION_RULES.md` state the same rule for
+      post-validation documentation changes (fixed in remediation after
+      both independent reviews found the original edit left
+      `DOCUMENTATION_RULES.md`'s literal wording contradicting the new
+      rule).
 - [ ] Architecture ≤450 lines; `CLAUDE.md` deduplicated; Gemini review
-      confirms no semantic loss from condensation.
-- [ ] New Success Metrics recorded with FEATURE-011/012 retrospective
+      confirms no semantic loss from condensation. **Not met on line
+      count** (545 lines after remediation, was 715): the plan's own
+      A3 constraint deprioritizes the exact number below correctness
+      once content in the "do not touch" list (Responsibility Matrix,
+      Trust Model, Risk Model, Claude Gates, Canonical Quality Gates,
+      Context Budget, Design Principles) is preserved — condensing
+      those further to hit ≤450 was out of this plan's approved scope.
+      No dropped normative rule was found by either independent review.
+- [x] New Success Metrics recorded with FEATURE-011/012 retrospective
       baseline; WORKFLOW-002 Phase 3 marked closed.
-- [ ] Batch-content review variant documented with conditions and the
-      FEATURE-012 precedent reference.
-- [ ] Baseline gates pass; Gemini + Codex adversarial reviews complete
+- [x] Batch-content review variant documented with conditions, the
+      required authorization-source record, and the FEATURE-012
+      precedent reference.
+- [x] Baseline gates pass; Gemini + Codex adversarial reviews complete
       with all findings dispositioned; CI green on the candidate
       commit.
 - [ ] Human approves release (merge).

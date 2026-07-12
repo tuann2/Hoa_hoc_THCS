@@ -54,13 +54,15 @@ npm run build
 ```
 
 Validation executes once per implementation snapshot. Record the
-evidence required by the architecture's Evidence Binding rules: once a
-candidate commit exists, that commit SHA plus a CI run reference for
-the exact same SHA; before a candidate commit exists, the base commit
-SHA plus the exact dirty-path list. Also record UTC timestamps, tool
-versions or lockfile SHA, and every command with its exit status and
-the gate it satisfies. A required gate with no repository command is a
-blocker to report, not permission to skip.
+evidence required by the architecture's Evidence Binding rules: a clean
+candidate commit's SHA is the anchor (add a CI run reference for that
+exact SHA when CI is required/available); whenever the worktree is
+dirty (with or without a candidate commit), also record the dirty
+paths and the output of `git stash create` run against that worktree —
+this binds the exact content, not just which paths changed. Also
+record UTC timestamps, tool versions or lockfile SHA, and every command
+with its exit status and the gate it satisfies. A required gate with
+no repository command is a blocker to report, not permission to skip.
 
 ## Required handoff
 
@@ -85,4 +87,8 @@ assigned review work per the risk tier:
   behavior (`ELEVATED`), or critical failure modes adversarially
   (`CRITICAL`).
 - Report findings only. Do not modify the candidate — fixes return to
-  the implementation flow through the remediation state machine.
+  the implementation flow through the remediation state machine. The
+  only exception is the architecture's bounded
+  reviewer-applies-fixes mode for `NORMAL`-tier learning-content batch
+  review (see the architecture's Independent Verification section) —
+  it never applies to `ELEVATED`/`CRITICAL` review work such as this.
