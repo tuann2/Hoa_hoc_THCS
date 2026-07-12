@@ -28,6 +28,36 @@
           "id": "b5-l1-c3",
           "heading": "Biện luận công thức hợp lí",
           "body": "Sau khi có công thức đơn giản nhất, cần đối chiếu với dạng chất đã cho.\nRượu no đơn chức mạch hở có dạng CnH2n+2O; axit no đơn chức mạch hở có dạng CnH2nO2.\nNếu số H không phù hợp với loại liên kết hoặc nhóm chức đã nêu thì phải loại công thức đó và chọn công thức hợp lí hơn."
+        },
+        {
+          "id": "b5-l1-c4",
+          "heading": "Nâng cao: Độ bất bão hoà (số liên kết đôi/ba + số vòng)",
+          "body": "Với hợp chất hữu cơ chỉ chứa C, H, O có công thức CxHyOz, độ bất bão hoà k được tính theo công thức k = (2x + 2 - y) : 2, không phụ thuộc vào số nguyên tử O.\nk = 0 nghĩa là phân tử no và mạch hở (chỉ có liên kết đơn, không có vòng); k = 1 nghĩa là phân tử có đúng một vòng hoặc một liên kết đôi (kể cả liên kết đôi C=O trong nhóm chức); k = 2 trở lên ứng với hai liên kết đôi/vòng trở lên hoặc một liên kết ba, ví dụ ankin hoặc chất có hai liên kết đôi.\nMẹo dùng nhanh: axit, este, anđehit no đơn chức đều có k = 1 vì nhóm chức của chúng chứa một liên kết đôi C=O, còn rượu no đơn chức có k = 0 vì không có liên kết đôi nào trong phân tử. Biết trước k giúp loại ngay những công thức có số H không phù hợp mà không cần thử từng phương án."
+        },
+        {
+          "id": "b5-l1-c5",
+          "heading": "Nâng cao: Quan hệ số mol CO2 và H2O theo độ bất bão hoà",
+          "body": "Khi đốt cháy hoàn toàn một hợp chất CxHyOz mạch hở có độ bất bão hoà k, hiệu số mol H2O trừ số mol CO2 luôn bằng (1 - k) lần số mol chất đem đốt.\nVới chất no đơn chức mạch hở (k = 0) như rượu no đơn chức hoặc ankan, ta luôn có nH2O - nCO2 = n(chất). Với chất có k = 1 như axit, este, anđehit no đơn chức thì nH2O = nCO2. Với chất có k = 2 như ankin thì nCO2 - nH2O = n(chất).\nQuy tắc này rất hữu ích khi đề chỉ cho số mol CO2 và H2O mà chưa cho số mol chất: so sánh hai giá trị này giúp nhận ra ngay loại chất (no đơn chức, có 1 nối đôi/vòng, hay có nối ba) trước khi lập hệ phương trình đầy đủ."
+        },
+        {
+          "id": "b5-l1-c6",
+          "heading": "Nâng cao: Biện luận công thức khi chỉ biết khoảng khối lượng mol",
+          "body": "Nhiều đề HSG không cho M chính xác mà chỉ cho một khoảng giá trị hoặc một điều kiện gián tiếp, ví dụ 'X là chất khí ở điều kiện thường' hoặc '46 < Mx < 80'.\nCách làm là viết công thức tổng quát theo số C (ví dụ CnH2n+2O với rượu no đơn chức), lập bất đẳng thức từ điều kiện đề bài rồi giải ra khoảng giá trị của n.\nVì n phải là số nguyên dương nên trong khoảng vừa tìm được, ta chỉ giữ lại các giá trị n nguyên hợp lí; nếu khoảng đó chứa nhiều hơn một giá trị n thì cần dùng thêm dữ kiện khác của đề (ví dụ % một nguyên tố hoặc phản ứng đặc trưng) để chọn ra công thức duy nhất."
+        },
+        {
+          "id": "b5-l1-c7",
+          "heading": "Nâng cao: Số C trung bình khi đốt cháy hỗn hợp hai chất đồng đẳng kế tiếp",
+          "body": "Khi đề cho hỗn hợp hai chất hữu cơ thuộc cùng dãy đồng đẳng, cùng loại nhóm chức, mạch hở, ta có thể tính số nguyên tử C trung bình bằng công thức n trung bình = nCO2 : n(hỗn hợp).\nNếu hai chất là đồng đẳng kế tiếp (hơn kém nhau một nhóm CH2) thì số C của chất nhỏ n1 luôn nhỏ hơn n trung bình, còn số C của chất lớn n2 = n1 + 1 luôn lớn hơn n trung bình.\nTừ hai bất đẳng thức n1 < n trung bình < n1 + 1, ta suy ra n1 chỉ có thể là số nguyên liền dưới n trung bình, từ đó xác định luôn công thức của cả hai chất trong hỗn hợp."
+        },
+        {
+          "id": "b5-l1-c8",
+          "heading": "Nâng cao: Kết hợp phản ứng đặc trưng để chọn đúng nhóm chức",
+          "body": "Trước khi biện luận theo công thức tổng quát, nên kiểm tra xem đề bài có cho phản ứng đặc trưng nào để xác định loại nhóm chức hay không, tránh áp nhầm dạng công thức.\nChất tác dụng với Na giải phóng khí H2 thường là rượu hoặc axit (có H linh động trong nhóm OH hoặc COOH). Chất tác dụng với dung dịch NaOH nhưng không giải phóng khí thường là axit hoặc este. Chất tác dụng với dung dịch AgNO3 trong NH3 tạo kết tủa bạc thường có nhóm chức anđehit (-CHO).\nXác định đúng nhóm chức trước giúp chọn đúng công thức tổng quát (CnH2n+2O, CnH2nO2...) ngay từ đầu, tránh việc phải thử lại nhiều trường hợp khi biện luận công thức phân tử."
+        },
+        {
+          "id": "b5-l1-c9",
+          "heading": "Nâng cao: Những sai sót thường gặp khi biện luận công thức phân tử",
+          "body": "Một số lỗi hay gặp khi làm dạng bài này: quên kiểm tra n phải là số nguyên dương nên vội chọn công thức có n lẻ hoặc âm; nhầm lẫn giữa công thức đơn giản nhất và công thức phân tử khi đề đã cho đủ M để nhân hệ số; và bỏ qua điều kiện 'mạch hở, no, đơn chức' khiến chọn nhầm công thức có độ bất bão hoà không phù hợp.\nMột lỗi khác là quên đối chiếu số nguyên tử O tính được với số nhóm chức đã biết: ví dụ nếu đề nói X là axit hai chức thì phân tử phải chứa hai nhóm COOH (tương ứng ít nhất 4 nguyên tử O), không thể chọn công thức chỉ có 1 hoặc 2 nguyên tử O.\nCách phòng tránh chung là luôn thử lại công thức vừa chọn: tính lại M, đối chiếu % khối lượng hoặc số mol sản phẩm cháy với đề bài trước khi kết luận."
         }
       ],
       "questions": [
@@ -191,17 +221,37 @@
         {
           "id": "b5-l2-c1",
           "heading": "Chuỗi CH4 đến este etyl axetat",
-          "body": "Một chuỗi rất quen thuộc là CH4 -> C2H2 -> C2H4 -> C2H5OH -> CH3COOH -> CH3COOC2H5.\nÝ nghĩa của chuỗi là nối liền hiđrocacbon, rượu, axit và este trong một mạch kiến thức.\nKhi làm bài cần viết đúng chất trung gian và đúng hướng chuyển hoá từng bước."
+          "body": "Một chuỗi rất quen thuộc là CH4 -> C2H2 -> C2H4 -> C2H5OH -> CH3COOH -> CH3COOC2H5.\nÝ nghĩa của chuỗi là nối liền hiđrocacbon, rượu, axit và este trong một mạch kiến thức.\nKhi làm bài cần viết đúng chất trung gian và đúng hướng chuyển hoá từng bước.\nNâng cao: chất đầu chuỗi C2H2 không nhất thiết phải đi từ CH4, trong công nghiệp nó thường được điều chế từ đá vôi và than đá qua hai bước: nung đá vôi CaCO3 -> CaO + CO2, sau đó nung CaO với than cốc ở nhiệt độ rất cao tạo canxi cacbua CaO + 3C -> CaC2 + CO; cuối cùng CaC2 tác dụng với nước CaC2 + 2H2O -> C2H2 + Ca(OH)2. Nhớ nguồn gốc này giúp nối phần chuỗi hữu cơ với nguyên liệu vô cơ khi đề yêu cầu viết sơ đồ đầy đủ từ đá vôi, than đá."
         },
         {
           "id": "b5-l2-c2",
           "heading": "Chuỗi tinh bột đến axit axetic",
-          "body": "Tinh bột thuỷ phân tạo glucozơ: (C6H10O5)n + nH2O -> nC6H12O6.\nGlucozơ lên men tạo rượu etylic: C6H12O6 -> 2C2H5OH + 2CO2.\nRượu etylic tiếp tục bị oxi hoá tạo axit axetic: C2H5OH + O2 -> CH3COOH + H2O."
+          "body": "Tinh bột thuỷ phân tạo glucozơ: (C6H10O5)n + nH2O -> nC6H12O6.\nGlucozơ lên men tạo rượu etylic: C6H12O6 -> 2C2H5OH + 2CO2.\nRượu etylic tiếp tục bị oxi hoá tạo axit axetic: C2H5OH + O2 -> CH3COOH + H2O.\nNâng cao: trên thực tế mỗi giai đoạn của chuỗi này (thuỷ phân, lên men rượu, oxi hoá thành axit) thường không đạt hiệu suất 100%. Muốn tính khối lượng sản phẩm cuối theo lượng nguyên liệu ban đầu, phải nhân liên tiếp hiệu suất của từng giai đoạn với nhau, không được cộng hiệu suất hay chỉ dùng hiệu suất của riêng một giai đoạn."
         },
         {
           "id": "b5-l2-c3",
           "heading": "Nhận biết bằng thuốc thử",
-          "body": "Dung dịch brom nhận ra C2H4 và C2H2 vì bị mất màu do phản ứng cộng.\nDung dịch AgNO3/NH3 nhận ra C2H2 bằng kết tủa bạc axetylua, còn glucozơ cho phản ứng tráng gương khi đun nóng.\nDung dịch iot nhận ra tinh bột nhờ màu xanh tím; quỳ tím nhận ra CH3COOH do làm đỏ quỳ."
+          "body": "Dung dịch brom nhận ra C2H4 và C2H2 vì bị mất màu do phản ứng cộng.\nDung dịch AgNO3/NH3 nhận ra C2H2 bằng kết tủa bạc axetylua, còn glucozơ cho phản ứng tráng gương khi đun nóng.\nDung dịch iot nhận ra tinh bột nhờ màu xanh tím; quỳ tím nhận ra CH3COOH do làm đỏ quỳ.\nNâng cao: khi đề chỉ cho phép dùng ít thuốc thử để phân biệt nhiều chất cùng lúc, nên chọn thứ tự từ tổng quát đến riêng biệt — dùng quỳ tím trước để tách nhóm có tính axit, dùng dung dịch brom để tách tiếp nhóm không no, rồi mới dùng AgNO3/NH3 hoặc dung dịch iot để phân biệt các chất còn lại trong từng nhóm nhỏ hơn."
+        },
+        {
+          "id": "b5-l2-c4",
+          "heading": "Nâng cao: Thuỷ phân ngược este trong hai môi trường",
+          "body": "Phản ứng este hoá CH3COOH + C2H5OH -> CH3COOC2H5 + H2O là phản ứng thuận nghịch, có thể xảy ra theo chiều ngược lại khi có axit làm xúc tác: CH3COOC2H5 + H2O -> CH3COOH + C2H5OH (thuỷ phân trong môi trường axit).\nNếu thuỷ phân este bằng cách đun với dung dịch NaOH thì phản ứng chỉ xảy ra theo một chiều, không thuận nghịch: CH3COOC2H5 + NaOH -> CH3COONa + C2H5OH.\nPhân biệt hai kiểu thuỷ phân này giúp viết đúng chuỗi khi đề yêu cầu tái tạo lại nguyên liệu ban đầu từ este, tránh nhầm sản phẩm là CH3COOH khi thực chất phản ứng dùng NaOH."
+        },
+        {
+          "id": "b5-l2-c5",
+          "heading": "Nâng cao: Từ C2H2 tới polime PE và PVC",
+          "body": "Axetilen là điểm khởi đầu của một chuỗi phân nhánh quan trọng. Một nhánh: C2H2 cộng H2 (xúc tác thích hợp) tạo C2H4, rồi C2H4 trùng hợp ở nhiệt độ, áp suất và xúc tác thích hợp tạo polietilen (-CH2-CH2-)n, viết tắt PE, dùng làm màng mỏng, túi nhựa.\nNhánh khác: C2H2 cộng HCl (xúc tác HgCl2, đun nóng) tạo vinyl clorua CH2=CHCl, sau đó vinyl clorua trùng hợp tạo poli(vinyl clorua) (-CH2-CHCl-)n, viết tắt PVC, dùng làm ống nhựa, vỏ dây điện.\nKhi gặp sơ đồ có mũi tên tới PE hoặc PVC, cần nhận ra hai bước bắt buộc là phản ứng cộng để tạo monome rồi phản ứng trùng hợp để tạo polime, không được viết gộp thành một bước duy nhất."
+        },
+        {
+          "id": "b5-l2-c6",
+          "heading": "Nâng cao: Xà phòng hoá chất béo",
+          "body": "Chất béo có công thức chung dạng (RCOO)3C3H5, trong đó R là gốc hiđrocacbon của axit béo. Khi đun chất béo với dung dịch NaOH, xảy ra phản ứng xà phòng hoá: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3.\nSản phẩm RCOONa là thành phần chính của xà phòng, còn C3H5(OH)3 là glixerol, một rượu đa chức.\nPhản ứng này nối chất béo với nhóm muối của axit hữu cơ và với rượu trong cùng một sơ đồ chuyển hoá, thường gặp ở dạng câu hỏi ghép chuỗi giữa chất béo, axit béo và glixerol."
+        },
+        {
+          "id": "b5-l2-c7",
+          "heading": "Nâng cao: Kỹ thuật biện luận chất ẩn trong sơ đồ",
+          "body": "Nhiều đề HSG không cho tên chất mà chỉ mô tả bằng kí hiệu (A, B, C...) kèm một vài tính chất đặc trưng, yêu cầu suy ra công thức đúng.\nCách làm hiệu quả là gạch chân các dấu hiệu đặc trưng trong đề, ví dụ: chất khí làm mất màu dung dịch brom gợi ý là hiđrocacbon không no; chất tạo kết tủa với AgNO3/NH3 gợi ý có liên kết ba đầu mạch như C2H2; dung dịch làm quỳ tím hoá đỏ gợi ý là axit hữu cơ như CH3COOH; dung dịch cho phản ứng tráng gương khi đun nóng gợi ý là glucozơ.\nSau khi nhận diện được chất dễ nhận biết nhất, ráp các chất còn lại vào đúng vị trí mũi tên theo chiều phản ứng mà đề mô tả, suy xuôi hoặc suy ngược tuỳ dữ kiện đã có."
         }
       ],
       "questions": [
@@ -378,17 +428,37 @@
         {
           "id": "b5-l3-c1",
           "heading": "Trục kiến thức cần nối lại",
-          "body": "Phần tổng hợp hữu cơ thường nối bốn mảng: hiđrocacbon, dẫn xuất chứa oxi, gluxit và polime.\nMột bài có thể yêu cầu vừa nhận biết tính chất, vừa viết chuỗi phản ứng, vừa tính toán theo phương trình.\nMuốn làm tốt cần nhớ chắc công thức quen thuộc như C2H5OH, CH3COOH, C6H12O6, CH3COOC2H5."
+          "body": "Phần tổng hợp hữu cơ thường nối bốn mảng: hiđrocacbon, dẫn xuất chứa oxi, gluxit và polime.\nMột bài có thể yêu cầu vừa nhận biết tính chất, vừa viết chuỗi phản ứng, vừa tính toán theo phương trình.\nMuốn làm tốt cần nhớ chắc công thức quen thuộc như C2H5OH, CH3COOH, C6H12O6, CH3COOC2H5.\nNâng cao: khi đề cho hỗn hợp khí gồm nhiều chất hữu cơ (ví dụ CH4 và C2H4, hoặc một hiđrocacbon và một dẫn xuất chứa oxi), có thể dùng khối lượng mol trung bình M trung bình = m hỗn hợp : n hỗn hợp, hoặc suy M trung bình từ tỉ khối hơi so với H2 hay không khí (M trung bình = d(so với H2) x 2 hoặc d(so với không khí) x 29); so sánh M trung bình với M của từng chất thành phần giúp loại nhanh phương án sai hoặc ước lượng tỉ lệ mol các chất trong hỗn hợp."
         },
         {
           "id": "b5-l3-c2",
           "heading": "Dạng câu ghép nhiều phát biểu",
-          "body": "Trong đề chuyên, câu trắc nghiệm nhiều lựa chọn thường đưa ra 4 đến 5 phát biểu thuộc nhiều phần kiến thức khác nhau.\nCách làm là xét từng phát biểu độc lập, không vội chọn theo cảm tính.\nNhững mốc rất hay dùng là: etilen làm mất màu brom, glucozơ tráng gương, tinh bột cho màu xanh tím với iot, PE là sản phẩm trùng hợp etilen."
+          "body": "Trong đề chuyên, câu trắc nghiệm nhiều lựa chọn thường đưa ra 4 đến 5 phát biểu thuộc nhiều phần kiến thức khác nhau.\nCách làm là xét từng phát biểu độc lập, không vội chọn theo cảm tính.\nNhững mốc rất hay dùng là: etilen làm mất màu brom, glucozơ tráng gương, tinh bột cho màu xanh tím với iot, PE là sản phẩm trùng hợp etilen.\nNâng cao: một số phát biểu hay gây nhầm lẫn trong đề tổng hợp cần lưu ý. 'Saccarozơ tráng gương giống glucozơ' là sai, vì saccarozơ không còn nhóm chức khử tự do nên phải thuỷ phân thành glucozơ và fructozơ trước mới tráng gương được. 'Mọi chất có công thức CnH2nO2 đều là axit hữu cơ' cũng sai, vì công thức này chung cho cả axit no đơn chức và este no đơn chức mạch hở, phải dựa vào phản ứng với quỳ tím mới phân biệt được. 'PVC được trùng hợp trực tiếp từ etilen' là sai, vì monome của PVC là vinyl clorua CH2=CHCl, chỉ điều chế gián tiếp từ C2H2 qua một bước cộng HCl trước khi trùng hợp."
         },
         {
           "id": "b5-l3-c3",
           "heading": "Bài toán chuỗi nhiều giai đoạn",
-          "body": "Với chuỗi 2 đến 3 phản ứng liên tiếp, nên tính số mol theo từng bước rồi nhân hiệu suất của từng giai đoạn.\nNếu đề cho hiệu suất ở mọi bước thì số mol cuối cùng bằng số mol lí thuyết nhân lần lượt với từng hiệu suất.\nKhi biện luận công thức từ đốt cháy, vẫn áp dụng các bước quen thuộc: tìm nC, nH, nO rồi kiểm tra sự phù hợp với loại hợp chất."
+          "body": "Với chuỗi 2 đến 3 phản ứng liên tiếp, nên tính số mol theo từng bước rồi nhân hiệu suất của từng giai đoạn.\nNếu đề cho hiệu suất ở mọi bước thì số mol cuối cùng bằng số mol lí thuyết nhân lần lượt với từng hiệu suất.\nKhi biện luận công thức từ đốt cháy, vẫn áp dụng các bước quen thuộc: tìm nC, nH, nO rồi kiểm tra sự phù hợp với loại hợp chất.\nNâng cao: khi một trong hai chất ở bước phản ứng cuối được cho dư (ví dụ C2H5OH dư so với CH3COOH ở bước este hoá), số mol sản phẩm lí thuyết phải tính theo chất phản ứng hết, không tính theo chất dư; hiệu suất của bước đó chỉ nhân vào số mol lí thuyết đã xác định theo chất thiếu."
+        },
+        {
+          "id": "b5-l3-c4",
+          "heading": "Nâng cao: Bảo toàn nguyên tố cho hỗn hợp hữu cơ nhiều loại nhóm chức",
+          "body": "Khi đốt cháy hỗn hợp gồm nhiều chất hữu cơ khác loại nhóm chức (ví dụ vừa có hiđrocacbon, vừa có rượu, axit hoặc este) mà chỉ chứa C, H, O, không cần viết riêng từng phương trình cháy — có thể dùng trực tiếp bảo toàn nguyên tố cho cả hỗn hợp.\nTổng số mol C trong hỗn hợp bằng số mol CO2 sinh ra; tổng số mol H bằng 2 lần số mol H2O sinh ra. Nếu đề cho khối lượng hỗn hợp ban đầu thì khối lượng oxi trong hỗn hợp bằng khối lượng hỗn hợp trừ khối lượng C và khối lượng H vừa tính, từ đó suy ra tổng số mol O.\nCách làm này đặc biệt hữu ích với các câu tổng hợp trộn hai, ba chất khác dãy đồng đẳng: không cần biết tỉ lệ mol từng chất, vẫn trả lời được các câu hỏi về tổng khối lượng, số mol nguyên tố hay công thức phân tử trung bình của hỗn hợp."
+        },
+        {
+          "id": "b5-l3-c5",
+          "heading": "Nâng cao: CO2 từ đốt cháy hữu cơ tác dụng với dung dịch kiềm",
+          "body": "Một dạng câu hay xuất hiện ở cuối đề tổng hợp là nối phần đốt cháy hợp chất hữu cơ với phần nhận biết muối cacbonat đã học ở chương vô cơ: dẫn toàn bộ CO2 sinh ra vào dung dịch Ca(OH)2 hoặc NaOH.\nVới dung dịch Ca(OH)2, đặt tỉ lệ T = n(CO2) : n(Ca(OH)2). Nếu T ≤ 1, sản phẩm chỉ có CaCO3 (T = 1 ứng với phản ứng vừa đủ, T < 1 ứng với Ca(OH)2 dư). Nếu 1 < T < 2, sản phẩm là hỗn hợp CaCO3 và Ca(HCO3)2. Nếu T ≥ 2, toàn bộ sản phẩm là Ca(HCO3)2 tan trong nước nên không xuất hiện kết tủa.\nCách biện luận này giúp xác định đúng khối lượng kết tủa CaCO3 mà không cần đoán mò, đồng thời cho thấy sự liên kết giữa kiến thức đốt cháy hữu cơ và phần hợp chất vô cơ chứa cacbon."
+        },
+        {
+          "id": "b5-l3-c6",
+          "heading": "Nâng cao: Hỗn hợp axit và este cùng tác dụng NaOH",
+          "body": "Khi hỗn hợp gồm một axit hữu cơ và chính este của nó (ví dụ CH3COOH và CH3COOC2H5) cùng phản ứng với dung dịch NaOH, cả hai chất đều tạo ra cùng một loại muối, nên không thể chỉ dựa vào khối lượng muối để tách riêng số mol từng chất.\nCách làm hiệu quả là đặt số mol axit là a, số mol este là b, rồi lập hệ hai phương trình: một phương trình theo khối lượng hỗn hợp ban đầu (60a + 88b), một phương trình theo số mol NaOH đã phản ứng (a + b). Giải hệ để tìm a, b riêng biệt.\nVí dụ: hỗn hợp X gồm CH3COOH và CH3COOC2H5 có khối lượng 20,8 g tác dụng vừa đủ với 300 ml dung dịch NaOH 1M (0,3 mol). Ta có 60a + 88b = 20,8 và a + b = 0,3. Từ phương trình sau suy a = 0,3 - b, thế vào phương trình đầu: 60(0,3 - b) + 88b = 20,8, tức 18 + 28b = 20,8, suy ra b = 0,1 mol và a = 0,2 mol."
+        },
+        {
+          "id": "b5-l3-c7",
+          "heading": "Nâng cao: Sơ đồ chuyển hoá dùng lại một chất ở nhiều bước",
+          "body": "Một số sơ đồ tổng hợp không đi theo một đường thẳng mà dùng lại cùng một chất ở nhiều vị trí khác nhau. Ví dụ quen thuộc: tinh bột thuỷ phân tạo glucozơ, glucozơ lên men tạo rượu etylic; sau đó chỉ một phần rượu etylic bị oxi hoá thành axit axetic, còn phần rượu etylic còn dư lại tiếp tục phản ứng với chính axit axetic vừa tạo ra để tạo thành este.\nVới dạng sơ đồ này, cần đánh số rõ vai trò của từng chất theo từng bước: chất nào là sản phẩm của bước trước, chất nào tiếp tục làm nguyên liệu cho bước sau, và phần nào của một chất bị tách ra dùng cho một nhánh phản ứng khác. Vẽ sơ đồ có mũi tên và ghi rõ số mol tại mỗi bước sẽ tránh nhầm lẫn hơn là chỉ tính nhẩm.\nĐây chính là kĩ thuật đứng sau các bài toán ba bước liên tiếp có chất dư ở bước cuối, dạng bài rất hay gặp trong đề thi HSG cấp huyện, tỉnh."
         }
       ],
       "questions": [

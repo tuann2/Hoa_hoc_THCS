@@ -289,9 +289,9 @@ commit).
 
 ### B5 · Chuyên đề tổng hợp Hữu cơ (`b5-tong-hop-huu-co`)
 
-- [ ] `b5-l1` — Biện luận công thức phân tử hợp chất hữu cơ
-- [ ] `b5-l2` — Chuỗi phản ứng hữu cơ; nhận biết chất hữu cơ
-- [ ] `b5-l3` — Đề tổng hợp hữu cơ theo cấu trúc đề thi chuyên
+- [x] `b5-l1` — Biện luận công thức phân tử hợp chất hữu cơ
+- [x] `b5-l2` — Chuỗi phản ứng hữu cơ; nhận biết chất hữu cơ
+- [x] `b5-l3` — Đề tổng hợp hữu cơ theo cấu trúc đề thi chuyên
 
 ## 5. Out of scope
 
