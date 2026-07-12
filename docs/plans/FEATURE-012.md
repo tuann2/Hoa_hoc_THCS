@@ -272,11 +272,11 @@ commit).
 
 ### B3 · Dẫn xuất chứa oxi (`b3-dan-xuat-chua-oxi`)
 
-- [ ] `b3-l1` — Rượu etylic: cấu tạo, tính chất, độ rượu
-- [ ] `b3-l2` — Axit axetic: tính chất axit, phản ứng este hoá
-- [ ] `b3-l3` — Mối liên hệ etilen – rượu etylic – axit axetic
-- [ ] `b3-l4` — Chất béo; xà phòng hoá
-- [ ] `b3-l5` — Nâng cao: hiệu suất este hoá/lên men; bài toán độ rượu
+- [x] `b3-l1` — Rượu etylic: cấu tạo, tính chất, độ rượu
+- [x] `b3-l2` — Axit axetic: tính chất axit, phản ứng este hoá
+- [x] `b3-l3` — Mối liên hệ etilen – rượu etylic – axit axetic
+- [x] `b3-l4` — Chất béo; xà phòng hoá
+- [x] `b3-l5` — Nâng cao: hiệu suất este hoá/lên men; bài toán độ rượu
 
 ### B4 · Gluxit – Protein – Polime (`b4-gluxit-protein-polime`)
 
