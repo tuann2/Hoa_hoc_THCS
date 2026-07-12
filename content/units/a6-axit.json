@@ -17,17 +17,52 @@
         {
           "id": "a6-l1-c1",
           "heading": "Axit là gì?",
-          "body": "Axit là hợp chất mà phân tử có một hay nhiều nguyên tử H liên kết với gốc axit. Khi tan trong nước, nhiều axit phân li tạo H^+ nên làm quỳ tím hoá đỏ và có pH < 7.\nVí dụ: HCl, H2SO4, HNO3."
+          "body": "Axit là hợp chất mà phân tử có một hay nhiều nguyên tử H liên kết với gốc axit. Khi tan trong nước, nhiều axit phân li tạo H^+ nên làm quỳ tím hoá đỏ và có pH < 7.\nVí dụ: HCl, H2SO4, HNO3.\n\nLưu ý nâng cao: H^+ chỉ là cách viết gọn trong phương trình; trong nước, proton thực tế liên kết với H2O. Độ axit còn phụ thuộc nồng độ ion H^+, vì vậy không thể kết luận chất nào là axit mạnh hơn (lực axit lớn hơn) chỉ từ pH nếu chưa biết nồng độ."
         },
         {
           "id": "a6-l1-c2",
           "heading": "Ba phản ứng nền tảng",
-          "body": "Axit phản ứng với kim loại đứng trước H tạo muối và H2. Axit phản ứng với bazơ hoặc oxit bazơ tạo muối và nước.\nVí dụ: 2HCl + Zn -> ZnCl2 + H2; H2SO4 + CuO -> CuSO4 + H2O."
+          "body": "Axit phản ứng với kim loại đứng trước H tạo muối và H2. Axit phản ứng với bazơ hoặc oxit bazơ tạo muối và nước.\nVí dụ: 2HCl + Zn -> ZnCl2 + H2; H2SO4 + CuO -> CuSO4 + H2O.\n\nKhi viết phản ứng kim loại, điều kiện ngầm là axit loãng, không có tính oxi hoá mạnh. Quy tắc kim loại đứng trước H không được dùng máy móc cho HNO3 hoặc H2SO4 đặc; hai axit này sẽ học riêng vì có thể tạo sản phẩm khử khác H2."
         },
         {
           "id": "a6-l1-c3",
           "heading": "Khi nào axit phản ứng với muối?",
-          "body": "Phản ứng axit + muối thường xảy ra khi tạo chất kết tủa, chất khí hoặc chất điện li yếu hơn. Muối cacbonat gặp axit thường giải phóng CO2.\nVí dụ: 2HCl + Na2CO3 -> 2NaCl + H2O + CO2."
+          "body": "Phản ứng axit + muối thường xảy ra khi tạo chất kết tủa, chất khí hoặc chất điện li yếu hơn. Muối cacbonat gặp axit thường giải phóng CO2.\nVí dụ: 2HCl + Na2CO3 -> 2NaCl + H2O + CO2.\n\nVới các chất tan, hãy xét ion trong dung dịch: phản ứng chỉ có ý nghĩa khi một ion bị tách khỏi dung dịch dưới dạng kết tủa, khí hoặc H2O. Do đó HCl và NaCl không phản ứng, còn HCl và AgNO3 phản ứng vì tạo AgCl kết tủa."
+        },
+        {
+          "id": "a6-l1-c4",
+          "heading": "Nâng cao: Lực axit, nồng độ và pH",
+          "body": "Axit mạnh là axit phân li hoàn toàn trong nước, còn axit yếu chỉ phân li một phần. Khái niệm này khác với dung dịch đặc hay loãng: dung dịch HCl rất loãng vẫn là dung dịch của axit mạnh; dung dịch CH3COOH đậm đặc vẫn là dung dịch của axit yếu.\n\nKhi cùng điều kiện đo, pH giảm 1 đơn vị nghĩa là nồng độ H^+ tăng 10 lần. Vì nồng độ ban đầu cũng ảnh hưởng pH, không dùng riêng màu quỳ hoặc một giá trị pH để so sánh lực axit của hai chất khi chưa quy về cùng nồng độ."
+        },
+        {
+          "id": "a6-l1-c5",
+          "heading": "Nâng cao: Điều kiện kim loại giải phóng H2",
+          "body": "Với HCl loãng hoặc H2SO4 loãng, kim loại phải đứng trước H trong dãy hoạt động hoá học thì mới đẩy được H^+ thành H2. Ví dụ: Fe + 2HCl -> FeCl2 + H2; Cu, Ag đứng sau H nên không phản ứng với HCl loãng.\n\nPhải xét cả bề mặt kim loại: màng oxit, dầu mỡ hoặc lớp kim loại khác bám ngoài có thể làm phản ứng chậm hay chưa thấy ngay. Bột kim loại, khuấy và tăng nhiệt độ thường làm tốc độ phản ứng tăng, nhưng không làm kim loại đứng sau H bỗng phản ứng với axit loãng."
+        },
+        {
+          "id": "a6-l1-c6",
+          "heading": "Nâng cao: Quy tắc H^+ – OH^- khi trung hoà",
+          "body": "Bản chất của phản ứng giữa axit và bazơ là H^+ + OH^- -> H2O. Vì thế cần đếm số mol H^+ có thể tạo ra và số mol OH^- của bazơ, thay vì chỉ nhìn số mol phân tử.\n\nTrung hoà hoàn toàn 1 mol H2SO4 cần 2 mol NaOH: H2SO4 + 2NaOH -> Na2SO4 + 2H2O. Nếu chỉ có 1 mol NaOH, phản ứng dừng ở NaHSO4: H2SO4 + NaOH -> NaHSO4 + H2O. Tỉ lệ thuốc thử quyết định tạo muối axit hay muối trung hoà."
+        },
+        {
+          "id": "a6-l1-c7",
+          "heading": "Nâng cao: Cacbonat và hiđrocacbonat gặp axit",
+          "body": "Ion CO3^2- nhận 2H^+ để tạo H2O và CO2, còn ion HCO3^- chỉ cần 1H^+. Vì vậy cùng 1 mol muối, Na2CO3 tiêu thụ số mol axit gấp đôi NaHCO3.\n\nPhương trình ion rút gọn: CO3^2- + 2H^+ -> H2O + CO2; HCO3^- + H^+ -> H2O + CO2. Khi axit chưa đủ, CO3^2- trước hết có thể chuyển thành HCO3^-; đây là điểm cần xét khi đề cho lượng axit hữu hạn."
+        },
+        {
+          "id": "a6-l1-c8",
+          "heading": "Nâng cao: Dự đoán phản ứng axit với muối",
+          "body": "Muốn dự đoán nhanh, tách các chất điện li mạnh thành ion rồi loại các ion đứng ngoài phản ứng. Ví dụ BaCl2 + H2SO4 -> BaSO4 + 2HCl có phương trình ion rút gọn Ba^2+ + SO4^2- -> BaSO4. Kết tủa BaSO4 kéo phản ứng theo chiều tạo sản phẩm.\n\nNgược lại, trộn HCl với NaNO3 chỉ thu được bốn ion H^+, Cl^-, Na^+, NO3^- vẫn cùng tồn tại trong dung dịch; không có khí, kết tủa hay chất điện li yếu mới sinh ra nên không viết phương trình phản ứng."
+        },
+        {
+          "id": "a6-l1-c9",
+          "heading": "Nâng cao: Phân biệt axit với dung dịch khác",
+          "body": "Quỳ tím hoá đỏ cho biết dung dịch có môi trường axit, nhưng không giúp nhận ra ngay gốc axit. Muốn có bằng chứng đặc trưng, chọn thuốc thử tạo hiện tượng rõ: CO3^2- cho CO2, Ag^+ cho AgCl với Cl^-, Ba^2+ cho BaSO4 với SO4^2-.\n\nKhi nhận biết bằng khí CO2, nên dẫn khí qua nước vôi trong; nước vôi vẩn đục do CaCO3. Không dùng riêng hiện tượng sủi bọt để kết luận là CO2, vì axit gặp kim loại cũng có thể cho H2."
+        },
+        {
+          "id": "a6-l1-c10",
+          "heading": "Nâng cao: Bảo toàn H^+ trong bài toán axit",
+          "body": "Trong phản ứng hoàn toàn, có thể quy đổi lượng axit về số mol H^+ đã tham gia. Ví dụ 1 mol H2SO4 trung hoà hoàn toàn cung cấp 2 mol H^+ để phản ứng với 2 mol OH^-; 1 mol CO3^2- cũng cần 2 mol H^+. Cách quy đổi này đặc biệt hữu ích cho hỗn hợp bazơ, oxit bazơ và cacbonat.\n\nNếu bài cho thể tích khí ở đktc, dùng V = 22,4n (L), nên n khí = V/22,4. Sau đó vẫn phải dựa vào phương trình hoặc số mol H^+ tiêu thụ để liên hệ với axit; không áp dụng tỉ lệ thể tích khi các khí không ở cùng điều kiện."
         }
       ],
       "questions": [
@@ -191,17 +226,47 @@
         {
           "id": "a6-l2-c1",
           "heading": "HCl có gì đặc biệt?",
-          "body": "Dung dịch HCl là axit mạnh, không màu, bốc khói trong không khí ẩm khi ở dạng khí. HCl tan rất tốt trong nước và phân li gần như hoàn toàn thành H^+ và Cl^-."
+          "body": "Dung dịch HCl là axit mạnh, không màu. Khí HCl tan rất tốt trong nước và khi tan phân li gần như hoàn toàn thành H+ và Cl-; vì vậy dung dịch có tính axit mạnh.\n\nLưu ý nâng cao: HCl khan là chất khí; chỉ khi có nước mới biểu hiện rõ tính axit. Do đó khí HCl không làm quỳ tím khô đổi màu, còn trong không khí ẩm lại tạo màn sương axit trắng do hoà tan vào hơi nước."
         },
         {
           "id": "a6-l2-c2",
           "heading": "Nhận biết ion Cl^-",
-          "body": "Thuốc thử quen thuộc là dung dịch AgNO3. Khi có Cl^-, xuất hiện kết tủa trắng AgCl.\nPhương trình: HCl + AgNO3 -> AgCl + HNO3."
+          "body": "Thuốc thử quen thuộc là dung dịch AgNO3. Khi có Cl-, xuất hiện kết tủa trắng AgCl.\nPhương trình: HCl + AgNO3 -> AgCl + HNO3.\n\nPhương trình ion rút gọn là: Ag+ + Cl- -> AgCl. AgCl không tan trong HNO3 loãng, tan trong dung dịch NH3 và sẫm màu dần khi để ngoài ánh sáng; các tính chất này hỗ trợ nhận xét kết tủa ở mức nâng cao."
         },
         {
           "id": "a6-l2-c3",
           "heading": "Ứng dụng và lưu ý",
-          "body": "HCl dùng tẩy gỉ kim loại, điều chế muối clorua và điều chỉnh pH. Dù là axit mạnh, HCl loãng không phản ứng với Cu, Ag vì các kim loại này đứng sau H."
+          "body": "HCl dùng tẩy gỉ kim loại, điều chế muối clorua và điều chỉnh pH. Dù là axit mạnh, HCl loãng không phản ứng với Cu, Ag vì các kim loại này đứng sau H.\n\nKhi tẩy gỉ sắt, HCl hoà tan lớp oxit: Fe2O3 + 6HCl -> 2FeCl3 + 3H2O. Không ngâm quá lâu vì sau khi gỉ hết, sắt nền cũng có thể phản ứng với HCl tạo FeCl2 và H2; cần kiểm soát thời gian, nồng độ và rửa sạch bề mặt."
+        },
+        {
+          "id": "a6-l2-c4",
+          "heading": "Nâng cao: Điều chế và thu khí HCl",
+          "body": "Trong phòng thí nghiệm, có thể đun nhẹ NaCl rắn với H2SO4 đặc: NaCl + H2SO4 -> NaHSO4 + HCl. Khí HCl sinh ra phải thu bằng cách đẩy không khí, không thu trên nước vì tan rất mạnh trong nước.\n\nHCl nặng hơn không khí nên khi thu, dẫn khí xuống gần đáy bình để đẩy không khí ra phía trên. Bình và dụng cụ phải khô nếu mục tiêu là thu khí HCl; hơi nước sẽ hấp thụ khí và làm giảm lượng khí thu được."
+        },
+        {
+          "id": "a6-l2-c5",
+          "heading": "Nâng cao: Thí nghiệm đài phun HCl",
+          "body": "Bình chứa khí HCl khô nối với một đầu ống nhúng vào nước có thể tạo hiện tượng đài phun khi một ít nước được đưa vào bình. HCl hoà tan rất nhanh làm áp suất trong bình giảm, vì thế áp suất khí quyển đẩy nước phun vào bình.\n\nNếu nước có quỳ tím, phần nước đi vào chuyển đỏ. Thí nghiệm chứng minh độ tan rất lớn của HCl và cho thấy tính axit chỉ xuất hiện rõ sau khi khí hoà tan trong nước; chỉ thực hiện với dụng cụ kín, lượng nhỏ và tủ hút phù hợp."
+        },
+        {
+          "id": "a6-l2-c6",
+          "heading": "Nâng cao: HCl đặc trong phản ứng oxi hoá – khử",
+          "body": "HCl loãng thường chỉ thể hiện tính axit. Với HCl đặc và chất oxi hoá mạnh như MnO2 khi đun nóng, ion Cl- bị oxi hoá thành Cl2: MnO2 + 4HCl đặc -> MnCl2 + Cl2 + 2H2O.\n\nTrong phản ứng này, Mn giảm số oxi hoá từ +4 xuống +2, còn Cl tăng từ -1 lên 0. Vì Cl2 độc và có tính kích ứng mạnh, đây là phản ứng dùng để giải thích nguyên tắc điều chế clo trong phòng thí nghiệm, không tự tiến hành ngoài điều kiện an toàn."
+        },
+        {
+          "id": "a6-l2-c7",
+          "heading": "Nâng cao: Làm chắc kết luận về ion Cl-",
+          "body": "Không kết luận chỉ từ một kết tủa trắng khi mẫu chưa rõ thành phần. Ag+ còn có thể tạo kết tủa với một số ion khác; nếu cần thử Cl- trong mẫu có thể chứa cacbonat, dùng HNO3 loãng để loại ảnh hưởng của cacbonat trước, rồi mới thêm AgNO3. Không dùng HCl để axit hoá vì chính HCl đưa Cl- vào mẫu và gây dương tính giả.\n\nVới một dãy chỉ gồm HCl, H2SO4 và HNO3, dùng các mẫu riêng: BaCl2 nhận ra H2SO4 nhờ BaSO4 trắng; trong các mẫu còn lại, AgNO3 cho AgCl trắng với HCl, còn HNO3 không cho kết tủa."
+        },
+        {
+          "id": "a6-l2-c8",
+          "heading": "Nâng cao: Tỉ lệ mol nhanh trong bài toán HCl",
+          "body": "Khi HCl là nguồn duy nhất tạo H2 trong phản ứng với kim loại, luôn có n HCl đã phản ứng = 2n H2, vì 2H+ tạo 1H2. Tỉ lệ này đúng cả khi kim loại tạo muối hoá trị II hay III; ví dụ 2Al + 6HCl -> 2AlCl3 + 3H2.\n\nKhi trung hoà bazơ M(OH)x hoàn toàn, số mol HCl bằng x lần số mol M(OH)x. Các tỉ lệ trên chỉ tính lượng HCl đã phản ứng; nếu đề nói HCl dư thì không được đồng nhất lượng đó với số mol HCl ban đầu."
+        },
+        {
+          "id": "a6-l2-c9",
+          "heading": "Nâng cao: Phân biệt khí HCl với dung dịch HCl",
+          "body": "Khí HCl là chất phân tử, còn dung dịch HCl chứa chủ yếu H+ và Cl- nên dẫn điện mạnh và làm đổi màu chất chỉ thị. Vì vậy các tính chất như trung hoà NaOH hay tạo AgCl chỉ được xét cho HCl đã tan trong nước.\n\nKhi làm bài, hãy đọc kĩ dữ kiện “HCl khí”, “dung dịch HCl” hoặc “HCl đặc”. HCl đặc vẫn là dung dịch, khác HCl khí; “đặc” nói về lượng HCl hoà tan nhiều trong một thể tích dung dịch, không đồng nghĩa với HCl khan."
         }
       ],
       "questions": [
@@ -365,17 +430,47 @@
         {
           "id": "a6-l3-c1",
           "heading": "H2SO4 loãng cư xử như một axit mạnh",
-          "body": "H2SO4 loãng có đầy đủ tính chất chung của axit: làm quỳ tím hoá đỏ, tác dụng với kim loại đứng trước H, bazơ, oxit bazơ và nhiều muối.\nVí dụ: Fe + H2SO4 loãng -> FeSO4 + H2."
+          "body": "H2SO4 loãng có đầy đủ tính chất chung của axit: làm quỳ tím hoá đỏ, tác dụng với kim loại đứng trước H, bazơ, oxit bazơ và nhiều muối.\nVí dụ: Fe + H2SO4 loãng -> FeSO4 + H2.\n\nH2SO4 là axit hai nấc: nấc đầu phân li rất mạnh tạo H+ và HSO4^-, còn HSO4^- vẫn có thể nhường tiếp H+ nhưng yếu hơn. Vì thế, khi NaOH chưa đủ, có thể tạo muối axit NaHSO4: H2SO4 + NaOH -> NaHSO4 + H2O; khi NaOH đủ, tạo Na2SO4."
         },
         {
           "id": "a6-l3-c2",
           "heading": "H2SO4 đặc có thêm hai tính chất quan trọng",
-          "body": "H2SO4 đặc rất háo nước và có tính oxi hoá mạnh. Vì vậy nó có thể làm than hoá đường và oxi hoá Cu, C, S khi đun nóng.\nVí dụ: Cu + 2H2SO4 đặc -> CuSO4 + SO2 + 2H2O."
+          "body": "H2SO4 đặc rất háo nước và có tính oxi hoá mạnh. Vì vậy nó có thể làm than hoá đường và oxi hoá Cu, C, S khi đun nóng.\nVí dụ: Cu + 2H2SO4 đặc -> CuSO4 + SO2 + 2H2O.\n\nTrong phản ứng với Cu nóng, Cu tăng số oxi hoá từ 0 lên +2, còn S trong một phần H2SO4 giảm từ +6 xuống +4 trong SO2. Do H2SO4 đặc vừa cung cấp gốc SO4^2- tạo muối, vừa là chất oxi hoá nên không áp dụng quy tắc “kim loại + axit tạo H2”; sản phẩm khử thường gặp là SO2."
         },
         {
           "id": "a6-l3-c3",
           "heading": "Nguyên tắc an toàn",
-          "body": "Khi pha loãng phải rót từ từ axit vào nước, không làm ngược lại. Lý do là quá trình hoà tan toả nhiều nhiệt; nếu đổ nước vào axit đặc, nước sôi cục bộ dễ bắn axit."
+          "body": "Khi pha loãng phải rót từ từ axit vào nước, không làm ngược lại. Lý do là quá trình hoà tan toả nhiều nhiệt; nếu đổ nước vào axit đặc, nước sôi cục bộ dễ bắn axit.\n\nLuôn dùng kính, găng phù hợp và dụng cụ chịu nhiệt; không pipet bằng miệng. Nếu axit bắn lên da hoặc mắt, phải xả ngay dưới thật nhiều nước và báo người phụ trách, không tự dùng chất trung hoà mạnh trực tiếp trên cơ thể."
+        },
+        {
+          "id": "a6-l3-c4",
+          "heading": "Nâng cao: Phân biệt háo nước và tách nước",
+          "body": "Tính háo nước là khả năng hút nước có sẵn trong không khí hoặc trong chất khác; vì vậy H2SO4 đặc có thể hấp thụ hơi nước. Tính tách nước mạnh hơn: nó lấy H và O theo tỉ lệ tạo H2O ra khỏi phân tử.\n\nVới đường saccarozơ, hiện tượng than hoá được mô tả bằng C12H22O11 -> 12C + 11H2O. H2SO4 đặc làm hỗn hợp nóng lên và trương thành khối đen; không tự làm thí nghiệm vì axit ăn mòn và khối phản ứng có thể bắn ra."
+        },
+        {
+          "id": "a6-l3-c5",
+          "heading": "Nâng cao: Chọn chất làm khô khí",
+          "body": "Muốn dùng H2SO4 đặc để làm khô một khí, phải kiểm tra hai điều: axit có hút được nước và có phản ứng với chính khí đó hay không. Có thể dùng để làm khô một số khí axit như HCl, Cl2, SO2.\n\nKhông dùng H2SO4 đặc làm khô NH3 vì xảy ra phản ứng axit – bazơ: 2NH3 + H2SO4 -> (NH4)2SO4. Cũng không dùng cho H2S vì H2SO4 đặc oxi hoá H2S: H2S + H2SO4 -> S + SO2 + 2H2O. Chất làm khô không được làm mất hay làm biến đổi khí cần thu."
+        },
+        {
+          "id": "a6-l3-c6",
+          "heading": "Nâng cao: Sự thụ động của Fe và Al",
+          "body": "Sắt và nhôm gặp H2SO4 đặc, nguội có thể bị thụ động: trên bề mặt hình thành lớp bảo vệ sít, khiến phản ứng hầu như không biểu hiện tiếp. Đây là ngoại lệ quan trọng khi dự đoán phản ứng của kim loại với axit đặc.\n\nKhông suy rộng kết luận này cho mọi điều kiện. Với axit loãng hoặc khi đun nóng, lớp bảo vệ có thể không còn bền và phản ứng có thể xảy ra. Trong bài tập, chỉ dùng quy tắc thụ động khi đề nêu rõ H2SO4 đặc, nguội."
+        },
+        {
+          "id": "a6-l3-c7",
+          "heading": "Nâng cao: Nhận biết ion sulfate chắc chắn",
+          "body": "Lấy một phần mẫu riêng, axit hoá bằng HCl hoặc HNO3 loãng rồi thêm dung dịch chứa Ba^2+ như BaCl2. Nếu có SO4^2-, xuất hiện kết tủa trắng BaSO4 bền trong axit: Ba^2+ + SO4^2- -> BaSO4. Bước axit hoá giúp loại ảnh hưởng của CO3^2- hoặc SO3^2- cũng có thể tạo kết tủa bari trắng.\n\nKhông dùng H2SO4 để axit hoá mẫu trước phép thử này, vì nó tự đưa SO4^2- vào mẫu và có thể gây kết luận dương tính giả."
+        },
+        {
+          "id": "a6-l3-c8",
+          "heading": "Nâng cao: Cân bằng phản ứng oxi hoá – khử với H2SO4 đặc",
+          "body": "Trước hết xác định chất bị oxi hoá và S(+6) của H2SO4 bị khử về S(+4) trong SO2. Ví dụ Cu nhường 2 electron khi thành Cu^2+, đúng bằng 2 electron mà một S(+6) nhận để thành S(+4); từ đó suy ra tỉ lệ Cu : SO2 là 1 : 1.\n\nSau khi cố định phần oxi hoá – khử, dùng H2SO4 còn lại tạo muối CuSO4 rồi cân bằng H, O bằng H2O: Cu + 2H2SO4 đặc -> CuSO4 + SO2 + 2H2O. Cách làm này tránh đoán hệ số theo cảm tính."
+        },
+        {
+          "id": "a6-l3-c9",
+          "heading": "Nâng cao: Dự đoán sản phẩm khử của H2SO4 đặc",
+          "body": "Khi H2SO4 đặc, nóng oxi hoá các chất khử thông dụng ở mức Hoá 9, S(+6) thường nhận 2 electron để tạo SO2. Ví dụ: C + 2H2SO4 đặc -> CO2 + 2SO2 + 2H2O; S + 2H2SO4 đặc -> 3SO2 + 2H2O.\n\nHãy luôn ghi điều kiện “đặc, nóng”: cùng một kim loại như Zn, với H2SO4 loãng sẽ cho H2, còn với H2SO4 đặc nóng không nên mặc định cho H2. Muốn kết luận sản phẩm, cần xét đồng thời bản chất chất khử, nồng độ axit và nhiệt độ."
         }
       ],
       "questions": [
@@ -549,17 +644,47 @@
         {
           "id": "a6-l4-c1",
           "heading": "Axit với kim loại: phải nhìn dãy hoạt động",
-          "body": "Với axit không có tính oxi hoá mạnh như HCl, H2SO4 loãng, chỉ kim loại đứng trước H mới giải phóng H2. Khi gặp hỗn hợp nhiều kim loại, kim loại hoạt động hơn phản ứng không phải lúc nào cũng trước nếu axit thiếu; cần so số mol H^+ và số mol kim loại."
+          "body": "Với axit không có tính oxi hoá mạnh như HCl, H2SO4 loãng, chỉ kim loại đứng trước H mới giải phóng H2. Khi gặp hỗn hợp nhiều kim loại, kim loại hoạt động hơn phản ứng không phải lúc nào cũng trước nếu axit thiếu; cần so số mol H^+ và số mol kim loại.\n\nỞ mức ion, kim loại M tạo M^n+ thì 1 mol M đã nhường n mol electron; 2H+ nhận 2 mol electron để thành H2. Vì vậy, với kim loại phản ứng hết trong axit không oxi hoá, nH2 = nH+ đã phản ứng / 2. Quy tắc này vẫn dùng được cho hỗn hợp kim loại khác hoá trị, miễn là xác định đúng ion kim loại tạo thành; chẳng hạn Fe với HCl hoặc H2SO4 loãng tạo Fe2+, không tự ý viết Fe3+."
         },
         {
           "id": "a6-l4-c2",
           "heading": "Axit với muối: chú ý sản phẩm",
-          "body": "Phản ứng axit + muối xảy ra khi tạo khí, kết tủa hoặc chất điện li yếu. Muối cacbonat, hiđrocacbonat gặp axit cho CO2; muối sunfit cho SO2; muối sunfua cho H2S."
+          "body": "Phản ứng axit + muối xảy ra khi tạo khí, kết tủa hoặc chất điện li yếu. Muối cacbonat, hiđrocacbonat gặp axit cho CO2; muối sunfit cho SO2; muối sunfua cho H2S.\n\nKhông được suy ra rằng cứ trộn axit với muối là có phản ứng. HCl và Na2SO4 trong dung dịch chỉ cho các ion cùng tồn tại; trái lại H2SO4 với BaCl2 tạo BaSO4 kết tủa, còn HCl với CH3COONa tạo CH3COOH là chất điện li yếu. Hãy xét sản phẩm thực tế thay vì chỉ đổi chỗ các ion."
         },
         {
           "id": "a6-l4-c3",
           "heading": "Mẹo xử lí chất dư",
-          "body": "Hãy viết phương trình ion rút gọn hoặc quy đổi về số mol H^+. Với hỗn hợp kim loại cùng hoá trị, số mol H2 thường giúp lập hệ nhanh. Với hỗn hợp muối cacbonat và hiđrocacbonat, nên dùng bảo toàn nguyên tố C."
+          "body": "Hãy viết phương trình ion rút gọn hoặc quy đổi về số mol H^+. Với hỗn hợp kim loại cùng hoá trị, số mol H2 thường giúp lập hệ nhanh. Với hỗn hợp muối cacbonat và hiđrocacbonat, nên dùng bảo toàn nguyên tố C.\n\nTrước khi lập hệ, phải xác định chất giới hạn. Với CO3^2-, 1 mol cần 2 mol H+ để tạo 1 mol CO2; với HCO3^-, 1 mol chỉ cần 1 mol H+. Vì thế cùng một lượng CO2 chưa đủ kết luận lượng axit đã dùng nếu chưa biết loại muối hoặc trạng thái axit dư."
+        },
+        {
+          "id": "a6-l4-c4",
+          "heading": "Nâng cao: Quy đổi bài kim loại về H+ và electron",
+          "body": "Với HCl hay H2SO4 loãng, phần phản ứng quyết định là: 2H+ + 2e -> H2. Nếu kim loại M tạo M^n+, 1 mol M tiêu thụ n mol H+ và tạo n/2 mol H2. Do đó có thể lập trực tiếp: tổng số mol H+ đã phản ứng = 2nH2 = tổng(n kim loại x hoá trị ion tạo thành). Cách quy đổi này tránh phải viết quá nhiều phương trình khi hỗn hợp có Mg, Al, Zn, Fe.\n\nChỉ áp dụng sau khi đã loại kim loại không phản ứng và xác định sản phẩm đúng. Không dùng công thức này cho axit oxi hoá mạnh như H2SO4 đặc nóng, vì khi đó H+ không phải chất duy nhất nhận electron và khí có thể không phải H2."
+        },
+        {
+          "id": "a6-l4-c5",
+          "heading": "Nâng cao: Hỗn hợp kim loại và các dữ kiện độc lập",
+          "body": "Hai ẩn số mol kim loại cần hai dữ kiện độc lập. Thường chọn phương trình theo khối lượng hỗn hợp và phương trình theo nH2; với mỗi kim loại phải gắn đúng hệ số tạo H2. Ví dụ Mg, Zn, Fe đều tạo 1 mol H2 từ 1 mol kim loại trong axit không oxi hoá, nên thể tích H2 chỉ cho tổng số mol của chúng, còn khối lượng giúp tách từng kim loại.\n\nNếu axit thiếu, không được mặc định mọi kim loại phản ứng hết. Hãy đặt nH+ ban đầu, so với lượng H+ cần theo từng phản ứng, rồi xét phần kim loại còn lại. Dãy hoạt động chỉ cho biết khả năng phản ứng; đề bài cần thêm giả thiết hoặc dữ kiện mới để khẳng định thứ tự phản ứng trong một hỗn hợp."
+        },
+        {
+          "id": "a6-l4-c6",
+          "heading": "Nâng cao: Carbonat và hiđrocacbonat theo hai giai đoạn",
+          "body": "Khi thêm từ từ axit vào CO3^2-, có thể coi theo hai bước: CO3^2- + H+ -> HCO3^- rồi HCO3^- + H+ -> CO2 + H2O. Vì thế, với a mol CO3^2- và b mol HCO3^- nhận x mol H+: nếu x <= a thì chưa tính CO2; nếu a < x < 2a + b thì nCO2 = x - a; nếu x >= 2a + b thì nCO2 = a + b. Đây là quy ước biện luận theo lượng axit thêm dần trong bài HSG.\n\nKhi nhỏ dung dịch carbonat vào axit đang dư, CO2 xuất hiện ngay ở giai đoạn đầu vì mỗi phần carbonat mới vào gặp môi trường nhiều H+. Do đó phải đọc kỹ chiều cho chất nào vào chất nào, nhất là các bài hỏi thể tích khí ở từng thời điểm."
+        },
+        {
+          "id": "a6-l4-c7",
+          "heading": "Nâng cao: Bảo toàn nguyên tố trong bài muối tạo khí",
+          "body": "Nếu axit dư, mỗi mol CO3^2- hoặc HCO3^- cho đúng 1 mol CO2; vì vậy nCO2 bằng tổng số mol nguyên tử C có trong các muối ban đầu. Tương tự, từ muối sunfit có thể bảo toàn S để liên hệ với nSO2, còn từ muối sunfua bảo toàn S để liên hệ với nH2S. Cách này đặc biệt gọn khi đề cho hỗn hợp nhiều muối nhưng chỉ cần lượng khí tổng.\n\nBảo toàn khối lượng cũng là phép kiểm nhanh: khối lượng bình phản ứng tăng bằng khối lượng chất đã đi vào trừ khối lượng khí thoát ra. Không dùng ngay công thức này nếu có bắn dung dịch, bay hơi nước đáng kể hoặc còn khí bị giữ lại trong dụng cụ."
+        },
+        {
+          "id": "a6-l4-c8",
+          "heading": "Nâng cao: Điều kiện để axit đẩy phản ứng muối",
+          "body": "Trong dung dịch, hãy viết các ion thực sự thay đổi. Phản ứng có chiều rõ khi tạo chất rời khỏi dạng ion tự do: kết tủa như BaSO4, khí như CO2, SO2, H2S, hoặc chất điện li yếu như H2O và CH3COOH. Ví dụ CO3^2- + 2H+ -> CO2 + H2O giải thích chung cho mọi muối carbonat tan gặp axit mạnh.\n\nQuy tắc “axit mạnh đẩy axit yếu ra khỏi muối” chỉ là cách nhớ thuận tiện. Nó không thay thế việc kiểm tra trạng thái chất và điều kiện dung dịch; các phương trình trao đổi mà mọi chất đều là chất điện li mạnh, tan, không tạo khí thường không có phản ứng ion rút gọn."
+        },
+        {
+          "id": "a6-l4-c9",
+          "heading": "Nâng cao: Nhận biết CO2, SO2 và H2S sau phản ứng với axit",
+          "body": "Ba khí thường gặp khi cho axit tác dụng với muối là CO2 từ carbonat, SO2 từ sunfit và H2S từ sunfua. CO2 làm đục nước vôi trong do CaCO3; nếu CO2 tiếp tục dư, kết tủa có thể tan thành Ca(HCO3)2. SO2 có tính khử nên làm mất màu dung dịch KMnO4 axit hoặc nước brom; CO2 không có hiện tượng này.\n\nH2S có mùi trứng thối và có thể làm giấy tẩm dung dịch muối chì(II) chuyển đen do PbS. Không ngửi trực tiếp khí để nhận biết: H2S độc, còn SO2 cũng kích thích đường hô hấp. Trong bài nhận biết, nên nêu rõ thuốc thử và dấu hiệu thay vì chỉ ghi tên khí."
         }
       ],
       "questions": [
@@ -724,6 +849,41 @@
           "id": "a6-l5-c3",
           "heading": "Cách kiểm tra nhanh",
           "body": "Hãy xác định trước bài toán thuộc kiểu nào: trung hoà, kim loại + axit loãng, hay axit đặc oxi hoá. Sau đó chọn công cụ phù hợp: bảo toàn H^+, bảo toàn electron hoặc lập hệ theo số mol khí."
+        },
+        {
+          "id": "a6-l5-c4",
+          "heading": "Nâng cao: Hai ẩn axit cần hai dữ kiện độc lập",
+          "body": "Đặt x, y lần lượt là số mol HCl và H2SO4 loãng trong một mẫu. Khi trung hoà hoàn toàn hoặc cho phản ứng hết với kim loại tạo H2, dữ kiện chỉ cho tổng đương lượng axit: x + 2y. Chẳng hạn, nếu hỗn hợp tạo a mol H2 thì x + 2y = 2a; riêng thể tích H2 không đủ để tách x và y.\n\nDữ kiện thứ hai phải phản ánh thành phần theo một cách khác, như số mol SO4^2- kết tủa thành BaSO4, số mol Cl- kết tủa thành AgCl, hoặc khối lượng muối khan sau trung hoà hoàn toàn. Hai dữ kiện cùng chỉ nói về x + 2y, dù được cho dưới hai hình thức, không tạo được hệ độc lập."
+        },
+        {
+          "id": "a6-l5-c5",
+          "heading": "Nâng cao: Khối lượng muối khan để tách hỗn hợp axit",
+          "body": "Cho hỗn hợp x mol HCl và y mol H2SO4 loãng được trung hoà vừa đủ bằng NaOH, rồi cô cạn theo giả thiết bài toán để thu NaCl và Na2SO4 khan. Khi đó nNaOH = x + 2y, còn khối lượng muối là m = 58,5x + 142y (g).\n\nĐặt a = nNaOH, thay x = a - 2y vào biểu thức khối lượng được m = 58,5a + 25y. Vì vậy y = (m - 58,5a)/25, rồi suy ra x. Chỉ dùng cách này khi cả hai axit đã được trung hoà hoàn toàn và chất rắn được nêu rõ là muối khan; NaOH dư, NaHSO4 còn lại hoặc nước kết tinh sẽ làm công thức thay đổi."
+        },
+        {
+          "id": "a6-l5-c6",
+          "heading": "Nâng cao: Định lượng Cl- và SO4^2- bằng mẫu riêng",
+          "body": "Muốn tìm từng axit trong hỗn hợp, có thể lấy các phần dung dịch bằng nhau. Ở một phần, axit hoá thích hợp rồi cho BaCl2 dư: nBaSO4 = nSO4^2- = nH2SO4 của phần đó. Ở phần khác, cho AgNO3 dư để có nAgCl = nCl- = nHCl, nếu mẫu không chứa ion khác cũng tạo kết tủa với Ag+.\n\nPhải quy về đúng thể tích mẫu. Ví dụ nếu 10,0 mL dung dịch tạo 0,020 mol BaSO4 thì 10,0 mL ấy chứa 0,020 mol H2SO4; không được gán ngay số mol đó cho toàn bộ 100 mL dung dịch. Trong bài phân tích, phép kết tủa thường cho dữ kiện thành phần, còn chuẩn độ NaOH cho tổng đương lượng axit."
+        },
+        {
+          "id": "a6-l5-c7",
+          "heading": "Nâng cao: Ghép khí H2 với phép chuẩn độ phần axit dư",
+          "body": "Với HCl và H2SO4 loãng, sau khi cho hỗn hợp axit phản ứng với kim loại rồi tách kim loại dư, có thể tính tổng H+ ban đầu mà không cần biết từng axit. Nếu thu được a mol H2 và dung dịch sau phản ứng cần b mol NaOH để trung hoà vừa đủ, thì nH+ ban đầu = 2a + b.\n\nLí do: phần đã phản ứng tạo H2 tiêu thụ 2a mol H+, còn NaOH đo trực tiếp b mol H+ còn lại. Công thức chỉ đúng khi không có phản ứng phụ, khí H2 được thu hoàn toàn và phép chuẩn độ được thực hiện sau khi đã loại kim loại còn dư; nếu dùng H2SO4 đặc nóng, không thể thay SO2 vào vị trí H2 trong công thức này. Chú ý: nếu dung dịch có ion kim loại (như Al3+, Fe2+, Zn2+, Mg2+), NaOH nhỏ vào để chuẩn độ có thể phản ứng phụ tạo kết tủa hiđroxit, tiêu tốn thêm NaOH; công thức này giả định phép chuẩn độ chỉ phản ứng với H+ dư."
+        },
+        {
+          "id": "a6-l5-c8",
+          "heading": "Nâng cao: Đếm đúng H2SO4 đặc trong phản ứng với Cu",
+          "body": "Trong phản ứng Cu + 2H2SO4 đặc, nóng -> CuSO4 + SO2 + 2H2O, hai mol H2SO4 có hai vai trò khác nhau: một mol cung cấp SO4^2- để tạo CuSO4, mol còn lại nhận electron và bị khử thành SO2. Vì thế khi Cu phản ứng hết trong điều kiện này: nCu = nSO2 = nCuSO4, nhưng nH2SO4 đã phản ứng = 2nCu.\n\nĐây là lí do không thể chỉ lấy số mol SO2 rồi coi đó là số mol H2SO4 đã dùng. Sản phẩm SO2 cho biết lượng H2SO4 đóng vai trò chất oxi hoá; việc tạo muối sulfate đòi hỏi phải tính thêm phần H2SO4 cung cấp gốc sulfate."
+        },
+        {
+          "id": "a6-l5-c9",
+          "heading": "Nâng cao: Bảo toàn electron với H2SO4 đặc, nóng",
+          "body": "Ở mức bài toán HSG 9 thường quy ước S(+6) trong H2SO4 đặc bị khử về S(+4) trong SO2, nên 1 mol SO2 nhận 2 mol electron. Kim loại M tạo M^n+ nhường n mol electron mỗi mol; do đó tổng electron kim loại nhường bằng 2nSO2. Với hỗn hợp kim loại, đây là phương trình rất gọn để liên hệ thành phần với khí SO2.\n\nSau khi tìm được SO2 bằng electron, vẫn phải dùng bảo toàn nguyên tố hoặc phương trình phản ứng để tính tổng H2SO4. Ví dụ Zn + 2H2SO4 đặc, nóng -> ZnSO4 + SO2 + 2H2O: 1 mol Zn vừa cần 1 mol H2SO4 tạo ZnSO4, vừa cần 1 mol H2SO4 bị khử. Không suy diễn rằng mọi kim loại luôn cho SO2 nếu đề bài nêu điều kiện khác."
+        },
+        {
+          "id": "a6-l5-c10",
+          "heading": "Nâng cao: Không trộn lẫn hai mô hình axit",
+          "body": "Mô hình x + 2y chỉ dùng cho hỗn hợp HCl và H2SO4 loãng khi cả hai thể hiện tính axit thông thường. Nó phù hợp cho trung hoà và cho kim loại đứng trước H tạo H2. Ngược lại, khi đề nêu H2SO4 đặc, nóng phản ứng với Cu hoặc kim loại khác, phải viết phương trình oxi hoá – khử riêng và xác định khí SO2 trước.\n\nNếu đề cho nhiều giai đoạn, hãy tách từng giai đoạn theo điều kiện: lượng axit loãng tiêu thụ có thể quy về H+, còn lượng H2SO4 đặc phải đếm theo phương trình riêng. Chỉ cộng các đại lượng sau khi chúng cùng ý nghĩa, chẳng hạn cùng là số mol H2SO4 đã phản ứng hoặc cùng là số mol electron trao đổi."
         }
       ],
       "questions": [

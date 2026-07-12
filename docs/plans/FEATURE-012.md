@@ -203,11 +203,11 @@ commit).
 
 ### A6 · Axit (`a6-axit`)
 
-- [ ] `a6-l1` — Tính chất hoá học chung của axit
-- [ ] `a6-l2` — Axit clohiđric HCl
-- [ ] `a6-l3` — Axit sunfuric: loãng và đặc
-- [ ] `a6-l4` — Nâng cao: axit tác dụng kim loại và muối
-- [ ] `a6-l5` — Nâng cao: bài toán hỗn hợp axit, axit đặc – loãng
+- [x] `a6-l1` — Tính chất hoá học chung của axit
+- [x] `a6-l2` — Axit clohiđric HCl
+- [x] `a6-l3` — Axit sunfuric: loãng và đặc
+- [x] `a6-l4` — Nâng cao: axit tác dụng kim loại và muối
+- [x] `a6-l5` — Nâng cao: bài toán hỗn hợp axit, axit đặc – loãng
 
 ### A7 · Bazơ (`a7-bazo`)
 
