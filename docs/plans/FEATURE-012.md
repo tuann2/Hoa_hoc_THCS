@@ -489,7 +489,7 @@ typecheck && npm run build && npm run format:check`.
   vững cho các Unit **đã qua Phase B Bước 2** (đã update + commit theo
   unit) — phiên sau đọc lại đúng chỗ đang dang dở. Với các bài **mới
   qua Phase A** (đã thực thi, chưa review), dùng `git status --short --
-  content/units/` để biết đang dở ở đâu (xem ghi chú resume ở Phase A).
+content/units/` để biết đang dở ở đâu (xem ghi chú resume ở Phase A).
   Với Phase B **Bước 1** (review, chưa update/commit), dùng số heading
   `## <lesson-id>` đã có trong
   `docs/reviews/FEATURE-012-phase-b-review.md` để biết đã review tới
