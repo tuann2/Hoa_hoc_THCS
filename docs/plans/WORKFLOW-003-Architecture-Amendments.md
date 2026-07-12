@@ -82,15 +82,33 @@ tree hash. The requirement produces bookkeeping, not assurance.
 **Change:** delete the tree-SHA and recompute requirements. Evidence
 binding becomes:
 
-- once a candidate commit exists: candidate commit SHA + CI run
-  reference for that exact SHA;
-- before a candidate commit exists: base commit SHA + exact dirty-path
-  list (current practice, unchanged);
+- once a candidate commit exists and the worktree is clean: candidate
+  commit SHA, plus a CI run reference for that exact SHA when CI is
+  required or available for the effective risk tier;
+- whenever the worktree is dirty (with or without a candidate commit
+  yet): the base/candidate commit SHA, the exact dirty paths, and the
+  output of `git add -A && git stash create` run against that worktree
+  — a real, already-available git command pair that binds the exact
+  dirty content (plain `git stash create` alone silently omits
+  untracked files, so `git add -A` first is required; see the
+  remediation record below for how this was tightened after both
+  independent reviews);
 - reviews and verification SHOULD run against a candidate commit;
   committing to the feature branch before review is the normal path.
 
 Timestamps, tool versions/lockfile SHA, and the per-command exit-status
 table remain required.
+
+**Remediation note:** the first remediation round (commit `cff1468`)
+added `git stash create` for dirty-state content binding, in response
+to both independent reviews finding that "base SHA + dirty paths" alone
+does not bind exact content. A second review round then found that
+plain `git stash create` silently omits untracked files and that this
+plan's own A1 description text (this section) still said only "base
+SHA + dirty-path list", contradicting the updated architecture — both
+fixed by verifying `git stash create`'s actual behavior in a scratch
+repo (see the implementation handoff) and updating this section to
+match.
 
 **Files:** architecture (Evidence Binding), `docs/handoffs/_TEMPLATE.md`
 (§3), `AGENTS.md` (Required validation).
@@ -275,7 +293,7 @@ evidence rules: candidate commit SHA + CI run for that SHA.
       rule).
 - [ ] Architecture ≤450 lines; `CLAUDE.md` deduplicated; Gemini review
       confirms no semantic loss from condensation. **Not met on line
-      count** (545 lines after remediation, was 715): the plan's own
+      count** (570 lines after remediation, was 715): the plan's own
       A3 constraint deprioritizes the exact number below correctness
       once content in the "do not touch" list (Responsibility Matrix,
       Trust Model, Risk Model, Claude Gates, Canonical Quality Gates,

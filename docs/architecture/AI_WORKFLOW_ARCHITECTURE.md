@@ -316,13 +316,17 @@ Every validation record MUST contain:
 - base commit SHA (`HEAD` when validation started);
 - candidate commit SHA, or `UNCOMMITTED` before a candidate commit exists;
 - worktree state: `clean` (matches the named commit exactly), or, whenever
-  any tracked file differs from the named commit, `dirty` plus the exact
-  dirty paths **and** the output of `git stash create` run against that
-  worktree state (a commit SHA that captures the exact dirty content without
-  altering the working tree or index — this is the content-binding anchor
-  for uncommitted or partially-committed changes; re-running it after
-  further edits MUST produce a different SHA, which is how a stale
-  re-presentation of old evidence is caught);
+  any tracked or untracked file differs from the named commit, `dirty` plus
+  the exact dirty paths **and** the output of `git add -A && git stash
+create` run against that worktree state (`git add -A` stages every
+  change, including new untracked files, without altering any file's
+  content; `git stash create` alone silently omits untracked files and
+  produces no output at all when only untracked files are dirty, so the
+  `git add -A` step is required — plain `git stash create` is not
+  sufficient). The resulting SHA captures the exact dirty content and is
+  the content-binding anchor for uncommitted or partially-committed
+  changes; re-running it after further edits MUST produce a different SHA,
+  which is how a stale re-presentation of old evidence is caught;
 - UTC validation start and completion timestamps in ISO 8601 format;
 - operating runtime and package-manager versions;
 - the version of every validation tool, or the lockfile SHA when the lockfile
@@ -336,10 +340,10 @@ Independent Verification) — CI evidence MUST name that exact commit SHA, and
 evidence from another commit is stale even when the diff appears equivalent.
 Whenever the worktree is dirty — whether or not a candidate commit exists
 yet — the base or candidate commit SHA plus the dirty paths plus the
-`git stash create` SHA is the evidence anchor. There is no separate
-tree-object requirement beyond this: `git stash create` is an ordinary,
-already-available git command, so no undefined "canonical evidence command"
-is needed.
+`git add -A && git stash create` SHA is the evidence anchor. There is no
+separate tree-object requirement beyond this: both commands are ordinary,
+already-available git commands, so no undefined "canonical evidence
+command" is needed.
 
 ### Canonical Quality Gates
 
@@ -427,7 +431,7 @@ Transition rules:
 5. Corrections limited to the handoff or generated evidence do not invalidate
    engineering validation; the corrected evidence MUST still bind to the
    unchanged candidate commit, or the unchanged base commit + dirty paths +
-   `git stash create` SHA.
+   `git add -A && git stash create` SHA.
 6. `RELEASE_READY` is an assessment, not final approval. Only the human may
    approve release.
 

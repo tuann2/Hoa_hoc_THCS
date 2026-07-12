@@ -67,7 +67,10 @@ Requirement (human)
     gates are not rerun merely to reproduce logs.
 14. Independent reviewers are fresh executions with no inherited
     implementation context; they report findings and never modify the
-    candidate.
+    candidate — except the architecture's bounded
+    reviewer-applies-fixes exception for `NORMAL`-tier learning-content
+    batch review (see "Independent review per risk tier" below), which
+    never applies to `ELEVATED`/`CRITICAL` work.
 
 ## Invoking Codex from Claude
 

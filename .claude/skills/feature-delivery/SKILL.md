@@ -80,7 +80,10 @@ Plan → Codex implementation → Validation → Implementation handoff
 
 This skill adds:
 
-- **Independent review invocation**: `/codex:review --base main --background` (fresh execution, no inherited implementation context).
+- **Independent review invocation**: `/codex:review --base main --background`
+  — shorthand for a fresh `codex:codex-rescue` execution with no inherited
+  implementation context (see "Invoking Codex from Claude" in
+  `AI_WORKFLOW.md` for the underlying `Agent(...)` call).
 - **CI validation**: confirm GitHub Actions CI succeeded for the exact
   candidate commit when CI is available for that commit (architecture
   Independent Verification table, `ELEVATED` row). Do not restate CI's
@@ -104,7 +107,9 @@ This skill adds:
   - Gemini — `agy --model "Gemini 3.5 Flash (High)" --add-dir <repo> -p "..."`, synchronous, per `AI_WORKFLOW.md`. Not skippable: if
     Gemini is unavailable, this gate is blocked until the human approves
     an equally independent replacement reviewer.
-  - Codex adversarial — `/codex:adversarial-review`.
+  - Codex adversarial — `/codex:adversarial-review` — shorthand for a
+    fresh `codex:codex-rescue` execution with an adversarial-review
+    prompt, no inherited implementation context.
 - **CI validation**: GitHub Actions CI must have succeeded for the exact
   candidate commit before release (architecture Independent
   Verification table, `CRITICAL` row).
