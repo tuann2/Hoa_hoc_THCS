@@ -25,6 +25,12 @@
 > triển khai hoặc nâng dependency trước khi Status chuyển thành `APPROVED`.
 > Feature này KHÔNG thêm công nghệ mới — chỉ nâng version dependency đã có
 > và thêm script nội bộ chạy bằng `tsx` sẵn có.
+>
+> **Amendment 2026-07-13 (con người duyệt qua Claude, cùng ngày với approval
+> gốc):** trong lúc implement, phát hiện advisory mới ngoài dòng `vite@5.4.x`
+> (xem mục 2/4). Target `vite` đổi từ `5.4.21` sang `6.4.3`; mọi mục khác của
+> plan không đổi. Đây là amendment trong cùng phiên duyệt, không phải plan
+> mới.
 
 ## 1. Objective
 
@@ -50,6 +56,17 @@ behavior, nội dung, progress hay Supabase sync.
   dòng 6.x là `react-router-dom@6.30.4` (bản 6.30.x mới nhất trên registry).
 - `vite@5.4.19`/esbuild có advisory mức moderate; bản 5.4.x mới nhất là
   `vite@5.4.21`.
+- **Cập nhật 2026-07-13 (sau approval ban đầu):** trong lúc implement, phát
+  hiện 3 advisory mới publish sau khi plan được duyệt, ảnh hưởng toàn bộ dải
+  `vite<=6.4.2` (tức là toàn bộ dòng 5.4.x không có bản vá):
+  `GHSA-4w7w-66w2-5vf9` (path traversal, moderate, publish 2026-04-06),
+  `GHSA-v6wh-96g9-6wx3` (NTLMv2 hash disclosure qua launch-editor, moderate,
+  publish 2026-06-01), `GHSA-fx2h-pf6j-xcff` (`server.fs.deny` bypass, high,
+  publish 2026-06-01). Không có patch nào trong minor `5.4.x`; bản vá sớm
+  nhất là `vite@6.4.3`. Đã xác minh `@vitejs/plugin-react@4.7.0` (bản đang
+  pin, không đổi) có peerDependency `^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0`
+  nên tương thích `vite@6.4.3` mà không cần nâng thêm dependency nào khác.
+  Con người đã duyệt nâng đích lên `vite@6.4.3` thay vì `5.4.21` (xem mục 4).
 - `postcss@8.5.6` có advisory XSS mức moderate; bản không bị ảnh hưởng bắt
   đầu từ `8.5.10`, bản 8.5.x mới nhất đã xác minh trên registry là `8.5.19`.
 - `vitest@2.1.9` có advisory `GHSA-5xrq-8626-4rwp` (đọc/thực thi file qua UI
@@ -91,7 +108,9 @@ behavior, nội dung, progress hay Supabase sync.
 
 - Nâng và pin exact:
   - `react-router-dom`: `6.30.1` -> `6.30.4`.
-  - `vite`: `5.4.19` -> `5.4.21`.
+  - `vite`: `5.4.19` -> `6.4.3` (sửa từ `5.4.21` sau khi phát hiện advisory
+    mới ngoài dòng 5.4.x — xem mục 2 "Cập nhật 2026-07-13"; con người đã
+    duyệt vượt minor line ban đầu).
   - `postcss`: `8.5.6` -> `8.5.19`.
   - `vitest`: `2.1.9` -> `3.2.7`.
 - Cập nhật lockfile bằng npm chuẩn, không sửa tay, không `--force`.
@@ -117,10 +136,11 @@ behavior, nội dung, progress hay Supabase sync.
   budget — toàn bộ thuộc `FEATURE-014` (phụ thuộc feature này merge trước).
 - Sửa `deploy.yml` (gap "deploy.yml thiếu lint/test" xử lý riêng khi có
   quyết định của con người).
-- Nâng React 18 lên 19, React Router 6 lên 7, Vite 5 lên major mới, Vitest
-  lên 4. Trong minor đã duyệt, được phép lấy patch mới nhất tại thời điểm
-  implement nếu registry có bản mới hơn version pin ở mục 4 — ghi rõ trong
-  handoff; ngoài minor đã duyệt phải xin duyệt lại.
+- Nâng React 18 lên 19, React Router 6 lên 7, Vite lên major mới hơn `6.4.3`
+  (ví dụ dòng 7.x/8.x), Vitest lên 4. Trong minor/dòng đã duyệt (bao gồm
+  `vite@6.4.3` sau amendment 2026-07-13), được phép lấy patch mới nhất tại
+  thời điểm implement nếu registry có bản mới hơn version pin ở mục 4 — ghi
+  rõ trong handoff; ngoài dòng đã duyệt phải xin duyệt lại.
 - Sửa nội dung/đáp án Hoá học, Supabase, auth flow, database schema.
 - Thêm dependency mới dưới mọi hình thức.
 
@@ -293,8 +313,8 @@ npm audit --audit-level=moderate
 
 ## 15. Acceptance criteria
 
-- [ ] `react-router-dom@6.30.4`, `vite@5.4.21`, `postcss@8.5.19`,
-      `vitest@3.2.7` (hoặc patch mới hơn trong cùng minor, ghi trong
+- [ ] `react-router-dom@6.30.4`, `vite@6.4.3`, `postcss@8.5.19`,
+      `vitest@3.2.7` (hoặc patch mới hơn trong cùng dòng đã duyệt, ghi trong
       handoff) được pin exact.
 - [ ] `npm audit --audit-level=moderate` exit 0 trên exact candidate
       lockfile.
