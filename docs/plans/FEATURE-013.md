@@ -2,11 +2,11 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (thu hẹp từ draft của Codex sau review 2026-07-13; phần
   code splitting + PWA + E2E tách sang `docs/plans/FEATURE-014.md`)
-- Approved by:
-- Approved date:
+- Approved by: nt0
+- Approved date: 2026-07-13
 - Risk tier: CRITICAL
 - Risk categories: dependency security remediation; CI infrastructure change
 - Escalation rationale: xử lý advisory XSS/critical trong dependency là thay
