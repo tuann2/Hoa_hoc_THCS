@@ -9,7 +9,7 @@ Regenerate after remediation; mark superseded evidence STALE.
 
 ## Status
 
-- Remediation state: VALIDATED
+- Remediation state: RELEASE_READY
 - Risk tier: CRITICAL
 - Risk categories: dependency security remediation; CI infrastructure change
 - Escalation rationale: vá advisory dependency và thêm gate CI bảo mật/chất lượng
@@ -57,8 +57,8 @@ Acceptance criteria:
 - PASS: `allowScripts` khớp tree thực tế sau nâng Vite 6 (`esbuild@0.25.12`).
 - PASS: fresh Gemini review (2 vòng) và fresh Codex adversarial review
   (2 vòng) đã hoàn tất; mọi finding trong scope đã FIXED, xem mục 7.
-- PENDING: CI xanh trên candidate commit, vì candidate hiện còn uncommitted
-  theo yêu cầu.
+- PASS: CI xanh trên candidate commit `d3bd0f9` (run 29295899405), bao gồm
+  toàn bộ step mới.
 
 ## 2. Files changed
 
@@ -95,7 +95,9 @@ Untracked additions not shown by `git diff --stat`:
 ## 3. Evidence binding
 
 - Base commit SHA (`HEAD` when validation started): `0c61a1adf450de229b8e76a612eb02b3cd68b17b`
-- Candidate commit SHA: `UNCOMMITTED`
+- Candidate commit SHA: `d3bd0f9` (pushed to `feature/FEATURE-013`; tree
+  content identical to the validated implementation-tree snapshot below plus
+  this handoff file itself)
 - Validated implementation-tree SHA: `f98f8eb726e3b4149865d93515051cfa652bb40c7f9bbdd6021b9ba07fdd488b`
 - Implementation-tree exclusions:
   `docs/handoffs/FEATURE-013-implementation.md` (snapshot hash là SHA-256
@@ -170,8 +172,9 @@ Additional spot checks:
 - Execution identifier: current working-tree reviews on 2026-07-13
 - Independence method: fresh read-only executions against the pre-remediation
   candidate
-- CI commit SHA and status (when required or available): PENDING
-  (`UNCOMMITTED` candidate)
+- CI commit SHA and status: `d3bd0f9` — SUCCESS (run
+  [29295899405](https://github.com/tuann2/Hoa_hoc_THCS/actions/runs/29295899405),
+  all steps green including new `format:check`, `audit`, `check:licenses`)
 - Review findings and disposition:
   - FIXED: Gemini finding về path traversal trong
     `scripts/check-licenses.ts` (`node_modules/../../...` lockfile key có thể
@@ -221,10 +224,13 @@ Additional spot checks:
 
 ## 10. Remaining risks
 
-- Candidate chưa có CI run trên exact commit vì theo yêu cầu vẫn chưa commit;
-  sẽ tự đóng khi commit và CI chạy trên đúng SHA.
+- Không còn risk chặn release. `deploy.yml` chưa chạy audit/license/test/lint
+  (finding ngoài scope, xem mục 7) vẫn là gap đã biết, tracked riêng, không
+  phải regression của feature này.
 
 ## 11. Follow-up work
 
-- Commit candidate khi được con người cho phép, push, chạy CI trên exact
-  commit, xác nhận CI xanh trước khi coi risk tier `CRITICAL` release-ready.
+- Theo dõi và lên plan riêng cho gap `deploy.yml` thiếu lint/test/audit
+  (workflow audit 2026-07-12, gap 2).
+- FEATURE-014 (code splitting, PWA offline, E2E) phụ thuộc feature này đã
+  merge — sẵn sàng bắt đầu sau khi FEATURE-013 merge vào `main`.
