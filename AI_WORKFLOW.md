@@ -113,15 +113,23 @@ Không commit, không push. Chỉ sửa <file(s)>.
 </action_safety>
 ```
 
-## Invoking Gemini (agy) from Claude
+## Invoking the independent reviewer (agy) from Claude
 
-Antigravity CLI (`agy`) runs Gemini models synchronously. Per the
-architecture, Gemini review is required for `CRITICAL` work and optional
-otherwise. Also usable for docs drafting (README, changelog, ADR).
+Antigravity CLI (`agy`) runs reviewer models synchronously. Per the
+architecture, independent review is required for `CRITICAL` work and
+optional otherwise. Also usable for docs drafting (README, changelog,
+ADR).
+
+Model selection:
+
+- `"Claude Opus 4.6 (Thinking)"` — review tính năng, code, diff,
+  lockfile.
+- `"Gemini 3.5 Flash (High)"` — review tài liệu, docs, learning content
+  (JSON units).
 
 ```bash
 # Synchronous — preferred (background mode writes 0-byte output file)
-agy --model "Gemini 3.5 Flash (High)" \
+agy --model "Claude Opus 4.6 (Thinking)" \
     --add-dir /path/to/repo \
     -p "Your prompt here"
 
@@ -133,10 +141,10 @@ agy models
 `agy` — the background output file stays empty. Run synchronously with a
 `timeout` of 300000ms for long prompts.
 
-**Give agy repo access**: always pass `--add-dir /path/to/repo` so Gemini
-can read source files directly.
+**Give agy repo access**: always pass `--add-dir /path/to/repo` so the
+reviewer can read source files directly.
 
-If Gemini is unavailable for `CRITICAL` work, the review gate is blocked
+If agy is unavailable for `CRITICAL` work, the review gate is blocked
 until the human approves an equally independent replacement reviewer.
 
 ## Independent review per risk tier

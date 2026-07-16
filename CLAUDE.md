@@ -92,18 +92,28 @@ Agent(subagent_type="codex:codex-rescue",
 - Use `--background` + `run_in_background=True` for parallel independent tasks.
 - Codex owns implementation, validation and the implementation handoff
   (`docs/handoffs/<FEATURE-ID>-implementation.md`).
+- Model selection (subagent): `gpt-5.6-luna` reasoning **high** cho việc
+  khó (feature lớn, refactor, schema change, adversarial review);
+  `gpt-5.6-luna` reasoning **medium** cho việc nhỏ (fix nhỏ, chỉnh
+  content, tác vụ cơ học). Default trong `.codex/config.toml`
+  (`gpt-5.6-terra` medium) chỉ áp dụng cho phiên Codex CLI tương tác,
+  không phải delegation.
 
-### Gemini (independent reviewer)
+### Agy (independent reviewer)
 
 ```bash
-agy --model "Gemini 3.5 Flash (High)" \
+agy --model "<model>" \
     --add-dir /Users/tuann2/Documents/Code/Hoa_hoc_THCS \
     -p "prompt"
 ```
 
+- Model selection: `"Claude Opus 4.6 (Thinking)"` khi review tính năng /
+  code / diff / lockfile; `"Gemini 3.5 Flash (High)"` khi review tài
+  liệu, docs, và learning content (JSON units).
+
 - Always run synchronously (not background) — background writes 0-byte file.
 - Required for `CRITICAL` work; optional otherwise unless explicitly
-  requested. If Gemini is unavailable for `CRITICAL` work, the review
+  requested. If agy is unavailable for `CRITICAL` work, the review
   gate is blocked until the human approves an equally independent
   replacement — never silently skipped.
 - Reviewers report findings only; they do not modify the candidate,

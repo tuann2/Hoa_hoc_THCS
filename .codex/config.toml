@@ -1,5 +1,9 @@
 # Codex model config — model names deprecate fast.
 # Check `/status` in Codex or developers.openai.com/codex/models before locking.
-# Suggested: gpt-5.4-mini (small fixes) | gpt-5.4 (features) | gpt-5.5 (hard refactors/adversarial review)
-model = "gpt-5.4"
-model_reasoning_effort = "high"
+# Default (interactive/CLI): gpt-5.6-terra ở mức medium.
+# Subagent codex-rescue (delegation từ Claude): gpt-5.6-luna high cho việc
+# khó (feature lớn, refactor, adversarial review), gpt-5.6-luna medium cho
+# việc nhỏ (fix nhỏ, chỉnh content) — truyền qua `--model`/`-c` khi gọi,
+# xem CLAUDE.md mục Agent delegation.
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
