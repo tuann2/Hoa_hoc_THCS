@@ -2,11 +2,12 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (tách từ draft FEATURE-013 của Codex sau review
   2026-07-13; phần dependency security nằm ở `docs/plans/FEATURE-013.md`)
-- Approved by:
-- Approved date:
+- Approved by: nt0 (plan + risk tier CRITICAL + cả hai công nghệ mục 6a:
+  `vite-plugin-pwa@1.3.0`, `@playwright/test@1.61.1`)
+- Approved date: 2026-07-16
 - Depends on: FEATURE-013 (vá dependency + CI audit/license/format gate)
   phải merge trước khi feature này bắt đầu implement.
 - Risk tier: CRITICAL
@@ -212,8 +213,9 @@ streak, sao, ôn câu sai, thi thử, local persistence và Supabase sync.
 - Thay GitHub Pages bằng hosting/service khác.
 - Redesign toàn bộ UI hoặc accessibility audit toàn diện; chỉ thêm UI cần
   cho loading, offline, install và update.
-- Nâng React 18 lên React 19, React Router 6 lên 7, Vite 5 lên major mới
-  nếu không có blocker được người dùng duyệt lại.
+- Nâng React 18 lên React 19, React Router 6 lên 7, Vite 6 (6.4.3 sau
+  FEATURE-013) lên major mới nếu không có blocker được người dùng duyệt
+  lại.
 
 ## 6. Proposed design
 

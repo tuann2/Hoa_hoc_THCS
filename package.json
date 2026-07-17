@@ -6,12 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run validate-content && npm run typecheck && vite build",
+    "generate:content-catalog": "tsx scripts/generate-content-catalog.ts",
+    "check:content-catalog": "tsx scripts/generate-content-catalog.ts --check",
+    "check:bundle": "tsx scripts/check-bundle-budget.ts",
     "check:licenses": "tsx scripts/check-licenses.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "playwright test tests/e2e --grep-invert @pwa",
+    "test:pwa": "playwright test tests/e2e/pwa-offline.spec.ts",
+    "test:pwa:subpath": "VITE_BASE_PATH=/Hoa_hoc_THCS/ npm run build -- --outDir dist-subpath && npx playwright test tests/e2e/pwa-subpath.spec.ts --config=playwright.subpath.config.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "validate-content": "tsx scripts/validate-content.ts"
@@ -28,6 +34,7 @@
     "@testing-library/jest-dom": "6.8.0",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
+    "@playwright/test": "1.61.1",
     "@types/node": "24.0.15",
     "@types/react": "18.3.23",
     "@types/react-dom": "18.3.7",
@@ -45,6 +52,7 @@
     "typescript": "5.8.3",
     "typescript-eslint": "8.38.0",
     "vite": "6.4.3",
+    "vite-plugin-pwa": "1.3.0",
     "vitest": "3.2.7"
   },
   "allowScripts": {

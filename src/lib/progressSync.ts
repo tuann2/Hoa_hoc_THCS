@@ -1,4 +1,4 @@
-import { getAllUnits } from './content';
+import { getAllUnits as getUnitCatalog } from './content';
 import type { ExamBreakdown, ExamScope } from './exam';
 import { supabase } from './supabase';
 import { getAuthStore } from '../store/auth';
@@ -7,6 +7,7 @@ import {
   applyProgressSnapshot,
   buildLessonProgressEntry,
   consumeProgressMutationSource,
+  createInitialProgressState,
   getProgressSnapshot,
   getProgressStore,
   migrateProgressState,
@@ -17,14 +18,16 @@ import {
   type ProgressSnapshot,
   type WrongQuestionEntry
 } from '../store/progress';
-import type { Lesson, UnitContent } from '../types/content';
+import type { LessonSummary, UnitSummary } from '../types/content';
 
 let pushTimer: number | null = null;
 let lastScheduledSnapshot: ProgressSnapshot | null = null;
+let lastScheduledUserId: string | null = null;
 let hasSubscribedToProgress = false;
 let lastSyncedUserId: string | null = null;
+const PROGRESS_OWNER_STORAGE_KEY = 'hhthcs-progress-owner';
 const lessonById = new Map(
-  getAllUnits()
+  getUnitCatalog()
     .flatMap((unit) => unit.lessons)
     .map((lesson) => [lesson.id, lesson] as const)
 );
@@ -49,7 +52,7 @@ function clampStars(value: number): 0 | 1 | 2 | 3 {
   return 0;
 }
 
-function findLessonById(lessonId: string): Lesson | undefined {
+function findLessonById(lessonId: string): LessonSummary | undefined {
   return lessonById.get(lessonId);
 }
 
@@ -579,7 +582,7 @@ export async function pullProgress(
 }
 
 export async function pushProgress(
-  snapshot = getProgressSnapshot(getProgressStore(getAllUnits()).getState()),
+  snapshot = getProgressSnapshot(getProgressStore(getUnitCatalog()).getState()),
   userId = getAuthStore().getState().user?.id ?? null
 ): Promise<boolean> {
   if (!supabase || !userId) {
@@ -600,8 +603,12 @@ export async function pushProgress(
   return true;
 }
 
-export function scheduleProgressPush(snapshot: ProgressSnapshot) {
+export function scheduleProgressPush(
+  snapshot: ProgressSnapshot,
+  userId = getAuthStore().getState().user?.id ?? null
+) {
   lastScheduledSnapshot = structuredClone(snapshot);
+  lastScheduledUserId = userId;
 
   if (pushTimer) {
     window.clearTimeout(pushTimer);
@@ -609,20 +616,32 @@ export function scheduleProgressPush(snapshot: ProgressSnapshot) {
 
   pushTimer = window.setTimeout(() => {
     const nextSnapshot = lastScheduledSnapshot;
+    const targetUserId = lastScheduledUserId;
     pushTimer = null;
     lastScheduledSnapshot = null;
+    lastScheduledUserId = null;
 
-    if (!nextSnapshot) {
+    if (!nextSnapshot || !targetUserId) {
       return;
     }
 
-    void pushProgress(nextSnapshot).catch(() => {
+    void pushProgress(nextSnapshot, targetUserId).catch(() => {
       // Offline-first: bỏ qua lỗi để lần push sau ghi đè bằng bản merge mới nhất.
     });
   }, 2_000);
 }
 
-export function subscribeProgressPush(units: UnitContent[]) {
+export function cancelScheduledProgressPush() {
+  if (pushTimer) {
+    window.clearTimeout(pushTimer);
+  }
+
+  pushTimer = null;
+  lastScheduledSnapshot = null;
+  lastScheduledUserId = null;
+}
+
+export function subscribeProgressPush(units: UnitSummary[]) {
   if (hasSubscribedToProgress) {
     return;
   }
@@ -648,14 +667,22 @@ export function subscribeProgressPush(units: UnitContent[]) {
 }
 
 export async function syncProgressOnSignIn(
-  units: UnitContent[],
+  units: UnitSummary[],
   userId = getAuthStore().getState().user?.id ?? null
 ) {
   if (!userId || userId === lastSyncedUserId) {
     return;
   }
 
-  const local = getProgressSnapshot(getProgressStore(units).getState());
+  const localOwner =
+    typeof window !== 'undefined'
+      ? window.localStorage.getItem(PROGRESS_OWNER_STORAGE_KEY)
+      : null;
+  const storedLocal = getProgressSnapshot(getProgressStore(units).getState());
+  const local =
+    localOwner && localOwner !== userId
+      ? createInitialProgressState(units)
+      : storedLocal;
 
   let server: ProgressSnapshot | null = null;
 
@@ -667,6 +694,9 @@ export async function syncProgressOnSignIn(
 
   const merged = mergeProgress(local, server);
   applyProgressSnapshot(units, merged);
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem(PROGRESS_OWNER_STORAGE_KEY, userId);
+  }
   lastSyncedUserId = userId;
 
   try {
@@ -677,12 +707,7 @@ export async function syncProgressOnSignIn(
 }
 
 export function resetProgressSyncForTests() {
-  if (pushTimer) {
-    window.clearTimeout(pushTimer);
-  }
-
-  pushTimer = null;
-  lastScheduledSnapshot = null;
+  cancelScheduledProgressPush();
   hasSubscribedToProgress = false;
   lastSyncedUserId = null;
 }

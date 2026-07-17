@@ -1,4 +1,11 @@
-import { useEffect, useMemo } from 'react';
+import {
+  Component,
+  lazy,
+  Suspense,
+  useEffect,
+  useMemo,
+  type ReactNode
+} from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { getAllUnits } from './lib/content';
 import {
@@ -7,12 +14,62 @@ import {
 } from './lib/progressSync';
 import { getAuthStore } from './store/auth';
 import { getProgressStore, isWrongQuestionPending } from './store/progress';
-import { AuthRoute } from './routes/AuthRoute';
 import { HomeRoute } from './routes/HomeRoute';
-import { ExamRoute } from './routes/ExamRoute';
-import { LessonRoute } from './routes/LessonRoute';
-import { ProfileRoute } from './routes/ProfileRoute';
-import { ReviewRoute } from './routes/ReviewRoute';
+import { ContentLoadError } from './components/ContentLoadError';
+import { ContentLoading } from './components/ContentLoading';
+import { PwaStatus } from './components/PwaStatus';
+
+const AuthRoute = lazy(() =>
+  import('./routes/AuthRoute').then((module) => ({ default: module.AuthRoute }))
+);
+const ExamRoute = lazy(() =>
+  import('./routes/ExamRoute').then((module) => ({ default: module.ExamRoute }))
+);
+const LessonRoute = lazy(() =>
+  import('./routes/LessonRoute').then((module) => ({
+    default: module.LessonRoute
+  }))
+);
+const ProfileRoute = lazy(() =>
+  import('./routes/ProfileRoute').then((module) => ({
+    default: module.ProfileRoute
+  }))
+);
+const ReviewRoute = lazy(() =>
+  import('./routes/ReviewRoute').then((module) => ({
+    default: module.ReviewRoute
+  }))
+);
+
+interface RouteErrorBoundaryProps {
+  children: ReactNode;
+}
+interface RouteErrorBoundaryState {
+  hasError: boolean;
+}
+
+class RouteErrorBoundary extends Component<
+  RouteErrorBoundaryProps,
+  RouteErrorBoundaryState
+> {
+  static getDerivedStateFromError(): RouteErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  state: RouteErrorBoundaryState = { hasError: false };
+
+  componentDidCatch() {
+    // Keep the current learning/exam session intact; retry is user initiated.
+  }
+
+  render() {
+    return this.state.hasError ? (
+      <ContentLoadError onRetry={() => window.location.reload()} />
+    ) : (
+      this.props.children
+    );
+  }
+}
 
 export default function App() {
   const units = useMemo(() => getAllUnits(), []);
@@ -50,6 +107,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(124,163,74,0.18),_transparent_32%),linear-gradient(180deg,_#f7fbf9_0%,_#eef5f3_52%,_#f4e6bf_100%)] font-body text-ink">
       <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-24 pt-4 sm:px-6 lg:px-10">
+        <PwaStatus />
         <header className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sea/70">
@@ -101,21 +159,25 @@ export default function App() {
         </header>
 
         <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomeRoute />} />
-            <Route path="/auth" element={<AuthRoute />} />
-            <Route path="/exam" element={<ExamRoute />} />
-            <Route
-              path="/learn/:unitId/:lessonId/theory"
-              element={<LessonRoute mode="theory" />}
-            />
-            <Route
-              path="/learn/:unitId/:lessonId/practice"
-              element={<LessonRoute mode="practice" />}
-            />
-            <Route path="/review" element={<ReviewRoute />} />
-            <Route path="/profile" element={<ProfileRoute />} />
-          </Routes>
+          <RouteErrorBoundary>
+            <Suspense fallback={<ContentLoading />}>
+              <Routes>
+                <Route path="/" element={<HomeRoute />} />
+                <Route path="/auth" element={<AuthRoute />} />
+                <Route path="/exam" element={<ExamRoute />} />
+                <Route
+                  path="/learn/:unitId/:lessonId/theory"
+                  element={<LessonRoute mode="theory" />}
+                />
+                <Route
+                  path="/learn/:unitId/:lessonId/practice"
+                  element={<LessonRoute mode="practice" />}
+                />
+                <Route path="/review" element={<ReviewRoute />} />
+                <Route path="/profile" element={<ProfileRoute />} />
+              </Routes>
+            </Suspense>
+          </RouteErrorBoundary>
         </main>
       </div>
     </div>

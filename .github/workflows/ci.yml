@@ -6,6 +6,9 @@ on:
       - feature/**
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   web:
     runs-on: ubuntu-latest
@@ -26,6 +29,12 @@ jobs:
       - name: Format check
         run: npm run format:check
 
+      - name: Content catalog check
+        run: npm run check:content-catalog
+
+      - name: Content validation
+        run: npm run validate-content
+
       - name: Lint
         run: npm run lint
 
@@ -35,14 +44,77 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: Bundle
+        env:
+          VITE_SUPABASE_URL: https://example.supabase.co
+          VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
+        run: npm run build && npm run check:bundle
+
       - name: Audit
         run: npm audit --audit-level=moderate
 
       - name: License check
         run: npm run check:licenses
 
-      - name: Build
+      - name: Upload production artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-dist
+          path: dist
+          if-no-files-found: error
+
+  browser:
+    needs: web
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download production artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-dist
+          path: dist
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright E2E
+        env:
+          PLAYWRIGHT_SKIP_BUILD: '1'
+          VITE_SUPABASE_URL: https://example.supabase.co
+          VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
+        run: npm run test:e2e
+
+      - name: Run PWA E2E gate
+        env:
+          PLAYWRIGHT_SKIP_BUILD: '1'
+          VITE_SUPABASE_URL: https://example.supabase.co
+          VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
+        run: npm run test:pwa
+
+      - name: Run PWA subpath E2E gate
         env:
           VITE_SUPABASE_URL: https://example.supabase.co
           VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
-        run: npm run build
+        run: npm run test:pwa:subpath
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore

@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-subpath/
 build/
 coverage/
 node-compile-cache/
@@ -7,3 +8,5 @@ node-compile-cache/
 .env.*
 .DS_Store
 *.log
+test-results/
+playwright-report/

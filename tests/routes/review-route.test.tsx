@@ -69,6 +69,10 @@ vi.mock('../../src/lib/content', () => ({
       ?.questions.find((question) => question.id === questionId)
 }));
 
+vi.mock('../../src/lib/contentLoader', () => ({
+  loadUnits: () => Promise.resolve(fixtureUnits)
+}));
+
 import { ReviewRoute } from '../../src/routes/ReviewRoute';
 
 const firstQuestionKey = getWrongQuestionKey('u1', 'u1-l1', 'q1');
@@ -80,14 +84,16 @@ describe('ReviewRoute', () => {
     resetProgressStoreForTests();
   });
 
-  it('hiển thị trạng thái rỗng khi không có câu cần ôn', () => {
+  it('hiển thị trạng thái rỗng khi không có câu cần ôn', async () => {
     render(
       <MemoryRouter>
         <ReviewRoute />
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Không có câu nào cần ôn')).toBeInTheDocument();
+    expect(
+      await screen.findByText('Không có câu nào cần ôn')
+    ).toBeInTheDocument();
   });
 
   it('chạy hết hàng đợi, resolve câu đúng và giữ câu sai với missCount cũ', async () => {
@@ -121,7 +127,7 @@ describe('ReviewRoute', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Chọn đáp án đúng')).toBeInTheDocument();
+    expect(await screen.findByText('Chọn đáp án đúng')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '✕ Thoát' })).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Đúng' }));
@@ -154,7 +160,7 @@ describe('ReviewRoute', () => {
     ).not.toBe('2026-07-05T09:00:00.000Z');
   });
 
-  it('bỏ qua entry không còn tìm thấy trong content', () => {
+  it('bỏ qua entry không còn tìm thấy trong content', async () => {
     const store = getProgressStore(fixtureUnits);
 
     store.setState((state) => ({
@@ -176,10 +182,12 @@ describe('ReviewRoute', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Không có câu nào cần ôn')).toBeInTheDocument();
+    expect(
+      await screen.findByText('Không có câu nào cần ôn')
+    ).toBeInTheDocument();
   });
 
-  it('không đưa entry đã resolved vào hàng đợi ôn tập', () => {
+  it('không đưa entry đã resolved vào hàng đợi ôn tập', async () => {
     const store = getProgressStore(fixtureUnits);
 
     store.setState((state) => ({
@@ -202,6 +210,8 @@ describe('ReviewRoute', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Không có câu nào cần ôn')).toBeInTheDocument();
+    expect(
+      await screen.findByText('Không có câu nào cần ôn')
+    ).toBeInTheDocument();
   });
 });
