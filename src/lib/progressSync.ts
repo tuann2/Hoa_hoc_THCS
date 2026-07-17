@@ -1,4 +1,4 @@
-import { getAllUnits } from './content';
+import { getAllUnits as getUnitCatalog } from './content';
 import type { ExamBreakdown, ExamScope } from './exam';
 import { supabase } from './supabase';
 import { getAuthStore } from '../store/auth';
@@ -17,14 +17,14 @@ import {
   type ProgressSnapshot,
   type WrongQuestionEntry
 } from '../store/progress';
-import type { Lesson, UnitContent } from '../types/content';
+import type { LessonSummary, UnitSummary } from '../types/content';
 
 let pushTimer: number | null = null;
 let lastScheduledSnapshot: ProgressSnapshot | null = null;
 let hasSubscribedToProgress = false;
 let lastSyncedUserId: string | null = null;
 const lessonById = new Map(
-  getAllUnits()
+  getUnitCatalog()
     .flatMap((unit) => unit.lessons)
     .map((lesson) => [lesson.id, lesson] as const)
 );
@@ -49,7 +49,7 @@ function clampStars(value: number): 0 | 1 | 2 | 3 {
   return 0;
 }
 
-function findLessonById(lessonId: string): Lesson | undefined {
+function findLessonById(lessonId: string): LessonSummary | undefined {
   return lessonById.get(lessonId);
 }
 
@@ -579,7 +579,7 @@ export async function pullProgress(
 }
 
 export async function pushProgress(
-  snapshot = getProgressSnapshot(getProgressStore(getAllUnits()).getState()),
+  snapshot = getProgressSnapshot(getProgressStore(getUnitCatalog()).getState()),
   userId = getAuthStore().getState().user?.id ?? null
 ): Promise<boolean> {
   if (!supabase || !userId) {
@@ -622,7 +622,7 @@ export function scheduleProgressPush(snapshot: ProgressSnapshot) {
   }, 2_000);
 }
 
-export function subscribeProgressPush(units: UnitContent[]) {
+export function subscribeProgressPush(units: UnitSummary[]) {
   if (hasSubscribedToProgress) {
     return;
   }
@@ -648,7 +648,7 @@ export function subscribeProgressPush(units: UnitContent[]) {
 }
 
 export async function syncProgressOnSignIn(
-  units: UnitContent[],
+  units: UnitSummary[],
   userId = getAuthStore().getState().user?.id ?? null
 ) {
   if (!userId || userId === lastSyncedUserId) {

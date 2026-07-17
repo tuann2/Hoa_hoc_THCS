@@ -36,5 +36,11 @@ export default tseslint.config(
         { allowConstantExport: true }
       ]
     }
+  },
+  {
+    files: ['tests/e2e/**/*.{ts,tsx}'],
+    rules: {
+      'react-hooks/rules-of-hooks': 'off'
+    }
   }
 );

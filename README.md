@@ -70,13 +70,32 @@ contribution are traceable and auditable.
 - `@supabase/supabase-js` cho Supabase Auth + PostgREST
 - `zustand` + persist (`hhthcs-progress`)
 - Vitest + Testing Library
+- `vite-plugin-pwa` + Workbox for installable, same-origin static offline cache
+- `@playwright/test` for production-build desktop/mobile E2E
 
 ## Chạy cục bộ
 
 ```bash
 npm install
 npm run validate-content
+npm run check:content-catalog
 npm run dev
+```
+
+### PWA/offline và E2E
+
+Production build precache app shell, catalog, route chunks và toàn bộ 17
+content chunks. Lần mở đầu cần mạng; chỉ sau khi thấy “Đã sẵn sàng học
+offline” mới có thể mở toàn bộ nội dung khi mất mạng. Supabase/Auth/progress
+không nằm trong cache service worker. Khi có worker mới, app hiện banner để
+người dùng tự xác nhận cập nhật; không reload tự động giữa lesson/exam.
+
+```bash
+npm run build
+npm run check:bundle
+npx playwright install chromium
+npm run test:e2e
+npm run test:pwa
 ```
 
 ## Thiết lập Supabase
@@ -133,13 +152,19 @@ npm run lint
 npm run typecheck
 npm test
 npm run build
+npm run check:bundle
+npm run check:licenses
+npm audit --audit-level=moderate
 ```
 
 ## Cấu trúc quan trọng
 
 ```text
 content/units/                # nội dung JSON cho tất cả unit
+content/catalog.json           # catalog nhẹ đã commit, không chứa cards/questions
 scripts/validate-content.ts   # kiểm tra schema + logic PTHH
+scripts/generate-content-catalog.ts # generate/check catalog từ source JSON
+scripts/check-bundle-budget.ts     # budget initial JS và content chunks
 src/components/               # UI học tập, quiz, Chem renderer
 src/lib/supabase.ts           # official @supabase/supabase-js client + offline fallback
 src/lib/progressSync.ts       # pull/merge/push tiến độ
@@ -151,6 +176,7 @@ src/store/auth.ts             # session + đăng nhập/đăng xuất/reset
 src/store/progress.ts         # XP, streak, sao, mở khoá, câu sai (wrongQuestions),
                                # lịch sử thi (examHistory), snapshot sync
 tests/                        # unit test và component test
+tests/e2e/                    # Playwright E2E trên production preview
 .github/workflows/ci.yml      # lint + typecheck + test + build
 ```
 

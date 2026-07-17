@@ -7,3 +7,5 @@ node-compile-cache/
 .env.*
 .DS_Store
 *.log
+test-results/
+playwright-report/

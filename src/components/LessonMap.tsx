@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import type { LessonProgress } from '../store/progress';
-import type { UnitContent } from '../types/content';
+import type { UnitSummary } from '../types/content';
 
 interface LessonMapProps {
-  units: UnitContent[];
+  units: UnitSummary[];
   unlockedLessonIds: string[];
   lessonStars: Record<string, number>;
   lessonProgress: Record<string, LessonProgress>;
@@ -80,9 +80,18 @@ export function LessonMap({
               const unlocked = unlockedLessonIds.includes(lesson.id);
               const available =
                 unit.status === 'available' && lesson.status === 'available';
-              const hasPracticeQuestions = lesson.questions.some(
-                (question) => question.category === 'calculation'
-              );
+              const hasPracticeQuestions =
+                lesson.calculationQuestionCount !== undefined
+                  ? lesson.calculationQuestionCount > 0
+                  : Boolean(
+                      (
+                        lesson as typeof lesson & {
+                          questions?: Array<{ category: string }>;
+                        }
+                      ).questions?.some(
+                        (question) => question.category === 'calculation'
+                      )
+                    );
               const progress = lessonProgress[lesson.id];
               const theoryCompleted = progress?.theory.completed === true;
               const practiceCompleted =

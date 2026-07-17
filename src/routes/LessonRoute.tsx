@@ -1,7 +1,16 @@
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { LessonPlayer } from '../components/LessonPlayer';
-import { findLesson, findUnit, getAllUnits } from '../lib/content';
+import { ContentLoadError } from '../components/ContentLoadError';
+import { ContentLoading } from '../components/ContentLoading';
+import {
+  findLesson as findLessonSummary,
+  findUnit as findUnitSummary,
+  getAllUnits as getUnitCatalog
+} from '../lib/content';
+import { loadUnit } from '../lib/contentLoader';
 import { getProgressStore } from '../store/progress';
+import type { Lesson, UnitContent } from '../types/content';
 
 interface LessonRouteProps {
   mode: 'theory' | 'practice';
@@ -9,12 +18,39 @@ interface LessonRouteProps {
 
 export function LessonRoute({ mode }: LessonRouteProps) {
   const { lessonId = '', unitId = '' } = useParams();
-  const units = getAllUnits();
-  const unit = findUnit(unitId);
-  const lesson = findLesson(unitId, lessonId);
+  const units = useMemo(() => getUnitCatalog(), []);
+  const unit = findUnitSummary(unitId);
+  const lesson = findLessonSummary(unitId, lessonId);
+  const [content, setContent] = useState<UnitContent | null>(null);
+  const [loadError, setLoadError] = useState(false);
   const unlockedLessonIds = getProgressStore(units)(
     (state) => state.unlockedLessonIds
   );
+
+  useEffect(() => {
+    if (
+      !unit ||
+      !lesson ||
+      unit.status !== 'available' ||
+      lesson.status !== 'available'
+    ) {
+      return;
+    }
+
+    let active = true;
+    setContent(null);
+    setLoadError(false);
+    void loadUnit(unit.id)
+      .then((loaded) => {
+        if (active) setContent(loaded);
+      })
+      .catch(() => {
+        if (active) setLoadError(true);
+      });
+    return () => {
+      active = false;
+    };
+  }, [lesson, unit]);
 
   if (!unit || !lesson) {
     return (
@@ -70,12 +106,28 @@ export function LessonRoute({ mode }: LessonRouteProps) {
     );
   }
 
+  if (loadError) {
+    return <ContentLoadError onRetry={() => window.location.reload()} />;
+  }
+
+  if (!content) {
+    return <ContentLoading label="Đang tải bài học…" />;
+  }
+
+  const fullLesson: Lesson | undefined = content.lessons.find(
+    (entry) => entry.id === lesson.id
+  );
+
+  if (!fullLesson) {
+    return <ContentLoadError onRetry={() => window.location.reload()} />;
+  }
+
   return (
     <LessonPlayer
       key={`${unit.id}:${lesson.id}:${mode}`}
-      lesson={lesson}
+      lesson={fullLesson}
       mode={mode}
-      unit={unit}
+      unit={content}
       units={units}
     />
   );

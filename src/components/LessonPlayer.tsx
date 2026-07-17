@@ -1,9 +1,13 @@
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { calculateXp, isQuestionCorrect } from '../lib/chemistry';
-import { getQuestionsByCategory } from '../lib/content';
 import { getNextLessonId, getProgressStore } from '../store/progress';
-import type { Lesson, Question, UnitContent } from '../types/content';
+import type {
+  Lesson,
+  Question,
+  UnitContent,
+  UnitSummary
+} from '../types/content';
 import { ExitButton } from './ExitButton';
 import { ProgressBar } from './ProgressBar';
 import { QuestionRenderer, type SubmissionResult } from './QuestionRenderer';
@@ -14,7 +18,7 @@ interface LessonPlayerProps {
   lesson: Lesson;
   mode: 'theory' | 'practice';
   unit: UnitContent;
-  units: UnitContent[];
+  units: UnitSummary[];
 }
 
 type Phase = 'theory' | 'quiz' | 'practice-empty' | 'result';
@@ -41,11 +45,14 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
     (state) => state.lessonProgress[lesson.id]
   );
   const theoryQuestions = useMemo(
-    () => getQuestionsByCategory(lesson, 'theory'),
+    () => lesson.questions.filter((question) => question.category === 'theory'),
     [lesson]
   );
   const practiceQuestions = useMemo(
-    () => getQuestionsByCategory(lesson, 'calculation'),
+    () =>
+      lesson.questions.filter(
+        (question) => question.category === 'calculation'
+      ),
     [lesson]
   );
   const lessonQuestions =
