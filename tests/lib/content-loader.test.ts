@@ -71,5 +71,21 @@ describe('content loader', () => {
         lessons: [{ ...validLesson, questions: [{ id: 'q' }] }]
       })
     ).toThrow('Nội dung unit test-unit không hợp lệ');
+
+    expect(() =>
+      validateUnit('test-unit', {
+        ...validUnit,
+        lessons: [{ ...validLesson, cards: [{ id: 123 }] }]
+      })
+    ).toThrow('Nội dung unit test-unit không hợp lệ');
+
+    expect(() =>
+      validateUnit('test-unit', {
+        ...validUnit,
+        lessons: [
+          { ...validLesson, questions: [{ id: 123, type: 'single-choice' }] }
+        ]
+      })
+    ).toThrow('Nội dung unit test-unit không hợp lệ');
   });
 });

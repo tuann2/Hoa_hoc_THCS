@@ -95,6 +95,11 @@ vi.mock('../../src/lib/supabase', () => ({
   supabase: mockSupabase
 }));
 
+vi.mock('../../src/lib/progressSync', () => ({
+  cancelScheduledProgressPush: vi.fn()
+}));
+
+import { cancelScheduledProgressPush } from '../../src/lib/progressSync';
 import { getAuthStore, resetAuthStoreForTests } from '../../src/store/auth';
 
 function createSession(displayName = 'Lan Anh') {
@@ -150,6 +155,33 @@ describe('auth store', () => {
 
     await getAuthListener()?.('SIGNED_OUT', null);
     expect(getAuthStore().getState().user).toBeNull();
+  });
+
+  it('SIGNED_OUT từ listener (sign-out tab khác) hủy queued progress push', async () => {
+    getSession.mockResolvedValue({
+      data: { session: createSession() },
+      error: null
+    });
+    profileMaybeSingle.mockResolvedValue({ data: null, error: null });
+
+    await getAuthStore().getState().initialize();
+    vi.mocked(cancelScheduledProgressPush).mockClear();
+
+    await getAuthListener()?.('SIGNED_OUT', null);
+
+    expect(cancelScheduledProgressPush).toHaveBeenCalled();
+  });
+
+  it('signOut hủy queued push TRƯỚC khi gọi supabase.auth.signOut', async () => {
+    vi.mocked(cancelScheduledProgressPush).mockClear();
+    signOut.mockImplementation(() => {
+      expect(cancelScheduledProgressPush).toHaveBeenCalled();
+      return Promise.resolve({ error: null });
+    });
+
+    await getAuthStore().getState().signOut();
+
+    expect(signOut).toHaveBeenCalled();
   });
 
   it('signUp báo lỗi khi mật khẩu ngắn hơn 8 ký tự', async () => {

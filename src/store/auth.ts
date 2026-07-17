@@ -134,6 +134,12 @@ export const useAuthStore = create<AuthState>()((set) => ({
       if (!unsubscribeAuth) {
         const { data } = supabase.auth.onAuthStateChange(
           async (event, session) => {
+            if (event === 'SIGNED_OUT') {
+              // Sign-out từ tab khác/session bị thu hồi cũng phải huỷ timer
+              // push đang chờ, nếu không snapshot cũ vẫn được đẩy sau logout.
+              cancelScheduledProgressPush();
+            }
+
             const user = session?.user ?? null;
             const displayName = user ? await resolveDisplayName(user) : null;
 
@@ -283,6 +289,9 @@ export const useAuthStore = create<AuthState>()((set) => ({
       return { error: null };
     }
 
+    // Huỷ timer TRƯỚC khi await: mạng chậm quá 2 giây sẽ để timer kịp
+    // push snapshot giữa lúc đang đăng xuất.
+    cancelScheduledProgressPush();
     set({ isLoading: true });
     const { error } = await supabase.auth.signOut();
     set({ isLoading: false });
@@ -297,7 +306,6 @@ export const useAuthStore = create<AuthState>()((set) => ({
       displayName: null,
       isPasswordRecovery: false
     });
-    cancelScheduledProgressPush();
 
     return { error: null, message: 'Đã đăng xuất.' };
   },
