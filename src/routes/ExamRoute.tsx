@@ -17,6 +17,7 @@ import {
 import { isQuestionCorrect } from '../lib/chemistry';
 import { getAllUnits as getUnitCatalog, partLabels } from '../lib/content';
 import { loadUnits } from '../lib/contentLoader';
+import { setPwaSessionActive } from '../lib/pwa';
 import { getProgressStore, type ExamAttempt } from '../store/progress';
 import type {
   BalanceQuestion,
@@ -225,6 +226,11 @@ export function ExamRoute() {
   const [result, setResult] = useState<ExamResultState | null>(null);
   const responsesRef = useRef<Record<string, ExamResponse | undefined>>({});
   const finishingRef = useRef(false);
+
+  useEffect(() => {
+    setPwaSessionActive(phase === 'running');
+    return () => setPwaSessionActive(false);
+  }, [phase]);
 
   useEffect(() => {
     responsesRef.current = responses;

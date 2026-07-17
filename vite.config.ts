@@ -20,6 +20,12 @@ function spaFallback404(): Plugin {
 }
 
 const base = process.env.VITE_BASE_PATH ?? '/';
+const basePath = base === '/' ? '' : base.replace(/\/$/, '');
+const escapeRegex = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const appRouteAllowlist = new RegExp(
+  `^${escapeRegex(basePath)}/?(?:$|learn(?:/|$)|review(?:/|$)|exam(?:/|$)|profile(?:/|$)|auth(?:/|$))`
+);
 
 export default defineConfig({
   base,
@@ -63,9 +69,9 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2}'],
+        globPatterns: ['**/*.{js,css,html,png,svg,webmanifest}'],
         navigateFallback: `${base}index.html`,
-        navigateFallbackDenylist: [/^\/api/, /^\/supabase/],
+        navigateFallbackAllowlist: [appRouteAllowlist],
         cleanupOutdatedCaches: true,
         clientsClaim: false,
         skipWaiting: false

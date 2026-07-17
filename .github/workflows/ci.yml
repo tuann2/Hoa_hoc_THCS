@@ -6,6 +6,9 @@ on:
       - feature/**
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   web:
     runs-on: ubuntu-latest

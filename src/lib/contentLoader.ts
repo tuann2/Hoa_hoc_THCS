@@ -45,13 +45,27 @@ function validateUnit(unitId: string, value: unknown): UnitContent {
   ) {
     throw new Error(`Nội dung unit ${unitId} không hợp lệ.`);
   }
+
+  const hasValidLessonShape = value.lessons.every(
+    (lesson) =>
+      isRecord(lesson) &&
+      typeof lesson.id === 'string' &&
+      Array.isArray(lesson.cards) &&
+      Array.isArray(lesson.questions)
+  );
+
+  if (!hasValidLessonShape) {
+    throw new Error(`Nội dung unit ${unitId} không hợp lệ.`);
+  }
+
   return value as unknown as UnitContent;
 }
 
 export function loadUnit(unitId: string): Promise<UnitContent> {
-  const loader = loaders[unitId];
-  if (!loader)
+  if (!Object.hasOwn(loaders, unitId))
     return Promise.reject(new Error(`Không tìm thấy unit ${unitId}.`));
+
+  const loader = loaders[unitId];
 
   const cached = unitCache.get(unitId);
   if (cached) return cached;

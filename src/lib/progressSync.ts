@@ -7,6 +7,7 @@ import {
   applyProgressSnapshot,
   buildLessonProgressEntry,
   consumeProgressMutationSource,
+  createInitialProgressState,
   getProgressSnapshot,
   getProgressStore,
   migrateProgressState,
@@ -23,6 +24,7 @@ let pushTimer: number | null = null;
 let lastScheduledSnapshot: ProgressSnapshot | null = null;
 let hasSubscribedToProgress = false;
 let lastSyncedUserId: string | null = null;
+const PROGRESS_OWNER_STORAGE_KEY = 'hhthcs-progress-owner';
 const lessonById = new Map(
   getUnitCatalog()
     .flatMap((unit) => unit.lessons)
@@ -655,7 +657,15 @@ export async function syncProgressOnSignIn(
     return;
   }
 
-  const local = getProgressSnapshot(getProgressStore(units).getState());
+  const localOwner =
+    typeof window !== 'undefined'
+      ? window.localStorage.getItem(PROGRESS_OWNER_STORAGE_KEY)
+      : null;
+  const storedLocal = getProgressSnapshot(getProgressStore(units).getState());
+  const local =
+    localOwner && localOwner !== userId
+      ? createInitialProgressState(units)
+      : storedLocal;
 
   let server: ProgressSnapshot | null = null;
 
@@ -667,6 +677,9 @@ export async function syncProgressOnSignIn(
 
   const merged = mergeProgress(local, server);
   applyProgressSnapshot(units, merged);
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem(PROGRESS_OWNER_STORAGE_KEY, userId);
+  }
   lastSyncedUserId = userId;
 
   try {

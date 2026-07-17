@@ -5,6 +5,7 @@ export interface PwaState {
   canInstall: boolean;
   isOffline: boolean;
   isReady: boolean;
+  isSessionActive: boolean;
   needsUpdate: boolean;
   isIos: boolean;
 }
@@ -13,6 +14,7 @@ const initialState: PwaState = {
   canInstall: false,
   isOffline: typeof navigator !== 'undefined' ? !navigator.onLine : false,
   isReady: false,
+  isSessionActive: false,
   needsUpdate: false,
   isIos:
     typeof navigator !== 'undefined' &&
@@ -49,7 +51,6 @@ export function initializePwa() {
   });
 
   if (!('serviceWorker' in navigator)) {
-    publish({ isReady: true });
     return;
   }
 
@@ -60,13 +61,12 @@ export function initializePwa() {
     },
     onOfflineReady() {
       publish({ isReady: true });
-    },
-    onRegisteredSW(_url, registration) {
-      if (!registration) return;
-      void registration.update();
-      void navigator.serviceWorker.ready.then(() => publish({ isReady: true }));
     }
   });
+}
+
+export function setPwaSessionActive(active: boolean) {
+  publish({ isSessionActive: active });
 }
 
 export function usePwaState(): PwaState {
@@ -93,9 +93,7 @@ export async function promptInstall() {
 }
 
 export async function applyPwaUpdate() {
-  if (!updateSW) return;
-  // The caller only exposes this action from a banner. There is no automatic
-  // reload, so an active lesson or exam is never interrupted by SW discovery.
+  if (!updateSW || state.isSessionActive) return;
   await updateSW();
 }
 

@@ -39,5 +39,9 @@ describe('content loader', () => {
     await expect(loadUnit('missing-unit')).rejects.toThrow(
       'Không tìm thấy unit'
     );
+    await expect(loadUnit('__proto__')).rejects.toThrow('Không tìm thấy unit');
+    await expect(loadUnit('constructor')).rejects.toThrow(
+      'Không tìm thấy unit'
+    );
   });
 });

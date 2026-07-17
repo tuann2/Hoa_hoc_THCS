@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test tests/e2e",
+    "test:e2e": "playwright test tests/e2e --grep-invert @pwa",
     "test:pwa": "playwright test tests/e2e/pwa-offline.spec.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

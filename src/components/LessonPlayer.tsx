@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { calculateXp, isQuestionCorrect } from '../lib/chemistry';
+import { setPwaSessionActive } from '../lib/pwa';
 import { getNextLessonId, getProgressStore } from '../store/progress';
 import type {
   Lesson,
@@ -36,6 +37,11 @@ function buildRetryQueue(
 }
 
 export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
+  useEffect(() => {
+    setPwaSessionActive(true);
+    return () => setPwaSessionActive(false);
+  }, []);
+
   const navigate = useNavigate();
   const progressStore = getProgressStore(units);
   const completeLessonPart = progressStore((state) => state.completeLessonPart);
