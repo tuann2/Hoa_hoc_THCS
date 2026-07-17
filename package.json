@@ -17,6 +17,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test tests/e2e --grep-invert @pwa",
     "test:pwa": "playwright test tests/e2e/pwa-offline.spec.ts",
+    "test:pwa:subpath": "VITE_BASE_PATH=/Hoa_hoc_THCS/ npm run build -- --outDir dist-subpath && npx playwright test tests/e2e/pwa-subpath.spec.ts --config=playwright.subpath.config.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "validate-content": "tsx scripts/validate-content.ts"

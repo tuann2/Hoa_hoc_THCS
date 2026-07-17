@@ -34,14 +34,18 @@ test('exam answers questions, grades, persists history, and times out on fake cl
   }
 
   await expect(page.getByText('Kết quả thi thử')).toBeVisible();
-  await expect(
-    page
-      .locator('article')
-      .filter({ hasText: 'Số câu đúng' })
-      .getByText(/\d+\/\d+$/)
-  ).toBeVisible();
+  const resultScore = page
+    .locator('article')
+    .filter({ hasText: 'Số câu đúng' })
+    .getByText(/\d+\/\d+$/);
+  await expect(resultScore).toBeVisible();
+  const resultScoreText = (await resultScore.textContent())?.trim() ?? '';
+  expect(resultScoreText).toMatch(/^\d+\/20$/);
   await page.getByRole('link', { name: 'Xem hồ sơ' }).click();
-  await expect(page.getByText(/\d+\/\d+ câu đúng · \d+%/)).toBeVisible();
+  const [correctCount] = resultScoreText.split('/');
+  await expect(
+    page.getByText(new RegExp(`^${correctCount}/20 câu đúng · \\d+%$`))
+  ).toBeVisible();
 
   await page.goto('/exam');
   await page.getByRole('button', { name: 'Bắt đầu thi' }).click();
@@ -53,6 +57,6 @@ test('exam answers questions, grades, persists history, and times out on fake cl
     page
       .locator('article')
       .filter({ hasText: 'Số câu đúng' })
-      .getByText(/^0\/\d+$/)
+      .getByText(/^0\/20$/)
   ).toBeVisible();
 });

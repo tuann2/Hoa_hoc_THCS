@@ -24,7 +24,7 @@ const basePath = base === '/' ? '' : base.replace(/\/$/, '');
 const escapeRegex = (value: string) =>
   value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const appRouteAllowlist = new RegExp(
-  `^${escapeRegex(basePath)}/?(?:$|learn(?:/|$)|review(?:/|$)|exam(?:/|$)|profile(?:/|$)|auth(?:/|$))`
+  `^${escapeRegex(basePath)}/?(?:$|learn(?:/|$)|(?:review|exam|profile|auth)/?$)`
 );
 
 export default defineConfig({

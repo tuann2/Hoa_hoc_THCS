@@ -23,6 +23,7 @@
     "scripts",
     "vite.config.ts",
     "playwright.config.ts",
+    "playwright.subpath.config.ts",
     "eslint.config.js"
   ]
 }

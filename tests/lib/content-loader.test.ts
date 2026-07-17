@@ -4,7 +4,8 @@ import {
   loadQuestion,
   loadUnit,
   loadUnits,
-  resetContentLoaderForTests
+  resetContentLoaderForTests,
+  validateUnit
 } from '../../src/lib/contentLoader';
 
 describe('content loader', () => {
@@ -43,5 +44,32 @@ describe('content loader', () => {
     await expect(loadUnit('constructor')).rejects.toThrow(
       'Không tìm thấy unit'
     );
+  });
+
+  it('rejects malformed card and question elements at the loader boundary', () => {
+    const validLesson = {
+      id: 'lesson-1',
+      cards: [{ id: 'card-1' }],
+      questions: [{ id: 'question-1', type: 'single-choice' }]
+    };
+    const validUnit = {
+      id: 'test-unit',
+      part: 'inorganic',
+      lessons: [validLesson]
+    };
+
+    expect(() =>
+      validateUnit('test-unit', {
+        ...validUnit,
+        lessons: [{ ...validLesson, cards: [null] }]
+      })
+    ).toThrow('Nội dung unit test-unit không hợp lệ');
+
+    expect(() =>
+      validateUnit('test-unit', {
+        ...validUnit,
+        lessons: [{ ...validLesson, questions: [{ id: 'q' }] }]
+      })
+    ).toThrow('Nội dung unit test-unit không hợp lệ');
   });
 });

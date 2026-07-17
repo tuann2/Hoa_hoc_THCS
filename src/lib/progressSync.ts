@@ -22,6 +22,7 @@ import type { LessonSummary, UnitSummary } from '../types/content';
 
 let pushTimer: number | null = null;
 let lastScheduledSnapshot: ProgressSnapshot | null = null;
+let lastScheduledUserId: string | null = null;
 let hasSubscribedToProgress = false;
 let lastSyncedUserId: string | null = null;
 const PROGRESS_OWNER_STORAGE_KEY = 'hhthcs-progress-owner';
@@ -602,8 +603,12 @@ export async function pushProgress(
   return true;
 }
 
-export function scheduleProgressPush(snapshot: ProgressSnapshot) {
+export function scheduleProgressPush(
+  snapshot: ProgressSnapshot,
+  userId = getAuthStore().getState().user?.id ?? null
+) {
   lastScheduledSnapshot = structuredClone(snapshot);
+  lastScheduledUserId = userId;
 
   if (pushTimer) {
     window.clearTimeout(pushTimer);
@@ -611,17 +616,29 @@ export function scheduleProgressPush(snapshot: ProgressSnapshot) {
 
   pushTimer = window.setTimeout(() => {
     const nextSnapshot = lastScheduledSnapshot;
+    const targetUserId = lastScheduledUserId;
     pushTimer = null;
     lastScheduledSnapshot = null;
+    lastScheduledUserId = null;
 
-    if (!nextSnapshot) {
+    if (!nextSnapshot || !targetUserId) {
       return;
     }
 
-    void pushProgress(nextSnapshot).catch(() => {
+    void pushProgress(nextSnapshot, targetUserId).catch(() => {
       // Offline-first: bỏ qua lỗi để lần push sau ghi đè bằng bản merge mới nhất.
     });
   }, 2_000);
+}
+
+export function cancelScheduledProgressPush() {
+  if (pushTimer) {
+    window.clearTimeout(pushTimer);
+  }
+
+  pushTimer = null;
+  lastScheduledSnapshot = null;
+  lastScheduledUserId = null;
 }
 
 export function subscribeProgressPush(units: UnitSummary[]) {
@@ -690,12 +707,7 @@ export async function syncProgressOnSignIn(
 }
 
 export function resetProgressSyncForTests() {
-  if (pushTimer) {
-    window.clearTimeout(pushTimer);
-  }
-
-  pushTimer = null;
-  lastScheduledSnapshot = null;
+  cancelScheduledProgressPush();
   hasSubscribedToProgress = false;
   lastSyncedUserId = null;
 }

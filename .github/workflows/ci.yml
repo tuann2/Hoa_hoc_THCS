@@ -103,6 +103,12 @@ jobs:
           VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
         run: npm run test:pwa
 
+      - name: Run PWA subpath E2E gate
+        env:
+          VITE_SUPABASE_URL: https://example.supabase.co
+          VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
+        run: npm run test:pwa:subpath
+
       - name: Upload Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v4

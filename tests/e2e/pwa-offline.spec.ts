@@ -115,12 +115,35 @@ test.describe('@pwa', () => {
     ).toBe(false);
 
     await context.setOffline(true);
-    await page.goto('/review');
+    const offlineRoutes = [
+      { path: '/', heading: /Lộ trình ôn Hoá học/ },
+      {
+        path: '/learn/a1-nen-tang-hoa-hoc/a1-l1/theory',
+        heading: /Chất – hỗn hợp/
+      },
+      { path: '/review', heading: /Ôn lại câu sai|Không có câu nào cần ôn/ },
+      { path: '/exam', heading: /Tạo đề luyện tập theo phạm vi em muốn/ },
+      { path: '/profile', heading: /Tiến độ của em/ },
+      { path: '/auth', heading: /^Đăng nhập$/ }
+    ];
+
+    for (const route of offlineRoutes) {
+      await page.goto(route.path);
+      await expect(
+        page.getByRole('heading', { name: route.heading })
+      ).toBeVisible();
+    }
+
+    // Gỡ mock Supabase của fixture trước khi assert: route interception
+    // hoạt động cả khi offline nên fetch sẽ được mock trả lời thay vì
+    // chứng minh SW không phục vụ Supabase từ cache.
+    await page.unroute('https://example.supabase.co/**');
     await expect(
-      page.getByRole('heading', {
-        name: /Ôn lại câu sai|Không có câu nào cần ôn/
+      page.evaluate(async () => {
+        await fetch('https://example.supabase.co/rest/v1/progress');
+        return true;
       })
-    ).toBeVisible();
+    ).rejects.toThrow();
     await context.setOffline(false);
   });
 
@@ -200,6 +223,9 @@ test.describe('@pwa', () => {
               )
             );
           } catch {
+            // Fail-safe: exception (navigation đang diễn ra) phải trả true để
+            // poll retry; trả false sẽ pass assertion ngay cả khi evaluate
+            // hỏng vĩnh viễn.
             return true;
           }
         })

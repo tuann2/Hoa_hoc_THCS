@@ -1,23 +1,37 @@
 import { expect, installSupabaseMock, test } from './fixtures';
 
-function progressSnapshot(totalXp: number) {
+function progressSnapshot(totalXp: number, localOnlyLessonXp = 0) {
+  const lessonProgress: Record<string, unknown> = {
+    'a1-l1': {
+      theory: { completed: true, accuracy: 100, bestXp: totalXp },
+      practice: { completed: true, accuracy: 100, bestXp: 0 },
+      completed: true,
+      stars: 3,
+      bestAccuracy: 100,
+      bestXp: totalXp,
+      completedAt: '2026-07-17T00:00:00.000Z'
+    }
+  };
+
+  if (localOnlyLessonXp > 0) {
+    lessonProgress['a1-l2'] = {
+      theory: { completed: true, accuracy: 100, bestXp: localOnlyLessonXp },
+      practice: { completed: false, accuracy: 0, bestXp: 0 },
+      completed: false,
+      stars: 1,
+      bestAccuracy: 100,
+      bestXp: localOnlyLessonXp,
+      completedAt: '2026-07-17T00:00:00.000Z'
+    };
+  }
+
   return {
-    totalXp,
+    totalXp: totalXp + localOnlyLessonXp,
     streakCurrent: 1,
     streakLongest: 1,
     lastStudyDate: '2026-07-17',
     lastMutationAt: '2026-07-17T00:00:00.000Z',
-    lessonProgress: {
-      'a1-l1': {
-        theory: { completed: true, accuracy: 100, bestXp: totalXp },
-        practice: { completed: true, accuracy: 100, bestXp: 0 },
-        completed: true,
-        stars: 3,
-        bestAccuracy: 100,
-        bestXp: totalXp,
-        completedAt: '2026-07-17T00:00:00.000Z'
-      }
-    },
+    lessonProgress,
     unlockedLessonIds: ['a1-l1'],
     wrongQuestions: {},
     examHistory: []
@@ -34,14 +48,17 @@ test('sign-in merges and pushes per user, then sign-out never mixes users', asyn
       'user-bob': progressSnapshot(1)
     }
   });
-  await page.addInitScript((snapshot) => {
-    if (!localStorage.getItem('hhthcs-progress')) {
-      localStorage.setItem(
-        'hhthcs-progress',
-        JSON.stringify({ state: snapshot, version: 4 })
-      );
-    }
-  }, progressSnapshot(5));
+  await page.addInitScript(
+    (snapshot) => {
+      if (!localStorage.getItem('hhthcs-progress')) {
+        localStorage.setItem(
+          'hhthcs-progress',
+          JSON.stringify({ state: snapshot, version: 4 })
+        );
+      }
+    },
+    progressSnapshot(5, 5)
+  );
 
   await page.goto('/auth');
   await page.getByLabel('Email').fill('alice@example.com');
@@ -63,7 +80,7 @@ test('sign-in merges and pushes per user, then sign-out never mixes users', asyn
     )
     .toBeTruthy();
   await expect(
-    page.locator('article').filter({ hasText: 'Tổng XP' }).getByText('10', {
+    page.locator('article').filter({ hasText: 'Tổng XP' }).getByText('15', {
       exact: true
     })
   ).toBeVisible();

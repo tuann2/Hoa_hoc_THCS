@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import type { Session, User } from '@supabase/supabase-js';
 import { supabase } from '../lib/supabase';
+import { cancelScheduledProgressPush } from '../lib/progressSync';
 
 export interface AuthActionResult {
   error: string | null;
@@ -271,6 +272,7 @@ export const useAuthStore = create<AuthState>()((set) => ({
   },
   async signOut() {
     if (!supabase) {
+      cancelScheduledProgressPush();
       set({
         session: null,
         user: null,
@@ -295,6 +297,7 @@ export const useAuthStore = create<AuthState>()((set) => ({
       displayName: null,
       isPasswordRecovery: false
     });
+    cancelScheduledProgressPush();
 
     return { error: null, message: 'Đã đăng xuất.' };
   },

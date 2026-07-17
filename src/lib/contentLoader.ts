@@ -46,13 +46,28 @@ function validateUnit(unitId: string, value: unknown): UnitContent {
     throw new Error(`Nội dung unit ${unitId} không hợp lệ.`);
   }
 
-  const hasValidLessonShape = value.lessons.every(
-    (lesson) =>
-      isRecord(lesson) &&
-      typeof lesson.id === 'string' &&
-      Array.isArray(lesson.cards) &&
-      Array.isArray(lesson.questions)
-  );
+  const hasValidLessonShape = value.lessons.every((lesson) => {
+    if (
+      !isRecord(lesson) ||
+      typeof lesson.id !== 'string' ||
+      !Array.isArray(lesson.cards) ||
+      !Array.isArray(lesson.questions)
+    ) {
+      return false;
+    }
+
+    const hasValidCardShape = lesson.cards.every(
+      (card) => isRecord(card) && typeof card.id === 'string'
+    );
+    const hasValidQuestionShape = lesson.questions.every(
+      (question) =>
+        isRecord(question) &&
+        typeof question.id === 'string' &&
+        typeof question.type === 'string'
+    );
+
+    return hasValidCardShape && hasValidQuestionShape;
+  });
 
   if (!hasValidLessonShape) {
     throw new Error(`Nội dung unit ${unitId} không hợp lệ.`);
@@ -60,6 +75,8 @@ function validateUnit(unitId: string, value: unknown): UnitContent {
 
   return value as unknown as UnitContent;
 }
+
+export { validateUnit };
 
 export function loadUnit(unitId: string): Promise<UnitContent> {
   if (!Object.hasOwn(loaders, unitId))

@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-subpath/
 build/
 coverage/
 node-compile-cache/
