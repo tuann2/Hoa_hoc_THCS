@@ -68,9 +68,12 @@ Additional untracked implementation/docs/test files are listed above.
 ## 3. Evidence binding
 
 - Base commit SHA (`HEAD` when validation started): `7dd410a6de285f51dc024a5f462b6bd9efc7198e`
-- Candidate commit SHA: `UNCOMMITTED`
-- Worktree state: `dirty`
-- CI run reference for the candidate commit: `PENDING` — no candidate commit exists
+- Candidate commit SHA: `89f9e9a` (tree content identical to the validated
+  dirty snapshot `283f1bc...` plus this handoff's own evidence update)
+- Worktree state at validation: `dirty` (all paths below committed as `89f9e9a`
+  immediately after validation, under session-level human authorization)
+- CI run reference for the candidate commit: `PENDING` — branch not yet pushed
+  (no GitHub credentials in this environment; human will push)
 - Dirty paths: `.github/workflows/ci.yml`, `README.md`, `docs/architecture.md`, `docs/adr/0002-pwa-cache-and-update-strategy.md`, `docs/handoffs/FEATURE-014-implementation.md`, `eslint.config.js`, `index.html`, `package-lock.json`, `package.json`, `playwright.config.ts`, `content/catalog.json`, `public/icons/pwa-192.png`, `public/icons/pwa-512.png`, `public/icons/pwa-maskable-512.png`, `scripts/check-bundle-budget.ts`, `scripts/generate-content-catalog.ts`, `src/App.tsx`, `src/components/ContentLoadError.tsx`, `src/components/ContentLoading.tsx`, `src/components/LessonMap.tsx`, `src/components/LessonPlayer.tsx`, `src/components/PwaStatus.tsx`, `src/lib/content.ts`, `src/lib/contentCatalog.ts`, `src/lib/contentLoader.ts`, `src/lib/progressSync.ts`, `src/lib/pwa.ts`, `src/routes/ExamRoute.tsx`, `src/routes/LessonRoute.tsx`, `src/routes/ReviewRoute.tsx`, `src/store/progress.ts`, `src/types/content.ts`, `src/vite-env.d.ts`, `tests/e2e/auth-sync.spec.ts`, `tests/e2e/exam.spec.ts`, `tests/e2e/fixtures.ts`, `tests/e2e/learning.spec.ts`, `tests/e2e/pwa-offline.spec.ts`, `tests/e2e/review.spec.ts`, `tests/lib/content-catalog.test.ts`, `tests/lib/content-loader.test.ts`, `tests/routes/exam-route.test.tsx`, `tests/routes/lesson-route.test.tsx`, `tests/routes/review-route.test.tsx`, `test-results/.last-run.json`, `tsconfig.json`, `vite.config.ts`
 - Dirty snapshot command: `git add -A && git stash create` (run by the
   orchestrator, whose git metadata is writable)
