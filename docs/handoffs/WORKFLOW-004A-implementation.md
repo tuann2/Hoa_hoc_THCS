@@ -273,3 +273,72 @@ Browser/PWA commands (`npm run test:e2e`, `npm run test:pwa`, `npm run test:pwa:
  tests/scripts/gates.test.ts                   |  44 ++++++--
  7 files changed, 281 insertions(+), 55 deletions(-)
 ```
+
+## 13. Remediation round 2 — Stage 5 CI shadow & negative fixtures
+
+### Stage 5 CI shadow diff summary
+
+- `.github/workflows/ci.yml`: added `push` trigger for `main` while preserving `feature/**` and `pull_request`.
+- `.github/workflows/ci.yml`: added independent `gates-shadow` job with `Checkout`, `Setup Node`, `npm ci`, `npm run gates -- --profile=web`, and `npm run gates -- --profile=docs`.
+- Left legacy `web` and `browser` jobs unchanged line-for-line; `gates-shadow` has no `needs`, no downstream dependents, and no `continue-on-error`.
+- `deploy.yml` remained untouched per Stage 5 scope.
+
+### Negative fixture comparison
+
+| Fixture                                                                                                                   | Legacy command             | Exit | New gate command                  | Exit |
+| ------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ---- | --------------------------------- | ---- |
+| Format violation via temporary `scripts/__workflow004a_format_fixture.ts`                                                 | `npm run format:check`     | 1    | `npm run gates -- --profile=docs` | 1    |
+| Invalid content via temporary `content/units/a1-nen-tang-hoa-hoc.json` edit (`a1-l1-q1.answer: 0 -> 99`)                  | `npm run validate-content` | 1    | `npm run gates -- --profile=web`  | 1    |
+| Type error via temporary `scripts/__workflow004a_type_fixture.ts` (`const typeFixtureValue: string = 42;`)                | `npm run typecheck`        | 2    | `npm run gates -- --profile=web`  | 1    |
+| Unit test failure via temporary `tests/scripts/__workflow004a_fail.test.ts`                                               | `npm test`                 | 1    | `npm run gates -- --profile=web`  | 1    |
+| Bundle overflow via temporary `scripts/check-bundle-budget.ts` threshold change (`if (size > 500_000)` → `if (size > 1)`) | `npm run check:bundle`     | 1    | `npm run gates -- --profile=web`  | 1    |
+| Broken docs link via temporary `docs/__workflow004a-broken-link.md`                                                       | `npm run check:docs`       | 1    | `npm run gates -- --profile=docs` | 1    |
+
+Notes:
+
+- The content fixture was rerun with a one-token replacement so the shadow profile passed `format-check` and `content-catalog`, then failed at `content-validation` with the same invalid-answer diagnostic as the legacy command.
+- The typecheck fixture preserved the legacy `tsc --noEmit` exit code `2`; the shadow runner exited `1` overall, and its structured log recorded the inner `typecheck` gate as `exit_code=2`.
+- The bundle fixture used the clean fallback approved by plan §10 Stage 5: temporarily lowered the bundle-size threshold inside `scripts/check-bundle-budget.ts`, ran both commands, then restored the file immediately.
+- After each fixture rollback, `git status --short` returned to the expected Stage 5 worktree state: only `.github/workflows/ci.yml` remained modified.
+
+### Classifier checks
+
+Unknown path → fail closed to `minimumProfile: full`:
+
+```text
+$ node --import tsx scripts/classify-change.ts --changed-path supabase/migrations/20260718_stage5.sql --json
+{
+  "fallbackToFull": true,
+  "minimumProfile": "full",
+  "unknownPaths": [
+    "supabase/migrations/20260718_stage5.sql"
+  ]
+}
+```
+
+Under-classified declaration (`docs` on `src`) → hard fail:
+
+```text
+$ node --import tsx scripts/classify-change.ts --changed-path src/main.tsx --declared-profile=docs
+Declared profile "docs" under-classifies this change. Required profile: web. Missing gates: content-catalog, content-validation, lint, typecheck, unit-tests, production-build, bundle-check, dependency-audit, license-check
+```
+
+### Final validation after rollback
+
+| Command                | Exit status | Notes                                        |
+| ---------------------- | ----------- | -------------------------------------------- |
+| `git diff --check`     | 0           | Passed with no output.                       |
+| `npm run format:check` | 0           | `All matched files use Prettier code style!` |
+| `npm run lint`         | 0           | Passed with no diagnostics.                  |
+| `npm run typecheck`    | 0           | Passed with no diagnostics.                  |
+| `npm test`             | 0           | `25` test files passed; `133` tests passed.  |
+
+- `git status --short` after rollback and before this handoff update: ` M .github/workflows/ci.yml`
+
+### Git diff --stat for this remediation round
+
+```text
+ .github/workflows/ci.yml                      | 26 ++++++++++
+ docs/handoffs/WORKFLOW-004A-implementation.md | 69 +++++++++++++++++++++++++++
+ 2 files changed, 95 insertions(+)
+```
