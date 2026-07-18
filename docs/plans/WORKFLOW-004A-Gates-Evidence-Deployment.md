@@ -2,10 +2,10 @@
 
 ## Status
 
-- Status: DRAFT
+- Status: APPROVED
 - Owner: Claude Code
-- Approved by:
-- Approved date:
+- Approved by: nt0
+- Approved date: 2026-07-18
 - Risk tier: CRITICAL
 - Risk categories: CI and deployment controls; validation and evidence
   controls; toolchain scripts; architecture amendment (Validation Model)
