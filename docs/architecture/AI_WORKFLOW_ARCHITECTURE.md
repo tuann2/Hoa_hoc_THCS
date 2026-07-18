@@ -1,625 +1,310 @@
 # AI Workflow Architecture
 
-- Version: 2.3
-- Status: APPROVED (v2.3 amendment approved by nt0, 2026-07-18)
+- Version: 2.4
+- Status: DRAFT (pending Human Project Owner approval)
 - Owner: Human Project Owner
-- Reviewers: Claude, Codex, Gemini (conditional by risk tier)
-- Amendment history: v2.3 (WORKFLOW-004A) — superseded the manual
-  `git add -A && git stash create` evidence ritual with machine-generated
-  exact-snapshot IDs from `scripts/evidence.ts`, made the gate manifest
-  (`scripts/gates-manifest.ts`) the canonical command source, and added
-  the Deployment Invariant. v2.2 (WORKFLOW-003) — removed the unimplementable
-  tree-SHA evidence requirement, scoped documentation-only remediation to
-  match `docs/DOCUMENTATION_RULES.md`, condensed duplicated sections,
-  replaced unmeasurable success metrics with countable ones, and codified
-  the batch-content reviewer-applies-fixes exception. v2.1 (WORKFLOW-002)
-  — initial approved architecture.
+- Reviewers: role-qualified independent executions, conditional by risk tier
+- Amendment history: v2.4 (WORKFLOW-004B, DRAFT) — makes governance
+  provider-neutral through role contracts and execution envelopes; adds Context
+  Policy and the policy-only TRIVIAL tier. v2.3 (WORKFLOW-004A) — superseded
+  the manual evidence ritual with machine-generated exact-snapshot IDs, made
+  `scripts/gates-manifest.ts` the canonical command source, and added the
+  Deployment Invariant. v2.2 (WORKFLOW-003) — scoped documentation-only
+  remediation and codified the batch-content reviewer-applies-fixes exception.
+  v2.1 (WORKFLOW-002) — initial approved architecture.
 
 ---
 
-## Purpose
+## Purpose and precedence
 
-When its `Status` is `APPROVED`, this document is the single source of truth
-for AI-assisted development within this repository.
+When its status is APPROVED, this document is the single source of truth for
+AI-assisted development in this repository. It defines responsibility,
+authority, orchestration, validation, risk, documentation, quality gates,
+context, and session lifecycle.
 
-It defines:
-
-- responsibilities
-- authority
-- orchestration
-- validation
-- risk management
-- documentation contracts
-- quality gates
-- session lifecycle
-
-Every implementation document (`CLAUDE.md`, `AI_WORKFLOW.md`, `AGENTS.md`,
-skills, commands and runbooks) MUST conform to this specification after this
-document is approved.
-
-Precedence is conditional:
-
-- When `Status: APPROVED`, this architecture prevails over conflicting
-  implementation documents.
-- When `Status` is not `APPROVED`, the currently approved implementation
-  documents remain authoritative. This draft MUST NOT activate new workflow
-  rules.
-- A conflict found while this document is not approved MUST be reported to the
-  Human Project Owner and MUST NOT be resolved by an agent choosing its
-  preferred rule.
-
----
+All shims, role contracts, skills, commands, and runbooks must conform after
+approval. When this document is not APPROVED, the currently approved
+implementation documents remain authoritative; this draft must not activate
+new workflow rules. Report a conflict in an unapproved draft to the Human
+Project Owner rather than resolving it by preference.
 
 ## Goals
 
-Primary goals
-
-- Reduce Claude token consumption.
-- Reduce duplicated reasoning.
-- Preserve software quality.
-- Preserve independent verification.
-- Keep human in control.
-
-Non-goals
-
-- Remove quality gates.
-- Remove planning.
-- Remove documentation.
-- Blindly trust AI-generated summaries.
-- Maximize speed at the expense of correctness.
-
----
-
-## Architecture Overview
-
-Human → Claude (Project Architect) → Codex (Engineering Engine) →
-Risk-Tier Reviewers (Independent Codex / Gemini) → Claude (Release
-Readiness Assessment) → Human (Final Approval).
-
-Claude is never the final approver.
-
----
+Reduce duplicated reasoning and unnecessary context while preserving software
+quality, independent verification, and human control. It does not remove
+quality gates, planning, documentation, or evidence requirements, and never
+trades correctness for speed.
 
 ## Responsibility Matrix
 
-### Human
+One provider may perform different roles only in separate executions. The
+execution envelope and role contract, not provider reputation, determine
+authority.
 
-Owns
+| Role                 | Owns                                                                                                | Must not                                                        |
+| -------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Planner              | requirements, plans, risk classification, delegation, scope checks, review orchestration            | implement substantial features or give final approval           |
+| Implementer          | implementation, refactoring, debugging, validation, and handoff                                     | self-certify release readiness or exceed approved scope         |
+| Independent Reviewer | fresh, read-only verification and findings                                                          | inherit implementer transcript or silently modify the candidate |
+| Release Assessor     | release-readiness assessment from evidence and reviews                                              | approve release or replace required independent review          |
+| Human Approver       | business decisions, priorities, plan/architecture/release approval, merge and production deployment | delegate final authority away                                   |
 
-- business decisions
-- priorities
-- architecture approval
-- release approval
-- production deployment
+Each contract in `docs/roles/` declares `capabilities_required` and
+permissions. All permissions default to false; the Human Approver remains the
+only final authority.
 
-Human is the only final authority.
+## Execution envelope
 
----
+Every execution must receive this envelope from the orchestrator or human:
 
-### Claude
+```yaml
+request_class: read-only | change | independent-review | release-assessment
+assigned_role: planner | implementer | independent-reviewer | release-assessor
+risk_tier: TRIVIAL | NORMAL | ELEVATED | CRITICAL
+scope: { allowed_paths: [...], forbidden_paths: [...] }
+candidate_sha: <sha|null>
+permissions: { repository_write: bool, commit: bool, push: bool }
+```
 
-Claude is the Architect.
+Missing, malformed, or ambiguous fields mean least privilege: read-only, no
+role assumption, no file changes, and no authority escalation. An execution
+may write only paths allowed by its envelope and role. Commit, push, merge, and
+deploy are forbidden unless the envelope grants the permission and the
+required human authorization exists.
 
-Responsibilities
+The selected execution profile must satisfy the role's
+`capabilities_required` in the actual session. If it does not, the Planner
+must record a safe degradation path, such as CI browser gates or external
+evidence generation. Provider runbooks document known profiles; they do not
+define policy.
 
-- requirement analysis
-- implementation planning
-- orchestration
-- task decomposition
-- risk classification
-- scope verification
-- release-readiness assessment
-
-Claude SHOULD NOT
-
-- implement features
-- rewrite large code
-- rerun successful engineering validation
-- perform full repository review
-- duplicate Codex engineering work
-
----
-
-### Codex
-
-Codex is the primary engineer.
-
-Responsibilities
-
-- implementation
-- refactoring
-- debugging
-- lint
-- build
-- tests
-- implementation handoff
-
-Codex owns engineering execution.
-
----
-
-### Gemini
-
-Gemini is an independent reviewer.
-
-Gemini is not required for `NORMAL` or `ELEVATED` work unless explicitly
-requested. Gemini is required for `CRITICAL` work by the Risk Matrix. If Gemini
-is unavailable, the critical review gate is blocked until the human approves an
-equally independent replacement reviewer; it MUST NOT be silently skipped.
-
----
+An Independent Reviewer is a fresh execution that receives the candidate
+snapshot, approved plan, and required evidence, but not the implementer's
+transcript. A label or prompt inside the implementation execution is not
+independent review.
 
 ## Trust Model
 
-AI output is never trusted blindly.
-
-Every implementation must be supported by evidence.
-
-Evidence may include
-
-- validation results
-- CI status
-- implementation handoff
-- targeted diff review
-- independent review
-
-Claude does not blindly trust Codex.
-
-Codex does not self-certify release readiness.
-
-Human does not blindly trust Claude.
-
-Evidence is valid only when it identifies the exact implementation snapshot
-that produced it. A summary, successful command result or review that cannot be
-bound to that snapshot is not release evidence.
-
----
+AI output is never trusted blindly. Every implementation needs evidence from
+validation, CI, targeted diff review, independent review, and/or its handoff.
+Evidence is release-valid only when it identifies the exact implementation
+snapshot. A summary or successful command that cannot bind to that snapshot is
+not release evidence. No role self-certifies the next role's decision.
 
 ## Independent Verification
 
-An independent verifier MUST NOT be the implementation execution that authored
-the candidate. Independence may be provided by CI running against the exact
-candidate commit or by a fresh, read-only agent execution with no inherited
-implementation context. A new label or prompt inside the implementation
-execution is not independent verification.
+The minimum independent verification depends on risk:
 
-The minimum requirement depends on risk:
+| Tier     | Required independent verification                                                                                                                                                         |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NORMAL   | CI validates the exact candidate commit when available; otherwise one fresh read-only reviewer inspects the targeted diff and reruns risk-relevant gates.                                 |
+| ELEVATED | One fresh independent reviewer inspects every changed line, affected tests, and elevated-risk behavior. CI validates the exact candidate commit before release when available.            |
+| CRITICAL | Two separate fresh independent reviewers inspect every changed line and critical failure modes, including one adversarial review. CI validates the exact candidate commit before release. |
 
-| Tier     | Required independent verification                                                                                                                                                                          |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| NORMAL   | CI MUST validate the exact candidate commit when available. If CI is unavailable before approval, use one fresh read-only reviewer to inspect the targeted diff and rerun the risk-relevant gate or gates. |
-| ELEVATED | A fresh Codex review execution MUST inspect every changed line, affected tests and the elevated-risk behavior. CI MUST validate the exact candidate commit before release when CI is available.            |
-| CRITICAL | A fresh Gemini review and a separate fresh Codex adversarial review MUST inspect every changed line and critical failure modes. CI MUST validate the exact candidate commit before release.                |
+Reviewers report findings; fixes return to implementation and remediation.
+Successful, bound validation is not rerun merely to reproduce logs.
 
-Reviewers MUST report findings rather than silently modify the candidate. Fixes
-return to the implementation and remediation flow. Successful validation MUST
-NOT be rerun by Claude merely to reproduce logs when valid, bound evidence or CI
-already satisfies the required gate.
-
-**Bounded exception — batch content review:** for `NORMAL`-tier learning
-content batch review only, the human may authorize a
-**reviewer-applies-fixes** mode (in the plan, or by direct mid-feature
-instruction) in which the reviewing execution also applies the fixes
-instead of only reporting them. This exception does not relax the
-"reviewers report findings only" rule for `CLAUDE.md` or `AGENTS.md`
-outside this specific case. Conditions: findings are still recorded (a
-consolidated findings file or per-commit messages); the handoff MUST
-record the authorization source (the plan section, or a quoted excerpt of
-the direct instruction) whenever this mode is used; any numeric/chemistry
-correction still requires independent re-verification of the corrected
-value **by an execution other than the one that applied the fix**; this
-mode MUST NOT be used for `ELEVATED` or `CRITICAL` work. Precedent:
-FEATURE-012 Phase B (`docs/plans/FEATURE-012.md`, "Workflow revision
-2026-07-12").
-
----
+**Bounded exception — batch content review:** for NORMAL-tier learning-content
+batch work only, a human may authorize reviewer-applies-fixes mode in the plan
+or direct instruction. Findings remain recorded; the handoff records the
+authorization source; a numeric or chemistry correction is independently
+re-verified by another execution. This exception never applies to ELEVATED or
+CRITICAL work.
 
 ## Risk Model
 
-Every task is assigned exactly one effective risk tier.
-
-If multiple categories apply, the highest tier wins.
-
-Claude proposes the tier during planning. The approved plan MUST record the
-tier, the applicable categories and the reason for any escalation. Human plan
-approval also approves that classification. Risk MUST be reassessed when scope
-changes; if the effective tier increases, work stops until the revised plan is
-approved.
+Every task has exactly one effective tier; the highest applicable tier wins.
+The Planner proposes the tier, categories, and escalation rationale in the
+plan. Human plan approval approves that classification. Reassess risk when
+scope changes; an increase stops work until a revised plan is approved.
 
 Classification rules:
 
-1. `CRITICAL` always overrides `ELEVATED` and `NORMAL`; `ELEVATED` always
-   overrides `NORMAL`.
-2. Any change that can affect production data, production availability,
-   deployment, infrastructure, payment processing, credentials, trust
-   boundaries, security controls, or this architecture itself is
-   `CRITICAL`.
-3. Authentication or authorization logic is `CRITICAL`. Presentation-only
-   changes to an existing authentication UI may remain `NORMAL` only when they
-   cannot change identity, session or access-control behavior.
-4. A migration is at least `ELEVATED`. A migration that can execute against
-   production, transform production data or cause irreversible data loss is
-   `CRITICAL`.
-5. Public APIs, destructive operations and numeric or complex business logic
-   are at least `ELEVATED`; they become `CRITICAL` when rule 2 applies.
-6. A task whose impact or environment is uncertain is classified at the next
-   higher plausible tier until the uncertainty is resolved.
+1. CRITICAL overrides ELEVATED, NORMAL, and TRIVIAL; ELEVATED overrides NORMAL
+   and TRIVIAL; NORMAL overrides TRIVIAL.
+2. A change affecting production data or availability, deployment,
+   infrastructure, payment, credentials, trust boundaries, security controls,
+   or this architecture is CRITICAL.
+3. Authentication or authorization logic is CRITICAL. Presentation-only
+   changes to an existing authentication UI may remain NORMAL only when they
+   cannot change identity, session, or access-control behavior.
+4. A migration is at least ELEVATED; one that can execute against production,
+   transform production data, or cause irreversible loss is CRITICAL.
+5. Public APIs, destructive operations, and numeric or complex business logic
+   are at least ELEVATED and become CRITICAL when rule 2 applies.
+6. Uncertain impact or environment is classified at the next higher plausible
+   tier until resolved.
 
----
+### TRIVIAL policy
 
-### Examples by tier
+TRIVIAL is policy only; automated enforcement and its micro-trace schema are
+deferred to WORKFLOW-004C. Its narrow allowlist is non-governance prose
+documentation and typo/format fixes that do not change commands, paths,
+policy, examples, technical behavior, or educational meaning. Content units
+remain NORMAL initially. TRIVIAL has no full plan or handoff, but must have a
+snapshot-bound micro-trace once enforcement exists.
 
-| Tier       | Examples                                                                                                                                                                                           |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NORMAL`   | documentation, UI, styling, non-numeric learning content, wording, small refactoring                                                                                                               |
-| `ELEVATED` | chemistry algorithms, numeric calculations, public APIs, non-production or reversible migrations, non-production destructive operations, complex business logic                                    |
-| `CRITICAL` | production migration, authentication and authorization logic, security controls and trust boundaries, deployment, infrastructure, payment, architecture changes, production destructive operations |
+TRIVIAL is denied for workflow shims, architecture, role contracts, context
+rules, documentation rules, plans, handoffs, CI, scripts, package files,
+application or test code, backend files, build/test/lint configuration, and
+content schema/catalogue. Every Context Policy hard trigger applies; an
+unrecognised path escalates to NORMAL.
 
-### Workflow by tier
+### Examples and workflow
 
-All tiers share the same 8-step shape; only the gate and review steps scale
-with risk. Each cell is the tier-specific variant of that step; the
-Independent Verification table above is the normative detail for step 6 —
-it is not repeated here.
+| Tier     | Examples                                                                                                                                                                     |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TRIVIAL  | narrow non-governance prose typo or formatting fix                                                                                                                           |
+| NORMAL   | documentation, UI, styling, non-numeric learning content, wording, small refactoring                                                                                         |
+| ELEVATED | chemistry algorithms, numeric calculations, public APIs, reversible migrations, non-production destructive operations, complex business logic                                |
+| CRITICAL | production migration, authentication/authorization, security controls/trust boundaries, deployment, infrastructure, payment, architecture, production destructive operations |
 
-| Step                        | NORMAL                                 | ELEVATED                             | CRITICAL                                                 |
-| --------------------------- | -------------------------------------- | ------------------------------------ | -------------------------------------------------------- |
-| 1. Plan                     | Plan                                   | Plan                                 | Plan                                                     |
-| 2. Implementation           | Codex                                  | Codex                                | Codex                                                    |
-| 3. Validation               | Validation                             | Validation                           | Validation                                               |
-| 4. Handoff                  | Implementation Handoff                 | Implementation Handoff               | Implementation Handoff                                   |
-| 5. Claude gate              | Lightweight Gate                       | Scope Gate                           | Scope Gate                                               |
-| 6. Independent verification | see table above (CI or fresh reviewer) | see table above (fresh Codex review) | see table above (fresh Gemini + fresh Codex adversarial) |
-| 7. Release readiness        | Release Readiness                      | Release Readiness                    | Release Readiness                                        |
-| 8. Approval                 | Human Approval                         | Human Approval                       | Human Approval                                           |
+All non-TRIVIAL tiers use the same shape: approved plan, implementation,
+validation, handoff, scope gate, independent verification, release assessment,
+and Human Approval. A finding or candidate change returns work to remediation.
 
-All tiers follow the remediation state machine. A finding or candidate change
-returns the work to implementation and validation rather than continuing to
-release readiness.
+## Release assessment
 
----
-
-## Claude Gates
-
-Claude performs lightweight governance.
-
-Claude verifies
-
-- requested scope
-- acceptance criteria
-- blockers
-- deviations
-- validation evidence
-- implementation handoff
-- git diff --stat
-
-Claude MAY inspect changed files when
-
-- risk tier is `ELEVATED` or `CRITICAL`
-- scope mismatch
-- failed validation
-- user request
-- suspicious changes
-
-For `NORMAL` work, Claude SHOULD NOT inspect every changed line by default.
-Independent reviewers perform the line-level review required by the effective
-risk tier. Claude targets investigation and does not duplicate a completed
-independent review without a specific reason.
-
----
+The Release Assessor verifies requested scope, acceptance criteria, blockers,
+deviations, validation evidence, implementation handoff, review outcomes, and
+`git diff --stat`. It may inspect changed files for ELEVATED/CRITICAL work,
+scope mismatch, failed validation, a user request, or suspicious changes. For
+NORMAL work it does not inspect every changed line by default or duplicate a
+completed independent review without a reason.
 
 ## Validation Model
 
-Validation executes once for each distinct implementation snapshot. Commands
-that provide the same gate for the same snapshot SHOULD NOT be duplicated.
+Validation runs once for each distinct implementation snapshot. Commands that
+satisfy the same gate for the same snapshot should not be duplicated.
 
 ### Evidence Binding
 
-Every validation record MUST contain:
+Every validation record contains:
 
-- base commit SHA (`HEAD` when validation started);
-- candidate commit SHA, or `UNCOMMITTED` before a candidate commit exists;
-- worktree state: `clean` (matches the named commit exactly), or `dirty`
-  plus the exact dirty paths;
-- a machine-generated **validated snapshot ID** produced by
-  `scripts/evidence.ts` (`npm run evidence`). The default kind is
-  `git-tree`: a tree SHA written through a temporary `GIT_INDEX_FILE`
-  (`read-tree HEAD` → `add -A` → `write-tree`), which never mutates the
-  real index or worktree (it may leave unreachable objects in `.git`;
-  harmless, `git gc` removes them). When the runtime cannot write git
-  metadata (e.g. a restricted sandbox), the fallback kind is `manifest`:
-  a SHA-256 over a deterministic manifest of `{base_sha, path, mode,
-status, content-hash, tracked}` for every tracked and untracked file.
-  The evidence record MUST state which kind was used. The snapshot is
-  computed immediately before gates run and again after they finish;
-  any mismatch makes the run `invalid` and the evidence MUST be
-  rejected. Recomputing the snapshot at handoff or release time and
-  comparing it against the recorded ID is how a stale re-presentation
-  of old evidence is caught — a differing ID means the evidence is
-  stale;
-- UTC validation start and completion timestamps in ISO 8601 format;
-- operating runtime and package-manager versions;
-- the version of every validation tool, or the lockfile SHA when the lockfile
-  deterministically pins those versions;
-- every command executed, its exit status and the gate it satisfies.
+- base SHA (`HEAD` when validation starts), candidate SHA or `UNCOMMITTED`, and
+  clean/dirty worktree state with exact dirty paths;
+- a machine-generated validated snapshot ID from `npm run evidence`;
+- UTC start/completion timestamps, runtime/package-manager versions, and
+  validation-tool versions or lockfile SHA;
+- every command, exit status, and gate it satisfies.
 
-Once a candidate commit exists and the worktree is clean, that commit SHA is
-the evidence anchor; a CI run reference for that exact SHA MUST be added
-when CI is required or available for the effective risk tier (see
-Independent Verification) — CI evidence MUST name that exact commit SHA, and
-evidence from another commit is stale even when the diff appears equivalent.
-Whenever the worktree is dirty — whether or not a candidate commit exists
-yet — the base or candidate commit SHA plus the dirty paths plus the
-validated snapshot ID is the evidence anchor. When a restricted sandbox
-cannot generate the snapshot itself, ownership of evidence generation
-moves to the orchestrator or harness environment outside the sandbox.
+The default evidence kind is `git-tree`, made through a temporary index without
+mutating the real index or worktree. When git metadata cannot be written, the
+fallback `manifest` is a deterministic SHA-256 over base SHA and the path,
+mode, status, content hash, and tracked state of every tracked/untracked file.
+Evidence names its kind. It is computed immediately before and after gates;
+mismatch invalidates the run. Recomputed evidence that differs at handoff or
+release time is stale.
+
+A clean candidate commit anchors evidence and CI must name that exact commit
+when CI is required or available. For a dirty worktree, the base/candidate SHA,
+dirty paths, and validated snapshot ID anchor evidence. If the runtime cannot
+generate evidence, its orchestrator or harness must do so; this is not
+permission to omit evidence.
 
 ### Canonical Quality Gates
 
-The following are minimum gates. The approved plan MAY add gates but MUST NOT
-remove an applicable gate without explicit human approval and a documented
-deviation.
+The approved plan may add, but not remove, applicable gates without explicit
+human approval and a documented deviation. Baseline gates cover diff integrity
+and formatting; documentation also validates changed links, paths, and commands;
+content adds content/schema validation and relevant tests; application work
+adds lint, types, tests, integration tests, and production build as applicable.
+Dependencies add lockfile, vulnerability, and license checks; APIs/numeric
+logic add boundary tests; security adds denial/secret/dependency checks;
+migrations/destructive operations add dry-run, rollback, and recovery checks;
+infrastructure/deployment adds configuration, plan, policy/security, and
+rollback validation.
 
-“Baseline gates” means the gates in the `All changes` row.
-
-| Change type                          | Required gates                                                                                                                 |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| All changes                          | `git diff --check`; formatting check for every changed supported file                                                          |
-| Documentation only                   | Baseline gates; validate changed links, paths and documented commands when applicable                                          |
-| Learning content or content schema   | Baseline gates; content/schema validation; relevant unit tests; build when content is bundled or parsed during build           |
-| Application source or runtime config | Baseline gates; lint; type checking; unit tests; applicable integration tests; production build                                |
-| Tests only                           | Baseline gates; lint/type checking when applicable; execute the changed tests and the affected test suite                      |
-| Dependencies or lockfiles            | Application gates; lockfile consistency; dependency vulnerability and license-policy checks                                    |
-| Public API or complex/numeric logic  | Application gates; contract or numeric tests covering boundaries and failure cases                                             |
-| Auth, security or permissions        | Application gates; security-specific tests; authorization-denial cases; secret scanning; dependency vulnerability checks       |
-| Migration or destructive operation   | Application gates where applicable; migration dry run; forward/rollback verification; backup and recovery procedure validation |
-| Infrastructure or deployment         | Baseline gates; configuration validation; dry run or plan; policy/security scan; rollback procedure validation                 |
-
-For this repository, the canonical gate definitions live in
-`scripts/gates-manifest.ts` — a single machine-readable source listing
-every gate ID, its exact command, prerequisites, and the `web` /
-`browser` / `docs` / `full` profiles. Gates are executed through the
-runner:
-
-```bash
-npm run gates -- --profile=<web|browser|docs|full>
-npm run gates -- --changed-from=<base_sha>   # classifier-scoped run
-```
-
-The classifier (`scripts/classify-change.ts`) maps changed paths to the
-required gate union; unrecognized paths fail closed to `full`, and a
-caller declaring a weaker profile than the classifier requires MUST
-fail. CI (`.github/workflows/ci.yml`) runs the same profiles, so local
-and CI execution cannot drift from the manifest. Prose documents MUST
-reference the manifest rather than restating command lists.
-
-Only the gates applicable under the table need to run. A composite command
-may satisfy a listed sub-gate when its output proves that the sub-gate ran
-successfully for the same snapshot. Integration, security, migration and
-infrastructure commands MUST be named in the approved plan when applicable.
-
-A required gate that has no repository command is a blocker, not permission to
-skip it. The plan must add the gate or record an explicitly human-approved
-alternative before release readiness.
+`scripts/gates-manifest.ts` is the only canonical source for exact gate IDs,
+commands, prerequisites, and profiles. `scripts/gates.ts` selects the required
+union from changed paths and fails closed for unknown paths or weakened profile
+requests. CI uses those profiles. Prose documents reference the manifest rather
+than copying command tables. A required gate without a repository command is a
+blocker.
 
 ### Deployment Invariant
 
-The artifact deployed to production MUST be the exact artifact that
-passed every required gate (web + browser/PWA) for that exact commit
-SHA. A browser/PWA failure means no deploy. No deployment path may
-bypass this invariant.
+Production deploys the exact artifact that passed all required web and
+browser/PWA gates for the same commit SHA. A browser/PWA failure blocks deploy;
+no path bypasses this invariant. The approved bounded deviation permits a
+rebuild in the same CI run and commit only to inject production configuration.
 
-Bounded deviation (approved by Owner on July 18, 2026): the deployed
-artifact may be rebuilt in the same CI run and for the same commit
-after the required gates pass, but only to inject production
-configuration such as base path and real endpoints. Byte-level identity
-between browser-gated and deployed artifacts is deferred to a later
-feature.
-
-Enforcement in this repository:
-
-- `.github/workflows/ci.yml` job `deploy` runs only on `push` to `main`,
-  `needs: [web, browser]`, deploys the `production-dist` artifact that
-  was built in the same CI run after the required gates passed. Browser
-  gates consume `test-dist`, while `production-dist` is rebuilt with
-  production configuration in that same run. Pages permissions
-  (`pages: write`, `id-token: write`) exist only on this job.
-- `.github/workflows/deploy.yml` is manual-only (`workflow_dispatch`)
-  with a required `candidate_sha` input; it verifies through the GitHub
-  API that the latest completed `ci.yml` run for that exact SHA
-  concluded successfully, that its `web` and `browser` jobs succeeded,
-  and that its `production-dist` artifact still exists, then deploys
-  that artifact without rebuilding. Any API error, missing run/job, bad
-  conclusion, or expired artifact fails closed. Operator procedure:
-  `docs/runbooks/DEPLOYMENT.md`.
+Repository enforcement: the CI deploy job runs only on the main branch after
+web and browser jobs and deploys its same-run production artifact. The manual
+deployment workflow requires a candidate SHA and fails closed unless the latest
+completed CI run for that SHA, required jobs, and artifact all exist and pass.
+The operator procedure is `docs/runbooks/DEPLOYMENT.md`.
 
 ### Remediation State Machine
 
-Each candidate has exactly one state:
-
 ```text
-PLANNED
-  -> IMPLEMENTING
-  -> VALIDATING
-  -> VALIDATED
-  -> REVIEWING
-  -> RELEASE_READY
-
+PLANNED -> IMPLEMENTING -> VALIDATING -> VALIDATED -> REVIEWING -> RELEASE_READY
 VALIDATING -- failure --> REMEDIATION_REQUIRED
 REVIEWING -- finding --> REMEDIATION_REQUIRED
 ANY RELEASE-ARTIFACT CHANGE --> REMEDIATION_REQUIRED
-DOCUMENTATION-ONLY CHANGE --> scoped revalidation (see rule 3)
+DOCUMENTATION-ONLY CHANGE --> scoped revalidation
 REMEDIATION_REQUIRED -> IMPLEMENTING
 ANY STATE -- unrecoverable blocker --> BLOCKED
 ```
 
-Transition rules:
-
-1. `VALIDATING` reaches `VALIDATED` only when every applicable gate passes and
-   the evidence is bound to the implementation snapshot.
-2. `VALIDATED` reaches `REVIEWING` only when the handoff is complete.
-3. A post-validation change to a **release-artifact-affecting file**
-   (application source, tests, learning content, runtime and toolchain
-   configuration, dependencies, migrations, infrastructure or deployment
-   files) immediately invalidates all validation and review evidence for
-   the prior snapshot. A post-validation change to **documentation only**
-   does not invalidate engineering validation or completed tier reviews;
-   it requires only the "Documentation only" gates on the changed files,
-   per `docs/DOCUMENTATION_RULES.md` → "Documentation → Revalidate".
-   Record the scoped revalidation result in the handoff without changing
-   the candidate's `Status`; only a failed scoped gate moves the
-   candidate to `REMEDIATION_REQUIRED`, and only for that documentation
-   fix.
-4. A review finding that requires a candidate change enters
-   `REMEDIATION_REQUIRED`. After the fix, the candidate MUST repeat all
-   applicable gates, regenerate its evidence and repeat every review required
-   by its risk tier.
-5. Corrections limited to the handoff or generated evidence do not invalidate
-   engineering validation; the corrected evidence MUST still bind to the
-   unchanged candidate commit, or the unchanged base commit + dirty paths +
-   validated snapshot ID.
-6. `RELEASE_READY` is an assessment, not final approval. Only the human may
-   approve release.
-
----
+Validation reaches VALIDATED only with every applicable bound gate; review
+starts only with a complete handoff. A release-artifact change after validation
+invalidates prior validation and review evidence. A documentation-only change
+does not invalidate engineering validation or completed tier reviews; it needs
+scoped documentation gates, recorded in the handoff, and only a failure enters
+remediation. A review-required change repeats applicable gates, evidence, and
+all tier-required reviews. Handoff/evidence corrections do not invalidate an
+unchanged candidate when they still bind to it. RELEASE_READY is an assessment,
+not Human Approval.
 
 ## Documentation Contract
 
 The implementation handoff is the only post-implementation orchestration
-artifact. The approved plan remains the pre-implementation authority. No
-duplicate `Result.md` should exist.
+artifact; the approved plan is the pre-implementation authority. It contains
+feature ID, risk/categories/rationale, remediation state, files changed,
+snapshot anchor, `git diff --stat`, generated evidence JSON, validation record,
+timestamps/versions, independent-verification identity and findings, CI result,
+blockers, deviations, risks, and follow-up work. Review fields are `PENDING`
+before review. Regenerate after remediation and mark superseded evidence STALE.
 
-It must contain
+## Context Policy
 
-- feature id
-- risk tier
-- applicable risk categories and escalation rationale
-- current remediation state
-- files changed
-- base commit SHA
-- candidate commit SHA or `UNCOMMITTED`
-- worktree state: clean, or dirty with exact paths plus the
-  `git add -A && git stash create` SHA
-- `git diff --stat`
-- validation commands
-- command exit statuses and the quality gate satisfied by each command
-- validation start and completion timestamps in UTC
-- runtime, package-manager and validation-tool versions or lockfile SHA
-- independent verifier identity, execution identifier and independence method
-- review findings and their disposition
-- authorization source for the batch-content-review exception, when used
-  (see Independent Verification)
-- CI commit SHA and status when CI is required or available
-- blockers
-- deviations
-- remaining risks
-- follow-up work
+`docs/CONTEXT_RULES.md` is the repository retrieval policy. Start from the
+shim, envelope, role contract, and task-specific trigger; hard triggers always
+escalate to full architecture context. Context budgets optimise routine work
+but never prevent safe escalation for ELEVATED or CRITICAL work.
 
-The handoff is a living artifact. Before independent review, review-specific
-fields MUST be present with the value `PENDING`. Review outcomes update those
-fields without invalidating an unchanged candidate commit.
+## Session Lifecycle and metrics
 
-The handoff MUST be regenerated after remediation. Historical evidence may be
-retained for audit, but it MUST be marked `STALE` and MUST NOT be presented as
-release evidence.
+Use separated sessions: plan, implementation/handoff, independent
+verification/release assessment, and Human decision. Remediation returns to
+implementation and refreshed evidence before reassessment. Avoid multi-hour
+interactive sessions.
 
----
-
-## Context Budget
-
-Claude should consume
-
-- implementation handoff
-- git diff --stat
-- concise validation summary
-
-Avoid
-
-- successful full logs
-- complete test output
-- full git diff
-- build artifacts
-
-Target investigation only.
-
----
-
-## Session Lifecycle
-
-Each feature should follow an independent lifecycle:
-
-1. **Session 1** — planning, then end session.
-2. Codex executes asynchronously and produces the implementation handoff.
-3. **Session 2** — independent verification and release-readiness
-   assessment, then human decision, then end session.
-4. If remediation is required, return asynchronously to Codex
-   implementation, validation and an updated handoff before reassessment
-   (repeat from step 2).
-
-Avoid multi-hour interactive Claude sessions.
-
----
-
-## Success Metrics
-
-Metrics MUST be derived from repository artifacts (git history, handoffs),
-not estimated. Two metrics — Claude session count and context size — have
-no recorded instrument in this repository and cannot be measured
-retroactively; they can only be tracked prospectively starting with the
-next feature. Fabricating a value for them would violate the Trust Model.
-
-Tracked per feature
-
-- Codex implementation executions (target: 1 for `NORMAL`)
-- Claude sessions (target: ≤2 for `NORMAL`; not yet instrumented — track
-  going forward)
-- validation reruns by Claude of already-passed gates (target: 0)
-- review/remediation rounds
-- wall-clock from plan approval to `RELEASE_READY`
-
-Retrospective baseline (measured 2026-07-12 from git history; WORKFLOW-002
-Phase 3 closed by this measurement)
-
-| Feature     | Commits | Plan-approval → merge span          | Remediation rounds                                                  |
-| ----------- | ------- | ----------------------------------- | ------------------------------------------------------------------- |
-| FEATURE-011 | 5       | 2026-07-10, same day                | 1 (Gemini review caught a streak-merge regression)                  |
-| FEATURE-012 | 51      | 2026-07-10 → 2026-07-12 (multi-day) | recorded per-unit in commit messages (e.g. "sửa 9 điểm sau review") |
-
-FEATURE-012 used the batch-content workflow (A5), not the standard
-single-Codex-delegation flow, so its commit count is not representative of
-a "normal feature" baseline — it is included for the remediation-round
-evidence in its commit messages, not as a session-count proxy.
-
----
+Metrics must come from repository artifacts, not estimates: implementation
+executions, sessions, validation reruns, remediation rounds, and time from plan
+approval to release readiness. Context size can be tracked prospectively only;
+do not fabricate retrospective values.
 
 ## Migration History
 
-- **v2.1 (WORKFLOW-002, 2026-07-11):** architecture approved; `CLAUDE.md`,
-  `AI_WORKFLOW.md`, `AGENTS.md`, skills and templates migrated to comply.
-  Phase 3 (dry-run measurement) deferred.
-- **v2.2 (WORKFLOW-003, 2026-07-12):** amendments A1–A5 (see header);
-  Phase 3 closed by the retrospective baseline above.
-- **v2.3 (WORKFLOW-004A, 2026-07-18):** Evidence Binding superseded the
-  `git add -A && git stash create` ritual with machine-generated exact
-  snapshots (`scripts/evidence.ts`: git-tree via temporary
-  `GIT_INDEX_FILE`, manifest-hash fallback for restricted sandboxes);
-  Canonical Quality Gates now reference the gate manifest
-  (`scripts/gates-manifest.ts`) and runner instead of a prose command
-  list; added the Deployment Invariant (deploy only the validated
-  artifact for the exact SHA; browser fail ⇒ no deploy; manual path
-  fail-closed).
-
----
+- v2.1 (WORKFLOW-002, 2026-07-11): initial approved architecture.
+- v2.2 (WORKFLOW-003, 2026-07-12): scoped documentation remediation and
+  batch-content review exception.
+- v2.3 (WORKFLOW-004A, 2026-07-18): machine-generated evidence, gate manifest,
+  and deployment invariant.
+- v2.4 (WORKFLOW-004B, DRAFT): provider-neutral roles/envelope/context policy
+  and policy-only TRIVIAL tier; activation awaits human approval.
 
 ## Design Principles
 
 1. Human remains the final authority.
-2. Claude optimizes reasoning, not engineering.
-3. Codex owns engineering execution.
+2. Roles optimise responsibility boundaries, not provider identity.
+3. Implementers own engineering execution.
 4. Evidence is more important than summaries.
 5. Risk determines workflow complexity.
-6. Context is a limited resource.
+6. Context is a limited resource, never a safety ceiling.
 7. Every workflow step must justify its cost.
-8. Minimize duplicated reasoning before minimizing validation.
-9. Optimize for sustainable long-term development, not shortest execution time.
+8. Minimise duplicated reasoning before minimising validation.
+9. Optimise for sustainable long-term development, not shortest execution time.
 10. Architecture changes require human approval.
