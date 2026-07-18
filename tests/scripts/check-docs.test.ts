@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, symlink, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -267,7 +267,7 @@ describe('check-docs', () => {
     ]);
   });
 
-  it('downgrades broken markdown links to warnings only for archived docs', async () => {
+  it('downgrades broken markdown links to warnings for mixed-case status markers', async () => {
     const rootDir = await createRepoFixture();
 
     await writeFile(
@@ -275,7 +275,7 @@ describe('check-docs', () => {
       [
         '# Old handoff',
         '',
-        'Status: STALE',
+        'Status: Archived',
         '',
         '[Missing](./removed.md)'
       ].join('\n'),
@@ -292,6 +292,109 @@ describe('check-docs', () => {
         file: 'docs/handoffs/ARCHIVED.md',
         message: 'Broken relative Markdown link: ./removed.md',
         severity: 'warning'
+      }
+    ]);
+  });
+
+  it('accepts archival status markers without a space after the colon', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'handoffs', 'ARCHIVED.md'),
+      ['# Old handoff', '', 'status:stale', '', '[Missing](./removed.md)'].join(
+        '\n'
+      ),
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/handoffs/ARCHIVED.md']
+    });
+
+    expect(result.issues).toEqual([
+      {
+        file: 'docs/handoffs/ARCHIVED.md',
+        message: 'Broken relative Markdown link: ./removed.md',
+        severity: 'warning'
+      }
+    ]);
+  });
+
+  it('does not treat bare ARCHIVED prose as an archival marker', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'handoffs', 'ARCHIVED.md'),
+      [
+        '# Old handoff',
+        '',
+        'This is ARCHIVED material for reference only.',
+        '',
+        '[Missing](./removed.md)'
+      ].join('\n'),
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/handoffs/ARCHIVED.md']
+    });
+
+    expect(result.issues).toEqual([
+      {
+        file: 'docs/handoffs/ARCHIVED.md',
+        message: 'Broken relative Markdown link: ./removed.md',
+        severity: 'error'
+      }
+    ]);
+  });
+
+  it('matches archival markers on line 40 but not on line 41', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'handoffs', 'LINE-40.md'),
+      [
+        ...Array.from({ length: 39 }, (_, index) => `Line ${index + 1}`),
+        'Status: Archived',
+        '',
+        '[Missing](./removed-40.md)'
+      ].join('\n'),
+      'utf8'
+    );
+    await writeFile(
+      path.join(rootDir, 'docs', 'handoffs', 'LINE-41.md'),
+      [
+        ...Array.from({ length: 40 }, (_, index) => `Line ${index + 1}`),
+        'Status: Archived',
+        '',
+        '[Missing](./removed-41.md)'
+      ].join('\n'),
+      'utf8'
+    );
+
+    const line40Result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/handoffs/LINE-40.md']
+    });
+    const line41Result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/handoffs/LINE-41.md']
+    });
+
+    expect(line40Result.issues).toEqual([
+      {
+        file: 'docs/handoffs/LINE-40.md',
+        message: 'Broken relative Markdown link: ./removed-40.md',
+        severity: 'warning'
+      }
+    ]);
+    expect(line41Result.issues).toEqual([
+      {
+        file: 'docs/handoffs/LINE-41.md',
+        message: 'Broken relative Markdown link: ./removed-41.md',
+        severity: 'error'
       }
     ]);
   });
@@ -359,10 +462,21 @@ describe('check-docs', () => {
 
   it('fails when a relative markdown link resolves outside the repository root', async () => {
     const rootDir = await createRepoFixture();
+    const outsideDir = await mkdtemp(
+      path.join(os.tmpdir(), 'check-docs-outside-')
+    );
+    const outsideFile = path.join(outsideDir, 'outside.md');
+    const outsideTarget = path.relative(
+      path.join(rootDir, 'docs'),
+      outsideFile
+    );
+    tempRoots.push(outsideDir);
+
+    await writeFile(outsideFile, '# Outside\n', 'utf8');
 
     await writeFile(
       path.join(rootDir, 'docs', 'guide.md'),
-      '[Outside](../../../../tmp/outside.md)\n',
+      `[Outside](${outsideTarget})\n`,
       'utf8'
     );
 
@@ -374,8 +488,37 @@ describe('check-docs', () => {
     expect(result.issues).toEqual([
       {
         file: 'docs/guide.md',
-        message:
-          'Relative Markdown link points outside repository scope: ../../../../tmp/outside.md',
+        message: `Relative Markdown link points outside repository scope: ${outsideFile}`,
+        severity: 'error'
+      }
+    ]);
+  });
+
+  it('fails when a relative markdown link traverses a symlink outside the repository root', async () => {
+    const rootDir = await createRepoFixture();
+    const outsideDir = await mkdtemp(
+      path.join(os.tmpdir(), 'check-docs-outside-')
+    );
+    const outsideFile = path.join(outsideDir, 'outside.md');
+    tempRoots.push(outsideDir);
+
+    await writeFile(outsideFile, '# Outside\n', 'utf8');
+    await symlink(outsideFile, path.join(rootDir, 'docs', 'escape.md'));
+    await writeFile(
+      path.join(rootDir, 'docs', 'guide.md'),
+      '[Escape](./escape.md)\n',
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/guide.md']
+    });
+
+    expect(result.issues).toEqual([
+      {
+        file: 'docs/guide.md',
+        message: `Relative Markdown link points outside repository scope: ${outsideFile}`,
         severity: 'error'
       }
     ]);

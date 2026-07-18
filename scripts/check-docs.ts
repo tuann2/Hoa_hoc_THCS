@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { access, readFile } from 'node:fs/promises';
+import { access, readFile, realpath } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
@@ -28,7 +28,7 @@ const SCRIPT_REFERENCE_PATTERN = /\bnpm run\s+([a-z0-9:-]+)/giu;
 const DOCUMENT_REFERENCE_PATTERN =
   /(?:^|[`(\s])((?:docs\/(?:(?:plans|handoffs|architecture|runbooks|adr)\/[A-Za-z0-9._/-]+)|scripts\/[A-Za-z0-9._/-]+\.ts|\.github\/workflows\/[A-Za-z0-9._/-]+|(?:README|AGENTS|AI_WORKFLOW)\.md))(?=[`)\s:,.]|$)/gmu;
 const ARCHIVAL_MARKER_PATTERN =
-  /\b(?:Status:\s*(?:STALE|SUPERSEDED)|ARCHIVED)\b/u;
+  /^\s*status:\s*(stale|superseded|archived)\s*$/iu;
 
 function getRepoRoot(): string {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -72,8 +72,10 @@ function isPlanOrHandoffArtifact(relativePath: string): boolean {
 }
 
 function isArchivedDocument(content: string): boolean {
-  const header = content.split(/\r?\n/u).slice(0, 40).join('\n');
-  return ARCHIVAL_MARKER_PATTERN.test(header);
+  return content
+    .split(/\r?\n/u)
+    .slice(0, 40)
+    .some((line) => ARCHIVAL_MARKER_PATTERN.test(line));
 }
 
 function isWithinRepoRoot(repoRoot: string, targetPath: string): boolean {
@@ -156,6 +158,7 @@ async function collectMarkdownFiles(repoRoot: string): Promise<string[]> {
 
 async function inspectMarkdownFile(
   repoRoot: string,
+  repoRootRealPath: string,
   relativePath: string,
   knownScripts: Set<string>
 ): Promise<DocsIssue[]> {
@@ -193,21 +196,24 @@ async function inspectMarkdownFile(
       decodeTargetPath(targetWithoutAnchor)
     );
 
-    if (!isWithinRepoRoot(repoRoot, resolvedPath)) {
-      issues.push({
-        file: relativePath,
-        message: `Relative Markdown link points outside repository scope: ${rawTarget}`,
-        severity: 'error'
-      });
-      continue;
-    }
-
     if (!(await pathExists(resolvedPath))) {
       issues.push({
         file: relativePath,
         message: `Broken relative Markdown link: ${rawTarget}`,
         severity: isArchived ? 'warning' : 'error'
       });
+      continue;
+    }
+
+    const canonicalPath = await realpath(resolvedPath);
+
+    if (!isWithinRepoRoot(repoRootRealPath, canonicalPath)) {
+      issues.push({
+        file: relativePath,
+        message: `Relative Markdown link points outside repository scope: ${canonicalPath}`,
+        severity: 'error'
+      });
+      continue;
     }
   }
 
@@ -256,6 +262,7 @@ export async function checkDocs(
   options: CheckDocsOptions = {}
 ): Promise<{ files: string[]; issues: DocsIssue[] }> {
   const repoRoot = options.cwd ? path.resolve(options.cwd) : getRepoRoot();
+  const repoRootRealPath = await realpath(repoRoot);
   const files = options.all
     ? await collectMarkdownFiles(repoRoot)
     : options.files
@@ -269,7 +276,14 @@ export async function checkDocs(
       continue;
     }
 
-    issues.push(...(await inspectMarkdownFile(repoRoot, file, knownScripts)));
+    issues.push(
+      ...(await inspectMarkdownFile(
+        repoRoot,
+        repoRootRealPath,
+        file,
+        knownScripts
+      ))
+    );
   }
 
   return { files, issues };
