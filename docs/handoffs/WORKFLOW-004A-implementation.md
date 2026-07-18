@@ -2,10 +2,13 @@
 
 ## Status
 
-- Remediation state: VALIDATED
+- Remediation state: RELEASE_READY
 - Risk tier: CRITICAL
 - Risk categories: validation and evidence controls; toolchain scripts; CI/deployment planning drift verified at implementation time
-- Escalation rationale: Stage 0 verified that the approved plan targets deployment / validation infrastructure. This handoff now covers Stage 0-6 implementation; architecture amendment (Stage 7) and independent CRITICAL review (Stage 8) remain outside this snapshot.
+- Escalation rationale: Stage 0 verified that the approved plan targets deployment / validation infrastructure. Stages 0-8 are now complete: architecture amendment v2.3 is APPROVED (human, 2026-07-18), and independent CRITICAL review (1 fresh Gemini + 1 fresh Codex adversarial, 4 rounds) has been closed through remediation rounds 4-7.
+- Final candidate SHA: `d86981c7252f86e8a124a598bc42322a6f89062c`
+- Final CI (exact-SHA, required tier evidence): <https://github.com/tuann2/Hoa_hoc_THCS/actions/runs/29654140268> — `web: success`, `browser: success`, `deploy: skipped` (correct — only runs on `push` to `main`).
+- Release approval: PENDING human final approval (Claude is never the final approver).
 
 ## 1. Summary
 
