@@ -22,13 +22,47 @@ describe('classify-change', () => {
 
     expect(result.minimumProfile).toBe('web');
     expect(result.requiredGates).toEqual([
+      'content-catalog',
       'content-validation',
       'lint',
       'typecheck',
       'unit-tests',
+      'production-build',
+      'bundle-check',
+      'dependency-audit',
+      'license-check'
+    ]);
+  });
+
+  it('returns browser profile for Playwright spec changes', () => {
+    const result = classifyChangedPaths({
+      changedPaths: ['tests/e2e/pwa-offline.spec.ts']
+    });
+
+    expect(result.minimumProfile).toBe('browser');
+    expect(result.requiredGates).toEqual(['e2e', 'pwa', 'pwa-subpath']);
+    expect(result.fallbackToFull).toBe(false);
+  });
+
+  it('returns full when Playwright config changes require web and browser gates', () => {
+    const result = classifyChangedPaths({
+      changedPaths: ['playwright.config.ts']
+    });
+
+    expect(result.minimumProfile).toBe('full');
+    expect(result.requiredGates).toEqual([
+      'content-catalog',
+      'content-validation',
+      'lint',
+      'typecheck',
+      'unit-tests',
+      'production-build',
+      'bundle-check',
       'dependency-audit',
       'license-check',
-      'production-build'
+      'e2e',
+      'pwa',
+      'pwa-subpath'
     ]);
   });
 
@@ -67,5 +101,9 @@ describe('classify-change', () => {
     expect(inferMinimumProfile(['content-validation', 'docs-check'])).toBe(
       'full'
     );
+  });
+
+  it('infers browser when only browser gates are required', () => {
+    expect(inferMinimumProfile(['e2e', 'pwa'])).toBe('browser');
   });
 });

@@ -6,11 +6,12 @@ import {
 } from '../../scripts/gates';
 
 describe('gates runner', () => {
-  it('resolves prerequisites before production-build', () => {
-    expect(resolveGateExecutionOrder(['production-build'])).toEqual([
+  it('resolves prerequisites before bundle-check', () => {
+    expect(resolveGateExecutionOrder(['bundle-check'])).toEqual([
       'content-validation',
       'typecheck',
-      'production-build'
+      'production-build',
+      'bundle-check'
     ]);
   });
 
@@ -58,15 +59,46 @@ describe('gates runner', () => {
     expect(result.gateResults.map((gate) => gate.id)).toEqual([
       'git-diff-check',
       'format-check',
+      'content-catalog',
       'content-validation',
       'lint',
       'typecheck',
       'unit-tests',
+      'production-build',
+      'bundle-check',
       'dependency-audit',
-      'license-check',
-      'production-build'
+      'license-check'
     ]);
     expect(commands[0]).toEqual(['git', 'diff', '--check']);
-    expect(commands.at(-1)).toEqual(['npm', 'run', 'build:app']);
+    expect(commands.at(2)).toEqual(['npm', 'run', 'check:content-catalog']);
+    expect(commands.at(-4)).toEqual(['npm', 'run', 'build:app']);
+    expect(commands.at(-3)).toEqual(['npm', 'run', 'check:bundle']);
+    expect(commands.at(-1)).toEqual(['npm', 'run', 'check:licenses']);
+  });
+
+  it('runs profile browser without web prerequisites', async () => {
+    const commands: string[][] = [];
+    const executor = vi.fn((command: readonly [string, ...string[]]) => {
+      commands.push([...command]);
+      return Promise.resolve(0);
+    });
+
+    const result = await runGates({
+      dryRun: false,
+      executor,
+      profile: 'browser'
+    });
+
+    expect(result.result).toBe('pass');
+    expect(result.gateResults.map((gate) => gate.id)).toEqual([
+      'e2e',
+      'pwa',
+      'pwa-subpath'
+    ]);
+    expect(commands).toEqual([
+      ['npm', 'run', 'test:e2e'],
+      ['npm', 'run', 'test:pwa'],
+      ['npm', 'run', 'test:pwa:subpath']
+    ]);
   });
 });

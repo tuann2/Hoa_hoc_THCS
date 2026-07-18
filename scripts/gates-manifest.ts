@@ -5,14 +5,19 @@ export type ProfileName = (typeof PROFILE_NAMES)[number];
 export const GATE_IDS = [
   'git-diff-check',
   'format-check',
+  'content-catalog',
   'content-validation',
   'lint',
   'typecheck',
   'unit-tests',
+  'production-build',
+  'bundle-check',
   'dependency-audit',
   'license-check',
-  'production-build',
-  'docs-check'
+  'docs-check',
+  'e2e',
+  'pwa',
+  'pwa-subpath'
 ] as const;
 
 export type GateId = (typeof GATE_IDS)[number];
@@ -42,6 +47,12 @@ export const GATE_DEFINITIONS: Record<GateId, GateDefinition> = {
     command: ['npm', 'run', 'format:check'],
     prerequisites: [],
     profiles: ['web', 'docs', 'full']
+  },
+  'content-catalog': {
+    id: 'content-catalog',
+    command: ['npm', 'run', 'check:content-catalog'],
+    prerequisites: [],
+    profiles: ['web', 'full']
   },
   'content-validation': {
     id: 'content-validation',
@@ -85,6 +96,30 @@ export const GATE_DEFINITIONS: Record<GateId, GateDefinition> = {
     prerequisites: ['content-validation', 'typecheck'],
     profiles: ['web', 'full']
   },
+  'bundle-check': {
+    id: 'bundle-check',
+    command: ['npm', 'run', 'check:bundle'],
+    prerequisites: ['production-build'],
+    profiles: ['web', 'full']
+  },
+  e2e: {
+    id: 'e2e',
+    command: ['npm', 'run', 'test:e2e'],
+    prerequisites: [],
+    profiles: ['browser', 'full']
+  },
+  pwa: {
+    id: 'pwa',
+    command: ['npm', 'run', 'test:pwa'],
+    prerequisites: [],
+    profiles: ['browser', 'full']
+  },
+  'pwa-subpath': {
+    id: 'pwa-subpath',
+    command: ['npm', 'run', 'test:pwa:subpath'],
+    prerequisites: [],
+    profiles: ['browser', 'full']
+  },
   'docs-check': {
     id: 'docs-check',
     command: ['npm', 'run', 'check:docs'],
@@ -93,37 +128,63 @@ export const GATE_DEFINITIONS: Record<GateId, GateDefinition> = {
   }
 };
 
+const WEB_PROFILE_GATE_IDS = [
+  'git-diff-check',
+  'format-check',
+  'content-catalog',
+  'content-validation',
+  'lint',
+  'typecheck',
+  'unit-tests',
+  'production-build',
+  'bundle-check',
+  'dependency-audit',
+  'license-check'
+] as const satisfies readonly GateId[];
+
+// Browser gates assume the caller already prepared the dist/artifact input.
+const BROWSER_PROFILE_GATE_IDS = [
+  'e2e',
+  'pwa',
+  'pwa-subpath'
+] as const satisfies readonly GateId[];
+
+const DOCS_PROFILE_GATE_IDS = [
+  'git-diff-check',
+  'format-check',
+  'docs-check'
+] as const satisfies readonly GateId[];
+
+const FULL_PROFILE_SEEN_GATES = new Set<GateId>([
+  ...WEB_PROFILE_GATE_IDS,
+  ...BROWSER_PROFILE_GATE_IDS
+]);
+
+const FULL_PROFILE_GATE_IDS = [
+  ...WEB_PROFILE_GATE_IDS,
+  ...BROWSER_PROFILE_GATE_IDS,
+  ...DOCS_PROFILE_GATE_IDS.filter(
+    (gateId) => !FULL_PROFILE_SEEN_GATES.has(gateId)
+  )
+] as const satisfies readonly GateId[];
+
 export const PROFILE_GATE_IDS: Record<ProfileName, readonly GateId[]> = {
-  web: [
-    'git-diff-check',
-    'format-check',
-    'content-validation',
-    'lint',
-    'typecheck',
-    'unit-tests',
-    'dependency-audit',
-    'license-check',
-    'production-build'
-  ],
-  browser: [],
-  docs: ['git-diff-check', 'format-check', 'docs-check'],
-  full: [
-    'git-diff-check',
-    'format-check',
-    'content-validation',
-    'lint',
-    'typecheck',
-    'unit-tests',
-    'dependency-audit',
-    'license-check',
-    'production-build',
-    'docs-check'
-  ]
+  web: WEB_PROFILE_GATE_IDS,
+  browser: BROWSER_PROFILE_GATE_IDS,
+  docs: DOCS_PROFILE_GATE_IDS,
+  full: FULL_PROFILE_GATE_IDS
 };
 
 export const WEB_CLASSIFIER_GATES = PROFILE_GATE_IDS.web.filter(
   (gateId) => gateId !== 'git-diff-check' && gateId !== 'format-check'
 );
+
+const BROWSER_CLASSIFIER_GATES = [...PROFILE_GATE_IDS.browser];
+
+const WEB_AND_BROWSER_CLASSIFIER_GATES = [
+  ...WEB_CLASSIFIER_GATES,
+  ...BROWSER_CLASSIFIER_GATES
+] as const satisfies readonly GateId[];
 
 export const PATH_GATE_RULES: readonly PathGateRule[] = [
   {
@@ -133,9 +194,29 @@ export const PATH_GATE_RULES: readonly PathGateRule[] = [
     reason: 'documentation-only files'
   },
   {
+    pattern: /^content\/catalog\.json$/u,
+    gates: WEB_CLASSIFIER_GATES,
+    reason: 'generated catalog changes affect the web validation surface'
+  },
+  {
     pattern: /^content\//u,
     gates: WEB_CLASSIFIER_GATES,
     reason: 'content changes affect validation, tests, and build outputs'
+  },
+  {
+    pattern: /^index\.html$/u,
+    gates: WEB_CLASSIFIER_GATES,
+    reason: 'application shell changes affect the web build and bundle output'
+  },
+  {
+    pattern: /^public\//u,
+    gates: WEB_CLASSIFIER_GATES,
+    reason: 'public asset changes affect the built web artifact'
+  },
+  {
+    pattern: /^src\/vite-env\.d\.ts$/u,
+    gates: WEB_CLASSIFIER_GATES,
+    reason: 'Vite environment typing affects the web build surface'
   },
   {
     pattern: /^src\//u,
@@ -149,10 +230,21 @@ export const PATH_GATE_RULES: readonly PathGateRule[] = [
     reason: 'application or supporting script tests require web validation'
   },
   {
+    pattern: /^tests\/e2e\//u,
+    gates: BROWSER_CLASSIFIER_GATES,
+    reason: 'Playwright specs require the browser gate profile'
+  },
+  {
     pattern:
-      /^scripts\/(?:validate-content|check-licenses|tag-question-category)\.ts$/u,
+      /^scripts\/(?:validate-content|check-licenses|check-bundle-budget|generate-content-catalog|tag-question-category)\.ts$/u,
     gates: WEB_CLASSIFIER_GATES,
     reason: 'runtime validation scripts require web validation'
+  },
+  {
+    pattern: /^playwright(?:\.subpath)?\.config\.ts$/u,
+    gates: WEB_AND_BROWSER_CLASSIFIER_GATES,
+    reason:
+      'Playwright configuration changes require the web and browser gate union'
   },
   {
     pattern:

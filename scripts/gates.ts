@@ -134,15 +134,7 @@ export function resolveGateExecutionOrder(
 function selectGateIdsFromClassification(
   classification: ChangeClassification
 ): GateId[] {
-  if (classification.minimumProfile === 'docs') {
-    return [...getProfileGateIds('docs')];
-  }
-
-  if (classification.minimumProfile === 'web') {
-    return [...getProfileGateIds('web')];
-  }
-
-  return [...getProfileGateIds('full')];
+  return [...getProfileGateIds(classification.minimumProfile)];
 }
 
 export async function runSelectedGates(

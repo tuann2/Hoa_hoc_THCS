@@ -47,21 +47,18 @@ function sortGateIds(gateIds: Iterable<GateId>): GateId[] {
 export function inferMinimumProfile(
   requiredGates: readonly GateId[]
 ): ProfileName {
-  const requiredGateSet = new Set(requiredGates);
-
-  if (
-    requiredGates.length > 0 &&
-    PROFILE_GATE_IDS.docs.every(
-      (gateId) =>
-        !requiredGateSet.has(gateId) || PROFILE_GATE_IDS.docs.includes(gateId)
-    ) &&
-    requiredGates.every((gateId) => PROFILE_GATE_IDS.docs.includes(gateId))
-  ) {
+  if (requiredGates.every((gateId) => PROFILE_GATE_IDS.docs.includes(gateId))) {
     return 'docs';
   }
 
   if (requiredGates.every((gateId) => PROFILE_GATE_IDS.web.includes(gateId))) {
     return 'web';
+  }
+
+  if (
+    requiredGates.every((gateId) => PROFILE_GATE_IDS.browser.includes(gateId))
+  ) {
+    return 'browser';
   }
 
   return 'full';

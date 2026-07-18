@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   PATH_GATE_RULES,
   PROFILE_GATE_IDS,
-  getGateCommand
+  getGateCommand,
+  getGateDefinition
 } from '../../scripts/gates-manifest';
 
 describe('gates-manifest', () => {
@@ -26,11 +27,34 @@ describe('gates-manifest', () => {
     );
   });
 
+  it('maps Playwright specs to the browser profile gates', () => {
+    const e2eRule = PATH_GATE_RULES.find((rule) =>
+      rule.pattern.test('tests/e2e/app-shell.spec.ts')
+    );
+
+    expect(e2eRule?.gates).toEqual(PROFILE_GATE_IDS.browser);
+  });
+
+  it('keeps the browser profile aligned with CI browser job order', () => {
+    expect(PROFILE_GATE_IDS.browser).toEqual(['e2e', 'pwa', 'pwa-subpath']);
+  });
+
   it('pins production-build to build:app instead of aggregate build', () => {
     expect(getGateCommand('production-build')).toEqual([
       'npm',
       'run',
       'build:app'
+    ]);
+  });
+
+  it('runs bundle-check after production-build', () => {
+    expect(getGateCommand('bundle-check')).toEqual([
+      'npm',
+      'run',
+      'check:bundle'
+    ]);
+    expect(getGateDefinition('bundle-check').prerequisites).toEqual([
+      'production-build'
     ]);
   });
 });
