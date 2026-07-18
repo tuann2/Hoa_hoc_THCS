@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -172,5 +172,39 @@ describe('classify-change', () => {
       'tracked.txt',
       'untracked.txt'
     ]);
+  });
+
+  it('includes both old and new paths for committed renames when classifying from a base SHA', async () => {
+    const rootDir = await createGitFixture();
+    const srcDir = path.join(rootDir, 'src');
+    const docsDir = path.join(rootDir, 'docs');
+
+    await rm(path.join(rootDir, 'tracked.txt'));
+    await rm(path.join(rootDir, 'dirty.txt'));
+    await mkdir(srcDir, { recursive: true });
+    await writeFile(path.join(srcDir, 'guide.ts'), 'export const guide = 1;\n');
+    await runCommand(rootDir, 'git', ['add', '.']);
+    await runCommand(rootDir, 'git', ['commit', '-m', 'replace fixture files']);
+
+    const baseSha = await runCommand(rootDir, 'git', ['rev-parse', 'HEAD']);
+
+    await rm(srcDir, { force: true, recursive: true });
+    await mkdir(docsDir, { recursive: true });
+    await writeFile(path.join(docsDir, 'guide.md'), '# Guide\n', 'utf8');
+    await runCommand(rootDir, 'git', ['add', '-A']);
+    await runCommand(rootDir, 'git', [
+      'commit',
+      '-m',
+      'rename src guide to docs'
+    ]);
+
+    const changedPaths = await getChangedPathsFromBase(baseSha, rootDir);
+
+    expect(changedPaths).toEqual(['docs/guide.md', 'src/guide.ts']);
+    expect(
+      classifyChangedPaths({
+        changedPaths
+      }).minimumProfile
+    ).toBe('full');
   });
 });

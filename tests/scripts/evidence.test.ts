@@ -1,11 +1,19 @@
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { mkdtemp, readFile, rm, unlink, writeFile } from 'node:fs/promises';
+import {
+  mkdtemp,
+  readFile,
+  readlink,
+  rm,
+  symlink,
+  unlink,
+  writeFile
+} from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import { afterEach, describe, expect, it } from 'vitest';
-import { createEvidence } from '../../scripts/evidence';
+import { computeSnapshot, createEvidence } from '../../scripts/evidence';
 
 const execFileAsync = promisify(execFile);
 const tempRoots: string[] = [];
@@ -332,5 +340,75 @@ describe('evidence', () => {
 
     expect(report.validated_snapshot.kind).toBe('git-tree');
     expect(report.snapshot_fallback_reason).toBeNull();
+  });
+
+  it('throws when manifest fallback cannot read git metadata', async () => {
+    const rootDir = await mkdtemp(path.join(os.tmpdir(), 'evidence-no-git-'));
+    tempRoots.push(rootDir);
+
+    process.env.EVIDENCE_FORCE_MANIFEST = '1';
+    process.env.VITEST = '1';
+
+    await expect(computeSnapshot(rootDir)).rejects.toThrow(
+      /git metadata is unavailable/
+    );
+  });
+
+  it('marks evidence invalid when .env build inputs change during gate execution', async () => {
+    const rootDir = await createRepoFixture();
+    const envPath = path.join(rootDir, '.env.local');
+
+    await writeFile(envPath, 'TOKEN=before\n', 'utf8');
+
+    const report = await createEvidence({
+      cwd: rootDir,
+      gateRunner: async () => {
+        await writeFile(envPath, 'TOKEN=after\n', 'utf8');
+
+        return {
+          finishedAt: new Date().toISOString(),
+          gateResults: [],
+          mode: 'profile',
+          profile: 'web',
+          result: 'pass',
+          startedAt: new Date().toISOString()
+        };
+      },
+      profile: 'web'
+    });
+
+    expect(report.result).toBe('invalid');
+    expect(report.build_inputs).toEqual([
+      {
+        path: '.env.local',
+        sha256: sha256('TOKEN=before\n')
+      }
+    ]);
+  });
+
+  it('changes the manifest snapshot when a symlink target changes', async () => {
+    const rootDir = await createRepoFixture();
+
+    process.env.EVIDENCE_FORCE_MANIFEST = '1';
+    process.env.VITEST = '1';
+
+    await writeFile(path.join(rootDir, 'target-a.txt'), 'A\n', 'utf8');
+    await writeFile(path.join(rootDir, 'target-b.txt'), 'B\n', 'utf8');
+    await symlink('target-a.txt', path.join(rootDir, 'linked.txt'));
+
+    const before = await computeSnapshot(rootDir);
+
+    expect(before.snapshot.kind).toBe('manifest');
+
+    await unlink(path.join(rootDir, 'linked.txt'));
+    await symlink('target-b.txt', path.join(rootDir, 'linked.txt'));
+
+    const after = await computeSnapshot(rootDir);
+
+    expect(after.snapshot.kind).toBe('manifest');
+    expect(after.snapshot.id).not.toBe(before.snapshot.id);
+    expect(await readlink(path.join(rootDir, 'linked.txt'))).toBe(
+      'target-b.txt'
+    );
   });
 });

@@ -1,11 +1,12 @@
 import { createHash } from 'node:crypto';
 import { execFile } from 'node:child_process';
 import {
+  lstat,
   mkdtemp,
   readdir,
+  readlink,
   readFile,
   rm,
-  stat,
   writeFile
 } from 'node:fs/promises';
 import os from 'node:os';
@@ -76,6 +77,7 @@ type CreateEvidenceOptions = {
 
 type ManifestEntry = {
   content_hash: string | null;
+  kind: 'file' | 'symlink';
   mode: number | null;
   path: string;
   status: 'present' | 'deleted';
@@ -165,6 +167,20 @@ async function collectBuildInputs(cwd: string): Promise<BuildInputDigest[]> {
   );
 }
 
+function areBuildInputsEqual(
+  left: readonly BuildInputDigest[],
+  right: readonly BuildInputDigest[]
+): boolean {
+  if (left.length !== right.length) {
+    return false;
+  }
+
+  return left.every(
+    (entry, index) =>
+      entry.path === right[index]?.path && entry.sha256 === right[index]?.sha256
+  );
+}
+
 async function computeGitTreeSnapshot(cwd: string): Promise<SnapshotId> {
   const tempDir = await mkdtemp(path.join(os.tmpdir(), 'workflow-004a-index-'));
   const indexFile = path.join(tempDir, 'index');
@@ -207,12 +223,19 @@ async function computeManifestEntries(cwd: string): Promise<ManifestEntry[]> {
     ['ls-files', '--others', '--exclude-standard', '-z'],
     cwd
   );
+
+  if (trackedOutput === null || untrackedOutput === null) {
+    throw new Error(
+      'Manifest snapshot requires git ls-files output, but git metadata is unavailable.'
+    );
+  }
+
   const trackedFiles = new Set(
-    (trackedOutput ?? '').split('\u0000').filter((entry) => entry.length > 0)
+    trackedOutput.split('\u0000').filter((entry) => entry.length > 0)
   );
   const candidateFiles = new Set<string>(trackedFiles);
 
-  for (const entry of (untrackedOutput ?? '').split('\u0000')) {
+  for (const entry of untrackedOutput.split('\u0000')) {
     if (entry) {
       candidateFiles.add(entry);
     }
@@ -225,7 +248,21 @@ async function computeManifestEntries(cwd: string): Promise<ManifestEntry[]> {
     const isTracked = trackedFiles.has(relativePath);
 
     try {
-      const fileStat = await stat(absolutePath);
+      const fileStat = await lstat(absolutePath);
+
+      if (fileStat.isSymbolicLink()) {
+        entries.push({
+          content_hash: createHash('sha256')
+            .update(await readlink(absolutePath))
+            .digest('hex'),
+          kind: 'symlink',
+          mode: fileStat.mode,
+          path: relativePath,
+          status: 'present',
+          tracked: isTracked
+        });
+        continue;
+      }
 
       if (!fileStat.isFile()) {
         continue;
@@ -233,6 +270,7 @@ async function computeManifestEntries(cwd: string): Promise<ManifestEntry[]> {
 
       entries.push({
         content_hash: await hashFileContent(absolutePath),
+        kind: 'file',
         mode: fileStat.mode,
         path: relativePath,
         status: 'present',
@@ -241,6 +279,7 @@ async function computeManifestEntries(cwd: string): Promise<ManifestEntry[]> {
     } catch {
       entries.push({
         content_hash: null,
+        kind: 'file',
         mode: null,
         path: relativePath,
         status: 'deleted',
@@ -310,10 +349,12 @@ export async function createEvidence(
   const baseShaAfter = await getBaseSha(cwd);
   const candidateShaAfter = await getCandidateSha(cwd);
   const completedSnapshot = await computeSnapshot(cwd);
+  const buildInputsAfter = await collectBuildInputs(cwd);
 
   const result =
     baseShaBefore !== baseShaAfter ||
     candidateShaBefore !== candidateShaAfter ||
+    !areBuildInputsEqual(buildInputs, buildInputsAfter) ||
     completedSnapshot.snapshot.kind !== validatedSnapshot.snapshot.kind ||
     completedSnapshot.snapshot.id !== validatedSnapshot.snapshot.id
       ? 'invalid'

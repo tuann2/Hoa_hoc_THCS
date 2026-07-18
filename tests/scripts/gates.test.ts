@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import {
+  createDefaultExecutor,
   resolveGateExecutionOrder,
   runGates,
   runSelectedGates
@@ -116,5 +117,17 @@ describe('gates runner', () => {
       ['npm', 'run', 'test:pwa'],
       ['npm', 'run', 'test:pwa:subpath']
     ]);
+  });
+
+  it('returns exit code 127 instead of crashing when a command cannot be spawned', async () => {
+    const error = vi.fn();
+    const executor = createDefaultExecutor(process.cwd(), { error });
+
+    await expect(executor(['__missing_gate_command__'])).resolves.toBe(127);
+    expect(error).toHaveBeenCalledWith(
+      expect.stringContaining(
+        'Failed to start gate command "__missing_gate_command__"'
+      )
+    );
   });
 });

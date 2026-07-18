@@ -37,10 +37,25 @@ jobs:
           CANDIDATE_SHA: ${{ inputs.candidate_sha }}
         run: |
           set -euo pipefail
+          CANDIDATE_SHA="${CANDIDATE_SHA,,}"
           actual_sha="$(git rev-parse HEAD)"
+          actual_sha="${actual_sha,,}"
 
           if [ "$actual_sha" != "$CANDIDATE_SHA" ]; then
             echo "Checked out SHA $actual_sha does not match candidate_sha $CANDIDATE_SHA." >&2
+            exit 1
+          fi
+
+      - name: Verify candidate SHA is already on origin/main
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          set -euo pipefail
+          CANDIDATE_SHA="${CANDIDATE_SHA,,}"
+          git fetch origin main
+
+          if ! git merge-base --is-ancestor "$CANDIDATE_SHA" origin/main; then
+            echo "candidate_sha $CANDIDATE_SHA is not an ancestor of origin/main. Only commits already merged into main may be deployed." >&2
             exit 1
           fi
 
@@ -55,7 +70,7 @@ jobs:
           const { execFileSync } = require('node:child_process');
 
           const repository = process.env.GITHUB_REPOSITORY;
-          const candidateSha = process.env.CANDIDATE_SHA;
+          const candidateShaRaw = process.env.CANDIDATE_SHA;
           const requiredJobs = ['web', 'browser'];
           const outputPath = process.env.GITHUB_OUTPUT;
 
@@ -69,9 +84,11 @@ jobs:
             process.exit(1);
           }
 
-          if (!candidateSha || !/^[0-9a-f]{40}$/i.test(candidateSha)) {
+          const candidateSha = candidateShaRaw?.toLowerCase();
+
+          if (!candidateSha || !/^[0-9a-f]{40}$/u.test(candidateSha)) {
             console.error(
-              `candidate_sha must be exactly 40 hexadecimal characters. Got: ${candidateSha ?? '<empty>'}`
+              `candidate_sha must be exactly 40 hexadecimal characters. Got: ${candidateShaRaw ?? '<empty>'}`
             );
             process.exit(1);
           }
@@ -93,7 +110,12 @@ jobs:
               `/repos/${owner}/${repo}/actions/workflows/ci.yml/runs?head_sha=${candidateSha}&status=completed&per_page=100`
             );
             const workflowRuns = [...(runsResponse.workflow_runs ?? [])]
-              .filter((run) => run.head_sha === candidateSha)
+              .filter(
+                (run) =>
+                  run.head_sha?.toLowerCase() === candidateSha &&
+                  run.head_branch === 'main' &&
+                  run.event === 'push'
+              )
               .sort(
                 (left, right) =>
                   new Date(right.created_at).getTime() -
@@ -102,7 +124,7 @@ jobs:
 
             if (workflowRuns.length === 0) {
               console.error(
-                `No completed CI workflow run found for ${candidateSha}. Re-run CI for this SHA, then retry deploy.`
+                `No completed main/push CI workflow run found for ${candidateSha}. Ensure this commit is already on main and re-run CI for main if needed, then retry deploy.`
               );
               process.exit(1);
             }

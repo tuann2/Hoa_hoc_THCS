@@ -1,10 +1,26 @@
+import { execFile } from 'node:child_process';
 import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
+import { promisify } from 'node:util';
 import { afterEach, describe, expect, it } from 'vitest';
 import { checkDocs } from '../../scripts/check-docs';
 
+const execFileAsync = promisify(execFile);
 const tempRoots: string[] = [];
+
+async function runCommand(
+  cwd: string,
+  command: string,
+  args: readonly string[]
+): Promise<string> {
+  const { stdout } = await execFileAsync(command, [...args], {
+    cwd,
+    encoding: 'utf8'
+  });
+
+  return stdout.trim();
+}
 
 async function createRepoFixture(): Promise<string> {
   const rootDir = await mkdtemp(path.join(os.tmpdir(), 'check-docs-'));
@@ -64,6 +80,15 @@ async function createRepoFixture(): Promise<string> {
     'export {};\n',
     'utf8'
   );
+  await runCommand(rootDir, 'git', ['init']);
+  await runCommand(rootDir, 'git', [
+    'config',
+    'user.email',
+    'codex@example.com'
+  ]);
+  await runCommand(rootDir, 'git', ['config', 'user.name', 'Codex']);
+  await runCommand(rootDir, 'git', ['add', '.']);
+  await runCommand(rootDir, 'git', ['commit', '-m', 'initial']);
 
   return rootDir;
 }
@@ -216,5 +241,89 @@ describe('check-docs', () => {
     });
 
     expect(result.issues).toEqual([]);
+  });
+
+  it('treats broken markdown links in historical plans as warnings', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'plans', 'HISTORICAL.md'),
+      '[Missing](./removed.md)\n',
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/plans/HISTORICAL.md']
+    });
+
+    expect(result.issues).toEqual([
+      {
+        file: 'docs/plans/HISTORICAL.md',
+        message: 'Broken relative Markdown link: ./removed.md',
+        severity: 'warning'
+      }
+    ]);
+  });
+
+  it('decodes escaped markdown targets before resolving paths', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'space name.md'),
+      '# Space\n',
+      'utf8'
+    );
+    await writeFile(
+      path.join(rootDir, 'docs', 'guide.md'),
+      '[Space](./space%20name.md)\n',
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/guide.md']
+    });
+
+    expect(result.issues).toEqual([]);
+  });
+
+  it('accepts npm run references with multiple spaces', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'guide.md'),
+      'Run `npm run    lint` before merge.\n',
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/guide.md']
+    });
+
+    expect(result.issues).toEqual([]);
+  });
+
+  it('checks untracked markdown files with --all', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'draft.md'),
+      '[Broken](./missing.md)\n',
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      all: true,
+      cwd: rootDir
+    });
+
+    expect(result.files).toContain('docs/draft.md');
+    expect(result.issues).toContainEqual({
+      file: 'docs/draft.md',
+      message: 'Broken relative Markdown link: ./missing.md',
+      severity: 'error'
+    });
   });
 });

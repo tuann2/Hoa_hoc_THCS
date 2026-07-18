@@ -24,7 +24,7 @@ type CheckDocsOptions = {
 };
 
 const MARKDOWN_LINK_PATTERN = /!?\[[^\]]*\]\(([^)]+)\)/gu;
-const SCRIPT_REFERENCE_PATTERN = /\bnpm run ([a-z0-9:-]+)/giu;
+const SCRIPT_REFERENCE_PATTERN = /\bnpm run\s+([a-z0-9:-]+)/giu;
 const DOCUMENT_REFERENCE_PATTERN =
   /(?:^|[`(\s])((?:docs\/(?:(?:plans|handoffs|architecture|runbooks|adr)\/[A-Za-z0-9._/-]+)|scripts\/[A-Za-z0-9._/-]+\.ts|\.github\/workflows\/[A-Za-z0-9._/-]+|(?:README|AGENTS|AI_WORKFLOW)\.md))(?=[`)\s:,.]|$)/gmu;
 
@@ -42,6 +42,14 @@ function stripDelimiters(value: string): string {
 
 function stripAnchor(target: string): string {
   return target.split('#', 1)[0]?.split('?', 1)[0] ?? target;
+}
+
+function decodeTargetPath(target: string): string {
+  try {
+    return decodeURIComponent(target);
+  } catch {
+    return target;
+  }
 }
 
 function isExternalTarget(target: string): boolean {
@@ -108,15 +116,26 @@ export async function getChangedMarkdownFiles(
 }
 
 async function collectMarkdownFiles(repoRoot: string): Promise<string[]> {
-  const { stdout } = await execFileAsync('git', ['ls-files', '*.md'], {
-    cwd: repoRoot,
-    encoding: 'utf8'
-  });
+  const [tracked, untracked] = await Promise.all([
+    execFileAsync('git', ['ls-files', '*.md'], {
+      cwd: repoRoot,
+      encoding: 'utf8'
+    }),
+    execFileAsync(
+      'git',
+      ['ls-files', '--others', '--exclude-standard', '--', '*.md'],
+      {
+        cwd: repoRoot,
+        encoding: 'utf8'
+      }
+    )
+  ]);
 
-  return stdout
-    .split('\n')
+  return [...tracked.stdout.split('\n'), ...untracked.stdout.split('\n')]
     .map((line) => line.trim())
-    .filter((line) => line.length > 0)
+    .filter(
+      (line, index, array) => line.length > 0 && array.indexOf(line) === index
+    )
     .sort();
 }
 
@@ -152,13 +171,16 @@ async function inspectMarkdownFile(
       continue;
     }
 
-    const resolvedPath = path.resolve(fileDir, targetWithoutAnchor);
+    const resolvedPath = path.resolve(
+      fileDir,
+      decodeTargetPath(targetWithoutAnchor)
+    );
 
     if (!(await pathExists(resolvedPath))) {
       issues.push({
         file: relativePath,
         message: `Broken relative Markdown link: ${rawTarget}`,
-        severity: 'error'
+        severity: isHistoricalArtifact(relativePath) ? 'warning' : 'error'
       });
     }
   }

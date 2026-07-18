@@ -130,6 +130,48 @@ export async function getChangedPathsFromBase(
   baseSha: string,
   cwd = process.cwd()
 ): Promise<string[]> {
+  const parseGitNameStatusOutput = (stdout: string): string[] => {
+    const entries = stdout
+      .split('\u0000')
+      .map((entry) => entry.trim())
+      .filter((entry) => entry.length > 0);
+    const paths: string[] = [];
+
+    for (let index = 0; index < entries.length; ) {
+      const status = entries[index];
+
+      if (!status) {
+        index += 1;
+        continue;
+      }
+
+      if (/^[RC]/u.test(status)) {
+        const oldPath = entries[index + 1];
+        const newPath = entries[index + 2];
+
+        if (oldPath) {
+          paths.push(oldPath);
+        }
+
+        if (newPath) {
+          paths.push(newPath);
+        }
+
+        index += 3;
+        continue;
+      }
+
+      const changedPath = entries[index + 1];
+
+      if (changedPath) {
+        paths.push(changedPath);
+      }
+
+      index += 2;
+    }
+
+    return paths;
+  };
   const parseGitPathOutput = (stdout: string): string[] =>
     stdout
       .split('\u0000')
@@ -138,7 +180,14 @@ export async function getChangedPathsFromBase(
   const [committed, trackedDirty, untracked] = await Promise.all([
     execFileAsync(
       'git',
-      ['diff', '--name-only', '-z', '--diff-filter=ACDMRTUXB', baseSha, 'HEAD'],
+      [
+        'diff',
+        '--name-status',
+        '-z',
+        '--diff-filter=ACDMRTUXB',
+        baseSha,
+        'HEAD'
+      ],
       {
         cwd,
         encoding: 'utf8'
@@ -146,7 +195,7 @@ export async function getChangedPathsFromBase(
     ),
     execFileAsync(
       'git',
-      ['diff', '--name-only', '-z', '--diff-filter=ACDMRTUXB', 'HEAD'],
+      ['diff', '--name-status', '-z', '--diff-filter=ACDMRTUXB', 'HEAD'],
       {
         cwd,
         encoding: 'utf8'
@@ -160,8 +209,8 @@ export async function getChangedPathsFromBase(
 
   return [
     ...new Set([
-      ...parseGitPathOutput(committed.stdout),
-      ...parseGitPathOutput(trackedDirty.stdout),
+      ...parseGitNameStatusOutput(committed.stdout),
+      ...parseGitNameStatusOutput(trackedDirty.stdout),
       ...parseGitPathOutput(untracked.stdout)
     ])
   ].sort();

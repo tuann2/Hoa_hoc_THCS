@@ -51,16 +51,24 @@ type CliOptions = {
   profile?: ProfileName;
 };
 
-function createDefaultExecutor(cwd: string): Executor {
+export function createDefaultExecutor(
+  cwd: string,
+  log: Pick<Console, 'error'>
+): Executor {
   return async (command) =>
-    new Promise<number>((resolve, reject) => {
+    new Promise<number>((resolve) => {
       const child = spawn(command[0], [...command.slice(1)], {
         cwd,
         env: process.env,
         stdio: 'inherit'
       });
 
-      child.on('error', reject);
+      child.on('error', (error) => {
+        log.error(
+          `Failed to start gate command "${formatCommand(command)}": ${error.message}`
+        );
+        resolve(127);
+      });
       child.on('exit', (code) => {
         resolve(code ?? 1);
       });
@@ -146,7 +154,7 @@ export async function runSelectedGates(
 ): Promise<{ gateResults: GateExecutionResult[]; result: 'pass' | 'fail' }> {
   const log = options.log ?? console;
   const cwd = options.cwd ?? process.cwd();
-  const executor = options.executor ?? createDefaultExecutor(cwd);
+  const executor = options.executor ?? createDefaultExecutor(cwd, log);
   const gateResults: GateExecutionResult[] = [];
   const executionOrder = resolveGateExecutionOrder(gateIds);
 

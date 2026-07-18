@@ -36,7 +36,9 @@ Chỉ dùng khi đường chính không thể hoàn tất deploy dù commit đí
 Điều kiện trước khi chạy:
 
 - `candidate_sha` phải là đúng 40 ký tự hex.
+- Workflow sẽ normalize `candidate_sha` về lowercase trước khi so sánh và query GitHub API; nhập uppercase vẫn hợp lệ, nhưng runbook này ghi lowercase để copy/paste nhất quán.
 - Commit SHA cần deploy đã có một completed run mới nhất của workflow [`CI`](../../.github/workflows/ci.yml) với `conclusion=success`.
+- Commit SHA đó phải đã nằm trên lịch sử của `origin/main`; SHA từ feature branch chưa merge sẽ bị chặn dù có CI xanh.
 - Trong đúng CI run đó, hai job `web` và `browser` đều phải `completed/success`.
 - Artifact `production-dist` của đúng CI run đó còn trong retention window.
 - Không có deploy production khác đang chạy trong concurrency group `pages`.
@@ -46,15 +48,16 @@ Các bước:
 1. Mở workflow [`Deploy to GitHub Pages`](../../.github/workflows/deploy.yml).
 2. Chạy `workflow_dispatch` và nhập `candidate_sha`.
 3. Workflow checkout đúng SHA đó và assert `git rev-parse HEAD == candidate_sha`; lệch là fail ngay.
-4. Step `Verify required CI run, jobs, and artifact for candidate SHA` gọi GitHub API qua `gh api`, lấy completed runs của `ci.yml` cho đúng `head_sha`, chọn run mới nhất, rồi fail-closed nếu:
+4. Workflow fetch `origin/main` và fail ngay nếu `git merge-base --is-ancestor "$candidate_sha" origin/main` không đúng.
+5. Step `Verify required CI run, jobs, and artifact for candidate SHA` gọi GitHub API qua `gh api`, lấy completed runs của `ci.yml` cho đúng `head_sha`, chỉ chấp nhận run có `head_branch=main` và `event=push`, chọn run mới nhất, rồi fail-closed nếu:
    - regex SHA không hợp lệ;
    - API lỗi hoặc không trả dữ liệu;
-   - không có completed run nào của `ci.yml` cho SHA đó;
+   - không có completed run nào của `ci.yml` cho SHA đó trên `main`/`push`;
    - run mới nhất không có `conclusion=success`;
    - thiếu job `web` hoặc `browser`, hoặc một trong hai không ở `completed/success`;
    - thiếu artifact `production-dist` hoặc artifact đã hết hạn.
-5. Chỉ sau khi guard pass, workflow mới download zip của đúng `production-dist` artifact từ đúng CI run đó, giải nén, upload Pages artifact và deploy.
-6. Nếu artifact đã hết hạn, workflow sẽ fail với hướng dẫn re-run `CI` cho chính SHA đó rồi chạy lại manual deploy.
+6. Chỉ sau khi guard pass, workflow mới download zip của đúng `production-dist` artifact từ đúng CI run đó, giải nén, upload Pages artifact và deploy.
+7. Nếu artifact đã hết hạn, workflow sẽ fail với hướng dẫn re-run `CI` cho chính SHA đó rồi chạy lại manual deploy.
 
 ## Rollback
 
