@@ -1,55 +1,231 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      candidate_sha:
+        description: Commit SHA that already passed required CI checks
+        required: true
+        type: string
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout candidate SHA
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          fetch-depth: 0
+
+      - name: Verify checked out commit matches candidate SHA
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          set -euo pipefail
+          CANDIDATE_SHA="${CANDIDATE_SHA,,}"
+          actual_sha="$(git rev-parse HEAD)"
+          actual_sha="${actual_sha,,}"
+
+          if [ "$actual_sha" != "$CANDIDATE_SHA" ]; then
+            echo "Checked out SHA $actual_sha does not match candidate_sha $CANDIDATE_SHA." >&2
+            exit 1
+          fi
+
+      - name: Verify candidate SHA is already on origin/main
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          set -euo pipefail
+          CANDIDATE_SHA="${CANDIDATE_SHA,,}"
+          git fetch origin main
+
+          if ! git merge-base --is-ancestor "$CANDIDATE_SHA" origin/main; then
+            echo "candidate_sha $CANDIDATE_SHA is not an ancestor of origin/main. Only commits already merged into main may be deployed." >&2
+            exit 1
+          fi
+
+      - name: Verify required CI run, jobs, and artifact for candidate SHA
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const { execFileSync } = require('node:child_process');
+
+          const repository = process.env.GITHUB_REPOSITORY;
+          const candidateShaRaw = process.env.CANDIDATE_SHA;
+          const requiredJobs = ['web', 'browser'];
+          const outputPath = process.env.GITHUB_OUTPUT;
+
+          if (!repository) {
+            console.error('GITHUB_REPOSITORY is not set.');
+            process.exit(1);
+          }
+
+          if (!outputPath) {
+            console.error('GITHUB_OUTPUT is not set.');
+            process.exit(1);
+          }
+
+          const candidateSha = candidateShaRaw?.toLowerCase();
+
+          if (!candidateSha || !/^[0-9a-f]{40}$/u.test(candidateSha)) {
+            console.error(
+              `candidate_sha must be exactly 40 hexadecimal characters. Got: ${candidateShaRaw ?? '<empty>'}`
+            );
+            process.exit(1);
+          }
+
+          const [owner, repo] = repository.split('/');
+
+          function ghApi(path) {
+            const stdout = execFileSync(
+              'gh',
+              ['api', '-H', 'Accept: application/vnd.github+json', path],
+              { encoding: 'utf8' }
+            );
+
+            return JSON.parse(stdout);
+          }
+
+          try {
+            const runsResponse = ghApi(
+              `/repos/${owner}/${repo}/actions/workflows/ci.yml/runs?head_sha=${candidateSha}&status=completed&per_page=100`
+            );
+            const workflowRuns = [...(runsResponse.workflow_runs ?? [])]
+              .filter(
+                (run) =>
+                  run.head_sha?.toLowerCase() === candidateSha &&
+                  run.head_branch === 'main' &&
+                  run.event === 'push'
+              )
+              .sort(
+                (left, right) =>
+                  new Date(right.created_at).getTime() -
+                  new Date(left.created_at).getTime()
+              );
+
+            if (workflowRuns.length === 0) {
+              console.error(
+                `No completed main/push CI workflow run found for ${candidateSha}. Ensure this commit is already on main and re-run CI for main if needed, then retry deploy.`
+              );
+              process.exit(1);
+            }
+
+            const run = workflowRuns[0];
+
+            if (run.conclusion !== 'success') {
+              console.error(
+                `Latest completed CI workflow run ${run.id} for ${candidateSha} concluded ${run.conclusion ?? 'null'}, expected success.`
+              );
+              process.exit(1);
+            }
+
+            const jobsResponse = ghApi(
+              `/repos/${owner}/${repo}/actions/runs/${run.id}/jobs?per_page=100`
+            );
+            const jobs = jobsResponse.jobs ?? [];
+            const jobFailures = [];
+
+            for (const jobName of requiredJobs) {
+              const job = jobs.find((entry) => entry.name === jobName);
+
+              if (!job) {
+                jobFailures.push(`${jobName}: missing from CI run ${run.id}`);
+                continue;
+              }
+
+              if (
+                job.status !== 'completed' ||
+                job.conclusion !== 'success'
+              ) {
+                jobFailures.push(
+                  `${jobName}: ${job.status}/${job.conclusion ?? 'null'}`
+                );
+              }
+            }
+
+            if (jobFailures.length > 0) {
+              console.error(
+                `Required CI jobs for ${candidateSha} are not all successful in run ${run.id}:\n${jobFailures.join('\n')}`
+              );
+              process.exit(1);
+            }
+
+            const artifactsResponse = ghApi(
+              `/repos/${owner}/${repo}/actions/runs/${run.id}/artifacts?per_page=100`
+            );
+            const artifact = (artifactsResponse.artifacts ?? []).find(
+              (entry) => entry.name === 'production-dist'
+            );
+
+            if (!artifact) {
+              console.error(
+                `CI run ${run.id} for ${candidateSha} does not have artifact production-dist. Re-run CI for this SHA, then retry deploy.`
+              );
+              process.exit(1);
+            }
+
+            if (artifact.expired) {
+              console.error(
+                `Artifact production-dist for CI run ${run.id} and ${candidateSha} has expired. Re-run CI for this SHA to regenerate the artifact, then retry deploy.`
+              );
+              process.exit(1);
+            }
+
+            require('node:fs').appendFileSync(
+              outputPath,
+              `run_id=${run.id}\nartifact_id=${artifact.id}\n`
+            );
+
+            console.log(
+              `Verified CI run ${run.id} for ${candidateSha}; jobs ${requiredJobs.join(', ')} succeeded and artifact production-dist is available.`
+            );
+          } catch (error) {
+            const message = error instanceof Error ? error.message : String(error);
+            console.error(
+              `Unable to confirm CI run, jobs, or artifact for ${candidateSha}: ${message}`
+            );
+            process.exit(1);
+          }
+          NODE
+
+      - name: Download production artifact from verified CI run
+        env:
+          ARTIFACT_ID: ${{ steps.guard.outputs.artifact_id }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${ARTIFACT_ID}/zip" \
+            > production-dist.zip
+          rm -rf dist
+          mkdir -p dist
+          unzip -q production-dist.zip -d dist
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

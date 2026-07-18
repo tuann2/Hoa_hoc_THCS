@@ -157,6 +157,19 @@ npm run check:licenses
 npm audit --audit-level=moderate
 ```
 
+Toàn bộ quality gates có thể chạy qua một lệnh duy nhất (nguồn chuẩn:
+`scripts/gates-manifest.ts`, dùng chung với CI):
+
+```bash
+npm run gates -- --profile=web    # format, catalog, content, lint, typecheck,
+                                  # unit, build:app, bundle, audit, license
+npm run gates -- --profile=docs   # format + docs-check (link/path/lệnh trong .md)
+```
+
+Lưu ý: `npm run build` là lệnh gộp cho dev (validate-content + typecheck +
+vite build); `npm run build:app` chỉ chạy `vite build` thuần — CI dùng
+`build:app` vì content-validation và typecheck đã là gate riêng.
+
 ## Cấu trúc quan trọng
 
 ```text
@@ -177,7 +190,12 @@ src/store/progress.ts         # XP, streak, sao, mở khoá, câu sai (wrongQues
                                # lịch sử thi (examHistory), snapshot sync
 tests/                        # unit test và component test
 tests/e2e/                    # Playwright E2E trên production preview
-.github/workflows/ci.yml      # lint + typecheck + test + build
+scripts/gates-manifest.ts     # nguồn chuẩn gate ID/lệnh/profile (WORKFLOW-004A)
+scripts/gates.ts              # runner chạy gates theo profile hoặc classifier
+scripts/evidence.ts           # sinh evidence gắn snapshot chính xác
+.github/workflows/ci.yml      # web (gates runner) + browser (E2E/PWA) + deploy (chỉ main)
+.github/workflows/deploy.yml  # deploy manual dự phòng, có guard candidate_sha
+docs/runbooks/DEPLOYMENT.md   # quy trình deploy chính / dự phòng / rollback
 ```
 
 ## Quy ước nội dung

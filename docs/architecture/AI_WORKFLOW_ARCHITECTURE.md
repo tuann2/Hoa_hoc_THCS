@@ -1,10 +1,14 @@
 # AI Workflow Architecture
 
-- Version: 2.2
-- Status: APPROVED
+- Version: 2.3
+- Status: APPROVED (v2.3 amendment approved by nt0, 2026-07-18)
 - Owner: Human Project Owner
 - Reviewers: Claude, Codex, Gemini (conditional by risk tier)
-- Amendment history: v2.2 (WORKFLOW-003) — removed the unimplementable
+- Amendment history: v2.3 (WORKFLOW-004A) — superseded the manual
+  `git add -A && git stash create` evidence ritual with machine-generated
+  exact-snapshot IDs from `scripts/evidence.ts`, made the gate manifest
+  (`scripts/gates-manifest.ts`) the canonical command source, and added
+  the Deployment Invariant. v2.2 (WORKFLOW-003) — removed the unimplementable
   tree-SHA evidence requirement, scoped documentation-only remediation to
   match `docs/DOCUMENTATION_RULES.md`, condensed duplicated sections,
   replaced unmeasurable success metrics with countable ones, and codified
@@ -315,18 +319,24 @@ Every validation record MUST contain:
 
 - base commit SHA (`HEAD` when validation started);
 - candidate commit SHA, or `UNCOMMITTED` before a candidate commit exists;
-- worktree state: `clean` (matches the named commit exactly), or, whenever
-  any tracked or untracked file differs from the named commit, `dirty` plus
-  the exact dirty paths **and** the output of `git add -A && git stash
-create` run against that worktree state (`git add -A` stages every
-  change, including new untracked files, without altering any file's
-  content; `git stash create` alone silently omits untracked files and
-  produces no output at all when only untracked files are dirty, so the
-  `git add -A` step is required — plain `git stash create` is not
-  sufficient). The resulting SHA captures the exact dirty content and is
-  the content-binding anchor for uncommitted or partially-committed
-  changes; re-running it after further edits MUST produce a different SHA,
-  which is how a stale re-presentation of old evidence is caught;
+- worktree state: `clean` (matches the named commit exactly), or `dirty`
+  plus the exact dirty paths;
+- a machine-generated **validated snapshot ID** produced by
+  `scripts/evidence.ts` (`npm run evidence`). The default kind is
+  `git-tree`: a tree SHA written through a temporary `GIT_INDEX_FILE`
+  (`read-tree HEAD` → `add -A` → `write-tree`), which never mutates the
+  real index or worktree (it may leave unreachable objects in `.git`;
+  harmless, `git gc` removes them). When the runtime cannot write git
+  metadata (e.g. a restricted sandbox), the fallback kind is `manifest`:
+  a SHA-256 over a deterministic manifest of `{base_sha, path, mode,
+status, content-hash, tracked}` for every tracked and untracked file.
+  The evidence record MUST state which kind was used. The snapshot is
+  computed immediately before gates run and again after they finish;
+  any mismatch makes the run `invalid` and the evidence MUST be
+  rejected. Recomputing the snapshot at handoff or release time and
+  comparing it against the recorded ID is how a stale re-presentation
+  of old evidence is caught — a differing ID means the evidence is
+  stale;
 - UTC validation start and completion timestamps in ISO 8601 format;
 - operating runtime and package-manager versions;
 - the version of every validation tool, or the lockfile SHA when the lockfile
@@ -340,10 +350,9 @@ Independent Verification) — CI evidence MUST name that exact commit SHA, and
 evidence from another commit is stale even when the diff appears equivalent.
 Whenever the worktree is dirty — whether or not a candidate commit exists
 yet — the base or candidate commit SHA plus the dirty paths plus the
-`git add -A && git stash create` SHA is the evidence anchor. There is no
-separate tree-object requirement beyond this: both commands are ordinary,
-already-available git commands, so no undefined "canonical evidence
-command" is needed.
+validated snapshot ID is the evidence anchor. When a restricted sandbox
+cannot generate the snapshot itself, ownership of evidence generation
+moves to the orchestrator or harness environment outside the sandbox.
 
 ### Canonical Quality Gates
 
@@ -366,19 +375,25 @@ deviation.
 | Migration or destructive operation   | Application gates where applicable; migration dry run; forward/rollback verification; backup and recovery procedure validation |
 | Infrastructure or deployment         | Baseline gates; configuration validation; dry run or plan; policy/security scan; rollback procedure validation                 |
 
-For this repository, the canonical commands are:
+For this repository, the canonical gate definitions live in
+`scripts/gates-manifest.ts` — a single machine-readable source listing
+every gate ID, its exact command, prerequisites, and the `web` /
+`browser` / `docs` / `full` profiles. Gates are executed through the
+runner:
 
 ```bash
-git diff --check
-npm run format:check
-npm run validate-content
-npm run lint
-npm run typecheck
-npm test
-npm run build
+npm run gates -- --profile=<web|browser|docs|full>
+npm run gates -- --changed-from=<base_sha>   # classifier-scoped run
 ```
 
-Only the commands applicable under the table need to run. A composite command
+The classifier (`scripts/classify-change.ts`) maps changed paths to the
+required gate union; unrecognized paths fail closed to `full`, and a
+caller declaring a weaker profile than the classifier requires MUST
+fail. CI (`.github/workflows/ci.yml`) runs the same profiles, so local
+and CI execution cannot drift from the manifest. Prose documents MUST
+reference the manifest rather than restating command lists.
+
+Only the gates applicable under the table need to run. A composite command
 may satisfy a listed sub-gate when its output proves that the sub-gate ran
 successfully for the same snapshot. Integration, security, migration and
 infrastructure commands MUST be named in the approved plan when applicable.
@@ -386,6 +401,37 @@ infrastructure commands MUST be named in the approved plan when applicable.
 A required gate that has no repository command is a blocker, not permission to
 skip it. The plan must add the gate or record an explicitly human-approved
 alternative before release readiness.
+
+### Deployment Invariant
+
+The artifact deployed to production MUST be the exact artifact that
+passed every required gate (web + browser/PWA) for that exact commit
+SHA. A browser/PWA failure means no deploy. No deployment path may
+bypass this invariant.
+
+Bounded deviation (approved by Owner on July 18, 2026): the deployed
+artifact may be rebuilt in the same CI run and for the same commit
+after the required gates pass, but only to inject production
+configuration such as base path and real endpoints. Byte-level identity
+between browser-gated and deployed artifacts is deferred to a later
+feature.
+
+Enforcement in this repository:
+
+- `.github/workflows/ci.yml` job `deploy` runs only on `push` to `main`,
+  `needs: [web, browser]`, deploys the `production-dist` artifact that
+  was built in the same CI run after the required gates passed. Browser
+  gates consume `test-dist`, while `production-dist` is rebuilt with
+  production configuration in that same run. Pages permissions
+  (`pages: write`, `id-token: write`) exist only on this job.
+- `.github/workflows/deploy.yml` is manual-only (`workflow_dispatch`)
+  with a required `candidate_sha` input; it verifies through the GitHub
+  API that the latest completed `ci.yml` run for that exact SHA
+  concluded successfully, that its `web` and `browser` jobs succeeded,
+  and that its `production-dist` artifact still exists, then deploys
+  that artifact without rebuilding. Any API error, missing run/job, bad
+  conclusion, or expired artifact fails closed. Operator procedure:
+  `docs/runbooks/DEPLOYMENT.md`.
 
 ### Remediation State Machine
 
@@ -431,7 +477,7 @@ Transition rules:
 5. Corrections limited to the handoff or generated evidence do not invalidate
    engineering validation; the corrected evidence MUST still bind to the
    unchanged candidate commit, or the unchanged base commit + dirty paths +
-   `git add -A && git stash create` SHA.
+   validated snapshot ID.
 6. `RELEASE_READY` is an assessment, not final approval. Only the human may
    approve release.
 
@@ -553,6 +599,15 @@ evidence in its commit messages, not as a session-count proxy.
   Phase 3 (dry-run measurement) deferred.
 - **v2.2 (WORKFLOW-003, 2026-07-12):** amendments A1–A5 (see header);
   Phase 3 closed by the retrospective baseline above.
+- **v2.3 (WORKFLOW-004A, 2026-07-18):** Evidence Binding superseded the
+  `git add -A && git stash create` ritual with machine-generated exact
+  snapshots (`scripts/evidence.ts`: git-tree via temporary
+  `GIT_INDEX_FILE`, manifest-hash fallback for restricted sandboxes);
+  Canonical Quality Gates now reference the gate manifest
+  (`scripts/gates-manifest.ts`) and runner instead of a prose command
+  list; added the Deployment Invariant (deploy only the validated
+  artifact for the exact SHA; browser fail ⇒ no deploy; manual path
+  fail-closed).
 
 ---
 
