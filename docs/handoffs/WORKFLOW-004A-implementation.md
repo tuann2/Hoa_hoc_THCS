@@ -222,3 +222,54 @@ deploy.yml
 
 - Complete WORKFLOW-004A Stage 5-8 on top of this branch: workflow shadow/cutover, deployment invariant enforcement, architecture amendment, and independent CRITICAL review.
 - Decide in Stage 5 whether the repository should reintroduce browser/PWA gates, bundle checks, and artifact promotion once `.github/workflows/` work begins.
+
+## 12. Remediation round 1 — reconcile manifest với main sau merge 445147c
+
+### Work completed
+
+- Re-read `.github/workflows/ci.yml` and `package.json` on July 18, 2026, then updated `scripts/gates-manifest.ts` to match the merged repository's real gate list and command order:
+  - added `content-catalog`, `bundle-check`, `e2e`, `pwa`, `pwa-subpath`
+  - inserted `content-catalog` before `content-validation` in profile `web`
+  - inserted `bundle-check` after `production-build` with prerequisite `production-build`
+  - populated profile `browser` as `['e2e', 'pwa', 'pwa-subpath']`
+  - made profile `full` the union of `web + browser + docs`
+- Expanded `PATH_GATE_RULES` for post-merge files from `main`: `scripts/generate-content-catalog.ts`, `scripts/check-bundle-budget.ts`, `tests/e2e/**`, `playwright.config.ts`, `playwright.subpath.config.ts`, `index.html`, `public/**`, `src/vite-env.d.ts`, and `content/catalog.json`.
+- Updated `scripts/classify-change.ts` so `inferMinimumProfile()` can return `browser`, while mixed web+browser changes still fail closed to `full`.
+- Updated `scripts/gates.ts` so classifier-driven execution selects the resolved profile directly, including the now-nonempty `browser` profile.
+- Updated unit tests in `tests/scripts/gates-manifest.test.ts`, `tests/scripts/classify-change.test.ts`, and `tests/scripts/gates.test.ts` to cover the new gate IDs, ordering, browser profile, and classifier behavior.
+- Left `.github/workflows/`, `src/`, and `content/` untouched, per remediation scope.
+
+### Validation evidence (actual commands and outcomes)
+
+| Command                           | Exit status | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `git diff --check`                | 0           | Passed with no output.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `npm run format:check`            | 0           | `All matched files use Prettier code style!`                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `npm run lint`                    | 0           | Passed with no diagnostics.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `npm run typecheck`               | 2           | First attempt failed in `scripts/gates-manifest.ts` because tuple-`includes()` narrowing rejected `docs-check` during `full` profile construction.                                                                                                                                                                                                                                                                                                                             |
+| `npm run typecheck`               | 0           | Passed after replacing the tuple `includes()` filter with a `Set<GateId>` membership check.                                                                                                                                                                                                                                                                                                                                                                                    |
+| `npm test`                        | 0           | `25` test files passed; `133` tests passed.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `npm run check:content-catalog`   | 0           | `Content catalog khớp với content/units/*.json.`                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `npm run build:app`               | 0           | `vite build` succeeded; PWA assets regenerated in `dist/`.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `npm run check:bundle`            | 0           | `Bundle budget đạt: 25 JS chunks, initial gzip 111384 bytes, 17 content chunks.`                                                                                                                                                                                                                                                                                                                                                                                               |
+| `npm run gates -- --profile=docs` | 0           | Passed: `git-diff-check`, `format-check`, `docs-check`. `check:docs` reported `No Markdown files selected for validation.`                                                                                                                                                                                                                                                                                                                                                     |
+| `npm run gates -- --profile=web`  | 1           | Reached and passed `git-diff-check`, `format-check`, `content-catalog`, `content-validation`, `lint`, `typecheck`, `unit-tests`, `production-build`, and `bundle-check`; then failed at `dependency-audit` with `getaddrinfo ENOTFOUND registry.npmjs.org` from `npm audit --audit-level=moderate`. In this sandbox on July 18, 2026, outbound DNS/network remained unavailable, so this command could not be made to pass locally without changing the canonical gate itself. |
+
+Supplemental pre-flight checks for the edited scripts also passed before the full validation loop:
+
+- `npx vitest run tests/scripts/gates-manifest.test.ts tests/scripts/classify-change.test.ts tests/scripts/gates.test.ts` → exit `0`
+
+Browser/PWA commands (`npm run test:e2e`, `npm run test:pwa`, `npm run test:pwa:subpath`) were not run locally in this remediation round, per task guidance; the local environment still does not guarantee Chromium.
+
+### Git diff --stat for this remediation round
+
+```text
+ docs/handoffs/WORKFLOW-004A-implementation.md |  51 +++++++++
+ scripts/classify-change.ts                    |  17 ++-
+ scripts/gates-manifest.ts                     | 148 +++++++++++++++++++++-----
+ scripts/gates.ts                              |  10 +-
+ tests/scripts/classify-change.test.ts         |  40 ++++++-
+ tests/scripts/gates-manifest.test.ts          |  26 ++++-
+ tests/scripts/gates.test.ts                   |  44 ++++++--
+ 7 files changed, 281 insertions(+), 55 deletions(-)
+```
