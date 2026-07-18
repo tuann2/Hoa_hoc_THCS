@@ -25,8 +25,8 @@
 * **Tính chất hoá học:**
   * Mang đầy đủ tính chất của phi kim điển hình: tác dụng mạnh với hầu hết các kim loại tạo muối chloride hóa trị cao (ví dụ: \(3\text{Cl}_2 + 2\text{Fe} \xrightarrow{t^\circ} 2\text{FeCl}_3\)), tác dụng mạnh với hiđro khi chiếu sáng hoặc đun nóng tạo khí hiđro chloride (\(\text{Cl}_2 + \text{H}_2 \longrightarrow 2\text{HCl}\)).
   * **Tính chất riêng biệt:**
-    * *Tác dụng với nước:* \(\text{Cl}_2 + \text{H}_2\text{O} \rightleftharpoons \text{HCl} + \text{HClO}\). Axit hipoclorơ (\(\text{HClO}\)) không bền, có tính oxi hóa mạnh làm cho nước clo có khả năng tẩy màu, diệt khuẩn.
-    * *Tác dụng với dung dịch kiềm:* \(\text{Cl}_2 + 2\text{NaOH} \longrightarrow \text{NaCl} + \text{NaClO} + \text{H}_2\text{O}\) (dung dịch thu được gọi là nước Gia-ven).
+    * *Tác dụng với nước:* \(\text{Cl}_2 + \text{H}_2\text{O} \rightleftharpoons \text{HCl} + \text{HClO}\). Axit hipoclorơ (\(\text{HClO}\)) không bền và có tính oxi hóa mạnh nên nước clo có tính tẩy màu.
+    * *Tác dụng với dung dịch kiềm:* \(\text{Cl}_2 + 2\text{NaOH} \longrightarrow \text{NaCl} + \text{NaClO} + \text{H}_2\text{O}\).
 * **Điều chế clo:**
   * *Trong phòng thí nghiệm:* Dùng chất oxi hóa mạnh (như \(\text{MnO}_2, \text{KMnO}_4, \text{KClO}_3\)) tác dụng với dung dịch \(\text{HCl}\) đặc.
     * \(4\text{HCl} + \text{MnO}_2 \xrightarrow{t^\circ} \text{MnCl}_2 + \text{Cl}_2\uparrow + 2\text{H}_2\text{O}\)
@@ -42,24 +42,44 @@
     * Cháy tỏa nhiều nhiệt: \(\text{C} + \text{O}_2 \xrightarrow{t^\circ} \text{CO}_2 + Q\).
     * Khử oxit kim loại yếu/trung bình: \(2\text{CuO} + \text{C} \xrightarrow{t^\circ} 2\text{Cu} + \text{CO}_2\uparrow\).
 * **Hợp chất của Cacbon:**
-  * **Cacbon(II) oxit (CO):** Khí không màu, không mùi, rất độc, không hoá hợp với nước và không phản ứng với kiềm (oxit trung tính). Có tính khử cực mạnh ở nhiệt độ cao:
+  * **Cacbon(II) oxit (CO):** Khí không màu, không mùi, rất độc; không hoá hợp với nước, không phản ứng với kiềm và axit (oxit không tạo muối). Có tính khử mạnh ở nhiệt độ cao:
     * \(2\text{CO} + \text{O}_2 \xrightarrow{t^\circ} 2\text{CO}_2\)
     * \(3\text{CO} + \text{Fe}_2\text{O}_3 \xrightarrow{t^\circ} 2\text{Fe} + 3\text{CO}_2\uparrow\)
     * \(\text{CO} + \text{CuO} \xrightarrow{t^\circ} \text{Cu} + \text{CO}_2\uparrow\)
   * **Cacbon(IV) oxit (\(\text{CO}_2\) - khí cacbonic):** Khí không màu, nặng hơn không khí, không duy trì sự cháy. Là một oxit axit điển hình:
     * \(\text{CO}_2 + \text{Ca(OH)}_2 \longrightarrow \text{CaCO}_3\downarrow + \text{H}_2\text{O}\)
-    * Tác dụng với dung dịch kiềm tuỳ tỉ lệ tạo muối trung hòa hoặc muối axit.
+    * \(2\text{CO}_2+\text{Ca(OH)}_2\longrightarrow\text{Ca(HCO}_3)_2\)
+    * Điều chế trong phòng thí nghiệm:
+      \(\text{CaCO}_3+2\text{HCl}\longrightarrow\text{CaCl}_2+\text{H}_2\text{O}+\text{CO}_2\uparrow\).
+  * **Axit cacbonic \(\text{H}_2\text{CO}_3\):** Là axit rất yếu, làm quỳ tím chuyển màu hồng nhạt và dễ bị phân hủy:
+    \[
+    \text{H}_2\text{CO}_3\longrightarrow\text{H}_2\text{O}+\text{CO}_2\uparrow
+    \]
   * **Muối cacbonat và hiđrocacbonat:**
     * Tác dụng với dung dịch axit mạnh giải phóng khí \(\text{CO}_2\):
       * \(\text{Na}_2\text{CO}_3 + 2\text{HCl} \longrightarrow 2\text{NaCl} + \text{H}_2\text{O} + \text{CO}_2\uparrow\)
       * \(\text{NaHCO}_3 + \text{HCl} \longrightarrow \text{NaCl} + \text{H}_2\text{O} + \text{CO}_2\uparrow\)
-    * Hầu hết muối cacbonat (trừ muối kim loại kiềm) bị phân huỷ ở nhiệt độ cao:
+    * Hầu hết muối cacbonat (trừ \(\text{Na}_2\text{CO}_3\) và \(\text{K}_2\text{CO}_3\)) bị phân huỷ ở nhiệt độ cao:
       * \(\text{CaCO}_3 \xrightarrow{t^\circ} \text{CaO} + \text{CO}_2\uparrow\)
       * \(2\text{NaHCO}_3 \xrightarrow{t^\circ} \text{Na}_2\text{CO}_3 + \text{CO}_2\uparrow + \text{H}_2\text{O}\)
+    * Muối cacbonat không tan tác dụng với \(\text{CO}_2\) và nước tạo muối hiđrocacbonat:
+      \[
+      \text{CaCO}_3+\text{CO}_2+\text{H}_2\text{O}\longrightarrow\text{Ca(HCO}_3)_2
+      \]
 
 #### C. SILIC (Si) VÀ CÔNG NGHIỆP SILICAT
-* **Silic (Si):** Là nguyên tố phổ biến thứ hai trong vỏ Trái Đất (sau oxi), chủ yếu tồn tại ở dạng các hợp chất của silic (như thạch anh, cát trắng chứa \(\text{SiO}_2\), các khoáng vật silicat). Silic đơn chất là chất bán dẫn quan trọng.
-* **Silic đioxit (\(\text{SiO}_2\)):** Là một oxit axit nhưng không phản ứng với nước, tan được trong dung dịch kiềm nóng chảy tạo muối silicat (ví dụ: \(\text{SiO}_2 + 2\text{NaOH} \xrightarrow{t^\circ \text{ cao}} \text{Na}_2\text{SiO}_3 + \text{H}_2\text{O}\)).
+* **Silic (Si):** Là nguyên tố phổ biến thứ hai trong vỏ Trái Đất sau oxi. Silic đơn chất là chất rắn màu xám, dẫn điện kém, hoạt động hóa học yếu, không phản ứng với hiđro và phản ứng với oxi ở nhiệt độ cao:
+  \[
+  \text{Si}+\text{O}_2\xrightarrow{t^\circ}\text{SiO}_2
+  \]
+* **Silic đioxit (\(\text{SiO}_2\)):** Là một oxit axit, không tan và không phản ứng với nước:
+  \[
+  \text{SiO}_2+\text{CaO}\xrightarrow{t^\circ}\text{CaSiO}_3
+  \]
+  \[
+  \text{SiO}_2+2\text{NaOH}\xrightarrow{t^\circ}\text{Na}_2\text{SiO}_3+\text{H}_2\text{O}
+  \]
+  Thạch anh là \(\text{SiO}_2\) nguyên chất; cát trắng là \(\text{SiO}_2\) có lẫn tạp chất. Đất sét có thành phần chính là \(\text{Al}_2\text{O}_3\cdot2\text{SiO}_2\cdot2\text{H}_2\text{O}\) và một số chất khác.
 * **Công nghiệp silicat:** Sản xuất đồ gốm, xi măng, thuỷ tinh.
   * *Gốm:* Nguyên liệu chính là đất sét.
   * *Xi măng:* Nguyên liệu chính là đá vôi (\(\text{CaCO}_3\)) và đất sét.
@@ -84,7 +104,6 @@
   * Số electron lớp ngoài cùng tăng dần từ 1 đến 8.
   * Tính kim loại của các nguyên tố giảm dần, đồng thời tính phi kim tăng dần.
 * **Trong một nhóm (từ trên xuống dưới):** Đi từ đầu nhóm xuống cuối nhóm:
-  * Số lớp electron của nguyên tử tăng dần.
   * Tính kim loại của các nguyên tố tăng dần, đồng thời tính phi kim giảm dần.
 * **Sơ đồ liên hệ cấu tạo và vị trí:**
 

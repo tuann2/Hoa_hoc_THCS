@@ -36,8 +36,10 @@ Hầu hết các kim loại đều có các tính chất vật lí chung sau:
   * *Lưu ý quan trọng:* \(\text{Al, Fe}\) bị thụ động hóa (không tác dụng) trong dung dịch \(\text{HNO}_3\) đặc, nguội và \(\text{H}_2\text{SO}_4\) đặc, nguội.
 
 ### 4. Phản ứng với dung dịch muối
-* Kim loại hoạt động mạnh hơn (đứng trước) đẩy kim loại hoạt động yếu hơn (đứng sau) ra khỏi dung dịch muối của chúng.
-* *Ví dụ:* \(\text{Fe} + \text{CuSO}_4 \longrightarrow \text{FeSO}_4 + \text{Cu}\downarrow\).
+* Kim loại hoạt động mạnh hơn đẩy kim loại hoạt động yếu hơn ra khỏi dung dịch muối của chúng, trừ những kim loại phản ứng với nước ở điều kiện thường.
+* *Ví dụ:*
+  * \(2\text{Al}+3\text{Pb(NO}_3)_2\longrightarrow2\text{Al(NO}_3)_3+3\text{Pb}\)
+  * \(\text{Fe}+\text{CuSO}_4\longrightarrow\text{FeSO}_4+\text{Cu}\)
 
 ### 5. Phản ứng với nước
 * Các kim loại kiềm và kiềm thổ mạnh (như \(\text{Li, Na, K, Ba, Ca}\)) tác dụng trực tiếp với nước ở nhiệt độ thường tạo thành dung dịch bazơ (kiềm) và giải phóng khí \(\text{H}_2\).
@@ -52,9 +54,55 @@ Hầu hết các kim loại đều có các tính chất vật lí chung sau:
     * \(\text{Zn} + 2\text{NaOH} \longrightarrow \text{Na}_2\text{ZnO}_2\text{ (natri zincat)} + \text{H}_2\uparrow\)
     * \(2\text{Al} + 2\text{H}_2\text{O} + 2\text{NaOH} \longrightarrow 2\text{NaAlO}_2\text{ (natri aluminat)} + 3\text{H}_2\uparrow\)
 
+### 7. Kim loại thông dụng: nhôm và sắt
+
+- Nhôm là kim loại màu trắng bạc, nhẹ, dẻo, dẫn điện và dẫn nhiệt tốt.
+- Sắt là kim loại màu trắng xám, nặng, dẫn điện và dẫn nhiệt.
+
+Một số phản ứng của nhôm và hợp chất:
+
+\[
+2\text{Al}+2\text{NaOH}+2\text{H}_2\text{O}
+\longrightarrow2\text{NaAlO}_2+3\text{H}_2\uparrow
+\]
+
+\[
+2\text{Al}+\text{Fe}_2\text{O}_3\xrightarrow{t^\circ}
+\text{Al}_2\text{O}_3+2\text{Fe}
+\]
+
+\[
+\text{Al}_2\text{O}_3+2\text{NaOH}\longrightarrow2\text{NaAlO}_2+\text{H}_2\text{O}
+\]
+
+\[
+\text{Al(OH)}_3+\text{NaOH}\longrightarrow\text{NaAlO}_2+2\text{H}_2\text{O}
+\]
+
+Một số phản ứng của sắt và hợp chất:
+
+\[
+\text{Fe}+2\text{FeCl}_3\longrightarrow3\text{FeCl}_2
+\]
+
+\[
+\text{Cu}+2\text{Fe(NO}_3)_3\longrightarrow
+\text{Cu(NO}_3)_2+2\text{Fe(NO}_3)_2
+\]
+
+\[
+4\text{Fe(OH)}_2+\text{O}_2+2\text{H}_2\text{O}
+\longrightarrow4\text{Fe(OH)}_3
+\]
+
+\[
+\text{FeO}+4\text{HNO}_3\longrightarrow
+\text{Fe(NO}_3)_3+\text{NO}_2\uparrow+2\text{H}_2\text{O}
+\]
+
 ---
 
-## III. DẠY HOẠT ĐỘNG HOÁ HỌC CỦA CÁC KIM LOẠI
+## III. DÃY HOẠT ĐỘNG HOÁ HỌC CỦA CÁC KIM LOẠI
 
 ### 1. Dãy đầy đủ (theo tài liệu):
 $$\text{Li, K, Ba, Ca, Na, Mg, Al, Mn, Zn, Cr, Fe, Ni, Sn, Pb, H, Cu, Hg, Ag, Pt, Au}$$
@@ -77,13 +125,37 @@ $$\text{Li, K, Ba, Ca, Na, Mg, Al, Mn, Zn, Cr, Fe, Ni, Sn, Pb, H, Cu, Hg, Ag, Pt
 * Điều chế bằng phương pháp **điện phân nóng chảy** hợp chất (oxide hoặc muối chloride) của chúng.
 * *Ví dụ:* \(2\text{NaCl (nóng chảy)} \xrightarrow{\text{điện phân}} 2\text{Na} + \text{Cl}_2\uparrow\)
 
-### 2. Kim loại trung bình và yếu
-* Có thể điều chế bằng phương pháp **nhiệt luyện** (dùng chất khử mạnh như \(\text{CO, H}_2, \text{C, Al}\) để khử oxit kim loại ở nhiệt độ cao) hoặc phương pháp **thuỷ luyện** (dùng kim loại mạnh đẩy kim loại yếu ra khỏi dung dịch muối).
-* *Ví dụ nhiệt luyện:*
-  * \(3\text{CO} + \text{Fe}_2\text{O}_3 \xrightarrow{t^\circ} 2\text{Fe} + 3\text{CO}_2\uparrow\)
-  * \(\text{H}_2 + \text{CuO} \xrightarrow{t^\circ} \text{Cu} + \text{H}_2\text{O}\)
-* *Ví dụ thủy luyện/điện phân dung dịch:*
-  * \(2\text{CuSO}_4 + 2\text{H}_2\text{O} \xrightarrow{\text{điện phân dung dịch}} 2\text{Cu} + 2\text{H}_2\text{SO}_4 + \text{O}_2\uparrow\)
+### 2. Kim loại trung bình
+
+- Dùng kim loại mạnh hơn đẩy kim loại yếu hơn ra khỏi dung dịch muối:
+
+\[
+\text{Zn}+\text{Pb(NO}_3)_2\longrightarrow
+\text{Pb}+\text{Zn(NO}_3)_2
+\]
+
+- Dùng chất khử để khử oxit kim loại ở nhiệt độ cao:
+
+\[
+3\text{CO}+\text{Fe}_2\text{O}_3\xrightarrow{t^\circ}
+2\text{Fe}+3\text{CO}_2
+\]
+
+### 3. Kim loại yếu
+
+- Dùng chất khử để khử oxit kim loại ở nhiệt độ cao:
+
+\[
+\text{H}_2+\text{CuO}\xrightarrow{t^\circ}\text{Cu}+\text{H}_2\text{O}
+\]
+
+- Điện phân dung dịch muối:
+
+\[
+2\text{CuSO}_4+2\text{H}_2\text{O}
+\xrightarrow{\text{điện phân}}
+2\text{Cu}+2\text{H}_2\text{SO}_4+\text{O}_2\uparrow
+\]
 
 ---
 
@@ -92,29 +164,32 @@ $$\text{Li, K, Ba, Ca, Na, Mg, Al, Mn, Zn, Cr, Fe, Ni, Sn, Pb, H, Cu, Hg, Ag, Pt
 ### 1. Khái niệm hợp kim
 * **Hợp kim** là chất rắn thu được sau khi làm nguội hỗn hợp nóng chảy của nhiều kim loại khác nhau hoặc giữa kim loại và phi kim.
 * *Ví dụ:*
-  * **Duyra (Duralumin):** Hợp kim của nhôm gồm khoảng 94% Al, 4% Cu và 2% các nguyên tố khác như Mg, Mn, Fe, Si. Rất nhẹ và bền, dùng trong chế tạo vỏ máy bay.
+  * **Duyra (Duralumin):** Hợp kim của nhôm gồm khoảng 94% Al, 4% Cu và 2% các nguyên tố Mg, Mn, Fe, Si.
   * **Gang:** Hợp kim của sắt với cacbon, trong đó hàm lượng cacbon chiếm từ 2% đến 5% và một số nguyên tố khác như Si, Mn, P, S.
   * **Thép:** Hợp kim của sắt với cacbon, trong đó hàm lượng cacbon chiếm dưới 2% và một số nguyên tố khác.
 
 ### 2. Nguyên tắc sản xuất gang và thép
 * **Sản xuất gang:** Dùng khí CO để khử quặng sắt (như quặng manhetit chứa \(\text{Fe}_3\text{O}_4\) hoặc quặng hematit chứa \(\text{Fe}_2\text{O}_3\)) trong lò cao.
   * *Sự oxi hoá than cốc:* \(\text{C} + \text{O}_2 \xrightarrow{t^\circ} \text{CO}_2\); \(\text{C} + \text{CO}_2 \xrightarrow{t^\circ} 2\text{CO}\).
-  * *Phản ứng khử oxit sắt:* \(\text{Fe}_2\text{O}_3 + 3\text{CO} \xrightarrow{t^\circ} 2\text{Fe} + 3\text{CO}_2\) (hoặc tương tự với \(\text{Fe}_3\text{O}_4\)).
+  * *Phản ứng khử oxit sắt:* \(\text{Fe}_2\text{O}_3 + 3\text{CO} \xrightarrow{t^\circ} 2\text{Fe} + 3\text{CO}_2\);
+    \(\text{Fe}_3\text{O}_4+4\text{CO}\xrightarrow{t^\circ}3\text{Fe}+4\text{CO}_2\).
   * *Phản ứng tạo xỉ để loại bỏ tạp chất silic:* \(\text{CaCO}_3 \xrightarrow{t^\circ} \text{CaO} + \text{CO}_2\); \(\text{CaO} + \text{SiO}_2 \longrightarrow \text{CaSiO}_3\).
 * **Sản xuất thép:** Oxi hoá gang nóng chảy để loại bớt cacbon và các nguyên tố tạp chất khác như Si, Mn, P, S bằng cách thổi khí oxi vào lò luyện thép (lò Bet-xơ-me, lò Mac-tanh).
   * *Phản ứng tiêu biểu:* \(\text{FeO} + \text{C} \xrightarrow{t^\circ} \text{Fe} + \text{CO}\); \(2\text{FeO} + \text{Si} \xrightarrow{t^\circ} 2\text{Fe} + \text{SiO}_2\).
+  * Khí oxi oxi hóa các nguyên tố trong gang: \(\text{C}+\text{O}_2\longrightarrow\text{CO}_2\);
+    \(\text{Si}+\text{O}_2\longrightarrow\text{SiO}_2\).
 
 ---
 
 ## VI. ĂN MÒN KIM LOẠI
 
 ### 1. Khái niệm
-* **Ăn mòn kim loại** là sự phá huỷ kim loại, hợp kim do tác dụng hoá học hoặc điện hoá học của các chất trong môi trường xung quanh.
+* **Ăn mòn kim loại** là sự phá huỷ kim loại hoặc hợp kim do tác dụng của các chất trong môi trường.
 
 ### 2. Nguyên nhân
-* Do kim loại tác dụng trực tiếp với các chất khí (oxygen, hơi nước,...) hoặc dung dịch chất điện li trong môi trường (nước biển, nước mưa axit,...).
+* Do kim loại hoặc hợp kim tác dụng với các chất trong môi trường như nước, không khí,...
 
 ### 3. Yếu tố ảnh hưởng
-* **Thành phần môi trường:** Nồng độ các chất oxi hóa, muối điện li càng cao thì tốc độ ăn mòn càng nhanh.
-* **Thành phần kim loại:** Kim loại nguyên chất khó bị ăn mòn hơn hợp kim hoặc kim loại chứa nhiều tạp chất.
-* **Nhiệt độ:** Nhiệt độ môi trường tăng làm tăng tốc độ phản ứng hóa học, dẫn đến ăn mòn diễn ra nhanh hơn.
+* Thành phần môi trường.
+* Thành phần kim loại.
+* Nhiệt độ.

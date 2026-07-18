@@ -10,7 +10,7 @@
 * **a) Acid làm đổi màu chất chỉ thị:** Dung dịch acid làm quỳ tím chuyển thành màu đỏ.
 * **b) Acid tác dụng với kim loại:** Dung dịch acid tác dụng được với một số kim loại (như \(\text{Mg}, \text{Al}, \text{Zn}, \text{Fe},...\)) tạo thành muối và giải phóng khí \(\text{H}_2\).
   * *Điều kiện:* Các kim loại hoạt động hóa học yếu như \(\text{Cu}, \text{Hg}, \text{Ag}, \text{Pt}, \text{Au}\) không tác dụng với dung dịch acid loãng giải phóng khí \(\text{H}_2\).
-  * *Dãy hoạt động hóa học:* \(\text{K, Na, Ba, Ca, Mg, Al, Zn, Fe, Ni, Sn, Pb, H, Cu, Hg, Ag, Pt, Au}\).
+  * *Dãy hoạt động hóa học:* \(\text{K, Na, Ba, Ca, Mg, Al, Zn, Fe, Ni, Sn, H, Cu, Hg, Ag, Pt, Au}\).
   * *Ví dụ:*
     * \(\text{Fe} + 2\text{HCl} \longrightarrow \text{FeCl}_2 + \text{H}_2\)
     * \(\text{Zn} + \text{H}_2\text{SO}_{4 \text{ loãng}} \longrightarrow \text{ZnSO}_4 + \text{H}_2\)
@@ -34,13 +34,13 @@
     * \(\text{NaOH}\): Sodium hydroxide.
     * \(\text{Fe(OH)}_3\): Iron(III) hydroxide.
 * **Phân loại (Dựa vào tính tan trong nước):**
-  * **Base tan (kiềm):** Ví dụ: \(\text{NaOH, KOH, Ba(OH)}_2, \text{Ca(OH)}_2,...\)
+  * **Base tan (kiềm):** Ví dụ: \(\text{NaOH, KOH, Ba(OH)}_2,...\)
   * **Base không tan:** Ví dụ: \(\text{Cu(OH)}_2, \text{Mg(OH)}_2, \text{Fe(OH)}_3, \text{Al(OH)}_3,...\)
 
 ### 2. Tính chất hoá học của base
 * **a) Tác dụng với chất chỉ thị:**
   * Dung dịch bazơ (kiềm) làm quỳ tím chuyển sang màu xanh.
-  * Làm dung dịch phenolphthalein không màu chuyển sang màu đỏ.
+  * Làm dung dịch phenolphthalein không màu chuyển sang màu hồng.
 * **b) Tác dụng với oxide acid:** Dung dịch base tác dụng với oxide acid tạo thành muối và nước.
   * *Ví dụ:*
     * \(\text{CO}_2 + \text{Ca(OH)}_2 \longrightarrow \text{CaCO}_3\downarrow + \text{H}_2\text{O}\)
@@ -94,14 +94,14 @@
 
 ### 3. Tác dụng với dung dịch muối (Phản ứng trao đổi)
 * Hai dung dịch muối có thể tác dụng với nhau tạo thành hai muối mới.
-* *Điều kiện:* Sản phẩm tạo thành phải có ít nhất một chất kết tủa.
+* *Điều kiện:* Sản phẩm tạo thành phải có chất khí, chất kết tủa hoặc nước.
 * *Ví dụ:*
   * \(\text{AgNO}_3 + \text{NaCl} \longrightarrow \text{NaNO}_3 + \text{AgCl}\downarrow\)
-  * *Lưu ý:* \(\text{Fe(NO}_3)_2\) không phản ứng với dung dịch \(\text{NaCl}\) vì không tạo chất kết tủa.
+  * *Lưu ý:* \(\text{Fe(NO}_3)_2\) không phản ứng với dung dịch \(\text{NaCl}\) vì không tạo chất khí, chất kết tủa hoặc nước.
 
 ### 4. Tác dụng với dung dịch base
 * Dung dịch muối tác dụng với dung dịch base tạo thành muối mới và base mới.
-* *Điều kiện:* Sản phẩm tạo thành phải có chất kết tủa (hoặc khí bay hơi).
+* *Điều kiện:* Sản phẩm tạo thành phải có chất khí, chất kết tủa hoặc nước.
 * *Ví dụ:* \(\text{Na}_2\text{CO}_3 + \text{Ba(OH)}_2 \longrightarrow 2\text{NaOH} + \text{BaCO}_3\downarrow\)
 
 ### 5. Phản ứng phân huỷ muối
@@ -114,22 +114,22 @@
 * Hầu hết muối **chloride** đều tan, trừ \(\text{AgCl}\) không tan và \(\text{PbCl}_2\) ít tan.
 * Các muối **nitrate** đều tan.
 * Hầu hết muối **sulfate** đều tan, trừ \(\text{BaSO}_4, \text{PbSO}_4\) không tan và \(\text{CaSO}_4, \text{Ag}_2\text{SO}_4\) ít tan.
-* Hầu hết muối **carbonate** và **phosphate** đều không tan trong nước, trừ muối của các kim loại kiềm như \(\text{K}_2\text{CO}_3, \text{Na}_2\text{CO}_3, \text{K}_3\text{PO}_4, \text{Na}_3\text{PO}_4\) và muối amoni.
-* *Màu sắc của một số ion/muối trong dung dịch (theo tài liệu học tập):*
-  * Muối \(\text{Fe(II)}\): dung dịch màu trắng xanh.
+* Hầu hết muối **carbonate** và **phosphate** đều không tan trong nước, trừ \(\text{K}_2\text{CO}_3, \text{Na}_2\text{CO}_3, \text{K}_3\text{PO}_4\) và \(\text{Na}_3\text{PO}_4\).
+* *Màu sắc của một số dung dịch muối thường gặp:*
+  * Muối \(\text{Fe(II)}\): dung dịch màu lục nhạt.
   * Muối \(\text{Fe(III)}\): dung dịch màu vàng nâu.
-  * Muối \(\text{Cu(II)}\): màu đỏ gạch (Chú thích: thực tế dung dịch muối Cu(II) có màu xanh lam, tài liệu ghi màu đỏ gạch có thể ứng với kết tủa oxit đồng(I) hoặc dạng muối đặc biệt).
-  * Muối của các kim loại \(\text{Na, K, Ca, Al, Zn}\): dung dịch không màu/màu trắng.
-  * Muối \(\text{Ni}\): dung dịch màu lục nhạt.
+  * Muối \(\text{Cu(II)}\): dung dịch màu xanh lam.
+  * Muối của \(\text{Na, K, Ca, Al, Zn}\): dung dịch không màu.
+  * Muối \(\text{Ni(II)}\): dung dịch màu lục.
 
 ---
 
 ## V. PHÂN BÓN HOÁ HỌC
 
 ### 1. Khái niệm
-* **Phân bón hoá học** là những hoá chất có chứa các nguyên tố dinh dưỡng cần thiết cho cây trồng (như \(\text{N, P, K,...}\)), được sử dụng để bón cho cây nhằm nâng cao năng suất và chất lượng nông sản.
+* **Phân bón hoá học** là những hoá chất có chứa các nguyên tố dinh dưỡng \((\text{N, P, K,...})\), được bón cho cây nhằm nâng cao năng suất cây trồng.
 
 ### 2. Vai trò của một số nguyên tố đa lượng đối với cây trồng
-* **Nguyên tố Nitơ (N):** Giúp cây sinh trưởng và phát triển thân, lá mạnh mẽ; tham gia tích cực điều tiết các quá trình trao đổi chất của cây trồng.
-* **Nguyên tố Phốt pho (P):** Kích thích sự phát triển mạnh mẽ của bộ rễ thực vật, giúp cây bám đất chắc chắn và hút chất dinh dưỡng tốt hơn.
-* **Nguyên tố Kali (K):** Kích thích cây trồng ra hoa, làm hạt, tạo quả ngọt; tăng cường sức chống chịu sâu bệnh và thời tiết lạnh; giúp cây tích lũy chất và tổng hợp nên chất diệp lục.
+* **Nguyên tố Nitơ (N):** Giúp cây sinh trưởng và phát triển tốt, tham gia điều tiết các quá trình trao đổi chất của cây.
+* **Nguyên tố Phốt pho (P):** Kích thích sự phát triển bộ rễ thực vật.
+* **Nguyên tố Kali (K):** Kích thích cây trồng ra hoa, làm hạt và giúp cây tổng hợp chất diệp lục.
