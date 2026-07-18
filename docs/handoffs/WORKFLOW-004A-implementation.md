@@ -5,19 +5,21 @@
 - Remediation state: VALIDATED
 - Risk tier: CRITICAL
 - Risk categories: validation and evidence controls; toolchain scripts; CI/deployment planning drift verified at implementation time
-- Escalation rationale: Stage 0 verified that the approved plan targets deployment / validation infrastructure. Local implementation in this handoff is limited to Stage 0-4.
+- Escalation rationale: Stage 0 verified that the approved plan targets deployment / validation infrastructure. This handoff now covers Stage 0-6 implementation; architecture amendment (Stage 7) and independent CRITICAL review (Stage 8) remain outside this snapshot.
 
 ## 1. Summary
 
-Implemented WORKFLOW-004A Stage 0 through Stage 4 only:
+Implemented WORKFLOW-004A Stage 0 through Stage 6:
 
 - Stage 0: captured the repository baseline and re-verified plan §2 facts against the real `package.json`, `ci.yml`, and `deploy.yml`.
 - Stage 1: added pure gate manifest data and change classifier with fail-closed behavior and under-classification protection.
 - Stage 2: added `check-docs.ts` plus tests, ran `--all`, and reduced the validator to stable checks for current docs artifacts; no non-doc scope expansion was needed.
 - Stage 3: added `gates.ts`, `build:app`, `gates`, `check:docs`, and `evidence` scripts; compared `docs` and `web` profiles with legacy commands on the same snapshot.
 - Stage 4: added `evidence.ts` with exact-snapshot fallback logic plus 6-state tests.
+- Stage 5: added CI shadow execution and negative-fixture parity against the legacy workflow steps.
+- Stage 6: cut `CI` over to runner profiles, removed the shadow job, added artifact-only Pages deploy on `main`, locked manual deploy behind `candidate_sha` + required-check verification, and added the deployment runbook.
 
-Implementation stayed out of Stage 5-8: no `.github/workflows/` edits, no architecture amendment, no deployment changes, no browser/PWA cutover work.
+Stage 7 architecture amendment and Stage 8 independent CRITICAL review remain outstanding.
 
 ### Stage 0 baseline (raw output)
 
@@ -342,3 +344,73 @@ Declared profile "docs" under-classifies this change. Required profile: web. Mis
  docs/handoffs/WORKFLOW-004A-implementation.md | 69 +++++++++++++++++++++++++++
  2 files changed, 95 insertions(+)
 ```
+
+## 14. Remediation round 3 — Stage 6 cutover + deploy gating
+
+### Stage 6 diff summary
+
+- `.github/workflows/ci.yml`: replaced the duplicated legacy `web` steps with `Run web gates profile` (`npm run gates -- --profile=web`) and `Run docs gates profile` (`npm run gates -- --profile=docs`), while keeping `Checkout`, `Setup Node`, `Install dependencies`, and `Upload production artifact`.
+- `.github/workflows/ci.yml`: removed the `gates-shadow` job because Stage 5 shadow parity had already been approved by the Owner.
+- `.github/workflows/ci.yml`: kept the `browser` job behavior unchanged apart from a short YAML comment that maps it to the manifest browser gates (`e2e`, `pwa`, `pwa-subpath`).
+- `.github/workflows/ci.yml`: added a `deploy` job gated by `if: github.ref == 'refs/heads/main' && github.event_name == 'push'`, `needs: [web, browser]`, and the existing Pages concurrency group `pages`; it downloads `production-dist` and deploys it without rebuilding.
+- `.github/workflows/deploy.yml`: removed the `push: main` trigger and kept only `workflow_dispatch`.
+- `.github/workflows/deploy.yml`: added required input `candidate_sha`, checks out that exact SHA, verifies required CI check-runs via `gh api`, then builds and deploys only if the guard succeeds.
+- `docs/runbooks/DEPLOYMENT.md`: added the primary-path, manual-fallback, rollback, and deployment-invariant runbook required by plan §6.4 / §10 Stage 6.
+
+### Exact GitHub check names
+
+- Required for branch protection on PRs: `web`, `browser`
+- Main-push deployment check after cutover: `deploy`
+- Manual fallback workflow: `Deploy to GitHub Pages`; manual fallback job/check-run name: `deploy`
+
+`deploy` should not be configured as a PR-required check because it only runs on `push` to `main`.
+
+### Manual deploy guard
+
+- `workflow_dispatch` now requires `candidate_sha`.
+- The workflow checks out `${{ inputs.candidate_sha }}` with `fetch-depth: 0`.
+- Step `Verify required CI checks for candidate SHA` calls `gh api /repos/{owner}/{repo}/commits/{sha}/check-runs?per_page=100`.
+- The guard accepts only check-runs where `name` is `web` or `browser` and `app.slug === 'github-actions'`.
+- The guard fails closed if the API call fails, if `web` or `browser` is missing from `github-actions`, or if either check-run is not `completed/success`.
+- Only after the guard passes does the workflow run `npm ci`, `npm run build`, `actions/upload-pages-artifact`, and `actions/deploy-pages`.
+
+### Validation
+
+| Command                                                                                                                  | Exit status | Notes                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------- | --------------------------------------------------------------------- |
+| `python3 - <<'PY' ... yaml.safe_load('.github/workflows/ci.yml'); yaml.safe_load('.github/workflows/deploy.yml') ... PY` | 0           | Parsed both workflow files successfully (`YAML OK`).                  |
+| `git diff --check`                                                                                                       | 0           | Passed with no output.                                                |
+| `npm run format:check`                                                                                                   | 0           | `All matched files use Prettier code style!`                          |
+| `npm run lint`                                                                                                           | 0           | Passed with no diagnostics.                                           |
+| `npm run typecheck`                                                                                                      | 0           | Passed with no diagnostics.                                           |
+| `npm test`                                                                                                               | 0           | `25` test files passed; `133` tests passed. React Router warned only. |
+| `npm run check:docs`                                                                                                     | 0           | `Checked 2 Markdown file(s).`                                         |
+
+Validation executed locally on `2026-07-18` UTC after the Stage 6 workflow and runbook edits.
+
+### Git diff --stat for this remediation round
+
+```text
+ .github/workflows/ci.yml                      |  88 ++++++++-----------
+ .github/workflows/deploy.yml                  | 121 ++++++++++++++++++++++----
+ docs/handoffs/WORKFLOW-004A-implementation.md |  65 +++++++++++++-
+ docs/runbooks/DEPLOYMENT.md                   |  62 +++++++++++++++++
+ 4 files changed, 264 insertions(+), 72 deletions(-)
+```
+
+### Checklist GitHub UI cho Owner
+
+- Require pull requests before merge vào `main`.
+- Set required status checks đúng tên: `web`, `browser`.
+- Do not mark `deploy` as a PR-required check; it is a post-merge deploy check on `main`.
+- Block force pushes on `main`.
+- Block branch deletion on `main`.
+- Verify a direct push to `main` is rejected after the protection rules are updated.
+
+Claude gate remediation revalidation also passed: YAML parse for `.github/workflows/ci.yml` and `.github/workflows/deploy.yml`, `npm run format:check`, and `npm run check:docs`.
+
+### Claude gate findings and remediation
+
+- Finding 1 (blocker): manual deploy guard matched `CI / web` and `CI / browser`, but GitHub check-runs use the job names `web` and `browser`. Fixed by changing `requiredChecks` to `['web', 'browser']` and accepting only check-runs from `app.slug === 'github-actions'`.
+- Finding 2: Stage 6 handoff and operator docs used workflow display names instead of required status-check names. Fixed by documenting PR-required checks as `web` and `browser`, documenting the main-branch deploy check as `deploy`, and naming the manual fallback as workflow `Deploy to GitHub Pages`, job `deploy`.
+- Finding 3: Stage 6 diffstat placeholder needed replacement with the real Stage 6 4-file diff summary. Fixed by recording the Stage 6 diffstat for `ci.yml`, `deploy.yml`, `docs/runbooks/DEPLOYMENT.md`, and this handoff.
