@@ -2,10 +2,10 @@
 
 ## Status
 
-- Status: DRAFT
+- Status: APPROVED
 - Owner: Claude Code
-- Approved by:
-- Approved date:
+- Approved by: tuann2 (Owner)
+- Approved date: 2026-07-18
 - Risk tier: CRITICAL
 - Risk categories: workflow/governance architecture (amendment v2.4);
   role and authority contracts; context policy
@@ -19,6 +19,14 @@
   đổi + profile `full` dogfood trên candidate (vì governance đổi ⇒ full
   theo classifier 004A); tests hiện có pass.
 - Phụ thuộc: 004A đã merge (dùng gates/evidence/check-docs).
+  Verify Stage 0 (2026-07-18): 004A merged vào `main` qua PR #15
+  (`ce5a9d4`); architecture v2.3 APPROVED; scripts `gates`, `evidence`,
+  `check:docs` có mặt trong `package.json`.
+- Execution models (Owner chỉ định 2026-07-18): Implementer (soạn docs)
+  = Codex `gpt-5.6-terra` effort `high`; Codex self-review pass trước
+  handoff = `gpt-5.6-sol` effort `high`; independent review qua `agy`:
+  `Claude Opus 4.6 (Thinking)` cho phần script/config/template có cấu
+  trúc, `Gemini 3.5 Flash (High)` cho nội dung governance docs.
 
 ## 1. Objective
 
