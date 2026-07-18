@@ -179,14 +179,14 @@ Ghi vào architecture v2.3:
 Thực thi:
 
 - `ci.yml` thêm job `deploy`: `if: github.ref == 'refs/heads/main' &&
-  github.event_name == 'push'`, `needs: [web, browser]`, download
+github.event_name == 'push'`, `needs: [web, browser]`, download
   `production-dist`, deploy Pages (permissions pages/id-token chỉ ở
   job này). Không rebuild.
 - `deploy.yml`: xóa trigger `push`; giữ `workflow_dispatch` với input
   bắt buộc `candidate_sha`; job checkout đúng SHA đó và **assert qua
   GitHub API rằng required checks của SHA đã success** trước khi build
-  + deploy; fail-closed nếu không xác nhận được. Ghi operator procedure
-  vào runbook.
+  - deploy; fail-closed nếu không xác nhận được. Ghi operator procedure
+    vào runbook.
 
 ## 6a. New technology
 
@@ -258,10 +258,11 @@ Stage 7 — Amendment v2.3 (docs-only, sau khi cơ chế đã chứng minh chạ
 → human approve v2.3.
 
 Stage 8 — Independent review theo CRITICAL v2.2: 1 fresh Gemini review
-+ 1 fresh Codex adversarial review trên exact candidate snapshot, đọc
-mọi changed line, tập trung: lỗ deploy bypass, fail-open trong
-classifier/runner, evidence forgery. Findings → remediation state
-machine. Release-readiness → human approve merge.
+
+- 1 fresh Codex adversarial review trên exact candidate snapshot, đọc
+  mọi changed line, tập trung: lỗ deploy bypass, fail-open trong
+  classifier/runner, evidence forgery. Findings → remediation state
+  machine. Release-readiness → human approve merge.
 
 ## 11. Test strategy
 
@@ -292,14 +293,14 @@ machine. Release-readiness → human approve merge.
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Runner/manifest lệch với lệnh thật trong package.json | Gate chạy sai | Stage 0 verify lệnh thật; test đối chiếu manifest ↔ scripts tồn tại |
-| Cutover làm mất một gate | Suy yếu kiểm soát | Bảng đối chiếu shadow từng gate + checkpoint human + review adversarial |
-| Đổi tên required checks làm branch protection hụt | PR merge không qua gate | Ghi đúng tên check mới vào handoff; human cập nhật protection cùng lúc cutover |
-| Job deploy mới lỗi khiến không deploy được | Mất khả năng release tạm thời | deploy.yml manual có guard là đường dự phòng; rollback §14 |
-| evidence.ts sai semantics trạng thái hiếm (rename, submodule) | Evidence sai | Tests 6 trạng thái + reviewer thử phá; rename coi như delete+add |
-| Sandbox implementer không đủ capability (network/browser/git-write) | Không chạy đủ gates | Fallback Option B; browser gates chạy ở CI; ghi rõ môi trường nào sinh evidence |
+| Risk                                                                | Impact                        | Mitigation                                                                      |
+| ------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------- |
+| Runner/manifest lệch với lệnh thật trong package.json               | Gate chạy sai                 | Stage 0 verify lệnh thật; test đối chiếu manifest ↔ scripts tồn tại            |
+| Cutover làm mất một gate                                            | Suy yếu kiểm soát             | Bảng đối chiếu shadow từng gate + checkpoint human + review adversarial         |
+| Đổi tên required checks làm branch protection hụt                   | PR merge không qua gate       | Ghi đúng tên check mới vào handoff; human cập nhật protection cùng lúc cutover  |
+| Job deploy mới lỗi khiến không deploy được                          | Mất khả năng release tạm thời | deploy.yml manual có guard là đường dự phòng; rollback §14                      |
+| evidence.ts sai semantics trạng thái hiếm (rename, submodule)       | Evidence sai                  | Tests 6 trạng thái + reviewer thử phá; rename coi như delete+add                |
+| Sandbox implementer không đủ capability (network/browser/git-write) | Không chạy đủ gates           | Fallback Option B; browser gates chạy ở CI; ghi rõ môi trường nào sinh evidence |
 
 ## 14. Rollback plan
 

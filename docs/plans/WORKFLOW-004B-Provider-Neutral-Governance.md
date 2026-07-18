@@ -135,10 +135,10 @@ Không chứa tên vendor/model.
 Mỗi file `docs/runbooks/providers/<name>.md` gồm: cách gọi; cờ bắt
 buộc; execution profiles đã biết dạng bảng, ví dụ Codex:
 
-| Profile | Adapter | Effective capabilities | Known restrictions |
-| --- | --- | --- | --- |
-| codex-direct-terminal | CLI trực tiếp | repo-rw, shell, test, network, localhost, git-metadata-write | — |
-| codex-claude-subagent | codex-rescue | repo-rw, shell, test, git-metadata-read | network, localhost/browser, git-metadata-write (FEATURE-014) |
+| Profile               | Adapter       | Effective capabilities                                       | Known restrictions                                           |
+| --------------------- | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| codex-direct-terminal | CLI trực tiếp | repo-rw, shell, test, network, localhost, git-metadata-write | —                                                            |
+| codex-claude-subagent | codex-rescue  | repo-rw, shell, test, git-metadata-read                      | network, localhost/browser, git-metadata-write (FEATURE-014) |
 
 Nguyên tắc normative (ghi trong v2.4): chọn execution cho một vai phải
 thỏa `capabilities_required` của vai đó **theo profile thực tế của
@@ -155,9 +155,9 @@ Envelope (YAML, do orchestrator/human cấp đầu phiên):
 request_class: read-only | change | independent-review | release-assessment
 assigned_role: planner | implementer | independent-reviewer | release-assessor
 risk_tier: TRIVIAL | NORMAL | ELEVATED | CRITICAL
-scope: {allowed_paths: [...], forbidden_paths: [...]}
+scope: { allowed_paths: [...], forbidden_paths: [...] }
 candidate_sha: <sha|null>
-permissions: {repository_write: bool, commit: bool, push: bool}
+permissions: { repository_write: bool, commit: bool, push: bool }
 ```
 
 Thiếu trường/mơ hồ ⇒ least privilege (read-only). Independent Reviewer
@@ -169,6 +169,7 @@ batch-content đã có ở v2.2, giữ nguyên).
 
 ```md
 # Project Instructions
+
 @AGENTS.md
 ```
 
@@ -181,14 +182,14 @@ Một bảng, hai lớp:
 
 Lớp 1 — theo request class × domain (retrieval triggers):
 
-| Task đụng | Phải đọc | Không đọc mặc định |
-| --- | --- | --- |
-| Chemistry content (1 unit) | shim, plan, schema/rules content, unit đích, validator output, tests đích | 16 unit còn lại, architecture full |
-| UI/React/PWA | shim, plan, docs/architecture.md, component/store đích, config Vite/PWA liên quan, tests liên quan | governance ngoài shim |
-| Supabase/auth/sync | shim, plan, architecture + ADR liên quan, migration/schema, code auth/progress, ràng buộc RLS | — (tier tự động CRITICAL) |
-| CI/deploy/scripts/deps | shim, plan, YAML liên quan, manifest/runner, package.json+lockfile khi liên quan | — (control change ⇒ CRITICAL) |
-| Governance/architecture | shim, architecture full, role contracts liên quan, migration history | — (CRITICAL) |
-| Read-only question | shim | mọi thứ khác trừ file được hỏi |
+| Task đụng                  | Phải đọc                                                                                           | Không đọc mặc định                 |
+| -------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Chemistry content (1 unit) | shim, plan, schema/rules content, unit đích, validator output, tests đích                          | 16 unit còn lại, architecture full |
+| UI/React/PWA               | shim, plan, docs/architecture.md, component/store đích, config Vite/PWA liên quan, tests liên quan | governance ngoài shim              |
+| Supabase/auth/sync         | shim, plan, architecture + ADR liên quan, migration/schema, code auth/progress, ràng buộc RLS      | — (tier tự động CRITICAL)          |
+| CI/deploy/scripts/deps     | shim, plan, YAML liên quan, manifest/runner, package.json+lockfile khi liên quan                   | — (control change ⇒ CRITICAL)      |
+| Governance/architecture    | shim, architecture full, role contracts liên quan, migration history                               | — (CRITICAL)                       |
+| Read-only question         | shim                                                                                               | mọi thứ khác trừ file được hỏi     |
 
 Lớp 2 — hard triggers bất kể path/số file (leo tier + leo context):
 đổi policy/governance; CI/deploy; dependency/lockfile; security/auth/
@@ -206,7 +207,7 @@ không đổi lệnh, path, policy, ví dụ, hành vi kỹ thuật hay nghĩa g
 dục. `content/units/*.json` giữ NORMAL đợt đầu. Hard denylist: AGENTS/
 CLAUDE/AI_WORKFLOW, docs/architecture/**, docs/roles/**, CONTEXT_RULES,
 DOCUMENTATION_RULES, docs/plans/**, docs/handoffs/**, .github/**,
-scripts/**, package*.json, src/**, tests, supabase/**, config build/
+scripts/**, package\*.json, src/**, tests, supabase/**, config build/
 test/lint, schema/catalog. Hard triggers §6.4 lớp 2 áp dụng. TRIVIAL bỏ
 plan/handoff đầy đủ nhưng bắt buộc micro-trace snapshot-bound (schema ở
 004C). Path lạ ⇒ escalate NORMAL.
@@ -286,12 +287,12 @@ Thứ tự để shim không bao giờ trỏ file chưa tồn tại (review Stag
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Shim quá mỏng gây mơ hồ | Agent làm sai vai | Conformance scenario 6–7; đường escalation luôn mở; cho phép shim >40 dòng nếu cần đủ nghĩa |
-| Session đang mở dựa trên AGENTS.md cũ | Lạc hướng giữa chừng | 1 PR nguyên tử; role contract giữ nguyên nội dung rule cũ dưới tên mới |
-| Mất rule khi di trú | Suy yếu governance | Checklist đối chiếu rule-by-rule trong review (mục 12) |
-| CONTEXT_RULES quá lạc quan, thiếu context gây lỗi chất lượng | Bug lọt | Hard triggers leo tier/context; theo dõi qua 004C measurement, nới rule nếu có bằng chứng |
+| Risk                                                         | Impact               | Mitigation                                                                                  |
+| ------------------------------------------------------------ | -------------------- | ------------------------------------------------------------------------------------------- |
+| Shim quá mỏng gây mơ hồ                                      | Agent làm sai vai    | Conformance scenario 6–7; đường escalation luôn mở; cho phép shim >40 dòng nếu cần đủ nghĩa |
+| Session đang mở dựa trên AGENTS.md cũ                        | Lạc hướng giữa chừng | 1 PR nguyên tử; role contract giữ nguyên nội dung rule cũ dưới tên mới                      |
+| Mất rule khi di trú                                          | Suy yếu governance   | Checklist đối chiếu rule-by-rule trong review (mục 12)                                      |
+| CONTEXT_RULES quá lạc quan, thiếu context gây lỗi chất lượng | Bug lọt              | Hard triggers leo tier/context; theo dõi qua 004C measurement, nới rule nếu có bằng chứng   |
 
 ## 14. Rollback plan
 

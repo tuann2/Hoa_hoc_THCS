@@ -62,7 +62,7 @@
   request_class: change
   risk_tier: TRIVIAL
   base_sha: ...
-  validated_snapshot: {kind: ..., id: ...}   # từ evidence.ts
+  validated_snapshot: { kind: ..., id: ... } # từ evidence.ts
   changed_paths: [...]
   selected_gates: [...]
   result: PASS
@@ -174,12 +174,12 @@ Không có.
 
 ## 13. Risks
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Classifier có đường lách | Thay đổi rủi ro lọt review | Fail-closed nhiều lớp; review adversarial nhắm lách; mọi TRIVIAL vẫn qua CI đầy đủ của PR |
-| Hằng số policy lệch với v2.4 | Enforce sai luật | Một module hằng số duy nhất + test đối chiếu chuỗi với architecture |
-| TRIVIAL quá hẹp, ít giá trị thực | Không ai dùng | Chấp nhận đợt đầu; dữ liệu measurement quyết định nới (plan riêng) |
-| Số đo token không so sánh được giữa runtimes | Kết luận sai | Cố định scenario + đo bytes/files làm chuẩn chính, tokens quan sát là phụ |
+| Risk                                         | Impact                     | Mitigation                                                                                |
+| -------------------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------- |
+| Classifier có đường lách                     | Thay đổi rủi ro lọt review | Fail-closed nhiều lớp; review adversarial nhắm lách; mọi TRIVIAL vẫn qua CI đầy đủ của PR |
+| Hằng số policy lệch với v2.4                 | Enforce sai luật           | Một module hằng số duy nhất + test đối chiếu chuỗi với architecture                       |
+| TRIVIAL quá hẹp, ít giá trị thực             | Không ai dùng              | Chấp nhận đợt đầu; dữ liệu measurement quyết định nới (plan riêng)                        |
+| Số đo token không so sánh được giữa runtimes | Kết luận sai               | Cố định scenario + đo bytes/files làm chuẩn chính, tokens quan sát là phụ                 |
 
 ## 14. Rollback plan
 
