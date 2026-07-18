@@ -558,3 +558,36 @@ Evidence note: the architecture-requested dirty-worktree binding command `git ad
  tests/scripts/evidence.test.ts                | 84 +++++++++++++++++++++++++--
  5 files changed, 230 insertions(+), 14 deletions(-)
 ```
+
+## 18. Remediation round 7 — đóng 2 finding cuối re-review vòng 4
+
+Previous validation/evidence entries above are now `STALE` for release-readiness purposes; the records below supersede them for this remediation snapshot on Saturday, July 18, 2026 (UTC).
+
+### Finding closure matrix
+
+| Finding / risk | Handling                                                                                                                                                                                                                                                                                                                                                                                                                             | File:line                                                                                                                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FIX-1 (HIGH)   | `check-docs.ts` now treats archival state only as an explicit per-line `Status:` marker within the first 40 lines, case-insensitive for both label and value. The matcher accepts `Status: Archived` and `status:stale`, rejects prose such as `This is ARCHIVED material`, and the boundary coverage proves line 40 matches while line 41 does not.                                                                                 | `scripts/check-docs.ts:30`, `scripts/check-docs.ts:74`, `tests/scripts/check-docs.test.ts:270`, `tests/scripts/check-docs.test.ts:299`, `tests/scripts/check-docs.test.ts:324`, `tests/scripts/check-docs.test.ts:353` |
+| FIX-2 (MEDIUM) | Repository-scope validation for existing Markdown targets now canonicalizes both `repoRoot` and the target via `realpath()` before comparing ancestry, so symlinks that escape the repo are rejected even when the lexical path stays under `docs/`. Missing targets still stay on the existing broken-link path, and coverage now includes both a real outside target and a symlink fixture that resolves outside repository scope. | `scripts/check-docs.ts:2`, `scripts/check-docs.ts:159`, `scripts/check-docs.ts:199`, `scripts/check-docs.ts:208`, `tests/scripts/check-docs.test.ts:463`, `tests/scripts/check-docs.test.ts:497`                       |
+
+### Validation
+
+Validation executed locally on Saturday, July 18, 2026 (UTC) after the remediation round 7 edits.
+
+| Command                       | Exit status | Notes                                                                                                                                                                                                 |
+| ----------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `git diff --check`            | 0           | Passed with no output.                                                                                                                                                                                |
+| `npm run format:check`        | 0           | `All matched files use Prettier code style!`                                                                                                                                                          |
+| `npm run lint`                | 0           | Passed with no diagnostics.                                                                                                                                                                           |
+| `npm run typecheck`           | 0           | Passed with no diagnostics.                                                                                                                                                                           |
+| `npm test`                    | 0           | `25` test files passed; `165` tests passed. The new FIX-1 cases (`Status: Archived`, `status:stale`, prose `ARCHIVED`, line 40, line 41) and the FIX-2 symlink-escape fixture all passed.             |
+| `npm run check:docs -- --all` | 0           | `66` Markdown files scanned, `0` errors, `3` external-URL warnings (`CHANGELOG.md`, `docs/handoffs/FEATURE-013-implementation.md`, `docs/handoffs/FEATURE-014-implementation.md`). No new doc errors. |
+
+### Git diff --stat
+
+```text
+ docs/handoffs/WORKFLOW-004A-implementation.md |  33 ++++++
+ scripts/check-docs.ts                         |  36 ++++--
+ tests/scripts/check-docs.test.ts              | 155 +++++++++++++++++++++++++-
+ 3 files changed, 207 insertions(+), 17 deletions(-)
+```
