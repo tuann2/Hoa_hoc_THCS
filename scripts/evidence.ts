@@ -1,6 +1,13 @@
 import { createHash } from 'node:crypto';
 import { execFile } from 'node:child_process';
-import { mkdtemp, readFile, rm, stat, writeFile } from 'node:fs/promises';
+import {
+  mkdtemp,
+  readdir,
+  readFile,
+  rm,
+  stat,
+  writeFile
+} from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -24,8 +31,14 @@ export type SnapshotId =
       kind: 'manifest';
     };
 
+export type BuildInputDigest = {
+  path: string;
+  sha256: string;
+};
+
 export type EvidenceReport = {
   base_sha: string;
+  build_inputs: BuildInputDigest[];
   candidate_sha: string;
   finished_at: string;
   gate_results: GateExecutionResult[];
@@ -33,6 +46,8 @@ export type EvidenceReport = {
   node_version: string;
   npm_version: string;
   result: 'fail' | 'invalid' | 'pass';
+  snapshot_fallback_reason: string | null;
+  // schema_version remains 1 because these fields are additive only.
   schema_version: 1;
   started_at: string;
   validated_snapshot: SnapshotId;
@@ -65,6 +80,11 @@ type ManifestEntry = {
   path: string;
   status: 'present' | 'deleted';
   tracked: boolean;
+};
+
+type SnapshotComputation = {
+  snapshot: SnapshotId;
+  snapshotFallbackReason: string | null;
 };
 
 function normalizeOutput(value: string): string {
@@ -128,6 +148,21 @@ async function sha256File(filePath: string): Promise<string> {
   const hash = createHash('sha256');
   hash.update(await readFile(filePath));
   return hash.digest('hex');
+}
+
+async function collectBuildInputs(cwd: string): Promise<BuildInputDigest[]> {
+  const entries = await readdir(cwd, { withFileTypes: true });
+  const buildInputs = entries
+    .filter((entry) => entry.isFile() && entry.name.startsWith('.env'))
+    .map((entry) => entry.name)
+    .sort();
+
+  return Promise.all(
+    buildInputs.map(async (entry) => ({
+      path: entry,
+      sha256: await sha256File(path.join(cwd, entry))
+    }))
+  );
 }
 
 async function computeGitTreeSnapshot(cwd: string): Promise<SnapshotId> {
@@ -231,15 +266,28 @@ async function computeManifestSnapshot(cwd: string): Promise<SnapshotId> {
   };
 }
 
-export async function computeSnapshot(cwd: string): Promise<SnapshotId> {
-  if (process.env.EVIDENCE_FORCE_MANIFEST === '1') {
-    return computeManifestSnapshot(cwd);
+export async function computeSnapshot(
+  cwd: string
+): Promise<SnapshotComputation> {
+  if (process.env.VITEST && process.env.EVIDENCE_FORCE_MANIFEST === '1') {
+    return {
+      snapshot: await computeManifestSnapshot(cwd),
+      snapshotFallbackReason: 'Forced by EVIDENCE_FORCE_MANIFEST under Vitest.'
+    };
   }
 
   try {
-    return await computeGitTreeSnapshot(cwd);
-  } catch {
-    return computeManifestSnapshot(cwd);
+    return {
+      snapshot: await computeGitTreeSnapshot(cwd),
+      snapshotFallbackReason: null
+    };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+
+    return {
+      snapshot: await computeManifestSnapshot(cwd),
+      snapshotFallbackReason: message
+    };
   }
 }
 
@@ -249,35 +297,44 @@ export async function createEvidence(
   const cwd = options.cwd ?? process.cwd();
   const gateRunner = options.gateRunner ?? runGates;
   const started_at = new Date().toISOString();
+  const baseShaBefore = await getBaseSha(cwd);
+  const candidateShaBefore = await getCandidateSha(cwd);
   const validatedSnapshot = await computeSnapshot(cwd);
+  const buildInputs = await collectBuildInputs(cwd);
   const gatesResult = await gateRunner({
     changedFrom: options.changedFrom,
     cwd,
     dryRun: options.dryRun,
     profile: options.profile
   });
+  const baseShaAfter = await getBaseSha(cwd);
+  const candidateShaAfter = await getCandidateSha(cwd);
   const completedSnapshot = await computeSnapshot(cwd);
 
   const result =
-    completedSnapshot.kind !== validatedSnapshot.kind ||
-    completedSnapshot.id !== validatedSnapshot.id
+    baseShaBefore !== baseShaAfter ||
+    candidateShaBefore !== candidateShaAfter ||
+    completedSnapshot.snapshot.kind !== validatedSnapshot.snapshot.kind ||
+    completedSnapshot.snapshot.id !== validatedSnapshot.snapshot.id
       ? 'invalid'
       : gatesResult.result === 'pass'
         ? 'pass'
         : 'fail';
 
   return {
-    base_sha: await getBaseSha(cwd),
-    candidate_sha: await getCandidateSha(cwd),
+    base_sha: baseShaBefore,
+    build_inputs: buildInputs,
+    candidate_sha: candidateShaBefore,
     finished_at: new Date().toISOString(),
     gate_results: gatesResult.gateResults,
     lockfile_sha256: await sha256File(path.join(cwd, 'package-lock.json')),
     node_version: process.version,
     npm_version: await getNpmVersion(cwd),
     result,
+    snapshot_fallback_reason: validatedSnapshot.snapshotFallbackReason,
     schema_version: 1,
     started_at,
-    validated_snapshot: validatedSnapshot
+    validated_snapshot: validatedSnapshot.snapshot
   };
 }
 

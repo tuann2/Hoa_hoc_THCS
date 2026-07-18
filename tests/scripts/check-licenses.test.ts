@@ -1,12 +1,12 @@
-import { spawnSync } from 'node:child_process';
 import { cp, mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   collectLicenseIssues,
-  isLicenseAllowed
+  isLicenseAllowed,
+  main
 } from '../../scripts/check-licenses';
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
@@ -57,7 +57,6 @@ describe('check-licenses', () => {
 
   it('fail dung package khi gap license ngoai allowlist', async () => {
     const fixtureRoot = await createFixtureRoot('invalid-license');
-    const scriptPath = path.resolve(repoRoot, 'scripts/check-licenses.ts');
 
     await writePackageMetadata(
       fixtureRoot,
@@ -80,21 +79,21 @@ describe('check-licenses', () => {
       ]
     });
 
-    const result = spawnSync(
-      process.execPath,
-      ['--import', 'tsx', scriptPath, '--root', fixtureRoot],
-      {
-        cwd: repoRoot,
-        encoding: 'utf8'
-      }
-    );
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    process.exitCode = undefined;
 
-    expect(result.status).toBe(1);
+    await main(['--root', fixtureRoot]);
+
+    const output = errorSpy.mock.calls.flat().join('\n');
+    expect(process.exitCode).toBe(1);
+    expect(output).toContain('bad-package@1.0.0');
+    expect(output).toContain('LicenseRef-Proprietary');
+    errorSpy.mockRestore();
+    process.exitCode = undefined;
   });
 
   it('bao loi lockfile entry traversal ra ngoai node_modules thay vi bo qua im lang', async () => {
     const fixtureRoot = await createFixtureRoot('path-traversal');
-    const scriptPath = path.resolve(repoRoot, 'scripts/check-licenses.ts');
 
     await writePackageMetadata(
       fixtureRoot,
@@ -122,16 +121,17 @@ describe('check-licenses', () => {
       ]
     });
 
-    const result = spawnSync(
-      process.execPath,
-      ['--import', 'tsx', scriptPath, '--root', fixtureRoot],
-      {
-        cwd: repoRoot,
-        encoding: 'utf8'
-      }
-    );
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    process.exitCode = undefined;
 
-    expect(result.status).toBe(1);
+    await main(['--root', fixtureRoot]);
+
+    const output = errorSpy.mock.calls.flat().join('\n');
+    expect(process.exitCode).toBe(1);
+    expect(output).toContain('escaped-package@9.9.9');
+    expect(output).toContain('<invalid path>');
+    errorSpy.mockRestore();
+    process.exitCode = undefined;
   });
 
   it('dung lockfile license cho optional package khong duoc cai tren OS hien tai', async () => {

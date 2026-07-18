@@ -15,6 +15,22 @@ describe('gates runner', () => {
     ]);
   });
 
+  it('keeps prerequisites ahead of dependents even when selected in reverse order', () => {
+    expect(
+      resolveGateExecutionOrder([
+        'bundle-check',
+        'production-build',
+        'typecheck',
+        'content-validation'
+      ])
+    ).toEqual([
+      'content-validation',
+      'typecheck',
+      'production-build',
+      'bundle-check'
+    ]);
+  });
+
   it('rejects unknown gate ids outside the allowlist', () => {
     expect(() => resolveGateExecutionOrder(['lint', 'not-a-gate'])).toThrow(
       /Unknown gate ID/

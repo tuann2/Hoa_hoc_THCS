@@ -36,11 +36,25 @@ jobs:
       - name: Run docs gates profile
         run: npm run gates -- --profile=docs
 
+      - name: Upload browser test artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-dist
+          path: dist
+          if-no-files-found: error
+
+      - name: Build production artifact
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: npm run build:app -- --outDir dist-prod
+
       - name: Upload production artifact
         uses: actions/upload-artifact@v4
         with:
           name: production-dist
-          path: dist
+          path: dist-prod
           if-no-files-found: error
 
   browser:
@@ -60,10 +74,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Download production artifact
+      - name: Download browser test artifact
         uses: actions/download-artifact@v4
         with:
-          name: production-dist
+          name: test-dist
           path: dist
 
       - name: Install Chromium

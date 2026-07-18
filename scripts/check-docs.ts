@@ -26,7 +26,7 @@ type CheckDocsOptions = {
 const MARKDOWN_LINK_PATTERN = /!?\[[^\]]*\]\(([^)]+)\)/gu;
 const SCRIPT_REFERENCE_PATTERN = /\bnpm run ([a-z0-9:-]+)/giu;
 const DOCUMENT_REFERENCE_PATTERN =
-  /(?:^|[`(\s])((?:docs\/(?:plans|handoffs)\/[A-Za-z0-9._/-]+|\.github\/workflows\/[A-Za-z0-9._/-]+|(?:README|AGENTS|AI_WORKFLOW)\.md))(?=[`)\s:,.]|$)/gmu;
+  /(?:^|[`(\s])((?:docs\/(?:(?:plans|handoffs|architecture|runbooks|adr)\/[A-Za-z0-9._/-]+)|scripts\/[A-Za-z0-9._/-]+\.ts|\.github\/workflows\/[A-Za-z0-9._/-]+|(?:README|AGENTS|AI_WORKFLOW)\.md))(?=[`)\s:,.]|$)/gmu;
 
 function getRepoRoot(): string {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');

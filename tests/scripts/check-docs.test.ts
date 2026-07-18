@@ -10,7 +10,10 @@ async function createRepoFixture(): Promise<string> {
   const rootDir = await mkdtemp(path.join(os.tmpdir(), 'check-docs-'));
   tempRoots.push(rootDir);
 
+  await mkdir(path.join(rootDir, 'docs', 'adr'), { recursive: true });
+  await mkdir(path.join(rootDir, 'docs', 'architecture'), { recursive: true });
   await mkdir(path.join(rootDir, 'docs', 'plans'), { recursive: true });
+  await mkdir(path.join(rootDir, 'docs', 'runbooks'), { recursive: true });
   await mkdir(path.join(rootDir, '.github', 'workflows'), { recursive: true });
   await mkdir(path.join(rootDir, 'scripts'), { recursive: true });
 
@@ -34,6 +37,21 @@ async function createRepoFixture(): Promise<string> {
   await writeFile(
     path.join(rootDir, 'docs', 'plans', 'PLAN.md'),
     '# Plan\n',
+    'utf8'
+  );
+  await writeFile(
+    path.join(rootDir, 'docs', 'adr', '0001-test.md'),
+    '# ADR\n',
+    'utf8'
+  );
+  await writeFile(
+    path.join(rootDir, 'docs', 'architecture', 'AI_WORKFLOW_ARCHITECTURE.md'),
+    '# Architecture\n',
+    'utf8'
+  );
+  await writeFile(
+    path.join(rootDir, 'docs', 'runbooks', 'DEPLOYMENT.md'),
+    '# Runbook\n',
     'utf8'
   );
   await writeFile(
@@ -167,8 +185,28 @@ describe('check-docs', () => {
         '[Plan](./plans/PLAN.md)',
         'See `.github/workflows/ci.yml`.',
         'Run `npm run lint` before merge.',
-        'Then update `docs/handoffs/HANDOFF.md`.'
+        'Then update `docs/handoffs/HANDOFF.md`.',
+        'Review `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`.',
+        'Follow `docs/runbooks/DEPLOYMENT.md` and `docs/adr/0001-test.md`.',
+        'Keep `scripts/check-docs.ts` aligned.'
       ].join('\n'),
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/guide.md']
+    });
+
+    expect(result.issues).toEqual([]);
+  });
+
+  it('ignores shorthand prose that is not a full repository path', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'guide.md'),
+      'See architecture.md and DEPLOYMENT.md for context.\n',
       'utf8'
     );
 

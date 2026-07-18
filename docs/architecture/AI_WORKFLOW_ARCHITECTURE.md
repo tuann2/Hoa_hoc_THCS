@@ -409,19 +409,29 @@ passed every required gate (web + browser/PWA) for that exact commit
 SHA. A browser/PWA failure means no deploy. No deployment path may
 bypass this invariant.
 
+Bounded deviation (approved by Owner on July 18, 2026): the deployed
+artifact may be rebuilt in the same CI run and for the same commit
+after the required gates pass, but only to inject production
+configuration such as base path and real endpoints. Byte-level identity
+between browser-gated and deployed artifacts is deferred to a later
+feature.
+
 Enforcement in this repository:
 
 - `.github/workflows/ci.yml` job `deploy` runs only on `push` to `main`,
-  `needs: [web, browser]`, downloads the already-validated
-  `production-dist` artifact and deploys it to GitHub Pages without
-  rebuilding. Pages permissions (`pages: write`, `id-token: write`)
-  exist only on this job.
+  `needs: [web, browser]`, deploys the `production-dist` artifact that
+  was built in the same CI run after the required gates passed. Browser
+  gates consume `test-dist`, while `production-dist` is rebuilt with
+  production configuration in that same run. Pages permissions
+  (`pages: write`, `id-token: write`) exist only on this job.
 - `.github/workflows/deploy.yml` is manual-only (`workflow_dispatch`)
   with a required `candidate_sha` input; it verifies through the GitHub
-  API that the `web` and `browser` check-runs for that exact SHA
-  completed successfully (fail-closed on any API error, missing check,
-  or non-success conclusion) before building and deploying. Operator
-  procedure: `docs/runbooks/DEPLOYMENT.md`.
+  API that the latest completed `ci.yml` run for that exact SHA
+  concluded successfully, that its `web` and `browser` jobs succeeded,
+  and that its `production-dist` artifact still exists, then deploys
+  that artifact without rebuilding. Any API error, missing run/job, bad
+  conclusion, or expired artifact fails closed. Operator procedure:
+  `docs/runbooks/DEPLOYMENT.md`.
 
 ### Remediation State Machine
 

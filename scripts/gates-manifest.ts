@@ -122,7 +122,7 @@ export const GATE_DEFINITIONS: Record<GateId, GateDefinition> = {
   },
   'docs-check': {
     id: 'docs-check',
-    command: ['npm', 'run', 'check:docs'],
+    command: ['npm', 'run', 'check:docs', '--', '--all'],
     prerequisites: [],
     profiles: ['docs', 'full']
   }
@@ -225,7 +225,7 @@ export const PATH_GATE_RULES: readonly PathGateRule[] = [
   },
   {
     pattern:
-      /^tests\/(?:components|lib|routes|setup\.ts|store\/|scripts\/(?:validate-content|check-licenses)\.test\.ts$)/u,
+      /^tests\/(?:components|lib|routes|setup\.ts|store\/|scripts\/(?:(?!gates-manifest|classify-change|check-docs|gates|evidence)[A-Za-z0-9._-]+\.test\.ts)$)/u,
     gates: WEB_CLASSIFIER_GATES,
     reason: 'application or supporting script tests require web validation'
   },

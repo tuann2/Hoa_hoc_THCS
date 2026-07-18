@@ -130,19 +130,41 @@ export async function getChangedPathsFromBase(
   baseSha: string,
   cwd = process.cwd()
 ): Promise<string[]> {
-  const { stdout } = await execFileAsync(
-    'git',
-    ['diff', '--name-only', '--diff-filter=ACDMRTUXB', baseSha, 'HEAD'],
-    {
+  const parseGitPathOutput = (stdout: string): string[] =>
+    stdout
+      .split('\u0000')
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
+  const [committed, trackedDirty, untracked] = await Promise.all([
+    execFileAsync(
+      'git',
+      ['diff', '--name-only', '-z', '--diff-filter=ACDMRTUXB', baseSha, 'HEAD'],
+      {
+        cwd,
+        encoding: 'utf8'
+      }
+    ),
+    execFileAsync(
+      'git',
+      ['diff', '--name-only', '-z', '--diff-filter=ACDMRTUXB', 'HEAD'],
+      {
+        cwd,
+        encoding: 'utf8'
+      }
+    ),
+    execFileAsync('git', ['ls-files', '--others', '--exclude-standard', '-z'], {
       cwd,
       encoding: 'utf8'
-    }
-  );
+    })
+  ]);
 
-  return stdout
-    .split('\n')
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0);
+  return [
+    ...new Set([
+      ...parseGitPathOutput(committed.stdout),
+      ...parseGitPathOutput(trackedDirty.stdout),
+      ...parseGitPathOutput(untracked.stdout)
+    ])
+  ].sort();
 }
 
 type CliOptions = {

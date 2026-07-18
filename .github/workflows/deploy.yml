@@ -32,7 +32,20 @@ jobs:
           ref: ${{ inputs.candidate_sha }}
           fetch-depth: 0
 
-      - name: Verify required CI checks for candidate SHA
+      - name: Verify checked out commit matches candidate SHA
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          set -euo pipefail
+          actual_sha="$(git rev-parse HEAD)"
+
+          if [ "$actual_sha" != "$CANDIDATE_SHA" ]; then
+            echo "Checked out SHA $actual_sha does not match candidate_sha $CANDIDATE_SHA." >&2
+            exit 1
+          fi
+
+      - name: Verify required CI run, jobs, and artifact for candidate SHA
+        id: guard
         env:
           GH_TOKEN: ${{ github.token }}
           CANDIDATE_SHA: ${{ inputs.candidate_sha }}
@@ -43,16 +56,22 @@ jobs:
 
           const repository = process.env.GITHUB_REPOSITORY;
           const candidateSha = process.env.CANDIDATE_SHA;
-          const requiredChecks = ['web', 'browser'];
+          const requiredJobs = ['web', 'browser'];
+          const outputPath = process.env.GITHUB_OUTPUT;
 
           if (!repository) {
             console.error('GITHUB_REPOSITORY is not set.');
             process.exit(1);
           }
 
-          if (!candidateSha || !/^[0-9a-f]{7,40}$/i.test(candidateSha)) {
+          if (!outputPath) {
+            console.error('GITHUB_OUTPUT is not set.');
+            process.exit(1);
+          }
+
+          if (!candidateSha || !/^[0-9a-f]{40}$/i.test(candidateSha)) {
             console.error(
-              `candidate_sha must be a 7-40 character git SHA. Got: ${candidateSha ?? '<empty>'}`
+              `candidate_sha must be exactly 40 hexadecimal characters. Got: ${candidateSha ?? '<empty>'}`
             );
             process.exit(1);
           }
@@ -69,70 +88,118 @@ jobs:
             return JSON.parse(stdout);
           }
 
-          let checkRuns;
-
           try {
-            const response = ghApi(
-              `/repos/${owner}/${repo}/commits/${candidateSha}/check-runs?per_page=100`
+            const runsResponse = ghApi(
+              `/repos/${owner}/${repo}/actions/workflows/ci.yml/runs?head_sha=${candidateSha}&status=completed&per_page=100`
             );
-            checkRuns = response.check_runs ?? [];
+            const workflowRuns = [...(runsResponse.workflow_runs ?? [])]
+              .filter((run) => run.head_sha === candidateSha)
+              .sort(
+                (left, right) =>
+                  new Date(right.created_at).getTime() -
+                  new Date(left.created_at).getTime()
+              );
+
+            if (workflowRuns.length === 0) {
+              console.error(
+                `No completed CI workflow run found for ${candidateSha}. Re-run CI for this SHA, then retry deploy.`
+              );
+              process.exit(1);
+            }
+
+            const run = workflowRuns[0];
+
+            if (run.conclusion !== 'success') {
+              console.error(
+                `Latest completed CI workflow run ${run.id} for ${candidateSha} concluded ${run.conclusion ?? 'null'}, expected success.`
+              );
+              process.exit(1);
+            }
+
+            const jobsResponse = ghApi(
+              `/repos/${owner}/${repo}/actions/runs/${run.id}/jobs?per_page=100`
+            );
+            const jobs = jobsResponse.jobs ?? [];
+            const jobFailures = [];
+
+            for (const jobName of requiredJobs) {
+              const job = jobs.find((entry) => entry.name === jobName);
+
+              if (!job) {
+                jobFailures.push(`${jobName}: missing from CI run ${run.id}`);
+                continue;
+              }
+
+              if (
+                job.status !== 'completed' ||
+                job.conclusion !== 'success'
+              ) {
+                jobFailures.push(
+                  `${jobName}: ${job.status}/${job.conclusion ?? 'null'}`
+                );
+              }
+            }
+
+            if (jobFailures.length > 0) {
+              console.error(
+                `Required CI jobs for ${candidateSha} are not all successful in run ${run.id}:\n${jobFailures.join('\n')}`
+              );
+              process.exit(1);
+            }
+
+            const artifactsResponse = ghApi(
+              `/repos/${owner}/${repo}/actions/runs/${run.id}/artifacts?per_page=100`
+            );
+            const artifact = (artifactsResponse.artifacts ?? []).find(
+              (entry) => entry.name === 'production-dist'
+            );
+
+            if (!artifact) {
+              console.error(
+                `CI run ${run.id} for ${candidateSha} does not have artifact production-dist. Re-run CI for this SHA, then retry deploy.`
+              );
+              process.exit(1);
+            }
+
+            if (artifact.expired) {
+              console.error(
+                `Artifact production-dist for CI run ${run.id} and ${candidateSha} has expired. Re-run CI for this SHA to regenerate the artifact, then retry deploy.`
+              );
+              process.exit(1);
+            }
+
+            require('node:fs').appendFileSync(
+              outputPath,
+              `run_id=${run.id}\nartifact_id=${artifact.id}\n`
+            );
+
+            console.log(
+              `Verified CI run ${run.id} for ${candidateSha}; jobs ${requiredJobs.join(', ')} succeeded and artifact production-dist is available.`
+            );
           } catch (error) {
             const message = error instanceof Error ? error.message : String(error);
             console.error(
-              `Unable to confirm required checks for ${candidateSha}: ${message}`
+              `Unable to confirm CI run, jobs, or artifact for ${candidateSha}: ${message}`
             );
             process.exit(1);
           }
-
-          const failures = [];
-
-          for (const checkName of requiredChecks) {
-            const matchingRuns = checkRuns.filter(
-              (run) => run.name === checkName && run.app?.slug === 'github-actions'
-            );
-
-            if (matchingRuns.length === 0) {
-              failures.push(
-                `${checkName}: missing github-actions check-run`
-              );
-              continue;
-            }
-
-            const hasSuccessfulRun = matchingRuns.some(
-              (run) => run.status === 'completed' && run.conclusion === 'success'
-            );
-
-            if (!hasSuccessfulRun) {
-              const observedStates = matchingRuns
-                .map((run) => `${run.status}/${run.conclusion ?? 'null'}`)
-                .join(', ');
-              failures.push(`${checkName}: ${observedStates}`);
-            }
-          }
-
-          if (failures.length > 0) {
-            console.error(
-              `Required checks for ${candidateSha} are not all successful:\n${failures.join('\n')}`
-            );
-            process.exit(1);
-          }
-
-          console.log(
-            `Verified required checks for ${candidateSha}: ${requiredChecks.join(', ')}`
-          );
           NODE
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
+      - name: Download production artifact from verified CI run
         env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-        run: npm run build
+          ARTIFACT_ID: ${{ steps.guard.outputs.artifact_id }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${ARTIFACT_ID}/zip" \
+            > production-dist.zip
+          rm -rf dist
+          mkdir -p dist
+          unzip -q production-dist.zip -d dist
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist

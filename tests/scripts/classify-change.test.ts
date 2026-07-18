@@ -1,8 +1,58 @@
-import { describe, expect, it } from 'vitest';
+import { execFile } from 'node:child_process';
+import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { promisify } from 'node:util';
+import { afterEach, describe, expect, it } from 'vitest';
 import {
   classifyChangedPaths,
+  getChangedPathsFromBase,
   inferMinimumProfile
 } from '../../scripts/classify-change';
+
+const execFileAsync = promisify(execFile);
+const tempRoots: string[] = [];
+
+async function runCommand(
+  cwd: string,
+  command: string,
+  args: readonly string[]
+): Promise<string> {
+  const { stdout } = await execFileAsync(command, [...args], {
+    cwd,
+    encoding: 'utf8'
+  });
+
+  return stdout.trim();
+}
+
+async function createGitFixture(): Promise<string> {
+  const rootDir = await mkdtemp(path.join(os.tmpdir(), 'classify-change-'));
+  tempRoots.push(rootDir);
+
+  await runCommand(rootDir, 'git', ['init']);
+  await runCommand(rootDir, 'git', [
+    'config',
+    'user.email',
+    'codex@example.com'
+  ]);
+  await runCommand(rootDir, 'git', ['config', 'user.name', 'Codex']);
+
+  await writeFile(path.join(rootDir, 'tracked.txt'), 'base\n', 'utf8');
+  await writeFile(path.join(rootDir, 'dirty.txt'), 'clean\n', 'utf8');
+  await runCommand(rootDir, 'git', ['add', '.']);
+  await runCommand(rootDir, 'git', ['commit', '-m', 'base']);
+
+  return rootDir;
+}
+
+afterEach(async () => {
+  await Promise.all(
+    tempRoots
+      .splice(0)
+      .map((tempRoot) => rm(tempRoot, { force: true, recursive: true }))
+  );
+});
 
 describe('classify-change', () => {
   it('returns docs profile for markdown-only changes', () => {
@@ -105,5 +155,22 @@ describe('classify-change', () => {
 
   it('infers browser when only browser gates are required', () => {
     expect(inferMinimumProfile(['e2e', 'pwa'])).toBe('browser');
+  });
+
+  it('includes committed changes, tracked dirty paths, and untracked paths from the base SHA', async () => {
+    const rootDir = await createGitFixture();
+    const baseSha = await runCommand(rootDir, 'git', ['rev-parse', 'HEAD']);
+
+    await writeFile(path.join(rootDir, 'tracked.txt'), 'committed\n', 'utf8');
+    await runCommand(rootDir, 'git', ['add', 'tracked.txt']);
+    await runCommand(rootDir, 'git', ['commit', '-m', 'committed change']);
+    await writeFile(path.join(rootDir, 'dirty.txt'), 'dirty\n', 'utf8');
+    await writeFile(path.join(rootDir, 'untracked.txt'), 'new\n', 'utf8');
+
+    await expect(getChangedPathsFromBase(baseSha, rootDir)).resolves.toEqual([
+      'dirty.txt',
+      'tracked.txt',
+      'untracked.txt'
+    ]);
   });
 });

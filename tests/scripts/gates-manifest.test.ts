@@ -35,8 +35,30 @@ describe('gates-manifest', () => {
     expect(e2eRule?.gates).toEqual(PROFILE_GATE_IDS.browser);
   });
 
+  it('maps non-infrastructure script tests to the web validation union', () => {
+    const scriptTestRule = PATH_GATE_RULES.find((rule) =>
+      rule.pattern.test('tests/scripts/tag-question-category.test.ts')
+    );
+
+    expect(scriptTestRule?.gates).toEqual(
+      PROFILE_GATE_IDS.web.filter(
+        (gateId) => gateId !== 'git-diff-check' && gateId !== 'format-check'
+      )
+    );
+  });
+
   it('keeps the browser profile aligned with CI browser job order', () => {
     expect(PROFILE_GATE_IDS.browser).toEqual(['e2e', 'pwa', 'pwa-subpath']);
+  });
+
+  it('runs docs-check deterministically against the full docs set', () => {
+    expect(getGateCommand('docs-check')).toEqual([
+      'npm',
+      'run',
+      'check:docs',
+      '--',
+      '--all'
+    ]);
   });
 
   it('pins production-build to build:app instead of aggregate build', () => {

@@ -88,7 +88,18 @@ function normalizeGateSelection(gateIds: readonly string[]): GateId[] {
 export function resolveGateExecutionOrder(
   selectedGateIds: readonly string[]
 ): GateId[] {
-  const selection = new Set(normalizeGateSelection(selectedGateIds));
+  const indexByGateId = new Map(
+    getProfileGateIds('full').map((gateId, index) => [gateId, index] as const)
+  );
+  const selection = [
+    ...new Set(
+      normalizeGateSelection(selectedGateIds).sort(
+        (left, right) =>
+          (indexByGateId.get(left) ?? Number.MAX_SAFE_INTEGER) -
+          (indexByGateId.get(right) ?? Number.MAX_SAFE_INTEGER)
+      )
+    )
+  ];
   const ordered: GateId[] = [];
   const visiting = new Set<GateId>();
   const visited = new Set<GateId>();
@@ -120,15 +131,7 @@ export function resolveGateExecutionOrder(
     visit(gateId);
   }
 
-  const indexByGateId = new Map(
-    getProfileGateIds('full').map((gateId, index) => [gateId, index] as const)
-  );
-
-  return ordered.sort(
-    (left, right) =>
-      (indexByGateId.get(left) ?? Number.MAX_SAFE_INTEGER) -
-      (indexByGateId.get(right) ?? Number.MAX_SAFE_INTEGER)
-  );
+  return ordered;
 }
 
 function selectGateIdsFromClassification(
