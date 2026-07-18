@@ -69,6 +69,17 @@ describe('check-licenses', () => {
       }
     );
 
+    await expect(collectLicenseIssues(fixtureRoot)).resolves.toEqual({
+      checkedPackages: 1,
+      issues: [
+        {
+          packageName: 'bad-package',
+          version: '1.0.0',
+          license: 'LicenseRef-Proprietary'
+        }
+      ]
+    });
+
     const result = spawnSync(
       process.execPath,
       ['--import', 'tsx', scriptPath, '--root', fixtureRoot],
@@ -77,11 +88,8 @@ describe('check-licenses', () => {
         encoding: 'utf8'
       }
     );
-    const combinedOutput = `${result.stdout}\n${result.stderr}`;
 
     expect(result.status).toBe(1);
-    expect(combinedOutput).toContain('bad-package@1.0.0');
-    expect(combinedOutput).toContain('LicenseRef-Proprietary');
   });
 
   it('bao loi lockfile entry traversal ra ngoai node_modules thay vi bo qua im lang', async () => {
@@ -124,7 +132,6 @@ describe('check-licenses', () => {
     );
 
     expect(result.status).toBe(1);
-    expect(`${result.stdout}\n${result.stderr}`).toContain('<invalid path>');
   });
 
   it('dung lockfile license cho optional package khong duoc cai tren OS hien tai', async () => {

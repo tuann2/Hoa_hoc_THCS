@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run validate-content && npm run typecheck && vite build",
-    "check:licenses": "tsx scripts/check-licenses.ts",
+    "build:app": "vite build",
+    "check:licenses": "node --import tsx scripts/check-licenses.ts",
+    "check:docs": "node --import tsx scripts/check-docs.ts",
+    "evidence": "node --import tsx scripts/evidence.ts",
+    "gates": "node --import tsx scripts/gates.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -14,7 +18,7 @@
     "test:watch": "vitest",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "validate-content": "tsx scripts/validate-content.ts"
+    "validate-content": "node --import tsx scripts/validate-content.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.57.0",
