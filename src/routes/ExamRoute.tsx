@@ -15,9 +15,16 @@ import {
   type ExamScope
 } from '../lib/exam';
 import { isQuestionCorrect } from '../lib/chemistry';
-import { getAllUnits, partLabels } from '../lib/content';
+import { getAllUnits as getUnitCatalog, partLabels } from '../lib/content';
+import { loadUnits } from '../lib/contentLoader';
+import { setPwaSessionActive } from '../lib/pwa';
 import { getProgressStore, type ExamAttempt } from '../store/progress';
-import type { BalanceQuestion, Question, UnitContent } from '../types/content';
+import type {
+  BalanceQuestion,
+  Question,
+  UnitContent,
+  UnitSummary
+} from '../types/content';
 
 const QUESTION_OPTIONS = [20, 30, 40] as const;
 
@@ -61,7 +68,7 @@ function formatDuration(totalSeconds: number): string {
   return parts.map((value) => String(value).padStart(2, '0')).join(':');
 }
 
-function formatScopeLabel(scope: ExamScope, units: UnitContent[]): string {
+function formatScopeLabel(scope: ExamScope, units: UnitSummary[]): string {
   if (scope.mode === 'all') {
     return 'Toàn bộ chương trình';
   }
@@ -175,7 +182,7 @@ function breakdownLabel(breakdown: ExamBreakdown, level: keyof ExamBreakdown) {
 }
 
 export function ExamRoute() {
-  const units = useMemo(() => getAllUnits(), []);
+  const units = useMemo(() => getUnitCatalog(), []);
   const progressStore = getProgressStore(units);
   const recordWrongAnswer = progressStore((state) => state.recordWrongAnswer);
   const clearWrongAnswer = progressStore((state) => state.clearWrongAnswer);
@@ -185,10 +192,18 @@ export function ExamRoute() {
       units.filter(
         (unit) =>
           unit.status === 'available' &&
-          unit.lessons.some(
-            (lesson) =>
-              lesson.status === 'available' && lesson.questions.length > 0
-          )
+          unit.lessons.some((lesson) => {
+            const count =
+              (lesson.theoryQuestionCount ?? 0) +
+              (lesson.calculationQuestionCount ?? 0);
+            const legacyQuestions = (
+              lesson as typeof lesson & { questions?: unknown[] }
+            ).questions;
+            return (
+              lesson.status === 'available' &&
+              (count > 0 || Boolean(legacyQuestions?.length))
+            );
+          })
       ),
     [units]
   );
@@ -201,6 +216,7 @@ export function ExamRoute() {
   const [requestedTotal, setRequestedTotal] =
     useState<(typeof QUESTION_OPTIONS)[number]>(20);
   const [configError, setConfigError] = useState<string | null>(null);
+  const [isCreatingExam, setIsCreatingExam] = useState(false);
   const [session, setSession] = useState<ExamSession | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [remainingSeconds, setRemainingSeconds] = useState(0);
@@ -210,6 +226,11 @@ export function ExamRoute() {
   const [result, setResult] = useState<ExamResultState | null>(null);
   const responsesRef = useRef<Record<string, ExamResponse | undefined>>({});
   const finishingRef = useRef(false);
+
+  useEffect(() => {
+    setPwaSessionActive(phase === 'running');
+    return () => setPwaSessionActive(false);
+  }, [phase]);
 
   useEffect(() => {
     responsesRef.current = responses;
@@ -313,7 +334,7 @@ export function ExamRoute() {
     }
   }, [finishExam, phase, remainingSeconds, session]);
 
-  function handleStartExam() {
+  async function handleStartExam() {
     let scope: ExamScope;
 
     if (scopeMode === 'all') {
@@ -332,7 +353,25 @@ export function ExamRoute() {
     }
 
     const seed = Date.now();
-    const pool = buildExamQuestionPool(units, scope);
+    const unitIds =
+      scope.mode === 'units'
+        ? (scope.unitIds ?? [])
+        : units
+            .filter((unit) => scope.mode === 'all' || unit.part === scope.part)
+            .map((unit) => unit.id);
+
+    setIsCreatingExam(true);
+    setConfigError(null);
+    let fullUnits: UnitContent[];
+    try {
+      fullUnits = await loadUnits(unitIds);
+    } catch {
+      setIsCreatingExam(false);
+      setConfigError('Không tải được nội dung đề. Kiểm tra mạng rồi thử lại.');
+      return;
+    }
+
+    const pool = buildExamQuestionPool(fullUnits, scope);
     const selection = pickExamQuestions(
       pool,
       requestedTotal,
@@ -340,6 +379,7 @@ export function ExamRoute() {
     );
 
     if (selection.actualTotal === 0) {
+      setIsCreatingExam(false);
       setConfigError('Phạm vi này hiện chưa có câu hỏi khả dụng để tạo đề.');
       return;
     }
@@ -367,6 +407,7 @@ export function ExamRoute() {
       startedAt: new Date(seed).toISOString()
     });
     setPhase('running');
+    setIsCreatingExam(false);
   }
 
   function handleSubmit(response: ExamResponse) {
@@ -581,11 +622,12 @@ export function ExamRoute() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <button
-                  className="inline-flex rounded-full bg-sea px-5 py-3 font-semibold text-white transition hover:bg-ink"
-                  onClick={handleStartExam}
+                  className="inline-flex rounded-full bg-sea px-5 py-3 font-semibold text-white transition hover:bg-ink disabled:cursor-wait disabled:opacity-60"
+                  onClick={() => void handleStartExam()}
+                  disabled={isCreatingExam}
                   type="button"
                 >
-                  Bắt đầu thi
+                  {isCreatingExam ? 'Đang tạo đề…' : 'Bắt đầu thi'}
                 </button>
                 <Link
                   className="inline-flex rounded-full border border-ink/10 px-5 py-3 font-semibold text-ink/75 transition hover:border-sea hover:text-sea"

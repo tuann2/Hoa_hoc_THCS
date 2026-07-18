@@ -5,8 +5,7 @@ import {
   type StorageValue
 } from 'zustand/middleware';
 import type { ExamBreakdown, ExamScope } from '../lib/exam';
-import { getQuestionsByCategory } from '../lib/content';
-import type { Lesson, UnitContent } from '../types/content';
+import type { LessonSummary, UnitSummary } from '../types/content';
 import { calculateStars } from '../lib/chemistry';
 
 export const PROGRESS_STORAGE_KEY = 'hhthcs-progress';
@@ -74,7 +73,7 @@ export interface ProgressState {
   wrongQuestions: Record<string, WrongQuestionEntry>;
   examHistory: ExamAttempt[];
   completeLessonPart: (
-    lesson: Lesson,
+    lesson: LessonSummary,
     mode: LessonMode,
     accuracy: number,
     earnedXp: number,
@@ -163,11 +162,11 @@ function yesterday(dateKey: string): string {
   return toDateKey(date);
 }
 
-function deriveUnlockedLessons(units: UnitContent[]): string[] {
+function deriveUnlockedLessons(units: UnitSummary[]): string[] {
   return units
     .filter((unit) => unit.status === 'available')
     .map((unit) => unit.lessons.find((lesson) => lesson.status === 'available'))
-    .filter((lesson): lesson is Lesson => Boolean(lesson))
+    .filter((lesson): lesson is LessonSummary => Boolean(lesson))
     .map((lesson) => lesson.id);
 }
 
@@ -233,7 +232,7 @@ function mergeExamHistory(attempts: ExamAttempt[]): ExamAttempt[] {
     .slice(0, 20);
 }
 
-export const createInitialProgressState = (units: UnitContent[]) => ({
+export const createInitialProgressState = (units: UnitSummary[]) => ({
   ...EMPTY_PROGRESS,
   unlockedLessonIds: deriveUnlockedLessons(units)
 });
@@ -248,10 +247,6 @@ export function getWrongQuestionKey(
 
 export function isWrongQuestionPending(entry: WrongQuestionEntry): boolean {
   return !entry.resolvedAt || entry.lastMissedAt > entry.resolvedAt;
-}
-
-function questionCategoryForMode(mode: LessonMode) {
-  return mode === 'theory' ? 'theory' : 'calculation';
 }
 
 function normalizeLessonPartProgress(
@@ -386,14 +381,11 @@ export function normalizeLessonProgressEntry(
 }
 
 function getEffectiveLessonPartProgress(
-  lesson: Lesson,
+  lesson: LessonSummary,
   mode: LessonMode,
   part: LessonPartProgress | undefined
 ): LessonPartProgress {
-  const questionCount = getQuestionsByCategory(
-    lesson,
-    questionCategoryForMode(mode)
-  ).length;
+  const questionCount = getQuestionCount(lesson, mode);
 
   if (questionCount === 0) {
     return {
@@ -406,13 +398,31 @@ function getEffectiveLessonPartProgress(
   return cloneLessonPartProgress(part);
 }
 
+function getQuestionCount(lesson: LessonSummary, mode: LessonMode): number {
+  const catalogCount =
+    mode === 'theory'
+      ? lesson.theoryQuestionCount
+      : lesson.calculationQuestionCount;
+  if (catalogCount !== undefined) return catalogCount;
+
+  const fullLesson = lesson as LessonSummary & {
+    questions?: Array<{ category: string }>;
+  };
+  return (
+    fullLesson.questions?.filter(
+      (question) =>
+        question.category === (mode === 'theory' ? 'theory' : 'calculation')
+    ).length ?? 0
+  );
+}
+
 function calculateCombinedLessonAccuracy(
-  lesson: Lesson,
+  lesson: LessonSummary,
   theory: LessonPartProgress,
   practice: LessonPartProgress
 ) {
-  const theoryCount = getQuestionsByCategory(lesson, 'theory').length;
-  const practiceCount = getQuestionsByCategory(lesson, 'calculation').length;
+  const theoryCount = getQuestionCount(lesson, 'theory');
+  const practiceCount = getQuestionCount(lesson, 'practice');
   const totalQuestions = theoryCount + practiceCount;
 
   if (totalQuestions === 0) {
@@ -427,7 +437,7 @@ function calculateCombinedLessonAccuracy(
 }
 
 export function buildLessonProgressEntry(
-  lesson: Lesson,
+  lesson: LessonSummary,
   theoryInput: LessonPartProgress | undefined,
   practiceInput: LessonPartProgress | undefined,
   bestXp: number,
@@ -564,7 +574,7 @@ export function getProgressSnapshot(state: ProgressState): ProgressSnapshot {
 }
 
 export function applyProgressSnapshot(
-  units: UnitContent[],
+  units: UnitSummary[],
   snapshot: ProgressSnapshot
 ) {
   lastMutationSource = 'hydrate';
@@ -581,7 +591,7 @@ export function consumeProgressMutationSource() {
 }
 
 export function getNextLessonId(
-  units: UnitContent[],
+  units: UnitSummary[],
   unitId: string,
   lessonId: string
 ): string | null {
@@ -601,7 +611,7 @@ export function getNextLessonId(
   return nextLesson?.id ?? null;
 }
 
-export const createProgressStore = (units: UnitContent[]) =>
+export const createProgressStore = (units: UnitSummary[]) =>
   create<ProgressState>()(
     persist(
       (set) => ({
@@ -784,7 +794,7 @@ export const createProgressStore = (units: UnitContent[]) =>
 
 let storeInstance: ReturnType<typeof createProgressStore> | null = null;
 
-export function getProgressStore(units: UnitContent[]) {
+export function getProgressStore(units: UnitSummary[]) {
   if (!storeInstance) {
     storeInstance = createProgressStore(units);
   }

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ExamRoute } from '../../src/routes/ExamRoute';
@@ -64,6 +64,10 @@ vi.mock('../../src/lib/content', () => ({
   }
 }));
 
+vi.mock('../../src/lib/contentLoader', () => ({
+  loadUnits: () => Promise.resolve(fixtureUnits)
+}));
+
 function submitVisibleQuestion() {
   if (screen.queryByText('Câu từng sai')) {
     fireEvent.click(screen.getByRole('button', { name: 'Đúng' }));
@@ -74,6 +78,13 @@ function submitVisibleQuestion() {
   }
 
   fireEvent.click(screen.getByRole('button', { name: 'Lưu & câu tiếp theo' }));
+}
+
+async function startExam() {
+  await act(async () => {
+    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu thi' }));
+    await Promise.resolve();
+  });
 }
 
 describe('ExamRoute', () => {
@@ -112,7 +123,7 @@ describe('ExamRoute', () => {
       </MemoryRouter>
     );
 
-    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu thi' }));
+    await startExam();
 
     expect(screen.getByRole('button', { name: '✕ Thoát' })).toBeInTheDocument();
 
@@ -149,7 +160,7 @@ describe('ExamRoute', () => {
       </MemoryRouter>
     );
 
-    fireEvent.click(screen.getByRole('button', { name: 'Bắt đầu thi' }));
+    await startExam();
 
     expect(screen.getByRole('button', { name: '✕ Thoát' })).toBeInTheDocument();
 

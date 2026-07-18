@@ -234,6 +234,8 @@ describe('progress sync', () => {
     vi.useFakeTimers();
     progressUpsert.mockReset();
     progressSelect.mockReset();
+    mockSupabase.auth.signOut.mockReset();
+    mockSupabase.auth.signOut.mockResolvedValue({ error: null });
     resetAuthStoreForTests();
     resetProgressSyncForTests();
     getAuthStore().setState({
@@ -553,5 +555,26 @@ describe('progress sync', () => {
     expect(payload.user_id).toBe('user-1');
     expect(payload.data.totalXp).toBe(120);
     expect(payload.version).toBe(PROGRESS_VERSION);
+  });
+
+  it('hủy queued push khi sign-out để không đẩy snapshot sang user khác', async () => {
+    progressUpsert.mockResolvedValue({ data: null, error: null });
+
+    scheduleProgressPush(createSnapshot({ totalXp: 120 }));
+    await getAuthStore().getState().signOut();
+    getAuthStore().setState({
+      user: {
+        app_metadata: {},
+        aud: 'authenticated',
+        created_at: '2026-07-05T00:00:00.000Z',
+        id: 'user-2',
+        email: 'user-2@example.com',
+        user_metadata: {}
+      }
+    });
+
+    await vi.advanceTimersByTimeAsync(2_000);
+
+    expect(progressUpsert).not.toHaveBeenCalled();
   });
 });

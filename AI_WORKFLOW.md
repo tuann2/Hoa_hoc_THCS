@@ -67,7 +67,10 @@ Requirement (human)
     gates are not rerun merely to reproduce logs.
 14. Independent reviewers are fresh executions with no inherited
     implementation context; they report findings and never modify the
-    candidate.
+    candidate — except the architecture's bounded
+    reviewer-applies-fixes exception for `NORMAL`-tier learning-content
+    batch review (see "Independent review per risk tier" below), which
+    never applies to `ELEVATED`/`CRITICAL` work.
 
 ## Invoking Codex from Claude
 
@@ -152,6 +155,12 @@ requirements. Project mapping:
 
 Historical note: this dual-review pattern caught a multi-choice answers
 bug (b3-l5-q8) that single-pass review missed.
+
+For `NORMAL`-tier learning-content batch review, the architecture's
+Independent Verification section defines a bounded
+reviewer-applies-fixes exception (human-authorized, findings still
+recorded, numeric/chemistry fixes still independently re-verified) —
+see the architecture, not restated here.
 
 ## Validation commands (this project)
 

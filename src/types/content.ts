@@ -67,6 +67,16 @@ export interface Lesson {
   questions: Question[];
 }
 
+export interface LessonSummary {
+  id: string;
+  title: string;
+  order: number;
+  summary: string;
+  status: LessonStatus;
+  theoryQuestionCount?: number;
+  calculationQuestionCount?: number;
+}
+
 export interface UnitContent {
   id: string;
   part: PartId;
@@ -76,4 +86,15 @@ export interface UnitContent {
   description: string;
   status: UnitStatus;
   lessons: Lesson[];
+}
+
+export interface UnitSummary {
+  id: string;
+  part: PartId;
+  code: string;
+  title: string;
+  order: number;
+  description: string;
+  status: UnitStatus;
+  lessons: LessonSummary[];
 }

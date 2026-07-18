@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExitButton } from '../components/ExitButton';
 import {
@@ -6,18 +6,25 @@ import {
   type SubmissionResult
 } from '../components/QuestionRenderer';
 import { isQuestionCorrect } from '../lib/chemistry';
+import { ContentLoadError } from '../components/ContentLoadError';
+import { ContentLoading } from '../components/ContentLoading';
 import {
-  findLesson,
-  findQuestion,
-  findUnit,
-  getAllUnits
+  findLesson as findLessonSummary,
+  findUnit as findUnitSummary,
+  getAllUnits as getUnitCatalog
 } from '../lib/content';
+import { loadUnits } from '../lib/contentLoader';
 import {
   getProgressStore,
   isWrongQuestionPending,
   type WrongQuestionEntry
 } from '../store/progress';
-import type { Lesson, Question, UnitContent } from '../types/content';
+import type {
+  Lesson,
+  Question,
+  UnitContent,
+  UnitSummary
+} from '../types/content';
 
 interface ReviewQueueItem {
   key: string;
@@ -27,10 +34,15 @@ interface ReviewQueueItem {
   unit: UnitContent;
 }
 
+interface PendingReviewItem {
+  key: string;
+  entry: WrongQuestionEntry;
+}
+
 function resolveReviewQueue(
-  units: UnitContent[],
+  units: UnitSummary[],
   wrongQuestions: Record<string, WrongQuestionEntry>
-): ReviewQueueItem[] {
+): PendingReviewItem[] {
   return Object.entries(wrongQuestions)
     .filter(([, entry]) => isWrongQuestionPending(entry))
     .sort((left, right) => {
@@ -41,46 +53,80 @@ function resolveReviewQueue(
       return right[1].lastMissedAt.localeCompare(left[1].lastMissedAt);
     })
     .map(([key, entry]) => {
-      const unit = findUnit(entry.unitId);
-      const lesson = findLesson(entry.unitId, entry.lessonId);
-      const question = findQuestion(
-        entry.unitId,
-        entry.lessonId,
-        entry.questionId
-      );
+      const unit = findUnitSummary(entry.unitId);
+      const lesson = findLessonSummary(entry.unitId, entry.lessonId);
 
-      if (
-        !unit ||
-        !lesson ||
-        !question ||
-        !units.some((item) => item.id === unit.id)
-      ) {
+      if (!unit || !lesson || !units.some((item) => item.id === unit.id)) {
         return null;
       }
 
       return {
         key,
-        entry,
-        lesson,
-        question,
-        unit
+        entry
       };
     })
-    .filter((item): item is ReviewQueueItem => item !== null);
+    .filter((item): item is PendingReviewItem => item !== null);
 }
 
 export function ReviewRoute() {
-  const units = getAllUnits();
+  const units = useMemo(() => getUnitCatalog(), []);
   const progressStore = getProgressStore(units);
   const wrongQuestions = progressStore((state) => state.wrongQuestions);
   const clearWrongAnswer = progressStore((state) => state.clearWrongAnswer);
   const recordWrongAnswer = progressStore((state) => state.recordWrongAnswer);
-  const [queue] = useState(() => resolveReviewQueue(units, wrongQuestions));
+  const [pendingQueue] = useState(() =>
+    resolveReviewQueue(units, wrongQuestions)
+  );
+  const [queue, setQueue] = useState<ReviewQueueItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [currentResult, setCurrentResult] = useState<SubmissionResult | null>(
     null
   );
   const [correctCount, setCorrectCount] = useState(0);
+
+  useEffect(() => {
+    let active = true;
+    setIsLoading(true);
+    setLoadError(false);
+    void loadUnits(pendingQueue.map((item) => item.entry.unitId))
+      .then((loadedUnits) => {
+        if (!active) return;
+        const nextQueue = pendingQueue
+          .map(({ key, entry }) => {
+            const unit = loadedUnits.find((item) => item.id === entry.unitId);
+            const lesson = unit?.lessons.find(
+              (item) => item.id === entry.lessonId
+            );
+            const question = lesson?.questions.find(
+              (item) => item.id === entry.questionId
+            );
+            return unit && lesson && question
+              ? { key, entry, unit, lesson, question }
+              : null;
+          })
+          .filter((item): item is ReviewQueueItem => item !== null);
+        setQueue(nextQueue);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        if (active) {
+          setLoadError(true);
+          setIsLoading(false);
+        }
+      });
+    return () => {
+      active = false;
+    };
+  }, [pendingQueue]);
+
+  if (isLoading) {
+    return <ContentLoading label="Đang tải hàng đợi ôn tập…" />;
+  }
+  if (loadError) {
+    return <ContentLoadError onRetry={() => window.location.reload()} />;
+  }
 
   if (queue.length === 0) {
     return (

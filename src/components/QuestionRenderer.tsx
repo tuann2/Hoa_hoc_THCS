@@ -101,6 +101,7 @@ export function QuestionRenderer({
               return (
                 <button
                   key={option}
+                  data-testid="answer-option"
                   className={`w-full rounded-3xl border px-4 py-4 text-left transition ${
                     selected
                       ? 'border-sea bg-sea/10 text-ink'
