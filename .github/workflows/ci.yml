@@ -27,35 +27,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Format check
-        run: npm run format:check
-
-      - name: Content catalog check
-        run: npm run check:content-catalog
-
-      - name: Content validation
-        run: npm run validate-content
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Typecheck
-        run: npm run typecheck
-
-      - name: Test
-        run: npm test
-
-      - name: Bundle
+      - name: Run web gates profile
         env:
           VITE_SUPABASE_URL: https://example.supabase.co
           VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
-        run: npm run build && npm run check:bundle
+        run: npm run gates -- --profile=web
 
-      - name: Audit
-        run: npm audit --audit-level=moderate
-
-      - name: License check
-        run: npm run check:licenses
+      - name: Run docs gates profile
+        run: npm run gates -- --profile=docs
 
       - name: Upload production artifact
         uses: actions/upload-artifact@v4
@@ -63,31 +42,6 @@ jobs:
           name: production-dist
           path: dist
           if-no-files-found: error
-
-  gates-shadow:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run web gates shadow
-        env:
-          VITE_SUPABASE_URL: https://example.supabase.co
-          VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
-        run: npm run gates -- --profile=web
-
-      - name: Run docs gates shadow
-        run: npm run gates -- --profile=docs
 
   browser:
     needs: web
@@ -115,6 +69,7 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      # CI execution layer for browser gates: e2e, pwa, pwa-subpath.
       - name: Run Playwright E2E
         env:
           PLAYWRIGHT_SKIP_BUILD: '1'
@@ -144,3 +99,36 @@ jobs:
             playwright-report
             test-results
           if-no-files-found: ignore
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs:
+      - web
+      - browser
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download production artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-dist
+          path: dist
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
