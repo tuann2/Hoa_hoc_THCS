@@ -27,6 +27,8 @@ const MARKDOWN_LINK_PATTERN = /!?\[[^\]]*\]\(([^)]+)\)/gu;
 const SCRIPT_REFERENCE_PATTERN = /\bnpm run\s+([a-z0-9:-]+)/giu;
 const DOCUMENT_REFERENCE_PATTERN =
   /(?:^|[`(\s])((?:docs\/(?:(?:plans|handoffs|architecture|runbooks|adr)\/[A-Za-z0-9._/-]+)|scripts\/[A-Za-z0-9._/-]+\.ts|\.github\/workflows\/[A-Za-z0-9._/-]+|(?:README|AGENTS|AI_WORKFLOW)\.md))(?=[`)\s:,.]|$)/gmu;
+const ARCHIVAL_MARKER_PATTERN =
+  /\b(?:Status:\s*(?:STALE|SUPERSEDED)|ARCHIVED)\b/u;
 
 function getRepoRoot(): string {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -56,16 +58,29 @@ function isExternalTarget(target: string): boolean {
   return /^(?:[a-z]+:)?\/\//iu.test(target) || /^mailto:/iu.test(target);
 }
 
-function isHistoricalArtifact(relativePath: string): boolean {
+function isPlaceholderReference(value: string): boolean {
+  return /(?:\.\.\.|FEATURE-0xx|FEATURE-XXX|WORKFLOW-XXX|<[^>]+>)/iu.test(
+    value
+  );
+}
+
+function isPlanOrHandoffArtifact(relativePath: string): boolean {
   return (
     relativePath.startsWith('docs/plans/') ||
     relativePath.startsWith('docs/handoffs/')
   );
 }
 
-function isPlaceholderReference(value: string): boolean {
-  return /(?:\.\.\.|FEATURE-0xx|FEATURE-XXX|WORKFLOW-XXX|<[^>]+>)/iu.test(
-    value
+function isArchivedDocument(content: string): boolean {
+  const header = content.split(/\r?\n/u).slice(0, 40).join('\n');
+  return ARCHIVAL_MARKER_PATTERN.test(header);
+}
+
+function isWithinRepoRoot(repoRoot: string, targetPath: string): boolean {
+  const relativePath = path.relative(repoRoot, targetPath);
+  return (
+    relativePath === '' ||
+    (!relativePath.startsWith('..') && !path.isAbsolute(relativePath))
   );
 }
 
@@ -147,6 +162,8 @@ async function inspectMarkdownFile(
   const absolutePath = path.join(repoRoot, relativePath);
   const fileDir = path.dirname(absolutePath);
   const content = await readFile(absolutePath, 'utf8');
+  const isPlanOrHandoff = isPlanOrHandoffArtifact(relativePath);
+  const isArchived = isArchivedDocument(content);
   const issues: DocsIssue[] = [];
 
   for (const match of content.matchAll(MARKDOWN_LINK_PATTERN)) {
@@ -176,16 +193,25 @@ async function inspectMarkdownFile(
       decodeTargetPath(targetWithoutAnchor)
     );
 
+    if (!isWithinRepoRoot(repoRoot, resolvedPath)) {
+      issues.push({
+        file: relativePath,
+        message: `Relative Markdown link points outside repository scope: ${rawTarget}`,
+        severity: 'error'
+      });
+      continue;
+    }
+
     if (!(await pathExists(resolvedPath))) {
       issues.push({
         file: relativePath,
         message: `Broken relative Markdown link: ${rawTarget}`,
-        severity: isHistoricalArtifact(relativePath) ? 'warning' : 'error'
+        severity: isArchived ? 'warning' : 'error'
       });
     }
   }
 
-  if (!isHistoricalArtifact(relativePath)) {
+  if (!isPlanOrHandoff) {
     for (const match of content.matchAll(DOCUMENT_REFERENCE_PATTERN)) {
       const rawPath = match[1];
 
@@ -205,7 +231,7 @@ async function inspectMarkdownFile(
     }
   }
 
-  if (!isHistoricalArtifact(relativePath)) {
+  if (!isPlanOrHandoff) {
     for (const match of content.matchAll(SCRIPT_REFERENCE_PATTERN)) {
       const scriptName = match[1]?.trim();
 

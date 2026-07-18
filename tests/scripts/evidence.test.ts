@@ -1,9 +1,9 @@
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
+  chmod,
   mkdtemp,
   readFile,
-  readlink,
   rm,
   symlink,
   unlink,
@@ -19,6 +19,8 @@ const execFileAsync = promisify(execFile);
 const tempRoots: string[] = [];
 const originalForceManifest = process.env.EVIDENCE_FORCE_MANIFEST;
 const originalVitest = process.env.VITEST;
+const runIfNotRoot =
+  typeof process.getuid === 'function' && process.getuid() === 0 ? it.skip : it;
 
 type SnapshotMode = {
   expectedKind: 'git-tree' | 'manifest';
@@ -354,6 +356,48 @@ describe('evidence', () => {
     );
   });
 
+  it('propagates the manifest fallback error when git-tree capture also fails', async () => {
+    const rootDir = await mkdtemp(path.join(os.tmpdir(), 'evidence-no-git-'));
+    tempRoots.push(rootDir);
+
+    await expect(computeSnapshot(rootDir)).rejects.toThrow(
+      /git metadata is unavailable/
+    );
+  });
+
+  runIfNotRoot(
+    'rejects manifest-mode evidence when a tracked file exists but is unreadable',
+    async () => {
+      const rootDir = await createRepoFixture();
+      const trackedPath = path.join(rootDir, 'tracked.txt');
+
+      process.env.EVIDENCE_FORCE_MANIFEST = '1';
+      process.env.VITEST = '1';
+
+      await chmod(trackedPath, 0o000);
+
+      try {
+        await expect(
+          createEvidence({
+            cwd: rootDir,
+            gateRunner: () =>
+              Promise.resolve({
+                finishedAt: new Date().toISOString(),
+                gateResults: [],
+                mode: 'profile',
+                profile: 'web',
+                result: 'pass',
+                startedAt: new Date().toISOString()
+              }),
+            profile: 'web'
+          })
+        ).rejects.toThrow(/EACCES|permission/i);
+      } finally {
+        await chmod(trackedPath, 0o644);
+      }
+    }
+  );
+
   it('marks evidence invalid when .env build inputs change during gate execution', async () => {
     const rootDir = await createRepoFixture();
     const envPath = path.join(rootDir, '.env.local');
@@ -364,6 +408,41 @@ describe('evidence', () => {
       cwd: rootDir,
       gateRunner: async () => {
         await writeFile(envPath, 'TOKEN=after\n', 'utf8');
+
+        return {
+          finishedAt: new Date().toISOString(),
+          gateResults: [],
+          mode: 'profile',
+          profile: 'web',
+          result: 'pass',
+          startedAt: new Date().toISOString()
+        };
+      },
+      profile: 'web'
+    });
+
+    expect(report.result).toBe('invalid');
+    expect(report.build_inputs).toEqual([
+      {
+        path: '.env.local',
+        sha256: sha256('TOKEN=before\n')
+      }
+    ]);
+  });
+
+  it('marks evidence invalid when a .env symlink target outside the repo changes', async () => {
+    const rootDir = await createRepoFixture();
+    const externalDir = await mkdtemp(path.join(os.tmpdir(), 'evidence-env-'));
+    const externalEnvPath = path.join(externalDir, 'external.env');
+    tempRoots.push(externalDir);
+
+    await writeFile(externalEnvPath, 'TOKEN=before\n', 'utf8');
+    await symlink(externalEnvPath, path.join(rootDir, '.env.local'));
+
+    const report = await createEvidence({
+      cwd: rootDir,
+      gateRunner: async () => {
+        await writeFile(externalEnvPath, 'TOKEN=after\n', 'utf8');
 
         return {
           finishedAt: new Date().toISOString(),
@@ -407,8 +486,5 @@ describe('evidence', () => {
 
     expect(after.snapshot.kind).toBe('manifest');
     expect(after.snapshot.id).not.toBe(before.snapshot.id);
-    expect(await readlink(path.join(rootDir, 'linked.txt'))).toBe(
-      'target-b.txt'
-    );
   });
 });

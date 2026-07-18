@@ -28,6 +28,7 @@ async function createRepoFixture(): Promise<string> {
 
   await mkdir(path.join(rootDir, 'docs', 'adr'), { recursive: true });
   await mkdir(path.join(rootDir, 'docs', 'architecture'), { recursive: true });
+  await mkdir(path.join(rootDir, 'docs', 'handoffs'), { recursive: true });
   await mkdir(path.join(rootDir, 'docs', 'plans'), { recursive: true });
   await mkdir(path.join(rootDir, 'docs', 'runbooks'), { recursive: true });
   await mkdir(path.join(rootDir, '.github', 'workflows'), { recursive: true });
@@ -243,7 +244,7 @@ describe('check-docs', () => {
     expect(result.issues).toEqual([]);
   });
 
-  it('treats broken markdown links in historical plans as warnings', async () => {
+  it('keeps broken markdown links as errors in active plans without archival markers', async () => {
     const rootDir = await createRepoFixture();
 
     await writeFile(
@@ -260,6 +261,35 @@ describe('check-docs', () => {
     expect(result.issues).toEqual([
       {
         file: 'docs/plans/HISTORICAL.md',
+        message: 'Broken relative Markdown link: ./removed.md',
+        severity: 'error'
+      }
+    ]);
+  });
+
+  it('downgrades broken markdown links to warnings only for archived docs', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'handoffs', 'ARCHIVED.md'),
+      [
+        '# Old handoff',
+        '',
+        'Status: STALE',
+        '',
+        '[Missing](./removed.md)'
+      ].join('\n'),
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/handoffs/ARCHIVED.md']
+    });
+
+    expect(result.issues).toEqual([
+      {
+        file: 'docs/handoffs/ARCHIVED.md',
         message: 'Broken relative Markdown link: ./removed.md',
         severity: 'warning'
       }
@@ -325,5 +355,29 @@ describe('check-docs', () => {
       message: 'Broken relative Markdown link: ./missing.md',
       severity: 'error'
     });
+  });
+
+  it('fails when a relative markdown link resolves outside the repository root', async () => {
+    const rootDir = await createRepoFixture();
+
+    await writeFile(
+      path.join(rootDir, 'docs', 'guide.md'),
+      '[Outside](../../../../tmp/outside.md)\n',
+      'utf8'
+    );
+
+    const result = await checkDocs({
+      cwd: rootDir,
+      files: ['docs/guide.md']
+    });
+
+    expect(result.issues).toEqual([
+      {
+        file: 'docs/guide.md',
+        message:
+          'Relative Markdown link points outside repository scope: ../../../../tmp/outside.md',
+        severity: 'error'
+      }
+    ]);
   });
 });

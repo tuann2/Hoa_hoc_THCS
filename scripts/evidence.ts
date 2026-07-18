@@ -122,6 +122,15 @@ async function hasHeadCommit(cwd: string): Promise<boolean> {
   return (await execGitOrNull(['rev-parse', '--verify', 'HEAD'], cwd)) !== null;
 }
 
+function isMissingPathError(error: unknown): boolean {
+  return (
+    typeof error === 'object' &&
+    error !== null &&
+    'code' in error &&
+    (error.code === 'ENOENT' || error.code === 'ENOTDIR')
+  );
+}
+
 export async function getBaseSha(cwd: string): Promise<string> {
   return (await execGitOrNull(['rev-parse', 'HEAD'], cwd)) ?? 'UNBORN';
 }
@@ -155,7 +164,11 @@ async function sha256File(filePath: string): Promise<string> {
 async function collectBuildInputs(cwd: string): Promise<BuildInputDigest[]> {
   const entries = await readdir(cwd, { withFileTypes: true });
   const buildInputs = entries
-    .filter((entry) => entry.isFile() && entry.name.startsWith('.env'))
+    .filter(
+      (entry) =>
+        (entry.isFile() || entry.isSymbolicLink()) &&
+        entry.name.startsWith('.env')
+    )
     .map((entry) => entry.name)
     .sort();
 
@@ -276,7 +289,11 @@ async function computeManifestEntries(cwd: string): Promise<ManifestEntry[]> {
         status: 'present',
         tracked: isTracked
       });
-    } catch {
+    } catch (error) {
+      if (!isMissingPathError(error)) {
+        throw error;
+      }
+
       entries.push({
         content_hash: null,
         kind: 'file',
