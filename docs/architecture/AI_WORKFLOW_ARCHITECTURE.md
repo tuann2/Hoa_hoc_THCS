@@ -1,8 +1,7 @@
 # AI Workflow Architecture
 
 - Version: 2.3
-- Status: PENDING APPROVAL (amendment v2.3 — WORKFLOW-004A; v2.2 remains
-  the operative version until the human approves this amendment)
+- Status: APPROVED (v2.3 amendment approved by nt0, 2026-07-18)
 - Owner: Human Project Owner
 - Reviewers: Claude, Codex, Gemini (conditional by risk tier)
 - Amendment history: v2.3 (WORKFLOW-004A) — superseded the manual
