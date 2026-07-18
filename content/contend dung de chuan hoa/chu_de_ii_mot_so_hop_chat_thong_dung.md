@@ -1,135 +1,159 @@
-# CHỦ ĐỀ II: MỘT SỐ HỢP CHẤT THÔNG DỤNG (TRANG 22 - 25)
+# CHỦ ĐỀ II: MỘT SỐ HỢP CHẤT THÔNG DỤNG (đã chuẩn hoá)
 
-## I. ACID
+> Nguồn: ảnh trang 22–25 (sách tóm tắt kiến thức, chương trình mới).
+> Dùng cho bài học: a6-l1 (axit), a7-l1 (bazơ), a5-l1..l4 (oxit), a8-l1, a8-l2, a8-l4 (muối, phân bón).
+> Quy ước chuẩn hoá: danh pháp cũ theo bộ nội dung của app (axit/bazơ/oxit/muối, clorua/sunfat/nitrat/cacbonat); tài liệu gốc dùng danh pháp mới (acid/base/oxide, sodium hydroxide...) — ghi kèm ở mục danh pháp khi cần đối chiếu.
+
+## I. AXIT
 
 ### 1. Khái niệm
-* **Acid** là hợp chất mà cấu tạo gồm có một hay nhiều nguyên tử hydrogen liên kết với một gốc acid.
-* Khi tan trong nước, acid tạo ra ion **\(\text{H}^+\)**.
 
-### 2. Tính chất hoá học của acid
-* **a) Acid làm đổi màu chất chỉ thị:** Dung dịch acid làm quỳ tím chuyển thành màu đỏ.
-* **b) Acid tác dụng với kim loại:** Dung dịch acid tác dụng được với một số kim loại (như \(\text{Mg}, \text{Al}, \text{Zn}, \text{Fe},...\)) tạo thành muối và giải phóng khí \(\text{H}_2\).
-  * *Điều kiện:* Các kim loại hoạt động hóa học yếu như \(\text{Cu}, \text{Hg}, \text{Ag}, \text{Pt}, \text{Au}\) không tác dụng với dung dịch acid loãng giải phóng khí \(\text{H}_2\).
-  * *Dãy hoạt động hóa học:* \(\text{K, Na, Ba, Ca, Mg, Al, Zn, Fe, Ni, Sn, H, Cu, Hg, Ag, Pt, Au}\).
-  * *Ví dụ:*
-    * \(\text{Fe} + 2\text{HCl} \longrightarrow \text{FeCl}_2 + \text{H}_2\)
-    * \(\text{Zn} + \text{H}_2\text{SO}_{4 \text{ loãng}} \longrightarrow \text{ZnSO}_4 + \text{H}_2\)
-    * \(\text{Cu} + \text{HCl} \longrightarrow \text{không phản ứng}\)
-  * *Lưu ý hiệu số mol:* \(n_{\text{HCl}} = 2n_{\text{H}_2}\); \(n_{\text{H}_2\text{SO}_4} = n_{\text{H}_2}\).
-  * *Chú ý:* Dung dịch acid \(\text{HNO}_3\) và \(\text{H}_2\text{SO}_4\) đặc tác dụng với nhiều kim loại nhưng không giải phóng \(\text{H}_2\) (tính chất này sẽ được tìm hiểu sâu hơn ở chương trình THPT).
-* **c) Acid tác dụng với base:** Axit tác dụng với bazơ tạo thành muối và nước.
-* **d) Acid tác dụng với oxide base:** Axit tác dụng với oxide base tạo thành muối và nước.
-* **e) Acid tác dụng với muối:** Tạo thành muối mới và axit mới.
+- Axit là hợp chất mà phân tử gồm có một hay nhiều nguyên tử hiđro liên kết với gốc axit.
+- Khi tan trong nước, axit phân li tạo ra ion H^+.
 
----
+### 2. Tính chất hoá học của axit
 
-## II. BASE
+a) Axit làm đổi màu chất chỉ thị: dung dịch axit làm quỳ tím chuyển thành màu đỏ.
+
+b) Axit tác dụng với kim loại: dung dịch axit loãng (HCl, H2SO4 loãng) tác dụng được với một số kim loại (Mg, Al, Zn, Fe,...) tạo thành muối và giải phóng khí H2.
+
+- Điều kiện: kim loại phải đứng trước H trong dãy hoạt động hoá học. Các kim loại yếu như Cu, Hg, Ag, Pt, Au không tác dụng với dung dịch axit loãng giải phóng H2.
+- Ví dụ:
+  - Fe + 2HCl -> FeCl2 + H2↑
+  - Zn + H2SO4 loãng -> ZnSO4 + H2↑
+  - Cu + HCl -> không phản ứng
+- Lưu ý tỉ lệ mol hay dùng khi giải toán: nHCl = 2nH2; nH2SO4 = nH2.
+- Chú ý: HNO3 và H2SO4 đặc tác dụng được với nhiều kim loại nhưng không giải phóng H2 (tạo sản phẩm khử như NO2, NO, SO2 — tìm hiểu sâu hơn ở mục nâng cao và chương trình THPT).
+
+c) Axit tác dụng với bazơ: tạo thành muối và nước (phản ứng trung hoà).
+
+d) Axit tác dụng với oxit bazơ: tạo thành muối và nước.
+
+e) Axit tác dụng với muối: tạo thành muối mới và axit mới (xem điều kiện ở mục IV.2).
+
+## II. BAZƠ
 
 ### 1. Khái niệm, phân loại, danh pháp
-* **Khái niệm:** Base là hợp chất mà phân tử gồm có một nguyên tử kim loại liên kết với một hay nhiều nhóm hydroxide (\(\text{OH}\)).
-* **Đặc điểm:** Số nhóm hydroxide bằng hoá trị của kim loại.
-* **Danh pháp:**
-  $$\text{Tên base} = \text{tên kim loại (kèm hoá trị nếu kim loại có nhiều hoá trị)} + \text{hydroxide}$$
-  * *Ví dụ:*
-    * \(\text{NaOH}\): Sodium hydroxide.
-    * \(\text{Fe(OH)}_3\): Iron(III) hydroxide.
-* **Phân loại (Dựa vào tính tan trong nước):**
-  * **Base tan (kiềm):** Ví dụ: \(\text{NaOH, KOH, Ba(OH)}_2,...\)
-  * **Base không tan:** Ví dụ: \(\text{Cu(OH)}_2, \text{Mg(OH)}_2, \text{Fe(OH)}_3, \text{Al(OH)}_3,...\)
 
-### 2. Tính chất hoá học của base
-* **a) Tác dụng với chất chỉ thị:**
-  * Dung dịch bazơ (kiềm) làm quỳ tím chuyển sang màu xanh.
-  * Làm dung dịch phenolphthalein không màu chuyển sang màu hồng.
-* **b) Tác dụng với oxide acid:** Dung dịch base tác dụng với oxide acid tạo thành muối và nước.
-  * *Ví dụ:*
-    * \(\text{CO}_2 + \text{Ca(OH)}_2 \longrightarrow \text{CaCO}_3\downarrow + \text{H}_2\text{O}\)
-    * \(6\text{KOH} + \text{P}_2\text{O}_5 \longrightarrow 2\text{K}_3\text{PO}_4 + 3\text{H}_2\text{O}\)
-* **c) Tác dụng với acid:** Base tác dụng với acid tạo muối và nước (phản ứng trung hòa).
-  * *Ví dụ:* \(\text{Ca(OH)}_2 + 2\text{HCl} \longrightarrow \text{CaCl}_2 + 2\text{H}_2\text{O}\)
-* **d) Base không tan bị nhiệt phân huỷ:** Tạo ra oxide base tương ứng và nước.
-  * *Ví dụ:* \(\text{Cu(OH)}_2 \xrightarrow{t^\circ} \text{CuO (màu đen)} + \text{H}_2\text{O}\) (màu của \(\text{Cu(OH)}_2\) ban đầu là xanh lam).
+- Khái niệm: bazơ là hợp chất mà phân tử gồm có một nguyên tử kim loại liên kết với một hay nhiều nhóm hiđroxit (-OH).
+- Đặc điểm: số nhóm hiđroxit bằng hoá trị của kim loại.
+- Danh pháp: tên bazơ = tên kim loại (kèm hoá trị nếu kim loại có nhiều hoá trị) + hiđroxit.
+  - Ví dụ: NaOH: natri hiđroxit; Fe(OH)3: sắt(III) hiđroxit.
+  - Đối chiếu danh pháp mới (GDPT 2018): sodium hydroxide, iron(III) hydroxide.
+- Phân loại (dựa vào tính tan trong nước):
+  - Bazơ tan (kiềm): NaOH, KOH, Ba(OH)2, Ca(OH)2,...
+  - Bazơ không tan: Cu(OH)2, Mg(OH)2, Fe(OH)3, Al(OH)3,...
 
----
+### 2. Tính chất hoá học của bazơ
 
-## III. OXIDE
+a) Tác dụng với chất chỉ thị:
 
-### 1. Oxide base
-* Tác dụng được với dung dịch acid tạo thành muối và nước.
-* *Ví dụ:* \(\text{Na}_2\text{O, BaO, CuO, FeO,...}\)
-  * \(\text{CuO} + 2\text{HCl} \longrightarrow \text{CuCl}_2 + \text{H}_2\text{O}\)
-  * \(\text{CaO} + 2\text{HCl} \longrightarrow \text{CaCl}_2 + \text{H}_2\text{O}\)
+- Dung dịch bazơ (kiềm) làm quỳ tím chuyển sang màu xanh.
+- Làm dung dịch phenolphtalein không màu chuyển sang màu hồng.
 
-### 2. Oxide acid
-* Tác dụng được với dung dịch base tạo thành muối và nước.
-* *Ví dụ:* \(\text{SO}_2, \text{SO}_3, \text{CO}_2, \text{P}_2\text{O}_5,...\)
-  * \(\text{CO}_2 + \text{Ca(OH)}_2 \longrightarrow \text{CaCO}_3\downarrow_{\text{trắng}} + \text{H}_2\text{O}\)
+b) Dung dịch bazơ tác dụng với oxit axit: tạo thành muối và nước.
 
-### 3. Oxide lưỡng tính
-* Tác dụng được với cả dung dịch base và dung dịch acid tạo thành muối và nước.
-* *Ví dụ:* \(\text{Al}_2\text{O}_3, \text{ZnO,...}\)
+- Ví dụ:
+  - CO2 + Ca(OH)2 -> CaCO3↓ + H2O
+  - 6KOH + P2O5 -> 2K3PO4 + 3H2O
 
-### 4. Oxide trung tính (Oxide không tạo muối)
-* Không tác dụng với dung dịch base, không tác dụng với dung dịch acid ở điều kiện thường.
-* *Ví dụ:* \(\text{CO, NO,...}\)
+c) Bazơ tác dụng với axit: tạo muối và nước (phản ứng trung hoà).
 
----
+- Ví dụ: Ca(OH)2 + 2HCl -> CaCl2 + 2H2O
+
+d) Bazơ không tan bị nhiệt phân huỷ: tạo ra oxit bazơ tương ứng và nước.
+
+- Ví dụ: Cu(OH)2 -> CuO + H2O (t°). Cu(OH)2 màu xanh lam, CuO màu đen.
+
+## III. OXIT
+
+### 1. Oxit bazơ
+
+- Thường là oxit của kim loại; tác dụng được với dung dịch axit tạo thành muối và nước.
+- Ví dụ: Na2O, BaO, CuO, FeO,...
+  - CuO + 2HCl -> CuCl2 + H2O
+  - CaO + 2HCl -> CaCl2 + H2O
+
+### 2. Oxit axit
+
+- Thường là oxit của phi kim; tác dụng được với dung dịch bazơ tạo thành muối và nước.
+- Ví dụ: SO2, SO3, CO2, P2O5,...
+  - CO2 + Ca(OH)2 -> CaCO3↓ (trắng) + H2O
+
+### 3. Oxit lưỡng tính
+
+- Tác dụng được với cả dung dịch axit và dung dịch bazơ tạo thành muối và nước.
+- Ví dụ: Al2O3, ZnO,...
+
+### 4. Oxit trung tính (oxit không tạo muối)
+
+- Không tác dụng với dung dịch axit, dung dịch bazơ ở điều kiện thường.
+- Ví dụ: CO, NO,...
 
 ## IV. MUỐI
 
 ### 1. Tác dụng với kim loại
-* Dung dịch muối có thể tác dụng với kim loại tạo thành muối mới và kim loại mới.
-* *Điều kiện:* Kim loại hoạt động hoá học mạnh hơn đẩy được kim loại hoạt động hoá học yếu hơn ra khỏi muối của nó (theo dãy hoạt động hóa học).
-* *Ví dụ:*
-  * \(\text{Fe} + \text{CuSO}_4 \longrightarrow \text{FeSO}_4 + \text{Cu}\downarrow\)
-  * \(\text{Cu} + 2\text{AgNO}_3 \longrightarrow \text{Cu(NO}_3)_2 + 2\text{Ag}\downarrow\)
 
-### 2. Tác dụng với dung dịch acid
-* Muối tác dụng với dung dịch acid tạo thành muối mới và acid mới.
-* *Điều kiện:* Sản phẩm tạo thành phải có chất bay hơi (chất khí) hoặc chất kết tủa không tan hoặc nước.
-* *Ví dụ:*
-  * \(\text{BaCl}_2 + \text{H}_2\text{SO}_4 \longrightarrow 2\text{HCl} + \text{BaSO}_4\downarrow\)
-  * \(\text{CaCO}_3 + 2\text{HCl} \longrightarrow \text{CaCl}_2 + \text{CO}_2\uparrow + \text{H}_2\text{O}\)
-  * *Lưu ý:* \(\text{NaCl}\) không phản ứng với dung dịch \(\text{H}_2\text{SO}_4\) loãng vì không sinh ra chất khí, kết tủa hay nước.
+- Dung dịch muối có thể tác dụng với kim loại tạo thành muối mới và kim loại mới.
+- Điều kiện: kim loại hoạt động hoá học mạnh hơn đẩy được kim loại hoạt động yếu hơn ra khỏi dung dịch muối của nó (theo dãy hoạt động hoá học; trừ các kim loại tan trong nước như Na, K, Ba, Ca — chúng phản ứng với nước trước).
+- Ví dụ:
+  - Fe + CuSO4 -> FeSO4 + Cu↓
+  - Cu + 2AgNO3 -> Cu(NO3)2 + 2Ag↓
 
-### 3. Tác dụng với dung dịch muối (Phản ứng trao đổi)
-* Hai dung dịch muối có thể tác dụng với nhau tạo thành hai muối mới.
-* *Điều kiện:* Sản phẩm tạo thành phải có chất khí, chất kết tủa hoặc nước.
-* *Ví dụ:*
-  * \(\text{AgNO}_3 + \text{NaCl} \longrightarrow \text{NaNO}_3 + \text{AgCl}\downarrow\)
-  * *Lưu ý:* \(\text{Fe(NO}_3)_2\) không phản ứng với dung dịch \(\text{NaCl}\) vì không tạo chất khí, chất kết tủa hoặc nước.
+### 2. Tác dụng với dung dịch axit
 
-### 4. Tác dụng với dung dịch base
-* Dung dịch muối tác dụng với dung dịch base tạo thành muối mới và base mới.
-* *Điều kiện:* Sản phẩm tạo thành phải có chất khí, chất kết tủa hoặc nước.
-* *Ví dụ:* \(\text{Na}_2\text{CO}_3 + \text{Ba(OH)}_2 \longrightarrow 2\text{NaOH} + \text{BaCO}_3\downarrow\)
+- Muối tác dụng với dung dịch axit tạo thành muối mới và axit mới.
+- Điều kiện: sản phẩm tạo thành phải có chất khí (chất bay hơi) hoặc chất kết tủa không tan.
+- Ví dụ:
+  - BaCl2 + H2SO4 -> BaSO4↓ + 2HCl
+  - CaCO3 + 2HCl -> CaCl2 + CO2↑ + H2O
+- Lưu ý: NaCl không phản ứng với dung dịch H2SO4 loãng vì không sinh ra chất khí hay kết tủa.
+
+### 3. Tác dụng với dung dịch muối (phản ứng trao đổi)
+
+- Hai dung dịch muối có thể tác dụng với nhau tạo thành hai muối mới.
+- Điều kiện: hai muối tham gia phải tan; sản phẩm phải có chất kết tủa (hoặc chất khí).
+- Ví dụ: AgNO3 + NaCl -> AgCl↓ + NaNO3
+- Lưu ý: Fe(NO3)2 không phản ứng với dung dịch NaCl vì không tạo chất kết tủa hay chất khí.
+
+### 4. Tác dụng với dung dịch bazơ
+
+- Dung dịch muối tác dụng với dung dịch bazơ tạo thành muối mới và bazơ mới.
+- Điều kiện: sản phẩm tạo thành phải có chất kết tủa (hoặc chất khí).
+- Ví dụ: Na2CO3 + Ba(OH)2 -> BaCO3↓ + 2NaOH
 
 ### 5. Phản ứng phân huỷ muối
-* Một số muối bị phân huỷ ở nhiệt độ cao như: \(\text{KClO}_3, \text{KMnO}_4, \text{CaCO}_3,...\)
-* *Ví dụ:*
-  * \(2\text{KClO}_3 \xrightarrow{t^\circ} 2\text{KCl} + 3\text{O}_2\uparrow\)
-  * \(\text{CaCO}_3 \xrightarrow{t^\circ} \text{CaO} + \text{CO}_2\uparrow\)
+
+- Một số muối bị phân huỷ ở nhiệt độ cao: KClO3, KMnO4, CaCO3,...
+- Ví dụ:
+  - 2KClO3 -> 2KCl + 3O2↑ (t°, xúc tác MnO2)
+  - CaCO3 -> CaO + CO2↑ (t°)
 
 ### 6. Tính tan trong nước của một số loại muối
-* Hầu hết muối **chloride** đều tan, trừ \(\text{AgCl}\) không tan và \(\text{PbCl}_2\) ít tan.
-* Các muối **nitrate** đều tan.
-* Hầu hết muối **sulfate** đều tan, trừ \(\text{BaSO}_4, \text{PbSO}_4\) không tan và \(\text{CaSO}_4, \text{Ag}_2\text{SO}_4\) ít tan.
-* Hầu hết muối **carbonate** và **phosphate** đều không tan trong nước, trừ \(\text{K}_2\text{CO}_3, \text{Na}_2\text{CO}_3, \text{K}_3\text{PO}_4\) và \(\text{Na}_3\text{PO}_4\).
-* *Màu sắc của một số dung dịch muối thường gặp:*
-  * Muối \(\text{Fe(II)}\): dung dịch màu lục nhạt.
-  * Muối \(\text{Fe(III)}\): dung dịch màu vàng nâu.
-  * Muối \(\text{Cu(II)}\): dung dịch màu xanh lam.
-  * Muối của \(\text{Na, K, Ca, Al, Zn}\): dung dịch không màu.
-  * Muối \(\text{Ni(II)}\): dung dịch màu lục.
 
----
+- Hầu hết muối clorua đều tan, trừ AgCl không tan và PbCl2 ít tan.
+- Các muối nitrat đều tan.
+- Hầu hết muối sunfat đều tan, trừ BaSO4, PbSO4 không tan và CaSO4, Ag2SO4 ít tan.
+- Hầu hết muối cacbonat và photphat không tan, trừ muối của Na, K (Na2CO3, K2CO3, Na3PO4, K3PO4).
+
+### 7. Màu sắc của một số dung dịch muối thường gặp
+
+- Muối Fe(II): dung dịch màu lục nhạt.
+- Muối Fe(III): dung dịch màu vàng nâu.
+- Muối Cu(II): dung dịch màu xanh lam.
+- Muối Ni(II): dung dịch màu lục.
+- Muối của Na, K, Ca, Al, Zn: dung dịch không màu.
+
+Ghi chú hiệu đính: sách gốc (trang 25) in "Fe(II) màu trắng xanh; Cu(II) màu đỏ gạch; muối Na, K, Ca, Al, Zn màu trắng" — đây là màu của chất rắn/kết tủa, không phải màu dung dịch (Cu2O mới có màu đỏ gạch; Fe(OH)2 màu trắng xanh). Bản chuẩn hoá dùng màu dung dịch đúng như trên.
 
 ## V. PHÂN BÓN HOÁ HỌC
 
 ### 1. Khái niệm
-* **Phân bón hoá học** là những hoá chất có chứa các nguyên tố dinh dưỡng \((\text{N, P, K,...})\), được bón cho cây nhằm nâng cao năng suất cây trồng.
+
+Phân bón hoá học là những hoá chất có chứa các nguyên tố dinh dưỡng (N, P, K,...), được bón cho cây nhằm nâng cao năng suất cây trồng.
 
 ### 2. Vai trò của một số nguyên tố đa lượng đối với cây trồng
-* **Nguyên tố Nitơ (N):** Giúp cây sinh trưởng và phát triển tốt, tham gia điều tiết các quá trình trao đổi chất của cây.
-* **Nguyên tố Phốt pho (P):** Kích thích sự phát triển bộ rễ thực vật.
-* **Nguyên tố Kali (K):** Kích thích cây trồng ra hoa, làm hạt và giúp cây tổng hợp chất diệp lục.
+
+- Nguyên tố N: giúp cây sinh trưởng và phát triển tốt, tham gia điều tiết các quá trình trao đổi chất của cây.
+- Nguyên tố P: kích thích sự phát triển bộ rễ thực vật.
+- Nguyên tố K: kích thích cây trồng ra hoa, làm hạt và giúp cây tổng hợp chất diệp lục.

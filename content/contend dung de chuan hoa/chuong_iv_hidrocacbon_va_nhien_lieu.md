@@ -1,43 +1,51 @@
-# CHƯƠNG IV: HIĐROCACBON & NHIÊN LIỆU (TRANG 93 - 100)
+# CHƯƠNG IV: HIĐROCACBON – NHIÊN LIỆU (đã chuẩn hoá)
+
+> Nguồn: ảnh trang 93–100 (sách kiến thức cơ bản và nâng cao Hoá 9).
+> Dùng cho bài học: b1-l1, b1-l2 (đại cương hữu cơ), b2-l1 (metan/ankan), b2-l2 (etilen/anken), b2-l3 (axetilen/ankin), b2-l4 (benzen/aren), b2-l5 (dầu mỏ, khí thiên nhiên, nhiên liệu), b2-l6 (nâng cao đốt cháy).
+> Quy ước chuẩn hoá: công thức text thuần (CH2=CH2, CH≡CH); điều kiện phản ứng ghi trong ngoặc; nhiệt độ tách nước rượu etylic thống nhất 170°C (H2SO4 đặc) — sách gốc chỗ ghi 170°C, chỗ ghi 180°C.
 
 ## I. MỘT SỐ KHÁI NIỆM CƠ BẢN
 
 ### 1. Khái niệm về hợp chất hữu cơ
-* **Hợp chất hữu cơ** là hợp chất của cacbon (trừ một số hợp chất đơn giản của cacbon như \(\text{CO, CO}_2, \text{H}_2\text{CO}_3\), các muối cacbonat kim loại,...).
-* *Ví dụ:* \(\text{CH}_4, \text{C}_2\text{H}_6, \text{C}_2\text{H}_5\text{OH}, \text{CH}_3\text{COOH},...\)
+
+- Hợp chất hữu cơ là hợp chất của cacbon (trừ một số hợp chất đơn giản của cacbon như CO, CO2, H2CO3, muối cacbonat kim loại,...).
+- Ví dụ: CH4, C2H6, C2H5OH, CH3COOH,...
 
 ### 2. Phân loại hợp chất hữu cơ
-Hợp chất hữu cơ hiện nay được phân loại đơn giản thành hai nhóm chính:
-* **Hiđrocacbon:** Là những hợp chất hữu cơ mà trong phân tử chỉ chứa hai nguyên tố là cacbon và hiđro.
-  * *Ví dụ:* \(\text{CH}_4, \text{C}_2\text{H}_4, \text{C}_2\text{H}_2, \text{C}_6\text{H}_6,...\)
-* **Dẫn xuất của hiđrocacbon:** Là những hợp chất hữu cơ ngoài cacbon và hiđro, trong phân tử còn có các nguyên tố khác như oxi, nitơ, clo, lưu huỳnh,...
-  * *Ví dụ:* \(\text{CH}_3\text{Cl}, \text{C}_2\text{H}_5\text{OH}, \text{CH}_3\text{COOH}, \text{C}_6\text{H}_{12}\text{O}_6,...\)
+
+Hợp chất hữu cơ được phân thành hai nhóm chính:
+
+- Hiđrocacbon: phân tử chỉ chứa hai nguyên tố cacbon và hiđro.
+  - Ví dụ: CH4, C2H4, C2H2, C6H6,...
+- Dẫn xuất của hiđrocacbon: ngoài cacbon và hiđro, phân tử còn có nguyên tố khác như oxi, nitơ, clo,...
+  - Ví dụ: CH3Cl, C2H5OH, CH3COOH, C6H12O6,...
 
 ### 3. Đặc điểm cấu tạo của hợp chất hữu cơ
-* **Hóa trị của cacbon:** Trong các hợp chất hữu cơ, cacbon luôn có hoá trị IV, hiđro hoá trị I, oxi hoá trị II, nitơ hoá trị III,...
-* **Mạch cacbon:** Các nguyên tử cacbon có thể liên kết trực tiếp với nhau tạo thành các loại mạch cacbon khác nhau:
-  * *Mạch không phân nhánh (mạch thẳng).*
-  * *Mạch phân nhánh.*
-  * *Mạch vòng.*
-* **Liên kết giữa các nguyên tử:** Mỗi nét gạch biểu diễn một liên kết hoá trị giữa hai nguyên tử. Liên kết có thể là:
-  * *Liên kết đơn (\(-\)):* Được tạo bởi 1 cặp electron dùng chung.
-  * *Liên kết đôi (\(=\)):* Được tạo bởi 2 cặp electron dùng chung.
-  * *Liên kết ba (\(\equiv\)):* Được tạo bởi 3 cặp electron dùng chung.
+
+- Hoá trị trong hợp chất hữu cơ: cacbon luôn có hoá trị IV, hiđro hoá trị I, oxi hoá trị II, nitơ hoá trị III.
+- Mạch cacbon: các nguyên tử cacbon có thể liên kết trực tiếp với nhau tạo thành:
+  - Mạch không phân nhánh (mạch thẳng).
+  - Mạch phân nhánh.
+  - Mạch vòng.
+- Liên kết giữa các nguyên tử (mỗi nét gạch là một liên kết hoá trị):
+  - Liên kết đơn (-): 1 cặp electron dùng chung.
+  - Liên kết đôi (=): 2 cặp electron dùng chung.
+  - Liên kết ba (≡): 3 cặp electron dùng chung.
 
 ### 4. Công thức cấu tạo (CTCT)
-* CTCT biểu diễn đầy đủ trật tự liên kết và cách thức liên kết giữa các nguyên tử trong phân tử.
-* Những chất hữu cơ có công thức cấu tạo tương tự nhau thì có tính chất hoá học tương tự nhau.
 
-### 5. Đồng phân và Đồng đẳng
-* **Đồng phân:** Là hiện tượng các chất khác nhau nhưng có cùng công thức phân tử (do trật tự liên kết giữa các nguyên tử khác nhau).
-  * *Ví dụ:* Với công thức \(\text{C}_2\text{H}_6\text{O}\) có hai đồng phân:
-    * Dimethyl ete: \(\text{CH}_3-\text{O}-\text{CH}_3\) (chất khí).
-    * Rượu etylic (ancol etylic): \(\text{CH}_3-\text{CH}_2-\text{OH}\) (chất lỏng).
-* **Đồng đẳng:** Là hiện tượng các chất hữu cơ có công thức phân tử hơn kém nhau một hoặc nhiều nhóm \(\text{CH}_2\) nhưng có cấu tạo và tính chất hoá học tương tự nhau.
-  * *Ví dụ:*
-    * Dãy ankan: \(\text{CH}_4, \text{C}_2\text{H}_6, \text{C}_3\text{H}_8,...\), công thức chung \(\text{C}_n\text{H}_{2n+2}\).
-    * Dãy anken: \(\text{C}_2\text{H}_4, \text{C}_3\text{H}_6, \text{C}_4\text{H}_8,...\), công thức chung \(\text{C}_n\text{H}_{2n}\).
-    * Dãy ancol no đơn chức: \(\text{CH}_3\text{OH}, \text{C}_2\text{H}_5\text{OH}, \text{C}_3\text{H}_7\text{OH},...\), công thức chung \(\text{C}_n\text{H}_{2n+1}\text{OH}\).
+- CTCT biểu diễn đầy đủ trật tự và cách thức liên kết giữa các nguyên tử trong phân tử.
+- Mỗi hợp chất hữu cơ có một trật tự liên kết xác định giữa các nguyên tử trong phân tử.
+- Những chất có cấu tạo tương tự nhau thì có tính chất hoá học tương tự nhau.
+
+### 5. Đồng phân và đồng đẳng
+
+- Đồng phân: các chất khác nhau nhưng có cùng công thức phân tử (do trật tự liên kết giữa các nguyên tử khác nhau).
+  - Ví dụ: C2H6O có hai đồng phân: rượu etylic CH3-CH2-OH (chất lỏng) và đimetyl ete CH3-O-CH3 (chất khí).
+- Đồng đẳng: các chất hữu cơ có công thức phân tử hơn kém nhau một hoặc nhiều nhóm CH2, có cấu tạo và tính chất hoá học tương tự nhau.
+  - Dãy ankan: CH4, C2H6, C3H8,... — công thức chung CnH2n+2.
+  - Dãy anken: C2H4, C3H6, C4H8,... — công thức chung CnH2n.
+  - Dãy rượu (ancol) no đơn chức: CH3OH, C2H5OH, C3H7OH,... — công thức chung CnH2n+1OH.
 
 ### 6. Tính chất chung của các hợp chất hữu cơ
 
@@ -45,121 +53,111 @@ Hợp chất hữu cơ hiện nay được phân loại đơn giản thành hai 
 - Phản ứng hữu cơ thường xảy ra chậm, phụ thuộc nhiều vào điều kiện phản ứng và thường tạo ra hỗn hợp sản phẩm.
 
 ### 7. Phương pháp tách biệt chất hữu cơ
-* **Phương pháp chưng cất:** Dựa vào sự khác nhau về nhiệt độ sôi của các chất lỏng trong hỗn hợp để tách chúng ra khỏi nhau khi đun nóng.
-  * *Ví dụ:* Chưng cất cồn (rượu etylic sôi ở \(78,3^\circ\text{C}\)) ra khỏi hỗn hợp với nước (sôi ở \(100^\circ\text{C}\)).
-* **Phương pháp chiết:** Dựa vào độ hòa tan khác nhau của các chất trong các dung môi.
-  * *Ví dụ:* Để tách ancol etylic khỏi hỗn hợp ancol etylic và dầu ăn, cho hỗn hợp vào nước rồi khuấy kĩ. Ancol etylic tan trong nước; dầu ăn không tan và nhẹ hơn nước nên nổi lên trên để tách riêng.
 
----
+- Phương pháp chưng cất: dựa vào sự khác nhau về nhiệt độ sôi của các chất lỏng trong hỗn hợp.
+  - Ví dụ: chưng cất tách rượu etylic (sôi ở 78,3°C) ra khỏi hỗn hợp với nước (sôi ở 100°C).
+- Phương pháp chiết: dựa vào độ hoà tan khác nhau của các chất trong các dung môi.
+  - Ví dụ: tách rượu etylic khỏi hỗn hợp với dầu ăn — cho hỗn hợp vào nước, khuấy kĩ: rượu tan trong nước; dầu ăn không tan, nhẹ hơn, nổi lên trên, tách riêng được.
 
 ## II. HIĐROCACBON
 
 ### 1. Khái niệm chung
-* Hiđrocacbon là hợp chất hữu cơ trong phân tử chỉ có hai nguyên tố cacbon và hiđro, có dạng tổng quát \(\text{C}_x\text{H}_y\).
-* *Quy luật chung:*
-  * Số nguyên tử hiđro luôn luôn là một số chẵn.
-  * Các hiđrocacbon đều không tan trong nước, nhẹ hơn nước.
-  * Các hiđrocacbon có số nguyên tử cacbon \(\le 4\) ở trạng thái khí trong điều kiện thường.
 
-### 2. Các loại Hiđrocacbon chính và tính chất tiêu biểu
+Hiđrocacbon là hợp chất hữu cơ mà phân tử chỉ có hai nguyên tố C và H, công thức dạng CxHy.
 
-```
-                   ┌── Ankan (liên kết đơn, mạch hở, ví dụ: Metan CH4)
-                   ├── Anken (có 1 liên kết đôi, mạch hở, ví dụ: Etilen C2H4)
-Hiđrocacbon ───────┼── Ankin (có 1 liên kết ba, mạch hở, ví dụ: Axetilen C2H2)
-                   └── Aren (có vòng benzen, ví dụ: Benzen C6H6)
-```
+Quy luật chung:
 
-#### A. ANKAN (Ví dụ tiêu biểu: Metan - \(\text{CH}_4\))
-* **Công thức tổng quát:** \(\text{C}_n\text{H}_{2n+2}\) (với \(n \ge 1\)).
-* **Đặc điểm cấu tạo:** Phân tử chỉ có các liên kết đơn \(\text{C}-\text{H}\) và \(\text{C}-\text{C}\) bền vững tạo thành mạch hở.
-* **Tính chất hoá học:**
-  * **Phản ứng thế với halogen (đặc trưng):** Thế nguyên tử H bằng nguyên tử halogen khi chiếu sáng.
-    * \(\text{CH}_4 + \text{Cl}_2 \xrightarrow{\text{askt}} \text{CH}_3\text{Cl (methyl chloride)} + \text{HCl}\)
-  * **Phản ứng crackinh (bẻ gãy mạch cacbon):**
-    * \(\text{C}_n\text{H}_{2n+2} \xrightarrow{\text{xúc tác, } t^\circ} \text{C}_a\text{H}_{2a+2} + \text{C}_b\text{H}_{2b}\) (với \(a+b=n\)).
-    * Ví dụ crackinh butan: \(\text{C}_4\text{H}_{10} \xrightarrow{\text{xt, } t^\circ} \text{C}_2\text{H}_6 + \text{C}_2\text{H}_4\).
-  * **Phản ứng cháy (tỏa nhiều nhiệt):**
-    * \(\text{C}_n\text{H}_{2n+2}+\dfrac{3n+1}{2}\text{O}_2\xrightarrow{t^\circ}n\text{CO}_2+(n+1)\text{H}_2\text{O}\)
-* **Điều chế:**
-  * Trong công nghiệp: Tách từ dầu mỏ hoặc khí thiên nhiên.
-  * Trong phòng thí nghiệm: \(\text{CH}_3\text{COONa} + \text{NaOH (rắn)} \xrightarrow{\text{CaO, } t^\circ} \text{CH}_4\uparrow + \text{Na}_2\text{CO}_3\).
+- Số nguyên tử hiđro trong phân tử luôn là số chẵn.
+- Các hiđrocacbon đều không tan trong nước, nhẹ hơn nước.
+- Hiđrocacbon có số nguyên tử cacbon ≤ 4 ở trạng thái khí trong điều kiện thường.
 
-#### B. ANKEN (Ví dụ tiêu biểu: Etilen - \(\text{C}_2\text{H}_4\))
-* **Công thức tổng quát:** \(\text{C}_n\text{H}_{2n}\) (với \(n \ge 2\)).
-* **Đặc điểm cấu tạo:** Có một liên kết đôi \(\text{C}=\text{C}\) mạch hở, trong đó có một liên kết kém bền dễ bị đứt ra trong phản ứng hóa học.
-* **Tính chất hoá học:**
-  * **Phản ứng cộng (đặc trưng):** Cộng halogen, hiđro, nước,... làm đứt liên kết kém bền.
-    * *Ví dụ cộng brom:* \(\text{CH}_2=\text{CH}_2 + \text{Br}_2 \longrightarrow \text{CH}_2\text{Br}-\text{CH}_2\text{Br}\) (làm mất màu nước brom đỏ cam).
-    * *Ví dụ cộng hiđro:* \(\text{C}_2\text{H}_4 + \text{H}_2 \xrightarrow{\text{Ni, } t^\circ} \text{C}_2\text{H}_6\).
-    * Tổng quát: \(\text{C}_n\text{H}_{2n}+\text{H}_2\xrightarrow{\text{Ni},\,t^\circ}\text{C}_n\text{H}_{2n+2}\).
-  * **Phản ứng trùng hợp:** Các phân tử etilen liên kết liên tiếp với nhau dưới xúc tác, nhiệt độ, áp suất tạo chuỗi polymer (Polyetilen - PE).
-    * \(n\text{CH}_2=\text{CH}_2 \xrightarrow{\text{xt, } p, t^\circ} \text{[-CH}_2-\text{CH}_2\text{-]}_n\)
-  * **Phản ứng cháy:** \(\text{C}_2\text{H}_4 + 3\text{O}_2 \xrightarrow{t^\circ} 2\text{CO}_2 + 2\text{H}_2\text{O}\).
-* **Điều chế:**
-  * Trong công nghiệp: Tách trong quá trình chế biến dầu mỏ hoặc điều chế từ ankan:
-    \[
-    \text{C}_n\text{H}_{2n+2}\xrightarrow{\text{xúc tác},\,t^\circ}\text{C}_n\text{H}_{2n}+\text{H}_2
-    \]
-  * Trong phòng thí nghiệm: \(\text{C}_2\text{H}_5\text{OH} \xrightarrow{\text{H}_2\text{SO}_4 \text{ đặc, } 170^\circ\text{C}} \text{C}_2\text{H}_4\uparrow + \text{H}_2\text{O}\).
+### 2. Phân loại
 
-#### C. ANKIN (Ví dụ tiêu biểu: Axetilen - \(\text{C}_2\text{H}_2\))
-* **Công thức tổng quát:** \(\text{C}_n\text{H}_{2n-2}\) (với \(n \ge 2\)).
-* **Đặc điểm cấu tạo:** Phân tử có một liên kết ba \(\text{C}\equiv\text{C}\) mạch hở, chứa hai liên kết kém bền dễ bị đứt trong phản ứng cộng.
-* **Tính chất hoá học:**
-  * **Phản ứng cộng:** Cộng hai giai đoạn làm mất màu dung dịch brom.
-    * \(\text{CH}\equiv\text{CH} + \text{Br}_2 \longrightarrow \text{CHBr}=\text{CHBr}\) (giai đoạn 1)
-    * \(\text{CHBr}=\text{CHBr} + \text{Br}_2 \longrightarrow \text{CHBr}_2-\text{CHBr}_2\) (giai đoạn 2)
-    * Cộng hiđro hoàn toàn: \(\text{CH}\equiv\text{CH} + 2\text{H}_2 \xrightarrow{\text{Ni, } t^\circ} \text{CH}_3-\text{CH}_3\).
-  * **Phản ứng cháy:**
-    \[
-    \text{C}_n\text{H}_{2n-2}+\frac{3n-1}{2}\text{O}_2
-    \longrightarrow n\text{CO}_2+(n-1)\text{H}_2\text{O}
-    \]
-* **Điều chế axetilen:**
-  * Từ đất đèn (canxi cacbua): \(\text{CaC}_2 + 2\text{H}_2\text{O} \longrightarrow \text{Ca(OH)}_2 + \text{C}_2\text{H}_2\uparrow\).
-  * Trong công nghiệp:
-    \[
-    \text{CaCO}_3\xrightarrow{t^\circ}\text{CaO}+\text{CO}_2
-    \]
-    \[
-    \text{CaO}+3\text{C}\xrightarrow{\text{lò điện}}\text{CaC}_2+\text{CO}
-    \]
-    \[
-    \text{CaC}_2+2\text{H}_2\text{O}\longrightarrow\text{Ca(OH)}_2+\text{C}_2\text{H}_2
-    \]
+- Ankan: chỉ có liên kết đơn, mạch hở — CnH2n+2 (n ≥ 1). Tiêu biểu: metan CH4.
+- Anken: có 1 liên kết đôi C=C, mạch hở — CnH2n (n ≥ 2). Tiêu biểu: etilen C2H4.
+- Ankin: có 1 liên kết ba C≡C, mạch hở — CnH2n-2 (n ≥ 2). Tiêu biểu: axetilen C2H2.
+- Aren: có vòng benzen — CnH2n-6 (n ≥ 6). Tiêu biểu: benzen C6H6.
 
-#### D. AREN (Ví dụ tiêu biểu: Benzen - \(\text{C}_6\text{H}_6\))
-* **Công thức tổng quát:** \(\text{C}_n\text{H}_{2n-6}\) với \(n\ge6\).
-* **Đặc điểm cấu tạo:** Phân tử có cấu trúc vòng 6 cạnh đều (vòng benzen) với 3 liên kết đơn luân phiên với 3 liên kết đôi. Cấu trúc vòng này cực kỳ bền vững, dẫn đến đặc điểm "khó cộng, dễ thế".
-* **Tính chất hoá học:**
-  * **Phản ứng thế (với halogen có xúc tác bột Fe):**
-    * \(\text{C}_6\text{H}_6 + \text{Br}_2 \xrightarrow{\text{bột Fe, } t^\circ} \text{C}_6\text{H}_5\text{Br (brombenzen)} + \text{HBr}\).
-  * **Phản ứng cộng (khó xảy ra, cần xúc tác mạnh):**
-    * \(\text{C}_6\text{H}_6 + 3\text{H}_2 \xrightarrow{\text{Ni, } t^\circ} \text{C}_6\text{H}_{12}\text{ (cyclohexan)}\).
-    * Benzen không cộng với brom hoặc clo trong dung dịch.
-* **Điều chế:** Từ hexane bằng phản ứng reforming/dehydro hóa ở nhiệt độ cao, xúc tác thích hợp:
-  * \(\text{C}_6\text{H}_{14} \xrightarrow{\text{xt, } t^\circ} \text{C}_6\text{H}_6 + 4\text{H}_2\).
+### A. ANKAN (tiêu biểu: metan CH4)
 
----
+- Công thức tổng quát: CnH2n+2 (n ≥ 1).
+- Đặc điểm cấu tạo: phân tử chỉ có các liên kết đơn C-H và C-C bền vững, mạch hở.
+- Tính chất hoá học:
+  - Phản ứng thế với halogen (phản ứng đặc trưng, khi chiếu sáng):
+    - CH4 + Cl2 -> CH3Cl (metyl clorua) + HCl (ánh sáng khuếch tán)
+  - Phản ứng cracking (bẻ gãy mạch cacbon):
+    - CnH2n+2 -> CaH2a+2 + CbH2b (xúc tác, t°; n = a + b, b ≥ 2)
+    - Ví dụ: C4H10 -> C2H6 + C2H4 (xúc tác, t°)
+  - Phản ứng cháy (toả nhiều nhiệt):
+    - CnH2n+2 + (3n+1)/2 O2 -> nCO2 + (n+1)H2O (t°)
+- Điều chế:
+  - Trong công nghiệp: tách từ dầu mỏ hoặc khí thiên nhiên.
+  - Trong phòng thí nghiệm: CH3COONa + NaOH (rắn) -> CH4↑ + Na2CO3 (CaO, t°)
+
+### B. ANKEN (tiêu biểu: etilen C2H4)
+
+- Công thức tổng quát: CnH2n (n ≥ 2).
+- Đặc điểm cấu tạo: có một liên kết đôi C=C mạch hở, trong đó có một liên kết kém bền, dễ đứt ra trong phản ứng hoá học.
+- Tính chất hoá học:
+  - Phản ứng cộng (đặc trưng): cộng halogen, hiđro, nước,...
+    - CH2=CH2 + Br2 -> CH2Br-CH2Br (làm mất màu dung dịch brom)
+    - C2H4 + H2 -> C2H6 (Ni, t°); tổng quát: CnH2n + H2 -> CnH2n+2 (Ni, t°)
+  - Phản ứng trùng hợp: các phân tử etilen kết hợp liên tiếp với nhau thành polime.
+    - nCH2=CH2 -> (-CH2-CH2-)n (xúc tác, áp suất, t°) — polietilen (PE)
+  - Phản ứng cháy: C2H4 + 3O2 -> 2CO2 + 2H2O (t°)
+- Điều chế:
+  - Trong công nghiệp: tách từ quá trình chế biến dầu mỏ; hoặc tách hiđro từ ankan: CnH2n+2 -> CnH2n + H2 (xúc tác, t°)
+  - Trong phòng thí nghiệm: C2H5OH -> C2H4↑ + H2O (H2SO4 đặc, 170°C)
+
+### C. ANKIN (tiêu biểu: axetilen C2H2)
+
+- Công thức tổng quát: CnH2n-2 (n ≥ 2).
+- Đặc điểm cấu tạo: có một liên kết ba C≡C mạch hở, chứa hai liên kết kém bền, dễ đứt lần lượt trong phản ứng cộng.
+- Tính chất hoá học:
+  - Phản ứng cộng brom (hai giai đoạn, làm mất màu dung dịch brom):
+    - CH≡CH + Br2 -> CHBr=CHBr
+    - CHBr=CHBr + Br2 -> CHBr2-CHBr2
+  - Cộng hiđro hoàn toàn: CH≡CH + 2H2 -> CH3-CH3 (Ni, t°)
+  - Phản ứng cháy: CnH2n-2 + (3n-1)/2 O2 -> nCO2 + (n-1)H2O (t°)
+- Điều chế axetilen:
+  - Từ đất đèn (canxi cacbua): CaC2 + 2H2O -> Ca(OH)2 + C2H2↑
+  - Trong công nghiệp, theo sơ đồ từ đá vôi và than:
+    - CaCO3 -> CaO + CO2 (t°)
+    - CaO + 3C -> CaC2 + CO (lò điện)
+    - CaC2 + 2H2O -> Ca(OH)2 + C2H2↑
+
+### D. AREN (tiêu biểu: benzen C6H6)
+
+- Công thức tổng quát: CnH2n-6 (n ≥ 6).
+- Đặc điểm cấu tạo: vòng 6 cạnh đều (vòng benzen) với 3 liên kết đôi xen kẽ 3 liên kết đơn. Cấu trúc vòng bền vững nên benzen "khó cộng, dễ thế".
+- Tính chất hoá học:
+  - Phản ứng thế với brom (xúc tác bột Fe, đun nóng):
+    - C6H6 + Br2 -> C6H5Br (brombenzen) + HBr (Fe, t°)
+  - Phản ứng cộng (khó xảy ra, cần xúc tác):
+    - C6H6 + 3H2 -> C6H12 (xiclohexan) (Ni, t°)
+    - Benzen không làm mất màu dung dịch brom (khác anken, ankin).
+- Điều chế: trong công nghiệp, benzen được tách ra khi chưng cất than đá hoặc điều chế từ ankan (reforming):
+  - C6H14 -> C6H6 + 4H2 (xúc tác, t°)
 
 ## III. DẦU MỎ, KHÍ THIÊN NHIÊN VÀ NHIÊN LIỆU
 
 ### 1. Dầu mỏ
-* Dầu mỏ là chất lỏng sánh, màu nâu đen, nhẹ hơn nước và không tan trong nước, là hỗn hợp của nhiều hiđrocacbon khác nhau.
-* **Chế biến dầu mỏ:** Bằng phương pháp chưng cất phân đoạn thu được các phân đoạn nhiên liệu khác nhau (Xăng, dầu hỏa, dầu diezen, dầu mazut, nhựa đường,...). Để tăng sản lượng xăng, người ta thực hiện phản ứng crackinh dầu mỏ.
-* **Phản ứng crackinh:** Bẻ gãy mạch cacbon của phân tử hiđrocacbon lớn thành các phân tử có mạch cacbon nhỏ hơn nhờ nhiệt độ và xúc tác.
-  \[
-  \text{C}_4\text{H}_{10}\xrightarrow{\text{xúc tác},\,t^\circ}\text{C}_2\text{H}_6+\text{C}_2\text{H}_4
-  \]
+
+- Dầu mỏ là chất lỏng sánh, màu nâu đen, nhẹ hơn nước, không tan trong nước; là hỗn hợp tự nhiên của nhiều hiđrocacbon.
+- Chế biến dầu mỏ: chưng cất phân đoạn thu được xăng, dầu hoả, dầu điezen, dầu mazut, nhựa đường,...
+- Để tăng sản lượng xăng, người ta dùng phản ứng cracking: bẻ gãy phân tử hiđrocacbon mạch dài thành các phân tử mạch ngắn hơn nhờ nhiệt độ và xúc tác.
+  - Ví dụ: C4H10 -> C2H6 + C2H4 (xúc tác, t°)
 
 ### 2. Khí thiên nhiên
-* Khí thiên nhiên nằm trong lòng đất. Thành phần chủ yếu là khí metan (\(\text{CH}_4\), chiếm khoảng 95% thể tích). Khí mỏ dầu (khí đồng hành) cũng chứa chủ yếu là metan (khoảng 75%).
+
+- Khí thiên nhiên nằm trong các mỏ khí dưới lòng đất; thành phần chủ yếu là metan (CH4 chiếm khoảng 95% thể tích).
+- Khí mỏ dầu (khí đồng hành) có trong các mỏ dầu, cũng chứa chủ yếu metan (khoảng 75%).
 
 ### 3. Nhiên liệu
-* Nhiên liệu là những chất cháy được, khi cháy tỏa nhiệt và phát sáng.
-* Phân loại:
-  * *Nhiên liệu rắn:* Than mỏ, gỗ.
-  * *Nhiên liệu lỏng:* Xăng, dầu hỏa, cồn (rượu).
-  * *Nhiên liệu khí:* Khí thiên nhiên, khí mỏ dầu, khí than.
-* Để sử dụng nhiên liệu hiệu quả cần cung cấp đủ oxi hoặc không khí, tăng diện tích tiếp xúc của nhiên liệu với oxi và điều chỉnh lượng nhiên liệu ở mức phù hợp.
+
+- Nhiên liệu là những chất cháy được, khi cháy toả nhiệt và phát sáng.
+- Phân loại:
+  - Nhiên liệu rắn: than mỏ, gỗ.
+  - Nhiên liệu lỏng: xăng, dầu hoả, rượu (cồn).
+  - Nhiên liệu khí: khí thiên nhiên, khí mỏ dầu, khí than.
+- Sử dụng nhiên liệu hiệu quả: cung cấp đủ oxi (không khí), tăng diện tích tiếp xúc của nhiên liệu với oxi, điều chỉnh lượng nhiên liệu ở mức phù hợp.
