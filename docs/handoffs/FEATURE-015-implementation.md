@@ -6,17 +6,18 @@ Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phả
 **mới nhất** (sau R2). Chi tiết từng vòng nằm ở các mục `## R1`/`## R2` bên
 dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu tài liệu, trước `## R2`).
 
-- Remediation state: VALIDATING (R2 xong, chờ Independent Reviewer; xem
-  mục "## R2 > Status" để có chi tiết đầy đủ)
+- Remediation state: VALIDATED (R1 + R2 xong, Independent Review đã đóng hết
+  finding; chờ R3. Xem mục "## R2 > Status"/"Independent verification" để có
+  chi tiết đầy đủ)
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
   thay đổi hành vi runtime (mở khoá bài, ôn câu sai, thi thử). Xem
   `docs/plans/FEATURE-015.md`.
 - Base SHA / candidate SHA: base `770e091` (origin/main) / candidate hiện
-  tại `c1f9ed5` (nhánh `feature/FEATURE-015`; R1 = `825d557`, R2 = `c1f9ed5`
-  chồng lên R1), chưa push.
-- Worktree state and dirty paths: sạch sau commit `c1f9ed5`; còn 1 file
+  tại `7e7ce30` (nhánh `feature/FEATURE-015`; R1 = `825d557`, R2 ban đầu =
+  `c1f9ed5`, sau remediation từ Independent Review = `7e7ce30`), chưa push.
+- Worktree state and dirty paths: sạch sau commit `7e7ce30`; còn 1 file
   untracked không thuộc phạm vi FEATURE-015:
   `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (có từ
   trước, ngoài `allowed_paths` — không đụng tới).
@@ -175,16 +176,18 @@ thẻ n2-l6-c6 (ví dụ chất dư): nH2 = 0,15 mol -> V(H2) = 0,15 * 24,79 = 3
 
 ## Status
 
-- Remediation state: VALIDATING (chờ Independent Reviewer)
+- Remediation state: VALIDATED (Implementer + Independent Reviewer xong,
+  toàn bộ finding đã đóng; xem "Independent verification")
 - Execution snapshot: Codex (Implementer) soạn nội dung trên cùng worktree
   `feature/FEATURE-015` nhưng không commit được — sandbox Codex chỉ có
   `git-metadata-read`, không có quyền ghi (`docs/runbooks/providers/codex.md`,
   profile `codex-claude-subagent`), báo lỗi `.git/index.lock: Read-only file
 system` khi thử `git commit`. Orchestrator (Claude Code) đã tự soát lại nội
   dung (xem "Numeric verification" — 16/16 giá trị đúng, sửa 4 id log lệch),
-  chạy lại toàn bộ gate không phải E2E, rồi commit thay: candidate
-  `c1f9ed5` trên `feature/FEATURE-015` (base `9df27b7`), chưa push
-  (`permissions.push=false` theo envelope R2).
+  chạy lại toàn bộ gate không phải E2E, rồi commit thay: candidate ban đầu
+  `c1f9ed5` trên `feature/FEATURE-015` (base `9df27b7`); sau 3 lượt Independent
+  Review và remediation, candidate cuối cùng là `7e7ce30` (xem "Independent
+  verification" để có danh sách đầy đủ commit sửa).
 - Evidence binding: chưa chạy `npm run evidence` dạng exact-snapshot đầy đủ
   vì `check:bundle` vẫn chặn (blocker #1, xem dưới) — log gate chạy tay trên
   candidate `c1f9ed5`, xem "Validation and blockers".
@@ -324,9 +327,41 @@ Blockers vòng R2 (kế thừa nguyên trạng từ R1, không phát sinh blocke
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING — dispatch
-  sang Antigravity (agy), Opus 4.6 effort medium, theo bảng Execution
-  assignment của plan; execution độc lập, không nhận transcript Implementer.
-- Exact candidate CI status: PENDING (candidate `c1f9ed5`, chưa push nên
-  chưa có CI run).
-- Findings and disposition: PENDING.
+- Verifier / execution identifier / independence method: Antigravity (agy),
+  3 lượt độc lập (không nhận transcript Implementer, chỉ đọc plan + handoff
+  - candidate snapshot):
+  1. R1 (n1, n2, migration tiến độ) — model Opus 4.6 (Thinking) — APPROVE.
+  2. R2 phần 1 (n3 Acid, n4 Base, n5 Oxide) — Opus 4.6 rồi Sonnet 4.6 đều
+     hết quota tài khoản giữa chừng; fallback Gemini 3.1 Pro (High) theo
+     xác nhận của nt0 — APPROVE_WITH_NOTES, 5 finding (4 áp dụng, 1 bỏ qua
+     có chủ đích).
+  3. R2 phần 2 (n6 Muối, n7 Mối quan hệ vô cơ) — Gemini 3.1 Pro (High) —
+     REMEDIATION_REQUIRED, 2 finding, cả hai đã đóng.
+- Exact candidate CI status: PENDING (chưa push nên chưa có CI run).
+- Findings and disposition (tổng cộng 7 finding qua 3 lượt, 5 đã sửa, 2 bỏ
+  qua có chủ đích):
+  1. `n1-l3-c9`: `"Oxit cao nhất"` viết hoa còn sót do script quy đổi phân
+     biệt hoa/thường — **đã sửa** thành `"Oxide cao nhất"` (`bac23dd`).
+  2. `n4-l3-c5` (2 chỗ): `"quặng boxide"` — lỗi lai ghép do thay chuỗi
+     oxit→oxide đè lên "boxit" (bauxite) — **đã sửa** thành `"quặng
+bauxite"` (`efc821e`).
+  3. `n5-l2-c…`, `n3-l1-c2`: `"acid sunfurơ"` trộn danh pháp mới/cũ — **đã
+     sửa** thành `"sulfurous acid"` (`efc821e`).
+  4. `n5-l1-c9` (5 chỗ, heading + body): `"Anhiđrit"` chính tả SGK cũ — **đã
+     sửa** thành `"Anhydride"` (`efc821e`).
+  5. `n3-l3-q10.acceptedAnswers`: `"sunfurơ"` đứng một mình trong danh sách
+     đáp án chấp nhận — **bỏ qua có chủ đích**, đúng khuyến nghị mức ưu tiên
+     thấp của reviewer (không phải nội dung hiển thị chính cho học sinh,
+     chỉ là alias khoan dung khi chấm).
+  6. `n4-base.json` + `n7-…json` (12 chỗ): `"hiđroxide"` — lỗi lai ghép
+     tương tự #2, thay oxit→oxide đè lên "hiđroxit" khi dùng như danh từ
+     chung — **đã sửa** thành `"hydroxide"` (`7e7ce30`). Phân biệt với dạng
+     đúng quy ước `"Sodium hydroxide (natri hiđroxit)"` — giữ nguyên.
+  7. `n2-l7-c7` (sót từ R1) và `n7-l3-q12.acceptedAnswers`: `"acid
+clohiđric/clohidric"` dùng trần (không trong ngoặc chú thích) — **đã
+     sửa** thành `"hydrochloric acid"` (`7e7ce30`).
+- Sau khi đóng finding: quét lại toàn bộ n1-n7 bằng regex tìm mọi từ chứa
+  "oxit"/"axit"/"bazơ" như substring — chỉ còn "hiđroxit" trong đúng dạng
+  chú thích tên cũ trong ngoặc; không phát hiện thêm lỗi lai ghép nào khác.
+  `validate-content`, `check:content-catalog`, `npm test` (245/245) đều xanh
+  sau mọi lần sửa. Candidate cuối cùng của R2 sau remediation: `7e7ce30`.
