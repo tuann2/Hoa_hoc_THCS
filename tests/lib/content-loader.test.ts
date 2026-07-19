@@ -12,8 +12,8 @@ describe('content loader', () => {
   beforeEach(() => resetContentLoaderForTests());
 
   it('loads one unit asynchronously and caches its promise result', async () => {
-    const first = await loadUnit('a1-nen-tang-hoa-hoc');
-    const second = await loadUnit('a1-nen-tang-hoa-hoc');
+    const first = await loadUnit('n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc');
+    const second = await loadUnit('n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc');
 
     expect(first).toBe(second);
     expect(first.lessons.length).toBeGreaterThan(0);
@@ -21,19 +21,22 @@ describe('content loader', () => {
 
   it('loads selected units/lesson/question only through async APIs', async () => {
     const units = await loadUnits([
-      'a1-nen-tang-hoa-hoc',
-      'b1-dai-cuong-huu-co'
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc',
+      'n2-phan-ung-hoa-hoc'
     ]);
-    const lesson = await loadLesson('a1-nen-tang-hoa-hoc', 'a1-l1');
+    const lesson = await loadLesson(
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc',
+      'n1-l1'
+    );
     const question = await loadQuestion(
-      'a1-nen-tang-hoa-hoc',
-      'a1-l1',
-      'a1-l1-q1'
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc',
+      'n1-l1',
+      'n1-l1-q1'
     );
 
     expect(units).toHaveLength(2);
-    expect(lesson.id).toBe('a1-l1');
-    expect(question.id).toBe('a1-l1-q1');
+    expect(lesson.id).toBe('n1-l1');
+    expect(question.id).toBe('n1-l1-q1');
   });
 
   it('rejects unknown units and does not poison the cache after a load failure', async () => {

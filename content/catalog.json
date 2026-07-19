@@ -1,15 +1,15 @@
 [
   {
-    "id": "a1-nen-tang-hoa-hoc",
+    "id": "n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc",
     "part": "inorganic",
-    "code": "A1",
-    "title": "Nền tảng hoá học",
+    "code": "N1",
+    "title": "Nguyên tử – Nguyên tố – Công thức hoá học",
     "order": 1,
-    "description": "Kiến thức nền Hoá 8: nguyên tử, công thức, mol, bảo toàn và các dạng toán mở đầu.",
+    "description": "Cấu tạo nguyên tử, nguyên tố hoá học, đơn chất – hợp chất – phân tử, hoá trị và cách lập công thức hoá học.",
     "status": "available",
     "lessons": [
       {
-        "id": "a1-l1",
+        "id": "n1-l1",
         "title": "Chất – hỗn hợp – tách chất; nguyên tử, p – n – e",
         "order": 1,
         "summary": "Phân biệt chất tinh khiết và hỗn hợp, các phương pháp tách chất, và cấu tạo nguyên tử (proton, nơtron, electron).",
@@ -18,7 +18,7 @@
         "calculationQuestionCount": 0
       },
       {
-        "id": "a1-l2",
+        "id": "n1-l2",
         "title": "Nguyên tố hoá học – nguyên tử khối; sơ lược bảng tuần hoàn",
         "order": 2,
         "summary": "Kí hiệu hoá học, nguyên tử khối, phân tử khối và cách sắp xếp nguyên tố trong bảng tuần hoàn.",
@@ -27,7 +27,7 @@
         "calculationQuestionCount": 0
       },
       {
-        "id": "a1-l3",
+        "id": "n1-l3",
         "title": "Đơn chất – hợp chất – phân tử; CTHH và ý nghĩa",
         "order": 3,
         "summary": "Phân biệt đơn chất và hợp chất, khái niệm phân tử, cách đọc và ý nghĩa của công thức hoá học.",
@@ -36,882 +36,87 @@
         "calculationQuestionCount": 0
       },
       {
-        "id": "a1-l4",
+        "id": "n1-l4",
         "title": "Hoá trị; lập CTHH theo hoá trị",
         "order": 4,
         "summary": "Khái niệm hoá trị, quy tắc hoá trị và các bước lập công thức hoá học đúng theo hoá trị.",
         "status": "available",
         "theoryQuestionCount": 12,
         "calculationQuestionCount": 1
-      },
+      }
+    ]
+  },
+  {
+    "id": "n2-phan-ung-hoa-hoc",
+    "part": "inorganic",
+    "code": "N2",
+    "title": "Phản ứng hoá học",
+    "order": 2,
+    "description": "Phản ứng hoá học và các loại phản ứng cơ bản, mol – tỉ khối chất khí, dung dịch – nồng độ, định luật bảo toàn khối lượng, tính theo phương trình hoá học và tốc độ phản ứng.",
+    "status": "available",
+    "lessons": [
       {
-        "id": "a1-l5",
-        "title": "Phản ứng hoá học; định luật bảo toàn khối lượng; cân bằng PTHH",
-        "order": 5,
-        "summary": "Dấu hiệu nhận biết phản ứng hoá học, định luật bảo toàn khối lượng và các bước cân bằng phương trình hoá học.",
+        "id": "n2-l1",
+        "title": "Phản ứng hoá học; các loại phản ứng",
+        "order": 1,
+        "summary": "Định nghĩa, điều kiện, dấu hiệu nhận biết phản ứng hoá học và bốn loại phản ứng cơ bản: hoá hợp, phân huỷ, thế, trao đổi.",
         "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
+        "theoryQuestionCount": 18,
+        "calculationQuestionCount": 0
       },
       {
-        "id": "a1-l6",
+        "id": "n2-l2",
         "title": "Mol – khối lượng mol – thể tích mol khí; tỉ khối chất khí",
-        "order": 6,
-        "summary": "Khái niệm mol, công thức chuyển đổi số mol - khối lượng - thể tích khí, và tỉ khối chất khí.",
+        "order": 2,
+        "summary": "Khái niệm mol, công thức chuyển đổi số mol – khối lượng – thể tích khí ở đkc (25°C, 1 bar), và tỉ khối chất khí.",
         "status": "available",
         "theoryQuestionCount": 3,
         "calculationQuestionCount": 10
       },
       {
-        "id": "a1-l7",
-        "title": "Tính theo CTHH và PTHH: %m, chất dư – chất hết, hiệu suất",
-        "order": 7,
-        "summary": "Tính thành phần phần trăm khối lượng, các bước giải toán theo PTHH, xác định chất dư - chất hết và hiệu suất phản ứng.",
+        "id": "n2-l3",
+        "title": "Dung dịch; độ tan",
+        "order": 3,
+        "summary": "Dung môi, chất tan, dung dịch bão hoà – chưa bão hoà, cách làm chất rắn tan nhanh hơn, độ tan và các yếu tố ảnh hưởng đến độ tan.",
+        "status": "available",
+        "theoryQuestionCount": 6,
+        "calculationQuestionCount": 7
+      },
+      {
+        "id": "n2-l4",
+        "title": "Nồng độ dung dịch (C%, CM); pha chế – pha loãng",
+        "order": 4,
+        "summary": "Công thức nồng độ phần trăm, nồng độ mol, chuyển đổi giữa hai loại nồng độ, cách pha chế – pha loãng dung dịch và quy tắc đường chéo.",
+        "status": "available",
+        "theoryQuestionCount": 6,
+        "calculationQuestionCount": 11
+      },
+      {
+        "id": "n2-l5",
+        "title": "Định luật bảo toàn khối lượng; phương trình hoá học",
+        "order": 5,
+        "summary": "Dấu hiệu nhận biết phản ứng hoá học, định luật bảo toàn khối lượng và các bước lập, cân bằng phương trình hoá học.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n2-l6",
+        "title": "Tính theo phương trình hoá học: %m, chất dư – chất hết, hiệu suất",
+        "order": 6,
+        "summary": "Tính thành phần phần trăm khối lượng, các bước giải toán theo PTHH, xác định chất dư – chất hết và hiệu suất phản ứng.",
         "status": "available",
         "theoryQuestionCount": 2,
         "calculationQuestionCount": 11
       },
       {
-        "id": "a1-l8",
-        "title": "Nâng cao: biện luận tìm nguyên tố/CTHH; cân bằng phản ứng phức tạp",
-        "order": 8,
-        "summary": "Phương pháp biện luận tìm nguyên tử khối qua phần trăm khối lượng hoặc phân tử khối, và cách cân bằng phương trình nhiều nguyên tố.",
+        "id": "n2-l7",
+        "title": "Tốc độ phản ứng và chất xúc tác",
+        "order": 7,
+        "summary": "Khái niệm tốc độ phản ứng và các yếu tố ảnh hưởng: nồng độ, nhiệt độ, diện tích bề mặt tiếp xúc và chất xúc tác.",
         "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a1-l9",
-        "title": "Nâng cao: bài toán hỗn hợp; tăng – giảm khối lượng; bảo toàn",
-        "order": 9,
-        "summary": "Phương pháp hệ phương trình cho hỗn hợp, phương pháp tăng giảm khối lượng, và bảo toàn nguyên tố/khối lượng trong bài toán nhiều chất.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      }
-    ]
-  },
-  {
-    "id": "a2-oxi-khong-khi",
-    "part": "inorganic",
-    "code": "A2",
-    "title": "Oxi – Không khí",
-    "order": 2,
-    "description": "Tính chất, điều chế oxi, oxit và các bài toán đốt cháy cơ bản.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a2-l1",
-        "title": "Tính chất – điều chế oxi; phản ứng hoá hợp, phân huỷ",
-        "order": 1,
-        "summary": "Tính chất vật lí, hoá học của oxi, cách điều chế trong phòng thí nghiệm và phân biệt phản ứng hoá hợp - phân huỷ.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "a2-l2",
-        "title": "Oxit: phân loại, gọi tên (mở đầu)",
-        "order": 2,
-        "summary": "Định nghĩa oxit, phân biệt bước đầu oxit axit - oxit bazơ và cách gọi tên oxit.",
-        "status": "available",
-        "theoryQuestionCount": 13,
+        "theoryQuestionCount": 15,
         "calculationQuestionCount": 0
-      },
-      {
-        "id": "a2-l3",
-        "title": "Không khí – sự cháy; nâng cao: bài toán đốt cháy hỗn hợp",
-        "order": 3,
-        "summary": "Thành phần không khí, khái niệm sự cháy - sự oxi hoá chậm và bài toán đốt cháy hỗn hợp khí.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      }
-    ]
-  },
-  {
-    "id": "a3-hidro-nuoc",
-    "part": "inorganic",
-    "code": "A3",
-    "title": "Hiđro – Nước",
-    "order": 3,
-    "description": "Hiđro, nước và phần nhập môn axit – bazơ – muối.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a3-l1",
-        "title": "Tính chất – điều chế hiđro; phản ứng thế; khử oxit kim loại",
-        "order": 1,
-        "summary": "Tính chất của khí hiđro, cách điều chế và phản ứng thế, khả năng khử oxit kim loại của H2.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "a3-l2",
-        "title": "Nước: tính chất; phản ứng với kim loại/oxit",
-        "order": 2,
-        "summary": "Thành phần, tính chất của nước và phản ứng của nước với kim loại mạnh, oxit bazơ, oxit axit.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "a3-l3",
-        "title": "Axit – bazơ – muối: định nghĩa, phân loại, gọi tên (mở đầu)",
-        "order": 3,
-        "summary": "Định nghĩa, phân loại và cách gọi tên bước đầu của axit, bazơ và muối.",
-        "status": "available",
-        "theoryQuestionCount": 10,
-        "calculationQuestionCount": 3
-      },
-      {
-        "id": "a3-l4",
-        "title": "Nâng cao: khử hỗn hợp oxit, bài toán H2 + oxit kim loại",
-        "order": 4,
-        "summary": "Phương pháp bảo toàn nguyên tố oxi và bảo toàn khối lượng để giải bài toán khử hỗn hợp oxit kim loại bằng H2.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      }
-    ]
-  },
-  {
-    "id": "a4-dung-dich",
-    "part": "inorganic",
-    "code": "A4",
-    "title": "Dung dịch",
-    "order": 4,
-    "description": "Độ tan, nồng độ, pha chế và các bài toán dung dịch trọng tâm HSG.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a4-l1",
-        "title": "Độ tan; các yếu tố ảnh hưởng",
-        "order": 1,
-        "summary": "Khái niệm dung dịch, độ tan và các yếu tố ảnh hưởng đến độ tan của chất rắn, chất khí trong nước.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "a4-l2",
-        "title": "Nồng độ % và nồng độ mol; chuyển đổi",
-        "order": 2,
-        "summary": "Công thức tính nồng độ phần trăm, nồng độ mol và cách chuyển đổi giữa hai loại nồng độ.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      },
-      {
-        "id": "a4-l3",
-        "title": "Pha chế – pha loãng dung dịch; quy tắc đường chéo",
-        "order": 3,
-        "summary": "Các bước pha chế dung dịch theo nồng độ cho trước, công thức pha loãng và quy tắc đường chéo khi trộn hai dung dịch.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "a4-l4",
-        "title": "Nâng cao: tinh thể ngậm nước; bài toán kết tinh",
-        "order": 4,
-        "summary": "Muối kết tinh ngậm nước, cách tính khối lượng chất tan/nước từ tinh thể ngậm nước, và bài toán kết tinh khi làm nguội dung dịch.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      },
-      {
-        "id": "a4-l5",
-        "title": "Nâng cao: bài toán dung dịch tổng hợp",
-        "order": 5,
-        "summary": "Trộn nhiều dung dịch cùng chất tan hoặc có phản ứng hoá học, và cách tính nồng độ phần trăm của dung dịch sau khi trộn/phản ứng.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      }
-    ]
-  },
-  {
-    "id": "a5-oxit",
-    "part": "inorganic",
-    "code": "A5",
-    "title": "Oxit",
-    "order": 5,
-    "description": "Phân loại oxit, tính chất của oxit bazơ, oxit axit và oxit lưỡng tính.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a5-l1",
-        "title": "Phân loại oxit và gọi tên",
-        "order": 1,
-        "summary": "Bốn loại oxit (bazơ, axit, lưỡng tính, trung tính), cách gọi tên và bài toán xác định nguyên tố từ công thức oxit.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a5-l2",
-        "title": "Tính chất hoá học của oxit bazơ; CaO – vôi",
-        "order": 2,
-        "summary": "Ba tính chất của oxit bazơ, vôi sống CaO và bài toán nung đá vôi, hỗn hợp oxit.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a5-l3",
-        "title": "Tính chất hoá học của oxit axit; SO2",
-        "order": 3,
-        "summary": "Ba tính chất của oxit axit, lưu huỳnh đioxit SO2 và bài toán CO2/SO2 tác dụng với kiềm.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a5-l4",
-        "title": "Nâng cao: oxit lưỡng tính; bài toán oxit + axit/kiềm",
-        "order": 4,
-        "summary": "Al2O3 và ZnO tác dụng với cả axit và kiềm; phương pháp giải bài toán hỗn hợp oxit tác dụng với axit.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      }
-    ]
-  },
-  {
-    "id": "a6-axit",
-    "part": "inorganic",
-    "code": "A6",
-    "title": "Axit",
-    "order": 6,
-    "description": "Từ tính chất chung đến HCl, H2SO4 và các bài toán axit trọng tâm của Hoá 9 nâng cao.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a6-l1",
-        "title": "Tính chất hoá học chung của axit",
-        "order": 1,
-        "summary": "Nhận biết axit, pH và các phản ứng cơ bản của axit với kim loại, bazơ, oxit bazơ, muối.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a6-l2",
-        "title": "Axit clohiđric HCl",
-        "order": 2,
-        "summary": "Tính chất, điều chế, nhận biết và bài toán định lượng gắn với HCl.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a6-l3",
-        "title": "Axit sunfuric: loãng và đặc",
-        "order": 3,
-        "summary": "So sánh H2SO4 loãng và H2SO4 đặc, tính háo nước, tính oxi hoá và phản ứng đặc trưng.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a6-l4",
-        "title": "Nâng cao: axit tác dụng kim loại và muối",
-        "order": 4,
-        "summary": "Tư duy dãy hoạt động, thứ tự phản ứng, chất dư và điều kiện tạo khí hoặc kết tủa.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a6-l5",
-        "title": "Nâng cao: bài toán hỗn hợp axit, axit đặc – loãng",
-        "order": 5,
-        "summary": "Quy đổi theo H+, theo số mol gốc axit và xử lí trường hợp axit đặc khác bản chất với axit loãng.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      }
-    ]
-  },
-  {
-    "id": "a7-bazo",
-    "part": "inorganic",
-    "code": "A7",
-    "title": "Bazơ",
-    "order": 7,
-    "description": "Bazơ tan, bazơ không tan và các bài toán CO2/SO2 với dung dịch kiềm.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a7-l1",
-        "title": "Tính chất hoá học chung của bazơ; bazơ tan và không tan",
-        "order": 1,
-        "summary": "Phân biệt kiềm và bazơ không tan, bốn tính chất hoá học của bazơ và phản ứng nhiệt phân.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a7-l2",
-        "title": "Natri hiđroxit NaOH; điều chế",
-        "order": 2,
-        "summary": "Tính chất, ứng dụng của NaOH và phương pháp điện phân dung dịch NaCl có màng ngăn.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a7-l3",
-        "title": "Canxi hiđroxit Ca(OH)2; ứng dụng",
-        "order": 3,
-        "summary": "Nước vôi trong, phản ứng nhận biết CO2, thang pH và các bài toán kết tủa CaCO3.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a7-l4",
-        "title": "Nâng cao: CO2/SO2 tác dụng với dung dịch kiềm",
-        "order": 4,
-        "summary": "Phương pháp tỉ lệ mol để biện luận muối trung hoà, muối axit hay hỗn hợp hai muối.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "a7-l5",
-        "title": "Nâng cao: hiđroxit lưỡng tính Al(OH)3, Zn(OH)2",
-        "order": 5,
-        "summary": "Hiđroxit lưỡng tính tan trong cả axit và kiềm; hiện tượng kết tủa rồi tan và bài toán kiềm dư.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      }
-    ]
-  },
-  {
-    "id": "a8-muoi-phan-bon",
-    "part": "inorganic",
-    "code": "A8",
-    "title": "Muối – Phân bón hoá học",
-    "order": 8,
-    "description": "Từ tính chất của muối đến phân bón và các bài toán biện luận kết tủa, khí trong Hoá 9.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a8-l1",
-        "title": "Tính chất hoá học của muối; phản ứng trao đổi",
-        "order": 1,
-        "summary": "Hệ thống các phản ứng của muối với kim loại, axit, bazơ, muối và điều kiện phản ứng trao đổi.",
-        "status": "available",
-        "theoryQuestionCount": 10,
-        "calculationQuestionCount": 3
-      },
-      {
-        "id": "a8-l2",
-        "title": "Một số muối quan trọng: NaCl, KNO3, muối cacbonat",
-        "order": 2,
-        "summary": "Khắc sâu tính chất, ứng dụng của NaCl, KNO3, CaCO3, Na2CO3 và NaHCO3.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a8-l3",
-        "title": "Muối axit và muối trung hoà; chuyển đổi qua lại",
-        "order": 3,
-        "summary": "Phân biệt muối axit, muối trung hoà và rèn tư duy đổi muối theo lượng axit/bazơ.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a8-l4",
-        "title": "Phân bón hoá học",
-        "order": 4,
-        "summary": "Phân đạm, lân, kali, NPK và nguyên tắc sử dụng phân bón an toàn, hợp lí.",
-        "status": "available",
-        "theoryQuestionCount": 10,
-        "calculationQuestionCount": 3
-      },
-      {
-        "id": "a8-l5",
-        "title": "Nâng cao: bài toán muối + muối/axit/kiềm",
-        "order": 5,
-        "summary": "Biện luận kết tủa, khí, phản ứng theo từng bước với hệ cacbonat, hiđrocacbonat và muối kim loại.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      }
-    ]
-  },
-  {
-    "id": "a9-moi-quan-he-hop-chat-vo-co",
-    "part": "inorganic",
-    "code": "A9",
-    "title": "Mối quan hệ giữa các hợp chất vô cơ",
-    "order": 9,
-    "description": "Liên hệ oxit – axit – bazơ – muối, chuỗi phản ứng và nhận biết tổng hợp.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a9-l1",
-        "title": "Sơ đồ mối quan hệ oxit – axit – bazơ – muối",
-        "order": 1,
-        "summary": "Sơ đồ chuyển hoá giữa bốn loại hợp chất vô cơ và các phản ứng minh hoạ cho từng mũi tên.",
-        "status": "available",
-        "theoryQuestionCount": 11,
-        "calculationQuestionCount": 2
-      },
-      {
-        "id": "a9-l2",
-        "title": "Chuỗi phản ứng vô cơ; điều chế nhiều bước",
-        "order": 2,
-        "summary": "Cách viết chuỗi phản ứng và lập sơ đồ điều chế một chất qua nhiều bước từ nguyên liệu quen thuộc.",
-        "status": "available",
-        "theoryQuestionCount": 11,
-        "calculationQuestionCount": 2
-      },
-      {
-        "id": "a9-l3",
-        "title": "Nâng cao: nhận biết – tách – tinh chế chất vô cơ",
-        "order": 3,
-        "summary": "Thuốc thử đặc trưng cho từng ion, quy trình trình bày bài nhận biết và kĩ thuật tách, tinh chế.",
-        "status": "available",
-        "theoryQuestionCount": 12,
-        "calculationQuestionCount": 1
-      },
-      {
-        "id": "a9-l4",
-        "title": "Nâng cao: bài tập tổng hợp 4 loại hợp chất",
-        "order": 4,
-        "summary": "Chiến lược giải bài tổng hợp: bảo toàn khối lượng, bảo toàn nguyên tố và đánh giá chất dư.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      }
-    ]
-  },
-  {
-    "id": "a10-kim-loai",
-    "part": "inorganic",
-    "code": "A10",
-    "title": "Kim loại",
-    "order": 10,
-    "description": "Tính chất chung, dãy hoạt động, nhôm, sắt và các bài toán kim loại với axit hoặc muối.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a10-l1",
-        "title": "Tính chất chung; dãy hoạt động hoá học",
-        "order": 1,
-        "summary": "Tính chất vật lí, hoá học chung của kim loại và dãy hoạt động hoá học.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a10-l2",
-        "title": "Nhôm; sắt; hợp kim gang – thép",
-        "order": 2,
-        "summary": "Tính chất hoá học đặc trưng của nhôm và sắt, phản ứng nhiệt nhôm và hợp kim gang - thép.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "a10-l3",
-        "title": "Ăn mòn kim loại và bảo vệ",
-        "order": 3,
-        "summary": "Khái niệm ăn mòn kim loại, các yếu tố ảnh hưởng và biện pháp bảo vệ kim loại khỏi ăn mòn.",
-        "status": "available",
-        "theoryQuestionCount": 13,
-        "calculationQuestionCount": 0
-      },
-      {
-        "id": "a10-l4",
-        "title": "Nâng cao: kim loại + dung dịch muối (biện luận)",
-        "order": 4,
-        "summary": "Nguyên tắc kim loại đẩy kim loại khỏi muối, thứ tự phản ứng khi có nhiều muối và xác định chất rắn sau phản ứng.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a10-l5",
-        "title": "Nâng cao: hỗn hợp kim loại + axit; chất dư",
-        "order": 5,
-        "summary": "Cách xác định kim loại dư hay axit dư và giải bài toán hỗn hợp nhiều kim loại tác dụng với axit.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      }
-    ]
-  },
-  {
-    "id": "a11-phi-kim",
-    "part": "inorganic",
-    "code": "A11",
-    "title": "Phi kim",
-    "order": 11,
-    "description": "Phi kim, clo, cacbon, silic và các bài toán muối cacbonat với axit.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a11-l1",
-        "title": "Tính chất chung của phi kim",
-        "order": 1,
-        "summary": "Tính chất vật lí, hoá học chung của phi kim và mức độ hoạt động hoá học của phi kim.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "a11-l2",
-        "title": "Clo; điều chế và ứng dụng; nước Gia-ven, clorua vôi",
-        "order": 2,
-        "summary": "Tính chất, cách điều chế clo và các hợp chất tẩy màu - khử trùng: nước Gia-ven, clorua vôi.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "a11-l3",
-        "title": "Cacbon và các oxit của cacbon; muối cacbonat",
-        "order": 3,
-        "summary": "Các dạng thù hình của cacbon, tính chất của CO - CO2 và muối cacbonat.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "a11-l4",
-        "title": "Silic – công nghiệp silicat",
-        "order": 4,
-        "summary": "Tính chất của silic, silic đioxit và các ngành công nghiệp silicat: gốm sứ, xi măng, thuỷ tinh.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a11-l5",
-        "title": "Nâng cao: CO khử oxit; muối cacbonat + axit",
-        "order": 5,
-        "summary": "Phương pháp bảo toàn oxi khi CO khử oxit kim loại, và thứ tự phản ứng khi nhỏ từ từ axit vào muối cacbonat.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      }
-    ]
-  },
-  {
-    "id": "a12-tong-hop-vo-co",
-    "part": "inorganic",
-    "code": "A12",
-    "title": "Chuyên đề tổng hợp Vô cơ",
-    "order": 12,
-    "description": "Chuỗi phản ứng, nhận biết, tách chất và đề tổng hợp dành cho học sinh thi HSG.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "a12-l1",
-        "title": "Chuỗi phản ứng – điều chế nhiều bước",
-        "order": 1,
-        "summary": "Viết chuỗi phản ứng 5-6 bước và điều chế chất vô cơ từ đá vôi, muối ăn, quặng pirit, không khí và nước.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "a12-l2",
-        "title": "Nhận biết không giới hạn/giới hạn thuốc thử; tách chất",
-        "order": 2,
-        "summary": "Nhận biết đồng thời nhiều chất mất nhãn khi bị giới hạn thuốc thử và chọn quy trình tách, tinh chế phù hợp cho hỗn hợp vô cơ.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "a12-l3",
-        "title": "Bài tập biện luận theo điều kiện",
-        "order": 3,
-        "summary": "Biện luận xác định kim loại, công thức chất và lượng chất phản ứng khi đề bài cho dữ kiện về khí, chất dư hoặc hoá trị.",
-        "status": "available",
-        "theoryQuestionCount": 4,
-        "calculationQuestionCount": 9
-      },
-      {
-        "id": "a12-l4",
-        "title": "Đề tổng hợp vô cơ theo cấu trúc đề thi chuyên",
-        "order": 4,
-        "summary": "Rèn kiểu bài tổng hợp nhiều mảng vô cơ trong cùng một câu hỏi: oxit, axit, bazơ, muối, kim loại và phi kim.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      }
-    ]
-  },
-  {
-    "id": "b1-dai-cuong-huu-co",
-    "part": "organic",
-    "code": "B1",
-    "title": "Đại cương về hợp chất hữu cơ",
-    "order": 1,
-    "description": "Khái niệm, phân loại, công thức cấu tạo và phương pháp lập công thức phân tử hợp chất hữu cơ.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "b1-l1",
-        "title": "Khái niệm; phân loại hiđrocacbon/dẫn xuất",
-        "order": 1,
-        "summary": "Nắm khái niệm hợp chất hữu cơ, hoá học hữu cơ và cách phân loại hiđrocacbon, dẫn xuất bằng các ví dụ quen thuộc.",
-        "status": "available",
-        "theoryQuestionCount": 13,
-        "calculationQuestionCount": 0
-      },
-      {
-        "id": "b1-l2",
-        "title": "Cấu tạo phân tử hợp chất hữu cơ; CTCT",
-        "order": 2,
-        "summary": "Hiểu hoá trị trong hợp chất hữu cơ, các kiểu mạch cacbon và ý nghĩa của công thức cấu tạo viết bằng text đơn giản.",
-        "status": "available",
-        "theoryQuestionCount": 13,
-        "calculationQuestionCount": 0
-      },
-      {
-        "id": "b1-l3",
-        "title": "Nâng cao: lập CTPT từ % khối lượng, sản phẩm đốt cháy",
-        "order": 3,
-        "summary": "Rèn phương pháp tìm công thức đơn giản nhất và công thức phân tử từ phần trăm khối lượng, dữ kiện CO2, H2O và phân tử khối.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      }
-    ]
-  },
-  {
-    "id": "b2-hidrocacbon-nhien-lieu",
-    "part": "organic",
-    "code": "B2",
-    "title": "Hiđrocacbon – Nhiên liệu",
-    "order": 2,
-    "description": "Metan, etilen, axetilen, benzen và các dạng toán đốt cháy hiđrocacbon.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "b2-l1",
-        "title": "Metan: cấu tạo, phản ứng thế",
-        "order": 1,
-        "summary": "Nắm cấu tạo tứ diện của metan, phản ứng cháy và phản ứng thế với clo có ánh sáng.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "b2-l2",
-        "title": "Etilen: liên kết đôi, phản ứng cộng, trùng hợp",
-        "order": 2,
-        "summary": "Hiểu liên kết đôi trong etilen, phản ứng cộng với Br2, H2, HCl và phản ứng trùng hợp tạo polietilen.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "b2-l3",
-        "title": "Axetilen: liên kết ba, phản ứng cộng; điều chế",
-        "order": 3,
-        "summary": "Hiểu liên kết ba trong axetilen, phản ứng cộng theo từng giai đoạn và cách điều chế từ canxi cacbua.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "b2-l4",
-        "title": "Benzen: cấu tạo vòng, thế/cộng",
-        "order": 4,
-        "summary": "Nắm cấu tạo vòng 6 cạnh của benzen, phản ứng thế với brom có xúc tác sắt và phản ứng cộng hiđro khó hơn hiđrocacbon mạch hở.",
-        "status": "available",
-        "theoryQuestionCount": 7,
-        "calculationQuestionCount": 6
-      },
-      {
-        "id": "b2-l5",
-        "title": "Dầu mỏ – khí thiên nhiên – nhiên liệu",
-        "order": 5,
-        "summary": "Hiểu thành phần của dầu mỏ, khí thiên nhiên, chưng cất phân đoạn và nguyên tắc sử dụng nhiên liệu hiệu quả, an toàn.",
-        "status": "available",
-        "theoryQuestionCount": 9,
-        "calculationQuestionCount": 4
-      },
-      {
-        "id": "b2-l6",
-        "title": "Nâng cao: bài toán đốt cháy hiđrocacbon, hỗn hợp khí",
-        "order": 6,
-        "summary": "Rèn kĩ năng tính toán đốt cháy hiđrocacbon, xác định M trung bình của hỗn hợp khí và biện luận công thức theo dãy đồng đẳng.",
-        "status": "available",
-        "theoryQuestionCount": 3,
-        "calculationQuestionCount": 10
-      }
-    ]
-  },
-  {
-    "id": "b3-dan-xuat-chua-oxi",
-    "part": "organic",
-    "code": "B3",
-    "title": "Dẫn xuất chứa oxi",
-    "order": 3,
-    "description": "Rượu etylic, axit axetic, chất béo và các bài toán hiệu suất hữu cơ cơ bản đến nâng cao.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "b3-l1",
-        "title": "Rượu etylic: cấu tạo, tính chất, độ rượu",
-        "order": 1,
-        "summary": "Nắm công thức CH3-CH2-OH, tính chất cơ bản của rượu etylic và cách tính độ rượu theo phần trăm thể tích.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "b3-l2",
-        "title": "Axit axetic: tính chất axit, phản ứng este hoá",
-        "order": 2,
-        "summary": "Hiểu cấu tạo CH3COOH, tính axit yếu của axit axetic và phản ứng este hoá với rượu etylic.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "b3-l3",
-        "title": "Mối liên hệ etilen – rượu etylic – axit axetic",
-        "order": 3,
-        "summary": "Theo dõi các quá trình chuyển hoá từ etilen hoặc glucozơ thành rượu etylic rồi oxi hoá thành axit axetic.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      },
-      {
-        "id": "b3-l4",
-        "title": "Chất béo; xà phòng hoá",
-        "order": 4,
-        "summary": "Hiểu chất béo là este của glixerol với axit béo, nắm tính chất cơ bản và phản ứng xà phòng hoá.",
-        "status": "available",
-        "theoryQuestionCount": 10,
-        "calculationQuestionCount": 3
-      },
-      {
-        "id": "b3-l5",
-        "title": "Nâng cao: hiệu suất este hoá/lên men; bài toán độ rượu",
-        "order": 5,
-        "summary": "Vận dụng đồng thời công thức độ rượu, khối lượng riêng và hiệu suất phản ứng để giải các bài toán hữu cơ THCS nâng cao.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      }
-    ]
-  },
-  {
-    "id": "b4-gluxit-protein-polime",
-    "part": "organic",
-    "code": "B4",
-    "title": "Gluxit – Protein – Polime",
-    "order": 4,
-    "description": "Glucozơ, saccarozơ, tinh bột, xenlulozơ, protein, polime và các bài toán chuyển hoá gluxit.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "b4-l1",
-        "title": "Glucozơ; phản ứng tráng gương; lên men",
-        "order": 1,
-        "summary": "Nắm công thức phân tử của glucozơ, phản ứng tráng gương và phản ứng lên men tạo rượu etylic, CO2.",
-        "status": "available",
-        "theoryQuestionCount": 6,
-        "calculationQuestionCount": 7
-      },
-      {
-        "id": "b4-l2",
-        "title": "Saccarozơ; thuỷ phân",
-        "order": 2,
-        "summary": "Hiểu công thức phân tử của saccarozơ, tính không tráng gương trực tiếp và phản ứng thuỷ phân tạo glucozơ, fructozơ.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      },
-      {
-        "id": "b4-l3",
-        "title": "Tinh bột và xenlulozơ",
-        "order": 3,
-        "summary": "Phân biệt tinh bột và xenlulozơ qua cấu trúc chung, tính chất đặc trưng, phản ứng thuỷ phân và ứng dụng.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
-      },
-      {
-        "id": "b4-l4",
-        "title": "Protein",
-        "order": 4,
-        "summary": "Nắm thành phần nguyên tố, đơn vị cấu tạo, tính chất đông tụ, thuỷ phân và vai trò sinh học của protein.",
-        "status": "available",
-        "theoryQuestionCount": 13,
-        "calculationQuestionCount": 0
-      },
-      {
-        "id": "b4-l5",
-        "title": "Polime – chất dẻo, tơ, cao su",
-        "order": 5,
-        "summary": "Hiểu khái niệm polime, các ví dụ quen thuộc về chất dẻo, tơ, cao su và phân biệt vật liệu thiên nhiên, tổng hợp.",
-        "status": "available",
-        "theoryQuestionCount": 13,
-        "calculationQuestionCount": 0
-      },
-      {
-        "id": "b4-l6",
-        "title": "Nâng cao: chuỗi chuyển hoá gluxit; bài toán lên men – hiệu suất nhiều giai đoạn",
-        "order": 6,
-        "summary": "Luyện chuỗi tinh bột -> glucozơ -> rượu etylic -> axit axetic và các bài toán hiệu suất nhiều giai đoạn, độ rượu.",
-        "status": "available",
-        "theoryQuestionCount": 5,
-        "calculationQuestionCount": 8
-      }
-    ]
-  },
-  {
-    "id": "b5-tong-hop-huu-co",
-    "part": "organic",
-    "code": "B5",
-    "title": "Chuyên đề tổng hợp Hữu cơ",
-    "order": 5,
-    "description": "Biện luận công thức phân tử, chuỗi phản ứng hữu cơ và các bài tổng hợp theo dạng đề HSG/chuyên.",
-    "status": "available",
-    "lessons": [
-      {
-        "id": "b5-l1",
-        "title": "Biện luận công thức phân tử hợp chất hữu cơ",
-        "order": 1,
-        "summary": "Luyện cách đi từ % khối lượng, sản phẩm đốt cháy và điều kiện bài toán để suy ra công thức phân tử hợp chất hữu cơ.",
-        "status": "available",
-        "theoryQuestionCount": 3,
-        "calculationQuestionCount": 10
-      },
-      {
-        "id": "b5-l2",
-        "title": "Chuỗi phản ứng hữu cơ; nhận biết chất hữu cơ",
-        "order": 2,
-        "summary": "Luyện viết chuỗi chuyển hoá quen thuộc và chọn thuốc thử thích hợp để nhận biết các chất hữu cơ thường gặp.",
-        "status": "available",
-        "theoryQuestionCount": 11,
-        "calculationQuestionCount": 2
-      },
-      {
-        "id": "b5-l3",
-        "title": "Đề tổng hợp hữu cơ theo cấu trúc đề thi chuyên",
-        "order": 3,
-        "summary": "Rèn các câu tổng hợp bao quát hiđrocacbon, dẫn xuất chứa oxi, gluxit và polime theo mạch đề HSG/chuyên.",
-        "status": "available",
-        "theoryQuestionCount": 8,
-        "calculationQuestionCount": 5
       }
     ]
   }

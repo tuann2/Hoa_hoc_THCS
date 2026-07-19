@@ -1,0 +1,750 @@
+{
+  "id": "n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc",
+  "part": "inorganic",
+  "code": "N1",
+  "title": "Nguyên tử – Nguyên tố – Công thức hoá học",
+  "order": 1,
+  "description": "Cấu tạo nguyên tử, nguyên tố hoá học, đơn chất – hợp chất – phân tử, hoá trị và cách lập công thức hoá học.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n1-l1",
+      "title": "Chất – hỗn hợp – tách chất; nguyên tử, p – n – e",
+      "order": 1,
+      "summary": "Phân biệt chất tinh khiết và hỗn hợp, các phương pháp tách chất, và cấu tạo nguyên tử (proton, nơtron, electron).",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n1-l1-c1",
+          "heading": "Chất tinh khiết và hỗn hợp",
+          "body": "Chất tinh khiết chỉ gồm một chất duy nhất, có tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy...). Hỗn hợp gồm hai hay nhiều chất trộn lẫn, tính chất phụ thuộc thành phần.\nVí dụ: nước cất là chất tinh khiết; nước muối, không khí, nước chanh là hỗn hợp."
+        },
+        {
+          "id": "n1-l1-c2",
+          "heading": "Các phương pháp tách chất",
+          "body": "Lọc: tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc.\nCô cạn: làm bay hơi dung môi để thu chất tan rắn (tách muối ăn khỏi nước muối).\nChưng cất: dựa vào sự khác nhau về nhiệt độ sôi để tách các chất lỏng tan lẫn vào nhau.\nChiết: tách hai chất lỏng không tan vào nhau (dầu ăn và nước) bằng phễu chiết."
+        },
+        {
+          "id": "n1-l1-c3",
+          "heading": "Cấu tạo nguyên tử",
+          "body": "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân (chứa proton mang điện dương và nơtron không mang điện) ở tâm, và lớp vỏ electron mang điện âm chuyển động xung quanh.\nVì nguyên tử trung hoà điện nên số proton (p) luôn bằng số electron (e)."
+        },
+        {
+          "id": "n1-l1-c4",
+          "heading": "Nâng cao: Nhận biết hỗn hợp và dung dịch cẩn thận",
+          "body": "Không nên kết luận một mẫu là chất tinh khiết chỉ vì nó trong suốt, một màu hoặc không thấy cặn — dung dịch muối ăn, dung dịch đường, không khí đều trông đồng nhất nhưng vẫn là hỗn hợp. Dấu hiệu đáng tin hơn là tính chất vật lí xác định (nhiệt độ sôi, nhiệt độ nóng chảy, khối lượng riêng cố định trong điều kiện nhất định); hỗn hợp có các tính chất này thay đổi theo tỉ lệ thành phần.\nDung dịch là một loại hỗn hợp đồng nhất gồm chất tan và dung môi (ví dụ nước muối: muối ăn là chất tan, nước là dung môi). Điểm dễ nhầm: khi chất rắn đã tan hết trong nước thì không thể tách lại bằng lọc thông thường, vì hạt chất tan đi qua giấy lọc cùng dung môi — muốn thu lại chất tan rắn phải cô cạn hoặc kết tinh, muốn thu dung môi sạch phải chưng cất."
+        },
+        {
+          "id": "n1-l1-c5",
+          "heading": "Nâng cao: Thêm kĩ thuật tách chất",
+          "body": "Ngoài 4 phương pháp cơ bản, đề nâng cao có thể dùng thêm:\nHoà tan chọn lọc: cho dung môi vào hỗn hợp rắn để chỉ một chất tan, lọc bỏ phần không tan, rồi cô cạn dung dịch để thu lại chất đã tan (ví dụ: hỗn hợp muối ăn và cát — cho nước vào để muối tan, lọc bỏ cát, cô cạn thu muối). Đây thực chất là kết hợp hoà tan + lọc + cô cạn, không phải phương pháp chiết.\nDựa vào khối lượng riêng: chất lỏng nặng hơn thường nằm dưới, nhẹ hơn nổi lên (dầu ăn nổi trên nước); chất rắn nặng hơn và không tan thì lắng xuống (cát lắng trong nước). Cách này chỉ có ích khi các chất không tan lẫn hoặc không tạo dung dịch đồng nhất.\nThăng hoa: một số chất rắn khi đun nóng chuyển thẳng thành hơi rồi ngưng lại thành rắn ở nơi lạnh hơn (ví dụ iot lẫn cát: đun nhẹ, iot thăng hoa và ngưng lại thành tinh thể, cát không thăng hoa nên ở lại). Đây là phương pháp vật lí, không phải phản ứng hoá học."
+        },
+        {
+          "id": "n1-l1-c6",
+          "heading": "Nâng cao: Biện luận hạt (p – n – e)",
+          "body": "Gọi p là số proton, e là số electron, n là số nơtron. Nguyên tử trung hoà nên p = e, vì vậy tổng số hạt là p + e + n = 2p + n. Số hạt mang điện gồm proton và electron nên bằng 2p; số hạt không mang điện là n.\nCách lập hệ: dùng dữ kiện tổng số hạt để viết 2p + n = tổng. Dữ kiện so sánh sẽ cho phương trình thứ hai: \"số hạt mang điện nhiều hơn số hạt không mang điện là X\" nghĩa là 2p - n = X; \"số hạt mang điện gấp k lần số hạt không mang điện\" nghĩa là 2p = k.n. Giải hai phương trình để tìm p, rồi suy ra e = p và số hiệu nguyên tử cũng bằng p. Khi chỉ có một phương trình, có thể thử các giá trị p nguyên dương và kiểm tra n nguyên không âm; với nhiều nguyên tố nhẹ thường gặp ở THCS (trừ hiđro), tỉ lệ n/p thường nằm khoảng 1 đến 1,5 nên dùng được để loại nghiệm vô lí — đây chỉ là phép kiểm tra nhanh, không thay thế việc giải hệ."
+        },
+        {
+          "id": "n1-l1-c7",
+          "heading": "Nâng cao: Số khối và các bẫy thuật ngữ hay gặp",
+          "body": "Số khối A là đại lượng được định nghĩa đúng bằng tổng số proton và nơtron (A = p + n) — đây là số nguyên xác định, không phải giá trị tính gần đúng. Số khối khác với nguyên tử khối tương đối ghi trong bảng tuần hoàn (ví dụ Cl = 35,5), vốn là giá trị trung bình theo các đồng vị nên có thể không phải số nguyên.\nMột số bẫy khi đọc đề: \"hạt mang điện\" gồm cả proton và electron (không chỉ proton); \"hạt trong hạt nhân\" chỉ gồm proton và nơtron (không có electron); khi đề hỏi số khối thì trả lời p + n, không trả lời tổng số hạt (2p + n); khi đề hỏi số electron thì tìm p trước rồi kết luận e = p (với nguyên tử trung hoà)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n1-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chất nào sau đây là chất tinh khiết?",
+          "options": ["nước cất", "nước khoáng", "nước biển", "nước chanh"],
+          "answer": 0,
+          "explanation": "B1. Nước cất chỉ gồm phân tử H2O, không lẫn chất khác nên là chất tinh khiết. B2. Nước khoáng, nước biển, nước chanh đều là hỗn hợp vì chứa nhiều chất tan khác nhau."
+        },
+        {
+          "id": "n1-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong nguyên tử, hạt nào mang điện tích dương?",
+          "options": ["proton", "electron", "nơtron", "cả electron và nơtron"],
+          "answer": 0,
+          "explanation": "B1. Proton mang điện dương, nơtron không mang điện, electron mang điện âm. B2. Vậy hạt mang điện dương là proton."
+        },
+        {
+          "id": "n1-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các chất là hỗn hợp.",
+          "options": [
+            "nước muối",
+            "khí oxi tinh khiết",
+            "không khí",
+            "nước chanh"
+          ],
+          "answers": [0, 2, 3],
+          "explanation": "B1. Nước muối, không khí, nước chanh đều chứa từ hai chất trở lên nên là hỗn hợp. B2. Khí oxi tinh khiết chỉ gồm một chất O2 nên là chất tinh khiết."
+        },
+        {
+          "id": "n1-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phương pháp nào dùng để tách chất rắn không tan ra khỏi chất lỏng?",
+          "answer": "lọc",
+          "acceptedAnswers": ["phương pháp lọc"],
+          "placeholder": "Nhập tên phương pháp",
+          "explanation": "B1. Dùng giấy lọc hoặc phễu lọc, chất rắn không tan bị giữ lại, chất lỏng chảy qua. B2. Đây gọi là phương pháp lọc."
+        },
+        {
+          "id": "n1-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Để tách muối ăn ra khỏi dung dịch nước muối, ta dùng phương pháp nào?",
+          "options": ["cô cạn", "lọc", "chiết", "dùng nam châm"],
+          "answer": 0,
+          "explanation": "B1. Đun cho nước bay hơi hết, muối ăn (chất tan rắn) sẽ kết tinh lại. B2. Đây là phương pháp cô cạn."
+        },
+        {
+          "id": "n1-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Nguyên tử X có 11 proton và 12 nơtron. Số electron trong X là",
+          "options": ["11", "12", "23", "1"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử trung hoà điện nên số electron bằng số proton. B2. X có 11 proton nên có 11 electron."
+        },
+        {
+          "id": "n1-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Nguyên tử Y có 17 proton và 18 nơtron. Số khối của Y là",
+          "options": ["35", "17", "18", "33"],
+          "answer": 0,
+          "explanation": "B1. Số khối bằng tổng số proton và số nơtron. B2. Số khối = 17 + 18 = 35."
+        },
+        {
+          "id": "n1-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phương pháp phù hợp để tách hỗn hợp dầu ăn và nước.",
+          "options": ["chiết", "lọc", "cô cạn", "chưng cất"],
+          "answers": [0, 3],
+          "explanation": "B1. Dầu ăn và nước không tan lẫn vào nhau nên có thể tách bằng chiết (dùng phễu chiết). B2. Cũng có thể chưng cất vì hai chất có nhiệt độ sôi khác nhau. B3. Lọc chỉ tách được rắn khỏi lỏng; cô cạn dùng khi có chất tan rắn, không phù hợp ở đây."
+        },
+        {
+          "id": "n1-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Nguyên tử R có số khối bằng 24 và có 12 proton. Số nơtron trong R là bao nhiêu?",
+          "answer": "12",
+          "placeholder": "Nhập số nơtron",
+          "explanation": "B1. Số khối bằng số proton cộng số nơtron. B2. Số nơtron = 24 - 12 = 12."
+        },
+        {
+          "id": "n1-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Nguyên tử M có 19 proton, biết số nơtron nhiều hơn số proton là 1. Số khối của M là",
+          "options": ["39", "38", "40", "20"],
+          "answer": 0,
+          "explanation": "B1. Số nơtron = số proton + 1 = 19 + 1 = 20. B2. Số khối = số proton + số nơtron = 19 + 20 = 39."
+        },
+        {
+          "id": "n1-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Nguyên tử X có tổng số hạt proton, nơtron, electron là 34, biết số hạt mang điện nhiều hơn số hạt không mang điện là 10. Số proton của X là",
+          "options": ["11", "12", "10", "13"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi p là số proton (bằng số electron), n là số nơtron. B2. Tổng số hạt: 2p + n = 34. B3. Số hạt mang điện nhiều hơn không mang điện: 2p - n = 10. B4. Cộng hai phương trình: 4p = 44 nên p = 11."
+        },
+        {
+          "id": "n1-l1-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Tổng số hạt proton, nơtron, electron trong nguyên tử X là 36, biết số hạt mang điện gấp đôi số hạt không mang điện. Số proton của X là",
+          "options": ["12", "13", "11", "14"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi p là số proton, n là số nơtron; số hạt mang điện là 2p (proton và electron). B2. Theo đề: 2p = 2n nên p = n. B3. Tổng số hạt: 2p + n = 36, thay n = p được 3p = 36 nên p = 12."
+        },
+        {
+          "id": "n1-l1-q13",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Nguyên tử A có tổng số hạt là 52, biết số hạt mang điện nhiều hơn số hạt không mang điện là 16. Số electron của A là bao nhiêu?",
+          "answer": "17",
+          "placeholder": "Nhập số electron",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi p là số proton (bằng số electron), n là số nơtron. B2. Tổng số hạt: 2p + n = 52. B3. Số hạt mang điện nhiều hơn không mang điện: 2p - n = 16. B4. Cộng hai phương trình: 4p = 68 nên p = 17, tức số electron = 17."
+        }
+      ]
+    },
+    {
+      "id": "n1-l2",
+      "title": "Nguyên tố hoá học – nguyên tử khối; sơ lược bảng tuần hoàn",
+      "order": 2,
+      "summary": "Kí hiệu hoá học, nguyên tử khối, phân tử khối và cách sắp xếp nguyên tố trong bảng tuần hoàn.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n1-l2-c1",
+          "heading": "Nguyên tố hoá học và kí hiệu",
+          "body": "Nguyên tố hoá học là tập hợp các nguyên tử có cùng số proton (số hiệu nguyên tử). Mỗi nguyên tố có một kí hiệu hoá học gồm 1 hoặc 2 chữ cái, chữ cái đầu viết hoa.\nVí dụ: H (hiđro, có 1 proton), O (oxi, có 8 proton), Na (natri, có 11 proton)."
+        },
+        {
+          "id": "n1-l2-c2",
+          "heading": "Nguyên tử khối",
+          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65."
+        },
+        {
+          "id": "n1-l2-c3",
+          "heading": "Sơ lược bảng tuần hoàn",
+          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi hàng ngang là một chu kì, mỗi cột dọc là một nhóm.\nCác nguyên tố trong cùng một nhóm thường có tính chất hoá học tương tự nhau."
+        },
+        {
+          "id": "n1-l2-c4",
+          "heading": "Nâng cao: Phân biệt nguyên tố, nguyên tử và kí hiệu",
+          "body": "Nguyên tố hoá học là khái niệm chỉ tập hợp các nguyên tử cùng số proton, không phải một nguyên tử riêng lẻ; bản thân tên nguyên tố không cho biết có bao nhiêu nguyên tử hay khối lượng cụ thể. Nguyên tử là một hạt cụ thể của nguyên tố đó, đếm được số lượng trong công thức. Ví dụ Na2O: phân tử có 2 nguyên tử Na và 1 nguyên tử O, được tạo bởi 2 nguyên tố là natri và oxi.\nDấu hiệu chắc chắn để nhận ra một nguyên tố là số proton (số hiệu nguyên tử), không phải số nơtron hay khối lượng — hai nguyên tử cùng số proton nhưng khác số nơtron vẫn là cùng một nguyên tố (đồng vị).\nKí hiệu hoá học (ví dụ O, H) chỉ một nguyên tử của nguyên tố; công thức hoá học (ví dụ O2, H2O) chỉ một phân tử, có thể gồm nhiều nguyên tử của một hay nhiều nguyên tố. Không nên nhầm kí hiệu nguyên tố với công thức của đơn chất tương ứng."
+        },
+        {
+          "id": "n1-l2-c5",
+          "heading": "Nâng cao: Tìm nguyên tử khối từ công thức và phân tử khối",
+          "body": "Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối mỗi nguyên tố nhân với chỉ số của nó rồi cộng lại (chỉ số là số nguyên tử trong công thức, khác với hệ số đứng trước công thức khi viết phương trình). Với công thức dạng RxOy, phân tử khối M = x.R + 16y (vì O = 16). Nếu biết M và công thức, lập phương trình để tìm nguyên tử khối chưa biết, rồi đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. Đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: với oxide RxOy, hoá trị của R suy ra được từ chỉ số theo quy tắc hoá trị (hoá trị R × x = II × y), phải hợp lí với nguyên tố vừa tìm được. \"Oxit cao nhất\" của một nguyên tố nhóm A là oxide trong đó nguyên tố có hoá trị cao nhất với oxi, hoá trị này bằng đúng số thứ tự nhóm A của nguyên tố — đây là một cách kiểm tra thêm, không chỉ là dữ kiện tính toán."
+        },
+        {
+          "id": "n1-l2-c6",
+          "heading": "Nâng cao: Quy luật nhóm và chu kì",
+          "body": "Số thứ tự chu kì bằng số lớp electron của nguyên tử — quy tắc này đúng cho MỌI nguyên tố (cả nhóm A và nhóm B), không chỉ riêng nhóm A.\nVới các nguyên tố nhóm A, số thứ tự nhóm A bằng số electron lớp ngoài cùng (ngoại lệ: khí hiếm heli He chỉ có 2 electron lớp ngoài cùng nhưng vẫn xếp ở nhóm VIIIA). Đây là lí do sâu xa khiến các nguyên tố cùng nhóm A có tính chất hoá học tương tự: số electron lớp ngoài cùng giống nhau nên cách nhường/nhận electron thường giống nhau — ví dụ Li, Na, K (nhóm IA) đều dễ nhường 1 electron, thường hoá trị I; F, Cl, Br (nhóm VIIA) đều dễ nhận thêm 1 electron.\nQuy tắc \"nhóm A = số electron lớp ngoài cùng\" chỉ áp dụng tốt cho nhóm A ở mức THCS — không áp dụng máy móc cho kim loại chuyển tiếp (nhóm B, ví dụ Fe, Cu), vì các kim loại này có thể có nhiều hoá trị khác nhau tuỳ hợp chất; với nhóm B nên dựa vào hoá trị đề cho, không suy trực tiếp từ số nhóm."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n1-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Kí hiệu hoá học của nguyên tố oxi là",
+          "options": ["O", "Ox", "Oxi", "O2"],
+          "answer": 0,
+          "explanation": "B1. Mỗi nguyên tố có kí hiệu hoá học riêng, thường 1-2 chữ cái. B2. Nguyên tố oxi có kí hiệu là O."
+        },
+        {
+          "id": "n1-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nguyên tử khối của cacbon là",
+          "options": ["12", "14", "16", "6"],
+          "answer": 0,
+          "explanation": "B1. Đây là giá trị cần nhớ trong bảng nguyên tử khối. B2. Nguyên tử khối của cacbon (C) là 12."
+        },
+        {
+          "id": "n1-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các kí hiệu hoá học viết đúng quy tắc (chữ cái đầu viết hoa).",
+          "options": ["Na", "Ca", "cl", "fe"],
+          "answers": [0, 1],
+          "explanation": "B1. Na (natri) và Ca (canxi) viết đúng quy tắc, chữ cái đầu viết hoa. B2. Kí hiệu đúng của clo là Cl và của sắt là Fe, không phải \"cl\" hay \"fe\"."
+        },
+        {
+          "id": "n1-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Số hiệu nguyên tử của một nguyên tố bằng số hạt nào trong nguyên tử?",
+          "answer": "proton",
+          "acceptedAnswers": ["số proton", "p"],
+          "placeholder": "Nhập tên hạt",
+          "explanation": "B1. Số hiệu nguyên tử chính là số proton trong hạt nhân. B2. Mỗi nguyên tố có số hiệu nguyên tử (số proton) khác nhau và duy nhất."
+        },
+        {
+          "id": "n1-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong bảng tuần hoàn, các nguyên tố được sắp xếp theo chiều tăng dần của đại lượng nào?",
+          "options": [
+            "số hiệu nguyên tử",
+            "nguyên tử khối",
+            "số nơtron",
+            "số lớp electron"
+          ],
+          "answer": 0,
+          "explanation": "B1. Bảng tuần hoàn hiện đại sắp xếp nguyên tố theo chiều tăng dần điện tích hạt nhân, tức số hiệu nguyên tử. B2. Đây là căn cứ sắp xếp chính, khác với cách sắp theo nguyên tử khối ban đầu của Mendeleev."
+        },
+        {
+          "id": "n1-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của khí oxi O2 là",
+          "options": ["32", "16", "8", "64"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối của O là 16. B2. Phân tử O2 gồm 2 nguyên tử O nên phân tử khối = 2 x 16 = 32."
+        },
+        {
+          "id": "n1-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của CaCO3 là",
+          "options": ["100", "116", "84", "60"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Ca = 40, C = 12, O = 16. B2. Phân tử khối CaCO3 = 40 + 12 + 3 x 16 = 40 + 12 + 48 = 100."
+        },
+        {
+          "id": "n1-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các nguyên tố có nguyên tử khối lớn hơn 30.",
+          "options": ["Na", "S", "Cl", "Mg"],
+          "answers": [1, 2],
+          "explanation": "B1. Nguyên tử khối: Na = 23, S = 32, Cl = 35,5, Mg = 24. B2. Chỉ có S (32) và Cl (35,5) lớn hơn 30."
+        },
+        {
+          "id": "n1-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của khí cacbonic CO2 là bao nhiêu?",
+          "answer": "44",
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Nguyên tử khối: C = 12, O = 16. B2. Phân tử khối CO2 = 12 + 2 x 16 = 44."
+        },
+        {
+          "id": "n1-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Nguyên tử X có nguyên tử khối gấp 2 lần nguyên tử khối của cacbon. Nguyên tử khối của X là",
+          "options": ["24", "12", "32", "16"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối cacbon là 12. B2. X = 2 x 12 = 24, ứng với magie (Mg)."
+        },
+        {
+          "id": "n1-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hợp chất A có công thức R2O, phân tử khối bằng 62. Nguyên tử khối của R là",
+          "options": ["23", "24", "39", "7"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O = 2R + 16 = 62. B2. Giải ra 2R = 46 nên R = 23, ứng với natri (Na), khớp Na2O."
+        },
+        {
+          "id": "n1-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hợp chất B có công thức RO2 với phân tử khối 44. Nguyên tử khối của R là bao nhiêu?",
+          "answer": "12",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối RO2 = R + 2 x 16 = 44. B2. Giải ra R = 44 - 32 = 12, ứng với cacbon (C), khớp CO2."
+        },
+        {
+          "id": "n1-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Một nguyên tố X tạo oxide cao nhất có công thức XO3, biết phân tử khối của oxide này là 80. Nguyên tử khối của X là",
+          "options": ["32", "16", "64", "48"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối XO3 = X + 3 x 16 = 80. B2. Giải ra X = 80 - 48 = 32, ứng với lưu huỳnh (S), khớp SO3."
+        }
+      ]
+    },
+    {
+      "id": "n1-l3",
+      "title": "Đơn chất – hợp chất – phân tử; CTHH và ý nghĩa",
+      "order": 3,
+      "summary": "Phân biệt đơn chất và hợp chất, khái niệm phân tử, cách đọc và ý nghĩa của công thức hoá học.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n1-l3-c1",
+          "heading": "Đơn chất và hợp chất",
+          "body": "Đơn chất do một nguyên tố hoá học tạo nên. Ví dụ kim loại: Fe, Cu, Al; phi kim: O2, N2, Cl2, C, S.\nHợp chất do hai hay nhiều nguyên tố hoá học tạo nên. Ví dụ: H2O, CO2, NaCl, H2SO4."
+        },
+        {
+          "id": "n1-l3-c2",
+          "heading": "Phân tử",
+          "body": "Phân tử là hạt đại diện cho chất, gồm một số nguyên tử liên kết với nhau, thể hiện đầy đủ tính chất hoá học của chất.\nPhân tử khối bằng tổng nguyên tử khối của các nguyên tử có trong phân tử."
+        },
+        {
+          "id": "n1-l3-c3",
+          "heading": "Công thức hoá học và ý nghĩa",
+          "body": "Công thức hoá học (CTHH) biểu diễn chất bằng kí hiệu nguyên tố kèm chỉ số. CTHH cho biết: nguyên tố tạo ra chất; số nguyên tử mỗi nguyên tố trong một phân tử; phân tử khối của chất.\nVí dụ: H2SO4 gồm 2H, 1S, 4O; phân tử khối = 2 + 32 + 4 x 16 = 98."
+        },
+        {
+          "id": "n1-l3-c4",
+          "heading": "Nâng cao: Đơn chất không đơn giản như tên gọi",
+          "body": "Một nguyên tố có thể tạo ra nhiều đơn chất khác nhau gọi là các dạng thù hình: O2 và O3 (ozon) đều chỉ gồm nguyên tố oxi nhưng là hai chất khác nhau; kim cương và than chì đều có thành phần là C nhưng cách sắp xếp nguyên tử khác nhau nên tính chất vật lí rất khác nhau.\nCác đơn chất khí quen thuộc ở THCS như H2, O2, N2, Cl2 thường tồn tại dưới dạng phân tử 2 nguyên tử, còn kí hiệu H, O, N, Cl chỉ nguyên tử/nguyên tố. Đơn chất cũng có thể có phân tử nhiều nguyên tử hơn: O3 gồm 3 nguyên tử O, photpho trắng thường gặp dạng P4, lưu huỳnh thường gặp dạng S8 — vẫn là đơn chất vì chỉ có một nguyên tố, khác với hợp chất (từ hai nguyên tố trở lên)."
+        },
+        {
+          "id": "n1-l3-c5",
+          "heading": "Nâng cao: Phân loại và đọc công thức cẩn thận",
+          "body": "Đơn chất/hợp chất phân loại một chất tinh khiết theo số nguyên tố; hỗn hợp là nhiều chất trộn lẫn. Không khí chứa chủ yếu N2 và O2 nên là hỗn hợp, không phải hợp chất của nitơ với oxi. Hai nguyên tố giống nhau nhưng tỉ lệ khác nhau tạo ra hợp chất khác nhau: CO (C:O = 1:1) khác CO2 (C:O = 1:2); SO2 khác SO3.\nKhi đọc công thức, phân biệt hệ số (đứng trước, nhân cả phân tử) với chỉ số (đứng sau kí hiệu, thuộc về một nguyên tố): O là 1 nguyên tử, O2 là 1 phân tử oxi (2 nguyên tử), 2O2 là hai phân tử O2 (tổng 4 nguyên tử), không được lấy hệ số nhân vào phân tử khối của một phân tử. Cũng cần phân biệt số nguyên tố (loại nguyên tố khác nhau) với tổng số nguyên tử: Al2(SO4)3 có 3 nguyên tố (Al, S, O) nhưng tổng 17 nguyên tử (2+3+12) — nhầm hai đại lượng này là lỗi rất hay gặp."
+        },
+        {
+          "id": "n1-l3-c6",
+          "heading": "Nâng cao: Công thức là quy ước biểu diễn tỉ lệ, không luôn là phân tử thật",
+          "body": "Không phải chất nào cũng tồn tại dưới dạng phân tử riêng rẽ đơn giản: kim loại như Fe, Cu gồm rất nhiều nguyên tử sắp xếp thành mạng; NaCl rắn gồm các ion Na+ và Cl- xen kẽ theo tỉ lệ 1:1. Công thức của các chất này cho biết tỉ lệ nguyên tử/ion, vẫn tính khối lượng công thức bình thường (NaCl: 23 + 35,5 = 58,5).\nMột số đơn chất có phân tử thực tế phức tạp hơn cách viết trong phương trình THCS — lưu huỳnh thường gặp dạng S8, nhưng nhiều phương trình vẫn viết S + O2 -> SO2 theo quy ước đơn giản hoá. Lưu ý: không tự rút gọn công thức phân tử theo ước chung — glucozơ có công thức phân tử C6H12O6 (không viết gọn thành CH2O dù tỉ lệ đơn giản nhất là CH2O), vì công thức phân tử phải phản ánh đúng số nguyên tử thật trong một phân tử. Chỉ số sau dấu ngoặc nhân cho cả nhóm: Al2(SO4)3 có khối lượng công thức = 2×27 + 3×(32+4×16) = 54 + 288 = 342, không được quên nhân S trong nhóm SO4."
+        },
+        {
+          "id": "n1-l3-c7",
+          "heading": "Nâng cao: Tìm nguyên tố từ công thức oxide và phân tử khối",
+          "body": "Với oxide thông thường RxOy (O = 16), phân tử khối M = x.R + 16y, suy ra R = (M - 16y) / x rồi đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: nếu R chỉ có một hoá trị trong công thức RxOy tối giản, hoá trị R = 2y/x (vì oxi hoá trị II). Ví dụ MgO: hoá trị Mg = 2×1/1 = II; Al2O3: hoá trị Al = 2×3/2 = III; SO3: hoá trị S = 2×3/1 = VI. Kết quả này phải hợp lí với nguyên tố vừa tìm được — nếu không hợp lí, cần xem lại công thức hoặc giả thiết.\nKết quả R không nhất thiết là số nguyên: một số nguyên tử khối ở THCS là số thập phân (Cl = 35,5). Ví dụ oxide R2O7 có M = 183 thì 2R + 7×16 = 183, suy ra R = 35,5, ứng với clo (Cl2O7, clo hoá trị VII trong oxide cao nhất)."
+        },
+        {
+          "id": "n1-l3-c8",
+          "heading": "Nâng cao: Từ hoá trị dự đoán dạng oxide và các trường hợp đặc biệt",
+          "body": "Vì O thường hoá trị II trong oxide, dạng công thức phụ thuộc hoá trị của R: hoá trị I → R2O; hoá trị II → RO; hoá trị III → R2O3; hoá trị IV → RO2; hoá trị V → R2O5; hoá trị VI → RO3. Ví dụ đề nói kim loại hoá trị III thì công thức oxide phải là R2O3, không phải RO3.\nKhông mặc định R luôn là kim loại — R2O5 gợi ý hoá trị V nhưng công thức này cũng đúng với photpho (phi kim quen thuộc, P2O5); cần tính R rồi đối chiếu, không loại đáp án phi kim chỉ vì thấy chữ R.\nLưu ý mức nâng cao: công thức kiểm tra hoá trị R = 2y/x dùng tốt khi R có một hoá trị duy nhất trong oxide đó. Một số oxide như Fe3O4 không cho ra một hoá trị nguyên duy nhất (có thể xem là FeO.Fe2O3, chứa cả Fe(II) và Fe(III)) — nếu tính ra hoá trị trung bình không nguyên (ví dụ 8/3), không vội kết luận sai công thức mà cần xem đó có phải oxide hỗn hợp hay trường hợp đặc biệt đã biết."
+        },
+        {
+          "id": "n1-l3-c9",
+          "heading": "Nâng cao: Tính phần trăm khối lượng và suy công thức từ tỉ lệ khối lượng",
+          "body": "Công thức chung: % nguyên tố = (khối lượng nguyên tố đó trong một công thức / khối lượng công thức) × 100%. Ví dụ CaCO3 có khối lượng công thức 40+12+3×16 = 100; Ca chiếm 40%, C chiếm 12%, O chiếm 48%.\nChiều ngược lại: nếu biết tỉ lệ khối lượng các nguyên tố, đổi về tỉ lệ số nguyên tử bằng cách chia cho nguyên tử khối tương ứng rồi rút gọn về số nguyên nhỏ nhất. Ví dụ một oxide sắt có tỉ lệ khối lượng Fe : O = 7 : 3, ta có nFe : nO = 7/56 : 3/16 = 0,125 : 0,1875 = 2 : 3, vậy công thức là Fe2O3. Đây là nền tảng cho các bài biện luận công thức ở mức HSG."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n1-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chất nào sau đây là đơn chất?",
+          "options": [
+            "khí oxi O2",
+            "nước H2O",
+            "muối ăn NaCl",
+            "khí cacbonic CO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. O2 chỉ do một nguyên tố oxi tạo nên nên là đơn chất. B2. H2O, NaCl, CO2 đều do 2 nguyên tố trở lên tạo nên nên là hợp chất."
+        },
+        {
+          "id": "n1-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chất nào sau đây là hợp chất?",
+          "options": ["H2O", "O2", "N2", "Cl2"],
+          "answer": 0,
+          "explanation": "B1. H2O do hai nguyên tố H và O tạo nên nên là hợp chất. B2. O2, N2, Cl2 mỗi chất chỉ do một nguyên tố tạo nên nên là đơn chất."
+        },
+        {
+          "id": "n1-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các đơn chất trong các chất sau.",
+          "options": ["Fe", "H2O", "Cu", "NaCl"],
+          "answers": [0, 2],
+          "explanation": "B1. Fe và Cu đều chỉ do một nguyên tố kim loại tạo nên nên là đơn chất. B2. H2O và NaCl do 2 nguyên tố tạo nên nên là hợp chất."
+        },
+        {
+          "id": "n1-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Hạt đại diện cho chất, thể hiện đầy đủ tính chất hoá học của chất được gọi là gì?",
+          "answer": "phân tử",
+          "placeholder": "Nhập tên hạt",
+          "explanation": "B1. Đây là định nghĩa của phân tử trong hoá học. B2. Phân tử gồm một số nguyên tử liên kết với nhau."
+        },
+        {
+          "id": "n1-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức hoá học H2SO4 cho biết một phân tử gồm bao nhiêu nguyên tử?",
+          "options": ["7", "4", "3", "2"],
+          "answer": 0,
+          "explanation": "B1. H2SO4 gồm 2 nguyên tử H, 1 nguyên tử S, 4 nguyên tử O. B2. Tổng số nguyên tử = 2 + 1 + 4 = 7."
+        },
+        {
+          "id": "n1-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của H2O là",
+          "options": ["18", "16", "17", "20"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: H = 1, O = 16. B2. Phân tử khối H2O = 2 x 1 + 16 = 18."
+        },
+        {
+          "id": "n1-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của NaCl là",
+          "options": ["58,5", "58", "35,5", "23"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Na = 23, Cl = 35,5. B2. Phân tử khối NaCl = 23 + 35,5 = 58,5."
+        },
+        {
+          "id": "n1-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các công thức hoá học biểu diễn hợp chất.",
+          "options": ["CO2", "O2", "H2SO4", "N2"],
+          "answers": [0, 2],
+          "explanation": "B1. CO2 và H2SO4 do từ 2 nguyên tố trở lên tạo nên nên là hợp chất. B2. O2 và N2 chỉ do một nguyên tố tạo nên nên là đơn chất."
+        },
+        {
+          "id": "n1-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Công thức hoá học Al2O3 gồm bao nhiêu nguyên tử Al?",
+          "answer": "2",
+          "placeholder": "Nhập số nguyên tử",
+          "explanation": "B1. Chỉ số 2 đứng sau Al trong công thức Al2O3 cho biết số nguyên tử Al trong một phân tử. B2. Vậy có 2 nguyên tử Al."
+        },
+        {
+          "id": "n1-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của Al2O3 là",
+          "options": ["102", "54", "48", "150"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Al = 27, O = 16. B2. Phân tử khối Al2O3 = 2 x 27 + 3 x 16 = 54 + 48 = 102."
+        },
+        {
+          "id": "n1-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Một oxide kim loại có công thức R2O3, phân tử khối bằng 160. Nguyên tử khối của R là",
+          "options": ["56", "52", "48", "64"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O3 = 2R + 3 x 16 = 160. B2. Giải ra 2R = 112 nên R = 56, ứng với sắt (Fe), khớp Fe2O3."
+        },
+        {
+          "id": "n1-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hợp chất Y có công thức RO, phân tử khối bằng 40. Nguyên tử khối của R là bao nhiêu?",
+          "answer": "24",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối RO = R + 16 = 40. B2. Giải ra R = 24, ứng với magie (Mg), khớp MgO."
+        },
+        {
+          "id": "n1-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Một hợp chất có công thức R2O5 với phân tử khối 142. Nguyên tử khối của R là",
+          "options": ["31", "30", "32", "28"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O5 = 2R + 5 x 16 = 142. B2. Giải ra 2R = 62 nên R = 31, ứng với photpho (P), khớp P2O5."
+        }
+      ]
+    },
+    {
+      "id": "n1-l4",
+      "title": "Hoá trị; lập CTHH theo hoá trị",
+      "order": 4,
+      "summary": "Khái niệm hoá trị, quy tắc hoá trị và các bước lập công thức hoá học đúng theo hoá trị.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n1-l4-c1",
+          "heading": "Hoá trị",
+          "body": "Hoá trị là con số biểu thị khả năng liên kết của nguyên tử nguyên tố này với nguyên tử nguyên tố khác (quy ước H có hoá trị I).\nMột số hoá trị thường gặp: H (I), O (II), Na, K (I), Ca, Mg, Ba (II), Al (III), Fe (II, III), Cu (I, II)."
+        },
+        {
+          "id": "n1-l4-c2",
+          "heading": "Quy tắc hoá trị",
+          "body": "Trong công thức hoá học AxBy, tích của hoá trị và chỉ số của A bằng tích của hoá trị và chỉ số của B:\na.x = b.y (a, b lần lượt là hoá trị của A, B)."
+        },
+        {
+          "id": "n1-l4-c3",
+          "heading": "Lập CTHH theo hoá trị",
+          "body": "Các bước: gọi công thức hoá học dạng AxBy; áp dụng quy tắc hoá trị a.x = b.y; đưa về tỉ lệ tối giản x : y = b : a.\nVí dụ: Al (III) và O (II) cho tỉ lệ x : y = 2 : 3, công thức đúng là Al2O3."
+        },
+        {
+          "id": "n1-l4-c4",
+          "heading": "Nâng cao: Nhóm nguyên tử có hoá trị riêng",
+          "body": "Với nhiều gốc acid quen thuộc, hoá trị của nhóm bằng số nguyên tử H có thể thay thế trong acid tương ứng: HNO3 → nhóm NO3 hoá trị I; H2SO4 → nhóm SO4 hoá trị II; H2CO3 → nhóm CO3 hoá trị II; H3PO4 → nhóm PO4 hoá trị III.\nMột số nhóm vẫn còn H nhưng vẫn được xem là một nhóm nguyên tử với hoá trị riêng: HSO4 (I), HCO3 (I), HPO4 (II), H2PO4 (I). Ví dụ Na(I) với HCO3(I) tạo NaHCO3, còn Ca(II) với HCO3(I) tạo Ca(HCO3)2 — không được lấy hoá trị II của CO3 để thay cho HCO3. Nhóm NH4 (amoni) có hoá trị I, thường gặp trong muối amoni như NH4Cl, (NH4)2SO4.\nNhiều hợp chất có từ ba nguyên tố trở lên nhưng khi lập theo hoá trị chỉ cần xét hai phần: kim loại/gốc và nhóm nguyên tử. Na2CO3 = Na(I) với CO3(II); Ca(OH)2 = Ca(II) với OH(I); AlPO4 = Al(III) với PO4(III) — không xử lí từng nguyên tố C, O, H riêng lẻ trong nhóm."
+        },
+        {
+          "id": "n1-l4-c5",
+          "heading": "Nâng cao: Nguyên tố nhiều hoá trị — xác định đúng hoá trị đang dùng",
+          "body": "Fe, Cu, S, N... có thể có nhiều hoá trị, nhưng trong một hợp chất cụ thể phải xác định theo đúng công thức đã cho, không chọn tuỳ ý: CuO có Cu hoá trị II, còn Cu2O có Cu hoá trị I; SO2 có S hoá trị IV, còn SO3 có S hoá trị VI. Chọn sai hoá trị sẽ lập ra công thức khác hoàn toàn.\nNếu đề nói một nguyên tố có hoá trị không đổi và cho nhiều hợp chất của nó, hoá trị suy ra từ các công thức đó phải trùng nhau — đây là cách kiểm tra chéo hữu ích. Ví dụ nguyên tố X tạo được cả XCl3 (Cl hoá trị I → X hoá trị III) và X2O3 (O hoá trị II → X hoá trị III): hai dữ kiện cùng cho hoá trị III nên phù hợp. Nếu một dữ kiện cho hoá trị II còn dữ kiện khác cho hoá trị III thì phải xem lại giả thiết, công thức hoặc đáp án."
+        },
+        {
+          "id": "n1-l4-c6",
+          "heading": "Nâng cao: Bản chất quy tắc hoá trị và lỗi hay gặp",
+          "body": "Quy tắc a.x = b.y thể hiện tổng khả năng liên kết của phần A phải bằng tổng khả năng liên kết của phần B trong một hợp chất trung hoà — khi kiểm tra CTHH, phải so sánh hai TÍCH hoá trị (a.x và b.y) chứ không so sánh riêng từng chỉ số.\nKhi viết phép nhân trong bài làm, nên dùng dấu × (ví dụ 2 × 3) thay vì dấu chấm sát nhau như 2.3, để tránh học sinh đọc nhầm thành số thập phân.\nKhông dùng quy tắc hoá trị để giải thích chỉ số trong công thức đơn chất (ví dụ không suy ra chỉ số 2 của O2 từ hoá trị của oxi) — quy tắc hoá trị chỉ áp dụng cho hợp chất gồm từ hai nguyên tố trở lên."
+        },
+        {
+          "id": "n1-l4-c7",
+          "heading": "Nâng cao: Tìm nguyên tử khối và biện luận công thức từ hoá trị, phân tử khối",
+          "body": "Khi công thức đã biết, lập phương trình phân tử khối bằng tổng khối lượng các nguyên tử và nhóm nguyên tử. Ví dụ R2O3 có phân tử khối 102: 2R + 3×16 = 102, suy ra R = 27 (nhôm Al). Với MSO4 có phân tử khối 120 và nhóm SO4 có khối lượng 96: M + 96 = 120, suy ra M = 24 (magie Mg).\nNếu đề chỉ nói nguyên tố R tạo oxide mà chưa cho hoá trị, có thể liệt kê nhanh theo hoá trị của R (O hoá trị II): R(I) → R2O; R(II) → RO; R(III) → R2O3; R(IV) → RO2; R(V) → R2O5; R(VI) → RO3; R(VII) → R2O7. Thử từng hoá trị rồi tính R, đối chiếu bảng nguyên tử khối quen thuộc — kết quả âm, phân số vô lí hoặc không khớp nguyên tố quen thuộc ở THCS thì loại trường hợp đó."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n1-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Hoá trị của H trong các hợp chất được quy ước là",
+          "options": ["I", "II", "III", "IV"],
+          "answer": 0,
+          "explanation": "B1. Theo quy ước hoá học, hiđro luôn được chọn làm đơn vị hoá trị. B2. Hoá trị của H là I."
+        },
+        {
+          "id": "n1-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Hoá trị của O trong các oxide thường là",
+          "options": ["II", "I", "III", "IV"],
+          "answer": 0,
+          "explanation": "B1. Trong hầu hết hợp chất, oxi có hoá trị II. B2. Ví dụ: CO2, Na2O, Al2O3."
+        },
+        {
+          "id": "n1-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các hoá trị thường gặp của sắt (Fe).",
+          "options": ["I", "II", "III", "IV"],
+          "answers": [1, 2],
+          "explanation": "B1. Sắt là kim loại có nhiều hoá trị. B2. Hai hoá trị thường gặp của Fe là II (FeO, FeCl2) và III (Fe2O3, FeCl3)."
+        },
+        {
+          "id": "n1-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nguyên tố Al thường có hoá trị mấy? (ghi số La Mã)",
+          "answer": "III",
+          "acceptedAnswers": ["3", "iii"],
+          "placeholder": "Nhập hoá trị",
+          "explanation": "B1. Nhôm là kim loại có hoá trị không đổi. B2. Hoá trị của Al là III, thể hiện qua Al2O3, AlCl3."
+        },
+        {
+          "id": "n1-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức hoá học nào viết đúng quy tắc hoá trị cho hợp chất giữa Na (I) và Cl (I)?",
+          "options": ["NaCl", "Na2Cl", "NaCl2", "Na2Cl2"],
+          "answer": 0,
+          "explanation": "B1. Na và Cl đều hoá trị I nên tỉ lệ x : y = 1 : 1. B2. Công thức đúng là NaCl."
+        },
+        {
+          "id": "n1-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Lập công thức hoá học của hợp chất giữa Ca (hoá trị II) và Cl (hoá trị I).",
+          "options": ["CaCl2", "CaCl", "Ca2Cl", "CaCl3"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị: 2 x 1 = 1 x y nên y = 2. B2. Công thức đúng là CaCl2."
+        },
+        {
+          "id": "n1-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Lập công thức hoá học của hợp chất giữa Al (hoá trị III) và O (hoá trị II).",
+          "options": ["Al2O3", "AlO", "Al3O2", "AlO3"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị, tỉ lệ x : y = 2 : 3 (hoá trị O : hoá trị Al). B2. Công thức đúng là Al2O3."
+        },
+        {
+          "id": "n1-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các công thức hoá học viết đúng quy tắc hoá trị.",
+          "options": ["MgO", "Na2O", "CaO2", "Al3O2"],
+          "answers": [0, 1],
+          "explanation": "B1. MgO đúng vì Mg (II) và O (II) cho tỉ lệ 1:1. B2. Na2O đúng vì Na (I) và O (II) cho tỉ lệ 2:1. B3. CaO2 sai (đúng phải là CaO); Al3O2 sai (đúng phải là Al2O3)."
+        },
+        {
+          "id": "n1-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Lập công thức hoá học giữa Fe (hoá trị III) và O (hoá trị II), ghi tỉ lệ x:y tối giản (ví dụ \"2:3\").",
+          "answer": "2:3",
+          "placeholder": "Nhập tỉ lệ x:y",
+          "explanation": "B1. Áp dụng quy tắc hoá trị: hoá trị Fe (III) và O (II). B2. Tỉ lệ x : y = 2 : 3, ứng với công thức Fe2O3."
+        },
+        {
+          "id": "n1-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Công thức hoá học của hợp chất giữa Cu (hoá trị II) và nhóm OH (hoá trị I) là",
+          "options": ["Cu(OH)2", "CuOH", "Cu2OH", "CuOH2"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc hoá trị: 2 x 1 = 1 x y nên y = 2. B2. Công thức đúng là Cu(OH)2."
+        },
+        {
+          "id": "n1-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hợp chất R2O3 có phân tử khối 102, biết O có hoá trị II và R có hoá trị III. Nguyên tử khối của R là",
+          "options": ["27", "28", "26", "30"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O3 = 2R + 3 x 16 = 102. B2. Giải ra 2R = 54 nên R = 27, ứng với nhôm (Al)."
+        },
+        {
+          "id": "n1-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Một nguyên tố M hoá trị II tạo với nhóm SO4 (hoá trị II, khối lượng nhóm là 96) hợp chất MSO4. Nếu phân tử khối của MSO4 là 120, nguyên tử khối của M là bao nhiêu?",
+          "answer": "24",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối MSO4 = M + 96 = 120. B2. Giải ra M = 24, ứng với magie (Mg), khớp MgSO4."
+        },
+        {
+          "id": "n1-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Nguyên tố X có hoá trị không đổi, tạo được hai hợp chất XCl3 và X2O3 (biết Cl hoá trị I, O hoá trị II). Hoá trị của X là",
+          "options": ["III", "II", "I", "IV"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Từ XCl3: hoá trị X x 1 = 1 x 3 nên X có hoá trị III. B2. Kiểm tra với X2O3: hoá trị X x 2 = 2 x 3 cũng cho X hoá trị III, khớp nhau."
+        }
+      ]
+    }
+  ]
+}

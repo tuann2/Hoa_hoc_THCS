@@ -9,7 +9,8 @@ import type { LessonSummary, UnitSummary } from '../types/content';
 import { calculateStars } from '../lib/chemistry';
 
 export const PROGRESS_STORAGE_KEY = 'hhthcs-progress';
-export const PROGRESS_VERSION = 4;
+export const PROGRESS_VERSION = 5;
+const PROGRESS_BACKUP_PREFIX = 'hhthcs-progress-backup-v';
 
 export type LessonMode = 'theory' | 'practice';
 export type LessonProgressPartKey = LessonMode;
@@ -466,6 +467,28 @@ export function buildLessonProgressEntry(
   };
 }
 
+function backupLegacyProgressSnapshot(
+  persistedState: Record<string, unknown>,
+  version: number
+) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  const key = `${PROGRESS_BACKUP_PREFIX}${version}`;
+
+  if (window.localStorage.getItem(key) !== null) {
+    return;
+  }
+
+  try {
+    window.localStorage.setItem(key, JSON.stringify(persistedState));
+  } catch {
+    // Bỏ qua lỗi ghi backup (ví dụ hết dung lượng localStorage): không được
+    // chặn quá trình migrate chỉ vì không lưu được bản sao lưu.
+  }
+}
+
 export function migrateProgressState(
   persistedState: unknown,
   version: number
@@ -509,6 +532,20 @@ export function migrateProgressState(
               )
           )
         : {}
+    };
+  }
+
+  if (version < 5) {
+    // FEATURE-015: danh mục bài học được xây lại toàn bộ (17 unit cũ ->
+    // n1-n11), lessonId/questionId cũ không còn tồn tại trong catalog mới.
+    // Sao lưu snapshot gốc rồi reset tiến độ theo bài; XP, streak và lịch
+    // sử thi vẫn giữ nguyên. Xem docs/plans/FEATURE-015.md.
+    backupLegacyProgressSnapshot(persistedState, version);
+    nextState = {
+      ...nextState,
+      lessonProgress: {},
+      unlockedLessonIds: [],
+      wrongQuestions: {}
     };
   }
 
@@ -787,7 +824,25 @@ export const createProgressStore = (units: UnitSummary[]) =>
         name: PROGRESS_STORAGE_KEY,
         version: PROGRESS_VERSION,
         migrate: migrateProgressState,
-        storage: createSafeStorage()
+        storage: createSafeStorage(),
+        merge: (persistedState, currentState) => {
+          const merged = {
+            ...currentState,
+            ...(isRecord(persistedState)
+              ? (persistedState as Partial<ProgressState>)
+              : {})
+          };
+          const hasNoLessonProgress =
+            merged.unlockedLessonIds.length === 0 &&
+            Object.keys(merged.lessonProgress).length === 0;
+
+          // Sau khi reset ở migrateProgressState (hoặc với snapshot rỗng),
+          // dùng lại danh sách mở khoá mặc định (bài đầu của các unit hiện
+          // có) thay vì để người dùng không mở khoá được bài nào.
+          return hasNoLessonProgress
+            ? { ...merged, unlockedLessonIds: currentState.unlockedLessonIds }
+            : merged;
+        }
       }
     )
   );

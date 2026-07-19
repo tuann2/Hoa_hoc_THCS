@@ -39,8 +39,7 @@
 - In scope:
   1. `content/catalog.json` + `content/units/`: danh mục mới theo Phụ lục A;
      id mới `n1`–`n11`, `n<k>-l<j>`; xoá 17 file unit cũ.
-  2. Thẻ lý thuyết: soạn từ 7 file tài liệu chuẩn hoá (quy đổi sang GDPT
-     2018) + chất liệu cũ được giữ theo Phụ lục A; ≤25 thẻ/bài.
+  2. Thẻ lý thuyết: soạn từ 7 file tài liệu chuẩn hoá (quy đổi sang GDPT 2018) + chất liệu cũ được giữ theo Phụ lục A; ≤25 thẻ/bài.
   3. Câu hỏi: tái sử dụng câu cũ khớp bài mới sau khi quy đổi danh pháp/số
      liệu; soạn bổ sung cho bài thiếu; mọi bài toán số phải được giải lại
      độc lập trước khi commit (quy tắc repo).
@@ -110,14 +109,14 @@
 
 ## Risks and controls
 
-| Risk | Impact | Mitigation |
-| ---- | ------ | ---------- |
-| Sai đáp án sau quy đổi 24,79 / danh pháp mới | Cao | giải lại độc lập từng bài toán; reviewer độc lập tính lại mẫu; vòng review giáo viên trước release |
-| Danh pháp mới/cũ trộn lẫn trong nội dung | Cao | bảng quy ước cố định trong plan; kiểm tra grep danh sách từ cũ cấm (axit, bazơ, đktc, 22,4…) trong evidence từng vòng |
-| Người học mất tiến độ theo bài | Trung bình (chấp nhận có chủ đích) | giữ XP/streak/lịch sử thi; backup snapshot; thông báo trong app khi phát hiện migration (nếu UI hiện có hỗ trợ, ngược lại ghi rõ trong release note) |
-| Client PWA cũ ghi snapshot version cũ sau khi server có bản mới | Trung bình | cơ chế version snapshot + xử lý một chiều khi nhận; E2E offline/update của FEATURE-014 phải xanh |
-| Khối lượng soạn 52 bài gây trôi chất lượng cuối kỳ | Trung bình | chia 4 vòng, gate + handoff từng vòng; không dịch vòng sau khi vòng trước còn finding mở |
-| Câu hỏi cũ tái sử dụng còn dấu vết quy ước cũ | Trung bình | quy trình quy đổi bắt buộc theo checklist; grep từ cấm áp dụng cho cả `questions` |
+| Risk                                                            | Impact                             | Mitigation                                                                                                                                           |
+| --------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sai đáp án sau quy đổi 24,79 / danh pháp mới                    | Cao                                | giải lại độc lập từng bài toán; reviewer độc lập tính lại mẫu; vòng review giáo viên trước release                                                   |
+| Danh pháp mới/cũ trộn lẫn trong nội dung                        | Cao                                | bảng quy ước cố định trong plan; kiểm tra grep danh sách từ cũ cấm (axit, bazơ, đktc, 22,4…) trong evidence từng vòng                                |
+| Người học mất tiến độ theo bài                                  | Trung bình (chấp nhận có chủ đích) | giữ XP/streak/lịch sử thi; backup snapshot; thông báo trong app khi phát hiện migration (nếu UI hiện có hỗ trợ, ngược lại ghi rõ trong release note) |
+| Client PWA cũ ghi snapshot version cũ sau khi server có bản mới | Trung bình                         | cơ chế version snapshot + xử lý một chiều khi nhận; E2E offline/update của FEATURE-014 phải xanh                                                     |
+| Khối lượng soạn 52 bài gây trôi chất lượng cuối kỳ              | Trung bình                         | chia 4 vòng, gate + handoff từng vòng; không dịch vòng sau khi vòng trước còn finding mở                                                             |
+| Câu hỏi cũ tái sử dụng còn dấu vết quy ước cũ                   | Trung bình                         | quy trình quy đổi bắt buộc theo checklist; grep từ cấm áp dụng cho cả `questions`                                                                    |
 
 ## Acceptance and recovery
 
@@ -142,19 +141,19 @@
 
 ## Phụ lục A: dàn ý danh mục (11 unit / 52 bài, nt0 duyệt sơ bộ 2026-07-19)
 
-| Unit | Bài | Nguồn chất liệu |
-| ---- | --- | --------------- |
-| n1 Nguyên tử – Nguyên tố – Công thức hoá học | 1 Chất – hỗn hợp – tách chất; cấu tạo nguyên tử · 2 Nguyên tố hoá học; sơ lược bảng tuần hoàn · 3 Đơn chất – hợp chất – phân tử; CTHH · 4 Hoá trị; lập CTHH | a1-l1..l4 (quy đổi GDPT 2018) |
-| n2 Phản ứng hoá học | 1 Phản ứng hoá học; các loại phản ứng · 2 Mol – tỉ khối chất khí · 3 Dung dịch; độ tan · 4 Nồng độ C% – C_M; pha chế · 5 ĐLBTKL; PTHH · 6 Tính theo PTHH; chất dư – hiệu suất · 7 Tốc độ phản ứng – chất xúc tác | Chủ đề I + a4-l1..l3 + a1-l5..l7 + khái niệm loại phản ứng từ a2/a3 |
-| n3 Acid | 1 Khái niệm – phân loại – danh pháp · 2 Tính chất hoá học · 3 HCl, H2SO4; điều chế | Chủ đề II.I, Chương I + a6 |
-| n4 Base | 1 Khái niệm – phân loại – danh pháp · 2 Tính chất hoá học; CO2/SO2 + kiềm · 3 NaOH, Ca(OH)2; điều chế | Chủ đề II.II, Chương I + a7 |
-| n5 Oxide | 1 Khái niệm – phân loại – danh pháp · 2 Tính chất oxide base/acid · 3 Oxide lưỡng tính/trung tính; điều chế | Chủ đề II.III, Chương I + a5 |
-| n6 Muối và Phân bón hoá học | 1 Khái niệm – danh pháp – tính tan – màu dung dịch; muối quan trọng · 2 Tính chất; trao đổi; muối acid/trung hoà · 3 Điều chế muối · 4 Phân bón hoá học | Chủ đề II.IV–V, Chương I + a8 |
-| n7 Mối quan hệ giữa các hợp chất vô cơ | 1 Sơ đồ phân loại; ma trận 16 phản ứng · 2 Chuỗi phản ứng; điều chế nhiều bước · 3 Nhận biết – tách – tinh chế · 4 Luyện tập tổng hợp vô cơ | Chương I mục I+III + a9 + a12 |
-| n8 Kim loại | 1 Tính chất vật lí – hoá học · 2 Dãy hoạt động · 3 Nhôm – sắt · 4 Điều chế; hợp kim gang – thép · 5 Ăn mòn · 6 Nâng cao: kim loại + muối/acid | Chương II + a10 |
-| n9 Phi kim | 1 Tính chất chung · 2 Chlorine · 3 Carbon – silicon và hợp chất · 4 Bảng tuần hoàn: biến đổi tuần hoàn | Chương III + a11 |
-| n10 Hiđrocacbon và nhiên liệu | 1 Đại cương hữu cơ · 2 Alkane – methane · 3 Alkene – ethylene · 4 Alkyne – acetylene · 5 Arene – benzene · 6 Dầu mỏ – khí thiên nhiên – nhiên liệu; sự cháy · 7 Nâng cao: lập CTPT; đốt cháy | Chương IV + b1 + b2 |
-| n11 Dẫn xuất hiđrocacbon và polime | 1 Ethylic alcohol · 2 Acetic acid; acid no đơn chức · 3 Ester – chất béo · 4 Carbohydrate · 5 Protein · 6 Polymer; chất dẻo – tơ – cao su · 7 Nâng cao: chuỗi chuyển hoá – nhận biết; lên men – ester hoá | Chương V + b3 + b4 + b5-l1/l2 |
+| Unit                                         | Bài                                                                                                                                                                                                              | Nguồn chất liệu                                                     |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| n1 Nguyên tử – Nguyên tố – Công thức hoá học | 1 Chất – hỗn hợp – tách chất; cấu tạo nguyên tử · 2 Nguyên tố hoá học; sơ lược bảng tuần hoàn · 3 Đơn chất – hợp chất – phân tử; CTHH · 4 Hoá trị; lập CTHH                                                      | a1-l1..l4 (quy đổi GDPT 2018)                                       |
+| n2 Phản ứng hoá học                          | 1 Phản ứng hoá học; các loại phản ứng · 2 Mol – tỉ khối chất khí · 3 Dung dịch; độ tan · 4 Nồng độ C% – C_M; pha chế · 5 ĐLBTKL; PTHH · 6 Tính theo PTHH; chất dư – hiệu suất · 7 Tốc độ phản ứng – chất xúc tác | Chủ đề I + a4-l1..l3 + a1-l5..l7 + khái niệm loại phản ứng từ a2/a3 |
+| n3 Acid                                      | 1 Khái niệm – phân loại – danh pháp · 2 Tính chất hoá học · 3 HCl, H2SO4; điều chế                                                                                                                               | Chủ đề II.I, Chương I + a6                                          |
+| n4 Base                                      | 1 Khái niệm – phân loại – danh pháp · 2 Tính chất hoá học; CO2/SO2 + kiềm · 3 NaOH, Ca(OH)2; điều chế                                                                                                            | Chủ đề II.II, Chương I + a7                                         |
+| n5 Oxide                                     | 1 Khái niệm – phân loại – danh pháp · 2 Tính chất oxide base/acid · 3 Oxide lưỡng tính/trung tính; điều chế                                                                                                      | Chủ đề II.III, Chương I + a5                                        |
+| n6 Muối và Phân bón hoá học                  | 1 Khái niệm – danh pháp – tính tan – màu dung dịch; muối quan trọng · 2 Tính chất; trao đổi; muối acid/trung hoà · 3 Điều chế muối · 4 Phân bón hoá học                                                          | Chủ đề II.IV–V, Chương I + a8                                       |
+| n7 Mối quan hệ giữa các hợp chất vô cơ       | 1 Sơ đồ phân loại; ma trận 16 phản ứng · 2 Chuỗi phản ứng; điều chế nhiều bước · 3 Nhận biết – tách – tinh chế · 4 Luyện tập tổng hợp vô cơ                                                                      | Chương I mục I+III + a9 + a12                                       |
+| n8 Kim loại                                  | 1 Tính chất vật lí – hoá học · 2 Dãy hoạt động · 3 Nhôm – sắt · 4 Điều chế; hợp kim gang – thép · 5 Ăn mòn · 6 Nâng cao: kim loại + muối/acid                                                                    | Chương II + a10                                                     |
+| n9 Phi kim                                   | 1 Tính chất chung · 2 Chlorine · 3 Carbon – silicon và hợp chất · 4 Bảng tuần hoàn: biến đổi tuần hoàn                                                                                                           | Chương III + a11                                                    |
+| n10 Hiđrocacbon và nhiên liệu                | 1 Đại cương hữu cơ · 2 Alkane – methane · 3 Alkene – ethylene · 4 Alkyne – acetylene · 5 Arene – benzene · 6 Dầu mỏ – khí thiên nhiên – nhiên liệu; sự cháy · 7 Nâng cao: lập CTPT; đốt cháy                     | Chương IV + b1 + b2                                                 |
+| n11 Dẫn xuất hiđrocacbon và polime           | 1 Ethylic alcohol · 2 Acetic acid; acid no đơn chức · 3 Ester – chất béo · 4 Carbohydrate · 5 Protein · 6 Polymer; chất dẻo – tơ – cao su · 7 Nâng cao: chuỗi chuyển hoá – nhận biết; lên men – ester hoá        | Chương V + b3 + b4 + b5-l1/l2                                       |
 
 Nội dung cũ bỏ hẳn: a2-l1, a2-l3, a3-l1, a3-l2 (bài riêng oxi/hiđro/nước);
 a1-l8, a1-l9; a4-l4, a4-l5 (giữ ý chính trong n2); b5-l3 (luyện đề do tính
