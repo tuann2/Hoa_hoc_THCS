@@ -32,17 +32,17 @@
 
 ## Acceptance, decisions, and risks
 
-| Plan acceptance criterion | Evidence / status |
-| ------------------------- | ----------------- |
-| Machine-decided TRIVIAL verdict; §11 cases pass | `tests/scripts/classify-trivial.test.ts` — 16 §11 cases + 3 status cases, all pass |
-| Governance/CI/scripts/deps/src/tests/schema/content cannot be TRIVIAL | denylist table test (30 samples) in `tests/scripts/trivial-policy.test.ts` |
-| Unknown path / add / delete / rename fail closed | classifier cases 3–6, 13–15 |
-| False TRIVIAL claim blocked by CI | `trivial-verify` job + `verifyTrace` fixtures (smuggled edit, doctored trace) |
-| Snapshot-bound micro-trace per TRIVIAL run | `traceTrivial` writes schema-checked YAML bound to `computeSnapshot`; invalid traces rejected by `parseTraceYaml` |
-| Pilot: 2 real TRIVIAL + 1 blocked violation | See "Pilot record" below |
-| Token baseline, 8 scenarios, targets + deviations | `docs/measurements/WORKFLOW-004-token-baseline.md` |
-| All tests pass on candidate | 253 tests / 30 files pass locally; exact-candidate CI pending push |
-| Independent ELEVATED review + human approval | PENDING (dispatched after this handoff) |
+| Plan acceptance criterion                                             | Evidence / status                                                                                                 |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Machine-decided TRIVIAL verdict; §11 cases pass                       | `tests/scripts/classify-trivial.test.ts` — 16 §11 cases + 3 status cases, all pass                                |
+| Governance/CI/scripts/deps/src/tests/schema/content cannot be TRIVIAL | denylist table test (30 samples) in `tests/scripts/trivial-policy.test.ts`                                        |
+| Unknown path / add / delete / rename fail closed                      | classifier cases 3–6, 13–15                                                                                       |
+| False TRIVIAL claim blocked by CI                                     | `trivial-verify` job + `verifyTrace` fixtures (smuggled edit, doctored trace)                                     |
+| Snapshot-bound micro-trace per TRIVIAL run                            | `traceTrivial` writes schema-checked YAML bound to `computeSnapshot`; invalid traces rejected by `parseTraceYaml` |
+| Pilot: 2 real TRIVIAL + 1 blocked violation                           | See "Pilot record" below                                                                                          |
+| Token baseline, 8 scenarios, targets + deviations                     | `docs/measurements/WORKFLOW-004-token-baseline.md`                                                                |
+| All tests pass on candidate                                           | 253 tests / 30 files pass locally; exact-candidate CI pending push                                                |
+| Independent ELEVATED review + human approval                          | PENDING (dispatched after this handoff)                                                                           |
 
 - Design decisions: (1) trace generation is a separate
   `scripts/trace-trivial.ts`, not folded into `gates.ts` — keeps
@@ -73,11 +73,11 @@
 
 ## Pilot record
 
-| Pilot | Branch | Change | Verdict | Gates | Trace | Verify |
-| ----- | ------ | ------ | ------- | ----- | ----- | ------ |
-| A | `pilot/trivial-a` | `PROJECT_STORY.md` wording fix | TRIVIAL | pass (6.00 s / 6.15 s) | `20260719-0348d9c8635d.yaml`, snapshot `3a49384d3ddc…` | exit 0 |
-| B | `pilot/trivial-b` | `docs/content/CONTENT_OUTLINE.md` wording fix | TRIVIAL | pass (6.06 s / 6.37 s) | `20260719-d14c5dae52db.yaml` | exit 0 |
-| C | `pilot/trivial-c-violation` | README `npm run dev` line edited | ESCALATE (`code-fence`, `command-reference`) in 0.03 s | not run (fail-closed) | refused (exit 1, no file) | n/a |
+| Pilot | Branch                      | Change                                        | Verdict                                                | Gates                  | Trace                                                  | Verify |
+| ----- | --------------------------- | --------------------------------------------- | ------------------------------------------------------ | ---------------------- | ------------------------------------------------------ | ------ |
+| A     | `pilot/trivial-a`           | `PROJECT_STORY.md` wording fix                | TRIVIAL                                                | pass (6.00 s / 6.15 s) | `20260719-0348d9c8635d.yaml`, snapshot `3a49384d3ddc…` | exit 0 |
+| B     | `pilot/trivial-b`           | `docs/content/CONTENT_OUTLINE.md` wording fix | TRIVIAL                                                | pass (6.06 s / 6.37 s) | `20260719-d14c5dae52db.yaml`                           | exit 0 |
+| C     | `pilot/trivial-c-violation` | README `npm run dev` line edited              | ESCALATE (`code-fence`, `command-reference`) in 0.03 s | not run (fail-closed)  | refused (exit 1, no file)                              | n/a    |
 
 ## Validation evidence
 
