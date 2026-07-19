@@ -93,12 +93,15 @@
    R2 N3–N7 (vô cơ); R3 N8–N9 (kim loại, phi kim); R4 N10–N11 (hữu cơ).
    `content/catalog.json` chỉ liệt kê unit đã soạn xong trong vòng hiện tại
    (2 unit sau R1 → 7 sau R2 → 9 sau R3 → đủ 11 sau R4); không thêm unit
-   rỗng/dở dang. Nhờ vậy app luôn ở trạng thái hoàn chỉnh ở mọi checkpoint
-   và **toàn bộ E2E hiện có chạy sau mỗi vòng** (không chỉ ở R4): bộ E2E
-   hiện chỉ hard-code bài đầu tiên (`n1-l1`, luôn tồn tại từ R1) và dùng
-   selector chung cho luồng thi thử, nên không phụ thuộc catalog đầy đủ.
-   Mỗi vòng chạy đủ gate profile (gồm `test:e2e`, `test:pwa`), handoff nêu
-   rõ bài nào tái sử dụng câu hỏi cũ và bài toán nào đã giải lại.
+   rỗng/dở dang, để mỗi vòng vẫn là một app mạch lạc phục vụ kiểm soát chất
+   lượng theo vòng. Chia vòng chỉ để kiểm soát chất lượng nội dung, không
+   phải để gate hoá từng phần: mỗi vòng chạy gate nội dung/mã nguồn
+   (`format:check`, `validate-content`, `check:content-catalog`, `lint`,
+   `typecheck`, `test`, `build`, `check:bundle`) và test migration liên
+   quan; **`test:e2e`/`test:pwa` chỉ chạy đầy đủ một lần ở cuối R4**, sau
+   khi toàn bộ 11 unit đã được cập nhật, cùng với full gate profile và
+   evidence exact-snapshot cho candidate cuối cùng. Handoff mỗi vòng nêu rõ
+   bài nào tái sử dụng câu hỏi cũ và bài toán nào đã giải lại.
 3. Sau R4: full gate profile + evidence exact-snapshot trên candidate cuối.
 4. Review độc lập theo tier CRITICAL (fresh reviewer + adversarial, không
    nhận transcript implementer) + vòng review chuyên môn hoá học của giáo
