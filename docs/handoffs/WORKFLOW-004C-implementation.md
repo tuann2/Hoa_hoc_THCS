@@ -2,13 +2,13 @@
 
 ## Status
 
-- Remediation state: VALIDATED
+- Remediation state: REVIEWING
 - Risk tier / categories / escalation rationale: ELEVATED /
   governance-enforcement tooling (scripts), risk-tier classification logic /
   classifier errors could let risky changes bypass review (plan header,
   approved 2026-07-19 by tuann2).
 - Base SHA / candidate SHA: `7d9a0fb` (origin/main, 004B merge) /
-  `b66b895` (snapshot `21f5449f9aa3…`, git-tree).
+  `5a7b4c7` (snapshot `d284d8992b07…`, git-tree); evidence regenerated after remediation round 1 — the b66b895 evidence run is superseded (STALE).
 - Worktree state and dirty paths: clean at evidence time (see JSON).
 - CI reference for exact candidate: PENDING (push authorization not yet
   granted; local full-profile evidence below).
@@ -32,17 +32,17 @@
 
 ## Acceptance, decisions, and risks
 
-| Plan acceptance criterion                                             | Evidence / status                                                                                                                        |
-| --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Machine-decided TRIVIAL verdict; §11 cases pass                       | `tests/scripts/classify-trivial.test.ts` — 16 §11 cases + 3 status cases, all pass                                                       |
-| Governance/CI/scripts/deps/src/tests/schema/content cannot be TRIVIAL | denylist table test (30 samples) in `tests/scripts/trivial-policy.test.ts`                                                               |
-| Unknown path / add / delete / rename fail closed                      | classifier cases 3–6, 13–15                                                                                                              |
-| False TRIVIAL claim blocked by CI                                     | `trivial-verify` job + `verifyTrace` fixtures (smuggled edit, doctored trace)                                                            |
-| Snapshot-bound micro-trace per TRIVIAL run                            | `traceTrivial` writes schema-checked YAML bound to `computeSnapshot`; invalid traces rejected by `parseTraceYaml`                        |
-| Pilot: 2 real TRIVIAL + 1 blocked violation                           | See "Pilot record" below                                                                                                                 |
-| Token baseline, 8 scenarios, targets + deviations                     | `docs/measurements/WORKFLOW-004-token-baseline.md`                                                                                       |
-| All tests pass on candidate                                           | 237 tests / 28 files passed at candidate `b66b895`; post-remediation counts in the round-1 record below; exact-candidate CI pending push |
-| Independent ELEVATED review + human approval                          | PENDING (dispatched after this handoff)                                                                                                  |
+| Plan acceptance criterion                                             | Evidence / status                                                                                                                                            |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Machine-decided TRIVIAL verdict; §11 cases pass                       | `tests/scripts/classify-trivial.test.ts` — 16 §11 cases + 3 status cases, all pass                                                                           |
+| Governance/CI/scripts/deps/src/tests/schema/content cannot be TRIVIAL | denylist table test (30 samples) in `tests/scripts/trivial-policy.test.ts`                                                                                   |
+| Unknown path / add / delete / rename fail closed                      | classifier cases 3–6, 13–15                                                                                                                                  |
+| False TRIVIAL claim blocked by CI                                     | `trivial-verify` job + `verifyTrace` fixtures (smuggled edit, doctored trace)                                                                                |
+| Snapshot-bound micro-trace per TRIVIAL run                            | `traceTrivial` writes schema-checked YAML bound to `computeSnapshot`; invalid traces rejected by `parseTraceYaml`                                            |
+| Pilot: 2 real TRIVIAL + 1 blocked violation                           | See "Pilot record" below                                                                                                                                     |
+| Token baseline, 8 scenarios, targets + deviations                     | `docs/measurements/WORKFLOW-004-token-baseline.md`                                                                                                           |
+| All tests pass on candidate                                           | 240 tests / 28 files pass at candidate `5a7b4c7` (evidence JSON below); pre-remediation candidate `b66b895` recorded 237/28; exact-candidate CI pending push |
+| Independent ELEVATED review + human approval                          | PENDING (dispatched after this handoff)                                                                                                                      |
 
 - Design decisions: (1) trace generation is a separate
   `scripts/trace-trivial.ts`, not folded into `gates.ts` — keeps
@@ -83,15 +83,15 @@
 
 ```json
 {
-  "base_sha": "b66b895743a4539cb2fe980ab052f8617ef5f676",
+  "base_sha": "5a7b4c775185cbb3131b16f9872969bbd3df890a",
   "build_inputs": [
     {
       "path": ".env.example",
       "sha256": "6fda9c2a4670086a9b4784c5f146ae59df4ecb2f00410b89973483837bd16198"
     }
   ],
-  "candidate_sha": "b66b895743a4539cb2fe980ab052f8617ef5f676",
-  "finished_at": "2026-07-19T07:08:05.366Z",
+  "candidate_sha": "5a7b4c775185cbb3131b16f9872969bbd3df890a",
+  "finished_at": "2026-07-19T11:23:33.635Z",
   "gate_results": [
     {
       "id": "git-diff-check",
@@ -102,85 +102,85 @@
     {
       "id": "format-check",
       "command": ["npm", "run", "format:check"],
-      "durationMs": 6009,
+      "durationMs": 5817,
       "exitCode": 0
     },
     {
       "id": "content-catalog",
       "command": ["npm", "run", "check:content-catalog"],
-      "durationMs": 351,
+      "durationMs": 353,
       "exitCode": 0
     },
     {
       "id": "content-validation",
       "command": ["npm", "run", "validate-content"],
-      "durationMs": 376,
+      "durationMs": 388,
       "exitCode": 0
     },
     {
       "id": "lint",
       "command": ["npm", "run", "lint"],
-      "durationMs": 11789,
+      "durationMs": 12186,
       "exitCode": 0
     },
     {
       "id": "typecheck",
       "command": ["npm", "run", "typecheck"],
-      "durationMs": 5532,
+      "durationMs": 5858,
       "exitCode": 0
     },
     {
       "id": "unit-tests",
       "command": ["npm", "test"],
-      "durationMs": 17318,
+      "durationMs": 18000,
       "exitCode": 0
     },
     {
       "id": "production-build",
       "command": ["npm", "run", "build:app"],
-      "durationMs": 5456,
+      "durationMs": 5374,
       "exitCode": 0
     },
     {
       "id": "bundle-check",
       "command": ["npm", "run", "check:bundle"],
-      "durationMs": 435,
+      "durationMs": 353,
       "exitCode": 0
     },
     {
       "id": "dependency-audit",
       "command": ["npm", "audit", "--audit-level=moderate"],
-      "durationMs": 773,
+      "durationMs": 744,
       "exitCode": 0
     },
     {
       "id": "license-check",
       "command": ["npm", "run", "check:licenses"],
-      "durationMs": 573,
+      "durationMs": 528,
       "exitCode": 0
     },
     {
       "id": "e2e",
       "command": ["npm", "run", "test:e2e"],
-      "durationMs": 41813,
+      "durationMs": 41901,
       "exitCode": 0
     },
     {
       "id": "pwa",
       "command": ["npm", "run", "test:pwa"],
-      "durationMs": 23092,
+      "durationMs": 22839,
       "exitCode": 0
     },
     {
       "id": "pwa-subpath",
       "command": ["npm", "run", "test:pwa:subpath"],
-      "durationMs": 15285,
+      "durationMs": 15990,
       "exitCode": 0
     },
     {
       "id": "docs-check",
       "command": ["npm", "run", "check:docs", "--", "--all"],
-      "durationMs": 383,
+      "durationMs": 388,
       "exitCode": 0
     }
   ],
@@ -190,9 +190,9 @@
   "result": "pass",
   "snapshot_fallback_reason": null,
   "schema_version": 1,
-  "started_at": "2026-07-19T07:05:56.042Z",
+  "started_at": "2026-07-19T11:21:22.770Z",
   "validated_snapshot": {
-    "id": "21f5449f9aa34382b0bacc2197ffee0f0b5ec479",
+    "id": "d284d8992b076fee6099e2d7809b7e1d22bd35cc",
     "kind": "git-tree"
   }
 }
