@@ -56,8 +56,8 @@
         },
         {
           "id": "n5-l1-c9",
-          "heading": "Nâng cao: Anhiđrit acid, anhiđrit base và phản ứng giữa các oxide",
-          "body": "Anhiđrit nghĩa là chất “mất nước” so với acid hoặc base tương ứng. SO3 là anhiđrit của H2SO4 vì SO3 + H2O -> H2SO4; P2O5 là anhiđrit của H3PO4 vì P2O5 + 3H2O -> 2H3PO4. CaO là anhiđrit base của Ca(OH)2 vì CaO + H2O -> Ca(OH)2. Khái niệm này giúp dự đoán sản phẩm nhưng luôn phải xét oxide có phản ứng với nước hay không.\n\nOxide acid và oxide base còn có thể phản ứng trực tiếp với nhau tạo muối: CaO + CO2 -> CaCO3; Na2O + SO3 -> Na2SO4. Khi lập phương trình, hãy ghép cation của oxide base với gốc acid tương ứng của oxide acid rồi kiểm tra lại số nguyên tử O. Oxide lưỡng tính không nên tự động xếp vào một trong hai vế của quy tắc này nếu đề chưa cho điều kiện."
+          "heading": "Nâng cao: Anhydride acid, anhydride base và phản ứng giữa các oxide",
+          "body": "Anhydride nghĩa là chất “mất nước” so với acid hoặc base tương ứng. SO3 là anhydride của H2SO4 vì SO3 + H2O -> H2SO4; P2O5 là anhydride của H3PO4 vì P2O5 + 3H2O -> 2H3PO4. CaO là anhydride base của Ca(OH)2 vì CaO + H2O -> Ca(OH)2. Khái niệm này giúp dự đoán sản phẩm nhưng luôn phải xét oxide có phản ứng với nước hay không.\n\nOxide acid và oxide base còn có thể phản ứng trực tiếp với nhau tạo muối: CaO + CO2 -> CaCO3; Na2O + SO3 -> Na2SO4. Khi lập phương trình, hãy ghép cation của oxide base với gốc acid tương ứng của oxide acid rồi kiểm tra lại số nguyên tử O. Oxide lưỡng tính không nên tự động xếp vào một trong hai vế của quy tắc này nếu đề chưa cho điều kiện."
         },
         {
           "id": "n5-l1-c10",
@@ -359,7 +359,7 @@
           "prompt": "SO2 tác dụng với nước tạo thành",
           "options": ["H2SO3", "H2SO4", "H2S", "S"],
           "answer": 0,
-          "explanation": "B1. SO2 là oxide acid nên tác dụng với nước tạo acid tương ứng. B2. Lưu huỳnh giữ hoá trị IV nên acid tạo thành là H2SO3 (acid sunfurơ)."
+          "explanation": "B1. SO2 là oxide acid nên tác dụng với nước tạo acid tương ứng. B2. Lưu huỳnh giữ hoá trị IV nên acid tạo thành là H2SO3 (sulfurous acid)."
         },
         {
           "id": "n5-l2-q9",
