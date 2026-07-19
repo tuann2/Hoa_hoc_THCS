@@ -83,6 +83,26 @@
 
 ## Delivery plan
 
+Execution assignment (R2-R4) — mỗi dòng cần nt0 xác nhận riêng khi đến lượt
+vai trò đó; duyệt plan không tự động duyệt việc nhận vai kế tiếp. R1 đã làm
+xong với Planner=Implementer=Claude Code trong cùng phiên (chưa tách vai);
+từ R2 áp dụng phân công dưới đây để tách vai thật và tiết kiệm token phiên
+orchestrator:
+
+| Vai trò                                | Agent đề xuất                                   | Model / effort đề xuất                                                                  | Lý do theo khối lượng công việc                                                                                                                                   |
+| -------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Planner / orchestrator                 | Claude Code (phiên hiện tại)                    | Claude Fable 5, effort cao                                                              | Giữ toàn bộ ngữ cảnh nhiều lượt, phân rã khối lượng nội dung từng vòng, xác minh số liệu hoá học ở checkpoint — việc không lặp lại, cần suy luận sâu              |
+| Implementer R2 (N3–N7, 23 bài vô cơ)   | Codex                                           | GPT-5.4 (Codex CLI mặc định), effort cao                                                | Khối lượng lớn nhất trong 3 vòng còn lại, có tính lặp/cơ khí (tuân schema, quy đổi danh pháp) nhưng vẫn cần độ chính xác hoá học cao                              |
+| Implementer R3 (N8–N9, 9 bài)          | Codex                                           | GPT-5.4, effort cao                                                                     | Khối lượng vừa; giữ cùng agent với R2 để nhất quán văn phong/quy ước đã thiết lập                                                                                 |
+| Implementer R4 (N10–N11, 13 bài + E2E) | Codex                                           | GPT-5.4, effort cao (riêng phần sửa E2E: effort trung bình, việc cập nhật id máy móc)   | Khối lượng lớn thứ nhì; phần E2E là cập nhật id/luồng đã có, effort thấp hơn phần soạn nội dung                                                                   |
+| Independent Reviewer (mỗi vòng R2–R4)  | Antigravity (agy)                               | model mạnh nhất khả dụng qua `agy models` (kiểm tra tại thời điểm dispatch), effort cao | Review CRITICAL yêu cầu soát từng dòng thay đổi; execution độc lập, không thấy transcript implementer; đúng quy ước reviewer CRITICAL đã dùng ở các feature trước |
+| Release Assessor (cuối R4)             | Claude Code (phiên orchestrator) hoặc Codex đọc | Claude Haiku 4.5 (nếu tách phiên riêng) hoặc Codex effort thấp                          | Chỉ đọc handoff/evidence, đối chiếu tiêu chí — khối lượng nhỏ, không cần model đắt                                                                                |
+
+Model/effort trên là đề xuất của Planner tại thời điểm viết plan; Implementer
+phải xác nhận lại theo mục "capabilities required" của role contract và
+profile thực tế của phiên tại thời điểm dispatch (`docs/roles/*.md`,
+`docs/runbooks/providers/*.md`), ghi sai lệch (nếu có) vào handoff.
+
 1. Human duyệt plan này (dàn ý + quy ước + chiến lược tiến độ).
 2. Implementer nhận envelope riêng (allowed_paths: `content/`, `src/`,
    `tests/`, `scripts/tag-question-category.ts`,

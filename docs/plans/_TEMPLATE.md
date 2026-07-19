@@ -24,6 +24,17 @@
 
 ## Delivery plan
 
+Execution assignment — đề xuất agent/model/effort theo khối lượng công việc
+từng vai trò; mỗi dòng cần con người xác nhận riêng khi đến lượt vai trò đó,
+duyệt nội dung plan không tự động duyệt luôn việc nhận vai kế tiếp:
+
+| Vai trò              | Agent đề xuất | Model / effort đề xuất | Lý do |
+| -------------------- | ------------- | ---------------------- | ----- |
+| Planner              |               |                        |       |
+| Implementer          |               |                        |       |
+| Independent Reviewer |               |                        |       |
+| Release Assessor     |               |                        |       |
+
 1. Implementation step
 2. Validation and evidence step
 3. Review / handoff step
