@@ -8,10 +8,10 @@
 
 ## Permissions
 
-All permissions default to false. Repository write, commit, push, merge, and
-deploy are prohibited unless the architecture's bounded NORMAL batch-content
-exception is explicitly authorized; that exception never applies to ELEVATED
-or CRITICAL work.
+All permissions default to false. Commit, push, merge, and deploy are always
+prohibited for this role. Repository write is prohibited except under the
+architecture's bounded NORMAL batch-content exception when explicitly
+authorized; that exception never applies to ELEVATED or CRITICAL work.
 
 ## Responsibilities
 

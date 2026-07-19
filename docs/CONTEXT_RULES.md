@@ -16,8 +16,8 @@ escalation.
 
 ## Hard triggers
 
-Except for TRIVIAL work, these hard triggers require the Layer-1 row context
-and the workflow-architecture section relevant to the trigger: policy or
+These hard triggers deny TRIVIAL classification and require reading the
+matching task-domain row above plus the full workflow architecture: policy or
 governance changes; CI or deployment; dependencies or lockfiles; security,
 authentication, or RLS; schema or migration; runtime behavior; test
 expectations; public APIs; educational formulas, answers, or numeric values;
