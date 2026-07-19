@@ -32,7 +32,7 @@
         {
           "id": "n4-l1-c4",
           "heading": "Tính chất hoá học của base",
-          "body": "1) Kiềm tác dụng với oxide acid tạo muối và nước:\n2NaOH + CO2 -> Na2CO3 + H2O\n2) Base (tan và không tan) tác dụng với acid tạo muối và nước (phản ứng trung hoà):\nCu(OH)2 + 2HCl -> CuCl2 + 2H2O\n3) Kiềm tác dụng với dung dịch muối tạo muối mới và base mới:\n2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4\n\nKhi cho kiềm vào dung dịch muối, phản ứng trao đổi thường chỉ quan sát được nếu hiđroxide mới tạo thành kết tủa. Ví dụ: 3NaOH + FeCl3 -> Fe(OH)3 + 3NaCl. Một trường hợp hay gặp trong nhận biết là đun nóng muối amoni với kiềm: NaOH + NH4Cl -> NaCl + NH3↑ + H2O; khí NH3 làm quỳ tím ẩm hoá xanh."
+          "body": "1) Kiềm tác dụng với oxide acid tạo muối và nước:\n2NaOH + CO2 -> Na2CO3 + H2O\n2) Base (tan và không tan) tác dụng với acid tạo muối và nước (phản ứng trung hoà):\nCu(OH)2 + 2HCl -> CuCl2 + 2H2O\n3) Kiềm tác dụng với dung dịch muối tạo muối mới và base mới:\n2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4\n\nKhi cho kiềm vào dung dịch muối, phản ứng trao đổi thường chỉ quan sát được nếu hydroxide mới tạo thành kết tủa. Ví dụ: 3NaOH + FeCl3 -> Fe(OH)3 + 3NaCl. Một trường hợp hay gặp trong nhận biết là đun nóng muối amoni với kiềm: NaOH + NH4Cl -> NaCl + NH3↑ + H2O; khí NH3 làm quỳ tím ẩm hoá xanh."
         },
         {
           "id": "n4-l1-c5",
@@ -47,11 +47,11 @@
         {
           "id": "n4-l1-c7",
           "heading": "Nâng cao: Điều kiện để kiềm phản ứng với dung dịch muối",
-          "body": "Không viết phản ứng trao đổi chỉ vì đã đổi chỗ hai cation. Trong dung dịch, phản ứng cần có chất kéo ion ra khỏi dung dịch, thường là kết tủa, nước hoặc khí. Với kiềm và muối kim loại, dấu hiệu quyết định thường là hiđroxide không tan.\n\nVí dụ: 2NaOH + CuSO4 -> Cu(OH)2↓ + Na2SO4; NaOH + KCl: không phản ứng vì các ion Na+, K+, Cl-, OH- đều vẫn tồn tại trong dung dịch. Cách xét nhanh: tách các chất tan thành ion, gạch các ion khán giả, rồi kiểm tra xem phần còn lại có tạo kết tủa, H2O hay khí không."
+          "body": "Không viết phản ứng trao đổi chỉ vì đã đổi chỗ hai cation. Trong dung dịch, phản ứng cần có chất kéo ion ra khỏi dung dịch, thường là kết tủa, nước hoặc khí. Với kiềm và muối kim loại, dấu hiệu quyết định thường là hydroxide không tan.\n\nVí dụ: 2NaOH + CuSO4 -> Cu(OH)2↓ + Na2SO4; NaOH + KCl: không phản ứng vì các ion Na+, K+, Cl-, OH- đều vẫn tồn tại trong dung dịch. Cách xét nhanh: tách các chất tan thành ion, gạch các ion khán giả, rồi kiểm tra xem phần còn lại có tạo kết tủa, H2O hay khí không."
         },
         {
           "id": "n4-l1-c8",
-          "heading": "Nâng cao: Nhận biết ion kim loại bằng kết tủa hiđroxide",
+          "heading": "Nâng cao: Nhận biết ion kim loại bằng kết tủa hydroxide",
           "body": "Nhỏ từ từ NaOH vào các dung dịch muối có thể nhận biết sơ bộ cation qua màu kết tủa:\n- Cu2+ tạo Cu(OH)2 màu xanh: CuSO4 + 2NaOH -> Cu(OH)2↓ + Na2SO4.\n- Fe2+ tạo Fe(OH)2 trắng xanh; để ngoài không khí, kết tủa dần chuyển nâu đỏ do bị oxi hoá.\n- Fe3+ tạo Fe(OH)3 nâu đỏ: FeCl3 + 3NaOH -> Fe(OH)3↓ + 3NaCl.\n- Al3+ tạo Al(OH)3 trắng keo.\n\nMàu chỉ là dấu hiệu ban đầu; khi đề cho NaOH dư, cần để ý Al(OH)3 và Zn(OH)2 có thể tan lại do tính lưỡng tính. Kĩ thuật này được khai thác riêng ở bài A7-L5."
         },
         {
@@ -66,8 +66,8 @@
         },
         {
           "id": "n4-l1-c11",
-          "heading": "Nâng cao: Nhiệt phân hiđroxide và bảo toàn khối lượng",
-          "body": "Khi nung hoàn toàn một hiđroxide không tan, kim loại vẫn nằm trong oxide rắn; chỉ H và một phần O đi ra dưới dạng H2O. Vì vậy m(chất rắn sau nung) = m(hiđroxide ban đầu) - m(H2O).\n\nHãy viết đúng công thức oxide rồi cân bằng trước khi lập tỉ lệ mol. Hai dạng rất hay gặp là M(OH)2 -> MO + H2O và 2M(OH)3 -> M2O3 + 3H2O. Chẳng hạn nung 2 mol Fe(OH)3 thu 1 mol Fe2O3 và 3 mol H2O."
+          "heading": "Nâng cao: Nhiệt phân hydroxide và bảo toàn khối lượng",
+          "body": "Khi nung hoàn toàn một hydroxide không tan, kim loại vẫn nằm trong oxide rắn; chỉ H và một phần O đi ra dưới dạng H2O. Vì vậy m(chất rắn sau nung) = m(hydroxide ban đầu) - m(H2O).\n\nHãy viết đúng công thức oxide rồi cân bằng trước khi lập tỉ lệ mol. Hai dạng rất hay gặp là M(OH)2 -> MO + H2O và 2M(OH)3 -> M2O3 + 3H2O. Chẳng hạn nung 2 mol Fe(OH)3 thu 1 mol Fe2O3 và 3 mol H2O."
         }
       ],
       "questions": [

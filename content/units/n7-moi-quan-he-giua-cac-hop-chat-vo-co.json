@@ -42,7 +42,7 @@
         {
           "id": "n7-l1-c6",
           "heading": "Nâng cao: Muối là nút chuyển hoá có điều kiện",
-          "body": "Từ muối không thể tùy ý quay về mọi loại chất. Muối -> base thường cần tạo hiđroxide ít tan, chẳng hạn CuSO4 + 2NaOH -> Cu(OH)2↓ + Na2SO4. Muối cacbonat gặp acid tạo H2CO3 không bền rồi phân huỷ: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2↑. Vì sản phẩm cuối là khí và nước nên phản ứng xảy ra hoàn toàn theo chiều đó.\n\nMuối -> oxide thường cần nhiệt phân một muối thích hợp, ví dụ CaCO3 -> CaO + CO2↑ khi nung. Không được áp dụng máy móc cho mọi muối; nhiều muối bền khi đun trong phạm vi bài học, hoặc cho sản phẩm khác. Khi chọn đường từ muối, hãy nêu rõ “tạo kết tủa”, “giải phóng khí” hoặc “nung” thay vì chỉ viết tên chất đích."
+          "body": "Từ muối không thể tùy ý quay về mọi loại chất. Muối -> base thường cần tạo hydroxide ít tan, chẳng hạn CuSO4 + 2NaOH -> Cu(OH)2↓ + Na2SO4. Muối cacbonat gặp acid tạo H2CO3 không bền rồi phân huỷ: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2↑. Vì sản phẩm cuối là khí và nước nên phản ứng xảy ra hoàn toàn theo chiều đó.\n\nMuối -> oxide thường cần nhiệt phân một muối thích hợp, ví dụ CaCO3 -> CaO + CO2↑ khi nung. Không được áp dụng máy móc cho mọi muối; nhiều muối bền khi đun trong phạm vi bài học, hoặc cho sản phẩm khác. Khi chọn đường từ muối, hãy nêu rõ “tạo kết tủa”, “giải phóng khí” hoặc “nung” thay vì chỉ viết tên chất đích."
         },
         {
           "id": "n7-l1-c7",
@@ -256,7 +256,7 @@
         {
           "id": "n7-l2-c4",
           "heading": "Nâng cao: Chọn thuốc thử cho từng mũi tên",
-          "body": "Không chọn thuốc thử theo thói quen; hãy xuất phát từ chất đích và điều kiện để phản ứng có thể xảy ra. Oxide base thường đi đến muối bằng acid; oxide acid thường đi đến muối bằng kiềm; từ muối muốn thu hiđroxide thường chọn kiềm tạo hiđroxide ít tan. Chẳng hạn: CuO + H2SO4 -> CuSO4 + H2O; CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4; Cu(OH)2 -> CuO + H2O (nung).\n\nNếu bước sau cần một ion trong dung dịch, hãy ưu tiên muối tan của ion đó. Nếu mục tiêu là tách chất rắn, hãy thiết kế bước tạo kết tủa rồi lọc. Cần tránh phép trao đổi mà cả bốn chất đều tan, vì không có lực đẩy phản ứng; cũng không được dùng nước để biến mọi oxide thành acid hoặc base."
+          "body": "Không chọn thuốc thử theo thói quen; hãy xuất phát từ chất đích và điều kiện để phản ứng có thể xảy ra. Oxide base thường đi đến muối bằng acid; oxide acid thường đi đến muối bằng kiềm; từ muối muốn thu hydroxide thường chọn kiềm tạo hydroxide ít tan. Chẳng hạn: CuO + H2SO4 -> CuSO4 + H2O; CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4; Cu(OH)2 -> CuO + H2O (nung).\n\nNếu bước sau cần một ion trong dung dịch, hãy ưu tiên muối tan của ion đó. Nếu mục tiêu là tách chất rắn, hãy thiết kế bước tạo kết tủa rồi lọc. Cần tránh phép trao đổi mà cả bốn chất đều tan, vì không có lực đẩy phản ứng; cũng không được dùng nước để biến mọi oxide thành acid hoặc base."
         },
         {
           "id": "n7-l2-c5",
@@ -490,12 +490,12 @@
         {
           "id": "n7-l3-c6",
           "heading": "Nâng cao: Hiện tượng kết tủa và biến đổi trong không khí",
-          "body": "Màu kết tủa chỉ là dấu hiệu ban đầu, cần quan sát cả sự thay đổi sau đó. Khi cho NaOH vào muối Fe2+, Fe(OH)2 mới tạo có màu trắng xanh; để ngoài không khí, chất này bị oxi hoá dần thành Fe(OH)3 nâu đỏ: 4Fe(OH)2 + O2 + 2H2O -> 4Fe(OH)3. Vì vậy kết tủa nâu đỏ không luôn chứng tỏ mẫu ban đầu chứa Fe3+.\n\nCu2+ cho Cu(OH)2 xanh, Fe3+ cho Fe(OH)3 nâu đỏ; còn nhiều ion kim loại khác cũng cho hiđroxide trắng. Nếu chỉ dựa vào màu trắng thì chưa đủ kết luận. Cần phối hợp độ tan trong kiềm dư, phản ứng với acid hoặc một thuốc thử đặc hiệu khác để xác nhận ion."
+          "body": "Màu kết tủa chỉ là dấu hiệu ban đầu, cần quan sát cả sự thay đổi sau đó. Khi cho NaOH vào muối Fe2+, Fe(OH)2 mới tạo có màu trắng xanh; để ngoài không khí, chất này bị oxi hoá dần thành Fe(OH)3 nâu đỏ: 4Fe(OH)2 + O2 + 2H2O -> 4Fe(OH)3. Vì vậy kết tủa nâu đỏ không luôn chứng tỏ mẫu ban đầu chứa Fe3+.\n\nCu2+ cho Cu(OH)2 xanh, Fe3+ cho Fe(OH)3 nâu đỏ; còn nhiều ion kim loại khác cũng cho hydroxide trắng. Nếu chỉ dựa vào màu trắng thì chưa đủ kết luận. Cần phối hợp độ tan trong kiềm dư, phản ứng với acid hoặc một thuốc thử đặc hiệu khác để xác nhận ion."
         },
         {
           "id": "n7-l3-c7",
           "heading": "Nâng cao: Tách bằng kết tủa chọn lọc",
-          "body": "Muốn tách một ion khỏi dung dịch hỗn hợp, chọn thuốc thử biến chỉ ion đó thành chất ít tan, sau đó lọc. Chẳng hạn cho NaOH dư vào dung dịch chứa Cu2+ và Al3+: Cu(OH)2 kết tủa xanh, còn Al(OH)3 tạo ra tan trong NaOH dư thành aluminat; lọc thu được Cu(OH)2. Ở cách biểu diễn Hoá 9: Al(OH)3 + NaOH -> NaAlO2 + 2H2O.\n\nNếu cần thu lại Al(OH)3, acid hoá từ từ phần dung dịch aluminat đến khi xuất hiện kết tủa trắng rồi lọc. Điểm quyết định là lượng NaOH phải dư: dùng vừa đủ thì cả hai hiđroxide có thể cùng tồn tại ở dạng kết tủa, phép tách thất bại. Luôn nêu rõ chất nào ở bã lọc, chất nào ở nước lọc sau mỗi bước."
+          "body": "Muốn tách một ion khỏi dung dịch hỗn hợp, chọn thuốc thử biến chỉ ion đó thành chất ít tan, sau đó lọc. Chẳng hạn cho NaOH dư vào dung dịch chứa Cu2+ và Al3+: Cu(OH)2 kết tủa xanh, còn Al(OH)3 tạo ra tan trong NaOH dư thành aluminat; lọc thu được Cu(OH)2. Ở cách biểu diễn Hoá 9: Al(OH)3 + NaOH -> NaAlO2 + 2H2O.\n\nNếu cần thu lại Al(OH)3, acid hoá từ từ phần dung dịch aluminat đến khi xuất hiện kết tủa trắng rồi lọc. Điểm quyết định là lượng NaOH phải dư: dùng vừa đủ thì cả hai hydroxide có thể cùng tồn tại ở dạng kết tủa, phép tách thất bại. Luôn nêu rõ chất nào ở bã lọc, chất nào ở nước lọc sau mỗi bước."
         },
         {
           "id": "n7-l3-c8",
@@ -687,7 +687,7 @@
           "answer": "HCl",
           "acceptedAnswers": [
             "hcl dư",
-            "acid clohidric",
+            "hydrochloric acid",
             "h2so4 loãng",
             "h2so4"
           ],
@@ -749,12 +749,12 @@
         {
           "id": "n7-l4-c7",
           "heading": "Nâng cao: Kết tủa theo lượng kiềm và trường hợp lưỡng tính",
-          "body": "Trước khi tính khối lượng kết tủa, phải xét lượng OH- có đủ để kết tủa hoàn toàn hay không. Nếu dung dịch có a mol Cu2+ thì cần 2a mol OH- để tạo tối đa a mol Cu(OH)2; OH- ít hơn thì số mol kết tủa bằng nOH- / 2. Với hỗn hợp nhiều cation, lượng OH- ở thời điểm kết tủa tối đa là tổng số mol OH- cần cho từng hiđroxide.\n\nAl(OH)3 và Zn(OH)2 làm đồ thị lượng kết tủa có thêm đoạn giảm: sau khi tạo kết tủa, kiềm dư còn hoà tan chúng. Ở mức biểu diễn Hoá 9: Al(OH)3 + NaOH -> NaAlO2 + 2H2O. Vì thế phải tách rõ ba vùng: kiềm thiếu, kiềm vừa đủ tạo lượng kết tủa lớn nhất, và kiềm dư làm tan phần lưỡng tính. Không áp dụng quy tắc này cho Cu(OH)2 hoặc Mg(OH)2, vì chúng không tan trong NaOH dư theo phạm vi bài học."
+          "body": "Trước khi tính khối lượng kết tủa, phải xét lượng OH- có đủ để kết tủa hoàn toàn hay không. Nếu dung dịch có a mol Cu2+ thì cần 2a mol OH- để tạo tối đa a mol Cu(OH)2; OH- ít hơn thì số mol kết tủa bằng nOH- / 2. Với hỗn hợp nhiều cation, lượng OH- ở thời điểm kết tủa tối đa là tổng số mol OH- cần cho từng hydroxide.\n\nAl(OH)3 và Zn(OH)2 làm đồ thị lượng kết tủa có thêm đoạn giảm: sau khi tạo kết tủa, kiềm dư còn hoà tan chúng. Ở mức biểu diễn Hoá 9: Al(OH)3 + NaOH -> NaAlO2 + 2H2O. Vì thế phải tách rõ ba vùng: kiềm thiếu, kiềm vừa đủ tạo lượng kết tủa lớn nhất, và kiềm dư làm tan phần lưỡng tính. Không áp dụng quy tắc này cho Cu(OH)2 hoặc Mg(OH)2, vì chúng không tan trong NaOH dư theo phạm vi bài học."
         },
         {
           "id": "n7-l4-c8",
           "heading": "Nâng cao: Bảo toàn khối lượng phải chọn đúng hệ",
-          "body": "Bảo toàn khối lượng luôn đúng, nhưng hệ được cân phải bao gồm mọi chất đi vào và đi ra. Khi cho cacbonat tác dụng với acid trong cốc hở, khối lượng phần còn lại giảm vì CO2 bay khỏi hệ đang cân; không được viết khối lượng dung dịch sau phản ứng bằng khối lượng ban đầu nếu đã bỏ qua khí. Khi nung muối hoặc hiđroxide, chất rắn sau nung cũng nhẹ đi do CO2 hoặc H2O thoát ra.\n\nMột cách an toàn là viết phương trình rồi dùng: khối lượng sản phẩm cần tìm = khối lượng các chất phản ứng thực sự đã dùng - khối lượng các sản phẩm không được giữ lại trong phần đang xét. Nếu cân cả bình kín trước và sau phản ứng thì tổng khối lượng không đổi. Hãy ghi rõ đề hỏi khối lượng dung dịch, chất rắn sau lọc, kết tủa đã sấy khô hay toàn bộ hệ; bốn đại lượng này không thể thay thế cho nhau."
+          "body": "Bảo toàn khối lượng luôn đúng, nhưng hệ được cân phải bao gồm mọi chất đi vào và đi ra. Khi cho cacbonat tác dụng với acid trong cốc hở, khối lượng phần còn lại giảm vì CO2 bay khỏi hệ đang cân; không được viết khối lượng dung dịch sau phản ứng bằng khối lượng ban đầu nếu đã bỏ qua khí. Khi nung muối hoặc hydroxide, chất rắn sau nung cũng nhẹ đi do CO2 hoặc H2O thoát ra.\n\nMột cách an toàn là viết phương trình rồi dùng: khối lượng sản phẩm cần tìm = khối lượng các chất phản ứng thực sự đã dùng - khối lượng các sản phẩm không được giữ lại trong phần đang xét. Nếu cân cả bình kín trước và sau phản ứng thì tổng khối lượng không đổi. Hãy ghi rõ đề hỏi khối lượng dung dịch, chất rắn sau lọc, kết tủa đã sấy khô hay toàn bộ hệ; bốn đại lượng này không thể thay thế cho nhau."
         },
         {
           "id": "n7-l4-c9",
@@ -912,7 +912,7 @@
           "acceptedAnswers": ["9.8"],
           "placeholder": "Nhập số gam",
           "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
-          "explanation": "B1. CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl; 0,10 mol CuCl2 cần đúng 0,20 mol NaOH — hai chất vừa đủ. B2. nCu(OH)2 = 0,10 mol. B3. m = 0,10 x 98 = 9,8 g (Cu(OH)2 không phải hiđroxide lưỡng tính nên không tan khi kiềm dư)."
+          "explanation": "B1. CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl; 0,10 mol CuCl2 cần đúng 0,20 mol NaOH — hai chất vừa đủ. B2. nCu(OH)2 = 0,10 mol. B3. m = 0,10 x 98 = 9,8 g (Cu(OH)2 không phải hydroxide lưỡng tính nên không tan khi kiềm dư)."
         },
         {
           "id": "n7-l4-q13",
