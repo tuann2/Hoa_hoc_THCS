@@ -3,93 +3,46 @@
 ## Status
 
 - Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
-- Owner: Claude Code
-- Approved by:
-- Approved date:
-- Risk tier: <!-- NORMAL | ELEVATED | CRITICAL, per the architecture's Risk Model -->
-- Risk categories: <!-- applicable categories, e.g. "numeric business logic", "public API"; "none" if NORMAL -->
-- Escalation rationale: <!-- why this tier; "n/a" if lowest plausible tier -->
-- Change type: <!-- per the architecture's quality-gates table: Documentation only | Learning content or content schema | Application source or runtime config | Tests only | Dependencies or lockfiles | Public API or complex/numeric logic | Auth, security or permissions | Migration or destructive operation | Infrastructure or deployment -->
-- Quality gates: <!-- canonical commands required for this change type, per the architecture's Validation Model; a required gate with no repository command is a blocker, not permission to skip -->
+- Owner:
+- Approved by / date:
+- Risk tier: <!-- NORMAL | ELEVATED | CRITICAL -->
+- Risk categories and escalation rationale:
+- Change type and required gate profile: <!-- see scripts/gates-manifest.ts -->
 
-## 1. Objective
+## Objective and scope
 
-Mô tả kết quả cần đạt.
+- Objective:
+- In scope:
+- Out of scope:
 
-## 2. Current system analysis
+## Current analysis and design
 
-Mô tả trạng thái hiện tại của codebase.
+- Current behavior / relevant context:
+- Proposed design:
+- New technology (if any): rationale, alternatives, trade-offs, and required
+  human approval before implementation.
 
-## 3. Assumptions
+## Delivery plan
 
-- Assumption 1
-- Assumption 2
+1. Implementation step
+2. Validation and evidence step
+3. Review / handoff step
 
-## 4. Scope
-
-- Nội dung trong phạm vi triển khai.
-
-## 5. Out of scope
-
-- Nội dung không được triển khai.
-
-## 6. Proposed design
-
-Mô tả kiến trúc và hướng triển khai.
-
-## 6a. New technology (bỏ qua nếu không áp dụng)
-
-Chỉ điền nếu kế hoạch thêm dependency, service hoặc infra mới.
-
-- Công nghệ đề xuất:
-- Lý do lựa chọn:
-- Phương án khác đã xem xét và lý do loại:
-- Trade-off chấp nhận (chi phí, độ phức tạp, lock-in, bảo mật, bảo trì):
-- **Cần con người duyệt lựa chọn này trước khi triển khai.**
-- Sau khi duyệt: cập nhật `docs/architecture.md` (và `docs/adr/` nếu là
-  quyết định không tầm thường).
-
-## 7. Files to create
-
-- `path/to/new-file`
-
-## 8. Files to modify
-
-- `path/to/existing-file`
-
-## 9. API and database impact
-
-Mô tả thay đổi API, schema hoặc migration.
-
-## 10. Implementation steps
-
-1. Bước 1
-2. Bước 2
-3. Bước 3
-
-## 11. Test strategy
-
-- Unit tests
-- Integration tests
-- Regression tests
-- Negative cases
-
-## 12. Security considerations
-
-Mô tả rủi ro bảo mật và biện pháp kiểm soát.
-
-## 13. Risks
+## Risks and controls
 
 | Risk | Impact | Mitigation |
 | ---- | ------ | ---------- |
-| ...  | ...    | ...        |
+|      |        |            |
 
-## 14. Rollback plan
+## Acceptance and recovery
 
-Mô tả cách rollback an toàn.
+- [ ] Acceptance criterion
+- [ ] Acceptance criterion
+- Security considerations:
+- API/database impact:
+- Test strategy:
+- Rollback plan:
 
-## 15. Acceptance criteria
-
-- [ ] Điều kiện 1
-- [ ] Điều kiện 2
-- [ ] Điều kiện 3
+<!-- TRIVIAL work uses a micro-trace, not this template. NORMAL plans keep content at 60 lines or fewer. Use the architecture,
+role contracts, context rules, and gate manifest by reference rather than
+copying their policy or command tables. -->
