@@ -7,8 +7,8 @@ Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phả
 bên dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu tài liệu, trước
 `## R2`).
 
-- Remediation state: VALIDATED (R1 + R2 + R3 đã commit xong, gate xanh; chờ
-  Independent Review cho R3. Xem "## R3")
+- Remediation state: VALIDATED (R1 + R2 + R3 xong — commit, gate xanh,
+  Independent Review đã đóng; chờ R4. Xem "## R3")
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
@@ -509,3 +509,26 @@ SiO2"` (từ cũ chưa quy đổi) → `"Silicon đioxide SiO2"`; `n8-l5-c…`: 
   vi cũ, không đổi so với R1/R2.
 - Commit thay Codex (degradation path do sandbox không có
   `git-metadata-write`, giống R2).
+
+## Independent verification
+
+- Verifier / execution identifier / independence method: Antigravity (agy),
+  Gemini 3.1 Pro (High), execution độc lập không nhận transcript Implementer,
+  chỉ đọc plan + handoff + candidate `feb2a08` — **APPROVE_WITH_NOTES**,
+  1 finding.
+- Exact candidate CI status: PENDING (chưa push).
+- Findings and disposition:
+  1. `n9-l3-c13`: reviewer đề nghị đổi `"Silicon đioxide"` thành `"Silicon
+dioxide"` (cho rằng "đioxide" là lai ghép Việt-Anh sai). **Không áp
+     dụng** — đây là quy ước đặt tên đã ghi rõ trong chính nội dung app
+     (`n5-oxide.json`, thẻ "Danh pháp oxide": "Oxide phi kim: dùng tiền tố
+     chỉ số nguyên tử (mono, đi, tri, tetra, penta)... SO2 là lưu huỳnh
+     đioxide; SO3 là lưu huỳnh trioxide; P2O5 là điphotpho pentaoxide"),
+     đã dùng nhất quán ở n5 (`đisắt trioxide`, `Lưu huỳnh đioxide SO2`) từ
+     R2. Đổi riêng n9 thành "dioxide" sẽ tạo thêm bất nhất thay vì sửa lỗi.
+     Reviewer thiếu ngữ cảnh vì không được yêu cầu đối chiếu chéo n5 trong
+     lượt review này — rút kinh nghiệm cho R4: nêu rõ quy ước tiền tố
+     mono/đi/tri/tetra/penta trong prompt review tiếp theo.
+- Không phát hiện lỗi hoá học, cân bằng phương trình, hay lai ghép danh
+  pháp thật nào khác. Candidate cuối cùng của R3: `feb2a08` (không đổi,
+  không cần commit sửa).
