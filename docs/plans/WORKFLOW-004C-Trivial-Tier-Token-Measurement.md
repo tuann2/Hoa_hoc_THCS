@@ -2,10 +2,10 @@
 
 ## Status
 
-- Status: DRAFT
+- Status: APPROVED
 - Owner: Claude Code
-- Approved by:
-- Approved date:
+- Approved by: tuann2 (Human Approver, via dispatch 2026-07-19)
+- Approved date: 2026-07-19
 - Risk tier: ELEVATED
 - Risk categories: governance-enforcement tooling (scripts); risk-tier
   classification logic

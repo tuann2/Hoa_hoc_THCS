@@ -57,6 +57,47 @@ jobs:
           path: dist-prod
           if-no-files-found: error
 
+  # Anti-cheating control for the TRIVIAL tier (WORKFLOW-004C): when a PR
+  # declares itself TRIVIAL by adding a docs/trace/trivial/*.yaml file for its
+  # HEAD commit, the machine verdict is recomputed from the actual diff and a
+  # false claim fails this job.
+  trivial-verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Reject a false TRIVIAL claim
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          FILES=$(git diff --name-only --diff-filter=A "$BASE_SHA" HEAD -- 'docs/trace/trivial/*.yaml')
+          if [ -z "$FILES" ]; then
+            echo "No TRIVIAL trace claim in this PR; nothing to verify."
+            exit 0
+          fi
+          COUNT=$(printf '%s\n' "$FILES" | wc -l)
+          if [ "$COUNT" -ne 1 ]; then
+            echo "A TRIVIAL PR must add exactly one trace file; found $COUNT." >&2
+            exit 1
+          fi
+          node --import tsx scripts/trace-trivial.ts \
+            --verify="$FILES" \
+            --changed-from="$BASE_SHA"
+
   browser:
     needs: web
     runs-on: ubuntu-latest

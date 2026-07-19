@@ -24,8 +24,8 @@ type CheckDocsOptions = {
 };
 
 const MARKDOWN_LINK_PATTERN = /!?\[[^\]]*\]\(([^)]+)\)/gu;
-const SCRIPT_REFERENCE_PATTERN = /\bnpm run\s+([a-z0-9:-]+)/giu;
-const DOCUMENT_REFERENCE_PATTERN =
+export const SCRIPT_REFERENCE_PATTERN = /\bnpm run\s+([a-z0-9:-]+)/giu;
+export const DOCUMENT_REFERENCE_PATTERN =
   /(?:^|[`(\s])((?:docs\/(?:(?:plans|handoffs|architecture|runbooks|adr)\/[A-Za-z0-9._/-]+)|scripts\/[A-Za-z0-9._/-]+\.ts|\.github\/workflows\/[A-Za-z0-9._/-]+|(?:README|AGENTS|AI_WORKFLOW)\.md))(?=[`)\s:,.]|$)/gmu;
 const ARCHIVAL_MARKER_PATTERN =
   /^\s*status:\s*(stale|superseded|archived)\s*$/iu;

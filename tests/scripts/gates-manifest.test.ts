@@ -7,6 +7,25 @@ import {
 } from '../../scripts/gates-manifest';
 
 describe('gates-manifest', () => {
+  it('maps TRIVIAL enforcement scripts and tests to the full profile', () => {
+    const samples = [
+      'scripts/classify-trivial.ts',
+      'scripts/trace-trivial.ts',
+      'scripts/trivial-policy.ts',
+      'tests/scripts/classify-trivial.test.ts',
+      'tests/scripts/trace-trivial.test.ts',
+      'tests/scripts/trivial-policy.test.ts'
+    ];
+
+    for (const sample of samples) {
+      const rule = PATH_GATE_RULES.find((candidate) =>
+        candidate.pattern.test(sample)
+      );
+
+      expect(rule?.gates, sample).toEqual(PROFILE_GATE_IDS.full);
+    }
+  });
+
   it('maps docs-only markdown files to docs-check', () => {
     const docsRule = PATH_GATE_RULES.find((rule) =>
       rule.pattern.test('docs/plans/WORKFLOW-004A-Gates-Evidence-Deployment.md')

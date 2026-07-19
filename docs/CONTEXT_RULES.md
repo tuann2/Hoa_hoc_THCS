@@ -16,6 +16,11 @@ escalation.
 
 ## Hard triggers
 
+TRIVIAL eligibility is decided by machine: run
+`npm run gates -- --tier=trivial --changed-from=<base_sha>` and record the
+micro-trace with `npm run trace:trivial -- --changed-from=<base_sha>`; an
+ESCALATE verdict means the change follows the NORMAL+ workflow.
+
 These hard triggers deny TRIVIAL classification and require reading the
 matching task-domain row above plus the full workflow architecture: policy or
 governance changes; CI or deployment; dependencies or lockfiles; security,
