@@ -1,6 +1,10 @@
 # Runbook: Cài đặt và cấu hình bộ công cụ AI Agent
 
-Hướng dẫn thiết lập bộ ba công cụ cho luồng vibe-code với Claude Code +
+> **Deprecated:** This historical setup guide is retained for migration
+> reference. Use [`docs/runbooks/providers/`](providers/) for current adapter
+> mechanics; governance and gate definitions are not maintained here.
+
+Hướng dẫn thiết lập bộ ba công cụ cho luồng AI workflow với Claude Code +
 Codex + Gemini (antigravity-cli).
 
 ## Tổng quan kiến trúc
@@ -135,12 +139,8 @@ node ~/.claude/plugins/cache/openai-codex/codex/*/scripts/codex-companion.mjs \
 </task>
 
 <verification_loop>
-Chạy tuần tự và sửa tới khi tất cả PASS:
-1. npm run validate-content (hoặc test suite tương đương)
-2. npx prettier --write <file>
-3. npm test
-4. npm run lint
-5. npm run typecheck
+Xác định gate áp dụng và chạy các lệnh chính xác từ
+scripts/gates-manifest.ts; không sao chép danh sách lệnh vào prompt.
 </verification_loop>
 
 <action_safety>
@@ -198,7 +198,7 @@ với `timeout: 300000` (5 phút).
 
 ---
 
-## 4. Luồng vibe-code thực tế
+## 4. Luồng AI workflow thực tế
 
 ### Bước 1 — Mở session Claude
 

@@ -158,7 +158,8 @@ docs/runbooks/DEPLOYMENT.md   # quy trình deploy chính / dự phòng / rollbac
 1. `AGENTS.md` (shim)
 2. Execution envelope
 3. `docs/roles/<assigned_role>.md`
-4. `docs/CONTEXT_RULES.md`
+4. Approved plan: `docs/plans/<FEATURE-ID>.md`
+5. `docs/CONTEXT_RULES.md`
 
 `AI_WORKFLOW.md` là chỉ mục pipeline; sau các bước trên, đọc plan/handoff áp
 dụng cho task khi Context Rules yêu cầu.

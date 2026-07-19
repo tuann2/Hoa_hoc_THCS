@@ -35,9 +35,12 @@ grants them. An implementer never self-certifies release readiness.
   tokens, or production credentials.
 - Do not commit, push, merge, release, or deploy unless the envelope explicitly
   permits it and the human has granted the required authorization.
+- After each validated unit, commit it and push after each commit when both
+  actions are authorized for the session; follow the convention in
+  `AI_WORKFLOW.md` → "Commit-message convention".
 - A required gate with no repository command is a blocker, not permission to
   skip it. A release-artifact change after validation invalidates earlier
   evidence; a documentation-only change follows scoped revalidation.
-- When independently reviewing, use the separate reviewer contract: inspect the
-  required surface and report findings only. The bounded NORMAL batch-content
-  exception never applies to ELEVATED or CRITICAL work.
+- Independent review is performed by a separate fresh execution assigned the
+  reviewer role; this execution never reviews its own candidate. The bounded
+  NORMAL batch-content exception never applies to ELEVATED or CRITICAL work.

@@ -16,12 +16,15 @@ through `docs/CONTEXT_RULES.md`. This skill adds no private policy.
    only approved scope, runs classifier-selected gates from
    `scripts/gates-manifest.ts`, generates exact-snapshot evidence, and writes
    the handoff from `docs/handoffs/_TEMPLATE.md`.
-3. A Release Assessor checks the handoff, evidence, scope, acceptance criteria,
-   deviations, blockers, and exact-candidate CI where required.
+3. The scope/handoff gate checks the handoff, evidence, scope, acceptance
+   criteria, deviations, blockers, and exact-candidate CI where required.
 4. Assign fresh Independent Reviewer executions required by the effective tier.
    They receive the candidate snapshot, plan, and evidence but no implementer
    transcript; they report findings and remediation returns to implementation.
-5. The Human Approver alone grants final approval. Commit, push, merge, and
+5. Resolve findings through the remediation loop, including required
+   revalidation, refreshed evidence, handoff, and tier-required review.
+6. A Release Assessor then performs the release assessment.
+7. The Human Approver alone grants final approval. Commit, push, merge, and
    deploy require both envelope permission and the necessary human authority.
 
 Read the matching provider runbook only for adapter mechanics. If a role's

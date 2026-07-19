@@ -26,12 +26,13 @@ follows the Vietnamese THCS Chemistry curriculum.
 - HSG questions use the source: `Tự biên soạn theo dạng bài quen thuộc trong
 đề thi HSG Hoá 9 cấp huyện/tỉnh`.
 - Independently re-solve every numeric problem before submission. Use plain
-  chemistry text such as `CH2=CH2` and `CH≡CH`, not LaTex.
+  chemistry text such as `CH2=CH2` and `CH≡CH`, not LaTeX.
 - Every question has `category: theory | calculation`. Qualitative questions,
   reaction chains, and all `balance` questions are `theory`; numerical mol,
   mass, volume, concentration, and yield problems are `calculation`.
 - `scripts/tag-question-category.ts` may suggest a category for new questions,
-  but a human content review remains required.
+  but the author re-checks each suggestion manually before commit. A human
+  content review remains the separate final authority.
 
 `npm run validate-content` is authoritative for machine-checkable schema,
 catalogue, and equation-balance invariants. It does not replace intentional

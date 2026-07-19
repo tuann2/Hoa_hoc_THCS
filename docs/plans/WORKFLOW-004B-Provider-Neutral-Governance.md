@@ -165,8 +165,18 @@ assigned_role: planner | implementer | independent-reviewer | release-assessor
 risk_tier: TRIVIAL | NORMAL | ELEVATED | CRITICAL
 scope: { allowed_paths: [...], forbidden_paths: [...] }
 candidate_sha: <sha|null>
-permissions: { repository_write: bool, commit: bool, push: bool }
+permissions:
+  {
+    repository_write: bool,
+    commit: bool,
+    push: bool,
+    merge: bool,
+    deploy: bool
+  }
 ```
+
+[Amendment 2026-07-19: remediation review added `merge` and `deploy`, default
+false, to this schema. The architecture schema is canonical.]
 
 Thiếu trường/mơ hồ ⇒ least privilege (read-only). Independent Reviewer
 bắt buộc fresh execution, chỉ nhận candidate snapshot + plan, không

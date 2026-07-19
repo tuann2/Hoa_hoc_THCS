@@ -36,7 +36,8 @@ approved plan, not a request summary, sets implementation scope.
 6. Documentation follows validated code and receives scoped revalidation.
 7. No execution commits, pushes, merges, releases, or deploys without envelope
    permission and required human authorization.
-8. Work uses `feature/<FEATURE-ID>` branches, never `main`.
+8. Work uses `feature/<FEATURE-ID>` branches, never `main`; never force-push
+   to `main`.
 9. Secrets, tokens, and production credentials are not provided to agents.
 10. Human approval remains final for plan, diff, merge, release, and deploy.
 11. A new dependency, external service, database, infrastructure component, or
@@ -51,6 +52,10 @@ approved plan, not a request summary, sets implementation scope.
 14. A conflict with the repository, scope increase, missing required gate, or
     unrecoverable blocker stops work and enters the applicable escalation or
     remediation state.
+15. Commit after each validated unit and push after each commit when the
+    session is authorized for those actions; use the commit-message convention
+    below. Neither a lighter nor a heavier review substitutes for the
+    verification required by the effective tier.
 
 ## Artifacts and validation
 
@@ -67,3 +72,10 @@ snapshot-bound evidence, reviews, CI for the exact candidate where applicable,
 and `git diff --stat`. Release readiness is not release approval. If any
 required capability, review, or gate is unavailable, report it blocked until an
 equally safe human-authorized path exists.
+
+## Commit-message convention
+
+Use `type: concise description`, for example `feat: implement FEATURE-XXX —
+summary`, `fix: correct validation`, `docs: update workflow`, or `content: add
+unit`. This convention applies to the authorized commits required after each
+validated unit.

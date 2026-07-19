@@ -16,11 +16,14 @@ escalation.
 
 ## Hard triggers
 
-Regardless of path count, read the full workflow architecture and escalate
-context and risk for: policy or governance changes; CI or deployment;
-dependencies or lockfiles; security, authentication, or RLS; schema or
-migration; runtime behavior; test expectations; public APIs; educational
-formulas, answers, or numeric values; and adding, removing, or renaming files.
+Except for TRIVIAL work, these hard triggers require the Layer-1 row context
+and the workflow-architecture section relevant to the trigger: policy or
+governance changes; CI or deployment; dependencies or lockfiles; security,
+authentication, or RLS; schema or migration; runtime behavior; test
+expectations; public APIs; educational formulas, answers, or numeric values;
+and adding, removing, or renaming files. The effective risk tier still comes
+from the architecture Risk Model; a UI or runtime change is not automatically
+CRITICAL merely because it is a hard trigger.
 
 Ambiguity or conflict always permits escalation: read more context and/or stop
 for the owner. Context budgets are not hard caps for ELEVATED or CRITICAL work.
