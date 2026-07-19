@@ -70,6 +70,25 @@ describe('trivial-policy single source of truth', () => {
       ).toContain(rule.reason);
     }
   });
+
+  it('reverse-pins every backticked path in the architecture section to a policy literal', async () => {
+    // Forward tests prove policy ⊆ architecture text. This proves the
+    // backticked path categories in the architecture are ⊆ the code's
+    // literals, so deleting a literal from the code fails loudly too.
+    const section = await readTrivialPolicySection();
+    const backticked = [...section.matchAll(/`[^`]+`/gu)].map(
+      (match) => match[0]
+    );
+
+    expect(backticked.length).toBeGreaterThan(0);
+
+    for (const literal of backticked) {
+      expect(
+        [...TRIVIAL_POLICY_DENYLIST_LITERALS],
+        `architecture lists ${literal} but trivial-policy.ts does not`
+      ).toContain(literal);
+    }
+  });
 });
 
 describe('trivial-policy path rules', () => {

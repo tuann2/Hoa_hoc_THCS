@@ -84,6 +84,14 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
+          # Trace history is append-only: touching an existing trace record
+          # (modify/delete/rename/copy/type-change) fails regardless of the
+          # rest of the diff.
+          TAMPERED=$(git diff --name-only --diff-filter=MDRTC "$BASE_SHA" HEAD -- 'docs/trace/trivial/')
+          if [ -n "$TAMPERED" ]; then
+            echo "Trace records are append-only; this PR touches: $TAMPERED" >&2
+            exit 1
+          fi
           FILES=$(git diff --name-only --diff-filter=A "$BASE_SHA" HEAD -- 'docs/trace/trivial/*.yaml')
           if [ -z "$FILES" ]; then
             echo "No TRIVIAL trace claim in this PR; nothing to verify."

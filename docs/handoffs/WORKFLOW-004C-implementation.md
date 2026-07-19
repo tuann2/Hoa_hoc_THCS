@@ -24,7 +24,7 @@
   `scripts/trace-trivial.ts` (new); `scripts/gates.ts`,
   `scripts/gates-manifest.ts`, `scripts/check-docs.ts` (2 exports),
   `package.json`, `.github/workflows/ci.yml`, `AGENTS.md`,
-  `docs/CONTEXT_RULES.md` (modified); 4 new test files;
+  `docs/CONTEXT_RULES.md` (modified); 3 new test files (classify-trivial, trace-trivial, trivial-policy) + 2 extended;
   `docs/trace/trivial/.gitkeep`;
   `docs/measurements/WORKFLOW-004-token-baseline.md`; this handoff.
 - `git diff --stat`: 19 files changed, ~2,300 insertions, 11 deletions
@@ -32,17 +32,17 @@
 
 ## Acceptance, decisions, and risks
 
-| Plan acceptance criterion                                             | Evidence / status                                                                                                 |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Machine-decided TRIVIAL verdict; §11 cases pass                       | `tests/scripts/classify-trivial.test.ts` — 16 §11 cases + 3 status cases, all pass                                |
-| Governance/CI/scripts/deps/src/tests/schema/content cannot be TRIVIAL | denylist table test (30 samples) in `tests/scripts/trivial-policy.test.ts`                                        |
-| Unknown path / add / delete / rename fail closed                      | classifier cases 3–6, 13–15                                                                                       |
-| False TRIVIAL claim blocked by CI                                     | `trivial-verify` job + `verifyTrace` fixtures (smuggled edit, doctored trace)                                     |
-| Snapshot-bound micro-trace per TRIVIAL run                            | `traceTrivial` writes schema-checked YAML bound to `computeSnapshot`; invalid traces rejected by `parseTraceYaml` |
-| Pilot: 2 real TRIVIAL + 1 blocked violation                           | See "Pilot record" below                                                                                          |
-| Token baseline, 8 scenarios, targets + deviations                     | `docs/measurements/WORKFLOW-004-token-baseline.md`                                                                |
-| All tests pass on candidate                                           | 253 tests / 30 files pass locally; exact-candidate CI pending push                                                |
-| Independent ELEVATED review + human approval                          | PENDING (dispatched after this handoff)                                                                           |
+| Plan acceptance criterion                                             | Evidence / status                                                                                                                        |
+| --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Machine-decided TRIVIAL verdict; §11 cases pass                       | `tests/scripts/classify-trivial.test.ts` — 16 §11 cases + 3 status cases, all pass                                                       |
+| Governance/CI/scripts/deps/src/tests/schema/content cannot be TRIVIAL | denylist table test (30 samples) in `tests/scripts/trivial-policy.test.ts`                                                               |
+| Unknown path / add / delete / rename fail closed                      | classifier cases 3–6, 13–15                                                                                                              |
+| False TRIVIAL claim blocked by CI                                     | `trivial-verify` job + `verifyTrace` fixtures (smuggled edit, doctored trace)                                                            |
+| Snapshot-bound micro-trace per TRIVIAL run                            | `traceTrivial` writes schema-checked YAML bound to `computeSnapshot`; invalid traces rejected by `parseTraceYaml`                        |
+| Pilot: 2 real TRIVIAL + 1 blocked violation                           | See "Pilot record" below                                                                                                                 |
+| Token baseline, 8 scenarios, targets + deviations                     | `docs/measurements/WORKFLOW-004-token-baseline.md`                                                                                       |
+| All tests pass on candidate                                           | 237 tests / 28 files passed at candidate `b66b895`; post-remediation counts in the round-1 record below; exact-candidate CI pending push |
+| Independent ELEVATED review + human approval                          | PENDING (dispatched after this handoff)                                                                                                  |
 
 - Design decisions: (1) trace generation is a separate
   `scripts/trace-trivial.ts`, not folded into `gates.ts` — keeps
@@ -200,8 +200,27 @@
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING — fresh
-  execution, independent-review envelope, no implementer transcript.
+- Verifier / execution identifier / independence method: fresh Claude
+  execution `a36765b4e46eba965`, independent-review envelope (read-only,
+  no implementer transcript), 2026-07-19.
 - Exact candidate CI status: PENDING (awaiting push authorization).
-- Findings and disposition: PENDING
+- Findings and disposition (round 1 verdict REMEDIATE, all closed in
+  remediation round 1):
+  1. BLOCKER — wrapped-line command/path reference bypassed per-diff-line
+     triggers → closed: full-content reference-set comparison on logical
+     (whitespace-collapsed) text; regression test case 17.
+  2. HIGH — CI ignored modified (non-added) trace files → closed: ci.yml
+     rejects any PR touching an existing trace (append-only, filter MDRTC).
+  3. HIGH — repointed symlink under docs/\*\*.md read through by content
+     scans → closed: classifier escalates `symlink-path` (lstat + old git
+     mode 120000); regression test case 18. check-docs.ts symlink
+     read-through recorded as follow-up (gate hardening beyond 004C scope).
+  4. MEDIUM — SSOT test pinned one direction only → closed: reverse test
+     pins every backticked architecture path to a code literal.
+  5. MEDIUM — handoff aggregate counts wrong → closed: corrected in this
+     revision (237 tests / 28 files at `b66b895`; 3 new test files).
+     Reviewer also confirmed 12 attempted bypass classes correctly blocked
+     (traversal, NFD, case tricks, delete+add rename, rename-into-trace-dir,
+     multi-trace smuggling, doctored/under-reporting trace, escalate-exit-0,
+     command injection, TOCTOU, mixed changeset, empty changeset).
 - Batch-content exception authorization: n/a

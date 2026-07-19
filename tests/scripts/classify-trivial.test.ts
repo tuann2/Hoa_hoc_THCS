@@ -366,6 +366,52 @@ describe('classifyTrivial', () => {
     expect(result.escalationGuidance).toMatch(/no changed paths detected/u);
   });
 
+  it('escalates when a wrapped command reference is repointed via its continuation line (case 17)', async () => {
+    const { cwd, baseSha } = await createRepoFixture();
+
+    // The reference is hand-wrapped in the base file so no single diff line
+    // ever contains the full "npm run <name>" string.
+    await writeFile(
+      path.join(cwd, 'docs', 'wrapped.md'),
+      '# Wrapped\n\nBefore committing validate the build with `npm\nrun test:pwa` and confirm it passes.\n'
+    );
+    await commitAll(cwd, 'add wrapped doc');
+    const wrappedBase = await git(cwd, ['rev-parse', 'HEAD']);
+
+    await editLine(cwd, 'docs/wrapped.md', 'run test:pwa`', 'run test:e2e`');
+    await commitAll(cwd, 'repoint wrapped command');
+
+    const result = await classifyTrivial({ changedFrom: wrappedBase, cwd });
+
+    expect(result.verdict).toBe('ESCALATE');
+    expect(
+      result.paths.find((entry) => entry.path === 'docs/wrapped.md')?.reasons
+    ).toContain('hard-trigger: command-reference');
+
+    void baseSha;
+  });
+
+  it('escalates a modified (repointed) symlink under an allowlisted path (case 18)', async () => {
+    const { cwd, baseSha } = await createRepoFixture();
+
+    await symlink('other.md', path.join(cwd, 'docs', 'link.md'));
+    await commitAll(cwd, 'add symlink');
+    const symlinkBase = await git(cwd, ['rev-parse', 'HEAD']);
+
+    await rm(path.join(cwd, 'docs', 'link.md'));
+    await symlink('/etc/hostname', path.join(cwd, 'docs', 'link.md'));
+    await commitAll(cwd, 'repoint symlink');
+
+    const result = await classifyTrivial({ changedFrom: symlinkBase, cwd });
+
+    expect(result.verdict).toBe('ESCALATE');
+    expect(
+      result.paths.find((entry) => entry.path === 'docs/link.md')?.reasons
+    ).toContain('symlink-path');
+
+    void baseSha;
+  });
+
   it('treats uncommitted working-tree edits as part of the changeset', async () => {
     const { cwd, baseSha } = await createRepoFixture();
 
