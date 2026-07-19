@@ -391,6 +391,29 @@ describe('classifyTrivial', () => {
     void baseSha;
   });
 
+  it('escalates when two wrapped references are swapped (case 17b)', async () => {
+    const { cwd } = await createRepoFixture();
+
+    await writeFile(
+      path.join(cwd, 'docs', 'swap.md'),
+      '# Swap\n\nValidate the PWA build with `npm\nrun test:pwa` before pushing.\n\nRun the browser suite with `npm\nrun test:e2e` after that.\n'
+    );
+    await commitAll(cwd, 'add swap doc');
+    const swapBase = await git(cwd, ['rev-parse', 'HEAD']);
+
+    await editLine(cwd, 'docs/swap.md', 'run test:pwa`', 'run TEMP`');
+    await editLine(cwd, 'docs/swap.md', 'run test:e2e`', 'run test:pwa`');
+    await editLine(cwd, 'docs/swap.md', 'run TEMP`', 'run test:e2e`');
+    await commitAll(cwd, 'swap wrapped commands');
+
+    const result = await classifyTrivial({ changedFrom: swapBase, cwd });
+
+    expect(result.verdict).toBe('ESCALATE');
+    expect(
+      result.paths.find((entry) => entry.path === 'docs/swap.md')?.reasons
+    ).toContain('hard-trigger: command-reference');
+  });
+
   it('escalates a modified (repointed) symlink under an allowlisted path (case 18)', async () => {
     const { cwd, baseSha } = await createRepoFixture();
 
