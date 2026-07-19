@@ -2,13 +2,13 @@
 
 ## Status
 
-- Remediation state: VALIDATING
+- Remediation state: VALIDATED
 - Risk tier / categories / escalation rationale: ELEVATED /
   governance-enforcement tooling (scripts), risk-tier classification logic /
   classifier errors could let risky changes bypass review (plan header,
   approved 2026-07-19 by tuann2).
-- Base SHA / candidate SHA: `7d9a0fb` (origin/main, 004B merge) / see
-  evidence JSON below.
+- Base SHA / candidate SHA: `7d9a0fb` (origin/main, 004B merge) /
+  `b66b895` (snapshot `21f5449f9aa3…`, git-tree).
 - Worktree state and dirty paths: clean at evidence time (see JSON).
 - CI reference for exact candidate: PENDING (push authorization not yet
   granted; local full-profile evidence below).
@@ -82,7 +82,120 @@
 ## Validation evidence
 
 ```json
-PENDING_EVIDENCE_JSON
+{
+  "base_sha": "b66b895743a4539cb2fe980ab052f8617ef5f676",
+  "build_inputs": [
+    {
+      "path": ".env.example",
+      "sha256": "6fda9c2a4670086a9b4784c5f146ae59df4ecb2f00410b89973483837bd16198"
+    }
+  ],
+  "candidate_sha": "b66b895743a4539cb2fe980ab052f8617ef5f676",
+  "finished_at": "2026-07-19T07:08:05.366Z",
+  "gate_results": [
+    {
+      "id": "git-diff-check",
+      "command": ["git", "diff", "--check"],
+      "durationMs": 5,
+      "exitCode": 0
+    },
+    {
+      "id": "format-check",
+      "command": ["npm", "run", "format:check"],
+      "durationMs": 6009,
+      "exitCode": 0
+    },
+    {
+      "id": "content-catalog",
+      "command": ["npm", "run", "check:content-catalog"],
+      "durationMs": 351,
+      "exitCode": 0
+    },
+    {
+      "id": "content-validation",
+      "command": ["npm", "run", "validate-content"],
+      "durationMs": 376,
+      "exitCode": 0
+    },
+    {
+      "id": "lint",
+      "command": ["npm", "run", "lint"],
+      "durationMs": 11789,
+      "exitCode": 0
+    },
+    {
+      "id": "typecheck",
+      "command": ["npm", "run", "typecheck"],
+      "durationMs": 5532,
+      "exitCode": 0
+    },
+    {
+      "id": "unit-tests",
+      "command": ["npm", "test"],
+      "durationMs": 17318,
+      "exitCode": 0
+    },
+    {
+      "id": "production-build",
+      "command": ["npm", "run", "build:app"],
+      "durationMs": 5456,
+      "exitCode": 0
+    },
+    {
+      "id": "bundle-check",
+      "command": ["npm", "run", "check:bundle"],
+      "durationMs": 435,
+      "exitCode": 0
+    },
+    {
+      "id": "dependency-audit",
+      "command": ["npm", "audit", "--audit-level=moderate"],
+      "durationMs": 773,
+      "exitCode": 0
+    },
+    {
+      "id": "license-check",
+      "command": ["npm", "run", "check:licenses"],
+      "durationMs": 573,
+      "exitCode": 0
+    },
+    {
+      "id": "e2e",
+      "command": ["npm", "run", "test:e2e"],
+      "durationMs": 41813,
+      "exitCode": 0
+    },
+    {
+      "id": "pwa",
+      "command": ["npm", "run", "test:pwa"],
+      "durationMs": 23092,
+      "exitCode": 0
+    },
+    {
+      "id": "pwa-subpath",
+      "command": ["npm", "run", "test:pwa:subpath"],
+      "durationMs": 15285,
+      "exitCode": 0
+    },
+    {
+      "id": "docs-check",
+      "command": ["npm", "run", "check:docs", "--", "--all"],
+      "durationMs": 383,
+      "exitCode": 0
+    }
+  ],
+  "lockfile_sha256": "d2aae2b5a72404c09cf97ffa92223d66d6567034edf0d9cf6faf60235da15ba5",
+  "node_version": "v24.16.0",
+  "npm_version": "11.13.0",
+  "result": "pass",
+  "snapshot_fallback_reason": null,
+  "schema_version": 1,
+  "started_at": "2026-07-19T07:05:56.042Z",
+  "validated_snapshot": {
+    "id": "21f5449f9aa34382b0bacc2197ffee0f0b5ec479",
+    "kind": "git-tree"
+  }
+}
 ```
 
 ## Independent verification
