@@ -17,7 +17,9 @@ const EXPECTED_UNIT_IDS = [
   'n4-base',
   'n5-oxide',
   'n6-muoi-va-phan-bon-hoa-hoc',
-  'n7-moi-quan-he-giua-cac-hop-chat-vo-co'
+  'n7-moi-quan-he-giua-cac-hop-chat-vo-co',
+  'n8-kim-loai',
+  'n9-phi-kim'
 ];
 
 const QUESTION_CATEGORIES: QuestionCategory[] = ['theory', 'calculation'];

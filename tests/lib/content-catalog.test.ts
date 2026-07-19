@@ -6,7 +6,7 @@ import {
 
 describe('content catalog', () => {
   // FEATURE-015: danh mục đang được xây lại theo 11 unit n1-n11 (xem
-  // docs/plans/FEATURE-015.md, Phụ lục A); vòng này (R2) đã có n1-n7.
+  // docs/plans/FEATURE-015.md, Phụ lục A); vòng này (R3) đã có n1-n9.
   it('contains the units completed so far with unique unit and lesson ids and no full content', () => {
     const catalog = getUnitCatalog();
     const unitIds = catalog.map((unit) => unit.id);
@@ -14,7 +14,7 @@ describe('content catalog', () => {
       unit.lessons.map((lesson) => lesson.id)
     );
 
-    expect(catalog).toHaveLength(7);
+    expect(catalog).toHaveLength(9);
     expect(new Set(unitIds).size).toBe(unitIds.length);
     expect(new Set(lessonIds).size).toBe(lessonIds.length);
     expect(

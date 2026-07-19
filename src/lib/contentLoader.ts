@@ -17,7 +17,9 @@ const loaders: Record<string, () => Promise<UnitModule>> = {
   'n6-muoi-va-phan-bon-hoa-hoc': () =>
     import('../../content/units/n6-muoi-va-phan-bon-hoa-hoc.json'),
   'n7-moi-quan-he-giua-cac-hop-chat-vo-co': () =>
-    import('../../content/units/n7-moi-quan-he-giua-cac-hop-chat-vo-co.json')
+    import('../../content/units/n7-moi-quan-he-giua-cac-hop-chat-vo-co.json'),
+  'n8-kim-loai': () => import('../../content/units/n8-kim-loai.json'),
+  'n9-phi-kim': () => import('../../content/units/n9-phi-kim.json')
 };
 
 const unitCache = new Map<string, Promise<UnitContent>>();

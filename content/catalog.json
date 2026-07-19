@@ -327,5 +327,117 @@
         "calculationQuestionCount": 8
       }
     ]
+  },
+  {
+    "id": "n8-kim-loai",
+    "part": "inorganic",
+    "code": "N8",
+    "title": "Kim loại",
+    "order": 8,
+    "description": "Tính chất của kim loại, dãy hoạt động hoá học, nhôm - sắt, điều chế kim loại, hợp kim, ăn mòn và các bài toán biện luận kim loại với dung dịch muối hoặc acid.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n8-l1",
+        "title": "Tính chất vật lí – hoá học của kim loại",
+        "order": 1,
+        "summary": "Tính chất vật lí chung, các phản ứng hoá học tiêu biểu của kim loại và cách đọc hiện tượng theo hướng nhường electron.",
+        "status": "available",
+        "theoryQuestionCount": 9,
+        "calculationQuestionCount": 4
+      },
+      {
+        "id": "n8-l2",
+        "title": "Dãy hoạt động hoá học và ý nghĩa",
+        "order": 2,
+        "summary": "Cách dùng dãy hoạt động để dự đoán phản ứng với nước, acid, dung dịch muối và biện luận chiều phản ứng thế.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n8-l3",
+        "title": "Kim loại thông dụng: nhôm và sắt",
+        "order": 3,
+        "summary": "Tính chất đặc trưng của nhôm và sắt, phản ứng nhiệt nhôm, hoá trị của sắt và các lưu ý khi dự đoán sản phẩm.",
+        "status": "available",
+        "theoryQuestionCount": 6,
+        "calculationQuestionCount": 7
+      },
+      {
+        "id": "n8-l4",
+        "title": "Điều chế kim loại; hợp kim – gang và thép",
+        "order": 4,
+        "summary": "Nguyên tắc điều chế kim loại theo mức độ hoạt động, khái niệm hợp kim và những ý chính về gang - thép trong công nghiệp.",
+        "status": "available",
+        "theoryQuestionCount": 9,
+        "calculationQuestionCount": 4
+      },
+      {
+        "id": "n8-l5",
+        "title": "Ăn mòn kim loại và bảo vệ",
+        "order": 5,
+        "summary": "Khái niệm ăn mòn kim loại, các yếu tố làm tăng tốc độ ăn mòn và những biện pháp bảo vệ thông dụng.",
+        "status": "available",
+        "theoryQuestionCount": 13,
+        "calculationQuestionCount": 0
+      },
+      {
+        "id": "n8-l6",
+        "title": "Nâng cao: kim loại + dung dịch muối/acid (biện luận, chất dư)",
+        "order": 6,
+        "summary": "Biện luận phản ứng kim loại với dung dịch muối hoặc acid, xác định chất dư và khai thác bảo toàn electron - khối lượng.",
+        "status": "available",
+        "theoryQuestionCount": 6,
+        "calculationQuestionCount": 7
+      }
+    ]
+  },
+  {
+    "id": "n9-phi-kim",
+    "part": "inorganic",
+    "code": "N9",
+    "title": "Phi kim",
+    "order": 9,
+    "description": "Đặc điểm và tính chất của phi kim, chlorine, carbon - silicon cùng các hợp chất quan trọng, và sơ lược bảng tuần hoàn.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n9-l1",
+        "title": "Đặc điểm và tính chất hoá học chung của phi kim",
+        "order": 1,
+        "summary": "Đặc điểm vật lí, các phản ứng hoá học chung của phi kim và cách so sánh mức độ hoạt động của một số phi kim quen thuộc.",
+        "status": "available",
+        "theoryQuestionCount": 7,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n9-l2",
+        "title": "Chlorine (clo)",
+        "order": 2,
+        "summary": "Tính chất, cách điều chế chlorine, nước Gia-ven và bleaching powder (clorua vôi), cùng các lưu ý về tẩy màu và an toàn.",
+        "status": "available",
+        "theoryQuestionCount": 7,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n9-l3",
+        "title": "Carbon – silicon và các hợp chất",
+        "order": 3,
+        "summary": "Dạng thù hình, oxide và muối của carbon; silicon, silicon dioxide và các ứng dụng tiêu biểu của công nghiệp silicate.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n9-l4",
+        "title": "Sơ lược bảng tuần hoàn: cấu tạo và sự biến đổi tuần hoàn tính chất",
+        "order": 4,
+        "summary": "Nguyên tắc sắp xếp, ô nguyên tố, chu kì, nhóm và quy luật biến đổi tính kim loại - phi kim trong bảng tuần hoàn.",
+        "status": "available",
+        "theoryQuestionCount": 13,
+        "calculationQuestionCount": 0
+      }
+    ]
   }
 ]
