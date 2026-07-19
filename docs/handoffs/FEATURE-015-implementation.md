@@ -2,23 +2,25 @@
 
 ## Status
 
-- Remediation state: BLOCKED
+Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phản ánh trạng thái
+**mới nhất** (sau R2). Chi tiết từng vòng nằm ở các mục `## R1`/`## R2` bên
+dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu tài liệu, trước `## R2`).
+
+- Remediation state: VALIDATING (R2 xong, chờ Independent Reviewer; xem
+  mục "## R2 > Status" để có chi tiết đầy đủ)
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
   thay đổi hành vi runtime (mở khoá bài, ôn câu sai, thi thử). Xem
   `docs/plans/FEATURE-015.md`.
-- Base SHA / candidate SHA: base `770e091` (origin/main) / candidate
-  `UNCOMMITTED` (nhánh `feature/FEATURE-015`, HEAD `9df27b7`; R2 không thể
-  tạo commit vì phiên này mount `.git` ở chế độ read-only, xem R2 Blockers).
-- Worktree state and dirty paths: thay đổi R2 chưa commit ở
-  `content/catalog.json`, 5 file unit mới `n3`–`n7`,
-  `src/lib/contentValidation.ts`, `src/lib/contentLoader.ts`,
-  `tests/lib/content-catalog.test.ts`; còn 1 file untracked không thuộc phạm
-  vi vòng này:
+- Base SHA / candidate SHA: base `770e091` (origin/main) / candidate hiện
+  tại `c1f9ed5` (nhánh `feature/FEATURE-015`; R1 = `825d557`, R2 = `c1f9ed5`
+  chồng lên R1), chưa push.
+- Worktree state and dirty paths: sạch sau commit `c1f9ed5`; còn 1 file
+  untracked không thuộc phạm vi FEATURE-015:
   `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (có từ
-  trước phiên làm việc, ngoài `allowed_paths` — không đụng tới).
-- CI reference for exact candidate: PENDING (chưa push theo envelope R1:
+  trước, ngoài `allowed_paths` — không đụng tới).
+- CI reference for exact candidate: PENDING (chưa push theo envelope:
   `permissions.push=false`, chỉ push sau khi hoàn thành toàn bộ nội dung)
 
 ## Summary and scope
