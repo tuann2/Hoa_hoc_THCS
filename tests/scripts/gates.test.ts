@@ -1,10 +1,60 @@
-import { describe, expect, it, vi } from 'vitest';
+import { execFile } from 'node:child_process';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { promisify } from 'node:util';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   createDefaultExecutor,
   resolveGateExecutionOrder,
   runGates,
   runSelectedGates
 } from '../../scripts/gates';
+
+const execFileAsync = promisify(execFile);
+const tempRoots: string[] = [];
+
+async function git(cwd: string, args: readonly string[]): Promise<string> {
+  const { stdout } = await execFileAsync('git', [...args], {
+    cwd,
+    encoding: 'utf8'
+  });
+
+  return stdout.trim();
+}
+
+async function createTrivialFixture(): Promise<{
+  cwd: string;
+  baseSha: string;
+}> {
+  const cwd = await mkdtemp(path.join(os.tmpdir(), 'gates-trivial-'));
+  tempRoots.push(cwd);
+
+  await git(cwd, ['init', '--initial-branch=main']);
+  await git(cwd, ['config', 'user.email', 'test@example.com']);
+  await git(cwd, ['config', 'user.name', 'Test']);
+  await mkdir(path.join(cwd, 'docs'), { recursive: true });
+  await writeFile(
+    path.join(cwd, 'docs', 'guide.md'),
+    '# Guide\n\nProse with a tpyo here.\n'
+  );
+  await writeFile(path.join(cwd, 'AGENTS.md'), '# Agents\n\nGovernance.\n');
+  await git(cwd, ['add', '-A']);
+  await git(cwd, ['commit', '-m', 'base']);
+  const baseSha = await git(cwd, ['rev-parse', 'HEAD']);
+
+  return { cwd, baseSha };
+}
+
+afterEach(async () => {
+  while (tempRoots.length > 0) {
+    const dir = tempRoots.pop();
+
+    if (dir) {
+      await rm(dir, { recursive: true, force: true });
+    }
+  }
+});
 
 describe('gates runner', () => {
   it('resolves prerequisites before bundle-check', () => {
@@ -128,6 +178,80 @@ describe('gates runner', () => {
       expect.stringContaining(
         'Failed to start gate command "__missing_gate_command__"'
       )
+    );
+  });
+});
+
+describe('gates --tier=trivial', () => {
+  const quietLog = { error: vi.fn(), log: vi.fn() };
+
+  it('requires --changed-from', async () => {
+    await expect(runGates({ tier: 'trivial' })).rejects.toThrow(
+      /--tier=trivial requires --changed-from/u
+    );
+  });
+
+  it('rejects combining --tier=trivial with --profile', async () => {
+    await expect(
+      runGates({ tier: 'trivial', changedFrom: 'HEAD', profile: 'docs' })
+    ).rejects.toThrow(/cannot be combined with --profile/u);
+  });
+
+  it('runs the minimal trivial gate set on a TRIVIAL verdict', async () => {
+    const { cwd, baseSha } = await createTrivialFixture();
+
+    await writeFile(
+      path.join(cwd, 'docs', 'guide.md'),
+      '# Guide\n\nProse with a typo here.\n'
+    );
+    await git(cwd, ['add', '-A']);
+    await git(cwd, ['commit', '-m', 'fix typo']);
+
+    const executor = vi.fn(() => Promise.resolve(0));
+    const result = await runGates({
+      changedFrom: baseSha,
+      cwd,
+      executor,
+      log: quietLog,
+      tier: 'trivial'
+    });
+
+    expect(result.mode).toBe('tier-trivial');
+    expect(result.result).toBe('pass');
+    expect(result.trivialClassification?.verdict).toBe('TRIVIAL');
+    expect(result.gateResults.map((gate) => gate.id)).toEqual([
+      'git-diff-check',
+      'format-check',
+      'docs-check'
+    ]);
+  });
+
+  it('fails without running gates on an ESCALATE verdict', async () => {
+    const { cwd, baseSha } = await createTrivialFixture();
+
+    await writeFile(
+      path.join(cwd, 'AGENTS.md'),
+      '# Agents\n\nGovernance edited.\n'
+    );
+    await git(cwd, ['add', '-A']);
+    await git(cwd, ['commit', '-m', 'governance edit']);
+
+    const executor = vi.fn(() => Promise.resolve(0));
+    const error = vi.fn();
+    const result = await runGates({
+      changedFrom: baseSha,
+      cwd,
+      executor,
+      log: { error, log: vi.fn() },
+      tier: 'trivial'
+    });
+
+    expect(result.mode).toBe('tier-trivial');
+    expect(result.result).toBe('fail');
+    expect(result.gateResults).toEqual([]);
+    expect(executor).not.toHaveBeenCalled();
+    expect(error).toHaveBeenCalledWith(
+      expect.stringContaining('Open a NORMAL+ plan')
     );
   });
 });

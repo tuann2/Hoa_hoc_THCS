@@ -12,7 +12,9 @@ ELEVATED/CRITICAL work, when the envelope requires it, or when a conflict arises
 2. Read the contract for `assigned_role` in `docs/roles/<role>.md`.
 3. Before editing, read `docs/CONTEXT_RULES.md`; determine gates with
    `npm run gates -- --changed-from=<base_sha>` and generate evidence with
-   `npm run evidence`.
+   `npm run evidence`. For a TRIVIAL claim, the machine verdict is
+   authoritative: `npm run gates -- --tier=trivial --changed-from=<base_sha>`,
+   then `npm run trace:trivial -- --changed-from=<base_sha>`.
 4. Follow the approved plan and envelope scope. Escalate ambiguity, conflict,
    missing capability, or a higher effective risk tier.
 5. `validate-content` is authoritative for machine-checkable

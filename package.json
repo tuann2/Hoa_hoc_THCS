@@ -14,6 +14,7 @@
     "check:docs": "node --import tsx scripts/check-docs.ts",
     "evidence": "node --import tsx scripts/evidence.ts",
     "gates": "node --import tsx scripts/gates.ts",
+    "trace:trivial": "node --import tsx scripts/trace-trivial.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",

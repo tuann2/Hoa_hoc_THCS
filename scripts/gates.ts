@@ -4,6 +4,10 @@ import {
   getChangedPathsFromBase,
   type ChangeClassification
 } from './classify-change';
+import {
+  classifyTrivial,
+  type TrivialClassification
+} from './classify-trivial';
 import { isExecutedAsScript } from './cli';
 import {
   PROFILE_NAMES,
@@ -27,10 +31,11 @@ export type GatesRunResult = {
   classification?: ChangeClassification;
   finishedAt: string;
   gateResults: GateExecutionResult[];
-  mode: 'profile' | 'changed-from';
+  mode: 'profile' | 'changed-from' | 'tier-trivial';
   profile?: ProfileName;
   result: 'pass' | 'fail';
   startedAt: string;
+  trivialClassification?: TrivialClassification;
 };
 
 type Executor = (command: readonly [string, ...string[]]) => Promise<number>;
@@ -42,6 +47,7 @@ type RunGatesOptions = {
   executor?: Executor;
   log?: Pick<Console, 'error' | 'log'>;
   profile?: ProfileName;
+  tier?: 'trivial';
 };
 
 type CliOptions = {
@@ -49,6 +55,7 @@ type CliOptions = {
   dryRun: boolean;
   json: boolean;
   profile?: ProfileName;
+  tier?: 'trivial';
 };
 
 export function createDefaultExecutor(
@@ -197,6 +204,55 @@ export async function runSelectedGates(
 export async function runGates(
   options: RunGatesOptions
 ): Promise<GatesRunResult> {
+  if (options.tier === 'trivial') {
+    if (!options.changedFrom) {
+      throw new Error('--tier=trivial requires --changed-from=<base_sha>.');
+    }
+
+    if (options.profile) {
+      throw new Error('--tier=trivial cannot be combined with --profile.');
+    }
+
+    const log = options.log ?? console;
+    const startedAt = new Date().toISOString();
+    const trivialClassification = await classifyTrivial({
+      changedFrom: options.changedFrom,
+      cwd: options.cwd
+    });
+
+    if (trivialClassification.verdict === 'ESCALATE') {
+      log.error(trivialClassification.escalationGuidance ?? 'ESCALATE');
+
+      return {
+        finishedAt: new Date().toISOString(),
+        gateResults: [],
+        mode: 'tier-trivial',
+        result: 'fail',
+        startedAt,
+        trivialClassification
+      };
+    }
+
+    const { gateResults, result } = await runSelectedGates(
+      trivialClassification.selectedGates,
+      {
+        cwd: options.cwd,
+        dryRun: options.dryRun,
+        executor: options.executor,
+        log: options.log
+      }
+    );
+
+    return {
+      finishedAt: new Date().toISOString(),
+      gateResults,
+      mode: 'tier-trivial',
+      result,
+      startedAt,
+      trivialClassification
+    };
+  }
+
   if (!options.profile && !options.changedFrom) {
     throw new Error('Pass --profile=<name> or --changed-from=<base_sha>.');
   }
@@ -308,6 +364,20 @@ function parseCliArgs(argv: readonly string[]): CliOptions {
       continue;
     }
 
+    if (argument === '--tier' || argument.startsWith('--tier=')) {
+      const value =
+        argument === '--tier'
+          ? argv[(index += 1)]
+          : argument.slice('--tier='.length);
+
+      if (value !== 'trivial') {
+        throw new Error('Invalid value for --tier. Expected: trivial');
+      }
+
+      options.tier = 'trivial';
+      continue;
+    }
+
     throw new Error(`Unknown argument: ${argument}`);
   }
 
@@ -319,7 +389,8 @@ export async function runCli(argv = process.argv.slice(2)): Promise<number> {
   const result = await runGates({
     changedFrom: options.changedFrom,
     dryRun: options.dryRun,
-    profile: options.profile
+    profile: options.profile,
+    tier: options.tier
   });
 
   console.log(JSON.stringify(result, null, 2));

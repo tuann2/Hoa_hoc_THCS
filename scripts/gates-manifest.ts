@@ -225,7 +225,7 @@ export const PATH_GATE_RULES: readonly PathGateRule[] = [
   },
   {
     pattern:
-      /^tests\/(?:components|lib|routes|setup\.ts|store\/|scripts\/(?:(?!gates-manifest|classify-change|check-docs|gates|evidence)[A-Za-z0-9._-]+\.test\.ts)$)/u,
+      /^tests\/(?:components|lib|routes|setup\.ts|store\/|scripts\/(?:(?!gates-manifest|classify-change|check-docs|gates|evidence|classify-trivial|trace-trivial|trivial-policy)[A-Za-z0-9._-]+\.test\.ts)$)/u,
     gates: WEB_CLASSIFIER_GATES,
     reason: 'application or supporting script tests require web validation'
   },
@@ -248,7 +248,7 @@ export const PATH_GATE_RULES: readonly PathGateRule[] = [
   },
   {
     pattern:
-      /^(?:scripts\/(?:gates-manifest|classify-change|check-docs|gates|evidence)\.ts|tests\/scripts\/(?:gates-manifest|classify-change|check-docs|gates|evidence)\.test\.ts|package\.json|package-lock\.json|tsconfig\.json|eslint\.config\.js|vite\.config\.ts|\.github\/workflows\/.*)$/u,
+      /^(?:scripts\/(?:gates-manifest|classify-change|check-docs|gates|evidence|classify-trivial|trace-trivial|trivial-policy)\.ts|tests\/scripts\/(?:gates-manifest|classify-change|check-docs|gates|evidence|classify-trivial|trace-trivial|trivial-policy)\.test\.ts|package\.json|package-lock\.json|tsconfig\.json|eslint\.config\.js|vite\.config\.ts|\.github\/workflows\/.*)$/u,
     gates: PROFILE_GATE_IDS.full,
     reason:
       'validation infrastructure or toolchain changes require the full local gate union'
