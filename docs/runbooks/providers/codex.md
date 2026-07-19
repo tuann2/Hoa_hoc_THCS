@@ -12,10 +12,10 @@ the requested action-safety scope. `--background` and `--wait` are optional.
 
 ## Execution profiles
 
-| Profile               | Adapter      | Effective capabilities                                       | Known restrictions                                           |
-| --------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| codex-direct-terminal | direct CLI   | repo-rw, shell, test, network, localhost, git-metadata-write | —                                                            |
-| codex-claude-subagent | codex-rescue | repo-rw, shell, test, git-metadata-read                      | network, localhost/browser, git-metadata-write (FEATURE-014) |
+| Profile               | Adapter      | Effective capabilities                                                                                                                                                | Known restrictions                                           |
+| --------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| codex-direct-terminal | direct CLI   | typical capabilities: repo-rw, shell, test, network, localhost, git-metadata-write — verify per session; the planner assigns work based on the actual session profile | —                                                            |
+| codex-claude-subagent | codex-rescue | repo-rw, shell, test, git-metadata-read                                                                                                                               | network, localhost/browser, git-metadata-write (FEATURE-014) |
 
 The FEATURE-014 restrictions belong only to the `codex-claude-subagent`
 sandbox profile. They are not restrictions of Codex CLI generally. If the

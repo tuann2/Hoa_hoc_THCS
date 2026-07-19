@@ -18,5 +18,6 @@ ELEVATED/CRITICAL work, when the envelope requires it, or when a conflict arises
 6. Never commit, push, merge, deploy, edit outside `allowed_paths`, or disable
    or alter a gate unless the envelope explicitly permits the action.
 
-When the architecture is DRAFT, its new rules await human approval; follow the
-currently approved architecture where they conflict.
+While the architecture is DRAFT, previously approved governance remains
+authoritative; the new shim and roles are only a superset that cannot weaken
+it. Status flips to APPROVED on human approval before merge.

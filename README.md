@@ -136,7 +136,7 @@ docs/runbooks/DEPLOYMENT.md   # quy trình deploy chính / dự phòng / rollbac
 ## Quy ước nội dung
 
 - Mỗi unit là một file JSON trong `content/units/`.
-- Lesson `available` phải có tối đa 5 thẻ lý thuyết.
+- Lesson `available` phải có 1–25 thẻ lý thuyết.
 - Mỗi lesson khả dụng phải có đủ 3 mức câu hỏi:
   `basic` 5–8, `applied` 5–8, `hsg` 3–5.
 - 100% câu hỏi phải có `explanation`.
@@ -155,10 +155,13 @@ docs/runbooks/DEPLOYMENT.md   # quy trình deploy chính / dự phòng / rollbac
 
 Đọc theo thứ tự:
 
-1. `AI_WORKFLOW.md`
-2. `AGENTS.md`
-3. `docs/plans/<FEATURE-ID>.md`
-4. `docs/handoffs/<FEATURE-ID>-implementation.md`
+1. `AGENTS.md` (shim)
+2. Execution envelope
+3. `docs/roles/<assigned_role>.md`
+4. `docs/CONTEXT_RULES.md`
+
+`AI_WORKFLOW.md` là chỉ mục pipeline; sau các bước trên, đọc plan/handoff áp
+dụng cho task khi Context Rules yêu cầu.
 
 ## Quyền riêng tư
 

@@ -5,7 +5,7 @@
 - Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner:
 - Approved by / date:
-- Risk tier: <!-- TRIVIAL | NORMAL | ELEVATED | CRITICAL -->
+- Risk tier: <!-- NORMAL | ELEVATED | CRITICAL -->
 - Risk categories and escalation rationale:
 - Change type and required gate profile: <!-- see scripts/gates-manifest.ts -->
 
@@ -43,6 +43,6 @@
 - Test strategy:
 - Rollback plan:
 
-<!-- NORMAL plans keep content at 60 lines or fewer. Use the architecture,
+<!-- TRIVIAL work uses a micro-trace, not this template. NORMAL plans keep content at 60 lines or fewer. Use the architecture,
 role contracts, context rules, and gate manifest by reference rather than
 copying their policy or command tables. -->

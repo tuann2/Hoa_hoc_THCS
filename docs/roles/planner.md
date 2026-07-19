@@ -18,9 +18,10 @@ write, commit, push, merge, and deploy; planning never implies final approval.
   assumptions, and quality gates.
 - Obtain human approval before implementation. Approval also approves the
   recorded risk classification.
-- State rationale, alternatives, and trade-offs for a new dependency, service,
-  infrastructure component, or replacement tool; stop for explicit human
-  approval before it is introduced, then record the approved decision in the
+- Classify a new dependency, external service, database, infrastructure
+  component, or replacement tool as a CRITICAL architecture change; state its
+  rationale, alternatives, and trade-offs, stop for explicit human approval
+  before it is introduced, then record the approved decision in the
   architecture record and an ADR when non-trivial.
 - Assign an execution whose actual profile satisfies the selected role's
   capabilities. Record a safe degradation path when it does not.
@@ -30,8 +31,9 @@ write, commit, push, merge, and deploy; planning never implies final approval.
 - Orchestrate the independent verification required by the effective tier and
   route findings through remediation. Do not substitute a lighter review for a
   required review or silently skip an unavailable reviewer.
-- Present release-readiness assessment to the human. Human approval remains
-  the only final approval.
+- Orchestrate reviews and route the Release Assessor's release-readiness
+  assessment to the human. The Release Assessor produces that assessment;
+  human approval remains the only final approval.
 
 ## Restrictions and working rules
 

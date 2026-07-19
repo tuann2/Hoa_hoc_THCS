@@ -23,9 +23,10 @@ authority, orchestration, validation, risk, documentation, quality gates,
 context, and session lifecycle.
 
 All shims, role contracts, skills, commands, and runbooks must conform after
-approval. When this document is not APPROVED, the currently approved
-implementation documents remain authoritative; this draft must not activate
-new workflow rules. Report a conflict in an unapproved draft to the Human
+approval. While this document is DRAFT, previously approved governance remains
+authoritative; its new shim and roles operate only as a superset that cannot
+weaken that governance. Its Status flips to APPROVED on Human Project Owner
+approval before merge. Report a conflict in an unapproved draft to the Human
 Project Owner rather than resolving it by preference.
 
 ## Goals
@@ -63,7 +64,14 @@ assigned_role: planner | implementer | independent-reviewer | release-assessor
 risk_tier: TRIVIAL | NORMAL | ELEVATED | CRITICAL
 scope: { allowed_paths: [...], forbidden_paths: [...] }
 candidate_sha: <sha|null>
-permissions: { repository_write: bool, commit: bool, push: bool }
+permissions:
+  {
+    repository_write: bool,
+    commit: bool,
+    push: bool,
+    merge: bool,
+    deploy: bool
+  }
 ```
 
 Missing, malformed, or ambiguous fields mean least privilege: read-only, no
@@ -125,14 +133,16 @@ Classification rules:
 2. A change affecting production data or availability, deployment,
    infrastructure, payment, credentials, trust boundaries, security controls,
    or this architecture is CRITICAL.
-3. Authentication or authorization logic is CRITICAL. Presentation-only
+3. Introducing a new dependency, external service, database, infrastructure
+   component, or replacement tool is an architecture change and is CRITICAL.
+4. Authentication or authorization logic is CRITICAL. Presentation-only
    changes to an existing authentication UI may remain NORMAL only when they
    cannot change identity, session, or access-control behavior.
-4. A migration is at least ELEVATED; one that can execute against production,
+5. A migration is at least ELEVATED; one that can execute against production,
    transform production data, or cause irreversible loss is CRITICAL.
-5. Public APIs, destructive operations, and numeric or complex business logic
+6. Public APIs, destructive operations, and numeric or complex business logic
    are at least ELEVATED and become CRITICAL when rule 2 applies.
-6. Uncertain impact or environment is classified at the next higher plausible
+7. Uncertain impact or environment is classified at the next higher plausible
    tier until resolved.
 
 ### TRIVIAL policy
@@ -285,6 +295,9 @@ Metrics must come from repository artifacts, not estimates: implementation
 executions, sessions, validation reruns, remediation rounds, and time from plan
 approval to release readiness. Context size can be tracked prospectively only;
 do not fabricate retrospective values.
+
+The v2.2 quantitative targets are one implementation execution for NORMAL
+work, no more than two sessions, and zero validation reruns.
 
 ## Migration History
 

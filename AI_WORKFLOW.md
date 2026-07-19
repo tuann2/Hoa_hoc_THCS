@@ -3,8 +3,10 @@
 This is the repository pipeline and ground-rules index. The approved
 `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` is normative; role contracts
 live in `docs/roles/`, context retrieval in `docs/CONTEXT_RULES.md`, and
-provider mechanics in `docs/runbooks/providers/`. A DRAFT architecture does
-not activate rules until human approval.
+provider mechanics in `docs/runbooks/providers/`. While the architecture is
+DRAFT, previously approved governance remains authoritative; its new shim and
+roles are only a superset that cannot weaken it. Status flips to APPROVED on
+human approval before merge.
 
 ## Pipeline
 
@@ -12,16 +14,17 @@ not activate rules until human approval.
 Requirement (human)
   -> Planner: risk-tiered plan and approval
   -> Implementer: approved scope, validation, snapshot-bound handoff
-  -> Release assessment: scope, evidence, and handoff gate
+  -> Scope/handoff gate
   -> Independent verification required by the tier
-  -> Findings: remediation, revalidation, regenerated handoff
+  -> Findings: remediation loop, revalidation, regenerated handoff
   -> Release assessment -> Human approval -> authorized delivery
 ```
 
-A new technology requires plan rationale, alternatives, trade-offs, explicit
-human approval before implementation, and an architecture record/ADR when
-appropriate. The approved plan, not a request summary, sets implementation
-scope.
+Introducing a new dependency, external service, database, infrastructure
+component, or replacement tool is an architecture change classified CRITICAL.
+It requires plan rationale, alternatives, trade-offs, explicit human approval
+before implementation, and an architecture record/ADR when appropriate. The
+approved plan, not a request summary, sets implementation scope.
 
 ## Ground rules
 
@@ -36,8 +39,10 @@ scope.
 8. Work uses `feature/<FEATURE-ID>` branches, never `main`.
 9. Secrets, tokens, and production credentials are not provided to agents.
 10. Human approval remains final for plan, diff, merge, release, and deploy.
-11. New technology requires rationale/alternatives/trade-offs and human approval
-    before implementation; record the approved decision.
+11. A new dependency, external service, database, infrastructure component, or
+    replacement tool is a CRITICAL architecture change and requires
+    rationale/alternatives/trade-offs, human approval before implementation,
+    and a recorded approved decision.
 12. Validation runs once per snapshot; do not rerun a bound successful gate just
     to reproduce logs.
 13. Independent reviewers are fresh executions with no implementer transcript
