@@ -1,10 +1,10 @@
 # AI Workflow Architecture
 
 - Version: 2.4
-- Status: DRAFT (pending Human Project Owner approval)
+- Status: APPROVED (v2.4 amendment approved by tuann2, 2026-07-19)
 - Owner: Human Project Owner
 - Reviewers: role-qualified independent executions, conditional by risk tier
-- Amendment history: v2.4 (WORKFLOW-004B, DRAFT) — makes governance
+- Amendment history: v2.4 (WORKFLOW-004B) — makes governance
   provider-neutral through role contracts and execution envelopes; adds Context
   Policy and the policy-only TRIVIAL tier. v2.3 (WORKFLOW-004A) — superseded
   the manual evidence ritual with machine-generated exact-snapshot IDs, made
@@ -323,8 +323,8 @@ work, no more than two sessions, and zero validation reruns.
   batch-content review exception.
 - v2.3 (WORKFLOW-004A, 2026-07-18): machine-generated evidence, gate manifest,
   and deployment invariant.
-- v2.4 (WORKFLOW-004B, DRAFT): provider-neutral roles/envelope/context policy
-  and policy-only TRIVIAL tier; activation awaits human approval.
+- v2.4 (WORKFLOW-004B, 2026-07-19): provider-neutral roles/envelope/context
+  policy and policy-only TRIVIAL tier; approved by tuann2.
 
 ## Design Principles
 
