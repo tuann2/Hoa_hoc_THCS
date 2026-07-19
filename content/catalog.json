@@ -119,5 +119,213 @@
         "calculationQuestionCount": 0
       }
     ]
+  },
+  {
+    "id": "n3-acid",
+    "part": "inorganic",
+    "code": "N3",
+    "title": "Acid",
+    "order": 3,
+    "description": "Khái niệm, phân loại, danh pháp, tính chất hoá học của acid; hydrochloric acid, sulfuric acid và cách điều chế.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n3-l1",
+        "title": "Khái niệm – phân loại – danh pháp acid",
+        "order": 1,
+        "summary": "Định nghĩa acid, cách phân loại theo thành phần, gốc acid và danh pháp theo quy ước GDPT 2018.",
+        "status": "available",
+        "theoryQuestionCount": 10,
+        "calculationQuestionCount": 3
+      },
+      {
+        "id": "n3-l2",
+        "title": "Tính chất hoá học của acid",
+        "order": 2,
+        "summary": "Các phản ứng điển hình của acid với kim loại, base, oxide base và muối; điều kiện để phản ứng xảy ra.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n3-l3",
+        "title": "Hydrochloric acid, sulfuric acid; điều chế",
+        "order": 3,
+        "summary": "Tính chất đặc trưng, cách nhận biết, lưu ý an toàn và các phương pháp điều chế hydrochloric acid, sulfuric acid.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 6
+      }
+    ]
+  },
+  {
+    "id": "n4-base",
+    "part": "inorganic",
+    "code": "N4",
+    "title": "Base",
+    "order": 4,
+    "description": "Khái niệm, phân loại, danh pháp, tính chất của base; phản ứng của CO2, SO2 với dung dịch kiềm; sodium hydroxide và calcium hydroxide.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n4-l1",
+        "title": "Khái niệm – phân loại – danh pháp base",
+        "order": 1,
+        "summary": "Định nghĩa base, phân loại base tan và không tan, danh pháp hydroxide và tính chất nhận biết môi trường kiềm.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n4-l2",
+        "title": "Tính chất hoá học của base; CO2/SO2 tác dụng dung dịch kiềm",
+        "order": 2,
+        "summary": "Phản ứng của base với acid, oxide acid, hiện tượng kết tủa – hoà tan và phương pháp tỉ lệ mol trong hệ CO2/SO2 với kiềm.",
+        "status": "available",
+        "theoryQuestionCount": 7,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n4-l3",
+        "title": "Sodium hydroxide, calcium hydroxide; điều chế",
+        "order": 3,
+        "summary": "Tính chất, ứng dụng, phương pháp điều chế sodium hydroxide và calcium hydroxide; vai trò của nước vôi trong và điện phân muối ăn.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 7
+      }
+    ]
+  },
+  {
+    "id": "n5-oxide",
+    "part": "inorganic",
+    "code": "N5",
+    "title": "Oxide",
+    "order": 5,
+    "description": "Khái niệm, phân loại, danh pháp và tính chất của oxide base, oxide acid, oxide lưỡng tính, oxide trung tính; một số cách điều chế oxide.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n5-l1",
+        "title": "Khái niệm – phân loại – danh pháp oxide",
+        "order": 1,
+        "summary": "Định nghĩa oxide, bốn loại oxide, cách gọi tên và cách suy luận loại oxide từ công thức hoặc phản ứng đặc trưng.",
+        "status": "available",
+        "theoryQuestionCount": 9,
+        "calculationQuestionCount": 4
+      },
+      {
+        "id": "n5-l2",
+        "title": "Tính chất oxide base và oxide acid",
+        "order": 2,
+        "summary": "Các phản ứng của oxide base, oxide acid với nước, acid, base và oxide khác; vai trò của CaO, SO2, CO2 trong thực tế.",
+        "status": "available",
+        "theoryQuestionCount": 11,
+        "calculationQuestionCount": 4
+      },
+      {
+        "id": "n5-l3",
+        "title": "Oxide lưỡng tính, oxide trung tính; điều chế",
+        "order": 3,
+        "summary": "Tính chất của oxide lưỡng tính và oxide trung tính, cùng các phương pháp điều chế oxide từ đơn chất, muối và base.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      }
+    ]
+  },
+  {
+    "id": "n6-muoi-va-phan-bon-hoa-hoc",
+    "part": "inorganic",
+    "code": "N6",
+    "title": "Muối và Phân bón hoá học",
+    "order": 6,
+    "description": "Khái niệm, danh pháp, tính tan, màu dung dịch và tính chất của muối; các phương pháp điều chế muối và kiến thức cơ bản về phân bón hoá học.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n6-l1",
+        "title": "Muối: khái niệm, danh pháp, tính tan, màu dung dịch; muối quan trọng",
+        "order": 1,
+        "summary": "Khái niệm muối, phân loại muối acid – muối trung hoà, quy tắc gọi tên, độ tan, màu dung dịch và một số muối quen thuộc như NaCl, KNO3, Na2CO3, NaHCO3, CaCO3.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n6-l2",
+        "title": "Tính chất hoá học của muối; phản ứng trao đổi; muối acid – muối trung hoà",
+        "order": 2,
+        "summary": "Phản ứng của muối với kim loại, acid, base, muối; điều kiện phản ứng trao đổi và sự chuyển hoá giữa muối acid, muối trung hoà.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n6-l3",
+        "title": "Điều chế muối",
+        "order": 3,
+        "summary": "Các con đường điều chế muối từ hợp chất hoặc đơn chất, cùng các bài toán suy luận theo phản ứng tạo kết tủa, tạo khí và phản ứng trao đổi.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n6-l4",
+        "title": "Phân bón hoá học",
+        "order": 4,
+        "summary": "Phân đạm, lân, kali, NPK, cách đọc hàm lượng dinh dưỡng và các nguyên tắc dùng phân bón an toàn, hợp lí.",
+        "status": "available",
+        "theoryQuestionCount": 10,
+        "calculationQuestionCount": 3
+      }
+    ]
+  },
+  {
+    "id": "n7-moi-quan-he-giua-cac-hop-chat-vo-co",
+    "part": "inorganic",
+    "code": "N7",
+    "title": "Mối quan hệ giữa các hợp chất vô cơ",
+    "order": 7,
+    "description": "Sơ đồ phân loại các chất vô cơ, ma trận tính chất hoá học, chuỗi phản ứng, điều chế nhiều bước, nhận biết – tách – tinh chế và luyện tập tổng hợp vô cơ.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n7-l1",
+        "title": "Sơ đồ phân loại chất vô cơ; ma trận tính chất (16 phản ứng)",
+        "order": 1,
+        "summary": "Sơ đồ chuyển hoá giữa oxide, acid, base, muối; ma trận phản ứng tiêu biểu và điều kiện để từng mũi tên xảy ra.",
+        "status": "available",
+        "theoryQuestionCount": 11,
+        "calculationQuestionCount": 2
+      },
+      {
+        "id": "n7-l2",
+        "title": "Chuỗi phản ứng; điều chế nhiều bước",
+        "order": 2,
+        "summary": "Cách viết chuỗi phản ứng vô cơ, chọn thuốc thử cho từng mũi tên và xây dựng sơ đồ điều chế nhiều bước từ nguyên liệu quen thuộc.",
+        "status": "available",
+        "theoryQuestionCount": 11,
+        "calculationQuestionCount": 2
+      },
+      {
+        "id": "n7-l3",
+        "title": "Nhận biết – tách – tinh chế chất vô cơ",
+        "order": 3,
+        "summary": "Thuốc thử đặc trưng, sơ đồ nhận biết, kỹ thuật tách và tinh chế chất rắn, dung dịch hoặc chất khí vô cơ.",
+        "status": "available",
+        "theoryQuestionCount": 12,
+        "calculationQuestionCount": 1
+      },
+      {
+        "id": "n7-l4",
+        "title": "Luyện tập tổng hợp vô cơ",
+        "order": 4,
+        "summary": "Chiến lược giải bài tập tổng hợp vô cơ bằng các định luật bảo toàn, quy đổi số mol H+, OH- và cách kiểm tra nghiệm theo từng chặng phản ứng.",
+        "status": "available",
+        "theoryQuestionCount": 5,
+        "calculationQuestionCount": 8
+      }
+    ]
   }
 ]

@@ -10,7 +10,14 @@ const loaders: Record<string, () => Promise<UnitModule>> = {
   'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc': () =>
     import('../../content/units/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc.json'),
   'n2-phan-ung-hoa-hoc': () =>
-    import('../../content/units/n2-phan-ung-hoa-hoc.json')
+    import('../../content/units/n2-phan-ung-hoa-hoc.json'),
+  'n3-acid': () => import('../../content/units/n3-acid.json'),
+  'n4-base': () => import('../../content/units/n4-base.json'),
+  'n5-oxide': () => import('../../content/units/n5-oxide.json'),
+  'n6-muoi-va-phan-bon-hoa-hoc': () =>
+    import('../../content/units/n6-muoi-va-phan-bon-hoa-hoc.json'),
+  'n7-moi-quan-he-giua-cac-hop-chat-vo-co': () =>
+    import('../../content/units/n7-moi-quan-he-giua-cac-hop-chat-vo-co.json')
 };
 
 const unitCache = new Map<string, Promise<UnitContent>>();

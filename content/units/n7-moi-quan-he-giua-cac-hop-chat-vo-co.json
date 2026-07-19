@@ -1,0 +1,932 @@
+{
+  "id": "n7-moi-quan-he-giua-cac-hop-chat-vo-co",
+  "part": "inorganic",
+  "code": "N7",
+  "title": "Mối quan hệ giữa các hợp chất vô cơ",
+  "order": 7,
+  "description": "Sơ đồ phân loại các chất vô cơ, ma trận tính chất hoá học, chuỗi phản ứng, điều chế nhiều bước, nhận biết – tách – tinh chế và luyện tập tổng hợp vô cơ.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n7-l1",
+      "title": "Sơ đồ phân loại chất vô cơ; ma trận tính chất (16 phản ứng)",
+      "order": 1,
+      "summary": "Sơ đồ chuyển hoá giữa oxide, acid, base, muối; ma trận phản ứng tiêu biểu và điều kiện để từng mũi tên xảy ra.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n7-l1-c1",
+          "heading": "Sơ đồ chuyển hoá tổng quát",
+          "body": "Hai nhánh chuyển hoá chính:\n- Kim loại -> oxide base -> base -> muối. Ví dụ: Ca -> CaO -> Ca(OH)2 -> CaCO3.\n- Phi kim -> oxide acid -> acid -> muối. Ví dụ: S -> SO2 -> H2SO3 -> Na2SO3.\nMuối là điểm gặp nhau của hai nhánh; từ muối có thể quay lại base, acid hoặc oxide."
+        },
+        {
+          "id": "n7-l1-c2",
+          "heading": "Các phản ứng minh hoạ từng mũi tên",
+          "body": "Oxide base + acid: CuO + 2HCl -> CuCl2 + H2O\nOxide acid + kiềm: CO2 + 2NaOH -> Na2CO3 + H2O\nKiềm + muối: 2NaOH + CuSO4 -> Cu(OH)2 + Na2SO4\nAcid + muối: 2HCl + CaCO3 -> CaCl2 + H2O + CO2\nBase không tan -> oxide: Cu(OH)2 -> CuO + H2O (nhiệt phân)"
+        },
+        {
+          "id": "n7-l1-c3",
+          "heading": "Điều kiện của phản ứng trao đổi",
+          "body": "Phản ứng trao đổi trong dung dịch chỉ xảy ra khi sản phẩm có ít nhất một trong ba dấu hiệu:\n- Chất kết tủa (BaSO4, AgCl, CaCO3, Cu(OH)2...).\n- Chất khí (CO2, SO2, H2S...).\n- Nước (phản ứng trung hoà).\nNếu không có dấu hiệu nào, phản ứng không xảy ra (ví dụ NaCl + KOH)."
+        },
+        {
+          "id": "n7-l1-c4",
+          "heading": "Nâng cao: Mũi tên trực tiếp và mũi tên gián tiếp",
+          "body": "Một mũi tên trên sơ đồ có thể là chuyển hoá trực tiếp hoặc phải đi qua chất trung gian. Ví dụ CaO + H2O -> Ca(OH)2 là trực tiếp, nhưng không thể cho CuO gặp nước để thu Cu(OH)2 vì CuO không tạo base tan với nước. Có thể đi theo hai bước: CuO + 2HCl -> CuCl2 + H2O; rồi CuCl2 + 2NaOH -> Cu(OH)2↓ + 2NaCl.\n\nMuốn chuyển Na2CO3 thành NaOH có thể dùng phản ứng xút hoá: Na2CO3 + Ca(OH)2 -> 2NaOH + CaCO3↓. Kết tủa CaCO3 kéo phản ứng đi theo chiều tạo NaOH. Vì vậy, trước khi khẳng định một chuyển hoá “trực tiếp”, cần chỉ ra thuốc thử và dấu hiệu làm phản ứng xảy ra."
+        },
+        {
+          "id": "n7-l1-c5",
+          "heading": "Nâng cao: Giới hạn của quy tắc phân loại oxide",
+          "body": "Quy tắc “oxide kim loại thường là oxide base, oxide phi kim thường là oxide acid” chỉ là định hướng. Không phải oxide base nào cũng tác dụng với nước: CaO, Na2O làm được, còn CuO không. Tương tự, SiO2 là oxide acid nhưng không phản ứng với nước ở điều kiện thường.\n\nCũng có oxide trung tính như CO, NO: chúng không thể hiện rõ tính acid hay base trong sơ đồ này. Đặc biệt, Al2O3 và ZnO là oxide lưỡng tính, phản ứng được với cả acid lẫn dung dịch kiềm. Do đó phải nhận diện đúng từng oxide trước khi chọn nhánh chuyển hoá, không suy luận chỉ từ việc nguyên tố là kim loại hay phi kim."
+        },
+        {
+          "id": "n7-l1-c6",
+          "heading": "Nâng cao: Muối là nút chuyển hoá có điều kiện",
+          "body": "Từ muối không thể tùy ý quay về mọi loại chất. Muối -> base thường cần tạo hiđroxide ít tan, chẳng hạn CuSO4 + 2NaOH -> Cu(OH)2↓ + Na2SO4. Muối cacbonat gặp acid tạo H2CO3 không bền rồi phân huỷ: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2↑. Vì sản phẩm cuối là khí và nước nên phản ứng xảy ra hoàn toàn theo chiều đó.\n\nMuối -> oxide thường cần nhiệt phân một muối thích hợp, ví dụ CaCO3 -> CaO + CO2↑ khi nung. Không được áp dụng máy móc cho mọi muối; nhiều muối bền khi đun trong phạm vi bài học, hoặc cho sản phẩm khác. Khi chọn đường từ muối, hãy nêu rõ “tạo kết tủa”, “giải phóng khí” hoặc “nung” thay vì chỉ viết tên chất đích."
+        },
+        {
+          "id": "n7-l1-c7",
+          "heading": "Nâng cao: Vòng chuyển hoá của hợp chất canxi",
+          "body": "Hệ CaCO3, CaO và Ca(OH)2 là vòng chuyển hoá tiêu biểu: CaCO3 -> CaO + CO2↑ (nung); CaO + H2O -> Ca(OH)2; Ca(OH)2 + CO2 -> CaCO3↓ + H2O. Ngoài ra, CaO + CO2 -> CaCO3 cũng là một đường trực tiếp.\n\nChiều ngược lại không phải chỉ đảo vế phương trình. Muốn từ CaCO3 về CaO phải cung cấp nhiệt để phân huỷ; muốn từ CaO về CaCO3 cần hấp thụ CO2. Đây là cách kiểm tra nhanh tính hợp lí của một chuỗi: cùng một cặp chất có thể chuyển hoá hai chiều, nhưng mỗi chiều phải có thuốc thử hoặc điều kiện riêng."
+        },
+        {
+          "id": "n7-l1-c8",
+          "heading": "Nâng cao: CO2 thiếu – dư với nước vôi trong",
+          "body": "Sục CO2 vào dung dịch Ca(OH)2, ban đầu có kết tủa trắng: Ca(OH)2 + CO2 -> CaCO3↓ + H2O. Nếu tiếp tục sục CO2 đến dư, kết tủa tan: CaCO3 + CO2 + H2O -> Ca(HCO3)2. Ca(HCO3)2 tan nên dung dịch trong trở lại.\n\nKhi đun nóng dung dịch chứa Ca(HCO3)2, chất này lại phân huỷ tạo CaCO3↓, CO2 và H2O. Hiện tượng “vẩn đục rồi trong” vì thế không mâu thuẫn: nó chứng tỏ lượng CO2 đã chuyển từ chưa đủ sang dư. Trong bài nhận biết hoặc biện luận, phải luôn ghi trạng thái CO2 là thiếu, vừa đủ hay dư."
+        },
+        {
+          "id": "n7-l1-c9",
+          "heading": "Nâng cao: CO2 thiếu – dư với dung dịch NaOH",
+          "body": "Với NaOH, sản phẩm được quyết định bởi tỉ số T = nOH- / nCO2. Nếu T >= 2, CO2 tạo muối trung hoà: CO2 + 2NaOH -> Na2CO3 + H2O. Nếu T <= 1, NaOH không đủ và tạo muối acid: CO2 + NaOH -> NaHCO3. Nếu 1 < T < 2 thì thu được hỗn hợp Na2CO3 và NaHCO3.\n\nKhác với nước vôi trong, cả Na2CO3 và NaHCO3 đều tan nên không được dựa vào kết tủa để kết luận. Bài toán phải quy về số mol OH- mà NaOH cung cấp rồi so sánh với số mol CO2; đây là một ứng dụng quan trọng của mũi tên oxide acid -> muối."
+        },
+        {
+          "id": "n7-l1-c10",
+          "heading": "Nâng cao: Nhánh lưỡng tính của Al và Zn",
+          "body": "Chất lưỡng tính mở thêm một nhánh trên sơ đồ vì vừa có thể ứng xử như base với acid, vừa như acid với kiềm. Ví dụ: Al2O3 + 6HCl -> 2AlCl3 + 3H2O; với NaOH đặc, đun nóng: Al2O3 + 2NaOH -> 2NaAlO2 + H2O. ZnO cũng tương tự: ZnO + 2HCl -> ZnCl2 + H2O; với NaOH đặc: ZnO + 2NaOH -> Na2ZnO2 + H2O.\\n\\nTương tự, Al(OH)3 + 3HCl -> AlCl3 + 3H2O và Al(OH)3 + NaOH -> NaAlO2 + 2H2O. Trong dung dịch, sản phẩm của nhánh với kiềm có thể được biểu diễn dạng aluminat ngậm nước; ở mức Hoá 9 thường dùng NaAlO2 theo phương trình quy ước. Tính chất này giải thích phép tách quen thuộc: cho NaOH dư vào hỗn hợp Al(OH)3 và Cu(OH)2, Al(OH)3 tan còn Cu(OH)2 không tan; sau lọc có thể acid hoá từ từ phần dung dịch để kết tủa lại Al(OH)3."
+        },
+        {
+          "id": "n7-l1-c11",
+          "heading": "Nâng cao: Kĩ thuật lập chuỗi phản ứng vô cơ",
+          "body": "Khi gặp A -> B -> C, hãy làm theo bốn bước: (1) xác định A, B, C thuộc oxide, acid, base hay muối; (2) viết công thức của chất đích trước; (3) chọn thuốc thử tạo động lực rõ ràng như nước, acid, kiềm, kết tủa, khí hoặc nhiệt; (4) cân bằng và ghi điều kiện ngay trên từng mũi tên.\n\nSau khi lập xong, kiểm tra ngược từng mũi tên: chất phản ứng có gặp nhau được không, sản phẩm có đúng hoá trị không, và phản ứng có thật sự xảy ra trong môi trường đã cho không. Cách làm này ngăn lỗi thường gặp là viết một phản ứng trao đổi không có kết tủa/khí/nước, hoặc dùng nước để chuyển mọi oxide thành acid hay base."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n7-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Để chuyển CaO thành Ca(OH)2 cần cho CaO tác dụng với chất nào?",
+          "options": ["H2O", "HCl", "CO2", "NaOH"],
+          "answer": 0,
+          "explanation": "B1. CaO là oxide base tan được trong nước. B2. CaO + H2O -> Ca(OH)2."
+        },
+        {
+          "id": "n7-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Để chuyển Cu(OH)2 thành CuO ta dùng cách nào?",
+          "options": [
+            "nhiệt phân",
+            "cho tác dụng với nước",
+            "cho tác dụng với NaOH",
+            "điện phân"
+          ],
+          "answer": 0,
+          "explanation": "B1. Base không tan bị nhiệt phân huỷ thành oxide và nước. B2. Cu(OH)2 -> CuO + H2O."
+        },
+        {
+          "id": "n7-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các phản ứng viết đúng.",
+          "options": [
+            "CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4",
+            "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+            "NaCl + KOH -> NaOH + KCl",
+            "CaCO3 + NaOH -> Ca(OH)2 + Na2CO3"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. CuSO4 + NaOH tạo kết tủa Cu(OH)2 nên xảy ra. B2. Na2CO3 + HCl sinh khí CO2 nên xảy ra. B3. NaCl + KOH không có kết tủa/khí/nước nên không xảy ra. B4. CaCO3 là chất không tan, không phản ứng với dung dịch kiềm."
+        },
+        {
+          "id": "n7-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Để chuyển SO3 thành H2SO4 cần cho SO3 tác dụng với chất gì?",
+          "answer": "H2O",
+          "acceptedAnswers": ["nước", "nuoc"],
+          "placeholder": "Nhập tên hoặc công thức",
+          "explanation": "B1. Oxide acid tác dụng với nước tạo acid. B2. SO3 + H2O -> H2SO4."
+        },
+        {
+          "id": "n7-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dãy chuyển hoá nào sau đây viết đúng?",
+          "options": [
+            "S -> SO2 -> H2SO3",
+            "S -> H2SO3 -> SO2",
+            "SO2 -> S -> H2SO3",
+            "H2SO3 -> S -> SO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đốt S trong oxi tạo SO2. B2. SO2 tan trong nước tạo H2SO3. B3. Vậy thứ tự đúng là S -> SO2 -> H2SO3."
+        },
+        {
+          "id": "n7-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Trong chuỗi Ca -> CaO -> Ca(OH)2 -> CaCO3, phản ứng cuối cùng cần dùng chất nào?",
+          "options": ["CO2", "HCl", "NaCl", "H2O"],
+          "answer": 0,
+          "explanation": "B1. Ca(OH)2 là kiềm nên tác dụng với oxide acid. B2. Ca(OH)2 + CO2 -> CaCO3 + H2O."
+        },
+        {
+          "id": "n7-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Để chuyển Fe2O3 thành FeCl3 ta cho Fe2O3 tác dụng với",
+          "options": [
+            "dung dịch HCl",
+            "dung dịch NaCl",
+            "khí Cl2",
+            "dung dịch NaOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. Fe2O3 là oxide base nên tác dụng với acid. B2. Fe2O3 + 6HCl -> 2FeCl3 + 3H2O."
+        },
+        {
+          "id": "n7-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Từ CuO có thể điều chế trực tiếp (bằng một phản ứng) những chất nào sau đây?",
+          "options": ["CuCl2", "CuSO4", "Cu", "Cu(OH)2"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. CuO + 2HCl -> CuCl2 + H2O. B2. CuO + H2SO4 -> CuSO4 + H2O. B3. CuO + H2 -> Cu + H2O (khử bằng H2 nung nóng). B4. Cu(OH)2 không điều chế trực tiếp từ CuO vì CuO không tan trong nước; phải qua muối trung gian."
+        },
+        {
+          "id": "n7-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan 0,10 mol Na2O vào nước dư. Số mol NaOH thu được là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Na2O + H2O -> 2NaOH. B2. nNaOH = 2 x 0,10 = 0,20 mol."
+        },
+        {
+          "id": "n7-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Al + H2SO4 -> Al2(SO4)3 + H2.",
+          "left": ["Al", "H2SO4"],
+          "right": ["Al2(SO4)3", "H2"],
+          "answer": [2, 3, 1, 3],
+          "explanation": "B1. Muối Al2(SO4)3 chứa 2Al và 3 gốc SO4 nên cần 2Al và 3H2SO4. B2. Sáu nguyên tử H tạo 3H2. B3. Kiểm tra: hai vế đều có 2Al, 3S, 12O, 6H."
+        },
+        {
+          "id": "n7-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Chất X thoả mãn: X tác dụng với dung dịch HCl sinh khí; X tác dụng với dung dịch Ca(OH)2 tạo kết tủa trắng. X là chất nào?",
+          "options": ["Na2CO3", "NaCl", "NaOH", "Na2SO4"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 (sinh khí). B2. Na2CO3 + Ca(OH)2 -> CaCO3 + 2NaOH (kết tủa trắng). B3. NaCl, NaOH, Na2SO4 không sinh khí với HCl nên loại."
+        },
+        {
+          "id": "n7-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Nung hoàn toàn 20 g CaCO3, lấy chất rắn hoà tan vào nước dư được dung dịch X. Dẫn 0,10 mol CO2 vào X. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "10",
+          "acceptedAnswers": ["10 g", "10g"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 20 / 100 = 0,20 mol nên sau nung và hoà tan có 0,20 mol Ca(OH)2. B2. nOH- = 0,40 mol; T = 0,40 / 0,10 = 4 >= 2 nên kiềm dư, toàn bộ CO2 tạo kết tủa. B3. nCaCO3 = nCO2 = 0,10 mol, tức m = 10 g."
+        },
+        {
+          "id": "n7-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Fe2(SO4)3 + NaOH -> Fe(OH)3 + Na2SO4.",
+          "left": ["Fe2(SO4)3", "NaOH"],
+          "right": ["Fe(OH)3", "Na2SO4"],
+          "answer": [1, 6, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe2(SO4)3 chứa 2Fe tạo 2Fe(OH)3, cần 6 nhóm OH tức 6NaOH. B2. 6Na kết hợp 3 gốc SO4 tạo 3Na2SO4. B3. Kiểm tra: hai vế đều có 2Fe, 3S, 6Na, 6H, 18O."
+        }
+      ]
+    },
+    {
+      "id": "n7-l2",
+      "title": "Chuỗi phản ứng; điều chế nhiều bước",
+      "order": 2,
+      "summary": "Cách viết chuỗi phản ứng vô cơ, chọn thuốc thử cho từng mũi tên và xây dựng sơ đồ điều chế nhiều bước từ nguyên liệu quen thuộc.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n7-l2-c1",
+          "heading": "Cách làm bài chuỗi phản ứng",
+          "body": "B1. Xác định loại chất của từng mắt xích (oxide, acid, base hay muối).\nB2. Với mỗi mũi tên, chọn phản ứng đặc trưng phù hợp (dựa vào sơ đồ mối quan hệ).\nB3. Viết và cân bằng từng PTHH, ghi rõ điều kiện (nhiệt độ, xúc tác, điện phân) nếu có.\n\nNâng cao: trước khi viết thuốc thử, hãy kiểm tra mũi tên có thể đi trực tiếp hay phải qua chất trung gian. Một phản ứng trong dung dịch phải có động lực rõ ràng như tạo kết tủa, khí hoặc nước; phản ứng oxi hoá - khử phải có chất oxi hoá và chất khử phù hợp. Cuối cùng kiểm tra ngược: nguyên tố, hoá trị/số oxi hoá, sản phẩm phụ và điều kiện của từng mũi tên đều phải hợp lí."
+        },
+        {
+          "id": "n7-l2-c2",
+          "heading": "Ví dụ chuỗi đầy đủ",
+          "body": "Chuỗi: S -> SO2 -> SO3 -> H2SO4 -> Na2SO4 -> BaSO4\n1) S + O2 -> SO2 (đốt cháy)\n2) 2SO2 + O2 -> 2SO3 (xúc tác V2O5, 450 độ C)\n3) SO3 + H2O -> H2SO4\n4) H2SO4 + 2NaOH -> Na2SO4 + 2H2O\n5) Na2SO4 + BaCl2 -> BaSO4 + 2NaCl\n\nNâng cao: ở mức sơ đồ học đường, bước 3 có thể viết SO3 + H2O -> H2SO4. Trong sản xuất sulfuric acid, không cho SO3 hấp thụ trực tiếp vào nước vì dễ tạo sương acid; SO3 được hấp thụ vào H2SO4 đặc: SO3 + H2SO4 -> H2S2O7, rồi H2S2O7 + H2O -> 2H2SO4. Khi làm bài, phải theo đúng điều kiện và mức độ chi tiết mà đề bài yêu cầu."
+        },
+        {
+          "id": "n7-l2-c3",
+          "heading": "Điều chế nhiều bước từ nguyên liệu",
+          "body": "Các nguyên liệu quen thuộc: đá vôi CaCO3, muối ăn NaCl, lưu huỳnh S, quặng pirit FeS2, nước và không khí.\nVí dụ: từ NaCl điều chế NaOH bằng điện phân dung dịch bão hoà có màng ngăn; từ đá vôi điều chế vôi tôi qua hai bước nung rồi tôi vôi.\nKhi trình bày phải viết đủ PTHH của từng bước.\n\nNâng cao: phải theo dõi cả các sản phẩm đồng thời, không chỉ chất cần điều chế. Điện phân dung dịch NaCl bão hoà có màng ngăn: 2NaCl + 2H2O -> 2NaOH + H2 + Cl2. Màng ngăn giữ Cl2 ở vùng anot, tách khỏi NaOH ở vùng catot; nếu gặp nhau, Cl2 có thể phản ứng với NaOH lạnh, loãng: Cl2 + 2NaOH -> NaCl + NaClO + H2O."
+        },
+        {
+          "id": "n7-l2-c4",
+          "heading": "Nâng cao: Chọn thuốc thử cho từng mũi tên",
+          "body": "Không chọn thuốc thử theo thói quen; hãy xuất phát từ chất đích và điều kiện để phản ứng có thể xảy ra. Oxide base thường đi đến muối bằng acid; oxide acid thường đi đến muối bằng kiềm; từ muối muốn thu hiđroxide thường chọn kiềm tạo hiđroxide ít tan. Chẳng hạn: CuO + H2SO4 -> CuSO4 + H2O; CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4; Cu(OH)2 -> CuO + H2O (nung).\n\nNếu bước sau cần một ion trong dung dịch, hãy ưu tiên muối tan của ion đó. Nếu mục tiêu là tách chất rắn, hãy thiết kế bước tạo kết tủa rồi lọc. Cần tránh phép trao đổi mà cả bốn chất đều tan, vì không có lực đẩy phản ứng; cũng không được dùng nước để biến mọi oxide thành acid hoặc base."
+        },
+        {
+          "id": "n7-l2-c5",
+          "heading": "Nâng cao: Neo chuỗi bằng sự thay đổi số oxi hoá",
+          "body": "Với chuỗi có kim loại hoặc phi kim, trước hết xét số oxi hoá để nhận ra bước oxi hoá và khử. Fe -> Fe2+ là oxi hoá, ví dụ Fe + 2HCl -> FeCl2 + H2. Muốn đi tiếp từ Fe2+ lên Fe3+ phải dùng chất oxi hoá, chẳng hạn 2FeCl2 + Cl2 -> 2FeCl3; sau đó FeCl3 + 3NaOH -> Fe(OH)3 + 3NaCl và 2Fe(OH)3 -> Fe2O3 + 3H2O (nung).\n\nNgược lại, khi cần FeCl2 không dùng Cl2 tác dụng với Fe vì Fe tạo FeCl3. Tương tự, CuO -> Cu bằng H2 khi nung là bước khử: CuO + H2 -> Cu + H2O. Ghi số oxi hoá của nguyên tố thay đổi là cách nhanh để loại các thuốc thử không đúng vai trò."
+        },
+        {
+          "id": "n7-l2-c6",
+          "heading": "Nâng cao: Đi qua muối tan để nối các chất không tan",
+          "body": "Nhiều cặp chất không thể chuyển trực tiếp vì chất đầu không tan hoặc phản ứng không tạo động lực. Muốn từ CuO đến Cu(OH)2, trước hết hoà tan CuO bằng acid để tạo muối Cu2+ tan, rồi mới cho kiềm vào: CuO + 2HCl -> CuCl2 + H2O; CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl. Đây là mẫu chung: chất rắn ít tan -> muối tan -> kết tủa mới.\n\nKhi chọn acid và kiềm, phải xét ion đi kèm có cản trở bước kế tiếp không. Chất lưỡng tính như Al2O3, ZnO còn có hai hướng: tác dụng với acid để tạo muối kim loại hoặc tác dụng với kiềm mạnh để tạo aluminat/zincat. Vì vậy không được áp dụng máy móc quy tắc “oxide kim loại chỉ tác dụng với acid”."
+        },
+        {
+          "id": "n7-l2-c7",
+          "heading": "Nâng cao: Chuỗi canxi khi CO2 thiếu và dư",
+          "body": "Chuỗi CaO -> Ca(OH)2 -> CaCO3 là quen thuộc: CaO + H2O -> Ca(OH)2; Ca(OH)2 + CO2 -> CaCO3 + H2O. Tuy nhiên, nếu CO2 dư thì kết tủa CaCO3 tan tiếp: CaCO3 + CO2 + H2O -> Ca(HCO3)2. Khi đun nóng, Ca(HCO3)2 lại phân huỷ: Ca(HCO3)2 -> CaCO3 + CO2 + H2O.\n\nVì thế hiện tượng nước vôi trong vẩn đục rồi trong trở lại không phải hai kết luận mâu thuẫn mà là hai giai đoạn khác nhau. Trong chuỗi và bài nhận biết phải ghi rõ CO2 vừa đủ hay dư; trong bài điều chế phải nêu bước đun nóng nếu muốn thu lại CaCO3 từ dung dịch hiđrocacbonat."
+        },
+        {
+          "id": "n7-l2-c8",
+          "heading": "Nâng cao: Ghép chuỗi tạo khí với chuỗi hấp thụ khí",
+          "body": "Một chất khí sinh ra ở nhánh này có thể là thuốc thử cho nhánh khác. Ví dụ: CaCO3 + 2HCl -> CaCl2 + CO2 + H2O, sau đó dẫn CO2 vào Ca(OH)2: CO2 + Ca(OH)2 -> CaCO3 + H2O. Đề HSG thường khai thác cả lượng khí, hiện tượng và sản phẩm sau khi khí đi qua dung dịch hấp thụ.\n\nKhông suy luận chỉ từ tên khí. CO2 làm nước vôi trong vẩn đục khi lượng vừa đủ nhưng làm trong trở lại nếu dư; SO2 cũng là oxide acid và có thể bị oxi hoá thành SO3 trước khi tạo H2SO4. Hãy ghi đồng thời phương trình tạo khí, phương trình hấp thụ và trạng thái thiếu/dư của chất hấp thụ."
+        },
+        {
+          "id": "n7-l2-c9",
+          "heading": "Nâng cao: Bảo toàn nguyên tố và hiệu suất toàn chuỗi",
+          "body": "Bài toán nhiều bước không phải lúc nào cũng có tỉ lệ mol 1 : 1. Hãy viết tỉ lệ của từng phương trình hoặc bảo toàn nguyên tố chỉ khi nguyên tố đó không bị thất thoát và chỉ đi vào một sản phẩm cần tính. Ví dụ, 1 mol FeS2 chứa 2 mol S nên theo chuỗi hoàn toàn tạo tối đa 2 mol H2SO4.\n\nNếu hiệu suất các bước lần lượt là H1, H2, ..., số mol thực tế ở cuối chuỗi bằng số mol lí thuyết nhân H1/100 x H2/100 x ... . Ví dụ 0,50 mol FeS2, hai bước chuyển hoá lưu huỳnh có hiệu suất 80% và 90%, cho nH2SO4 = 0,50 x 2 x 0,80 x 0,90 = 0,72 mol, tương ứng 70,56 g. Không được cộng các hiệu suất hoặc áp dụng chúng trước khi xác định đúng tỉ lệ mol."
+        },
+        {
+          "id": "n7-l2-c10",
+          "heading": "Nâng cao: Thể tích khí trong chuỗi phản ứng",
+          "body": "Khi đề cho khí ở đkc, dùng n = V/24,79 và V = 24,79n, với V tính bằng lít. Chỉ dùng công thức này tại đkc; không thay bằng giá trị thể tích mol của điều kiện khác. Sau khi đổi về mol, nối các bước bằng hệ số trong PTHH rồi mới đổi lại đại lượng đề hỏi.\n\nVí dụ nung 0,25 mol CaCO3 hoàn toàn: CaCO3 -> CaO + CO2, nên thu 0,25 mol CO2, có thể tích 0,25 x 24,79 = 6,1975 lít ở đkc. Nếu khí được dẫn sang dung dịch khác, phải tiếp tục xét chất hấp thụ là thiếu, vừa đủ hay dư thay vì mặc nhiên coi toàn bộ khí tạo cùng một sản phẩm."
+        },
+        {
+          "id": "n7-l2-c11",
+          "heading": "Nâng cao: Tối ưu và tự kiểm tra sơ đồ điều chế",
+          "body": "Khi đề yêu cầu số bước ít nhất, một mũi tên chỉ được tính là một bước nếu có một PTHH thực sự biến chất đang có thành chất cần có. Ưu tiên đường ngắn nhưng không được bỏ qua chất trung gian bắt buộc, như CuO -> muối Cu2+ tan -> Cu(OH)2. Nếu đề giới hạn thuốc thử, chỉ chọn trong danh sách và phải tính cả việc thu, lọc hoặc nung chất trung gian khi cần.\n\nTrước khi chốt sơ đồ, tự hỏi năm câu: mỗi mũi tên có thuốc thử/điều kiện chưa; PTHH đã cân bằng chưa; phản ứng có lực đẩy hoặc là oxi hoá - khử hợp lí không; chất đích có thực sự được tạo ra hay chỉ tồn tại lẫn trong dung dịch; và sản phẩm phụ có làm hỏng bước sau không. Quy trình này giúp phát hiện các chuỗi “đẹp trên giấy” nhưng không thực hiện được."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n7-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phản ứng SO2 -> SO3 cần điều kiện nào?",
+          "options": [
+            "xúc tác V2O5 và nhiệt độ",
+            "ánh sáng mặt trời",
+            "màng ngăn điện phân",
+            "nước lạnh"
+          ],
+          "answer": 0,
+          "explanation": "B1. 2SO2 + O2 -> 2SO3 xảy ra ở khoảng 450 độ C. B2. Phản ứng cần xúc tác V2O5 mới đạt hiệu suất cao."
+        },
+        {
+          "id": "n7-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong chuỗi S -> SO2 -> SO3 -> H2SO4, có bao nhiêu phản ứng hoá hợp?",
+          "options": ["3", "1", "2", "0"],
+          "answer": 0,
+          "explanation": "B1. S + O2 -> SO2 là hoá hợp. B2. 2SO2 + O2 -> 2SO3 là hoá hợp. B3. SO3 + H2O -> H2SO4 cũng là hoá hợp. Vậy cả 3 phản ứng đều là hoá hợp."
+        },
+        {
+          "id": "n7-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Từ CaCO3 có thể điều chế trực tiếp (một phản ứng) những chất nào?",
+          "options": ["CaO", "CO2", "CaCl2", "Ca(OH)2"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Nung CaCO3 -> CaO + CO2, thu được cả CaO và CO2. B2. CaCO3 + 2HCl -> CaCl2 + H2O + CO2. B3. Ca(OH)2 phải điều chế qua trung gian CaO rồi mới tôi với nước."
+        },
+        {
+          "id": "n7-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nhỏ dung dịch BaCl2 vào dung dịch Na2SO4 thu được kết tủa trắng gì? (ghi công thức)",
+          "answer": "BaSO4",
+          "acceptedAnswers": ["bari sunfat"],
+          "placeholder": "Nhập công thức kết tủa",
+          "explanation": "B1. Na2SO4 + BaCl2 -> BaSO4 + 2NaCl. B2. BaSO4 là kết tủa trắng không tan trong acid."
+        },
+        {
+          "id": "n7-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong công nghiệp, NaOH được điều chế từ NaCl bằng phương pháp nào?",
+          "options": [
+            "điện phân dung dịch bão hoà có màng ngăn",
+            "nung nóng chảy NaCl",
+            "cho NaCl tác dụng với nước",
+            "cho NaCl tác dụng với KOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. 2NaCl + 2H2O -> 2NaOH + H2 + Cl2 (điện phân dung dịch có màng ngăn). B2. NaCl không tác dụng trực tiếp với nước hay KOH."
+        },
+        {
+          "id": "n7-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Để thực hiện chuỗi Fe -> FeCl2 -> Fe(OH)2, hai phản ứng lần lượt dùng các chất nào?",
+          "options": [
+            "dung dịch HCl rồi dung dịch NaOH",
+            "dung dịch NaOH rồi dung dịch HCl",
+            "khí Cl2 rồi nước",
+            "dung dịch NaCl rồi dung dịch KOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. Fe + 2HCl -> FeCl2 + H2. B2. FeCl2 + 2NaOH -> Fe(OH)2 + 2NaCl. B3. Lưu ý Fe + Cl2 tạo FeCl3 (sắt III) chứ không phải FeCl2."
+        },
+        {
+          "id": "n7-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Để điều chế Cu(OH)2 từ CuO cần ít nhất bao nhiêu phản ứng?",
+          "options": ["2", "1", "3", "4"],
+          "answer": 0,
+          "explanation": "B1. CuO không tan trong nước nên không tạo trực tiếp Cu(OH)2. B2. Cần 2 bước: CuO + 2HCl -> CuCl2 + H2O, rồi CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl."
+        },
+        {
+          "id": "n7-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các PTHH viết đúng trong chuỗi biến hoá của canxi.",
+          "options": [
+            "CaO + H2O -> Ca(OH)2",
+            "Ca(OH)2 + CO2 -> CaCO3 + H2O",
+            "CaCO3 -> CaO + CO2",
+            "CaCO3 + H2O -> Ca(OH)2 + CO2"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phản ứng đầu là tôi vôi, tạo đá vôi từ nước vôi trong và nung vôi — đều đúng. B2. CaCO3 không tác dụng với nước ở điều kiện thường nên phản ứng cuối sai."
+        },
+        {
+          "id": "n7-l2-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 0,10 mol S rồi oxi hoá hết SO2 thành SO3, hoà tan vào nước. Số mol H2SO4 thu được là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. S -> SO2 -> SO3 -> H2SO4, mỗi bước tỉ lệ mol 1 : 1 theo S. B2. Bảo toàn nguyên tố S: nH2SO4 = nS = 0,10 mol."
+        },
+        {
+          "id": "n7-l2-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Na2SO4 + BaCl2 -> BaSO4 + NaCl.",
+          "left": ["Na2SO4", "BaCl2"],
+          "right": ["BaSO4", "NaCl"],
+          "answer": [1, 1, 1, 2],
+          "explanation": "B1. Ba và gốc SO4 ghép thành BaSO4 hệ số 1. B2. Còn 2Na và 2Cl tạo 2NaCl."
+        },
+        {
+          "id": "n7-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Từ quặng pirit FeS2, nước và không khí, cần ít nhất bao nhiêu phản ứng để điều chế H2SO4?",
+          "options": ["3", "2", "4", "5"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. 4FeS2 + 11O2 -> 2Fe2O3 + 8SO2. B2. 2SO2 + O2 -> 2SO3 (xúc tác V2O5). B3. SO3 + H2O -> H2SO4. Vậy tối thiểu 3 phản ứng."
+        },
+        {
+          "id": "n7-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Đốt hoàn toàn 12 g FeS2, chuyển toàn bộ SO2 thành SO3 rồi thành H2SO4. Khối lượng H2SO4 lớn nhất thu được là bao nhiêu gam?",
+          "answer": "19,6",
+          "acceptedAnswers": ["19.6"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nFeS2 = 12 / 120 = 0,10 mol. B2. Bảo toàn nguyên tố S: nH2SO4 = 2 x nFeS2 = 0,20 mol. B3. m = 0,20 x 98 = 19,6 g."
+        },
+        {
+          "id": "n7-l2-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CuCl2 + NaOH -> Cu(OH)2 + NaCl.",
+          "left": ["CuCl2", "NaOH"],
+          "right": ["Cu(OH)2", "NaCl"],
+          "answer": [1, 2, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cu(OH)2 chứa 2 nhóm OH nên cần 2NaOH. B2. 2Na kết hợp 2Cl tạo 2NaCl. B3. Kiểm tra: hai vế đều có 1Cu, 2Cl, 2Na, 2O, 2H."
+        }
+      ]
+    },
+    {
+      "id": "n7-l3",
+      "title": "Nhận biết – tách – tinh chế chất vô cơ",
+      "order": 3,
+      "summary": "Thuốc thử đặc trưng, sơ đồ nhận biết, kỹ thuật tách và tinh chế chất rắn, dung dịch hoặc chất khí vô cơ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n7-l3-c1",
+          "heading": "Thuốc thử đặc trưng thường dùng",
+          "body": "- Quỳ tím: acid hoá đỏ, kiềm hoá xanh, muối trung hoà không đổi màu.\n- Dung dịch BaCl2: nhận gốc sunfat (=SO4) qua kết tủa trắng BaSO4.\n- Dung dịch AgNO3: nhận gốc clorua (-Cl) qua kết tủa trắng AgCl.\n- Dung dịch HCl: nhận gốc cacbonat (=CO3) qua sủi bọt khí CO2.\n- Dung dịch kiềm: nhận muối đồng (kết tủa xanh Cu(OH)2), muối sắt(III) (kết tủa nâu đỏ Fe(OH)3)."
+        },
+        {
+          "id": "n7-l3-c2",
+          "heading": "Quy trình trình bày bài nhận biết",
+          "body": "B1. Trích mỗi chất một ít làm mẫu thử, đánh số.\nB2. Chọn thuốc thử cho hiện tượng khác nhau giữa các mẫu.\nB3. Nêu rõ hiện tượng từng mẫu (kết tủa, khí, đổi màu).\nB4. Viết PTHH của các phản ứng đã dùng.\nNếu đề giới hạn thuốc thử, tận dụng các chất đã nhận ra làm thuốc thử tiếp theo."
+        },
+        {
+          "id": "n7-l3-c3",
+          "heading": "Tách và tinh chế",
+          "body": "Nguyên tắc: dùng phản ứng chọn lọc để loại tạp chất hoặc chuyển chất cần tách sang dạng dễ tách (kết tủa, khí), sau đó tái tạo chất ban đầu.\nVí dụ: tinh chế NaCl có lẫn Na2CO3 — thêm HCl dư (Na2CO3 phản ứng hết sinh CO2), cô cạn dung dịch được NaCl khan (HCl dư bay hơi).\nTách bột Cu khỏi hỗn hợp với Fe: hoà tan bằng HCl dư, Fe tan hết, lọc lấy Cu không phản ứng."
+        },
+        {
+          "id": "n7-l3-c4",
+          "heading": "Nâng cao: Lập sơ đồ nhận biết theo nhánh",
+          "body": "Không nên thử ngẫu nhiên từng thuốc thử. Hãy chọn phép thử đầu tiên chia các mẫu thành những nhóm ít nhất có thể, rồi dùng hiện tượng ở nhánh sau để phân biệt tiếp. Ví dụ với HCl, Na2CO3 và Na2SO4: quỳ tím tách HCl; dùng HCl đã nhận ra nhỏ vào hai mẫu còn lại, mẫu sủi bọt CO2 là Na2CO3; mẫu không hiện tượng là Na2SO4.\n\nMỗi kết luận phải dựa trên một hiện tượng riêng hoặc một chuỗi hiện tượng riêng. Nếu hai chất đều tạo kết tủa trắng với cùng thuốc thử, chưa được kết luận ngay mà phải thêm bước kiểm chứng. Khi đề cho các dung dịch mất nhãn, chỉ lấy từng phần nhỏ làm mẫu thử; không đổ thuốc thử trực tiếp vào toàn bộ mẫu vì có thể cần dùng chất đó ở bước sau."
+        },
+        {
+          "id": "n7-l3-c5",
+          "heading": "Nâng cao: Nhận biết anion phải có bước xác nhận",
+          "body": "BaCl2 không chỉ tạo kết tủa với SO4^2- mà còn có thể gặp CO3^2- hoặc SO3^2-. Vì vậy khi cần khẳng định SO4^2-, có thể acid hoá mẫu bằng HCl loãng trước: cacbonat và sunfit bị acid phân huỷ, còn khi thêm BaCl2 thì BaSO4 trắng vẫn không tan trong acid. Ví dụ: Na2SO4 + BaCl2 -> BaSO4↓ + 2NaCl.\n\nTương tự, không dùng HCl để acid hoá trước phép thử AgNO3 tìm Cl-, vì chính HCl đã đưa Cl- vào mẫu. Dùng HNO3 loãng nếu cần loại các ion gây nhiễu trong môi trường acid, rồi thêm AgNO3: Ag+ + Cl- -> AgCl↓. Quy tắc chọn acid là không được đưa đúng ion đang cần nhận biết vào dung dịch."
+        },
+        {
+          "id": "n7-l3-c6",
+          "heading": "Nâng cao: Hiện tượng kết tủa và biến đổi trong không khí",
+          "body": "Màu kết tủa chỉ là dấu hiệu ban đầu, cần quan sát cả sự thay đổi sau đó. Khi cho NaOH vào muối Fe2+, Fe(OH)2 mới tạo có màu trắng xanh; để ngoài không khí, chất này bị oxi hoá dần thành Fe(OH)3 nâu đỏ: 4Fe(OH)2 + O2 + 2H2O -> 4Fe(OH)3. Vì vậy kết tủa nâu đỏ không luôn chứng tỏ mẫu ban đầu chứa Fe3+.\n\nCu2+ cho Cu(OH)2 xanh, Fe3+ cho Fe(OH)3 nâu đỏ; còn nhiều ion kim loại khác cũng cho hiđroxide trắng. Nếu chỉ dựa vào màu trắng thì chưa đủ kết luận. Cần phối hợp độ tan trong kiềm dư, phản ứng với acid hoặc một thuốc thử đặc hiệu khác để xác nhận ion."
+        },
+        {
+          "id": "n7-l3-c7",
+          "heading": "Nâng cao: Tách bằng kết tủa chọn lọc",
+          "body": "Muốn tách một ion khỏi dung dịch hỗn hợp, chọn thuốc thử biến chỉ ion đó thành chất ít tan, sau đó lọc. Chẳng hạn cho NaOH dư vào dung dịch chứa Cu2+ và Al3+: Cu(OH)2 kết tủa xanh, còn Al(OH)3 tạo ra tan trong NaOH dư thành aluminat; lọc thu được Cu(OH)2. Ở cách biểu diễn Hoá 9: Al(OH)3 + NaOH -> NaAlO2 + 2H2O.\n\nNếu cần thu lại Al(OH)3, acid hoá từ từ phần dung dịch aluminat đến khi xuất hiện kết tủa trắng rồi lọc. Điểm quyết định là lượng NaOH phải dư: dùng vừa đủ thì cả hai hiđroxide có thể cùng tồn tại ở dạng kết tủa, phép tách thất bại. Luôn nêu rõ chất nào ở bã lọc, chất nào ở nước lọc sau mỗi bước."
+        },
+        {
+          "id": "n7-l3-c8",
+          "heading": "Nâng cao: Hoà tan chọn lọc kim loại",
+          "body": "Với hỗn hợp kim loại, chọn dung dịch phản ứng với tạp chất nhưng không phản ứng với chất cần giữ. Hỗn hợp Cu và Fe được xử lí bằng HCl loãng dư: Fe + 2HCl -> FeCl2 + H2↑, còn Cu không tan; lọc, rửa chất rắn bằng nước rồi làm khô để thu Cu. Bước rửa loại dung dịch FeCl2 và acid còn bám trên bề mặt Cu.\n\nTrước khi dùng acid, phải xét dãy hoạt động hoá học và chất cần thu. Không dùng HCl để tách Al khỏi Fe vì cả Al và Fe đều tan; cũng không dùng dung dịch muối có thể làm kim loại cần giữ bị oxi hoá hoặc bám thêm kim loại khác. Một quy trình đúng phải bảo toàn chất cần lấy, không chỉ làm mất được một tạp chất."
+        },
+        {
+          "id": "n7-l3-c9",
+          "heading": "Nâng cao: Kết tinh lại và thu muối tinh khiết",
+          "body": "Kết tinh lại phù hợp khi độ tan của chất cần thu thay đổi mạnh theo nhiệt độ, còn tạp chất tan hơn hoặc ít thay đổi. Ví dụ tách KNO3 khỏi NaCl: hoà tan hỗn hợp trong lượng nước nóng tối thiểu, lọc nóng nếu có chất không tan, rồi làm nguội. KNO3 kết tinh nhiều hơn, còn phần lớn NaCl ở lại trong nước mẹ.\n\nTinh thể phải được lọc, rửa nhanh bằng một ít nước lạnh rồi làm khô; nếu cô cạn toàn bộ nước mẹ, tạp chất tan sẽ kết tinh lẫn trở lại. Phương pháp này chỉ có hiệu quả khi số liệu độ tan cho phép tách; không được mặc định mọi hỗn hợp muối đều tách được bằng cách đun nóng rồi làm lạnh."
+        },
+        {
+          "id": "n7-l3-c10",
+          "heading": "Nâng cao: Làm sạch và làm khô chất khí",
+          "body": "Tinh chế khí gồm hai việc khác nhau: bình rửa giữ tạp khí, còn chất làm khô chỉ lấy hơi nước. Khi điều chế CO2 từ CaCO3 và HCl, khí thường lẫn HCl và hơi nước. Có thể dẫn qua dung dịch NaHCO3 bão hoà để giữ HCl, rồi qua H2SO4 đặc để hút nước; không dùng NaOH hoặc CaO để làm khô CO2 vì chúng còn hấp thụ cả CO2.\n\nMuốn chọn bình rửa hay chất làm khô, cần kiểm tra ba điều: chúng có giữ tạp chất không, có phản ứng với khí chính không, và có đưa thêm hơi hoặc tạp mới vào dòng khí không. Thứ tự cũng quan trọng: rửa khí trước, làm khô sau; nếu làm ngược, hơi nước phát sinh khi rửa sẽ làm khí ẩm trở lại."
+        },
+        {
+          "id": "n7-l3-c11",
+          "heading": "Nâng cao: Đánh giá độ tinh khiết của quy trình",
+          "body": "Sau khi tách, cần xét cả tạp chất do thuốc thử tạo ra. Ví dụ cho AgNO3 vào dung dịch NaCl sẽ thu AgCl kết tủa, nhưng không phải cách tinh chế NaCl vì NaCl đã bị chuyển thành chất khác và dung dịch còn chứa NaNO3 hoặc AgNO3 dư. Một phép tách chỉ đạt yêu cầu khi cuối cùng thu đúng chất cần lấy với tạp chất đã được loại bỏ.\n\nTrình bày một quy trình hoàn chỉnh theo thứ tự: phản ứng chọn lọc -> tách pha (lọc, chắt hoặc dẫn khí) -> rửa khi cần -> tái tạo chất đích nếu đã chuyển hoá -> thu và làm khô. Tự kiểm tra bằng câu hỏi: tạp chất đi đâu, thuốc thử dư đi đâu, và chất cần thu đang nằm ở bã lọc, nước lọc hay sản phẩm khí?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "n7-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Để phân biệt dung dịch H2SO4 và dung dịch NaCl ta dùng",
+          "options": [
+            "quỳ tím",
+            "nước cất",
+            "dung dịch NaCl",
+            "phenolphtalein"
+          ],
+          "answer": 0,
+          "explanation": "B1. H2SO4 là acid làm quỳ tím hoá đỏ. B2. NaCl là muối trung hoà, quỳ tím không đổi màu."
+        },
+        {
+          "id": "n7-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Thuốc thử dùng để nhận ra gốc sunfat (=SO4) trong dung dịch là",
+          "options": [
+            "dung dịch BaCl2",
+            "quỳ tím",
+            "dung dịch NaOH",
+            "nước vôi trong"
+          ],
+          "answer": 0,
+          "explanation": "B1. Gốc SO4 kết hợp với Ba2+ tạo kết tủa trắng BaSO4 không tan trong acid. B2. Vì vậy BaCl2 (hoặc Ba(OH)2, Ba(NO3)2) là thuốc thử đặc trưng."
+        },
+        {
+          "id": "n7-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các mô tả hiện tượng đúng khi nhỏ dung dịch NaOH vào từng dung dịch.",
+          "options": [
+            "vào CuSO4: xuất hiện kết tủa xanh",
+            "vào FeCl3: xuất hiện kết tủa nâu đỏ",
+            "vào NaCl: không có hiện tượng",
+            "vào HCl: xuất hiện kết tủa trắng"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. 2NaOH + CuSO4 -> Cu(OH)2 xanh + Na2SO4. B2. 3NaOH + FeCl3 -> Fe(OH)3 nâu đỏ + 3NaCl. B3. NaCl không phản ứng. B4. NaOH + HCl chỉ tạo muối tan và nước, không có kết tủa."
+        },
+        {
+          "id": "n7-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nhỏ dung dịch HCl vào muối cacbonat thấy hiện tượng gì?",
+          "answer": "sủi bọt khí",
+          "acceptedAnswers": [
+            "có khí thoát ra",
+            "khí thoát ra",
+            "sui bot khi",
+            "sủi bọt"
+          ],
+          "placeholder": "Nhập hiện tượng",
+          "explanation": "B1. Muối cacbonat tác dụng với acid sinh khí CO2. B2. Ví dụ: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2 (sủi bọt khí không màu)."
+        },
+        {
+          "id": "n7-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Để nhận ra dung dịch chứa gốc clorua (-Cl) ta dùng thuốc thử nào?",
+          "options": [
+            "dung dịch AgNO3",
+            "dung dịch BaCl2",
+            "quỳ tím",
+            "dung dịch H2SO4"
+          ],
+          "answer": 0,
+          "explanation": "B1. Ag+ kết hợp Cl- tạo kết tủa trắng AgCl. B2. Ví dụ: NaCl + AgNO3 -> AgCl + NaNO3."
+        },
+        {
+          "id": "n7-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chỉ dùng một thuốc thử nào để phân biệt hai dung dịch Na2SO4 và NaCl?",
+          "options": [
+            "dung dịch BaCl2",
+            "quỳ tím",
+            "phenolphtalein",
+            "dung dịch NaOH"
+          ],
+          "answer": 0,
+          "explanation": "B1. BaCl2 + Na2SO4 -> BaSO4 kết tủa trắng. B2. BaCl2 không phản ứng với NaCl. B3. Cả hai muối đều trung hoà nên quỳ tím và phenolphtalein không phân biệt được."
+        },
+        {
+          "id": "n7-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chỉ dùng quỳ tím có thể phân biệt được ba dung dịch nào sau đây?",
+          "options": [
+            "HCl, NaOH, NaCl",
+            "NaCl, KCl, Na2SO4",
+            "NaOH, KOH, Ba(OH)2",
+            "HCl, H2SO4, HNO3"
+          ],
+          "answer": 0,
+          "explanation": "B1. HCl làm quỳ hoá đỏ, NaOH làm quỳ hoá xanh, NaCl không đổi màu — ba hiện tượng khác nhau. B2. Các nhóm còn lại gồm các chất cùng loại nên quỳ tím cho hiện tượng giống nhau, không phân biệt được."
+        },
+        {
+          "id": "n7-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Để tinh chế NaCl có lẫn Na2CO3, ta thực hiện những bước nào?",
+          "options": [
+            "thêm dung dịch HCl dư",
+            "cô cạn dung dịch",
+            "thêm dung dịch NaOH dư",
+            "thêm dung dịch AgNO3 dư"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. HCl dư phản ứng hết Na2CO3: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. B2. Cô cạn: HCl dư bay hơi, thu NaCl khan tinh khiết. B3. NaOH không loại được Na2CO3; AgNO3 làm mất cả NaCl."
+        },
+        {
+          "id": "n7-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Nhỏ BaCl2 dư vào dung dịch Na2SO4 thu được 23,3 g kết tủa. Số mol Na2SO4 trong dung dịch là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nBaSO4 = 23,3 / 233 = 0,10 mol. B2. Na2SO4 + BaCl2 -> BaSO4 + 2NaCl tỉ lệ 1 : 1 nên nNa2SO4 = 0,10 mol."
+        },
+        {
+          "id": "n7-l3-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhận biết gốc clorua: NaCl + AgNO3 -> AgCl + NaNO3.",
+          "left": ["NaCl", "AgNO3"],
+          "right": ["AgCl", "NaNO3"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Ag đổi chỗ cho Na theo tỉ lệ 1 : 1. B2. Các hệ số đều bằng 1; kết tủa trắng là AgCl."
+        },
+        {
+          "id": "n7-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Có ba dung dịch mất nhãn: HCl, Na2SO4, NaOH. Thứ tự thuốc thử nào sau đây nhận biết được cả ba?",
+          "options": [
+            "quỳ tím",
+            "chỉ dung dịch BaCl2",
+            "chỉ dung dịch AgNO3",
+            "chỉ nước cất"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Quỳ tím: HCl hoá đỏ, NaOH hoá xanh, Na2SO4 không đổi màu — nhận được cả ba ngay. B2. BaCl2 chỉ nhận ra Na2SO4, không phân biệt HCl với NaOH; AgNO3 và nước cất không đủ phân biệt."
+        },
+        {
+          "id": "n7-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Để tách bột Cu ra khỏi hỗn hợp bột Cu và Fe, ta ngâm hỗn hợp vào dung dịch nào (dư)? (ghi công thức)",
+          "answer": "HCl",
+          "acceptedAnswers": [
+            "hcl dư",
+            "acid clohidric",
+            "h2so4 loãng",
+            "h2so4"
+          ],
+          "placeholder": "Nhập công thức dung dịch",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe đứng trước H nên tan trong HCl dư: Fe + 2HCl -> FeCl2 + H2. B2. Cu đứng sau H, không phản ứng với HCl (hoặc H2SO4 loãng). B3. Lọc lấy chất rắn còn lại là Cu tinh khiết."
+        },
+        {
+          "id": "n7-l3-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng nhận biết muối sắt(III): FeCl3 + NaOH -> Fe(OH)3 + NaCl.",
+          "left": ["FeCl3", "NaOH"],
+          "right": ["Fe(OH)3", "NaCl"],
+          "answer": [1, 3, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe(OH)3 chứa 3 nhóm OH nên cần 3NaOH. B2. 3Na kết hợp 3Cl tạo 3NaCl. B3. Kết tủa Fe(OH)3 màu nâu đỏ là dấu hiệu của muối sắt(III)."
+        }
+      ]
+    },
+    {
+      "id": "n7-l4",
+      "title": "Luyện tập tổng hợp vô cơ",
+      "order": 4,
+      "summary": "Chiến lược giải bài tập tổng hợp vô cơ bằng các định luật bảo toàn, quy đổi số mol H+, OH- và cách kiểm tra nghiệm theo từng chặng phản ứng.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n7-l4-c1",
+          "heading": "Chiến lược giải bài tổng hợp",
+          "body": "B1. Tóm tắt đề bằng sơ đồ: chất đầu -> phản ứng -> sản phẩm, kèm số liệu.\nB2. Đổi hết dữ kiện về số mol.\nB3. Viết PTHH theo đúng thứ tự phản ứng xảy ra; xác định chất hết, chất dư.\nB4. Tính theo chất hết, kiểm tra lại bằng bảo toàn khối lượng."
+        },
+        {
+          "id": "n7-l4-c2",
+          "heading": "Các định luật bảo toàn",
+          "body": "- Bảo toàn khối lượng: tổng khối lượng chất tham gia = tổng khối lượng sản phẩm.\n- Bảo toàn nguyên tố: số mol mỗi nguyên tố không đổi qua các phản ứng (dùng để tính nhanh chuỗi nhiều bước).\n- Tăng giảm khối lượng: ví dụ oxide + acid, khối lượng muối tăng so với oxide do O bị thay bằng gốc acid."
+        },
+        {
+          "id": "n7-l4-c3",
+          "heading": "Dạng điển hình trong đề HSG",
+          "body": "- Hỗn hợp oxide/muối + acid: lập hệ phương trình theo khối lượng và số mol khí hoặc acid.\n- Muối + kiềm có kết tủa: chú ý kiềm dư có thể hoà tan kết tủa lưỡng tính.\n- Cho từ từ acid vào muối cacbonat: phản ứng xảy ra hai giai đoạn, giai đoạn đầu chưa có khí."
+        },
+        {
+          "id": "n7-l4-c4",
+          "heading": "Nâng cao: Chọn ẩn và phương trình độc lập",
+          "body": "Với hỗn hợp hai chất, nên đặt ẩn là số mol từng chất, chẳng hạn x mol oxide và y mol muối cacbonat. Không cần lập phương trình cho mọi dữ kiện: chỉ chọn các quan hệ độc lập. Khối lượng hỗn hợp cho một phương trình; lượng CO2 chỉ do cacbonat tạo ra cho phương trình thứ hai. Khi đó nCO2 = y, còn phương trình khối lượng là M(oxide)x + M(cacbonat)y = m hỗn hợp.\n\nNếu cả hai chất cùng tiêu thụ acid, số mol acid đã phản ứng thường chỉ là phương trình kiểm tra chứ không phải dữ kiện mới. Ví dụ hai chất đều cần 2 mol HCl cho 1 mol chất thì nHCl = 2(x + y). Chỉ dùng quan hệ này để giải hệ khi nó thực sự được cho độc lập với khối lượng hoặc lượng khí. Lập hai phương trình trùng thông tin là nguyên nhân khiến bài toán tưởng có đủ dữ kiện nhưng vẫn không tìm được nghiệm duy nhất."
+        },
+        {
+          "id": "n7-l4-c5",
+          "heading": "Nâng cao: Quy đổi về số mol H+ và OH-",
+          "body": "Trong bài nhiều oxide, base và muối, hãy đếm số mol H+ hoặc OH- mà từng chất nhận hay cho theo phương trình. Với chất hoá trị II: MO + 2H+ -> M2+ + H2O; M(OH)2 + 2H+ -> M2+ + 2H2O; MCO3 + 2H+ -> M2+ + H2O + CO2. Vì vậy cùng 1 mol ba chất này đều tiêu thụ 2 mol H+, nhưng chỉ cacbonat tạo CO2.\n\nTương tự, 1 mol M2+ tạo M(OH)2 cần 2 mol OH-, còn 1 mol Al3+ tạo Al(OH)3 cần 3 mol OH-. Với acid một nấc như HCl, nHCl chính là số mol H+ đã cung cấp; với H2SO4 loãng phải dựa vào phương trình để tính đúng hệ số. Cách quy đổi này gộp được nhiều phản ứng vào một phương trình lượng chất, nhưng chỉ hợp lệ khi acid hoặc kiềm đã phản ứng hết theo các phản ứng đã xác định."
+        },
+        {
+          "id": "n7-l4-c6",
+          "heading": "Nâng cao: Các mốc khi acid hoá hỗn hợp kiềm – cacbonat",
+          "body": "Xét dung dịch chứa OH- và CO3^2-, thêm acid mạnh từ từ. Trên sơ đồ tính toán, H+ trước hết trung hoà OH- và chuyển CO3^2- thành HCO3-; đến mốc nH+ = nOH- ban đầu + nCO3^2- ban đầu thì vẫn chưa có CO2 thoát ra. Sau mốc đó, H+ biến HCO3- thành CO2 và H2O. Khi nH+ đạt nOH- ban đầu + 2nCO3^2- ban đầu, toàn bộ cacbon đã thoát dưới dạng CO2.\n\nDo đó, nếu lượng acid nằm giữa hai mốc sau và OH- đã bị trung hoà, số mol CO2 bằng nH+ đã thêm - nOH- ban đầu - nCO3^2- ban đầu. Nếu chưa qua mốc đầu thì nCO2 = 0; nếu vượt mốc cuối thì nCO2 không thể lớn hơn nCO3^2- ban đầu. Các mốc này mô tả trạng thái đầu và cuối theo lượng chất, không thay cho việc viết phương trình khi đề yêu cầu trình bày phản ứng."
+        },
+        {
+          "id": "n7-l4-c7",
+          "heading": "Nâng cao: Kết tủa theo lượng kiềm và trường hợp lưỡng tính",
+          "body": "Trước khi tính khối lượng kết tủa, phải xét lượng OH- có đủ để kết tủa hoàn toàn hay không. Nếu dung dịch có a mol Cu2+ thì cần 2a mol OH- để tạo tối đa a mol Cu(OH)2; OH- ít hơn thì số mol kết tủa bằng nOH- / 2. Với hỗn hợp nhiều cation, lượng OH- ở thời điểm kết tủa tối đa là tổng số mol OH- cần cho từng hiđroxide.\n\nAl(OH)3 và Zn(OH)2 làm đồ thị lượng kết tủa có thêm đoạn giảm: sau khi tạo kết tủa, kiềm dư còn hoà tan chúng. Ở mức biểu diễn Hoá 9: Al(OH)3 + NaOH -> NaAlO2 + 2H2O. Vì thế phải tách rõ ba vùng: kiềm thiếu, kiềm vừa đủ tạo lượng kết tủa lớn nhất, và kiềm dư làm tan phần lưỡng tính. Không áp dụng quy tắc này cho Cu(OH)2 hoặc Mg(OH)2, vì chúng không tan trong NaOH dư theo phạm vi bài học."
+        },
+        {
+          "id": "n7-l4-c8",
+          "heading": "Nâng cao: Bảo toàn khối lượng phải chọn đúng hệ",
+          "body": "Bảo toàn khối lượng luôn đúng, nhưng hệ được cân phải bao gồm mọi chất đi vào và đi ra. Khi cho cacbonat tác dụng với acid trong cốc hở, khối lượng phần còn lại giảm vì CO2 bay khỏi hệ đang cân; không được viết khối lượng dung dịch sau phản ứng bằng khối lượng ban đầu nếu đã bỏ qua khí. Khi nung muối hoặc hiđroxide, chất rắn sau nung cũng nhẹ đi do CO2 hoặc H2O thoát ra.\n\nMột cách an toàn là viết phương trình rồi dùng: khối lượng sản phẩm cần tìm = khối lượng các chất phản ứng thực sự đã dùng - khối lượng các sản phẩm không được giữ lại trong phần đang xét. Nếu cân cả bình kín trước và sau phản ứng thì tổng khối lượng không đổi. Hãy ghi rõ đề hỏi khối lượng dung dịch, chất rắn sau lọc, kết tủa đã sấy khô hay toàn bộ hệ; bốn đại lượng này không thể thay thế cho nhau."
+        },
+        {
+          "id": "n7-l4-c9",
+          "heading": "Nâng cao: Mẹo tăng – giảm khối lượng khi đổi oxide thành muối",
+          "body": "Khi một oxide chuyển hoàn toàn thành muối chứa cùng kim loại, hãy neo vào phần kim loại không đổi rồi so sánh phần bị thay thế. Ví dụ với oxide MO tác dụng HCl: MO + 2HCl -> MCl2 + H2O. Trong 1 mol chất rắn, 1 nguyên tử O có khối lượng 16 được thay bằng 2Cl có khối lượng 71, nên khối lượng muối MCl2 lớn hơn oxide MO là 55 g.\n\nKhông được dùng con số 55 cho mọi trường hợp: nó chỉ đúng với dạng MO tạo MCl2. Với H2SO4, gốc SO4 thay cho O nên độ tăng khác; với oxide có công thức khác, số nguyên tử O và số gốc acid cũng khác. Cách tổng quát và chắc chắn hơn là viết phương trình, rồi dùng m(muối) = m(oxide đã phản ứng) + m(acid đã phản ứng) - m(nước tạo thành). Công thức này cũng nhắc rằng acid dư trong dung dịch không thuộc khối lượng muối tinh khiết."
+        },
+        {
+          "id": "n7-l4-c10",
+          "heading": "Nâng cao: Kiểm tra nghiệm và đọc lại hiện tượng",
+          "body": "Sau khi giải hệ, luôn thay nghiệm trở lại ít nhất một dữ kiện chưa dùng. Số mol từng chất phải không âm; khối lượng từng thành phần không thể lớn hơn khối lượng hỗn hợp; số mol CO2 không thể vượt số mol nguyên tử C có trong các chất sinh khí. Với bài acid hoặc kiềm dư, kiểm tra thêm môi trường cuối: còn H+ thì dung dịch acid, còn OH- thì dung dịch base; nếu cả hai vừa hết thì mới có thể trung tính.\n\nĐối với kết tủa, cần đối chiếu nghiệm với lượng thuốc thử: kết tủa không thể xuất hiện nhiều hơn lượng ion tạo nó, và chất lưỡng tính không được coi là còn nguyên kết tủa khi NaOH đã dư. Cuối cùng, kiểm tra lại phương trình đã cân bằng và đơn vị mol, gam. Một nghiệm đúng đại số nhưng trái với chất dư, hiện tượng khí hoặc trạng thái kết tủa vẫn là nghiệm hoá học sai."
+        },
+        {
+          "id": "n7-l4-c11",
+          "heading": "Nâng cao: Trình bày lời giải đề tổng hợp",
+          "body": "Bài tổng hợp vô cơ cần được trình bày theo từng chặng phản ứng, nêu rõ chất dư, chất hết, số liệu thuộc pha nào và bước kiểm tra kết quả cuối cùng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n7-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Theo định luật bảo toàn khối lượng, tổng khối lượng các chất tham gia phản ứng bằng",
+          "options": [
+            "tổng khối lượng các sản phẩm",
+            "khối lượng chất kết tủa",
+            "khối lượng chất khí",
+            "một nửa tổng khối lượng sản phẩm"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong phản ứng hoá học, các nguyên tử được bảo toàn, chỉ sắp xếp lại. B2. Vì vậy tổng khối lượng chất tham gia bằng tổng khối lượng sản phẩm."
+        },
+        {
+          "id": "n7-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Khi CuO tác dụng với dung dịch H2SO4, khối lượng muối lớn hơn khối lượng oxide vì nguyên tử O của oxide bị thay bằng",
+          "options": ["gốc SO4", "nguyên tử H", "phân tử H2O", "nguyên tử Cu"],
+          "answer": 0,
+          "explanation": "B1. CuO + H2SO4 -> CuSO4 + H2O. B2. Trong muối, O (16 g/mol) của oxide được thay bằng gốc SO4 (96 g/mol) nên mỗi mol tăng 80 g."
+        },
+        {
+          "id": "n7-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các phương pháp thường dùng khi giải bài tập tổng hợp vô cơ.",
+          "options": [
+            "bảo toàn khối lượng",
+            "bảo toàn nguyên tố",
+            "tăng giảm khối lượng",
+            "đo cường độ màu dung dịch"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phương pháp đầu là công cụ tính toán chuẩn của Hoá THCS nâng cao. B2. Đo màu không phải phương pháp tính toán định lượng ở THCS."
+        },
+        {
+          "id": "n7-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Cho 0,10 mol MgO tác dụng vừa đủ với dung dịch H2SO4. Số mol MgSO4 thu được là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. MgO + H2SO4 -> MgSO4 + H2O tỉ lệ 1 : 1. B2. nMgSO4 = 0,10 mol."
+        },
+        {
+          "id": "n7-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Trộn dung dịch chứa 0,20 mol HCl với dung dịch chứa 0,10 mol NaOH. Dung dịch sau phản ứng có môi trường",
+          "options": ["acid", "base", "trung tính", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. NaOH + HCl -> NaCl + H2O, phản ứng hết 0,10 mol mỗi chất. B2. HCl còn dư 0,10 mol nên dung dịch có môi trường acid."
+        },
+        {
+          "id": "n7-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 0,10 mol MgO bằng dung dịch HCl vừa đủ. Khối lượng muối MgCl2 thu được là",
+          "options": ["9,5 g", "8,0 g", "12,0 g", "4,75 g"],
+          "answer": 0,
+          "explanation": "B1. MgO + 2HCl -> MgCl2 + H2O nên nMgCl2 = 0,10 mol. B2. M(MgCl2) = 24 + 71 = 95 g/mol. B3. m = 0,10 x 95 = 9,5 g."
+        },
+        {
+          "id": "n7-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Trộn dung dịch chứa 0,10 mol Ba(OH)2 với dung dịch chứa 0,10 mol H2SO4. Khối lượng kết tủa thu được là",
+          "options": ["23,3 g", "11,65 g", "46,6 g", "0 g"],
+          "answer": 0,
+          "explanation": "B1. Ba(OH)2 + H2SO4 -> BaSO4 + 2H2O, hai chất vừa đủ. B2. nBaSO4 = 0,10 mol. B3. m = 0,10 x 233 = 23,3 g."
+        },
+        {
+          "id": "n7-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cho từ từ dung dịch HCl vào dung dịch Na2CO3. Chọn các mô tả đúng.",
+          "options": [
+            "giai đoạn đầu tạo NaHCO3, chưa có khí",
+            "khi HCl dư mới có khí thoát ra mạnh",
+            "khí thoát ra là CO2",
+            "khí thoát ra là H2"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Cho từ từ acid: Na2CO3 + HCl -> NaHCO3 + NaCl (chưa có khí). B2. Sau khi hết Na2CO3: NaHCO3 + HCl -> NaCl + H2O + CO2 (sủi bọt). B3. Khí là CO2, không phải H2."
+        },
+        {
+          "id": "n7-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Trộn 0,10 mol NaOH với 0,15 mol HCl. Số mol HCl còn dư sau phản ứng là bao nhiêu?",
+          "answer": "0,05",
+          "acceptedAnswers": ["0.05"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. NaOH + HCl -> NaCl + H2O tỉ lệ 1 : 1, NaOH hết trước. B2. nHCl dư = 0,15 - 0,10 = 0,05 mol."
+        },
+        {
+          "id": "n7-l4-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: MgCO3 + HCl -> MgCl2 + H2O + CO2.",
+          "left": ["MgCO3", "HCl"],
+          "right": ["MgCl2", "H2O", "CO2"],
+          "answer": [1, 2, 1, 1, 1],
+          "explanation": "B1. MgCl2 chứa 2Cl nên cần 2HCl. B2. Hai H kết hợp một O tạo 1H2O, phần CO3 còn lại thoát ra dạng 1CO2."
+        },
+        {
+          "id": "n7-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 20 g hỗn hợp MgO và MgCO3 bằng dung dịch HCl dư, thu được 2,479 lít CO2 (đkc). Phần trăm khối lượng MgO trong hỗn hợp là",
+          "options": ["58%", "42%", "50%", "60%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Chỉ MgCO3 sinh khí: nCO2 = 2,479 / 24,79 = 0,10 mol nên nMgCO3 = 0,10 mol. B2. mMgCO3 = 0,10 x 84 = 8,4 g nên mMgO = 20 - 8,4 = 11,6 g. B3. %MgO = 11,6 / 20 x 100% = 58%."
+        },
+        {
+          "id": "n7-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 0,20 mol NaOH vào dung dịch chứa 0,10 mol CuCl2. Khối lượng kết tủa thu được là bao nhiêu gam?",
+          "answer": "9,8",
+          "acceptedAnswers": ["9.8"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. CuCl2 + 2NaOH -> Cu(OH)2 + 2NaCl; 0,10 mol CuCl2 cần đúng 0,20 mol NaOH — hai chất vừa đủ. B2. nCu(OH)2 = 0,10 mol. B3. m = 0,10 x 98 = 9,8 g (Cu(OH)2 không phải hiđroxide lưỡng tính nên không tan khi kiềm dư)."
+        },
+        {
+          "id": "n7-l4-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: MgCl2 + NaOH -> Mg(OH)2 + NaCl.",
+          "left": ["MgCl2", "NaOH"],
+          "right": ["Mg(OH)2", "NaCl"],
+          "answer": [1, 2, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Mg(OH)2 chứa 2 nhóm OH nên cần 2NaOH. B2. 2Na kết hợp 2Cl tạo 2NaCl. B3. Kiểm tra: hai vế đều có 1Mg, 2Cl, 2Na, 2O, 2H."
+        }
+      ]
+    }
+  ]
+}

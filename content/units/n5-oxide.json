@@ -1,0 +1,647 @@
+{
+  "id": "n5-oxide",
+  "part": "inorganic",
+  "code": "N5",
+  "title": "Oxide",
+  "order": 5,
+  "description": "Khái niệm, phân loại, danh pháp và tính chất của oxide base, oxide acid, oxide lưỡng tính, oxide trung tính; một số cách điều chế oxide.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n5-l1",
+      "title": "Khái niệm – phân loại – danh pháp oxide",
+      "order": 1,
+      "summary": "Định nghĩa oxide, bốn loại oxide, cách gọi tên và cách suy luận loại oxide từ công thức hoặc phản ứng đặc trưng.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n5-l1-c1",
+          "heading": "Oxide là gì? Bốn loại oxide",
+          "body": "Oxide là hợp chất của hai nguyên tố, trong đó có một nguyên tố là oxi. Dựa vào tính chất hoá học, oxide chia thành 4 loại:\n- Oxide base: thường là oxide kim loại, tương ứng với một base. Ví dụ: Na2O, CaO, CuO.\n- Oxide acid: thường là oxide phi kim, tương ứng với một acid. Ví dụ: CO2, SO2, P2O5.\n- Oxide lưỡng tính: tác dụng được cả với acid và kiềm. Ví dụ: Al2O3, ZnO.\n- Oxide trung tính (không tạo muối): không tác dụng với acid, base, nước. Ví dụ: CO, NO.\n\nMẹo “oxide kim loại thường base, oxide phi kim thường acid” chỉ là định hướng ban đầu, không phải tiêu chuẩn kết luận. Tiêu chuẩn chắc chắn là cách oxide phản ứng với acid và kiềm. Vì thế Al2O3, ZnO tuy là oxide kim loại vẫn là lưỡng tính; CO, NO tuy là oxide phi kim lại trung tính. Ở mức mở rộng, oxide của cùng một nguyên tố ở số oxi hoá cao hơn thường có tính acid tăng lên."
+        },
+        {
+          "id": "n5-l1-c2",
+          "heading": "Cách gọi tên oxide",
+          "body": "Oxide kim loại: tên kim loại (kèm hoá trị nếu kim loại nhiều hoá trị) + oxide.\nVí dụ: FeO là sắt(II) oxide; Fe2O3 là sắt(III) oxide; CuO là đồng(II) oxide.\nOxide phi kim: dùng tiền tố chỉ số nguyên tử (mono, đi, tri, tetra, penta).\nVí dụ: SO2 là lưu huỳnh đioxide; SO3 là lưu huỳnh trioxide; P2O5 là điphotpho pentaoxide.\n\nKhi gọi tên oxide của kim loại nhiều hoá trị, phải tính hoá trị (hay số oxi hoá trong các oxide thông thường) trước rồi mới ghi số La Mã. Chẳng hạn trong Fe2O3, 3O có tổng hoá trị VI nên mỗi Fe có hoá trị III. Không gọi Fe2O3 là “sắt oxide” vì tên này không phân biệt được với FeO. Với kim loại chỉ có một hoá trị quen thuộc ở THCS như Na, Ca, Al, thường không cần ghi số La Mã: natri oxide, canxi oxide, nhôm oxide."
+        },
+        {
+          "id": "n5-l1-c3",
+          "heading": "Oxide tương ứng với base và acid",
+          "body": "Mỗi oxide base tương ứng một base, mỗi oxide acid tương ứng một acid:\nNa2O ứng với NaOH; CaO ứng với Ca(OH)2; CO2 ứng với H2CO3; SO3 ứng với H2SO4; P2O5 ứng với H3PO4.\nMẹo giải nhanh: bài toán tìm nguyên tố trong oxide thường dựa vào phần trăm khối lượng của oxi — lập biểu thức %O theo nguyên tử khối rồi giải.\n\n“Tương ứng” không đồng nghĩa oxide nào cũng phản ứng ngay với nước. CaO + H2O -> Ca(OH)2 và SO3 + H2O -> H2SO4, nhưng CuO, Fe2O3 không tác dụng trực tiếp với nước; chúng vẫn tương ứng với Cu(OH)2, Fe(OH)3 theo kim loại và hoá trị. Tương tự, SiO2 được xem là oxide acid tương ứng với H2SiO3 dù không phản ứng đáng kể với nước ở điều kiện thường."
+        },
+        {
+          "id": "n5-l1-c4",
+          "heading": "Nâng cao: Chứng minh loại oxide bằng phản ứng đặc trưng",
+          "body": "Phân loại oxide là phân loại theo tính acid – base, vì vậy nên chứng minh bằng phản ứng thay vì chỉ nhìn nguyên tố tạo oxide. Oxide base phản ứng với acid tạo muối và nước, ví dụ: CuO + 2HCl -> CuCl2 + H2O. Oxide acid phản ứng với kiềm tạo muối và nước, ví dụ: SO2 + 2NaOH -> Na2SO3 + H2O.\n\nOxide lưỡng tính phải thể hiện được cả hai mặt: ZnO + 2HCl -> ZnCl2 + H2O và ZnO + 2NaOH -> Na2ZnO2 + H2O. Phản ứng thứ hai thường cần kiềm mạnh, có thể đun nóng; trong dung dịch, sản phẩm có thể được biểu diễn dưới dạng phức hiđroxo của kẽm. Ở mức bài tập THCS, dạng muối zincat Na2ZnO2 là cách viết quy ước quen thuộc.\n\nOxide trung tính như CO, NO không cho phản ứng tạo muối với acid hoặc kiềm trong điều kiện thường. Đừng suy ngược rằng oxide trung tính “không phản ứng gì”: CO vẫn có tính khử khi đun nóng với một số oxide kim loại."
+        },
+        {
+          "id": "n5-l1-c5",
+          "heading": "Nâng cao: Sơ đồ nhận dạng một oxide chưa biết",
+          "body": "Khi đề cho một oxide X chưa biết loại, có thể dùng hai thuốc thử đối chứng là dung dịch acid mạnh (như HCl) và dung dịch kiềm mạnh (như NaOH). X phản ứng với HCl nhưng không phản ứng với NaOH: hướng tới oxide base. X phản ứng với NaOH nhưng không phản ứng với HCl: hướng tới oxide acid. X phản ứng với cả hai: oxide lưỡng tính. X không phản ứng với cả hai trong điều kiện nêu trong đề: có thể là oxide trung tính.\n\nKết luận phải gắn với điều kiện phản ứng. Không thấy hiện tượng ở nhiệt độ thường chưa đủ để gọi là oxide trung tính: SiO2 là oxide acid nhưng cần kiềm đặc hoặc đun nóng mới phản ứng rõ. Thử với nước và quỳ tím cũng chỉ là phép thử phụ: CaO làm môi trường base, CO2 làm môi trường acid, còn CuO không tan trong nước nhưng vẫn là oxide base vì phản ứng được với acid."
+        },
+        {
+          "id": "n5-l1-c6",
+          "heading": "Nâng cao: Hoá trị, số oxi hoá và công thức oxide",
+          "body": "Với oxide thông thường MxOy, coi O có số oxi hoá -II. Nếu M có hoá trị (số oxi hoá) là k trong oxide đó thì x.k = 2y, do tổng số oxi hoá trong hợp chất bằng 0. Ví dụ: FeO có k = II; Fe2O3 có k = III; Mn2O7 có k = VII. Công thức cũng cho phép kiểm tra nhanh tên gọi đã chọn có hợp lí hay chưa.\n\nKhi biết hoá trị n của kim loại M, oxide đơn giản thường có dạng: n = I: M2O; n = II: MO; n = III: M2O3; n = IV: MO2. Đây là hệ quả của quy tắc hoá trị chéo rồi rút gọn tỉ lệ. Tuy nhiên, không được áp dụng máy móc cho mọi oxide: có oxide chứa cùng một nguyên tố ở nhiều số oxi hoá khác nhau, nên phép chia chỉ cho giá trị trung bình."
+        },
+        {
+          "id": "n5-l1-c7",
+          "heading": "Nâng cao: Oxide hỗn hợp Fe3O4 và cách gọi đúng",
+          "body": "Fe3O4 là trường hợp quan trọng không thể gọi là sắt(8/3) oxide. Công thức này có thể xem là FeO.Fe2O3: trong một đơn vị công thức có 1Fe(II) và 2Fe(III). Tổng điện tích dương là 2 + 2x3 = 8, vừa đủ cân bằng 4O2- có tổng điện tích -8.\n\nVì vậy Fe3O4 được gọi là sắt(II,III) oxide hoặc oxide sắt từ. Bài học rút ra: khi số oxi hoá tính trung bình không nguyên, cần nghĩ tới oxide hỗn hợp thay vì ghi một hoá trị phân số. Khi cân bằng hay tính khối lượng, vẫn dùng công thức Fe3O4 với M = 3x56 + 4x16 = 232 g/mol."
+        },
+        {
+          "id": "n5-l1-c8",
+          "heading": "Nâng cao: Quy luật biến đổi tính acid – base của oxide",
+          "body": "Trong cùng một chu kì, từ trái sang phải, oxide thường chuyển dần từ base sang lưỡng tính rồi acid. Ví dụ dãy oxide ở chu kì 3 có thể hình dung: Na2O, MgO thiên base; Al2O3 lưỡng tính; SiO2, P2O5, SO3 thiên acid. Quy luật này giải thích vì sao không nên chia cứng tất cả oxide thành “kim loại = base” và “phi kim = acid”.\n\nVới cùng một nguyên tố, số oxi hoá càng cao thì oxide thường càng thiên acid. Dãy MnO, Mn2O3, MnO2, Mn2O7 minh hoạ chiều tăng đó. Đây là quy luật dự đoán cho bài HSG, không thay thế việc kiểm tra dữ kiện phản ứng; đề bài vẫn có thể xét điều kiện đặc biệt hoặc một oxide hỗn hợp."
+        },
+        {
+          "id": "n5-l1-c9",
+          "heading": "Nâng cao: Anhiđrit acid, anhiđrit base và phản ứng giữa các oxide",
+          "body": "Anhiđrit nghĩa là chất “mất nước” so với acid hoặc base tương ứng. SO3 là anhiđrit của H2SO4 vì SO3 + H2O -> H2SO4; P2O5 là anhiđrit của H3PO4 vì P2O5 + 3H2O -> 2H3PO4. CaO là anhiđrit base của Ca(OH)2 vì CaO + H2O -> Ca(OH)2. Khái niệm này giúp dự đoán sản phẩm nhưng luôn phải xét oxide có phản ứng với nước hay không.\n\nOxide acid và oxide base còn có thể phản ứng trực tiếp với nhau tạo muối: CaO + CO2 -> CaCO3; Na2O + SO3 -> Na2SO4. Khi lập phương trình, hãy ghép cation của oxide base với gốc acid tương ứng của oxide acid rồi kiểm tra lại số nguyên tử O. Oxide lưỡng tính không nên tự động xếp vào một trong hai vế của quy tắc này nếu đề chưa cho điều kiện."
+        },
+        {
+          "id": "n5-l1-c10",
+          "heading": "Nâng cao: Biện luận nguyên tố từ phần trăm khối lượng oxi",
+          "body": "Nếu công thức oxide MxOy đã biết và phần trăm khối lượng O là p%, đặt Ar(M) = A. Khi đó: p = 16y/(xA + 16y) x 100. Suy ra A = 16y(100 - p)/(px), trong đó p được dùng dưới dạng số phần trăm. Ví dụ với M2O3 chứa 30% O: A = 16x3x(100 - 30)/(30x2) = 56, nên M là Fe.\n\nNếu công thức oxide chưa biết, không được chọn bừa M2O3 để thế vào công thức. Hãy khai thác thêm hoá trị, khối lượng oxide, khối lượng kim loại sau khi khử hoặc tỉ lệ mol M:O; sau đó thử các dạng oxide hợp lí và kiểm tra ngược bằng phần trăm khối lượng. Bước kiểm tra cuối giúp loại các nghiệm số học không phù hợp hoá học."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n5-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dãy nào sau đây gồm toàn oxide acid?",
+          "options": [
+            "CO2, SO3, P2O5",
+            "CO2, CaO, SO2",
+            "Na2O, MgO, CO",
+            "CO, NO, SO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO2, SO3, P2O5 đều là oxide phi kim tương ứng với các acid H2CO3, H2SO4, H3PO4. B2. Các dãy còn lại chứa oxide base (CaO, Na2O, MgO) hoặc oxide trung tính (CO, NO)."
+        },
+        {
+          "id": "n5-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Tên gọi đúng của Fe2O3 là",
+          "options": [
+            "sắt(III) oxide",
+            "sắt(II) oxide",
+            "sắt oxide",
+            "đisắt trioxide"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong Fe2O3, oxi hoá trị II nên 3 nguyên tử O mang tổng hoá trị VI. B2. Hai nguyên tử Fe chia đều nên Fe hoá trị III. B3. Fe là kim loại nhiều hoá trị nên phải kèm hoá trị: sắt(III) oxide."
+        },
+        {
+          "id": "n5-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các chất là oxide base.",
+          "options": ["Na2O", "CaO", "SO2", "Al2O3"],
+          "answers": [0, 1],
+          "explanation": "B1. Na2O và CaO là oxide kim loại, tương ứng với các base NaOH và Ca(OH)2. B2. SO2 là oxide acid. B3. Al2O3 tác dụng được cả với acid và kiềm nên là oxide lưỡng tính, không xếp vào oxide base."
+        },
+        {
+          "id": "n5-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "CO và NO không tác dụng với acid, base hay nước. Chúng thuộc loại oxide gì?",
+          "answer": "trung tính",
+          "acceptedAnswers": [
+            "oxide trung tính",
+            "không tạo muối",
+            "oxide không tạo muối"
+          ],
+          "placeholder": "Nhập loại oxide",
+          "explanation": "B1. CO và NO không tạo muối khi gặp acid hoặc kiềm. B2. Vì vậy chúng được gọi là oxide trung tính (oxide không tạo muối)."
+        },
+        {
+          "id": "n5-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "SO3 là oxide tương ứng với acid nào?",
+          "options": ["H2SO4", "H2SO3", "H2S", "HNO3"],
+          "answer": 0,
+          "explanation": "B1. SO3 tan trong nước tạo H2SO4 (lưu huỳnh giữ nguyên hoá trị VI). B2. H2SO3 tương ứng với SO2, còn H2S và HNO3 không phải acid tương ứng của SO3."
+        },
+        {
+          "id": "n5-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Phần trăm khối lượng của oxi trong Fe2O3 là",
+          "options": ["30%", "40%", "48%", "70%"],
+          "answer": 0,
+          "explanation": "B1. M(Fe2O3) = 2 x 56 + 3 x 16 = 160 g/mol. B2. Khối lượng O trong 1 mol là 48 g. B3. %O = 48 / 160 x 100% = 30%."
+        },
+        {
+          "id": "n5-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Oxide R2O3 có phần trăm khối lượng của R bằng 52,94%. R là nguyên tố nào?",
+          "options": ["Al", "Fe", "Cr", "B"],
+          "answer": 0,
+          "explanation": "B1. Gọi nguyên tử khối của R là M: %R = 2M / (2M + 48) = 0,5294. B2. Biến đổi: 2M = 0,5294 x (2M + 48) nên 0,9412M = 25,41, tức M = 27. B3. M = 27 ứng với nhôm (Al), công thức oxide là Al2O3."
+        },
+        {
+          "id": "n5-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các oxide vừa tác dụng được với dung dịch HCl, vừa tác dụng được với dung dịch NaOH.",
+          "options": ["Al2O3", "ZnO", "CuO", "CO2"],
+          "answers": [0, 1],
+          "explanation": "B1. Al2O3 và ZnO là oxide lưỡng tính nên phản ứng được với cả acid và kiềm. B2. CuO là oxide base, chỉ tác dụng với acid. B3. CO2 là oxide acid, chỉ tác dụng với kiềm."
+        },
+        {
+          "id": "n5-l1-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Trong oxide Mn2O7, mangan có hoá trị bao nhiêu? (ghi số La Mã)",
+          "answer": "VII",
+          "acceptedAnswers": ["7", "vii"],
+          "placeholder": "Nhập hoá trị",
+          "explanation": "B1. Bảy nguyên tử O mang tổng hoá trị 14. B2. Hai nguyên tử Mn chia đều 14 nên mỗi Mn có hoá trị VII."
+        },
+        {
+          "id": "n5-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng đốt cháy photpho: P + O2 -> P2O5.",
+          "left": ["P", "O2"],
+          "right": ["P2O5"],
+          "answer": [4, 5, 2],
+          "explanation": "B1. Đặt 2P2O5 để số O ở vế phải chẵn (10 O). B2. Cần 5O2 để có 10 O. B3. Vế phải có 4P nên cần 4P ở vế trái."
+        },
+        {
+          "id": "n5-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Oxide RO2 có oxi chiếm 72,7% khối lượng. R là nguyên tố nào?",
+          "options": ["C", "S", "Si", "N"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi nguyên tử khối của R là M: %O = 32 / (M + 32) = 0,727. B2. Giải ra M + 32 = 44, tức M = 12. B3. M = 12 ứng với cacbon, oxide là CO2."
+        },
+        {
+          "id": "n5-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Oxide của kim loại M hoá trị II chứa 20% oxi về khối lượng. Kim loại M là gì? (ghi kí hiệu hoá học)",
+          "answer": "Cu",
+          "acceptedAnswers": ["đồng", "cu"],
+          "placeholder": "Nhập kí hiệu kim loại",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Công thức oxide là MO: %O = 16 / (M + 16) = 0,20. B2. Giải ra M + 16 = 80, tức M = 64. B3. M = 64 ứng với đồng (Cu), oxide là CuO."
+        },
+        {
+          "id": "n5-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng đốt quặng pirit: FeS2 + O2 -> Fe2O3 + SO2.",
+          "left": ["FeS2", "O2"],
+          "right": ["Fe2O3", "SO2"],
+          "answer": [4, 11, 2, 8],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Đặt 2Fe2O3 để số Fe chẵn, suy ra 4FeS2. B2. 4FeS2 chứa 8S nên tạo 8SO2. B3. Vế phải có 6 + 16 = 22 nguyên tử O, vậy cần 11O2."
+        }
+      ]
+    },
+    {
+      "id": "n5-l2",
+      "title": "Tính chất oxide base và oxide acid",
+      "order": 2,
+      "summary": "Các phản ứng của oxide base, oxide acid với nước, acid, base và oxide khác; vai trò của CaO, SO2, CO2 trong thực tế.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n5-l2-c1",
+          "heading": "Oxide base và oxide acid",
+          "body": "Oxide base thường là oxide của kim loại; chúng tác dụng với acid để tạo muối và nước. Oxide acid thường là oxide của phi kim; chúng tác dụng với base để tạo muối và nước, hoặc có thể tác dụng với nước tạo acid tương ứng."
+        },
+        {
+          "id": "n5-l2-c2",
+          "heading": "Ba tính chất hoá học của oxide base",
+          "body": "1) Tác dụng với nước tạo dung dịch kiềm (chỉ với Na2O, K2O, CaO, BaO):\nNa2O + H2O -> 2NaOH\n2) Tác dụng với acid tạo muối và nước:\nCuO + 2HCl -> CuCl2 + H2O\n3) Tác dụng với oxide acid tạo muối:\nCaO + CO2 -> CaCO3\nLưu ý: các oxide base không tan (CuO, FeO, Fe2O3...) không tác dụng với nước.\n\nỞ bản chất, ion O2- trong oxide base nhận H+ của acid để tạo H2O; cation kim loại ghép với anion acid thành muối. Vì vậy khi viết phản ứng oxide base + acid, cần xác định đúng hoá trị kim loại: Fe2O3 + 6HCl -> 2FeCl3 + 3H2O, còn FeO + 2HCl -> FeCl2 + H2O.\n\nPhản ứng với oxide acid thường thể hiện rõ khi đun nóng hoặc trong quá trình công nghiệp. Chẳng hạn CaO + SiO2 -> CaSiO3; CaO đóng vai trò chất trợ dung, biến SiO2 là tạp chất có tính acid thành xỉ silicat dễ tách. Không được suy ra rằng mọi oxide base đều phản ứng với mọi oxide acid ngay ở nhiệt độ thường; phải nêu điều kiện nếu đề bài yêu cầu."
+        },
+        {
+          "id": "n5-l2-c3",
+          "heading": "CaO – vôi sống",
+          "body": "CaO (vôi sống) là chất rắn màu trắng, tác dụng mạnh với nước và toả nhiều nhiệt (tôi vôi):\nCaO + H2O -> Ca(OH)2\nỨng dụng: khử chua đất trồng, xử lí nước thải, sát trùng, làm vật liệu xây dựng.\nĐể lâu trong không khí, CaO hấp thụ CO2 hoá rắn thành CaCO3 nên phải bảo quản kín.\n\nPhản ứng tôi vôi rất toả nhiệt. Nếu cho nước vào lượng CaO lớn hoặc đổ CaO vào ít nước, hỗn hợp có thể nóng mạnh, bắn văng và gây bỏng; trong thực hành phải thêm từ từ, tránh tiếp xúc trực tiếp với da và mắt. Ca(OH)2 tạo ra tan ít: hỗn hợp đục còn chất rắn lơ lửng gọi là vôi sữa, còn phần dung dịch trong sau khi để lắng/lọc là nước vôi trong.\n\nCaO hút cả hơi nước lẫn các khí có tính acid như CO2, SO2, HCl nên chỉ dùng làm chất làm khô cho khí không phản ứng với nó, ví dụ NH3, O2 hoặc H2 khô. Không dùng CaO để làm khô CO2 hay SO2, vì khi đó khí cần thu đã bị CaO giữ lại bằng phản ứng hoá học."
+        },
+        {
+          "id": "n5-l2-c4",
+          "heading": "Sản xuất vôi sống",
+          "body": "Nung đá vôi ở khoảng 900 độ C trong lò nung vôi:\nCaCO3 -> CaO + CO2\nMẹo giải bài toán nung đá vôi: số mol CaO = số mol CO2 = số mol CaCO3 bị phân huỷ; nếu nung không hoàn toàn thì chất rắn sau nung gồm cả CaO và CaCO3 dư.\n\nĐây là phản ứng phân huỷ thu nhiệt. Muốn đá vôi phân huỷ tốt phải duy trì nhiệt độ đủ cao và tạo điều kiện cho CO2 thoát khỏi vùng phản ứng; CO2 tích lại làm cân bằng CaCO3 <-> CaO + CO2 kém dịch theo chiều tạo CaO. Đá vôi lẫn đất, cát hoặc tạp chất không bay hơi sẽ còn lại trong chất rắn sau nung, nên không được mặc định toàn bộ chất rắn là CaO nếu đề cho độ tinh khiết.\n\nTỉ lệ khối lượng của phần CaCO3 thực sự bị phân huỷ là: 100 g CaCO3 tạo 56 g CaO và 44 g CO2. Do đó, khi chỉ có CO2 thoát ra, độ giảm khối lượng của chất rắn đúng bằng khối lượng CO2; nhận xét này rất hữu ích để kiểm tra kết quả bài toán nung."
+        },
+        {
+          "id": "n5-l2-c5",
+          "heading": "Nâng cao: Phản ứng của CaO với oxide acid và khí thải",
+          "body": "CaO là oxide base mạnh nên có thể cố định nhiều oxide acid thành muối rắn. Ví dụ: CaO + SO2 -> CaSO3; 2CaSO3 + O2 -> 2CaSO4. Trong xử lí khí thải chứa SO2, các bước này giải thích vì sao vôi hoặc đá vôi được dùng để giảm khí gây mưa acid; sản phẩm cuối có thể là CaSO4.\n\nCần phân biệt CO2 với CO. CO2 là oxide acid nên phản ứng với CaO tạo CaCO3, còn CO là oxide trung tính và không được coi là phản ứng với CaO trong điều kiện học ở THCS. Tương tự, SiO2 là oxide acid nhưng bền, phản ứng với CaO chủ yếu ở nhiệt độ cao trong lò luyện kim: CaO + SiO2 -> CaSiO3.\n\nKhi đề cho một chất là “xỉ”, hãy kiểm tra xem đó có phải muối silicat tạo bởi oxide base với SiO2 hay không. Xỉ nhẹ hơn kim loại nóng chảy nên nổi lên trên, giúp tách tạp chất ra khỏi kim loại."
+        },
+        {
+          "id": "n5-l2-c6",
+          "heading": "Ba tính chất hoá học của oxide acid",
+          "body": "1) Tác dụng với nước tạo acid:\nSO2 + H2O -> H2SO3; SO3 + H2O -> H2SO4; P2O5 + 3H2O -> 2H3PO4\n2) Tác dụng với dung dịch kiềm tạo muối và nước:\nCO2 + 2NaOH -> Na2CO3 + H2O\n3) Tác dụng với oxide base tạo muối:\nCO2 + CaO -> CaCO3\n\nKhông được hiểu máy móc rằng mọi oxide acid đều phản ứng ngay với nước. SiO2 là oxide acid nhưng hầu như không tác dụng với nước ở điều kiện thường; nó thể hiện tính acid rõ khi phản ứng với kiềm đặc hoặc nóng: SiO2 + 2NaOH -> Na2SiO3 + H2O. Vì vậy, khi chứng minh một oxide là oxide acid, phản ứng với kiềm thường là căn cứ đáng tin cậy hơn phản ứng với nước."
+        },
+        {
+          "id": "n5-l2-c7",
+          "heading": "Lưu huỳnh đioxide SO2",
+          "body": "SO2 là khí không màu, mùi hắc, độc, nặng hơn không khí; là một trong các khí chính gây mưa acid.\nSO2 mang đầy đủ tính chất của oxide acid:\nSO2 + H2O -> H2SO3\nSO2 + 2NaOH -> Na2SO3 + H2O\nSO2 + CaO -> CaSO3\n\nH2SO3 là acid yếu, chỉ bền trong dung dịch nên thường được xem là dạng SO2 hoà tan trong nước. Acid này có thể tạo hai loại muối: muối acid chứa HSO3- (ví dụ NaHSO3) và muối trung hoà chứa SO3^2- (ví dụ Na2SO3). Sự khác nhau giữa hai loại muối chính là cơ sở để biện luận khi lượng kiềm chưa đủ hoặc dư."
+        },
+        {
+          "id": "n5-l2-c8",
+          "heading": "Điều chế SO2 và mẹo bài toán khí + kiềm",
+          "body": "Trong công nghiệp: đốt lưu huỳnh hoặc quặng pirit:\nS + O2 -> SO2\nTrong phòng thí nghiệm: cho muối sunfit tác dụng với acid mạnh:\nNa2SO3 + H2SO4 -> Na2SO4 + SO2 + H2O\nMẹo: bài toán CO2/SO2 + kiềm xét tỉ lệ T = nOH- / nkhí. T >= 2: chỉ muối trung hoà; T <= 1: chỉ muối acid; 1 < T < 2: hai muối, khi đó n(muối trung hoà) = nOH- - nkhí.\n\nKhông thu SO2 bằng cách đẩy nước vì khí này tan và phản ứng với nước. Khi cần thu trong thí nghiệm, có thể dùng cách đẩy không khí vì SO2 nặng hơn không khí. Do SO2 độc, thí nghiệm phải làm với lượng nhỏ, nơi thông khí tốt và dẫn khí dư vào dung dịch kiềm hoặc nước vôi để hấp thụ."
+        },
+        {
+          "id": "n5-l2-c9",
+          "heading": "Nâng cao: SO2 dư qua nước vôi trong",
+          "body": "Sục SO2 từ từ vào Ca(OH)2, ban đầu xuất hiện kết tủa trắng CaSO3:\nSO2 + Ca(OH)2 -> CaSO3 + H2O. Nếu tiếp tục sục SO2 dư, kết tủa tan do tạo muối acid tan:\nCaSO3 + SO2 + H2O -> Ca(HSO3)2. Phương trình gộp là: 2SO2 + Ca(OH)2 -> Ca(HSO3)2.\n\nHiện tượng “đục rồi trong” vì thế không chỉ có ở CO2 mà cũng gặp với SO2. Muốn kết luận khí là CO2 hay SO2 phải dùng thêm dấu hiệu riêng, chẳng hạn khả năng làm mất màu nước brom/KMnO4 của SO2. Khi đề chỉ nói lượng khí ít hoặc vừa đủ, không được tự ý viết sản phẩm muối acid."
+        },
+        {
+          "id": "n5-l2-c10",
+          "heading": "Nâng cao: Từ SO2 đến H2SO4 trong công nghiệp",
+          "body": "SO2 là nguyên liệu trung gian quan trọng để sản xuất H2SO4. Sau khi tạo SO2, oxi hoá thuận nghịch khí này: 2SO2 + O2 <=> 2SO3. Quá trình công nghiệp dùng xúc tác V2O5 và nhiệt độ thích hợp để tốc độ đủ lớn mà cân bằng vẫn cho hiệu suất tốt. SO3 sau đó được hấp thụ vào H2SO4 đặc tạo oleum, rồi pha loãng có kiểm soát để thu H2SO4.\n\nKhông hấp thụ trực tiếp toàn bộ SO3 vào nước trong công nghiệp vì dễ tạo sương mù H2SO4 khó thu hồi. Trong bài THCS, phương trình SO3 + H2O -> H2SO4 vẫn đúng để biểu diễn tính chất hoá học của SO3; điểm cần phân biệt là cách vận hành thực tế của quy trình sản xuất."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n5-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Oxide nào sau đây tan trong nước tạo dung dịch làm quỳ tím hoá xanh?",
+          "options": ["Na2O", "CuO", "CO2", "Fe2O3"],
+          "answer": 0,
+          "explanation": "B1. Na2O tan trong nước tạo NaOH là dung dịch kiềm nên quỳ tím hoá xanh. B2. CuO và Fe2O3 không tan trong nước. B3. CO2 tạo acid H2CO3 làm quỳ hoá đỏ nhạt."
+        },
+        {
+          "id": "n5-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Sản phẩm của phản ứng CaO + H2O là",
+          "options": ["Ca(OH)2", "CaCO3", "CaH2", "CaO2"],
+          "answer": 0,
+          "explanation": "B1. CaO là oxide base tan được trong nước. B2. Phản ứng tôi vôi: CaO + H2O -> Ca(OH)2, toả nhiều nhiệt."
+        },
+        {
+          "id": "n5-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các oxide base tác dụng được với nước ở điều kiện thường.",
+          "options": ["Na2O", "BaO", "CuO", "FeO"],
+          "answers": [0, 1],
+          "explanation": "B1. Na2O và BaO tan trong nước tạo kiềm NaOH và Ba(OH)2. B2. CuO và FeO là oxide base không tan, không tác dụng với nước."
+        },
+        {
+          "id": "n5-l2-q4",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan 0,10 mol CaO vào nước dư. Khối lượng Ca(OH)2 tạo thành là",
+          "options": ["7,4 g", "5,6 g", "7,2 g", "8,0 g"],
+          "answer": 0,
+          "explanation": "B1. CaO + H2O -> Ca(OH)2 nên nCa(OH)2 = 0,10 mol. B2. M(Ca(OH)2) = 40 + 2 x 17 = 74 g/mol. B3. m = 0,10 x 74 = 7,4 g."
+        },
+        {
+          "id": "n5-l2-q5",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "CaO phản ứng được với những chất nào sau đây?",
+          "options": ["H2O", "dung dịch HCl", "CO2", "dung dịch NaOH"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. CaO + H2O -> Ca(OH)2. B2. CaO + 2HCl -> CaCl2 + H2O (oxide base + acid). B3. CaO + CO2 -> CaCO3 (oxide base + oxide acid). B4. CaO là oxide base nên không phản ứng với kiềm NaOH."
+        },
+        {
+          "id": "n5-l2-q6",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CaO + HNO3 -> Ca(NO3)2 + H2O.",
+          "left": ["CaO", "HNO3"],
+          "right": ["Ca(NO3)2", "H2O"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Muối Ca(NO3)2 chứa 2 gốc NO3 nên cần 2HNO3. B2. Hai nguyên tử H kết hợp với O của CaO tạo 1H2O."
+        },
+        {
+          "id": "n5-l2-q7",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Nung m gam CaCO3 đến khối lượng không đổi, dẫn toàn bộ khí sinh ra vào nước vôi trong dư thu được 10 g kết tủa. Giá trị của m là",
+          "options": ["10 g", "5 g", "15 g", "20 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Kết tủa là CaCO3: n = 10 / 100 = 0,10 mol. B2. CO2 + Ca(OH)2 dư -> CaCO3 + H2O nên nCO2 = 0,10 mol. B3. CaCO3 -> CaO + CO2 nên nCaCO3 ban đầu = 0,10 mol, tức m = 10 g."
+        },
+        {
+          "id": "n5-l2-q8",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "SO2 tác dụng với nước tạo thành",
+          "options": ["H2SO3", "H2SO4", "H2S", "S"],
+          "answer": 0,
+          "explanation": "B1. SO2 là oxide acid nên tác dụng với nước tạo acid tương ứng. B2. Lưu huỳnh giữ hoá trị IV nên acid tạo thành là H2SO3 (acid sunfurơ)."
+        },
+        {
+          "id": "n5-l2-q9",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các chất là oxide acid.",
+          "options": ["SO2", "P2O5", "CO2", "CaO"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. SO2, P2O5, CO2 đều là oxide phi kim tương ứng với các acid H2SO3, H3PO4, H2CO3. B2. CaO là oxide base."
+        },
+        {
+          "id": "n5-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Dẫn khí CO2 vào dung dịch NaOH dư. Muối thu được là",
+          "options": [
+            "Na2CO3",
+            "NaHCO3",
+            "cả Na2CO3 và NaHCO3",
+            "không tạo muối"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khi NaOH dư, tỉ lệ nOH- / nCO2 > 2. B2. Vì kiềm dư nên toàn bộ CO2 chuyển thành muối trung hoà: CO2 + 2NaOH -> Na2CO3 + H2O."
+        },
+        {
+          "id": "n5-l2-q11",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "SO2 phản ứng được với những chất nào sau đây?",
+          "options": ["H2O", "dung dịch NaOH", "CaO", "dung dịch HCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. SO2 + H2O -> H2SO3. B2. SO2 + 2NaOH -> Na2SO3 + H2O (oxide acid + kiềm). B3. SO2 + CaO -> CaSO3 (oxide acid + oxide base). B4. SO2 là oxide acid nên không phản ứng với acid HCl."
+        },
+        {
+          "id": "n5-l2-q12",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng oxi hoá SO2 thành SO3: SO2 + O2 -> SO3.",
+          "left": ["SO2", "O2"],
+          "right": ["SO3"],
+          "answer": [2, 1, 2],
+          "explanation": "B1. Đặt 2SO3 để số O ở vế phải chẵn (6 O). B2. Cần 2SO2 (4 O) và 1O2 (2 O) để đủ 6 O. B3. Kiểm tra S: hai vế đều có 2S."
+        },
+        {
+          "id": "n5-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Dẫn 2,479 lít CO2 (đkc) vào 150 ml dung dịch NaOH 1M. Số mol Na2CO3 tạo thành là",
+          "options": ["0,05 mol", "0,10 mol", "0,15 mol", "0,025 mol"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 2,479 / 24,79 = 0,10 mol; nNaOH = 0,15 mol nên 1 < T = 1,5 < 2. B2. Vì vậy tạo đồng thời hai muối, trong đó nNa2CO3 = 0,15 - 0,10 = 0,05 mol."
+        },
+        {
+          "id": "n5-l2-q14",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hấp thụ hoàn toàn 4,958 lít SO2 (đkc) vào dung dịch chứa 0,30 mol NaOH. Khối lượng NaHSO3 thu được là bao nhiêu gam?",
+          "answer": "10,4",
+          "acceptedAnswers": ["10.4"],
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nSO2 = 4,958 / 24,79 = 0,20 mol; tỉ lệ nOH- / nSO2 = 0,30 / 0,20 = 1,5 nên tạo hai muối. B2. nNa2SO3 = nOH- - nSO2 = 0,10 mol; nNaHSO3 = 0,20 - 0,10 = 0,10 mol. B3. M(NaHSO3) = 104 g/mol nên m = 0,10 x 104 = 10,4 g."
+        },
+        {
+          "id": "n5-l2-q15",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng tạo muối acid khi CO2 dư: CO2 + Ca(OH)2 -> Ca(HCO3)2.",
+          "left": ["CO2", "Ca(OH)2"],
+          "right": ["Ca(HCO3)2"],
+          "answer": [2, 1, 1],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Muối Ca(HCO3)2 chứa 2 gốc HCO3 nên cần 2CO2. B2. Một Ca(OH)2 cung cấp 1Ca và 2OH. B3. Kiểm tra: hai vế đều có 1Ca, 2C, 2H, 6O."
+        }
+      ]
+    },
+    {
+      "id": "n5-l3",
+      "title": "Oxide lưỡng tính, oxide trung tính; điều chế",
+      "order": 3,
+      "summary": "Tính chất của oxide lưỡng tính và oxide trung tính, cùng các phương pháp điều chế oxide từ đơn chất, muối và base.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n5-l3-c1",
+          "heading": "Oxide lưỡng tính và oxide trung tính",
+          "body": "Oxide lưỡng tính tác dụng được với cả acid và base, ví dụ Al2O3, ZnO. Oxide trung tính (oxide không tạo muối) như CO, NO không tác dụng với acid, base hoặc nước ở điều kiện thường."
+        },
+        {
+          "id": "n5-l3-c2",
+          "heading": "Một số cách điều chế oxide",
+          "body": "Oxide có thể được điều chế bằng cách cho kim loại hoặc phi kim tác dụng với oxi, oxi hoá quặng sunfua, nhiệt phân muối hoặc nhiệt phân base không tan. Ví dụ: 4Al + 3O2 -> 2Al2O3; CaCO3 -> CaO + CO2; Cu(OH)2 -> CuO + H2O."
+        },
+        {
+          "id": "n5-l3-c3",
+          "heading": "Oxide lưỡng tính",
+          "body": "Al2O3 và ZnO tác dụng được với cả acid và dung dịch kiềm:\nAl2O3 + 6HCl -> 2AlCl3 + 3H2O\nAl2O3 + 2NaOH -> 2NaAlO2 + H2O\nZnO + 2HCl -> ZnCl2 + H2O\nZnO + 2NaOH -> Na2ZnO2 + H2O\nMuối NaAlO2 (natri aluminat) và Na2ZnO2 (natri zincat) đều tan trong nước."
+        },
+        {
+          "id": "n5-l3-c4",
+          "heading": "Mẹo bảo toàn nguyên tố với bài toán oxide + acid",
+          "body": "Khi oxide tác dụng với acid, toàn bộ O của oxide chuyển vào H2O:\n- Với HCl: nHCl = 2 x nO(trong oxide)\n- Với H2SO4 loãng: nH2SO4 = nO(trong oxide)\nVí dụ: hoà tan hết hỗn hợp oxide chứa 0,30 mol O cần 0,60 mol HCl.\nKhối lượng muối = khối lượng kim loại + khối lượng gốc acid."
+        },
+        {
+          "id": "n5-l3-c5",
+          "heading": "Bài toán hỗn hợp oxide",
+          "body": "Các bước giải bài toán hỗn hợp hai oxide:\nB1. Gọi số mol từng oxide là x, y.\nB2. Lập hệ hai phương trình: một theo khối lượng hỗn hợp, một theo số mol acid (hoặc số mol muối, khí).\nB3. Giải hệ tìm x, y rồi tính đại lượng đề hỏi.\nVới hỗn hợp chứa oxide lưỡng tính tác dụng với kiềm, chỉ oxide lưỡng tính phản ứng."
+        },
+        {
+          "id": "n5-l3-c6",
+          "heading": "Nâng cao: Hai cách biểu diễn muối aluminat và zincat",
+          "body": "Ở dạng bài THCS, thường viết gọn phản ứng của oxide lưỡng tính với NaOH dư:\nAl2O3 + 2NaOH -> 2NaAlO2 + H2O\nZnO + 2NaOH -> Na2ZnO2 + H2O.\nCác phương trình này cho ngay tỉ lệ quan trọng: 1 mol Al2O3 hoặc 1 mol ZnO tiêu thụ 2 mol NaOH. Kiềm phải đủ mạnh; với Al2O3 rắn, thường cần đun nóng để phản ứng thể hiện rõ.\n\nTrong dung dịch nước dư NaOH, aluminat và zincat có thể được mô tả chính xác hơn dưới dạng ion phức hiđroxo: Al2O3 + 2NaOH + 3H2O -> 2Na[Al(OH)4]; ZnO + 2NaOH + H2O -> Na2[Zn(OH)4]. Hai lối viết biểu diễn cùng bản chất hoà tan trong kiềm, nhưng không được ghép nửa phương trình theo cách này với nửa phương trình theo cách kia. Khi giải bài tính theo chương trình THCS, dùng nhất quán dạng NaAlO2, Na2ZnO2 như đề bài quy ước."
+        },
+        {
+          "id": "n5-l3-c7",
+          "heading": "Nâng cao: Tách oxide lưỡng tính bằng dung dịch kiềm",
+          "body": "Dung dịch NaOH dư có thể dùng làm thuốc thử chọn lọc trong hỗn hợp gồm oxide lưỡng tính và oxide base không lưỡng tính. Chẳng hạn, khi cho hỗn hợp Al2O3 và CuO vào NaOH dư, Al2O3 tan tạo aluminat còn CuO không phản ứng theo phạm vi THCS. Lọc hỗn hợp, chất rắn còn lại là CuO; phần dung dịch chứa muối aluminat.\n\nVề định lượng, nếu ban đầu chỉ có Al2O3 và một oxide không phản ứng với NaOH, số mol Al2O3 = nNaOH đã phản ứng / 2. Khi biết khối lượng hỗn hợp m, khối lượng phần oxide không lưỡng tính bằng m - 102nAl2O3. Cách làm này không cần giả định oxide nào tan trước, vì tính chọn lọc đã do thuốc thử quyết định.\n\nKhông suy rộng rằng NaOH tách được mọi oxide khỏi nhau: Al2O3 và ZnO đều tan trong NaOH dư, nên chúng không thể được phân biệt chỉ bằng bước này. Muốn kết luận thành phần sau phản ứng, phải đối chiếu xem từng oxide có thực sự phản ứng với kiềm trong điều kiện đề cho hay không."
+        },
+        {
+          "id": "n5-l3-c8",
+          "heading": "Nâng cao: Bảo toàn oxi và lượng H+ của acid",
+          "body": "Trong phản ứng acid - base thông thường của oxide với acid loãng, mỗi nguyên tử O2- của oxide nhận 2H+ để thành H2O. Vì vậy với bất kì hỗn hợp oxide nào phản ứng hoàn toàn mà không có phản ứng oxi hoá - khử kèm theo: nH+ đã dùng = 2nO(trong oxide). Đây là nguồn gốc của các công thức nhanh nHCl = 2nO và nH2SO4 = nO khi dùng H2SO4 loãng vừa đủ.\n\nNếu hỗn hợp chứa a mol MxOy và b mol RpOq thì nO = ay + bq. Ví dụ, 0,10 mol Fe2O3 và 0,20 mol CuO chứa 0,50 mol nguyên tử O, nên cần 1,00 mol HCl hoặc 0,50 mol H2SO4 loãng. Không cần viết riêng từng phương trình nếu chỉ hỏi lượng acid.\n\nQuy tắc này chỉ dùng cho phản ứng trung hoà của oxide. Không áp dụng máy móc với acid có xảy ra oxi hoá - khử, với chất không phải oxide, hoặc khi đề nói acid không đủ. Trước khi bảo toàn, phải xác định rõ lượng acid đã phản ứng hoàn toàn với oxide và số mol H+ mà mỗi mol acid cung cấp."
+        },
+        {
+          "id": "n5-l3-c9",
+          "heading": "Nâng cao: Tính muối từ tổng số mol oxi",
+          "body": "Khi hoà tan hoàn toàn hỗn hợp oxide bằng HCl, mỗi mol nguyên tử O trong oxide bị thay bằng 2Cl trong muối clorua. Khối lượng tăng cho mỗi mol O là 2 x 35,5 - 16 = 55 g. Do đó: m hỗn hợp muối clorua = m hỗn hợp oxide + 55nO. Công thức cho kết quả trực tiếp dù chưa biết từng oxide là gì.\n\nTương tự, với H2SO4 loãng tạo các muối sunfat, mỗi mol O được thay bởi một gốc SO4 có khối lượng 96 g. Vì vậy: m hỗn hợp muối sunfat = m hỗn hợp oxide + 80nO. Các hệ thức này chính là bảo toàn kim loại kết hợp với bảo toàn khối lượng, không phải công thức cần học thuộc tách rời.\n\nVí dụ, 20,0 g hỗn hợp oxide chứa 0,25 mol O tác dụng hết với HCl tạo 20,0 + 55 x 0,25 = 33,75 g muối clorua khan. Cần chắc rằng đề hỏi khối lượng muối khan sau cô cạn; nếu hỏi khối lượng dung dịch sau phản ứng thì phải tính cả nước, acid dư và dung môi."
+        },
+        {
+          "id": "n5-l3-c10",
+          "heading": "Nâng cao: Acid thiếu và giới hạn của dữ kiện",
+          "body": "Nếu acid chỉ đủ một phần, số mol O đã bị trung hoà vẫn tính được từ nO phản ứng = nH+ đã phản ứng / 2. Tuy nhiên, điều đó thường chỉ cho tổng lượng oxide đã phản ứng chứ chưa cho biết riêng từng oxide phản ứng bao nhiêu. Với hỗn hợp hai oxide đều phản ứng với HCl, không được tự chọn một oxide phản ứng hết trước nếu đề không nêu thứ tự hay hiện tượng phân tách.\n\nChẳng hạn, hỗn hợp MgO và CuO gặp 0,20 mol HCl chỉ cho biết tổng số mol oxide đã phản ứng là 0,10 mol, vì mỗi mol oxide cần 2 mol HCl. Nếu không có thêm khối lượng chất rắn còn lại, lượng muối riêng hoặc một dữ kiện độc lập khác, thành phần phần đã tan không xác định duy nhất. Nhận ra bài toán thiếu dữ kiện là một bước biện luận quan trọng.\n\nNgược lại, nếu thuốc thử chỉ phản ứng chọn lọc, có thể xác định được thành phần ngay cả khi nó thiếu. Ví dụ NaOH chỉ hoà tan Al2O3 trong hỗn hợp Al2O3 và CuO theo quy ước THCS; khi NaOH là chất giới hạn, lượng NaOH phản ứng vẫn liên hệ trực tiếp với lượng Al2O3 đã tan."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n5-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Oxide nào sau đây là oxide lưỡng tính?",
+          "options": ["Al2O3", "Na2O", "SO2", "CO"],
+          "answer": 0,
+          "explanation": "B1. Al2O3 tác dụng được với cả HCl và NaOH nên là oxide lưỡng tính. B2. Na2O là oxide base, SO2 là oxide acid, CO là oxide trung tính."
+        },
+        {
+          "id": "n5-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "ZnO tác dụng với dung dịch HCl tạo ra",
+          "options": ["ZnCl2 và H2O", "ZnCl2 và H2", "Zn(OH)2", "Zn và Cl2"],
+          "answer": 0,
+          "explanation": "B1. ZnO là oxide nên tác dụng với acid tạo muối và nước: ZnO + 2HCl -> ZnCl2 + H2O. B2. Không sinh khí H2 vì chất phản ứng là oxide, không phải kim loại Zn."
+        },
+        {
+          "id": "n5-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các oxide lưỡng tính.",
+          "options": ["Al2O3", "ZnO", "CO2", "MgO"],
+          "answers": [0, 1],
+          "explanation": "B1. Al2O3 và ZnO tác dụng được cả với acid và kiềm nên là oxide lưỡng tính. B2. CO2 là oxide acid, MgO là oxide base."
+        },
+        {
+          "id": "n5-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Al2O3 tác dụng với dung dịch NaOH tạo muối gì? (ghi công thức)",
+          "answer": "NaAlO2",
+          "acceptedAnswers": ["natri aluminat"],
+          "placeholder": "Nhập công thức muối",
+          "explanation": "B1. Al2O3 + 2NaOH -> 2NaAlO2 + H2O. B2. Muối tạo thành là natri aluminat NaAlO2, tan trong nước."
+        },
+        {
+          "id": "n5-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Oxide nào sau đây không tác dụng với acid, kiềm và nước?",
+          "options": ["CO", "CO2", "SO2", "CaO"],
+          "answer": 0,
+          "explanation": "B1. CO là oxide trung tính (không tạo muối) nên không tác dụng với acid, kiềm hay nước ở điều kiện thường. B2. CO2, SO2 là oxide acid; CaO là oxide base."
+        },
+        {
+          "id": "n5-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 10,2 g Al2O3 cần vừa đủ bao nhiêu mol HCl?",
+          "options": ["0,60 mol", "0,30 mol", "0,20 mol", "0,10 mol"],
+          "answer": 0,
+          "explanation": "B1. nAl2O3 = 10,2 / 102 = 0,10 mol. B2. Al2O3 + 6HCl -> 2AlCl3 + 3H2O. B3. nHCl = 6 x 0,10 = 0,60 mol."
+        },
+        {
+          "id": "n5-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 8,1 g ZnO bằng dung dịch H2SO4 loãng vừa đủ. Khối lượng muối thu được là",
+          "options": ["16,1 g", "14,1 g", "12,1 g", "19,3 g"],
+          "answer": 0,
+          "explanation": "B1. nZnO = 8,1 / 81 = 0,10 mol. B2. ZnO + H2SO4 -> ZnSO4 + H2O nên nZnSO4 = 0,10 mol. B3. M(ZnSO4) = 65 + 96 = 161 g/mol nên m = 16,1 g."
+        },
+        {
+          "id": "n5-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Al2O3 phản ứng được với những dung dịch nào sau đây?",
+          "options": ["HCl", "NaOH", "H2SO4 loãng", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Al2O3 là oxide lưỡng tính nên phản ứng với acid HCl và H2SO4 loãng. B2. Al2O3 cũng phản ứng với kiềm NaOH tạo NaAlO2. B3. NaCl là muối trung hoà, không phản ứng với Al2O3."
+        },
+        {
+          "id": "n5-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan hết 4 g MgO cần bao nhiêu mol HCl?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nMgO = 4 / 40 = 0,10 mol. B2. MgO + 2HCl -> MgCl2 + H2O nên nHCl = 2 x 0,10 = 0,20 mol."
+        },
+        {
+          "id": "n5-l3-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: ZnO + NaOH -> Na2ZnO2 + H2O.",
+          "left": ["ZnO", "NaOH"],
+          "right": ["Na2ZnO2", "H2O"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Muối Na2ZnO2 chứa 2Na nên cần 2NaOH. B2. Hai nguyên tử H còn lại tạo 1H2O. B3. Kiểm tra O: vế trái 1 + 2 = 3, vế phải 2 + 1 = 3."
+        },
+        {
+          "id": "n5-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 16 g hỗn hợp MgO và CuO cần vừa đủ 0,60 mol HCl. Khối lượng MgO trong hỗn hợp là",
+          "options": ["8 g", "4 g", "12 g", "6 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Gọi số mol MgO, CuO là x, y: 40x + 80y = 16. B2. Cả hai oxide đều cần 2 mol HCl cho 1 mol oxide: 2x + 2y = 0,60 nên x + y = 0,30. B3. Giải hệ: x = 0,20; y = 0,10. B4. mMgO = 0,20 x 40 = 8 g."
+        },
+        {
+          "id": "n5-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan hết hỗn hợp gồm 0,10 mol Fe2O3 và 0,10 mol CuO bằng H2SO4 loãng vừa đủ. Số mol H2SO4 đã dùng là bao nhiêu?",
+          "answer": "0,4",
+          "acceptedAnswers": ["0.4"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Bảo toàn nguyên tố O: với H2SO4 loãng, nH2SO4 = nO trong oxide. B2. nO = 0,10 x 3 + 0,10 x 1 = 0,40 mol. B3. Vậy cần 0,40 mol H2SO4."
+        },
+        {
+          "id": "n5-l3-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Al2O3 + HCl -> AlCl3 + H2O.",
+          "left": ["Al2O3", "HCl"],
+          "right": ["AlCl3", "H2O"],
+          "answer": [1, 6, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Al2O3 chứa 2Al nên tạo 2AlCl3, cần 6Cl tức 6HCl. B2. Sáu nguyên tử H kết hợp với 3 O tạo 3H2O. B3. Kiểm tra: hai vế đều có 2Al, 6Cl, 6H, 3O."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "id": "n3-acid",
+  "part": "inorganic",
+  "code": "N3",
+  "title": "Acid",
+  "order": 3,
+  "description": "Khái niệm, phân loại, danh pháp, tính chất hoá học của acid; hydrochloric acid, sulfuric acid và cách điều chế.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n3-l1",
+      "title": "Khái niệm – phân loại – danh pháp acid",
+      "order": 1,
+      "summary": "Định nghĩa acid, cách phân loại theo thành phần, gốc acid và danh pháp theo quy ước GDPT 2018.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n3-l1-c1",
+          "heading": "Khái niệm acid",
+          "body": "Acid là hợp chất mà phân tử gồm một hay nhiều nguyên tử hiđro liên kết với gốc acid. Khi tan trong nước, acid phân li tạo ion H+, vì vậy dung dịch acid thường làm quỳ tím chuyển đỏ và có pH < 7."
+        },
+        {
+          "id": "n3-l1-c2",
+          "heading": "Phân loại acid",
+          "body": "Theo thành phần, acid được chia thành acid không có oxi (HCl, H2S) và acid có oxi (H2SO4, HNO3, H2CO3). Với acid có oxi của cùng một nguyên tố, dạng có nhiều oxi thường có tên đuôi \"-ic\" như sulfuric acid; dạng ít oxi hơn có tên đuôi \"-ơ\" như acid sunfurơ."
+        },
+        {
+          "id": "n3-l1-c3",
+          "heading": "Công thức tổng quát và gốc acid",
+          "body": "Có thể viết công thức acid dưới dạng HnA, trong đó A là gốc acid và n là hoá trị của gốc. Ví dụ: HCl có gốc Cl hoá trị I; H2SO4 có gốc SO4 hoá trị II; H3PO4 có gốc PO4 hoá trị III."
+        },
+        {
+          "id": "n3-l1-c4",
+          "heading": "Danh pháp theo GDPT 2018",
+          "body": "Tên acid được đọc theo gốc acid tương ứng. Một số tên thường gặp: HCl là hydrochloric acid (acid clohiđric), H2SO4 là sulfuric acid (acid sunfuric), HNO3 là nitric acid, H2CO3 là carbonic acid."
+        },
+        {
+          "id": "n3-l1-c5",
+          "heading": "Nâng cao: Lực acid, nồng độ và pH",
+          "body": "Acid mạnh là acid phân li hoàn toàn trong nước, còn acid yếu chỉ phân li một phần. Khái niệm này khác với dung dịch đặc hay loãng: dung dịch HCl rất loãng vẫn là dung dịch của acid mạnh; dung dịch CH3COOH đậm đặc vẫn là dung dịch của acid yếu.\n\nKhi cùng điều kiện đo, pH giảm 1 đơn vị nghĩa là nồng độ H^+ tăng 10 lần. Vì nồng độ ban đầu cũng ảnh hưởng pH, không dùng riêng màu quỳ hoặc một giá trị pH để so sánh lực acid của hai chất khi chưa quy về cùng nồng độ."
+        },
+        {
+          "id": "n3-l1-c6",
+          "heading": "Nâng cao: Phân biệt acid với dung dịch khác",
+          "body": "Quỳ tím hoá đỏ cho biết dung dịch có môi trường acid, nhưng không giúp nhận ra ngay gốc acid. Muốn có bằng chứng đặc trưng, chọn thuốc thử tạo hiện tượng rõ: CO3^2- cho CO2, Ag^+ cho AgCl với Cl^-, Ba^2+ cho BaSO4 với SO4^2-.\n\nKhi nhận biết bằng khí CO2, nên dẫn khí qua nước vôi trong; nước vôi vẩn đục do CaCO3. Không dùng riêng hiện tượng sủi bọt để kết luận là CO2, vì acid gặp kim loại cũng có thể cho H2."
+        },
+        {
+          "id": "n3-l1-c7",
+          "heading": "Nâng cao: Bảo toàn H^+ trong bài toán acid",
+          "body": "Trong phản ứng hoàn toàn, có thể quy đổi lượng acid về số mol H^+ đã tham gia. Ví dụ 1 mol H2SO4 trung hoà hoàn toàn cung cấp 2 mol H^+ để phản ứng với 2 mol OH^-; 1 mol CO3^2- cũng cần 2 mol H^+. Cách quy đổi này đặc biệt hữu ích cho hỗn hợp base, oxide base và cacbonat.\n\nNếu bài cho thể tích khí ở đkc, dùng V = 24,79n (L), nên n khí = V/24,79. Sau đó vẫn phải dựa vào phương trình hoặc số mol H^+ tiêu thụ để liên hệ với acid; không áp dụng tỉ lệ thể tích khi các khí không ở cùng điều kiện."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n3-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dung dịch nào dưới đây là acid?",
+          "options": ["HCl", "NaOH", "NaCl", "Ca(OH)2"],
+          "answer": 0,
+          "explanation": "B1. Acid thường có H đứng đầu công thức và khi tan tạo H^+. B2. Trong bốn chất, chỉ HCl là acid mạnh quen thuộc."
+        },
+        {
+          "id": "n3-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Giá trị pH đặc trưng cho môi trường acid là",
+          "options": ["pH = 7", "pH > 7", "pH < 7", "pH = 14"],
+          "answer": 2,
+          "explanation": "B1. Môi trường trung tính có pH = 7. B2. Môi trường acid luôn có pH nhỏ hơn 7."
+        },
+        {
+          "id": "n3-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các chất đều phản ứng được với dung dịch HCl loãng.",
+          "options": ["Mg", "CuO", "NaOH", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Mg đứng trước H nên đẩy được H2 khỏi acid. B2. CuO là oxide base nên tác dụng với acid. B3. NaOH là base nên trung hoà với acid. B4. NaCl là muối trung hoà, không phản ứng với HCl loãng."
+        },
+        {
+          "id": "n3-l1-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nhúng quỳ tím vào dung dịch acid, quỳ tím sẽ chuyển sang màu",
+          "options": ["xanh", "đỏ", "vàng", "không đổi màu"],
+          "answer": 1,
+          "explanation": "B1. Tính chất nhận biết quen thuộc của acid là làm quỳ tím hoá đỏ. B2. Vì vậy đáp án đúng là màu đỏ."
+        },
+        {
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Acid nào sau đây là acid không có oxi?",
+          "options": ["HCl", "H2SO4", "HNO3", "H2CO3"],
+          "answer": 0,
+          "explanation": "B1. Acid không có oxi chỉ gồm H liên kết với phi kim nhưng không chứa nguyên tử O. B2. Trong bốn chất, chỉ HCl là acid không có oxi.",
+          "id": "n3-l1-q5"
+        },
+        {
+          "id": "n3-l1-q6",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa H2SO4 và NaOH.",
+          "left": ["H2SO4", "NaOH"],
+          "right": ["Na2SO4", "H2O"],
+          "answer": [1, 2, 1, 2],
+          "explanation": "B1. Gốc SO4 giữ nguyên nên đặt 1 trước H2SO4 và 1 trước Na2SO4. B2. Muối có 2Na nên cần 2NaOH. B3. Hai H của acid kết hợp với 2OH tạo 2H2O."
+        },
+        {
+          "id": "n3-l1-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Trung hoà hoàn toàn 0,20 mol NaOH cần bao nhiêu mol HCl?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2", "0,20", "0.20"],
+          "placeholder": "Số mol HCl",
+          "explanation": "B1. Phương trình: HCl + NaOH -> NaCl + H2O. B2. Tỉ lệ mol 1:1 nên số mol HCl cần dùng cũng bằng 0,20 mol."
+        },
+        {
+          "id": "n3-l1-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cặp chất nào phản ứng với nhau tạo khí CO2?",
+          "options": [
+            "HCl và Na2SO4",
+            "H2SO4 loãng và Na2CO3",
+            "HCl và NaCl",
+            "H2SO4 loãng và Cu"
+          ],
+          "answer": 1,
+          "explanation": "B1. Acid tác dụng với muối cacbonat tạo muối mới, nước và CO2. B2. Na2CO3 là muối cacbonat nên phản ứng với H2SO4 loãng cho CO2."
+        },
+        {
+          "id": "n3-l1-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phản ứng xảy ra ở điều kiện thường.",
+          "options": [
+            "2HCl + Cu -> CuCl2 + H2",
+            "2HCl + CaO -> CaCl2 + H2O",
+            "H2SO4 + 2KOH -> K2SO4 + 2H2O",
+            "HCl + Ag -> AgCl + H2"
+          ],
+          "answers": [1, 2],
+          "explanation": "B1. Cu và Ag đứng sau H nên không phản ứng với HCl loãng. B2. CaO là oxide base nên phản ứng. B3. KOH là base nên trung hoà với H2SO4."
+        },
+        {
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Tên gọi phù hợp theo GDPT 2018 của H2SO4 là",
+          "options": [
+            "hydrochloric acid",
+            "sulfuric acid",
+            "nitric acid",
+            "carbonic acid"
+          ],
+          "answer": 1,
+          "explanation": "B1. H2SO4 là sulfuric acid; tên SGK cũ là acid sunfuric. B2. HCl là hydrochloric acid, HNO3 là nitric acid, H2CO3 là carbonic acid.",
+          "id": "n3-l1-q10"
+        },
+        {
+          "id": "n3-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 8,9 g hỗn hợp Mg và Zn bằng HCl dư, thu 4,958 lít H2 (đkc). Khối lượng Mg trong hỗn hợp là",
+          "options": ["2,4 g", "4,0 g", "5,2 g", "6,8 g"],
+          "answer": 0,
+          "explanation": "B1. Số mol H2 là 4,958 / 24,79 = 0,20 mol nên tổng số mol Mg và Zn cũng bằng 0,20. B2. Gọi số mol Mg, Zn lần lượt là x và y: x + y = 0,20; 24x + 65y = 8,9. B3. Giải hệ được x = 0,10 mol nên mMg = 0,10 x 24 = 2,4 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 0,20 mol HCl tác dụng vừa đủ với hỗn hợp Mg và MgO, trong đó số mol Mg bằng số mol MgO. Tổng số mol hỗn hợp ban đầu là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1", "0,10", "0.10"],
+          "placeholder": "Tổng số mol hỗn hợp",
+          "explanation": "B1. Cả Mg và MgO đều tiêu tốn 2 mol HCl cho mỗi mol chất. B2. Gọi số mol mỗi chất là x thì 2x + 2x = 0,20 nên x = 0,05. B3. Tổng số mol hỗn hợp là 0,05 + 0,05 = 0,10 mol.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l1-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: FeS + HCl -> FeCl2 + H2S.",
+          "left": ["FeS", "HCl"],
+          "right": ["FeCl2", "H2S"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Fe và S đã cân bằng với hệ số 1 cho FeS và FeCl2, H2S. B2. Sản phẩm có 2Cl nên cần 2HCl. B3. Khi đó số H cũng vừa đủ để tạo 1H2S.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        }
+      ]
+    },
+    {
+      "id": "n3-l2",
+      "title": "Tính chất hoá học của acid",
+      "order": 2,
+      "summary": "Các phản ứng điển hình của acid với kim loại, base, oxide base và muối; điều kiện để phản ứng xảy ra.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n3-l2-c1",
+          "heading": "Các tính chất hoá học chính của acid",
+          "body": "Acid làm đổi màu chất chỉ thị, tác dụng với kim loại đứng trước H tạo muối và H2, tác dụng với base tạo muối và nước, tác dụng với oxide base tạo muối và nước, và có thể tác dụng với muối nếu tạo kết tủa, chất khí hoặc chất điện li yếu."
+        },
+        {
+          "id": "n3-l2-c2",
+          "heading": "Acid với kim loại: phải nhìn dãy hoạt động",
+          "body": "Với acid không có tính oxi hoá mạnh như HCl, H2SO4 loãng, chỉ kim loại đứng trước H mới giải phóng H2. Khi gặp hỗn hợp nhiều kim loại, kim loại hoạt động hơn phản ứng không phải lúc nào cũng trước nếu acid thiếu; cần so số mol H^+ và số mol kim loại.\n\nỞ mức ion, kim loại M tạo M^n+ thì 1 mol M đã nhường n mol electron; 2H+ nhận 2 mol electron để thành H2. Vì vậy, với kim loại phản ứng hết trong acid không oxi hoá, nH2 = nH+ đã phản ứng / 2. Quy tắc này vẫn dùng được cho hỗn hợp kim loại khác hoá trị, miễn là xác định đúng ion kim loại tạo thành; chẳng hạn Fe với HCl hoặc H2SO4 loãng tạo Fe2+, không tự ý viết Fe3+."
+        },
+        {
+          "id": "n3-l2-c3",
+          "heading": "Acid với muối: chú ý sản phẩm",
+          "body": "Phản ứng acid + muối xảy ra khi tạo khí, kết tủa hoặc chất điện li yếu. Muối cacbonat, hiđrocacbonat gặp acid cho CO2; muối sunfit cho SO2; muối sunfua cho H2S.\n\nKhông được suy ra rằng cứ trộn acid với muối là có phản ứng. HCl và Na2SO4 trong dung dịch chỉ cho các ion cùng tồn tại; trái lại H2SO4 với BaCl2 tạo BaSO4 kết tủa, còn HCl với CH3COONa tạo CH3COOH là chất điện li yếu. Hãy xét sản phẩm thực tế thay vì chỉ đổi chỗ các ion."
+        },
+        {
+          "id": "n3-l2-c4",
+          "heading": "Mẹo xử lí chất dư",
+          "body": "Hãy viết phương trình ion rút gọn hoặc quy đổi về số mol H^+. Với hỗn hợp kim loại cùng hoá trị, số mol H2 thường giúp lập hệ nhanh. Với hỗn hợp muối cacbonat và hiđrocacbonat, nên dùng bảo toàn nguyên tố C.\n\nTrước khi lập hệ, phải xác định chất giới hạn. Với CO3^2-, 1 mol cần 2 mol H+ để tạo 1 mol CO2; với HCO3^-, 1 mol chỉ cần 1 mol H+. Vì thế cùng một lượng CO2 chưa đủ kết luận lượng acid đã dùng nếu chưa biết loại muối hoặc trạng thái acid dư."
+        },
+        {
+          "id": "n3-l2-c5",
+          "heading": "Nâng cao: Quy đổi bài kim loại về H+ và electron",
+          "body": "Với HCl hay H2SO4 loãng, phần phản ứng quyết định là: 2H+ + 2e -> H2. Nếu kim loại M tạo M^n+, 1 mol M tiêu thụ n mol H+ và tạo n/2 mol H2. Do đó có thể lập trực tiếp: tổng số mol H+ đã phản ứng = 2nH2 = tổng(n kim loại x hoá trị ion tạo thành). Cách quy đổi này tránh phải viết quá nhiều phương trình khi hỗn hợp có Mg, Al, Zn, Fe.\n\nChỉ áp dụng sau khi đã loại kim loại không phản ứng và xác định sản phẩm đúng. Không dùng công thức này cho acid oxi hoá mạnh như H2SO4 đặc nóng, vì khi đó H+ không phải chất duy nhất nhận electron và khí có thể không phải H2."
+        },
+        {
+          "id": "n3-l2-c6",
+          "heading": "Nâng cao: Hỗn hợp kim loại và các dữ kiện độc lập",
+          "body": "Hai ẩn số mol kim loại cần hai dữ kiện độc lập. Thường chọn phương trình theo khối lượng hỗn hợp và phương trình theo nH2; với mỗi kim loại phải gắn đúng hệ số tạo H2. Ví dụ Mg, Zn, Fe đều tạo 1 mol H2 từ 1 mol kim loại trong acid không oxi hoá, nên thể tích H2 chỉ cho tổng số mol của chúng, còn khối lượng giúp tách từng kim loại.\n\nNếu acid thiếu, không được mặc định mọi kim loại phản ứng hết. Hãy đặt nH+ ban đầu, so với lượng H+ cần theo từng phản ứng, rồi xét phần kim loại còn lại. Dãy hoạt động chỉ cho biết khả năng phản ứng; đề bài cần thêm giả thiết hoặc dữ kiện mới để khẳng định thứ tự phản ứng trong một hỗn hợp."
+        },
+        {
+          "id": "n3-l2-c7",
+          "heading": "Nâng cao: Carbonat và hiđrocacbonat theo hai giai đoạn",
+          "body": "Khi thêm từ từ acid vào CO3^2-, có thể coi theo hai bước: CO3^2- + H+ -> HCO3^- rồi HCO3^- + H+ -> CO2 + H2O. Vì thế, với a mol CO3^2- và b mol HCO3^- nhận x mol H+: nếu x <= a thì chưa tính CO2; nếu a < x < 2a + b thì nCO2 = x - a; nếu x >= 2a + b thì nCO2 = a + b. Đây là quy ước biện luận theo lượng acid thêm dần trong bài HSG.\n\nKhi nhỏ dung dịch carbonat vào acid đang dư, CO2 xuất hiện ngay ở giai đoạn đầu vì mỗi phần carbonat mới vào gặp môi trường nhiều H+. Do đó phải đọc kỹ chiều cho chất nào vào chất nào, nhất là các bài hỏi thể tích khí ở từng thời điểm."
+        },
+        {
+          "id": "n3-l2-c8",
+          "heading": "Nâng cao: Bảo toàn nguyên tố trong bài muối tạo khí",
+          "body": "Nếu acid dư, mỗi mol CO3^2- hoặc HCO3^- cho đúng 1 mol CO2; vì vậy nCO2 bằng tổng số mol nguyên tử C có trong các muối ban đầu. Tương tự, từ muối sunfit có thể bảo toàn S để liên hệ với nSO2, còn từ muối sunfua bảo toàn S để liên hệ với nH2S. Cách này đặc biệt gọn khi đề cho hỗn hợp nhiều muối nhưng chỉ cần lượng khí tổng.\n\nBảo toàn khối lượng cũng là phép kiểm nhanh: khối lượng bình phản ứng tăng bằng khối lượng chất đã đi vào trừ khối lượng khí thoát ra. Không dùng ngay công thức này nếu có bắn dung dịch, bay hơi nước đáng kể hoặc còn khí bị giữ lại trong dụng cụ."
+        },
+        {
+          "id": "n3-l2-c9",
+          "heading": "Nâng cao: Điều kiện để acid đẩy phản ứng muối",
+          "body": "Trong dung dịch, hãy viết các ion thực sự thay đổi. Phản ứng có chiều rõ khi tạo chất rời khỏi dạng ion tự do: kết tủa như BaSO4, khí như CO2, SO2, H2S, hoặc chất điện li yếu như H2O và CH3COOH. Ví dụ CO3^2- + 2H+ -> CO2 + H2O giải thích chung cho mọi muối carbonat tan gặp acid mạnh.\n\nQuy tắc “acid mạnh đẩy acid yếu ra khỏi muối” chỉ là cách nhớ thuận tiện. Nó không thay thế việc kiểm tra trạng thái chất và điều kiện dung dịch; các phương trình trao đổi mà mọi chất đều là chất điện li mạnh, tan, không tạo khí thường không có phản ứng ion rút gọn."
+        },
+        {
+          "id": "n3-l2-c10",
+          "heading": "Nâng cao: Nhận biết CO2, SO2 và H2S sau phản ứng với acid",
+          "body": "Ba khí thường gặp khi cho acid tác dụng với muối là CO2 từ carbonat, SO2 từ sunfit và H2S từ sunfua. CO2 làm đục nước vôi trong do CaCO3; nếu CO2 tiếp tục dư, kết tủa có thể tan thành Ca(HCO3)2. SO2 có tính khử nên làm mất màu dung dịch KMnO4 acid hoặc nước brom; CO2 không có hiện tượng này.\n\nH2S có mùi trứng thối và có thể làm giấy tẩm dung dịch muối chì(II) chuyển đen do PbS. Không ngửi trực tiếp khí để nhận biết: H2S độc, còn SO2 cũng kích thích đường hô hấp. Trong bài nhận biết, nên nêu rõ thuốc thử và dấu hiệu thay vì chỉ ghi tên khí."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n3-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Kim loại nào sau đây phản ứng được với HCl loãng?",
+          "options": ["Ag", "Cu", "Fe", "Hg"],
+          "answer": 2,
+          "explanation": "B1. HCl loãng phản ứng với kim loại đứng trước H. B2. Trong bốn kim loại chỉ có Fe đứng trước H."
+        },
+        {
+          "id": "n3-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Muối nào chắc chắn tác dụng với HCl tạo khí?",
+          "options": ["Na2SO4", "NaCl", "Na2CO3", "KNO3"],
+          "answer": 2,
+          "explanation": "B1. Muối cacbonat gặp acid tạo CO2. B2. Na2CO3 là muối cacbonat nên chắc chắn phản ứng với HCl sinh khí."
+        },
+        {
+          "id": "n3-l2-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khí sinh ra khi cho HCl tác dụng với Na2CO3 là khí gì?",
+          "answer": "CO2",
+          "acceptedAnswers": ["cacbon đioxide"],
+          "placeholder": "Tên hoặc công thức khí",
+          "explanation": "B1. Phản ứng: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2. B2. Vì vậy khí thoát ra là CO2."
+        },
+        {
+          "id": "n3-l2-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các chất có thể tác dụng với H2SO4 loãng.",
+          "options": ["Zn", "Cu", "CaCO3", "BaCl2"],
+          "answers": [0, 2, 3],
+          "explanation": "B1. Zn đứng trước H nên phản ứng. B2. Cu đứng sau H nên không phản ứng với H2SO4 loãng. B3. CaCO3 phản ứng giải phóng CO2. B4. BaCl2 phản ứng tạo kết tủa BaSO4."
+        },
+        {
+          "id": "n3-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Với HCl loãng dư, chất nào dưới đây tạo khí H2S?",
+          "options": ["Na2CO3", "FeS", "Na2SO4", "AgCl"],
+          "answer": 1,
+          "explanation": "B1. Muối sunfua gặp acid mạnh tạo H2S. B2. FeS là muối sunfua nên phản ứng với HCl tạo H2S."
+        },
+        {
+          "id": "n3-l2-q6",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa NaHCO3 và HCl.",
+          "left": ["NaHCO3", "HCl"],
+          "right": ["NaCl", "H2O", "CO2"],
+          "answer": [1, 1, 1, 1, 1],
+          "explanation": "B1. Mỗi phân tử NaHCO3 chỉ cần 1HCl để tạo NaCl. B2. Khi đó H, C, O tự cân bằng thành H2O và CO2 với các hệ số đều bằng 1."
+        },
+        {
+          "id": "n3-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,10 mol Mg tác dụng với HCl dư. Số mol H2 thu được là",
+          "options": ["0,05 mol", "0,10 mol", "0,20 mol", "0,40 mol"],
+          "answer": 1,
+          "explanation": "B1. Phương trình: Mg + 2HCl -> MgCl2 + H2. B2. Tỉ lệ Mg : H2 = 1 : 1 nên 0,10 mol Mg tạo 0,10 mol H2."
+        },
+        {
+          "id": "n3-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho HCl dư vào 10,6 g Na2CO3. Thể tích CO2 thu được ở đkc là bao nhiêu lít?",
+          "answer": "2,479",
+          "acceptedAnswers": ["2.479", "2,4790", "2.4790"],
+          "placeholder": "Thể tích CO2",
+          "explanation": "B1. nNa2CO3 = 10,6 / 106 = 0,10 mol. B2. Tỉ lệ Na2CO3 : CO2 = 1 : 1 nên nCO2 = 0,10 mol. B3. VCO2 = 0,10 x 24,79 = 2,479 lít."
+        },
+        {
+          "id": "n3-l2-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cho H2SO4 loãng lần lượt vào các dung dịch sau. Chọn các trường hợp có kết tủa.",
+          "options": ["BaCl2", "Na2CO3", "NaOH", "Pb(NO3)2"],
+          "answers": [0, 3],
+          "explanation": "B1. Với BaCl2 sinh ra BaSO4 kết tủa trắng. B2. Với Pb(NO3)2 sinh ra PbSO4 kết tủa. B3. Na2CO3 cho khí CO2 chứ không để lại kết tủa sau phản ứng. B4. NaOH chỉ trung hoà tạo muối, nước."
+        },
+        {
+          "id": "n3-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,15 mol HCl vào hỗn hợp chứa 0,05 mol Na2CO3 và 0,05 mol NaHCO3. Chất nào còn dư sau phản ứng?",
+          "options": ["HCl", "Na2CO3", "NaHCO3", "Không có chất nào dư"],
+          "answer": 3,
+          "explanation": "B1. 0,05 mol Na2CO3 cần 0,10 mol HCl để phản ứng hết. B2. 0,05 mol NaHCO3 cần thêm 0,05 mol HCl. B3. Tổng nhu cầu bằng đúng 0,15 mol HCl nên không còn chất nào dư."
+        },
+        {
+          "id": "n3-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan vừa đủ hỗn hợp 2,4 g Mg và 5,6 g Fe bằng HCl. Thể tích H2 thu được ở đkc là",
+          "options": ["2,479 lít", "3,7185 lít", "4,958 lít", "7,437 lít"],
+          "answer": 2,
+          "explanation": "B1. nMg = 2,4 / 24 = 0,10 mol; nFe = 5,6 / 56 = 0,10 mol. B2. Cả Mg và Fe đều cho tỉ lệ 1 mol kim loại tạo 1 mol H2. B3. nH2 = 0,20 mol nên VH2 = 0,20 x 24,79 = 4,958 lít.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho HCl dư vào hỗn hợp 10,6 g Na2CO3 và 8,4 g NaHCO3. Tổng thể tích CO2 thu được ở đkc là bao nhiêu lít?",
+          "answer": "4,958",
+          "acceptedAnswers": ["4.958", "4,9580", "4.9580"],
+          "placeholder": "Thể tích CO2",
+          "explanation": "B1. nNa2CO3 = 10,6 / 106 = 0,10 mol; nNaHCO3 = 8,4 / 84 = 0,10 mol. B2. Mỗi mol muối đều tạo 1 mol CO2 nên nCO2 = 0,20 mol. B3. VCO2 = 0,20 x 24,79 = 4,958 lít.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l2-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa BaCl2 và H2SO4.",
+          "left": ["BaCl2", "H2SO4"],
+          "right": ["BaSO4", "HCl"],
+          "answer": [1, 1, 1, 2],
+          "explanation": "B1. Ba và gốc SO4 ghép thành kết tủa BaSO4 với hệ số 1. B2. Còn lại 2Cl và 2H nên tạo 2HCl.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        }
+      ]
+    },
+    {
+      "id": "n3-l3",
+      "title": "Hydrochloric acid, sulfuric acid; điều chế",
+      "order": 3,
+      "summary": "Tính chất đặc trưng, cách nhận biết, lưu ý an toàn và các phương pháp điều chế hydrochloric acid, sulfuric acid.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n3-l3-c1",
+          "heading": "Hydrochloric acid (acid clohiđric)",
+          "body": "Hydrochloric acid là dung dịch HCl trong nước, là acid mạnh, không màu và phân li gần như hoàn toàn thành H+ và Cl-. Khí HCl tan rất mạnh trong nước nên khi thu khí HCl phải dùng phương pháp đẩy không khí, không thu trên nước."
+        },
+        {
+          "id": "n3-l3-c2",
+          "heading": "Sulfuric acid (acid sunfuric)",
+          "body": "Sulfuric acid H2SO4 là acid mạnh. Dung dịch loãng thể hiện tính acid điển hình; H2SO4 đặc còn có tính háo nước và tính oxi hoá mạnh khi đun nóng với nhiều kim loại hoặc phi kim."
+        },
+        {
+          "id": "n3-l3-c3",
+          "heading": "Điều chế HCl và H2SO4",
+          "body": "Trong phòng thí nghiệm, có thể điều chế HCl bằng cách cho NaCl khan tác dụng với H2SO4 đặc. Trong công nghiệp, sulfuric acid được sản xuất theo sơ đồ FeS2 -> SO2 -> SO3 -> H2SO4; HCl thường thu từ phương pháp sunfat hoặc từ phản ứng trực tiếp giữa H2 và Cl2."
+        },
+        {
+          "id": "n3-l3-c4",
+          "heading": "Nhận biết ion Cl^-",
+          "body": "Thuốc thử quen thuộc là dung dịch AgNO3. Khi có Cl-, xuất hiện kết tủa trắng AgCl.\nPhương trình: HCl + AgNO3 -> AgCl + HNO3.\n\nPhương trình ion rút gọn là: Ag+ + Cl- -> AgCl. AgCl không tan trong HNO3 loãng, tan trong dung dịch NH3 và sẫm màu dần khi để ngoài ánh sáng; các tính chất này hỗ trợ nhận xét kết tủa ở mức nâng cao."
+        },
+        {
+          "id": "n3-l3-c5",
+          "heading": "Ứng dụng và lưu ý",
+          "body": "HCl dùng tẩy gỉ kim loại, điều chế muối clorua và điều chỉnh pH. Dù là acid mạnh, HCl loãng không phản ứng với Cu, Ag vì các kim loại này đứng sau H.\n\nKhi tẩy gỉ sắt, HCl hoà tan lớp oxide: Fe2O3 + 6HCl -> 2FeCl3 + 3H2O. Không ngâm quá lâu vì sau khi gỉ hết, sắt nền cũng có thể phản ứng với HCl tạo FeCl2 và H2; cần kiểm soát thời gian, nồng độ và rửa sạch bề mặt."
+        },
+        {
+          "id": "n3-l3-c6",
+          "heading": "Nâng cao: Điều chế và thu khí HCl",
+          "body": "Trong phòng thí nghiệm, có thể đun nhẹ NaCl rắn với H2SO4 đặc: NaCl + H2SO4 -> NaHSO4 + HCl. Khí HCl sinh ra phải thu bằng cách đẩy không khí, không thu trên nước vì tan rất mạnh trong nước.\n\nHCl nặng hơn không khí nên khi thu, dẫn khí xuống gần đáy bình để đẩy không khí ra phía trên. Bình và dụng cụ phải khô nếu mục tiêu là thu khí HCl; hơi nước sẽ hấp thụ khí và làm giảm lượng khí thu được."
+        },
+        {
+          "id": "n3-l3-c7",
+          "heading": "Nâng cao: Thí nghiệm đài phun HCl",
+          "body": "Bình chứa khí HCl khô nối với một đầu ống nhúng vào nước có thể tạo hiện tượng đài phun khi một ít nước được đưa vào bình. HCl hoà tan rất nhanh làm áp suất trong bình giảm, vì thế áp suất khí quyển đẩy nước phun vào bình.\n\nNếu nước có quỳ tím, phần nước đi vào chuyển đỏ. Thí nghiệm chứng minh độ tan rất lớn của HCl và cho thấy tính acid chỉ xuất hiện rõ sau khi khí hoà tan trong nước; chỉ thực hiện với dụng cụ kín, lượng nhỏ và tủ hút phù hợp."
+        },
+        {
+          "id": "n3-l3-c8",
+          "heading": "Nâng cao: Tỉ lệ mol nhanh trong bài toán HCl",
+          "body": "Khi HCl là nguồn duy nhất tạo H2 trong phản ứng với kim loại, luôn có n HCl đã phản ứng = 2n H2, vì 2H+ tạo 1H2. Tỉ lệ này đúng cả khi kim loại tạo muối hoá trị II hay III; ví dụ 2Al + 6HCl -> 2AlCl3 + 3H2.\n\nKhi trung hoà base M(OH)x hoàn toàn, số mol HCl bằng x lần số mol M(OH)x. Các tỉ lệ trên chỉ tính lượng HCl đã phản ứng; nếu đề nói HCl dư thì không được đồng nhất lượng đó với số mol HCl ban đầu."
+        },
+        {
+          "id": "n3-l3-c9",
+          "heading": "H2SO4 loãng cư xử như một acid mạnh",
+          "body": "H2SO4 loãng có đầy đủ tính chất chung của acid: làm quỳ tím hoá đỏ, tác dụng với kim loại đứng trước H, base, oxide base và nhiều muối.\nVí dụ: Fe + H2SO4 loãng -> FeSO4 + H2.\n\nH2SO4 là acid hai nấc: nấc đầu phân li rất mạnh tạo H+ và HSO4^-, còn HSO4^- vẫn có thể nhường tiếp H+ nhưng yếu hơn. Vì thế, khi NaOH chưa đủ, có thể tạo muối acid NaHSO4: H2SO4 + NaOH -> NaHSO4 + H2O; khi NaOH đủ, tạo Na2SO4."
+        },
+        {
+          "id": "n3-l3-c10",
+          "heading": "H2SO4 đặc có thêm hai tính chất quan trọng",
+          "body": "H2SO4 đặc rất háo nước và có tính oxi hoá mạnh. Vì vậy nó có thể làm than hoá đường và oxi hoá Cu, C, S khi đun nóng.\nVí dụ: Cu + 2H2SO4 đặc -> CuSO4 + SO2 + 2H2O.\n\nTrong phản ứng với Cu nóng, Cu tăng số oxi hoá từ 0 lên +2, còn S trong một phần H2SO4 giảm từ +6 xuống +4 trong SO2. Do H2SO4 đặc vừa cung cấp gốc SO4^2- tạo muối, vừa là chất oxi hoá nên không áp dụng quy tắc “kim loại + acid tạo H2”; sản phẩm khử thường gặp là SO2."
+        },
+        {
+          "id": "n3-l3-c11",
+          "heading": "Nguyên tắc an toàn",
+          "body": "Khi pha loãng phải rót từ từ acid vào nước, không làm ngược lại. Lý do là quá trình hoà tan toả nhiều nhiệt; nếu đổ nước vào acid đặc, nước sôi cục bộ dễ bắn acid.\n\nLuôn dùng kính, găng phù hợp và dụng cụ chịu nhiệt; không pipet bằng miệng. Nếu acid bắn lên da hoặc mắt, phải xả ngay dưới thật nhiều nước và báo người phụ trách, không tự dùng chất trung hoà mạnh trực tiếp trên cơ thể."
+        },
+        {
+          "id": "n3-l3-c12",
+          "heading": "Nâng cao: Nhận biết ion sulfate chắc chắn",
+          "body": "Lấy một phần mẫu riêng, acid hoá bằng HCl hoặc HNO3 loãng rồi thêm dung dịch chứa Ba^2+ như BaCl2. Nếu có SO4^2-, xuất hiện kết tủa trắng BaSO4 bền trong acid: Ba^2+ + SO4^2- -> BaSO4. Bước acid hoá giúp loại ảnh hưởng của CO3^2- hoặc SO3^2- cũng có thể tạo kết tủa bari trắng.\n\nKhông dùng H2SO4 để acid hoá mẫu trước phép thử này, vì nó tự đưa SO4^2- vào mẫu và có thể gây kết luận dương tính giả."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n3-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức hoá học của hydrochloric acid là",
+          "options": ["H2SO4", "HCl", "NaCl", "Cl2"],
+          "answer": 1,
+          "explanation": "B1. Hydrochloric acid gồm H liên kết với gốc clorua. B2. Công thức đúng là HCl."
+        },
+        {
+          "id": "n3-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Thuốc thử dùng để nhận biết ion Cl^- trong dung dịch là",
+          "options": ["NaOH", "AgNO3", "BaCl2", "H2SO4"],
+          "answer": 1,
+          "explanation": "B1. Ion Ag^+ kết hợp với Cl^- tạo kết tủa trắng AgCl rất đặc trưng. B2. Vì thế AgNO3 là thuốc thử nhận biết Cl^-."
+        },
+        {
+          "id": "n3-l3-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Kết tủa trắng tạo ra khi cho AgNO3 vào dung dịch HCl là chất gì?",
+          "answer": "AgCl",
+          "acceptedAnswers": ["bạc clorua", "clorua bạc"],
+          "placeholder": "Tên hoặc công thức kết tủa",
+          "explanation": "B1. Ion Cl^- trong HCl phản ứng với Ag^+ trong AgNO3. B2. Chất kết tủa trắng sinh ra là AgCl."
+        },
+        {
+          "id": "n3-l3-q4",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng điều chế khí H2 từ Zn và HCl.",
+          "left": ["Zn", "HCl"],
+          "right": ["ZnCl2", "H2"],
+          "answer": [1, 2, 1, 1],
+          "explanation": "B1. Zn tạo muối ZnCl2 nên cần 2 nguyên tử Cl, tức là 2HCl. B2. Hai H còn lại ghép thành 1H2."
+        },
+        {
+          "id": "n3-l3-q5",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 100 ml dung dịch HCl 1M tác dụng vừa đủ với NaOH. Số mol HCl đã dùng là",
+          "options": ["0,01 mol", "0,10 mol", "1,00 mol", "10,0 mol"],
+          "answer": 1,
+          "explanation": "B1. Đổi 100 ml = 0,10 lít. B2. n = C x V = 1 x 0,10 = 0,10 mol."
+        },
+        {
+          "id": "n3-l3-q6",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 5,6 g Fe bằng HCl dư. Thể tích H2 thu được ở đkc là bao nhiêu lít?",
+          "answer": "2,479",
+          "acceptedAnswers": ["2.479", "2,4790", "2.4790"],
+          "placeholder": "Thể tích H2",
+          "explanation": "B1. Số mol Fe là 5,6 / 56 = 0,10 mol. B2. Phương trình: Fe + 2HCl -> FeCl2 + H2 nên nH2 = 0,10 mol. B3. VH2 = 0,10 x 24,79 = 2,479 lít."
+        },
+        {
+          "id": "n3-l3-q7",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan vừa đủ 9,3 g hỗn hợp Fe và Zn bằng HCl, thu được 3,7185 lít H2 (đkc). Khối lượng Fe trong hỗn hợp là",
+          "options": ["2,8 g", "5,6 g", "3,9 g", "4,2 g"],
+          "answer": 0,
+          "explanation": "B1. nH2 = 3,7185 / 24,79 = 0,15 mol nên tổng số mol Fe và Zn bằng 0,15. B2. Gọi x, y là số mol Fe, Zn: x + y = 0,15; 56x + 65y = 9,3. B3. Giải hệ được x = 0,05 mol. B4. mFe = 0,05 x 56 = 2,8 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l3-q8",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa MnO2 và HCl đặc.",
+          "left": ["MnO2", "HCl"],
+          "right": ["MnCl2", "Cl2", "H2O"],
+          "answer": [1, 4, 1, 1, 2],
+          "explanation": "B1. Mn giữ hệ số 1 ở hai vế. B2. Có 2O ở MnO2 nên đặt 2H2O ở sản phẩm. B3. Khi đó cần 4HCl để cung cấp 4H và 4Cl; 2Cl vào MnCl2, 2Cl còn lại tạo Cl2.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l3-q9",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Tính chất nào chỉ đặc trưng cho H2SO4 đặc mà H2SO4 loãng không có?",
+          "options": [
+            "Làm quỳ tím hoá đỏ",
+            "Tác dụng với NaOH",
+            "Tính háo nước mạnh",
+            "Tác dụng với oxide base"
+          ],
+          "answer": 2,
+          "explanation": "B1. H2SO4 loãng có tính chất chung của acid nên làm quỳ tím hoá đỏ, tác dụng với base và oxide base. B2. Tính háo nước mạnh là điểm nổi bật của H2SO4 đặc."
+        },
+        {
+          "id": "n3-l3-q10",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khí tạo thành khi đun nóng Cu với H2SO4 đặc là khí gì?",
+          "answer": "SO2",
+          "acceptedAnswers": ["lưu huỳnh đioxide", "sunfurơ"],
+          "placeholder": "Tên hoặc công thức khí",
+          "explanation": "B1. H2SO4 đặc là chất oxi hoá mạnh, oxi hoá Cu thành CuSO4. B2. Lưu huỳnh trong acid bị khử xuống SO2."
+        },
+        {
+          "id": "n3-l3-q11",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng giữa Cu và H2SO4 đặc nóng.",
+          "left": ["Cu", "H2SO4"],
+          "right": ["CuSO4", "SO2", "H2O"],
+          "answer": [1, 2, 1, 1, 2],
+          "explanation": "B1. Cu đi từ 0 lên +2 tạo CuSO4. B2. Một phân tử H2SO4 còn lại bị khử thành SO2. B3. Cân bằng H, O thu được 2H2SO4 và 2H2O."
+        },
+        {
+          "id": "n3-l3-q12",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan 9,8 g H2SO4 nguyên chất vào nước thu được 500 ml dung dịch. Nồng độ mol của dung dịch là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2", "0,20", "0.20"],
+          "placeholder": "Nồng độ mol",
+          "explanation": "B1. nH2SO4 = 9,8 / 98 = 0,10 mol. B2. Thể tích dung dịch là 0,50 lít. B3. CM = 0,10 / 0,50 = 0,20 M."
+        },
+        {
+          "id": "n3-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan hoàn toàn 6,5 g Zn bằng H2SO4 loãng vừa đủ. Khối lượng muối thu được là",
+          "options": ["14,1 g", "16,1 g", "16,5 g", "19,5 g"],
+          "answer": 1,
+          "explanation": "B1. nZn = 6,5 / 65 = 0,10 mol. B2. Phương trình: Zn + H2SO4 -> ZnSO4 + H2 nên nZnSO4 = 0,10 mol. B3. MZnSO4 = 65 + 96 = 161 g/mol. B4. mZnSO4 = 0,10 x 161 = 16,1 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        },
+        {
+          "id": "n3-l3-q14",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Đun nóng Cu với H2SO4 đặc dư, thu được 2,479 lít SO2 (đkc). Khối lượng Cu đã phản ứng là bao nhiêu gam?",
+          "answer": "6,4",
+          "acceptedAnswers": ["6.4", "6,40", "6.40"],
+          "placeholder": "Khối lượng Cu",
+          "explanation": "B1. nSO2 = 2,479 / 24,79 = 0,10 mol. B2. Theo phương trình Cu + 2H2SO4 -> CuSO4 + SO2 + 2H2O, tỉ lệ Cu : SO2 = 1 : 1. B3. nCu = 0,10 mol nên mCu = 0,10 x 64 = 6,4 g.",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh"
+        }
+      ]
+    }
+  ]
+}
