@@ -15,7 +15,7 @@ const CATEGORY_ARG = '--force';
 // - leaves borderline prompts as theory for later human review.
 const NUMBER_WITH_CHEMISTRY_UNIT_PATTERN =
   /\d+(?:[,.]\d+)?\s*(?:gam|g\b|kg\b|tấn\b|lít\b|lit\b|ml\b|dm3\b|cm3\b|m3\b|mol\/l\b|mol\b|M\b|%|đvC\b|amu\b|atm\b|kJ\b)/iu;
-const QUANTITATIVE_KEYWORD_PATTERN = /\b(?:đktc|hiệu suất|nồng độ)\b/iu;
+const QUANTITATIVE_KEYWORD_PATTERN = /\b(?:đktc|đkc|hiệu suất|nồng độ)\b/iu;
 const NUMBER_PATTERN = /\d/u;
 const MASS_OR_VOLUME_WITH_NUMBER_PATTERN =
   /(?:khối lượng|thể tích)[\s\S]{0,24}\d|\d[\s\S]{0,24}(?:khối lượng|thể tích)/iu;

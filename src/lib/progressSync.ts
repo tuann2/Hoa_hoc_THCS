@@ -504,10 +504,16 @@ export function mergeProgress(
       )
   );
 
-  const totalXp = Object.values(lessonProgress).reduce(
+  const recomputedXp = Object.values(lessonProgress).reduce(
     (sum, lesson) => sum + lesson.bestXp,
     0
   );
+  // FEATURE-015: ngay sau khi migrate snapshot cũ (17 unit) sang danh mục
+  // mới, lessonProgress bị reset về rỗng nên recomputedXp = 0. Giữ XP đã
+  // tích luỹ trước đó bằng cách lấy max với totalXp đã lưu ở mỗi phía; ở
+  // trạng thái ổn định bình thường, recomputedXp vốn đã bằng các giá trị
+  // này nên max() không đổi hành vi hiện có.
+  const totalXp = Math.max(recomputedXp, local.totalXp, server.totalXp);
   const localDate = local.lastStudyDate;
   const serverDate = server.lastStudyDate;
   const newerSource =

@@ -299,6 +299,29 @@ describe('progress sync', () => {
     expect(merged.lastStudyDate).toBe('2026-07-05');
   });
 
+  it('mergeProgress không zero hoá totalXp đã tích luỹ khi lessonProgress hai bên đều rỗng (ngay sau migrate danh mục mới)', () => {
+    // FEATURE-015: ngay sau khi migrateProgressState reset lessonProgress về
+    // rỗng (danh mục 17 unit cũ bị thay bằng danh mục mới), cả local và
+    // server đều chưa có lessonProgress nào trong danh mục mới. Nếu chỉ
+    // recompute totalXp từ tổng bestXp của lessonProgress, XP đã tích luỹ
+    // trước đó sẽ bị mất ngay khi đồng bộ lần đầu sau migrate.
+    const merged = mergeProgress(
+      createSnapshot({
+        totalXp: 150,
+        lessonProgress: {},
+        unlockedLessonIds: []
+      }),
+      createSnapshot({
+        totalXp: 150,
+        lessonProgress: {},
+        unlockedLessonIds: []
+      })
+    );
+
+    expect(merged.totalXp).toBe(150);
+    expect(merged.lessonProgress).toEqual({});
+  });
+
   it('mergeProgress lấy streakCurrent cao hơn khi hai bên có cùng lastStudyDate', () => {
     const merged = mergeProgress(
       createSnapshot({

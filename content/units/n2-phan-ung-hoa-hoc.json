@@ -1,0 +1,1646 @@
+{
+  "id": "n2-phan-ung-hoa-hoc",
+  "part": "inorganic",
+  "code": "N2",
+  "title": "Phản ứng hoá học",
+  "order": 2,
+  "description": "Phản ứng hoá học và các loại phản ứng cơ bản, mol – tỉ khối chất khí, dung dịch – nồng độ, định luật bảo toàn khối lượng, tính theo phương trình hoá học và tốc độ phản ứng.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n2-l1",
+      "title": "Phản ứng hoá học; các loại phản ứng",
+      "order": 1,
+      "summary": "Định nghĩa, điều kiện, dấu hiệu nhận biết phản ứng hoá học và bốn loại phản ứng cơ bản: hoá hợp, phân huỷ, thế, trao đổi.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l1-c1",
+          "heading": "Phản ứng hoá học",
+          "body": "Phản ứng hoá học là quá trình làm biến đổi chất này (chất tham gia phản ứng) thành chất khác (sản phẩm hay chất tạo thành).\nTrong phản ứng hoá học, chỉ có liên kết giữa các nguyên tử thay đổi, làm cho phân tử này biến đổi thành phân tử khác; số nguyên tử mỗi nguyên tố được giữ nguyên. Chú ý: nếu có đơn chất kim loại tham gia phản ứng thì sau phản ứng, nguyên tử kim loại phải liên kết với nguyên tố khác."
+        },
+        {
+          "id": "n2-l1-c2",
+          "heading": "Điều kiện và dấu hiệu nhận biết phản ứng hoá học",
+          "body": "Phản ứng xảy ra khi các chất tham gia tiếp xúc với nhau; một số trường hợp cần đun nóng, có mặt chất xúc tác.\nDấu hiệu nhận biết có chất mới tạo thành: đổi màu, sinh chất khí, tạo kết tủa, thay đổi nhiệt độ của môi trường (toả nhiệt hoặc thu nhiệt)."
+        },
+        {
+          "id": "n2-l1-c3",
+          "heading": "Phản ứng hoá hợp",
+          "body": "Phản ứng hoá hợp là phản ứng hoá học trong đó có một chất mới được tạo thành từ hai hay nhiều chất ban đầu (dạng A + B -> C).\nVí dụ: 2H2 + O2 -(t°)-> 2H2O; CaO + CO2 -> CaCO3."
+        },
+        {
+          "id": "n2-l1-c4",
+          "heading": "Phản ứng phân huỷ",
+          "body": "Phản ứng phân huỷ là phản ứng hoá học trong đó một chất sinh ra hai hay nhiều chất mới (dạng A -> B + C).\nVí dụ: 2KMnO4 -(t°)-> K2MnO4 + MnO2 + O2; CaCO3 -(t°)-> CaO + CO2.\nKí hiệu nhiệt độ, xúc tác ghi trên mũi tên phản ứng chỉ là điều kiện phản ứng, không phải chất tham gia, nên không làm thay đổi việc phân loại phản ứng."
+        },
+        {
+          "id": "n2-l1-c5",
+          "heading": "Phản ứng thế",
+          "body": "Phản ứng thế là phản ứng giữa đơn chất và hợp chất, trong đó nguyên tử của đơn chất thay thế nguyên tử của một nguyên tố khác trong hợp chất.\nVí dụ: Zn + 2HCl -> ZnCl2 + H2; Fe + CuSO4 -> FeSO4 + Cu.\nCách nhận diện nhanh: đơn chất + hợp chất -> đơn chất mới + hợp chất mới."
+        },
+        {
+          "id": "n2-l1-c6",
+          "heading": "Phản ứng trao đổi",
+          "body": "Phản ứng trao đổi là phản ứng hoá học trong đó hai hợp chất tham gia phản ứng trao đổi với nhau thành phần cấu tạo để tạo ra hợp chất mới.\nTrong dung dịch, phản ứng trao đổi xảy ra khi sản phẩm có kết tủa, có khí bay lên hoặc có nước tạo thành (chất điện li yếu). Nếu sau khi hoán đổi mọi chất vẫn tan và điện li mạnh, coi như không xảy ra phản ứng.\nVí dụ: BaCl2 + Na2SO4 -> BaSO4 + 2NaCl; Na2CO3 + 2HCl -> 2NaCl + H2O + CO2."
+        },
+        {
+          "id": "n2-l1-c7",
+          "heading": "Nâng cao: phân biệt bốn loại phản ứng",
+          "body": "Cách phân biệt nhanh bốn loại phản ứng cơ bản ở THCS:\n- Hoá hợp: nhiều chất -> một chất.\n- Phân huỷ: một chất -> nhiều chất.\n- Thế: đơn chất + hợp chất -> đơn chất mới + hợp chất mới.\n- Trao đổi: hợp chất + hợp chất -> hợp chất mới + hợp chất mới (không đơn chất nào tham gia hay tạo thành).\nMột phản ứng có thể được nhìn theo nhiều góc độ khác nhau — ví dụ H2 + CuO -(t°)-> Cu + H2O vừa là phản ứng thế (H2 thay thế Cu trong CuO) vừa liên quan quá trình nhường – nhận oxi (H2 chiếm oxi của CuO); ở mức phân loại theo bốn dạng cơ bản, phản ứng này được xếp là phản ứng thế vì đúng dạng đơn chất + hợp chất -> đơn chất mới + hợp chất mới."
+        },
+        {
+          "id": "n2-l1-c8",
+          "heading": "Nâng cao: lỗi hay gặp khi phân loại phản ứng",
+          "body": "Một số lỗi hay gặp: nhầm 2H2 + O2 -> 2H2O là phản ứng thế vì có đơn chất H2 tham gia — sai, vì vế trái không có hợp chất nào, đây là phản ứng hoá hợp; nhầm phản ứng trao đổi khi có đơn chất tham gia hay tạo thành — phản ứng trao đổi chỉ xảy ra giữa hai hợp chất, không có đơn chất nào; cho rằng mọi cặp hợp chất trộn vào nhau đều xảy ra phản ứng trao đổi — phản ứng chỉ thực sự xảy ra khi sản phẩm có kết tủa, khí hoặc nước."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong phản ứng hoá học, đại lượng nào của mỗi nguyên tố được giữ nguyên?",
+          "options": [
+            "số nguyên tử",
+            "số phân tử của chất",
+            "liên kết giữa các nguyên tử",
+            "khối lượng phân tử của chất tham gia"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong phản ứng hoá học chỉ có liên kết giữa các nguyên tử thay đổi. B2. Số nguyên tử mỗi nguyên tố được giữ nguyên, đây là cơ sở của định luật bảo toàn khối lượng."
+        },
+        {
+          "id": "n2-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dấu hiệu nào sau đây KHÔNG phải dấu hiệu nhận biết có phản ứng hoá học xảy ra?",
+          "options": [
+            "thay đổi hình dạng vật lí (đập vụn, làm chảy)",
+            "đổi màu",
+            "sinh chất khí",
+            "tạo kết tủa"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đổi màu, sinh khí, tạo kết tủa đều cho thấy có chất mới xuất hiện. B2. Thay đổi hình dạng (đập vụn, làm nóng chảy) chỉ là biến đổi vật lí, không sinh ra chất mới nên không phải dấu hiệu của phản ứng hoá học."
+        },
+        {
+          "id": "n2-l1-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phản ứng hoá học trong đó một chất sinh ra hai hay nhiều chất mới được gọi là phản ứng gì?",
+          "answer": "phân huỷ",
+          "acceptedAnswers": ["phản ứng phân huỷ"],
+          "placeholder": "Nhập tên loại phản ứng",
+          "explanation": "B1. Theo định nghĩa, phản ứng phân huỷ có dạng một chất -> nhiều chất. B2. Ví dụ: CaCO3 -(t°)-> CaO + CO2."
+        },
+        {
+          "id": "n2-l1-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phản ứng nào sau đây là phản ứng hoá hợp?",
+          "options": [
+            "2H2 + O2 -> 2H2O",
+            "CaCO3 -> CaO + CO2",
+            "Zn + 2HCl -> ZnCl2 + H2",
+            "BaCl2 + Na2SO4 -> BaSO4 + 2NaCl"
+          ],
+          "answer": 0,
+          "explanation": "B1. 2H2 + O2 -> 2H2O có hai chất tham gia tạo thành một chất mới duy nhất nên là phản ứng hoá hợp. B2. Ba phản ứng còn lại lần lượt là phân huỷ, thế và trao đổi."
+        },
+        {
+          "id": "n2-l1-q5",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các phản ứng thế.",
+          "options": [
+            "Zn + 2HCl -> ZnCl2 + H2",
+            "Fe + CuSO4 -> FeSO4 + Cu",
+            "2H2 + O2 -> 2H2O",
+            "CaCO3 -> CaO + CO2"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Zn + 2HCl -> ZnCl2 + H2 và Fe + CuSO4 -> FeSO4 + Cu đều có đơn chất thay thế nguyên tố trong hợp chất nên là phản ứng thế. B2. 2H2 + O2 -> 2H2O là phản ứng hoá hợp; CaCO3 -> CaO + CO2 là phản ứng phân huỷ."
+        },
+        {
+          "id": "n2-l1-q6",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phản ứng trao đổi trong dung dịch xảy ra khi sản phẩm có đặc điểm nào?",
+          "options": [
+            "kết tủa, chất khí hoặc nước",
+            "chỉ có kết tủa",
+            "chỉ có chất khí",
+            "luôn toả nhiệt mạnh"
+          ],
+          "answer": 0,
+          "explanation": "B1. Phản ứng trao đổi giữa hai hợp chất trong dung dịch chỉ thực sự xảy ra khi sản phẩm tách khỏi dung dịch dưới dạng kết tủa, chất khí hoặc chất điện li yếu như nước. B2. Nếu mọi chất sau phản ứng vẫn tan và điện li mạnh thì coi như không xảy ra phản ứng."
+        },
+        {
+          "id": "n2-l1-q7",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Kí hiệu nhiệt độ (t°) hoặc chất xúc tác ghi trên mũi tên phản ứng có ý nghĩa gì?",
+          "options": [
+            "chỉ điều kiện phản ứng, không phải chất tham gia",
+            "là một chất tham gia phản ứng",
+            "là sản phẩm phụ của phản ứng",
+            "làm thay đổi công thức chất tham gia"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nhiệt độ, ánh sáng, chất xúc tác ghi trên mũi tên chỉ là điều kiện để phản ứng xảy ra. B2. Chúng không phải chất tham gia hay sản phẩm nên không được đưa vào cân bằng phương trình hay tính bảo toàn khối lượng."
+        },
+        {
+          "id": "n2-l1-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phản ứng nào sau đây là phản ứng phân huỷ?",
+          "options": [
+            "2KMnO4 -(t°)-> K2MnO4 + MnO2 + O2",
+            "Fe + CuSO4 -> FeSO4 + Cu",
+            "2H2 + O2 -> 2H2O",
+            "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2"
+          ],
+          "answer": 0,
+          "explanation": "B1. 2KMnO4 -(t°)-> K2MnO4 + MnO2 + O2 là một chất sinh ra ba chất mới nên là phản ứng phân huỷ. B2. Ba phản ứng còn lại lần lượt là phản ứng thế, phản ứng hoá hợp và phản ứng trao đổi."
+        },
+        {
+          "id": "n2-l1-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phản ứng trao đổi.",
+          "options": [
+            "BaCl2 + Na2SO4 -> BaSO4 + 2NaCl",
+            "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+            "Zn + 2HCl -> ZnCl2 + H2",
+            "CaCO3 -(t°)-> CaO + CO2"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Hai phản ứng đầu đều là hợp chất + hợp chất -> hợp chất mới + hợp chất mới, có sản phẩm là kết tủa (BaSO4) hoặc khí và nước (CO2, H2O) nên là phản ứng trao đổi. B2. Zn + 2HCl là phản ứng thế; CaCO3 -(t°)-> CaO + CO2 là phản ứng phân huỷ."
+        },
+        {
+          "id": "n2-l1-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng hoá hợp: CaO + CO2 -> CaCO3.",
+          "left": ["CaO", "CO2"],
+          "right": ["CaCO3"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. Mỗi chất trong phản ứng này có tỉ lệ mol 1:1:1. B2. Vế trái có 1 Ca, 1 C, 3 O (1 từ CaO, 2 từ CO2); vế phải CaCO3 cũng có 1 Ca, 1 C, 3 O nên phương trình đã cân bằng với hệ số 1."
+        },
+        {
+          "id": "n2-l1-q11",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng phân huỷ: CaCO3 -> CaO + CO2.",
+          "left": ["CaCO3"],
+          "right": ["CaO", "CO2"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. CaCO3 có 1 Ca, 1 C, 3 O. B2. CaO (1 Ca, 1 O) và CO2 (1 C, 2 O) cộng lại đúng bằng 1 Ca, 1 C, 3 O nên phương trình đã cân bằng với hệ số 1."
+        },
+        {
+          "id": "n2-l1-q12",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phản ứng H2 + CuO -(t°)-> Cu + H2O được xếp vào loại phản ứng nào theo bốn dạng cơ bản?",
+          "options": [
+            "phản ứng thế",
+            "phản ứng hoá hợp",
+            "phản ứng phân huỷ",
+            "phản ứng trao đổi"
+          ],
+          "answer": 0,
+          "explanation": "B1. Phản ứng có dạng đơn chất (H2) + hợp chất (CuO) -> đơn chất mới (Cu) + hợp chất mới (H2O). B2. Đây đúng dạng của phản ứng thế, dù H2 cũng đóng vai trò chiếm oxi của CuO."
+        },
+        {
+          "id": "n2-l1-q13",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Trộn dung dịch NaCl với dung dịch KNO3, không quan sát thấy hiện tượng gì. Nhận xét nào đúng?",
+          "options": [
+            "không xảy ra phản ứng trao đổi vì sản phẩm hoán đổi (NaNO3, KCl) đều tan và điện li mạnh",
+            "đây vẫn là phản ứng trao đổi xảy ra bình thường",
+            "đây là phản ứng phân huỷ",
+            "đây là phản ứng hoá hợp"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nếu hoán đổi thành phần, sản phẩm là NaNO3 và KCl, cả hai đều tan tốt và điện li mạnh trong nước. B2. Vì không có kết tủa, khí hay nước tạo thành nên phản ứng trao đổi không thực sự xảy ra."
+        },
+        {
+          "id": "n2-l1-q14",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phát biểu đúng khi phân loại bốn loại phản ứng cơ bản.",
+          "options": [
+            "phản ứng thế có đơn chất tham gia và đơn chất tạo thành",
+            "phản ứng trao đổi không có đơn chất nào tham gia hay tạo thành",
+            "phản ứng hoá hợp luôn cần đun nóng",
+            "phản ứng phân huỷ tạo ra từ hai chất mới trở lên từ một chất ban đầu"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Phản ứng thế đúng là có đơn chất tham gia và đơn chất tạo thành; phản ứng trao đổi đúng là chỉ giữa hai hợp chất; phản ứng phân huỷ đúng là một chất sinh ra từ hai chất mới trở lên. B2. Phản ứng hoá hợp không nhất thiết cần đun nóng (nhiều phản ứng hoá hợp xảy ra ở nhiệt độ thường), nên phát biểu này sai."
+        },
+        {
+          "id": "n2-l1-q15",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Cho các phản ứng: (1) Fe + 2HCl -> FeCl2 + H2; (2) 2Na + 2H2O -> 2NaOH + H2; (3) AgNO3 + NaCl -> AgCl + NaNO3; (4) 2KClO3 -(t°, MnO2)-> 2KCl + 3O2. Số phản ứng thuộc loại phản ứng thế là",
+          "options": ["2", "1", "3", "4"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. (1) và (2) đều có dạng đơn chất kim loại + hợp chất -> đơn chất mới (H2) + hợp chất mới nên là phản ứng thế. B2. (3) là phản ứng trao đổi (hợp chất + hợp chất, tạo kết tủa AgCl); (4) là phản ứng phân huỷ (một chất tạo ra hai chất mới). B3. Vậy có 2 phản ứng thế."
+        },
+        {
+          "id": "n2-l1-q16",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng trao đổi: Al2(SO4)3 + BaCl2 -> AlCl3 + BaSO4.",
+          "left": ["Al2(SO4)3", "BaCl2"],
+          "right": ["AlCl3", "BaSO4"],
+          "answer": [1, 3, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Al2(SO4)3 có 3 nhóm SO4 nên cần 3BaSO4, từ đó cần 3BaCl2 (6 Cl). B2. Sáu Cl ở vế phải cần 2AlCl3, khớp với 2Al có sẵn trong Al2(SO4)3. B3. Phương trình cân bằng: Al2(SO4)3 + 3BaCl2 -> 2AlCl3 + 3BaSO4."
+        },
+        {
+          "id": "n2-l1-q17",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Trong bốn phản ứng: 2KMnO4 -(t°)-> K2MnO4 + MnO2 + O2; CaCO3 -(t°)-> CaO + CO2; 2KClO3 -(t°,MnO2)-> 2KCl + 3O2; Fe + 2HCl -> FeCl2 + H2 — phản ứng nào KHÔNG phải phản ứng phân huỷ?",
+          "options": [
+            "2KMnO4 -(t°)-> K2MnO4 + MnO2 + O2",
+            "CaCO3 -(t°)-> CaO + CO2",
+            "2KClO3 -(t°,MnO2)-> 2KCl + 3O2",
+            "Fe + 2HCl -> FeCl2 + H2"
+          ],
+          "answer": 3,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Ba phản ứng đầu đều có dạng một chất sinh ra hai hay nhiều chất mới nên là phản ứng phân huỷ. B2. Fe + 2HCl -> FeCl2 + H2 có dạng đơn chất + hợp chất -> đơn chất mới + hợp chất mới, thuộc loại phản ứng thế, không phải phân huỷ."
+        },
+        {
+          "id": "n2-l1-q18",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Cho các phản ứng: (1) Zn + 2HCl -> ZnCl2 + H2; (2) 2Al + 3CuSO4 -> Al2(SO4)3 + 3Cu; (3) BaCl2 + H2SO4 -> BaSO4 + 2HCl; (4) 2Fe(OH)3 -(t°)-> Fe2O3 + 3H2O. Chọn các phản ứng thuộc loại phản ứng thế.",
+          "options": [
+            "Zn + 2HCl -> ZnCl2 + H2",
+            "2Al + 3CuSO4 -> Al2(SO4)3 + 3Cu",
+            "BaCl2 + H2SO4 -> BaSO4 + 2HCl",
+            "2Fe(OH)3 -(t°)-> Fe2O3 + 3H2O"
+          ],
+          "answers": [0, 1],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. (1) và (2) đều có kim loại (đơn chất) thay thế kim loại khác trong hợp chất, đúng dạng phản ứng thế. B2. (3) là phản ứng trao đổi giữa hai hợp chất (tạo kết tủa BaSO4); (4) là phản ứng phân huỷ (một chất tạo hai chất mới)."
+        }
+      ]
+    },
+    {
+      "id": "n2-l2",
+      "title": "Mol – khối lượng mol – thể tích mol khí; tỉ khối chất khí",
+      "order": 2,
+      "summary": "Khái niệm mol, công thức chuyển đổi số mol – khối lượng – thể tích khí ở đkc (25°C, 1 bar), và tỉ khối chất khí.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l2-c1",
+          "heading": "Mol",
+          "body": "Mol là lượng chất chứa 6,022 x 10^23 hạt vi mô (nguyên tử, phân tử...), gọi là số Avogadro (N_A).\nSố mol kí hiệu là n."
+        },
+        {
+          "id": "n2-l2-c2",
+          "heading": "Khối lượng mol",
+          "body": "Khối lượng mol (M) là khối lượng của 1 mol chất, tính bằng gam, có trị số bằng nguyên tử khối hoặc phân tử khối của chất.\nCông thức: n = m / M, suy ra m = n x M."
+        },
+        {
+          "id": "n2-l2-c3",
+          "heading": "Thể tích mol khí và tỉ khối",
+          "body": "Ở điều kiện chuẩn (đkc: 25°C, 1 bar), 1 mol chất khí bất kì chiếm thể tích 24,79 lít.\nCông thức: n = V / 24,79, suy ra V = n x 24,79.\nTỉ khối của khí A so với khí B: d(A/B) = M_A / M_B."
+        },
+        {
+          "id": "n2-l2-c4",
+          "heading": "Nâng cao: Mol là cầu nối giữa vi mô và vĩ mô",
+          "body": "Mol nên được xem là cầu nối: từ số hạt N suy ra n = N/N_A, từ n suy ra khối lượng m = n×M hoặc thể tích khí ở đkc V = n×24,79. Khi nói 1 mol chất chứa 6,022×10^23 hạt, phải xác định đúng loại hạt: nguyên tử với đơn chất kim loại, phân tử với O2/CO2/H2O, hoặc đơn vị công thức với muối ion như NaCl — 1 mol O2 có 6,022×10^23 phân tử O2 nhưng có 2×6,022×10^23 nguyên tử O; sai loại hạt sẽ làm đáp số lệch theo hệ số công thức.\nTrong phương trình hoá học đã cân bằng, hệ số cho biết tỉ lệ số mol (và tỉ lệ số phân tử/nguyên tử), KHÔNG phải tỉ lệ khối lượng — muốn tìm khối lượng vẫn phải đổi qua mol rồi nhân với M. Nếu có n mol phân tử AxBy thì số mol nguyên tử A là x×n, số mol nguyên tử B là y×n — ví dụ 0,2 mol H2SO4 chứa 0,4 mol H, 0,2 mol S, 0,8 mol O, giúp tính nhanh khối lượng từng nguyên tố."
+        },
+        {
+          "id": "n2-l2-c5",
+          "heading": "Nâng cao: Mol là nút trung tâm khi đổi m – n – V, tránh lỗi công thức",
+          "body": "Không nên học các công thức theo một chiều riêng lẻ — hầu hết bài tính đều đi qua số mol: m→n bằng n=m/M; V khí đkc→n bằng n=V/24,79; rồi từ n đổi sang đại lượng cần tìm. M của một chất tinh khiết chỉ phụ thuộc công thức hoá học, không phụ thuộc lượng mẫu (9 g H2O là 0,5 mol, 18 g H2O là 1 mol, nhưng M(H2O) vẫn là 18 g/mol) — nếu tính được M=m/n của một mẫu chất, có thể dùng M để nhận dạng chất (M=44 g/mol có thể là CO2 hoặc N2O, cần thêm dữ kiện để kết luận duy nhất).\nVới đơn chất phân tử, chú ý phân tử gồm mấy nguyên tử: M(O)=16 là khối lượng mol NGUYÊN TỬ oxi, còn M(O2)=32 là khối lượng mol PHÂN TỬ khí oxi — nhầm O với O2 (hay H với H2) là lỗi rất hay gặp khi tính n=m/M.\nCác công thức mol rất nhạy với đơn vị: khối lượng phải tính bằng gam, thể tích khí theo công thức 24,79 phải tính bằng lít (2479 ml đkc phải đổi thành 2,479 lít rồi mới tính n=2,479/24,79=0,1 mol). Tránh đảo ngược công thức — tự kiểm tra bằng đơn vị: V/24,79 có đơn vị lít/(lít/mol)=mol (đúng), còn V×24,79 không cho đơn vị mol; n×M có đơn vị mol×g/mol=g nên đó là công thức tính khối lượng, không phải n=V×24,79 hay m=n/M."
+        },
+        {
+          "id": "n2-l2-c6",
+          "heading": "Nâng cao: Thể tích mol khí — điều kiện và tỉ lệ",
+          "body": "Công thức V=n×24,79 ở đkc CHỈ dùng cho chất khí — không dùng cho nước lỏng, kim loại rắn hay dung dịch. Giá trị 24,79 lít/mol gắn với đkc theo quy ước GDPT 2018 (25°C, 1 bar); nếu đề nói điều kiện khác mà không cho thể tích mol tương ứng, không được tự ý dùng 24,79 — ví dụ đề cho ở điều kiện đó 1 mol khí chiếm 24 lít thì phải dùng n=V/24 cho dữ kiện đang xét.\nỞ cùng nhiệt độ và áp suất, các khí có số mol bằng nhau sẽ có thể tích bằng nhau dù nặng hay nhẹ khác nhau — tỉ lệ thể tích khí cũng chính là tỉ lệ số mol khí (V_A/V_B = n_A/n_B khi đo cùng điều kiện). Đây là cơ sở để đổi phần trăm thể tích hỗn hợp khí thành phần trăm số mol."
+        },
+        {
+          "id": "n2-l2-c7",
+          "heading": "Nâng cao: Tỉ khối chất khí",
+          "body": "d(A/B) = M_A/M_B có thể hiểu là: cùng thể tích và cùng điều kiện, khí A nặng gấp d lần khí B. Nếu d(A/B) > 1 thì A nặng hơn B; nếu d(A/B) < 1 thì A nhẹ hơn B — cách hiểu này giúp giải nhanh bài hỏi khí nào bay lên/tích ở dưới, hoặc so sánh khối lượng hai bình khí cùng thể tích.\nKhi so với không khí, thường lấy M không khí xấp xỉ 29 g/mol: d(A/kk)=M_A/29, suy ra M_A=29×d(A/kk). Khí có M>29 thường nặng hơn không khí (CO2, SO2, Cl2); khí có M<29 thường nhẹ hơn (H2, CH4, NH3).\nTìm M từ tỉ khối: biết d(A/H2) thì nhân 2 để được M_A (vì M(H2)=2); biết d(A/O2) thì nhân 32; biết d(A/kk) thì nhân 29. Sau khi có M, cần đối chiếu với công thức hoặc dữ kiện phản ứng — cùng một M có thể ứng nhiều chất khác nhau nên không kết luận chỉ từ một con số nếu đề còn thiếu dữ kiện."
+        },
+        {
+          "id": "n2-l2-c8",
+          "heading": "Nâng cao: Hỗn hợp khí — khối lượng mol trung bình và tỉ khối hỗn hợp",
+          "body": "Với hỗn hợp khí, M trung bình = tổng khối lượng hỗn hợp / tổng số mol hỗn hợp = (n1M1 + n2M2 + ...)/(n1 + n2 + ...); M trung bình luôn nằm giữa M nhỏ nhất và M lớn nhất của các khí thành phần. Trong hỗn hợp đo cùng điều kiện, phần trăm thể tích bằng phần trăm số mol — ví dụ hỗn hợp 40% CO2 và 60% O2 theo thể tích: M trung bình = 0,40×44 + 0,60×32 = 36,8 g/mol. Nếu các khí có thể tích bằng nhau (cùng điều kiện) thì số mol bằng nhau, M trung bình là trung bình cộng — trộn cùng thể tích CO2 và O2 thì M trung bình = (44+32)/2 = 38 g/mol.\nPhần trăm khối lượng KHÔNG giống phần trăm thể tích: hỗn hợp 50% H2 và 50% CO2 theo thể tích có số mol bằng nhau, nhưng khối lượng CO2 lớn hơn nhiều vì M(CO2)=44 còn M(H2)=2 — muốn tính khối lượng từng khí phải đổi từ % thể tích sang mol rồi nhân M.\nTỉ khối hỗn hợp X so với khí B: d(X/B) = M trung bình của X / M_B — nếu biết d(X/H2)=15 thì M trung bình = 15×2 = 30 g/mol, từ đó lập phương trình tìm tỉ lệ mol các khí. M trung bình càng gần M của khí nào thì khí đó chiếm tỉ lệ mol càng lớn (M trung bình 35 giữa CO2=44 và O2=32, gần 32 hơn nên O2 nhiều mol hơn). Luôn kiểm tra đáp số hợp lí: M trung bình của hỗn hợp chỉ gồm CO2 và O2 không thể nhỏ hơn 32 hoặc lớn hơn 44."
+        },
+        {
+          "id": "n2-l2-c9",
+          "heading": "Nâng cao: Bài toán phản ứng khí — đổi về mol trước khi dùng tỉ lệ",
+          "body": "Nếu các khí đều ở cùng điều kiện, có thể dùng tỉ lệ thể tích như tỉ lệ mol trong phương trình. Nhưng khi đề cho lẫn khối lượng, thể tích và tỉ khối, cách chắc chắn nhất là đổi tất cả đại lượng cần thiết về mol trước, dùng tỉ lệ hệ số trong phương trình để tìm số mol chất cần, rồi mới đổi kết quả về khối lượng hoặc thể tích theo yêu cầu đề bài. Ví dụ: từ khối lượng CH4 đã cho, đổi ra nCH4, dùng phương trình cháy để suy ra nCO2, rồi đổi nCO2 sang thể tích ở đkc bằng V=n×24,79."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "1 mol chất chứa bao nhiêu hạt vi mô (nguyên tử hoặc phân tử)?",
+          "options": ["6,022 x 10^23", "24,79", "1", "12"],
+          "answer": 0,
+          "explanation": "B1. Đây là số Avogadro, kí hiệu N_A. B2. Mọi chất, 1 mol đều chứa 6,022 x 10^23 hạt vi mô."
+        },
+        {
+          "id": "n2-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Khối lượng mol của nước H2O là bao nhiêu g/mol?",
+          "options": ["18", "16", "17", "20"],
+          "answer": 0,
+          "explanation": "B1. Phân tử khối H2O = 2 x 1 + 16 = 18. B2. Khối lượng mol có trị số bằng phân tử khối nên M(H2O) = 18 g/mol."
+        },
+        {
+          "id": "n2-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các công thức đúng liên quan đến mol.",
+          "options": [
+            "n = m/M",
+            "V = n x 24,79 (ở đkc)",
+            "n = V x 24,79",
+            "m = n/M"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Công thức n = m/M và V = n x 24,79 (đkc) đều đúng. B2. n = V x 24,79 và m = n/M là công thức sai (đảo ngược phép tính)."
+        },
+        {
+          "id": "n2-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Ở điều kiện chuẩn (đkc: 25°C, 1 bar), 1 mol khí bất kì chiếm thể tích bao nhiêu lít?",
+          "answer": "24,79",
+          "acceptedAnswers": ["24.79"],
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Đây là giá trị quy ước ở đkc theo GDPT 2018 (25°C, 1 bar). B2. Thể tích mol khí ở đkc là 24,79 lít."
+        },
+        {
+          "id": "n2-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Số mol của 8 g khí oxi O2 (M = 32 g/mol) là",
+          "options": ["0,25 mol", "0,5 mol", "2 mol", "4 mol"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức n = m/M. B2. n = 8/32 = 0,25 mol."
+        },
+        {
+          "id": "n2-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Số mol của 12,395 lít khí CO2 ở đkc là",
+          "options": ["0,5 mol", "1 mol", "0,25 mol", "2 mol"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức n = V/24,79. B2. n = 12,395/24,79 = 0,5 mol."
+        },
+        {
+          "id": "n2-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Khối lượng của 0,2 mol NaOH (M = 40 g/mol) là",
+          "options": ["8 g", "4 g", "40 g", "80 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức m = n x M. B2. m = 0,2 x 40 = 8 g."
+        },
+        {
+          "id": "n2-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Thể tích ở đkc của 0,5 mol khí H2 là bao nhiêu lít?",
+          "answer": "12,395",
+          "acceptedAnswers": ["12.395"],
+          "placeholder": "Nhập số lít",
+          "explanation": "B1. Áp dụng công thức V = n x 24,79. B2. V = 0,5 x 24,79 = 12,395 lít."
+        },
+        {
+          "id": "n2-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Tỉ khối của khí CO2 (M = 44) so với khí H2 (M = 2) là",
+          "options": ["22", "44", "2", "11"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức d(A/B) = M_A/M_B. B2. d(CO2/H2) = 44/2 = 22."
+        },
+        {
+          "id": "n2-l2-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các khí nặng hơn không khí (M không khí xấp xỉ 29).",
+          "options": ["CO2", "H2", "SO2", "CH4"],
+          "answers": [0, 2],
+          "explanation": "B1. M(CO2) = 44 và M(SO2) = 64, đều lớn hơn 29 nên nặng hơn không khí. B2. M(H2) = 2 và M(CH4) = 16, đều nhỏ hơn 29 nên nhẹ hơn không khí."
+        },
+        {
+          "id": "n2-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hỗn hợp khí X gồm 0,2 mol CO2 và 0,2 mol O2. Khối lượng mol trung bình của X là",
+          "options": ["38", "44", "32", "76"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. mCO2 = 0,2 x 44 = 8,8 g; mO2 = 0,2 x 32 = 6,4 g. B2. Tổng khối lượng = 15,2 g; tổng số mol = 0,4 mol. B3. Khối lượng mol trung bình = 15,2/0,4 = 38 g/mol."
+        },
+        {
+          "id": "n2-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Một hỗn hợp khí có tỉ khối so với H2 bằng 15. Khối lượng mol trung bình của hỗn hợp là bao nhiêu g/mol?",
+          "answer": "30",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức M = d x M_H2. B2. M = 15 x 2 = 30 g/mol."
+        },
+        {
+          "id": "n2-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 3,2 g khí metan CH4 (M = 16), thu được V lít khí CO2 (đkc). Giá trị của V là",
+          "options": ["4,958 lít", "2,479 lít", "9,916 lít", "7,437 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCH4 = 3,2/16 = 0,2 mol. B2. Phương trình CH4 + 2O2 -> CO2 + 2H2O có tỉ lệ CH4 : CO2 = 1 : 1 nên nCO2 = 0,2 mol. B3. V = 0,2 x 24,79 = 4,958 lít."
+        }
+      ]
+    },
+    {
+      "id": "n2-l3",
+      "title": "Dung dịch; độ tan",
+      "order": 3,
+      "summary": "Dung môi, chất tan, dung dịch bão hoà – chưa bão hoà, cách làm chất rắn tan nhanh hơn, độ tan và các yếu tố ảnh hưởng đến độ tan.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l3-c1",
+          "heading": "Dung dịch, chất tan, dung môi",
+          "body": "Dung dịch là hỗn hợp đồng nhất của dung môi và chất tan. Dung dịch bão hoà: không thể hoà tan thêm chất tan ở nhiệt độ đó. Dung dịch chưa bão hoà: vẫn có thể hoà tan thêm chất tan."
+        },
+        {
+          "id": "n2-l3-c1b",
+          "heading": "Cách làm quá trình hoà tan chất rắn diễn ra nhanh hơn",
+          "body": "Khuấy dung dịch: tạo ra sự tiếp xúc mới giữa chất rắn và các phân tử nước.\nĐun nóng dung dịch: các phân tử chuyển động nhanh hơn.\nNghiền nhỏ chất tan: tăng diện tích tiếp xúc."
+        },
+        {
+          "id": "n2-l3-c2",
+          "heading": "Độ tan",
+          "body": "Độ tan (S) là khối lượng chất tan tối đa có thể tan trong 100 g dung môi (thường là nước) để tạo thành dung dịch bão hoà ở một nhiệt độ xác định.\nCông thức: S = (khối lượng chất tan / khối lượng dung môi) x 100."
+        },
+        {
+          "id": "n2-l3-c3",
+          "heading": "Các yếu tố ảnh hưởng đến độ tan",
+          "body": "Nhiệt độ: đa số chất rắn tan nhiều hơn khi nhiệt độ tăng; ngược lại, chất khí tan ít hơn khi nhiệt độ tăng.\nÁp suất: độ tan của chất khí tăng khi áp suất tăng; áp suất hầu như không ảnh hưởng đến độ tan của chất rắn, chất lỏng."
+        },
+        {
+          "id": "n2-l3-c4",
+          "heading": "Nâng cao: Công thức liên hệ giữa độ tan và nồng độ % của dung dịch bão hoà",
+          "body": "Với dung dịch bão hoà ở một nhiệt độ xác định, nếu độ tan là S (g/100 g nước) thì trong 100 g nước có S gam chất tan, tổng khối lượng dung dịch là (100+S) gam. Do đó nồng độ phần trăm của dung dịch bão hoà tính theo công thức: C% = S/(100+S) x 100.\nVí dụ: NaCl có độ tan 36 g ở 20 độ C thì dung dịch NaCl bão hoà ở 20 độ C có nồng độ C% = 36/(100+36) x 100 ≈ 26,5%.\nBiến đổi ngược lại, từ C% suy ra S: S = 100 x C%/(100 - C%). Ví dụ: hoà tan 50 g muối X vào 200 g nước ở một nhiệt độ, thu được đúng dung dịch bão hoà. Khối lượng dung dịch là 50+200=250 g nên C% = 50/250 x 100 = 20%. Tính theo định nghĩa độ tan: S = 50/200 x 100 = 25 g, khớp với công thức ngược S = 100x20/(100-20) = 25 g.\nLưu ý: công thức này CHỈ áp dụng cho dung dịch bão hoà; với dung dịch chưa bão hoà, phải tính C% trực tiếp theo khối lượng chất tan và khối lượng dung dịch thực tế, không dùng công thức trên. Dạng bài có thể cho C% để suy ra S, hoặc ngược lại, nên cần nhớ cả hai chiều biến đổi."
+        },
+        {
+          "id": "n2-l3-c5",
+          "heading": "Nâng cao: Đọc và so sánh đồ thị độ tan theo nhiệt độ",
+          "body": "Đồ thị độ tan biểu diễn độ tan S (trục tung, g/100 g nước) theo nhiệt độ (trục hoành, độ C). Với đa số chất rắn, đường biểu diễn đi lên; độ dốc của đường cho biết chất đó nhạy với nhiệt độ nhiều hay ít.\nVí dụ minh hoạ: NaCl có độ tan tăng chậm theo nhiệt độ (khoảng 36 g ở 20 độ C, khoảng 39 g ở 100 độ C, đường gần như nằm ngang); KNO3 tăng rất nhanh (khoảng 13 g ở 0 độ C, 32 g ở 20 độ C, có thể lên tới hơn 200 g ở gần 100 độ C, đường dốc đứng).\nHai đường biểu diễn độ tan của hai chất khác nhau có thể cắt nhau tại một nhiệt độ nào đó, tại điểm cắt hai chất có cùng độ tan; đây là dữ kiện thường gặp trong dạng bài đọc đồ thị của đề HSG."
+        },
+        {
+          "id": "n2-l3-c6",
+          "heading": "Nâng cao: Trường hợp đặc biệt — độ tan giảm khi nhiệt độ tăng",
+          "body": "Không phải mọi chất rắn đều tan nhiều hơn khi đun nóng. Ca(OH)2 (vôi tôi) là ví dụ điển hình đi ngược quy luật chung: độ tan của Ca(OH)2 GIẢM khi nhiệt độ tăng (khoảng 0,17 g/100 g nước ở 20 độ C, giảm còn khoảng 0,08-0,09 g/100 g nước ở gần 100 độ C).\nVì vậy, muốn thu được dung dịch nước vôi trong có nồng độ Ca(OH)2 cao nhất, nên hoà tan ở nhiệt độ THẤP (nước lạnh), không phải đun nóng như đa số muối/đường khác.\nĐây là một câu hỏi bẫy quen thuộc trong đề HSG: nếu không nhớ ngoại lệ này, học sinh dễ trả lời sai theo quy luật chung 'nhiệt độ tăng thì độ tan chất rắn tăng'."
+        },
+        {
+          "id": "n2-l3-c7",
+          "heading": "Nâng cao: Ảnh hưởng của nhiệt độ và áp suất đến độ tan của chất khí",
+          "body": "Áp suất khí trên bề mặt chất lỏng càng tăng thì độ tan của chất khí trong chất lỏng đó càng tăng; áp suất giảm thì độ tan khí giảm. Ứng dụng quen thuộc: nước ngọt có ga được nạp CO2 dưới áp suất cao trong chai/lon kín nên hoà tan được nhiều CO2. Khi mở nắp, áp suất giảm đột ngột về áp suất khí quyển nên độ tan CO2 giảm mạnh, khí CO2 thoát ra ngoài tạo bọt sủi.\nKhác với chất rắn, nhiệt độ tăng làm độ tan của CHẤT KHÍ trong nước GIẢM (không tăng). Ví dụ: nước càng nóng thì lượng oxi hoà tan trong nước càng ít, đó là lý do cá thường nổi lên mặt nước để thở khi nước bị đun nóng hoặc vào mùa hè oi bức, vì lượng oxi hoà tan giảm khiến cá thiếu oxi.\nLưu ý: áp suất hầu như không ảnh hưởng đến độ tan chất rắn và chất lỏng, chỉ ảnh hưởng đáng kể đến độ tan chất khí."
+        },
+        {
+          "id": "n2-l3-c8",
+          "heading": "Nâng cao: Trạng thái bão hoà, chưa bão hoà và quá bão hoà của dung dịch",
+          "body": "Dung dịch quá bão hoà là dung dịch chứa lượng chất tan NHIỀU HƠN mức bão hoà thông thường ở nhiệt độ đó, đây là trạng thái không bền (giả bền). Cách tạo: hoà tan chất tan tới bão hoà ở nhiệt độ cao, sau đó làm nguội từ từ, thật cẩn thận (không khuấy mạnh, không có mầm tinh thể hay bụi bẩn) để chất tan dư không kịp kết tinh ra ngay. Chỉ cần một tác động nhỏ (thả một mầm tinh thể chất tan vào, khuấy mạnh, hoặc va chạm) là phần chất tan dư sẽ kết tinh nhanh chóng trở lại trạng thái bão hoà bền, đây là hiện tượng dùng để giải thích một số thí nghiệm 'kết tinh tức thời' quen thuộc.\nVới dung dịch chưa bão hoà, khối lượng chất tan hiện có luôn nhỏ hơn mức tối đa mà độ tan cho phép ở nhiệt độ đó. Khối lượng cần thêm vào (giữ nguyên khối lượng dung môi) = khối lượng chất tan tối đa theo độ tan trừ khối lượng chất tan đã có. Ví dụ: ở 20 độ C, S(NaCl) = 36 g/100 g nước. Hoà tan 20 g NaCl vào 100 g nước được dung dịch chưa bão hoà (vì 20 < 36). Cần thêm 36 - 20 = 16 g NaCl nữa (giữ nguyên 100 g nước) để dung dịch đạt bão hoà. Nếu đổi khối lượng nước, phải tính lại khối lượng chất tan tối đa tương ứng theo tỉ lệ với 100 g nước trước khi trừ đi khối lượng đã hoà tan."
+        },
+        {
+          "id": "n2-l3-c9",
+          "heading": "Nâng cao: So sánh độ tan khi khối lượng dung môi khác nhau",
+          "body": "Không thể so sánh trực tiếp khối lượng chất tan tối đa giữa các thí nghiệm nếu khối lượng dung môi khác nhau, phải quy đổi tất cả về cùng 100 g nước (tức tính độ tan S) rồi mới so sánh.\nVí dụ: chất A tan tối đa 15 g trong 50 g nước -> S(A) = 15/50 x 100 = 30 g. Chất B tan tối đa 24 g trong 80 g nước -> S(B) = 24/80 x 100 = 30 g. Dù khối lượng tan tối đa khác nhau (15 g và 24 g), hai chất này thực ra có ĐỘ TAN BẰNG NHAU ở nhiệt độ đó.\nĐây là lỗi so sánh rất hay gặp: nhìn số gam chất tan lớn hơn rồi vội kết luận chất đó có độ tan lớn hơn, mà quên kiểm tra khối lượng dung môi tương ứng có bằng nhau hay không."
+        },
+        {
+          "id": "n2-l3-c10",
+          "heading": "Nâng cao: Các lỗi sai thường gặp khi làm bài về độ tan",
+          "body": "Một số lỗi hay gặp cần tự kiểm tra trước khi chốt đáp số:\n- Nhầm 100 g NƯỚC (dung môi) với 100 g DUNG DỊCH khi tính S, độ tan luôn quy về khối lượng dung môi, không phải khối lượng dung dịch.\n- Nói 'độ tan của chất X' mà không kèm nhiệt độ xác định, độ tan chỉ có ý nghĩa khi gắn với một nhiệt độ cụ thể.\n- Áp dụng công thức C% = 100S/(100+S) cho dung dịch CHƯA bão hoà, công thức này chỉ đúng với dung dịch bão hoà.\n- Nhầm chiều ảnh hưởng của nhiệt độ: cho rằng mọi chất khí cũng tan nhiều hơn khi nóng lên giống chất rắn (thực tế ngược lại), hoặc quên trường hợp đặc biệt Ca(OH)2.\n- So sánh độ tan giữa hai thí nghiệm có khối lượng dung môi khác nhau mà không quy đổi về cùng 100 g nước trước.\n- Khi làm lạnh dung dịch bão hoà chứa muối kết tinh dạng ngậm nước (như CuSO4.5H2O), quên trừ đi lượng nước bị giữ lại trong tinh thể kết tinh khi tính lại khối lượng nước còn lại trong dung dịch, sẽ được xử lý kỹ hơn ở bài về tinh thể ngậm nước."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dung dịch là gì?",
+          "options": [
+            "hỗn hợp đồng nhất của chất tan và dung môi",
+            "chỉ gồm chất rắn nguyên chất",
+            "chỉ gồm chất lỏng nguyên chất",
+            "một hợp chất hoá học"
+          ],
+          "answer": 0,
+          "explanation": "B1. Dung dịch được tạo thành khi chất tan phân tán đều vào dung môi. B2. Đây là hỗn hợp đồng nhất, không phải chất nguyên chất hay hợp chất."
+        },
+        {
+          "id": "n2-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Độ tan S là khối lượng chất tan tối đa hoà tan trong bao nhiêu gam dung môi?",
+          "options": ["100 g", "1000 g", "10 g", "1 g"],
+          "answer": 0,
+          "explanation": "B1. Theo định nghĩa, độ tan quy về 100 g dung môi. B2. S = (mct/mdm) x 100."
+        },
+        {
+          "id": "n2-l3-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các yếu tố ảnh hưởng đến độ tan của một chất.",
+          "options": [
+            "nhiệt độ",
+            "áp suất (đối với chất khí)",
+            "màu sắc của dung môi",
+            "khối lượng của cả dung dịch"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Nhiệt độ ảnh hưởng đến độ tan của mọi chất. B2. Áp suất ảnh hưởng đáng kể đến độ tan chất khí. B3. Màu sắc dung môi và khối lượng dung dịch không phải yếu tố ảnh hưởng độ tan."
+        },
+        {
+          "id": "n2-l3-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dung dịch không thể hoà tan thêm chất tan ở một nhiệt độ xác định được gọi là dung dịch gì?",
+          "answer": "bão hoà",
+          "acceptedAnswers": ["dung dịch bão hoà"],
+          "placeholder": "Nhập tên loại dung dịch",
+          "explanation": "B1. Ở trạng thái này, chất tan và dung môi đã đạt cân bằng hoà tan. B2. Đây gọi là dung dịch bão hoà."
+        },
+        {
+          "id": "n2-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi tăng nhiệt độ, độ tan của đa số chất rắn trong nước thường thay đổi như thế nào?",
+          "options": ["tăng", "giảm", "không đổi", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. Đa số chất rắn tan tốt hơn khi nhiệt độ tăng (ví dụ NaNO3, KNO3, đường). B2. Đây là quy luật chung, khác với chất khí (độ tan giảm khi nhiệt độ tăng)."
+        },
+        {
+          "id": "n2-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Ở 20 độ C, 200 g nước hoà tan tối đa 72 g NaCl tạo dung dịch bão hoà. Độ tan của NaCl ở 20 độ C là",
+          "options": ["36 g", "72 g", "18 g", "44 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức S = (mct/mdm) x 100. B2. S = 72/200 x 100 = 36 g."
+        },
+        {
+          "id": "n2-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Ở một nhiệt độ, độ tan của KNO3 là 32 g. Khối lượng KNO3 tan tối đa trong 200 g nước ở nhiệt độ đó là",
+          "options": ["64 g", "32 g", "16 g", "128 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức mct = S x mdm / 100. B2. mct = 32 x 200/100 = 64 g."
+        },
+        {
+          "id": "n2-l3-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phát biểu đúng về độ tan.",
+          "options": [
+            "độ tan phụ thuộc vào nhiệt độ",
+            "độ tan của chất khí giảm khi nhiệt độ tăng",
+            "độ tan luôn tăng theo nhiệt độ với mọi chất",
+            "độ tan không phụ thuộc bản chất dung môi"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Độ tan luôn phụ thuộc nhiệt độ. B2. Chất khí tan kém hơn khi nhiệt độ tăng, khác với đa số chất rắn. B3. Không phải mọi chất đều tăng độ tan theo nhiệt độ, và độ tan phụ thuộc rõ vào bản chất dung môi."
+        },
+        {
+          "id": "n2-l3-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Một dung dịch bão hoà chứa 15 g chất tan trong 50 g nước. Độ tan của chất đó là bao nhiêu?",
+          "answer": "30",
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Áp dụng công thức S = (mct/mdm) x 100. B2. S = 15/50 x 100 = 30."
+        },
+        {
+          "id": "n2-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Ở 25 độ C, độ tan của đường là 200 g. Khối lượng đường tối đa hoà tan trong 50 g nước ở nhiệt độ đó là",
+          "options": ["100 g", "50 g", "200 g", "150 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức mct = S x mdm/100. B2. mct = 200 x 50/100 = 100 g."
+        },
+        {
+          "id": "n2-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Ở nhiệt độ t, độ tan của muối M là 40 g. Cần bao nhiêu gam nước để hoà tan hết 100 g muối M tạo dung dịch bão hoà?",
+          "options": ["250 g", "200 g", "100 g", "400 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Tỉ lệ chất tan : nước ở trạng thái bão hoà là 40 : 100. B2. Với 100 g muối, khối lượng nước cần là 100 x 100/40 = 250 g."
+        },
+        {
+          "id": "n2-l3-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Một dung dịch bão hoà ở 60 độ C chứa 60 g CuSO4 trong 200 g nước. Độ tan của CuSO4 ở 60 độ C là bao nhiêu?",
+          "answer": "30",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức S = (mct/mdm) x 100. B2. S = 60/200 x 100 = 30."
+        },
+        {
+          "id": "n2-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Hoà tan 25 g một muối vào 100 g nước ở nhiệt độ mà độ tan của muối đó là 20 g. Hiện tượng xảy ra là",
+          "options": [
+            "còn 5 g muối không tan (dư)",
+            "tan hết, dung dịch chưa bão hoà",
+            "tan hết vừa đủ bão hoà",
+            "không xảy ra hiện tượng gì"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Với độ tan 20 g/100 g nước, lượng muối tối đa tan hết trong 100 g nước là 20 g. B2. Vì cho vào 25 g > 20 g nên còn 5 g muối không tan (dư), dung dịch đạt bão hoà."
+        }
+      ]
+    },
+    {
+      "id": "n2-l4",
+      "title": "Nồng độ dung dịch (C%, CM); pha chế – pha loãng",
+      "order": 4,
+      "summary": "Công thức nồng độ phần trăm, nồng độ mol, chuyển đổi giữa hai loại nồng độ, cách pha chế – pha loãng dung dịch và quy tắc đường chéo.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l4-c1",
+          "heading": "Nồng độ phần trăm (C%)",
+          "body": "Nồng độ phần trăm là khối lượng chất tan có trong 100 g dung dịch.\nCông thức: C% = (mct/mdd) x 100%; với dung dịch đang xét, mdd = mdm + tổng khối lượng các chất tan.\n\nSuy ra: mct = C% x mdd/100 và mdd = mct x 100/C%. Luôn xác định mẫu số là khối lượng dung dịch cuối cùng, không nhầm với khối lượng nước. Nếu quá trình có khí bay ra, kết tủa bị tách khỏi dung dịch hoặc dung môi bay hơi thì phải tính lại mdd theo khối lượng thực còn trong dung dịch."
+        },
+        {
+          "id": "n2-l4-c2",
+          "heading": "Nồng độ mol (CM)",
+          "body": "Nồng độ mol là số mol chất tan có trong 1 lít dung dịch.\nCông thức: CM = n/V, trong đó V tính bằng lít.\n\nCác hệ thức dùng ngược: n = CM x V và mct = CM x V x M. V là thể tích của dung dịch sau khi pha, không phải thể tích nước đã lấy ban đầu; phải đổi ml sang lít trước khi thay số. Khi nhiệt độ thay đổi đáng kể, thể tích dung dịch và vì vậy CM có thể thay đổi, dù số mol chất tan không đổi."
+        },
+        {
+          "id": "n2-l4-c3",
+          "heading": "Chuyển đổi giữa C% và CM",
+          "body": "Cần biết khối lượng riêng D (g/ml) của dung dịch để chuyển đổi:\nCM = (10 x D x C%) / M, trong đó M là khối lượng mol của chất tan.\n\nCông thức ngược: C% = CM x M/(10 x D). Chỉ được dùng các công thức này khi D là khối lượng riêng của đúng dung dịch đang xét, ở điều kiện nêu trong đề; không mặc định D = 1 g/ml nếu đề không cho hoặc không cho phép làm tròn."
+        },
+        {
+          "id": "n2-l4-c4",
+          "heading": "Nâng cao: Chọn cơ sở tính để đơn giản hoá bài toán",
+          "body": "Với dung dịch có C%, thường chọn 100 g dung dịch làm cơ sở: khi đó mct đúng bằng giá trị C% tính theo gam; đối với dung dịch chỉ chứa một chất tan, mdm = 100 - C% gam. Với dung dịch có CM, thường chọn 1 lít dung dịch: khi đó số mol chất tan đúng bằng CM.\n\nNếu đề cho đồng thời C%, CM và D, chọn 1 lít dung dịch là thuận lợi nhất vì mdd = 1000 x D (g). Từ đây tính mct = C% x 1000 x D/100, đổi ra mol rồi so với CM. Cách chọn cơ sở chỉ là quy ước tính toán; phải nhân hoặc chia mọi đại lượng cùng một hệ số khi quay về lượng dung dịch thực tế."
+        },
+        {
+          "id": "n2-l4-c5",
+          "heading": "Nâng cao: Suy ra công thức chuyển đổi và kiểm tra đơn vị",
+          "body": "Xét 1 lít dung dịch có D g/ml. Khối lượng dung dịch là 1000D g; khối lượng chất tan là 10D x C% g; số mol chất tan là 10D x C%/M. Vì thể tích đã chọn là 1 lít, giá trị số mol này chính là CM, suy ra CM = 10 x D x C%/M.\n\nTừ công thức có thể biện luận ngược: M = 10 x D x C%/CM hoặc D = CM x M/(10 x C%). Khi thế số, dùng C% dưới dạng số phần trăm, chẳng hạn 20 chứ không phải 0,20; còn D phải tính bằng g/ml. Sai đơn vị hoặc đổi 20% thành 0,20 trong công thức trên thường làm kết quả lệch 100 lần."
+        },
+        {
+          "id": "n2-l4-c6",
+          "heading": "Pha chế dung dịch theo nồng độ cho trước",
+          "body": "Từ chất tan rắn: tính khối lượng chất tan cần dùng (m = C% x mdd/100, hoặc n = CM x V), cân đủ lượng rồi hoà tan vào nước cho đủ thể tích hoặc khối lượng dung dịch yêu cầu.\n\nNếu đề yêu cầu thể tích chính xác, không đong ngay toàn bộ lượng nước cần dùng: hoà tan chất rắn trong một phần nước, chuyển định lượng sang bình định mức, tráng cốc và gộp nước tráng, rồi thêm nước đến vạch. Đọc đáy mặt khum ở ngang tầm mắt; sau khi lắc đều, thể tích dung dịch mới đúng bằng thể tích định mức."
+        },
+        {
+          "id": "n2-l4-c7",
+          "heading": "Pha loãng dung dịch",
+          "body": "Khi thêm nước vào dung dịch, khối lượng (hoặc số mol) chất tan không đổi:\nC1.V1 = C2.V2 (đối với nồng độ mol); m1.C%1 = m2.C%2 (đối với nồng độ phần trăm).\n\nTrước khi dùng công thức, phải chọn đúng đại lượng bảo toàn: nồng độ mol đi với số mol và thể tích tính bằng L; nồng độ phần trăm đi với khối lượng chất tan và khối lượng dung dịch. Với acid đặc, luôn rót từ từ acid vào nước, khuấy đều và để nguội khi cần; không làm ngược lại vì nhiệt toả ra mạnh có thể làm dung dịch bắn ra ngoài."
+        },
+        {
+          "id": "n2-l4-c8",
+          "heading": "Quy tắc đường chéo",
+          "body": "Dùng để tính nhanh tỉ lệ pha trộn hai dung dịch có nồng độ khác nhau để được dung dịch nồng độ mong muốn C.\nVới dung dịch 1 nồng độ C1 và dung dịch 2 nồng độ C2 (C1 < C < C2): tỉ lệ khối lượng m1 : m2 = (C2 - C) : (C - C1).\n\nHai hiệu chéo luôn đặt cạnh dung dịch ở phía đối diện: dung dịch loãng hơn nhận hiệu C2 - C, dung dịch đậm đặc hơn nhận hiệu C - C1. Sau khi có tỉ lệ, có thể nhân đồng thời hai số với cùng một hệ số để chọn lượng pha thực tế."
+        },
+        {
+          "id": "n2-l4-c9",
+          "heading": "Nâng cao: sơ đồ bảo toàn để chọn công thức",
+          "body": "Mọi bài pha chế nên bắt đầu bằng sơ đồ trước – sau và xét chất nào đi vào, đi ra. Thêm nước hoặc cô bớt nước: chất tan không bay hơi được bảo toàn. Thêm chất tan rắn: cả khối lượng chất tan lẫn khối lượng dung dịch tăng. Trộn các dung dịch cùng chất tan: khối lượng chất tan sau bằng tổng khối lượng chất tan ban đầu.\n\nVì vậy, với m0 gam dung dịch C0% pha loãng thành C% (C < C0), khối lượng dung dịch sau là m = m0.C0/C và lượng nước thêm là m - m0. Nếu cô bớt nước để đạt C% (C > C0), công thức m = m0.C0/C vẫn cho khối lượng dung dịch còn lại; lượng nước bay hơi là m0 - m. Chỉ dùng kết quả này khi chất tan không bay hơi, không bị phân huỷ và không kết tinh tách ra."
+        },
+        {
+          "id": "n2-l4-c10",
+          "heading": "Nâng cao: điều kiện và bản chất của đường chéo",
+          "body": "Đường chéo là dạng rút gọn của bảo toàn chất tan, chỉ áp dụng trực tiếp khi trộn hai dung dịch của cùng một chất tan, không có phản ứng và nồng độ cần đạt nằm giữa hai nồng độ ban đầu. Nếu C trùng C1 hoặc C2 thì chỉ cần dùng dung dịch tương ứng; nếu C nằm ngoài khoảng đó thì không thể đạt chỉ bằng cách trộn hai dung dịch ấy.\n\nVới C%, đường chéo cho tỉ lệ khối lượng. Với CM của cùng chất tan, đường chéo cho tỉ lệ thể tích khi đề bài cho phép coi thể tích các dung dịch cộng được. Nước có thể xem là dung dịch 0% hoặc 0M, nên pha loãng bằng nước cũng là một trường hợp đặc biệt của đường chéo. Khi hai dung dịch chứa chất tan khác nhau có phản ứng, hãy viết phương trình và tính theo số mol thay vì dùng đường chéo máy móc."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức tính nồng độ phần trăm là",
+          "options": [
+            "C% = (mct/mdd) x 100%",
+            "C% = mct/mdm",
+            "C% = n/V",
+            "C% = n x M"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nồng độ phần trăm là tỉ lệ khối lượng chất tan trên khối lượng dung dịch, nhân 100%. B2. Công thức đúng là C% = (mct/mdd) x 100%."
+        },
+        {
+          "id": "n2-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức tính nồng độ mol là",
+          "options": ["CM = n/V", "CM = m/M", "CM = mct/mdd", "CM = V/n"],
+          "answer": 0,
+          "explanation": "B1. Nồng độ mol là số mol chất tan trong 1 lít dung dịch. B2. Công thức đúng là CM = n/V (V tính bằng lít)."
+        },
+        {
+          "id": "n2-l4-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nồng độ mol có đơn vị là gì?",
+          "answer": "mol/lít",
+          "acceptedAnswers": ["mol/l", "m"],
+          "placeholder": "Nhập đơn vị",
+          "explanation": "B1. Nồng độ mol tính bằng số mol chất tan trên thể tích dung dịch (lít). B2. Đơn vị là mol/lít, kí hiệu M."
+        },
+        {
+          "id": "n2-l4-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi pha loãng dung dịch bằng cách thêm nước, đại lượng nào của chất tan không đổi?",
+          "options": [
+            "số mol (khối lượng) chất tan",
+            "nồng độ %",
+            "nồng độ mol",
+            "khối lượng riêng dung dịch"
+          ],
+          "answer": 0,
+          "explanation": "B1. Thêm nước chỉ làm tăng khối lượng/thể tích dung dịch, không thêm hay bớt chất tan. B2. Vì vậy số mol (khối lượng) chất tan không đổi, còn nồng độ thì giảm."
+        },
+        {
+          "id": "n2-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức pha loãng theo nồng độ mol là",
+          "options": [
+            "C1.V1 = C2.V2",
+            "C1 + V1 = C2 + V2",
+            "C1/V1 = C2/V2",
+            "C1 x C2 = V1 x V2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Vì số mol chất tan không đổi: n = C1.V1 = C2.V2. B2. Đây là công thức pha loãng chuẩn theo nồng độ mol."
+        },
+        {
+          "id": "n2-l4-q6",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Quy tắc đường chéo dùng để tính gì khi trộn hai dung dịch?",
+          "answer": "tỉ lệ pha trộn",
+          "acceptedAnswers": ["tỉ lệ trộn", "tỷ lệ pha trộn"],
+          "placeholder": "Nhập cụm từ",
+          "explanation": "B1. Quy tắc đường chéo giúp tìm nhanh tỉ lệ khối lượng (hoặc thể tích) cần trộn hai dung dịch. B2. Mục tiêu là đạt được nồng độ mong muốn."
+        },
+        {
+          "id": "n2-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan 20 g NaOH vào nước được 200 g dung dịch. Nồng độ % của dung dịch là",
+          "options": ["10%", "20%", "5%", "2%"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức C% = (mct/mdd) x 100%. B2. C% = 20/200 x 100% = 10%."
+        },
+        {
+          "id": "n2-l4-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Hoà tan 0,5 mol NaCl vào nước được 250 ml dung dịch. Nồng độ mol của dung dịch là",
+          "options": ["2M", "0,5M", "4M", "1M"],
+          "answer": 0,
+          "explanation": "B1. Đổi 250 ml = 0,25 lít. B2. CM = n/V = 0,5/0,25 = 2M."
+        },
+        {
+          "id": "n2-l4-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Dung dịch H2SO4 có nồng độ 20%, khối lượng dung dịch 150 g. Khối lượng H2SO4 tan trong đó là",
+          "options": ["30 g", "20 g", "15 g", "45 g"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức mct = C% x mdd/100. B2. mct = 20 x 150/100 = 30 g."
+        },
+        {
+          "id": "n2-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Pha loãng 100 ml dung dịch HCl 2M thành 500 ml. Nồng độ mol sau khi pha loãng là",
+          "options": ["0,4M", "2M", "0,1M", "1M"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức C1.V1 = C2.V2. B2. 2 x 0,1 = C2 x 0,5 nên C2 = 0,4M."
+        },
+        {
+          "id": "n2-l4-q11",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cần lấy bao nhiêu ml dung dịch NaOH 4M để pha thành 200 ml dung dịch NaOH 1M?",
+          "options": ["50 ml", "100 ml", "200 ml", "25 ml"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng công thức C1.V1 = C2.V2. B2. 4 x V1 = 1 x 0,2 nên V1 = 0,05 lít = 50 ml."
+        },
+        {
+          "id": "n2-l4-q12",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Trộn 200 g dung dịch NaCl 20% với nước để được dung dịch NaCl 10%. Khối lượng dung dịch mới là bao nhiêu gam?",
+          "answer": "400",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Khối lượng NaCl không đổi: mct = 200 x 20% = 40 g. B2. Khối lượng dung dịch mới: mdd = mct/C%mới x 100 = 40/10 x 100 = 400 g."
+        },
+        {
+          "id": "n2-l4-q13",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Theo quy tắc đường chéo, trộn dung dịch A nồng độ 10% với dung dịch B nồng độ 30% để được dung dịch C nồng độ 20%. Tỉ lệ khối lượng mA : mB là",
+          "options": ["1:1", "1:2", "2:1", "1:3"],
+          "answer": 0,
+          "explanation": "B1. Áp dụng quy tắc đường chéo: mA : mB = (30-20) : (20-10) = 10 : 10. B2. Rút gọn được tỉ lệ 1:1."
+        },
+        {
+          "id": "n2-l4-q14",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Dung dịch HCl có nồng độ 36,5% và khối lượng riêng D = 1,2 g/ml (M của HCl là 36,5). Nồng độ mol của dung dịch là",
+          "options": ["12M", "10M", "14,6M", "7,3M"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng công thức CM = (10 x D x C%)/M. B2. CM = (10 x 1,2 x 36,5)/36,5 = 12M."
+        },
+        {
+          "id": "n2-l4-q15",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Trộn 300 g dung dịch H2SO4 10% với 200 g dung dịch H2SO4 25% thu được dung dịch mới. Nồng độ % của dung dịch mới là",
+          "options": ["16%", "17,5%", "20%", "15%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Khối lượng H2SO4: mct = 300 x 10% + 200 x 25% = 30 + 50 = 80 g. B2. Khối lượng dung dịch mới: 300 + 200 = 500 g. B3. C% = 80/500 x 100% = 16%."
+        },
+        {
+          "id": "n2-l4-q16",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cần trộn dung dịch NaOH 5% (m1) với dung dịch NaOH 25% (m2) theo tỉ lệ khối lượng m1:m2 nào để được dung dịch NaOH 10%? (ghi dạng \"a:b\")",
+          "answer": "3:1",
+          "placeholder": "Nhập tỉ lệ",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng quy tắc đường chéo: m1 : m2 = (25-10) : (10-5) = 15 : 5. B2. Rút gọn được tỉ lệ 3:1."
+        },
+        {
+          "id": "n2-l4-q17",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Trộn V1 ml dung dịch HCl 2M với V2 ml dung dịch HCl 0,5M để được dung dịch HCl 1M. Tỉ lệ V1:V2 là",
+          "options": ["1:2", "2:1", "1:1", "3:1"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Áp dụng quy tắc đường chéo: V1 : V2 = (1-0,5) : (2-1) = 0,5 : 1. B2. Rút gọn được tỉ lệ 1:2."
+        }
+      ]
+    },
+    {
+      "id": "n2-l5",
+      "title": "Định luật bảo toàn khối lượng; phương trình hoá học",
+      "order": 5,
+      "summary": "Dấu hiệu nhận biết phản ứng hoá học, định luật bảo toàn khối lượng và các bước lập, cân bằng phương trình hoá học.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l5-c1",
+          "heading": "Phản ứng hoá học",
+          "body": "Phản ứng hoá học là quá trình biến đổi chất này thành chất khác. Chất ban đầu gọi là chất tham gia, chất mới sinh ra gọi là sản phẩm.\nDấu hiệu nhận biết: có chất mới tạo thành (đổi màu, tạo kết tủa, sinh khí, toả nhiệt/phát sáng...)."
+        },
+        {
+          "id": "n2-l5-c2",
+          "heading": "Định luật bảo toàn khối lượng",
+          "body": "Trong phản ứng hoá học, tổng khối lượng các chất sản phẩm bằng tổng khối lượng các chất tham gia phản ứng (vì số nguyên tử mỗi nguyên tố không đổi).\nÁp dụng: mA + mB = mC + mD."
+        },
+        {
+          "id": "n2-l5-c3",
+          "heading": "Cân bằng phương trình hoá học",
+          "body": "Các bước cân bằng PTHH: viết sơ đồ phản ứng với công thức đúng của các chất; thêm hệ số thích hợp trước công thức để số nguyên tử mỗi nguyên tố ở hai vế bằng nhau (không được đổi chỉ số trong công thức); kiểm tra lại."
+        },
+        {
+          "id": "n2-l5-c4",
+          "heading": "Nâng cao: Dấu hiệu và bản chất phản ứng hoá học",
+          "body": "Đổi màu, sinh khí, kết tủa, toả nhiệt hoặc phát sáng là dấu hiệu thường gặp, nhưng không nên kết luận máy móc nếu chưa xét có chất mới hay không — nước sôi có bọt khí nhưng đó là hơi nước tạo từ chính nước, không phải chất mới. Dấu hiệu càng có giá trị khi giải thích được chất mới sinh ra: cho acid vào muối cacbonat thấy sủi bọt vì tạo CO2; cho dung dịch BaCl2 vào dung dịch chứa gốc sunfat tạo kết tủa trắng BaSO4.\nMột thí nghiệm có thể gồm cả biến đổi vật lí và hoá học: khi đun nến, sáp nến nóng chảy là hiện tượng vật lí, nhưng hơi nến cháy tạo CO2 và H2O là hiện tượng hoá học. Cách phân biệt chắc chắn: thay đổi trạng thái, kích thước, hình dạng thường là vật lí; tạo chất mới với tính chất khác hẳn mới là hoá học.\nKí hiệu đun nóng, ánh sáng hoặc chất xúc tác ghi trên mũi tên phản ứng chỉ điều kiện phản ứng, không được cân bằng như chất tham gia hay sản phẩm, và không đưa vào tính bảo toàn khối lượng — chất xúc tác về nguyên tắc không bị tiêu hao sau phản ứng."
+        },
+        {
+          "id": "n2-l5-c5",
+          "heading": "Nâng cao: Bảo toàn khối lượng — hệ kín/hở, hỗn hợp, chất dư",
+          "body": "Định luật bảo toàn khối lượng đúng cho toàn bộ hệ phản ứng. Nếu bình kín, tổng khối lượng trước và sau phản ứng không đổi kể cả khi có khí sinh ra. Nếu bình hở, khí bay ra làm phần còn lại nhẹ đi, nhưng khối lượng đó không mất mà đã chuyển thành khối lượng khí thoát ra — khối lượng kim loại tăng sau khi đốt trong oxi chính là khối lượng oxi đã kết hợp vào oxide; khối lượng chất rắn giảm khi nung muối cacbonat chính là khối lượng CO2 thoát ra.\nCông thức m chất tham gia = m sản phẩm chỉ áp dụng gọn khi các chất phản ứng vừa đủ. Nếu có chất dư, khối lượng chất dư không biến mất mà vẫn nằm trong hỗn hợp sau phản ứng: khối lượng ban đầu của toàn hệ = khối lượng sản phẩm + khối lượng chất dư + khối lượng chất trơ không phản ứng. Với hỗn hợp, nếu đề chỉ hỏi tổng khối lượng thì không cần tách từng phản ứng — ví dụ nung hỗn hợp CaCO3 và cát, chỉ CaCO3 phân huỷ, phần khối lượng giảm khi cân chất rắn sau nung chính là CO2 thoát ra, không phải toàn bộ CaCO3."
+        },
+        {
+          "id": "n2-l5-c6",
+          "heading": "Nâng cao: Bảo toàn nguyên tố và tỉ lệ hệ số",
+          "body": "Trong phản ứng hoá học, nguyên tử không tự sinh ra hoặc mất đi, chỉ sắp xếp lại — mỗi nguyên tố phải có tổng số nguyên tử bằng nhau ở hai vế. Bảo toàn khối lượng là hệ quả trực tiếp của bảo toàn số nguyên tử từng nguyên tố. Khi gặp bài khó, kiểm tra theo từng nguyên tố thay vì chỉ nhìn tổng khối lượng giúp tránh cân đúng khối lượng tổng nhưng sai công thức hoặc sai hệ số.\nHệ số trong PTHH cho biết tỉ lệ số phân tử/nguyên tử/mol, KHÔNG phải tỉ lệ khối lượng trực tiếp. Từ 2H2 + O2 → 2H2O, không được kết luận 2 g H2 phản ứng với 1 g O2 — phải nhân hệ số với khối lượng mol/phân tử khối: 2H2 (4 phần) + O2 (32 phần) → 2H2O (36 phần), tổng 4 + 32 = 36 mới đúng bảo toàn khối lượng."
+        },
+        {
+          "id": "n2-l5-c7",
+          "heading": "Nâng cao: Kĩ thuật cân bằng phương trình nhanh",
+          "body": "Với phương trình nhiều chất, nên cân bằng nguyên tố xuất hiện ít chất trước (thường là kim loại), để H và O sau cùng nếu chúng xuất hiện ở nhiều chất — với phản ứng cháy chứa C, H, O thường cân bằng theo thứ tự C → H → O. Ví dụ C3H8 + O2 → CO2 + H2O: cân C được 3CO2, cân H được 4H2O, vế phải có 3×2+4=10 nguyên tử O nên cần 5O2.\nCó thể tạm dùng hệ số phân số để cân nhanh, rồi nhân cả phương trình với mẫu số chung để được hệ số nguyên tối giản (không để hệ số phân số ở đáp án cuối). Khi một nguyên tố ở dạng đơn chất 2 nguyên tử (O2, H2, N2, Cl2) mà vế kia cho số lẻ, thường cần nhân đôi chất chứa số lẻ đó — ví dụ Al + O2 → Al2O3: vế phải có 3 O trong Al2O3, đặt 2Al2O3 để có 6 O, từ đó cần 3O2 và 4Al, được 4Al + 3O2 → 2Al2O3 (không được đổi công thức Al2O3 thành AlO cho dễ cân).\nVới phản ứng phân huỷ tạo khí, dùng bội chung nhỏ nhất: KClO3 → KCl + O2, mỗi KClO3 có 3 O còn O2 có 2 O, BCNN(3,2)=6 nên đặt 2KClO3 để có 6 O, được 2KClO3 → 2KCl + 3O2. Sau khi cân xong, luôn kiểm tra ước chung lớn nhất của các hệ số và rút gọn về bộ số nguyên tối giản — ví dụ 6H2 + 3O2 → 6H2O phải rút gọn thành 2H2 + O2 → 2H2O."
+        },
+        {
+          "id": "n2-l5-c8",
+          "heading": "Nâng cao: Cân bằng các dạng phản ứng đặc biệt",
+          "body": "Nếu một nhóm nguyên tử (SO4, NO3, CO3, PO4, OH...) xuất hiện nguyên vẹn ở cả hai vế và không bị phân huỷ, có thể cân bằng cả nhóm như một đơn vị để giảm số bước. Ví dụ Al2(SO4)3 + BaCl2 → AlCl3 + BaSO4: 3 nhóm SO4 ở vế trái cần 3BaSO4, từ đó 3BaCl2 có 6Cl nên tạo 2AlCl3, đồng thời 2Al.\nVới phản ứng khử oxide kim loại bằng CO hoặc H2 (chưa cần số oxi hoá ở THCS), có thể nhìn như sự chuyển oxi: mỗi phân tử CO nhận thêm 1 nguyên tử O để thành CO2, mỗi H2 nhận 1 O để thành H2O. Fe2O3 có 3 nguyên tử O nên cần 3CO để tạo 3CO2, đồng thời tạo 2Fe: Fe2O3 + 3CO → 2Fe + 3CO2.\nVới chất hữu cơ CxHyOz cháy hoàn toàn tạo CO2 và H2O: cân C trước (→ xCO2), cân H (→ y/2 H2O), rồi tính O2 sau cùng từ tổng số O còn thiếu ở vế phải. Nếu tổng số O ở vế phải lẻ (hệ số O2 ra phân số), nhân đôi toàn bộ phương trình để được hệ số nguyên. Ví dụ C2H5OH + O2 → CO2 + H2O: cân C được 2CO2, cân H được 3H2O, vế phải có 4+3=7 O, trong C2H5OH đã có 1 O nên còn thiếu 6 O, cần 3O2.\nVới phương trình dài, kiểm tra bằng bảng đếm nguyên tử từng nguyên tố ở hai vế là cách ít sai nhất — nhớ hệ số nhân cho cả công thức đứng sau, và chỉ số ngoài ngoặc nhân cho cả nhóm trong ngoặc (2Al2(SO4)3 có 4Al, 6S và 24O)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong phản ứng hoá học, chất mới được tạo ra gọi là gì?",
+          "options": ["sản phẩm", "chất tham gia", "chất xúc tác", "dung môi"],
+          "answer": 0,
+          "explanation": "B1. Chất ban đầu trước phản ứng gọi là chất tham gia. B2. Chất mới sinh ra sau phản ứng gọi là sản phẩm."
+        },
+        {
+          "id": "n2-l5-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Định luật bảo toàn khối lượng phát biểu: tổng khối lượng sản phẩm bằng gì?",
+          "options": [
+            "tổng khối lượng chất tham gia",
+            "khối lượng chất rắn",
+            "thể tích khí",
+            "số mol"
+          ],
+          "answer": 0,
+          "explanation": "B1. Trong phản ứng, số nguyên tử mỗi nguyên tố được bảo toàn. B2. Vì vậy tổng khối lượng sản phẩm bằng tổng khối lượng chất tham gia."
+        },
+        {
+          "id": "n2-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các dấu hiệu cho thấy có phản ứng hoá học xảy ra.",
+          "options": [
+            "đổi màu",
+            "sinh khí",
+            "thay đổi hình dạng vật lí",
+            "tạo kết tủa"
+          ],
+          "answers": [0, 1, 3],
+          "explanation": "B1. Đổi màu, sinh khí, tạo kết tủa đều là dấu hiệu có chất mới tạo thành. B2. Thay đổi hình dạng (như đập vụn, làm nóng chảy) chỉ là biến đổi vật lí, không phải phản ứng hoá học."
+        },
+        {
+          "id": "n2-l5-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi cân bằng phương trình hoá học, ta được phép thay đổi gì để hai vế bằng nhau về số nguyên tử?",
+          "answer": "hệ số",
+          "acceptedAnswers": ["hệ số cân bằng"],
+          "placeholder": "Nhập từ cần điền",
+          "explanation": "B1. Chỉ được thêm hệ số trước công thức, không được đổi chỉ số trong công thức. B2. Hệ số giúp cân bằng số nguyên tử mỗi nguyên tố ở hai vế."
+        },
+        {
+          "id": "n2-l5-q5",
+          "type": "balance",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: H2 + O2 -> H2O.",
+          "left": ["H2", "O2"],
+          "right": ["H2O"],
+          "answer": [2, 1, 2],
+          "explanation": "B1. Đặt 2H2O để số O ở vế phải chẵn (2 O). B2. Cần 1O2 để có 2 O. B3. Bốn nguyên tử H ở vế phải cần 2H2 ở vế trái."
+        },
+        {
+          "id": "n2-l5-q6",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Đốt cháy hết 3 g cacbon trong khí oxi thu được 11 g khí CO2. Khối lượng oxi đã phản ứng là bao nhiêu gam?",
+          "answer": "8",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mC + mO2 = mCO2. B2. mO2 = mCO2 - mC = 11 - 3 = 8 g."
+        },
+        {
+          "id": "n2-l5-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Đốt cháy 12 g cacbon trong khí oxi vừa đủ, thu được 44 g khí CO2. Khối lượng oxi đã dùng là",
+          "options": ["32 g", "44 g", "12 g", "56 g"],
+          "answer": 0,
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mC + mO2 = mCO2. B2. mO2 = 44 - 12 = 32 g."
+        },
+        {
+          "id": "n2-l5-q8",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: Fe + O2 -> Fe3O4.",
+          "left": ["Fe", "O2"],
+          "right": ["Fe3O4"],
+          "answer": [3, 2, 1],
+          "explanation": "B1. Fe3O4 chứa 3 Fe nên cần 3Fe. B2. Fe3O4 chứa 4 O nên cần 2O2 (4 nguyên tử O)."
+        },
+        {
+          "id": "n2-l5-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phương trình hoá học đã được cân bằng đúng.",
+          "options": [
+            "2H2 + O2 -> 2H2O",
+            "Fe + O2 -> FeO",
+            "CaCO3 -> CaO + CO2",
+            "N2 + H2 -> NH3"
+          ],
+          "answers": [0, 2],
+          "explanation": "B1. 2H2 + O2 -> 2H2O đã cân bằng đúng (4H, 2O mỗi vế). B2. CaCO3 -> CaO + CO2 đã cân bằng đúng vì tỉ lệ 1:1:1 giữ nguyên số nguyên tử. B3. Fe + O2 -> FeO cần sửa thành 2Fe + O2 -> 2FeO; N2 + H2 -> NH3 cần sửa thành N2 + 3H2 -> 2NH3."
+        },
+        {
+          "id": "n2-l5-q10",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Nung 50 g CaCO3 thu được 28 g CaO và khí CO2. Khối lượng CO2 sinh ra là bao nhiêu gam?",
+          "answer": "22",
+          "placeholder": "Nhập số gam",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mCaCO3 = mCaO + mCO2. B2. mCO2 = 50 - 28 = 22 g."
+        },
+        {
+          "id": "n2-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 8,4 g Fe trong khí oxi dư, thu được 11,6 g oxide sắt từ Fe3O4 duy nhất, không còn Fe dư. Khối lượng oxi đã phản ứng là",
+          "options": ["3,2 g", "4,2 g", "2,4 g", "4,8 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mFe + mO2 = mFe3O4. B2. mO2 = 11,6 - 8,4 = 3,2 g."
+        },
+        {
+          "id": "n2-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 6,5 g Zn phản ứng vừa đủ với dung dịch HCl, sinh ra 13,6 g ZnCl2 và 0,2 g khí H2. Khối lượng HCl đã phản ứng là bao nhiêu gam?",
+          "answer": "7,3",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo định luật bảo toàn khối lượng: mZn + mHCl = mZnCl2 + mH2. B2. mHCl = 13,6 + 0,2 - 6,5 = 7,3 g."
+        },
+        {
+          "id": "n2-l5-q13",
+          "type": "balance",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng khử oxide sắt trong lò cao: Fe2O3 + CO -> Fe + CO2.",
+          "left": ["Fe2O3", "CO"],
+          "right": ["Fe", "CO2"],
+          "answer": [1, 3, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Fe2O3 chứa 2 Fe nên tạo 2Fe. B2. Ba nguyên tử O trong Fe2O3 kết hợp với 3CO tạo 3CO2 (dùng thêm O từ CO). B3. Kiểm tra: vế trái có 3 + 3 = 6 nguyên tử O, vế phải có 6 nguyên tử O trong 3CO2."
+        }
+      ]
+    },
+    {
+      "id": "n2-l6",
+      "title": "Tính theo phương trình hoá học: %m, chất dư – chất hết, hiệu suất",
+      "order": 6,
+      "summary": "Tính thành phần phần trăm khối lượng, các bước giải toán theo PTHH, xác định chất dư – chất hết và hiệu suất phản ứng.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l6-c1",
+          "heading": "Tính thành phần % khối lượng nguyên tố",
+          "body": "Công thức: %A = (số nguyên tử A x nguyên tử khối A) / (phân tử khối hợp chất) x 100%.\nVí dụ: %Na trong NaCl (M = 58,5) = 23/58,5 x 100% xấp xỉ 39,3%."
+        },
+        {
+          "id": "n2-l6-c2",
+          "heading": "Các bước tính theo phương trình hoá học",
+          "body": "B1. Đổi dữ kiện đề bài ra số mol.\nB2. Viết phương trình hoá học và cân bằng.\nB3. Lập tỉ lệ mol theo phương trình để tìm số mol chất cần tính.\nB4. Đổi số mol sang khối lượng hoặc thể tích theo yêu cầu."
+        },
+        {
+          "id": "n2-l6-c3",
+          "heading": "Chất dư – chất hết và hiệu suất phản ứng",
+          "body": "Khi hai chất phản ứng với lượng cho trước, so sánh tỉ lệ mol thực tế với tỉ lệ mol theo phương trình để xác định chất phản ứng hết (dùng để tính sản phẩm) và chất còn dư.\nHiệu suất phản ứng: H% = (lượng thực tế thu được / lượng tính theo lí thuyết) x 100%."
+        },
+        {
+          "id": "n2-l6-c4",
+          "heading": "Nâng cao: %m nguyên tố — hiểu đúng và kết hợp với hỗn hợp/PTHH",
+          "body": "Khi tính %m, tử số là khối lượng của RIÊNG nguyên tố đó trong 1 mol hợp chất — với AxBy, phần khối lượng của A là x×(nguyên tử khối A), không chỉ lấy 1 lần. Ví dụ Al2O3: khối lượng phần Al = 2×27 = 54 g, M(Al2O3) = 102 g/mol, %Al = 54/102×100% ≈ 52,94%. Tổng %m các nguyên tố trong một công thức luôn bằng 100% (chấp nhận sai số làm tròn nhỏ) — có thể tính nguyên tố cuối bằng cách lấy 100% trừ các phần đã biết, nhưng chỉ khi các phần kia đã đúng.\nCần phân biệt %nguyên tố TRONG một hợp chất với %chất TRONG một hỗn hợp — hai kiểu phần trăm không dùng lẫn nhau. Nếu mẫu 10 g chứa 80% CaCO3 tinh khiết thì chỉ có 8 g CaCO3 thật sự tham gia phản ứng; còn trong chính CaCO3, %Ca = 40%. Bài tổng hợp thường có hai tầng: tách khối lượng chất tinh khiết từ hỗn hợp trước, rồi mới tính theo công thức hoặc PTHH — ví dụ Fe chiếm 70% khối lượng trong Fe2O3 (2×56/160×100%=70%), nên 20 g Fe2O3 chứa tối đa 14 g Fe; nếu khử với hiệu suất 80% thì Fe thực tế thu được là 14×0,80 = 11,2 g."
+        },
+        {
+          "id": "n2-l6-c5",
+          "heading": "Nâng cao: Trình tự giải bài toán tổng hợp theo PTHH",
+          "body": "Hệ số PTHH là tỉ lệ MOL, không phải tỉ lệ gam — không được lấy trực tiếp hệ số so sánh khối lượng (Zn + 2HCl → ZnCl2 + H2 nghĩa là 1 mol Zn : 2 mol HCl, tức 65 g Zn : 73 g HCl, không phải 1 g : 2 g).\nVới bài nhiều dữ kiện (khối lượng, thể tích khí, nồng độ, hiệu suất), giữ trình tự cố định: đổi mọi dữ kiện cần dùng ra mol → viết và cân bằng PTHH → xác định chất hết nếu có từ hai chất trở lên → tính lượng lí thuyết theo chất hết → áp dụng hiệu suất nếu có → đổi về đại lượng đề hỏi. Trình tự này tránh hai lỗi lớn: áp dụng hiệu suất quá sớm vào chất chưa phải chất giới hạn, hoặc đổi thẳng gam chất này sang gam chất kia mà bỏ qua tỉ lệ mol.\nDữ kiện khí phải theo cùng điều kiện — trong chương trình này dùng đkc: n=V/24,79 và V=n×24,79 (V tính bằng lít), không dùng công thức này cho chất lỏng/rắn/dung dịch. Sau khi tính theo PTHH, có thể kiểm tra lại bằng bảo toàn khối lượng cho phần đã phản ứng (không tính phần chất dư): ví dụ 0,10 mol Zn phản ứng hết với HCl cho 6,5+7,3 = 13,8 g ở hai vế, khớp bảo toàn khối lượng."
+        },
+        {
+          "id": "n2-l6-c6",
+          "heading": "Nâng cao: Xác định chất dư — chất hết",
+          "body": "Cách chắc nhất: với phản ứng aA + bB → sản phẩm, tính nA/a và nB/b — giá trị NHỎ HƠN cho biết chất đó hết trước, và giá trị đó cũng là \"mức phản ứng chung\" dùng để tính sản phẩm. Ví dụ Zn + 2HCl → ZnCl2 + H2, nếu nZn=0,20 và nHCl=0,30: nZn/1=0,20, nHCl/2=0,15 → 0,15 nhỏ hơn nên HCl hết trước, mọi sản phẩm tính theo 0,15 (không phải theo 0,20 mol Zn).\nCách khác: so sánh tỉ lệ mol thực tế với tỉ lệ cần theo PTHH (Zn+2HCl cần tỉ lệ nHCl/nZn=2; nếu thực tế 0,30/0,20=1,5 < 2 thì HCl thiếu, HCl hết, Zn dư).\nChất dư KHÔNG làm sản phẩm tăng thêm — sau khi xác định chất hết, dùng số mol chất hết để tính sản phẩm, số mol ban đầu của chất dư chỉ dùng để tính lượng còn lại (0,20 mol Zn gặp 0,30 mol HCl hết → nH2=nHCl/2=0,15 mol, V(H2) đkc=0,15×24,79=3,7185 lít; Zn còn dư 0,05 mol). Hai chất phản ứng vừa đủ khi mọi tỉ lệ n/hệ số bằng nhau — khi đề cho dữ kiện như 13 g Zn và 200 ml dung dịch HCl 2M, phải đổi cẩn thận: nZn=13/65=0,20 mol, nHCl=2×0,200=0,40 mol (đổi ml sang lít trước khi dùng n=CM×V), lúc này nZn/1=0,20=nHCl/2=0,20 nên vừa đủ, không có chất dư."
+        },
+        {
+          "id": "n2-l6-c7",
+          "heading": "Nâng cao: Hiệu suất phản ứng — hai chiều và kết hợp chất dư/độ tinh khiết",
+          "body": "Trong H% = lượng thực tế/lượng lí thuyết×100%, tử số và mẫu số phải là CÙNG một chất, cùng đơn vị — không lấy gam sản phẩm thực tế chia cho mol sản phẩm lí thuyết, và không lấy khối lượng sản phẩm thực tế chia cho khối lượng chất ban đầu để gọi là hiệu suất (nung CaCO3, nếu CaO lí thuyết 14 g và thực tế 12,6 g thì H=12,6/14×100%=90%).\nHai chiều tính: biết lượng lí thuyết và H% → lượng thực tế = lí thuyết×H/100; biết lượng thực tế và H% → lượng lí thuyết = thực tế:(H/100) — dùng khi đề hỏi cần bao nhiêu nguyên liệu để thu một lượng sản phẩm thực tế cho trước (muốn thu 12,6 g CaO với H=90%, CaO lí thuyết cần = 12,6/0,90=14 g, suy ra cần 25 g CaCO3 tinh khiết).\nKhi bài vừa có chất dư vừa có hiệu suất: xác định chất hết trước để tính sản phẩm lí thuyết tối đa theo PTHH, RỒI mới nhân hiệu suất — không nhân hiệu suất vào cả hai chất tham gia rồi mới xét dư/hết. Hiệu suất nhỏ hơn 100% không có nghĩa PTHH cân bằng sai — có thể do phản ứng không hoàn toàn, hao hụt khi thu sản phẩm, hoặc điều kiện thí nghiệm chưa tối ưu; nếu tính ra hiệu suất lớn hơn 100% thì cần xem lại số mol/đơn vị/độ tinh khiết. Khi mẫu ban đầu không tinh khiết: xử lí độ tinh khiết trước (m chất tinh khiết = m mẫu×%tinh khiết/100) để tìm lượng chất thật tham gia, rồi mới áp hiệu suất sau khi tính sản phẩm lí thuyết từ chất tinh khiết đó."
+        },
+        {
+          "id": "n2-l6-c8",
+          "heading": "Nâng cao: Lỗi hay gặp khi giải toán theo PTHH",
+          "body": "Các lỗi cần tự kiểm tra trước khi chốt đáp số: chưa cân bằng PTHH mà đã lập tỉ lệ mol; lấy tỉ lệ hệ số làm tỉ lệ khối lượng; quên đổi ml sang lít khi tính n=CM×V hoặc n=V/24,79; dùng 24,79 lít/mol cho chất không phải khí; tính sản phẩm theo chất dư thay vì chất hết; quên nhân chỉ số nguyên tử khi tính %m; áp dụng hiệu suất hai lần hoặc quên chia cho 100 khi dùng H%. Một đáp số hợp lí thường phải đúng đơn vị, đúng số mol theo hệ số, và không cho hiệu suất vượt 100% trong bài lí tưởng."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l6-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Phần trăm khối lượng Na trong NaCl (M = 58,5) là bao nhiêu (làm tròn)?",
+          "options": ["39,3%", "60,7%", "23%", "58,5%"],
+          "answer": 0,
+          "explanation": "B1. %Na = (nguyên tử khối Na / phân tử khối NaCl) x 100%. B2. %Na = 23/58,5 x 100% xấp xỉ 39,3%."
+        },
+        {
+          "id": "n2-l6-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Bước đầu tiên khi giải bài toán tính theo phương trình hoá học là gì?",
+          "options": [
+            "đổi dữ kiện ra số mol",
+            "viết phương trình hoá học",
+            "cân bằng phương trình hoá học",
+            "tính khối lượng sản phẩm"
+          ],
+          "answer": 0,
+          "explanation": "B1. Cần đổi các dữ kiện đề bài (khối lượng, thể tích) ra số mol trước tiên. B2. Sau đó mới viết, cân bằng phương trình và lập tỉ lệ để tính."
+        },
+        {
+          "id": "n2-l6-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các bước đúng khi giải bài toán theo phương trình hoá học.",
+          "options": [
+            "đổi dữ kiện ra số mol",
+            "viết và cân bằng phương trình hoá học",
+            "lập tỉ lệ mol theo phương trình",
+            "đo nhiệt độ của phản ứng"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba bước đầu là quy trình chuẩn để giải toán theo PTHH. B2. Đo nhiệt độ không phải là bước tính toán cần thiết."
+        },
+        {
+          "id": "n2-l6-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Công thức tính hiệu suất phản ứng là H% = (lượng thực tế / ?) x 100%.",
+          "answer": "lượng lí thuyết",
+          "acceptedAnswers": ["lí thuyết", "luong ly thuyet"],
+          "placeholder": "Nhập cụm từ còn thiếu",
+          "explanation": "B1. Hiệu suất so sánh lượng sản phẩm thực tế thu được với lượng tính theo lí thuyết (theo PTHH). B2. H% = (lượng thực tế / lượng lí thuyết) x 100%."
+        },
+        {
+          "id": "n2-l6-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "calculation",
+          "prompt": "Phần trăm khối lượng O trong CO2 (M = 44) là bao nhiêu (làm tròn)?",
+          "options": ["72,7%", "27,3%", "50%", "16%"],
+          "answer": 0,
+          "explanation": "B1. Khối lượng O trong 1 phân tử CO2 là 2 x 16 = 32. B2. %O = 32/44 x 100% xấp xỉ 72,7%."
+        },
+        {
+          "id": "n2-l6-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 6,4 g Cu trong khí oxi dư thu được CuO. Khối lượng CuO tạo thành là",
+          "options": ["8 g", "6,4 g", "4 g", "16 g"],
+          "answer": 0,
+          "explanation": "B1. nCu = 6,4/64 = 0,1 mol. B2. Phương trình 2Cu + O2 -> 2CuO có tỉ lệ 1:1 nên nCuO = 0,1 mol. B3. mCuO = 0,1 x 80 = 8 g."
+        },
+        {
+          "id": "n2-l6-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 5,6 g Fe tác dụng với dung dịch HCl dư. Thể tích khí H2 sinh ra ở đkc là",
+          "options": ["2,479 lít", "1,2395 lít", "4,958 lít", "0,6198 lít"],
+          "answer": 0,
+          "explanation": "B1. nFe = 5,6/56 = 0,1 mol. B2. Phương trình Fe + 2HCl -> FeCl2 + H2 có tỉ lệ 1:1 giữa Fe và H2 nên nH2 = 0,1 mol. B3. V = 0,1 x 24,79 = 2,479 lít."
+        },
+        {
+          "id": "n2-l6-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,2 mol Zn tác dụng với 0,3 mol dung dịch HCl. Số mol Zn còn dư sau phản ứng là bao nhiêu?",
+          "answer": "0,05",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình Zn + 2HCl -> ZnCl2 + H2 cần tỉ lệ 1:2. B2. Với 0,3 mol HCl thì HCl hết trước (cần 0,4 mol HCl để hết 0,2 mol Zn). B3. Số mol Zn phản ứng = 0,3/2 = 0,15 mol nên Zn dư = 0,2 - 0,15 = 0,05 mol."
+        },
+        {
+          "id": "n2-l6-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Nung 20 g CaCO3, hiệu suất phản ứng đạt 80%. Khối lượng CaO thực tế thu được là",
+          "options": ["8,96 g", "11,2 g", "9,6 g", "10 g"],
+          "answer": 0,
+          "explanation": "B1. nCaCO3 = 20/100 = 0,2 mol nên CaO lí thuyết = 0,2 x 56 = 11,2 g. B2. Khối lượng CaO thực tế = 11,2 x 80% = 8,96 g."
+        },
+        {
+          "id": "n2-l6-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Chọn các phát biểu đúng về hiệu suất phản ứng.",
+          "options": [
+            "hiệu suất luôn nhỏ hơn hoặc bằng 100%",
+            "hiệu suất càng cao thì lượng sản phẩm thực tế càng gần lượng lí thuyết",
+            "hiệu suất không phụ thuộc điều kiện phản ứng",
+            "hiệu suất có thể lớn hơn 100%"
+          ],
+          "answers": [0, 1],
+          "explanation": "B1. Vì lượng thực tế không thể vượt lượng lí thuyết nên hiệu suất luôn nhỏ hơn hoặc bằng 100%. B2. Hiệu suất càng cao thì sản phẩm thực tế càng gần với tính toán lí thuyết. B3. Hiệu suất phụ thuộc điều kiện phản ứng (nhiệt độ, xúc tác...) nên hai phát biểu còn lại sai."
+        },
+        {
+          "id": "n2-l6-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 13 g Zn tác dụng với 200 ml dung dịch HCl 2M. Khối lượng muối ZnCl2 thu được là",
+          "options": ["27,2 g", "13,6 g", "20,4 g", "34 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nZn = 13/65 = 0,2 mol; nHCl = 0,2 x 2 = 0,4 mol. B2. Phương trình Zn + 2HCl -> ZnCl2 + H2 cần tỉ lệ 1:2, với 0,2 mol Zn cần đúng 0,4 mol HCl nên hai chất vừa đủ. B3. nZnCl2 = 0,2 mol, mZnCl2 = 0,2 x 136 = 27,2 g."
+        },
+        {
+          "id": "n2-l6-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Nung 25 g CaCO3, hiệu suất phản ứng đạt 90%. Khối lượng CaO thực tế thu được là bao nhiêu gam?",
+          "answer": "12,6",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol nên CaO lí thuyết = 0,25 x 56 = 14 g. B2. Khối lượng CaO thực tế = 14 x 90% = 12,6 g."
+        },
+        {
+          "id": "n2-l6-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 5,4 g Al tác dụng với dung dịch HCl dư. Thể tích khí H2 thu được ở đkc là",
+          "options": ["7,437 lít", "4,958 lít", "2,479 lít", "9,916 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nAl = 5,4/27 = 0,2 mol. B2. Phương trình 2Al + 6HCl -> 2AlCl3 + 3H2 có tỉ lệ Al : H2 = 2 : 3 nên nH2 = 0,2 x 3/2 = 0,3 mol. B3. V = 0,3 x 24,79 = 7,437 lít."
+        }
+      ]
+    },
+    {
+      "id": "n2-l7",
+      "title": "Tốc độ phản ứng và chất xúc tác",
+      "order": 7,
+      "summary": "Khái niệm tốc độ phản ứng và các yếu tố ảnh hưởng: nồng độ, nhiệt độ, diện tích bề mặt tiếp xúc và chất xúc tác.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n2-l7-c1",
+          "heading": "Tốc độ phản ứng",
+          "body": "Tốc độ phản ứng đặc trưng cho sự nhanh hay chậm của một phản ứng hoá học.\nPhản ứng nhanh (như phản ứng nổ, phản ứng trung hoà) xảy ra gần như tức thời; phản ứng chậm (như sắt bị gỉ, thực phẩm bị ôi thiu) có thể kéo dài nhiều ngày, nhiều tháng."
+        },
+        {
+          "id": "n2-l7-c2",
+          "heading": "Ảnh hưởng của nồng độ",
+          "body": "Khi tăng nồng độ chất tham gia phản ứng, số hạt (phân tử, ion) trong một đơn vị thể tích tăng lên, làm tăng số va chạm giữa các hạt trong một đơn vị thời gian, do đó tốc độ phản ứng tăng.\nVí dụ: đá vôi phản ứng với dung dịch hydrochloric acid đặc nhanh hơn với dung dịch loãng cùng thể tích."
+        },
+        {
+          "id": "n2-l7-c3",
+          "heading": "Ảnh hưởng của nhiệt độ",
+          "body": "Khi tăng nhiệt độ, các hạt chuyển động nhanh hơn, va chạm giữa chúng xảy ra nhiều hơn và hiệu quả hơn, làm tốc độ phản ứng tăng.\nVí dụ: thực phẩm để trong tủ lạnh (nhiệt độ thấp) lâu hỏng hơn để ở nhiệt độ phòng vì các phản ứng gây hư hỏng diễn ra chậm hơn."
+        },
+        {
+          "id": "n2-l7-c4",
+          "heading": "Ảnh hưởng của diện tích bề mặt tiếp xúc",
+          "body": "Với chất rắn tham gia phản ứng, tăng diện tích bề mặt tiếp xúc (nghiền nhỏ, đập vụn) làm tăng số va chạm giữa các hạt, do đó tốc độ phản ứng tăng.\nVí dụ: đá vôi dạng bột mịn phản ứng với dung dịch acid nhanh hơn đá vôi ở dạng cục lớn cùng khối lượng."
+        },
+        {
+          "id": "n2-l7-c5",
+          "heading": "Chất xúc tác",
+          "body": "Chất xúc tác là chất làm tăng tốc độ phản ứng nhưng không bị biến đổi về lượng và chất sau phản ứng.\nVí dụ: MnO2 làm chất xúc tác trong phản ứng nhiệt phân KClO3 hoặc trong phản ứng phân huỷ H2O2 (nước oxi già) thành H2O và O2 — sau phản ứng, khối lượng và bản chất MnO2 không đổi."
+        },
+        {
+          "id": "n2-l7-c6",
+          "heading": "Nâng cao: phân biệt chất xúc tác với chất tham gia và sản phẩm",
+          "body": "Chất xúc tác chỉ làm thay đổi tốc độ đạt tới trạng thái sản phẩm, không phải chất tham gia (không bị tiêu hao dần theo phản ứng như chất tham gia) và cũng không phải sản phẩm (không sinh ra thêm sau phản ứng). Vì vậy chất xúc tác không xuất hiện trong tính toán bảo toàn khối lượng của phản ứng chính, thường được ghi trên mũi tên phản ứng.\nCác yếu tố nồng độ, nhiệt độ, diện tích bề mặt và chất xúc tác chỉ làm thay đổi TỐC ĐỘ đạt tới lượng sản phẩm, không làm thay đổi LƯỢNG sản phẩm tối đa có thể thu được khi phản ứng xảy ra hoàn toàn với cùng lượng chất tham gia ban đầu."
+        },
+        {
+          "id": "n2-l7-c7",
+          "heading": "Nâng cao: ứng dụng thực tế của các yếu tố ảnh hưởng tốc độ phản ứng",
+          "body": "Trong đời sống và sản xuất, các yếu tố ảnh hưởng tốc độ phản ứng được vận dụng theo cả hai chiều — làm tăng tốc độ khi cần phản ứng nhanh, hoặc làm chậm tốc độ khi cần bảo quản, giữ chất ổn định.\nVí dụ làm tăng tốc độ: nghiền nhỏ than, đá vôi trước khi đưa vào lò để phản ứng cháy hoặc phân huỷ diễn ra nhanh và đều hơn; dùng chất xúc tác trong sản xuất công nghiệp để rút ngắn thời gian phản ứng.\nVí dụ làm chậm tốc độ: bảo quản thực phẩm trong tủ lạnh (giảm nhiệt độ) để làm chậm phản ứng gây hư hỏng; đóng kín thực phẩm, đồ vật kim loại để hạn chế tiếp xúc với oxi không khí (giảm nồng độ chất phản ứng tiếp xúc)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n2-l7-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Tốc độ phản ứng đặc trưng cho điều gì?",
+          "options": [
+            "sự nhanh hay chậm của một phản ứng hoá học",
+            "khối lượng chất tham gia phản ứng",
+            "số phương trình hoá học đã viết",
+            "nhiệt độ của phòng thí nghiệm"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tốc độ phản ứng là đại lượng đặc trưng cho sự nhanh hay chậm của phản ứng hoá học. B2. Có phản ứng xảy ra gần như tức thời, có phản ứng kéo dài rất lâu."
+        },
+        {
+          "id": "n2-l7-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi tăng nồng độ chất tham gia phản ứng, tốc độ phản ứng thường thay đổi như thế nào?",
+          "options": ["tăng", "giảm", "không đổi", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. Tăng nồng độ làm số hạt trong một đơn vị thể tích tăng lên. B2. Số va chạm giữa các hạt tăng nên tốc độ phản ứng tăng."
+        },
+        {
+          "id": "n2-l7-q3",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi tăng nhiệt độ, tốc độ phản ứng thường thay đổi như thế nào?",
+          "options": ["tăng", "giảm", "không đổi", "không xác định"],
+          "answer": 0,
+          "explanation": "B1. Tăng nhiệt độ làm các hạt chuyển động nhanh hơn. B2. Va chạm giữa các hạt xảy ra nhiều và hiệu quả hơn nên tốc độ phản ứng tăng."
+        },
+        {
+          "id": "n2-l7-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các yếu tố ảnh hưởng đến tốc độ phản ứng hoá học.",
+          "options": [
+            "nồng độ chất tham gia",
+            "nhiệt độ",
+            "diện tích bề mặt tiếp xúc",
+            "màu sắc của bình chứa"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Nồng độ, nhiệt độ và diện tích bề mặt tiếp xúc đều là các yếu tố ảnh hưởng đến tốc độ phản ứng. B2. Màu sắc của bình chứa không ảnh hưởng đến tốc độ phản ứng."
+        },
+        {
+          "id": "n2-l7-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chất làm tăng tốc độ phản ứng nhưng không bị biến đổi về lượng và chất sau phản ứng được gọi là gì?",
+          "answer": "chất xúc tác",
+          "acceptedAnswers": ["xúc tác"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Đây là định nghĩa của chất xúc tác. B2. Sau phản ứng, khối lượng và bản chất của chất xúc tác không đổi."
+        },
+        {
+          "id": "n2-l7-q6",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nghiền nhỏ chất rắn trước khi cho phản ứng thường có tác dụng gì đến tốc độ phản ứng?",
+          "options": [
+            "tăng tốc độ phản ứng vì tăng diện tích tiếp xúc",
+            "giảm tốc độ phản ứng",
+            "không ảnh hưởng đến tốc độ phản ứng",
+            "làm phản ứng dừng lại"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nghiền nhỏ chất rắn làm tăng diện tích bề mặt tiếp xúc với chất phản ứng khác. B2. Số va chạm giữa các hạt tăng nên tốc độ phản ứng tăng."
+        },
+        {
+          "id": "n2-l7-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cho cùng khối lượng đá vôi (CaCO3) tác dụng với cùng thể tích, cùng nồng độ dung dịch HCl: một mẫu để nguyên cục, một mẫu đã đập nhỏ. Mẫu nào phản ứng nhanh hơn?",
+          "options": [
+            "mẫu đã đập nhỏ, vì diện tích tiếp xúc lớn hơn",
+            "mẫu để nguyên cục, vì khối lượng tập trung",
+            "cả hai như nhau vì cùng khối lượng",
+            "không thể xác định"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đập nhỏ đá vôi làm tăng diện tích bề mặt tiếp xúc với dung dịch HCl. B2. Diện tích tiếp xúc lớn hơn nên số va chạm nhiều hơn, phản ứng xảy ra nhanh hơn."
+        },
+        {
+          "id": "n2-l7-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Vì sao thực phẩm được bảo quản trong tủ lạnh thường lâu hỏng hơn để ở nhiệt độ phòng?",
+          "options": [
+            "nhiệt độ thấp làm chậm tốc độ các phản ứng gây hư hỏng thực phẩm",
+            "tủ lạnh diệt hết vi khuẩn ngay lập tức",
+            "nhiệt độ thấp làm tăng nồng độ chất bảo quản",
+            "không liên quan đến tốc độ phản ứng"
+          ],
+          "answer": 0,
+          "explanation": "B1. Nhiệt độ thấp làm các hạt chuyển động chậm hơn, va chạm ít hiệu quả hơn. B2. Các phản ứng hoá học gây hư hỏng thực phẩm diễn ra chậm hơn nên thực phẩm giữ được lâu hơn."
+        },
+        {
+          "id": "n2-l7-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các biện pháp làm tăng tốc độ phản ứng giữa một mẩu kẽm (Zn) và dung dịch acid.",
+          "options": [
+            "tăng nồng độ dung dịch acid",
+            "đun nóng nhẹ hỗn hợp phản ứng",
+            "nghiền nhỏ mẩu kẽm trước khi cho vào acid",
+            "để hỗn hợp trong tủ lạnh"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Tăng nồng độ acid, đun nóng và nghiền nhỏ kẽm đều làm tăng tốc độ phản ứng theo ba yếu tố đã học. B2. Để trong tủ lạnh làm giảm nhiệt độ nên làm chậm tốc độ phản ứng, không phải biện pháp tăng tốc."
+        },
+        {
+          "id": "n2-l7-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chất xúc tác MnO2 dùng trong phản ứng phân huỷ KClO3 có đặc điểm nào sau đây?",
+          "options": [
+            "không bị biến đổi về lượng và chất sau phản ứng",
+            "bị tiêu hao dần theo phản ứng như chất tham gia",
+            "trở thành sản phẩm chính của phản ứng",
+            "làm giảm tốc độ phân huỷ KClO3"
+          ],
+          "answer": 0,
+          "explanation": "B1. MnO2 đóng vai trò chất xúc tác, chỉ làm tăng tốc độ phản ứng phân huỷ KClO3. B2. Sau phản ứng, khối lượng và bản chất MnO2 không đổi, không phải chất tham gia hay sản phẩm."
+        },
+        {
+          "id": "n2-l7-q11",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Vì sao trong công nghiệp, người ta thường nghiền nhỏ đá vôi trước khi đưa vào lò nung vôi?",
+          "options": [
+            "tăng diện tích tiếp xúc giữa đá vôi và nhiệt, giúp phản ứng phân huỷ diễn ra nhanh và đều hơn",
+            "làm giảm khối lượng đá vôi cần dùng",
+            "làm đá vôi biến thành chất khác trước khi nung",
+            "để dễ vận chuyển, không liên quan tốc độ phản ứng"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đá vôi dạng cục nhỏ có diện tích bề mặt lớn hơn so với cục lớn cùng khối lượng. B2. Diện tích tiếp xúc lớn hơn giúp phản ứng phân huỷ CaCO3 diễn ra nhanh và đều hơn trong lò nung."
+        },
+        {
+          "id": "n2-l7-q12",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Đun nóng một hỗn hợp đang xảy ra phản ứng toả nhiệt và sinh khí ở nhiệt độ phòng thì hiện tượng sinh khí thường thay đổi như thế nào?",
+          "options": [
+            "diễn ra nhanh và mạnh hơn so với để ở nhiệt độ phòng",
+            "chậm lại rõ rệt",
+            "dừng hẳn",
+            "không có gì thay đổi"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tăng nhiệt độ làm tốc độ phản ứng tăng theo yếu tố nhiệt độ đã học. B2. Vì vậy hiện tượng sinh khí diễn ra nhanh và mạnh hơn khi đun nóng so với để ở nhiệt độ phòng."
+        },
+        {
+          "id": "n2-l7-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hai thí nghiệm cùng cho một lượng CaCO3 dạng bột phản ứng với dung dịch HCl có cùng thể tích nhưng nồng độ khác nhau ở cùng nhiệt độ: thí nghiệm 1 dùng HCl 1M, thí nghiệm 2 dùng HCl 2M. Thí nghiệm nào có tốc độ thoát khí CO2 ban đầu nhanh hơn?",
+          "options": [
+            "thí nghiệm 2, vì nồng độ HCl lớn hơn",
+            "thí nghiệm 1, vì HCl loãng phản ứng nhanh hơn",
+            "cả hai như nhau vì cùng thể tích dung dịch",
+            "không thể xác định vì thiếu dữ kiện về khối lượng CaCO3"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Nồng độ HCl càng lớn thì số hạt HCl trong một đơn vị thể tích càng nhiều. B2. Số va chạm với bề mặt CaCO3 nhiều hơn nên thí nghiệm dùng HCl 2M có tốc độ thoát khí ban đầu nhanh hơn."
+        },
+        {
+          "id": "n2-l7-q14",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Cho cùng một khối lượng CaCO3 phản ứng hết với lượng dư dung dịch HCl trong ba thí nghiệm ở cùng nồng độ HCl: (gốc) CaCO3 dạng cục lớn ở nhiệt độ phòng; (1) CaCO3 dạng bột mịn ở nhiệt độ phòng; (2) CaCO3 dạng cục lớn được đun nóng nhẹ. Chọn các nhận xét đúng.",
+          "options": [
+            "thí nghiệm (1) có tốc độ phản ứng nhanh hơn thí nghiệm gốc nhờ diện tích tiếp xúc lớn hơn",
+            "thí nghiệm (2) có tốc độ phản ứng nhanh hơn thí nghiệm gốc nhờ nhiệt độ cao hơn",
+            "lượng khí CO2 tối đa thu được của ba thí nghiệm khác nhau vì tốc độ khác nhau",
+            "cả ba thí nghiệm đều thu được cùng lượng khí CO2 tối đa vì cùng khối lượng CaCO3 phản ứng hết"
+          ],
+          "answers": [0, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Diện tích tiếp xúc lớn hơn (1) và nhiệt độ cao hơn (2) đều làm tăng tốc độ phản ứng so với thí nghiệm gốc. B2. Vì HCl dư và cùng khối lượng CaCO3 phản ứng hết trong cả ba thí nghiệm, lượng khí CO2 tối đa thu được bằng nhau — các yếu tố tốc độ chỉ làm thay đổi thời gian phản ứng, không làm thay đổi lượng sản phẩm tối đa."
+        },
+        {
+          "id": "n2-l7-q15",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Giải thích nào đúng về vai trò của MnO2 trong phản ứng phân huỷ H2O2 (nước oxi già) thành H2O và O2?",
+          "options": [
+            "MnO2 làm tăng tốc độ phân huỷ H2O2 nhưng khối lượng MnO2 không đổi sau phản ứng",
+            "MnO2 là chất tham gia phản ứng, bị tiêu hao dần",
+            "MnO2 là sản phẩm sinh ra từ phản ứng phân huỷ H2O2",
+            "MnO2 làm chậm tốc độ phân huỷ H2O2"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. MnO2 đóng vai trò chất xúc tác trong phản ứng phân huỷ H2O2. B2. Chất xúc tác chỉ làm tăng tốc độ phản ứng, không bị biến đổi về lượng và chất nên khối lượng MnO2 không đổi sau phản ứng."
+        }
+      ]
+    }
+  ]
+}
