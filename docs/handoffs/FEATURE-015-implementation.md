@@ -7,20 +7,20 @@ Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phả
 `## R4 (content)` bên dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu
 tài liệu, trước `## R2`).
 
-- Remediation state: VALIDATING — nội dung 11/11 unit đã commit xong
-  (`12fd305`), gate nội dung/mã xanh; còn thiếu để R4 hoàn tất: cập nhật
-  `tests/e2e/**` + chạy `test:e2e`/`test:pwa` lần đầu (đang làm), rồi
-  Independent Review cho R4, rồi sửa blocker `check:bundle`. Xem
-  "## R4 (content)".
+- Remediation state: VALIDATING — nội dung 11/11 unit + E2E đã commit xong
+  (`ab822ea`), toàn bộ gate xanh trừ 1 blocker ngoài phạm vi
+  (`format:check` toàn repo). Còn thiếu: Independent Review cho R4. Xem
+  "## R4 (content)" / "## R4 (E2E)".
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
   thay đổi hành vi runtime (mở khoá bài, ôn câu sai, thi thử). Xem
   `docs/plans/FEATURE-015.md`.
 - Base SHA / candidate SHA: base `770e091` (origin/main) / candidate hiện
-  tại `12fd305` (nhánh `feature/FEATURE-015`; R1 `825d557`, R2 sau
-  remediation `7e7ce30`, R3 `feb2a08`, R4 content `12fd305`), chưa push.
-- Worktree state and dirty paths: sạch sau commit `12fd305`; còn 1 file
+  tại `ab822ea` (nhánh `feature/FEATURE-015`; R1 `825d557`, R2 sau
+  remediation `7e7ce30`, R3 `feb2a08`, R4 content `12fd305`, check:bundle
+  fix `ab43b39`, R4 E2E `ab822ea`), chưa push.
+- Worktree state and dirty paths: sạch sau commit `ab822ea`; còn 1 file
   untracked không thuộc phạm vi FEATURE-015:
   `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (có từ
   trước, ngoài `allowed_paths` — không đụng tới).
@@ -693,3 +693,33 @@ Codex ghi xong toàn bộ file nhưng không commit được (đúng blocker #1 
   danh mục 11 unit cuối cùng và chạy `test:e2e`/`test:pwa` lần đầu tiên
   (deferred từ R1-R3 theo plan) — orchestrator tự làm, không giao Codex, vì
   cần trình duyệt/Playwright mà sandbox Codex không đảm bảo có sẵn.
+
+## R4 (E2E) — orchestrator, candidate `ab822ea`
+
+- Đổi id cũ (`a1-nen-tang-hoa-hoc`, `a1-l1`, `a1-l2`) sang id mới (`n1-...`,
+  `n1-l1`, `n1-l2`) trong 5 spec: `learning.spec.ts`, `auth-sync.spec.ts`,
+  `review.spec.ts`, `pwa-subpath.spec.ts`, `pwa-offline.spec.ts`.
+  `learning.spec.ts` còn đổi mã unit hiển thị mong đợi từ `A1`/`B1` (17-unit
+  cũ) sang `N1`/`N10` (unit đầu Vô cơ/Hữu cơ trong danh mục 11-unit mới).
+- **Phát hiện lỗi thật khi chạy thử lần đầu**: 3 chỗ seed fixture
+  (`fixtures.ts` mock Supabase `/rest/v1/progress`, `auth-sync.spec.ts`,
+  `review.spec.ts`) đặt `version: 4` cho snapshot — đây là version cũ trước
+  FEATURE-015. Bước migrate `version < 5` thêm ở R1 (`src/store/progress.ts`)
+  coi mọi snapshot version 4 là dữ liệu catalog cũ và xoá sạch
+  `wrongQuestions`/`lessonProgress`/`unlockedLessonIds` khi hydrate — đúng
+  hành vi migrate như thiết kế, nhưng khiến 3 test seed dữ liệu rồi bị chính
+  logic migrate xoá trước khi assertion chạy tới. Sửa cả 3 chỗ thành
+  `version: 5` (đúng `PROGRESS_VERSION` hiện tại) vì các fixture này mô
+  phỏng dữ liệu người dùng đã ở danh mục mới, không phải snapshot cần
+  migrate. Đây là bằng chứng migrate logic hoạt động đúng như thiết kế
+  (phát hiện qua test thất bại đúng cách), không phải lỗi migrate.
+- Kết quả sau khi sửa (2026-07-20, UTC): `npm run test:e2e` 10/10 PASS,
+  `npm run test:pwa` 6/6 PASS, `npm run test:pwa:subpath` 1/1 PASS — lần
+  đầu tiên cả 3 chạy trên danh mục 11-unit hoàn chỉnh.
+- Cùng với fix `check:bundle` (candidate `ab43b39`, xem trên), **cả 4 gate
+  còn treo từ R1 nay đã xanh**: `check:bundle`, `test:e2e`, `test:pwa`,
+  `test:pwa:subpath`. Blocker duy nhất còn lại của toàn bộ FEATURE-015:
+  `format:check` phạm vi toàn repo vẫn vấp
+  `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (file
+  untracked ngoài phạm vi, có từ trước phiên làm việc — không thuộc quyền
+  xử lý của FEATURE-015).
