@@ -38,7 +38,7 @@ test('@pwa subpath manifest, service worker, and offline navigation', async ({
     timeout: 20_000
   });
 
-  const learnPath = `${basePath}learn/a1-nen-tang-hoa-hoc/a1-l1/theory`;
+  const learnPath = `${basePath}learn/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc/n1-l1/theory`;
   await page.goto(learnPath);
   await expect(
     page.getByRole('heading', { name: /Chất – hỗn hợp/ })

@@ -31,13 +31,15 @@ test('render catalog, đổi phần và mở lesson đúng unit', async ({ page 
   await expect(
     page.getByRole('heading', { name: /Lộ trình ôn Hoá học/ })
   ).toBeVisible();
-  await expect(page.getByText('A1', { exact: true })).toBeVisible();
+  await expect(page.getByText('N1', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Hữu cơ' }).click();
-  await expect(page.getByText('B1', { exact: true })).toBeVisible();
+  await expect(page.getByText('N10', { exact: true })).toBeVisible();
 
   await page.getByRole('button', { name: 'Vô cơ' }).click();
   await page.getByRole('link', { name: /Chất – hỗn hợp/ }).click();
-  await expect(page).toHaveURL(/\/learn\/a1-nen-tang-hoa-hoc\/a1-l1\/theory/);
+  await expect(page).toHaveURL(
+    /\/learn\/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc\/n1-l1\/theory/
+  );
   await expect(page.getByText('Đang tải bài học…')).toBeHidden();
   await expect(
     page.getByRole('heading', { name: /Chất – hỗn hợp/ })
@@ -47,7 +49,9 @@ test('render catalog, đổi phần và mở lesson đúng unit', async ({ page 
 test('XP and stars are persisted after completing a lesson and reloading', async ({
   page
 }) => {
-  await page.goto('/learn/a1-nen-tang-hoa-hoc/a1-l1/theory');
+  await page.goto(
+    '/learn/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc/n1-l1/theory'
+  );
   const nextCard = page.getByRole('button', { name: 'Thẻ tiếp theo' });
   const finishTheory = page.getByRole('button', {
     name: 'Hoàn thành lý thuyết'
