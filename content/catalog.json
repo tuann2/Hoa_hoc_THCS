@@ -439,5 +439,153 @@
         "calculationQuestionCount": 0
       }
     ]
+  },
+  {
+    "id": "n10-hidrocacbon-va-nhien-lieu",
+    "part": "organic",
+    "code": "N10",
+    "title": "Hiđrocacbon và nhiên liệu",
+    "order": 10,
+    "description": "Đại cương hữu cơ, các dãy hiđrocacbon cơ bản (alkane, alkene, alkyne, arene), dầu mỏ - khí thiên nhiên - nhiên liệu và các bài toán đốt cháy hiđrocacbon.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n10-l1",
+        "title": "Đại cương hữu cơ: khái niệm, phân loại, cấu tạo, CTCT, đồng phân – đồng đẳng",
+        "order": 1,
+        "summary": "Khái niệm hợp chất hữu cơ, phân loại hiđrocacbon và dẫn xuất, mạch carbon, công thức cấu tạo, đồng phân và dãy đồng đẳng.",
+        "status": "available",
+        "theoryQuestionCount": 15,
+        "calculationQuestionCount": 0
+      },
+      {
+        "id": "n10-l2",
+        "title": "Alkane — methane",
+        "order": 2,
+        "summary": "Methane (metan) là alkane đơn giản nhất: cấu tạo tứ diện, phản ứng cháy, phản ứng thế với chlorine và vai trò trong khí thiên nhiên.",
+        "status": "available",
+        "theoryQuestionCount": 7,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n10-l3",
+        "title": "Alkene — ethylene",
+        "order": 3,
+        "summary": "Ethylene (etilen) là alkene đơn giản nhất: liên kết đôi, phản ứng cộng, phản ứng trùng hợp và ứng dụng của polyethylene.",
+        "status": "available",
+        "theoryQuestionCount": 7,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n10-l4",
+        "title": "Alkyne — acetylene",
+        "order": 4,
+        "summary": "Acetylene (axetilen) là alkyne đơn giản nhất: liên kết ba, phản ứng cộng, điều chế từ calcium carbide và ứng dụng thực tế.",
+        "status": "available",
+        "theoryQuestionCount": 8,
+        "calculationQuestionCount": 5
+      },
+      {
+        "id": "n10-l5",
+        "title": "Arene — benzene",
+        "order": 5,
+        "summary": "Benzene (benzen) là arene quen thuộc nhất ở THCS: cấu tạo vòng thơm bền, ưu tiên phản ứng thế và bài toán cháy đặc trưng.",
+        "status": "available",
+        "theoryQuestionCount": 7,
+        "calculationQuestionCount": 6
+      },
+      {
+        "id": "n10-l6",
+        "title": "Dầu mỏ, khí thiên nhiên và nhiên liệu; sự cháy",
+        "order": 6,
+        "summary": "Thành phần, cách chế biến và sử dụng dầu mỏ, khí thiên nhiên, các nhóm nhiên liệu và nguyên tắc đốt cháy hiệu quả, an toàn.",
+        "status": "available",
+        "theoryQuestionCount": 9,
+        "calculationQuestionCount": 4
+      },
+      {
+        "id": "n10-l7",
+        "title": "Nâng cao: lập công thức phân tử; bài toán đốt cháy hydrocarbon",
+        "order": 7,
+        "summary": "Bảo toàn C, H, O khi đốt cháy hydrocarbon, xác định công thức phân tử và biện luận hai chất kế tiếp trong cùng dãy đồng đẳng.",
+        "status": "available",
+        "theoryQuestionCount": 2,
+        "calculationQuestionCount": 13
+      }
+    ]
+  },
+  {
+    "id": "n11-dan-xuat-hidrocacbon-va-polime",
+    "part": "organic",
+    "code": "N11",
+    "title": "Dẫn xuất hiđrocacbon và polime",
+    "order": 11,
+    "description": "Ethylic alcohol, acetic acid, ester - chất béo, carbohydrate, protein, polymer và các bài toán chuỗi chuyển hoá - hiệu suất hữu cơ.",
+    "status": "available",
+    "lessons": [
+      {
+        "id": "n11-l1",
+        "title": "Ethylic alcohol (rượu etylic)",
+        "order": 1,
+        "summary": "Cấu tạo, tính chất, độ rượu và các phản ứng cơ bản của ethylic alcohol; liên hệ với lên men và chuỗi chuyển hoá hữu cơ.",
+        "status": "available",
+        "theoryQuestionCount": 6,
+        "calculationQuestionCount": 7
+      },
+      {
+        "id": "n11-l2",
+        "title": "Acetic acid (axit axetic) và acid no đơn chức",
+        "order": 2,
+        "summary": "Nhóm -COOH, tính chất acid, phản ứng ester hóa và đặc điểm chung của dãy acid no đơn chức mạch hở.",
+        "status": "available",
+        "theoryQuestionCount": 6,
+        "calculationQuestionCount": 7
+      },
+      {
+        "id": "n11-l3",
+        "title": "Ester và chất béo",
+        "order": 3,
+        "summary": "Phản ứng ester hóa, thuỷ phân este, công thức chung của chất béo và phản ứng xà phòng hoá tạo xà phòng, glycerol.",
+        "status": "available",
+        "theoryQuestionCount": 11,
+        "calculationQuestionCount": 4
+      },
+      {
+        "id": "n11-l4",
+        "title": "Carbohydrate: glucose, saccharose, starch (tinh bột), cellulose",
+        "order": 4,
+        "summary": "Tính chất tiêu biểu của glucose, saccharose, starch và cellulose; phản ứng tráng gương, thuỷ phân và ứng dụng của các carbohydrate quen thuộc.",
+        "status": "available",
+        "theoryQuestionCount": 9,
+        "calculationQuestionCount": 10
+      },
+      {
+        "id": "n11-l5",
+        "title": "Protein",
+        "order": 5,
+        "summary": "Thành phần, đơn vị cấu tạo, tính đông tụ - biến tính, thuỷ phân và vai trò của protein trong cơ thể và thực phẩm.",
+        "status": "available",
+        "theoryQuestionCount": 13,
+        "calculationQuestionCount": 0
+      },
+      {
+        "id": "n11-l6",
+        "title": "Polymer; chất dẻo – tơ – cao su",
+        "order": 6,
+        "summary": "Khái niệm polymer, monome, mắt xích và các vật liệu polymer quen thuộc: chất dẻo, tơ, cao su.",
+        "status": "available",
+        "theoryQuestionCount": 13,
+        "calculationQuestionCount": 0
+      },
+      {
+        "id": "n11-l7",
+        "title": "Nâng cao: chuỗi chuyển hoá – nhận biết hữu cơ; bài toán lên men, ester hoá",
+        "order": 7,
+        "summary": "Chuỗi chuyển hoá hữu cơ quen thuộc, chọn thuốc thử nhận biết và giải các bài toán hiệu suất lên men, ester hóa nhiều giai đoạn.",
+        "status": "available",
+        "theoryQuestionCount": 11,
+        "calculationQuestionCount": 5
+      }
+    ]
   }
 ]

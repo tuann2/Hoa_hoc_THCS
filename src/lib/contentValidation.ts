@@ -19,7 +19,9 @@ const EXPECTED_UNIT_IDS = [
   'n6-muoi-va-phan-bon-hoa-hoc',
   'n7-moi-quan-he-giua-cac-hop-chat-vo-co',
   'n8-kim-loai',
-  'n9-phi-kim'
+  'n9-phi-kim',
+  'n10-hidrocacbon-va-nhien-lieu',
+  'n11-dan-xuat-hidrocacbon-va-polime'
 ];
 
 const QUESTION_CATEGORIES: QuestionCategory[] = ['theory', 'calculation'];
