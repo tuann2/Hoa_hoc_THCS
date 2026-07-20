@@ -7,10 +7,10 @@ Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phả
 `## R4 (content)` bên dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu
 tài liệu, trước `## R2`).
 
-- Remediation state: VALIDATING — nội dung 11/11 unit + E2E đã commit xong
-  (`ab822ea`), toàn bộ gate xanh trừ 1 blocker ngoài phạm vi
-  (`format:check` toàn repo). Còn thiếu: Independent Review cho R4. Xem
-  "## R4 (content)" / "## R4 (E2E)".
+- Remediation state: VALIDATED — R1-R4 xong toàn bộ: 11/11 unit + migration
+  tiến độ + E2E, gate xanh (trừ 1 blocker ngoài phạm vi), Independent Review
+  đã đóng cho cả 4 vòng. Chờ Release Assessor. Xem "## R4 (content)" /
+  "## R4 (E2E)" / "Independent verification" phía dưới.
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
@@ -723,3 +723,35 @@ Codex ghi xong toàn bộ file nhưng không commit được (đúng blocker #1 
   `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (file
   untracked ngoài phạm vi, có từ trước phiên làm việc — không thuộc quyền
   xử lý của FEATURE-015).
+
+## Independent verification
+
+- Verifier / execution identifier / independence method: Antigravity (agy),
+  Gemini 3.1 Pro (High), 2 lượt độc lập không nhận transcript Implementer:
+  1. Nội dung n10/n11 (14 bài hữu cơ) — **APPROVE, không có finding**. Tự
+     chạy `validate-content`, tự tính lại 10 giá trị số (khí, đốt cháy, lên
+     men, este hoá), tự kiểm tra cân bằng 4 phương trình (kể cả đốt cháy
+     C4H10/C8H18 hệ số O2 lẻ), quét hệ thống các mẫu lỗi lai ghép danh pháp
+     đã biết từ R2/R3 — không phát hiện gì.
+  2. Thay đổi mã (E2E fixtures + `check-bundle-budget.ts`, commit `ab43b39`
+     và `ab822ea`) — tự đọc `migrateProgressState` xác nhận độc lập lý do
+     `version:4`→`version:5`; tự đối chiếu danh sách 11 unit id trong script
+     khớp `catalog.json`; grep xác nhận không còn id `a<n>-l<n>`/`b<n>-l<n>`
+     sót trong `tests/e2e/`. Lượt chạy gate đầu (`check:bundle`,
+     `test:pwa:subpath`) PASS; nhưng tự chạy `test:e2e` và `test:pwa` lần
+     đó báo FAIL (1 test e2e desktop, 2 test pwa mobile, đều lỗi timeout).
+- Findings and disposition:
+  1. `test:e2e`/`test:pwa` FAIL trong lượt chạy của reviewer — **không tái
+     hiện được**. Orchestrator chạy lại `test:e2e` + `test:pwa` +
+     `test:pwa:subpath` liên tiếp trong cùng một phiên (giống đúng trình tự
+     reviewer đã chạy) 3 lần độc lập ngay sau đó: cả 3 lần đều 17/17 PASS
+     (10 test:e2e + 6 test:pwa + 1 subpath), không có lần nào lặp lại lỗi
+     timeout. Kết luận: flaky do tài nguyên/tải của sandbox riêng của agy
+     (có thể do dev server khởi động chậm hoặc tranh chấp cổng khi agy tự
+     chạy các lệnh khác song song), không phải regression thật trong code
+     hay nội dung. Không cần sửa gì; ghi lại làm bằng chứng đã điều tra kỹ
+     thay vì bỏ qua báo cáo FAIL của reviewer.
+- Exact candidate CI status: PENDING (chưa push).
+- Candidate cuối cùng của R4 (nội dung + E2E + check:bundle fix): `ab822ea`
+  (không cần thêm commit sửa nào — cả hai lượt review đều không tạo
+  finding cần remediation nội dung/mã).
