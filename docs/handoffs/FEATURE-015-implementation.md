@@ -3,21 +3,24 @@
 ## Status
 
 Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phản ánh trạng thái
-**mới nhất** (sau R3). Chi tiết từng vòng nằm ở các mục `## R1`/`## R2`/`## R3`
-bên dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu tài liệu, trước
-`## R2`).
+**mới nhất**. Chi tiết từng vòng nằm ở các mục `## R1`/`## R2`/`## R3`/
+`## R4 (content)` bên dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu
+tài liệu, trước `## R2`).
 
-- Remediation state: VALIDATED (R1 + R2 + R3 xong — commit, gate xanh,
-  Independent Review đã đóng; chờ R4. Xem "## R3")
+- Remediation state: VALIDATING — nội dung 11/11 unit đã commit xong
+  (`12fd305`), gate nội dung/mã xanh; còn thiếu để R4 hoàn tất: cập nhật
+  `tests/e2e/**` + chạy `test:e2e`/`test:pwa` lần đầu (đang làm), rồi
+  Independent Review cho R4, rồi sửa blocker `check:bundle`. Xem
+  "## R4 (content)".
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
   thay đổi hành vi runtime (mở khoá bài, ôn câu sai, thi thử). Xem
   `docs/plans/FEATURE-015.md`.
 - Base SHA / candidate SHA: base `770e091` (origin/main) / candidate hiện
-  tại `feb2a08` (nhánh `feature/FEATURE-015`; R1 `825d557`, R2 sau
-  remediation `7e7ce30`, R3 `feb2a08`), chưa push.
-- Worktree state and dirty paths: sạch sau commit `feb2a08`; còn 1 file
+  tại `12fd305` (nhánh `feature/FEATURE-015`; R1 `825d557`, R2 sau
+  remediation `7e7ce30`, R3 `feb2a08`, R4 content `12fd305`), chưa push.
+- Worktree state and dirty paths: sạch sau commit `12fd305`; còn 1 file
   untracked không thuộc phạm vi FEATURE-015:
   `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (có từ
   trước, ngoài `allowed_paths` — không đụng tới).
@@ -532,3 +535,161 @@ dioxide"` (cho rằng "đioxide" là lai ghép Việt-Anh sai). **Không áp
 - Không phát hiện lỗi hoá học, cân bằng phương trình, hay lai ghép danh
   pháp thật nào khác. Candidate cuối cùng của R3: `feb2a08` (không đổi,
   không cần commit sửa).
+
+## R4 (content)
+
+## Status
+
+- Execution envelope: Implementer / CRITICAL / R4 FEATURE-015, scope chỉ cho
+  `content/catalog.json`, `content/units/**`,
+  `src/lib/contentValidation.ts`, `src/lib/contentLoader.ts`, `tests/**`,
+  `docs/content-reserve/feature-015/**`, `docs/handoffs/**`.
+- Branch / head / candidate: làm việc trực tiếp trên `feature/FEATURE-015`,
+  `HEAD 144a1be`. Nội dung R4 hiện nằm trên snapshot `UNCOMMITTED`.
+- Exact-snapshot evidence (2026-07-19 UTC): `npm run evidence -- --changed-from=144a1be`
+  tạo snapshot ID `3d1eeb1fdcf09d8466f2eb9ce26ae11203926376d9c9516c6622394868560b93`
+  (`manifest` fallback) và FAIL ở `format:check` do file ngoài scope
+  `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md`; thêm lý do
+  fallback: `git add -A` không ghi được vì `.git` read-only.
+- Commitability: `git commit` không thực hiện được dù envelope cấp
+  `commit=true`; thử commit checkpoint n10 thất bại với
+  `fatal: Unable to create '.git/index.lock': Read-only file system`. Vì vậy
+  chưa có SHA riêng cho n10, n11 hay handoff R4.
+
+## Source and reuse notes
+
+- `n10-l1` "Đại cương hữu cơ..." — ghép toàn bộ `b1-l1` + `b1-l2`; lấy khung
+  khái niệm/phân loại/CTCT từ Chương IV mục I, giữ gần nguyên vẹn phần đồng
+  phân - đồng đẳng, chỉ chuẩn hoá tên hợp chất hữu cơ tiêu biểu.
+- `n10-l2` "Alkane — methane" — tái sử dụng chính `b2-l1`; chuẩn hoá title,
+  lời dẫn đầu bài và các câu khí sang đkc 24,79 L/mol / tỉ lệ thể tích cùng
+  điều kiện.
+- `n10-l3` "Alkene — ethylene" — tái sử dụng chính `b2-l2`; giữ mạch
+  liên kết đôi - cộng - trùng hợp theo Chương IV mục II.B, đổi nomenclature
+  `ethylene/polyethylene` và giải lại toàn bộ câu khí/thể tích.
+- `n10-l4` "Alkyne — acetylene" — tái sử dụng chính `b2-l3`; giữ lõi điều
+  chế từ `CaC2`, cộng brom/hiđro, chuẩn hoá `acetylene` và quy đổi đkc.
+- `n10-l5` "Arene — benzene" — tái sử dụng chính `b2-l4`; giữ phần vòng thơm,
+  thế/cộng, đốt cháy và sửa mọi chỗ tham chiếu thể tích mol khí về đkc.
+- `n10-l6` "Dầu mỏ, khí thiên nhiên và nhiên liệu; sự cháy" — tái sử dụng
+  chính `b2-l5`; giữ cấu trúc dầu mỏ/khí thiên nhiên/nhiên liệu, thay một bài
+  thể tích để loại literal `22,4` khỏi đáp án.
+- `n10-l7` "Nâng cao: lập công thức phân tử; bài toán đốt cháy hydrocarbon"
+  — ghép `b2-l6` với `b5-l1`; lấy khung đốt cháy - hỗn hợp khí từ `b2-l6`,
+  thêm biện luận CTPT/độ bất bão hoà/two-homolog từ `b5-l1`.
+- `n11-l1` "Ethylic alcohol (rượu etylic)" — tái sử dụng chính `b3-l1`; giữ
+  nội dung độ rượu, phản ứng với Na, đốt cháy, tách nước/lên men; đổi tên
+  chính sang `ethylic alcohol` và giải lại 2 câu thể tích khí.
+- `n11-l2` "Acetic acid..." — tái sử dụng chính `b3-l2`; giữ dãy acid no đơn
+  chức, phản ứng với muối cacbonat/Natri/este hoá; chuẩn hoá `acid`/`base` và
+  giải lại 2 câu khí.
+- `n11-l3` "Ester và chất béo" — ghép `b3-l2` (card este hoá) + `b3-l4`
+  (toàn bộ chất béo/xà phòng hoá) + 2 bài este hoá từ `b3-l5`; không có bài
+  khí, chỉ đổi tên `ethyl acetate`, `glycerol`, `acid béo`.
+- `n11-l4` "Carbohydrate..." — ghép toàn bộ `b4-l1` + `b4-l2` + `b4-l3`;
+  giữ phản ứng tráng gương/thuỷ phân/tinh bột-cellulose, chọn lại 19 câu để
+  vừa schema, ưu tiên câu không phụ thuộc 22,4.
+- `n11-l5` "Protein" — tái sử dụng chính `b4-l4`; chỉ chuẩn hoá `amino acid`
+  và giữ nguyên cấu trúc tính chất/biến tính/thuỷ phân.
+- `n11-l6` "Polymer; chất dẻo – tơ – cao su" — tái sử dụng chính `b4-l5`;
+  chuẩn hoá danh pháp polymer thông dụng (`polyethylene`, `polypropylene`,
+  `poly(vinyl chloride)`, `polybutadiene`).
+- `n11-l7` "Nâng cao: chuỗi chuyển hoá – nhận biết hữu cơ; bài toán lên men,
+  ester hoá" — ghép `b5-l2` + các card/bài hiệu suất phù hợp từ `b3-l5` và
+  `b4-l6`; bỏ `b5-l3` theo plan, chỉ giữ chuỗi/nhận biết/lên men/este hoá.
+
+## Numeric verification
+
+Tất cả giá trị dưới đây được tính lại độc lập bằng Node trước khi ghi vào
+file, dùng `V = n x 24,79` ở đkc khi có đổi mol <-> thể tích:
+
+```text
+n10-l2-q7: 5,6 L CH4 -> n = 5,6/24,79 = 0,22590 mol
+           -> nO2 = 0,45180 mol -> V(O2) = 11,2 L (tỉ lệ thể tích 1:2)
+n10-l2-q11: 4,48 L CH4 -> n = 0,18072 mol; 11,2 L O2 -> n = 0,45180 mol
+            -> O2 cần = 0,36144 mol -> O2 dư = 0,09036 mol -> V dư = 2,24 L
+n10-l3-q7: 3,36 L C2H4 -> n = 3,36/24,79 = 0,13554 mol
+           -> V(H2) = 3,36 L (tỉ lệ thể tích 1:1 cùng đkc)
+n10-l3-q10: 5,6 L C2H4 -> n = 0,22590 mol
+            -> m(C2H4Br2) = 0,22590 x 188 = 42,46874 g -> ghi 42,47 g
+n10-l3-q11: 2,8 L C2H4 -> n = 0,11295 mol; H = 80%
+            -> n phản ứng = 0,09036 mol -> mPE = 0,09036 x 28 = 2,53005 g
+            -> ghi 2,53 g
+n10-l3-q12: 11,2 L hỗn hợp - 4,48 L CH4 còn lại = 6,72 L C2H4 ban đầu
+n10-l4-q6: nCaC2 = 6,4/64 = 0,10 mol -> nC2H2 = 0,10 mol
+           -> V(C2H2) = 0,10 x 24,79 = 2,479 L
+n10-l4-q10: 2,24 L C2H2 -> n = 2,24/24,79 = 0,090359 mol
+            -> n(C2H2Br2) = 0,090359 mol -> ghi xấp xỉ 0,090 mol
+n10-l4-q11: 16 x 80% = 12,8 g CaC2 -> n = 0,20 mol
+            -> V(C2H2) = 0,20 x 24,79 = 4,958 L
+n10-l6-q6: 2,479 L CH4 -> V(O2) = 4,958 L (tỉ lệ thể tích 1:2 cùng đkc)
+n10-l6-q11: 11,2 L mẫu khí x 80% = 8,96 L CH4
+            -> V(O2) = 17,92 L (tỉ lệ thể tích 1:2 cùng đkc)
+n11-l1-q10: nC2H5OH = 9,2/46 = 0,20 mol -> nH2 = 0,10 mol
+            -> V(H2) = 0,10 x 24,79 = 2,479 L
+n11-l1-q12: nC2H5OH = 4,6/46 = 0,10 mol -> nCO2 = 0,20 mol
+            -> V(CO2) = 0,20 x 24,79 = 4,958 L
+n11-l2-q8: nCH3COOH = 6/60 = 0,10 mol -> nCO2 = 0,05 mol
+           -> V(CO2) = 0,05 x 24,79 = 1,2395 L
+n11-l2-q12: nCH3COOH = 6/60 = 0,10 mol -> nH2 = 0,05 mol
+            -> V(H2) = 0,05 x 24,79 = 1,2395 L
+```
+
+## Validation and blockers
+
+Gate log trên snapshot `UNCOMMITTED` (2026-07-19 UTC):
+
+```text
+git diff --check                              -> PASS
+npm run format:check                          -> FAIL: docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md
+                                                 (file untracked có sẵn từ trước, ngoài scope)
+npm run validate-content                      -> PASS ("Đã kiểm tra 11 unit...")
+npm run check:content-catalog                 -> PASS
+npm run lint                                  -> PASS
+npm run typecheck                             -> PASS
+npm test                                      -> PASS (28 test files, 245 tests)
+npm run build                                 -> PASS (PWA precache 30 entries; chunk riêng cho n10, n11)
+npm run check:licenses                        -> PASS
+npm run check:bundle                          -> FAIL: "Chỉ tìm thấy 0/17 content chunks độc lập."
+test:e2e / test:pwa                           -> KHÔNG CHẠY theo dispatch R4 content
+npm audit --audit-level=moderate              -> KHÔNG CHẠY (không nằm trong step 6; sandbox này cũng không có network ổn định)
+```
+
+Blockers / deviations cuối R4 content:
+
+1. `git commit` và `git add` đều fail với `.git/index.lock: Read-only file system`.
+   Đây là blocker môi trường, không phải blocker nội dung; ngăn hoàn tất yêu
+   cầu commit checkpoint n10/n11/handoff dù envelope cấp `commit=true`.
+2. `npm run format:check` còn fail ở file ngoài scope
+   `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md`, đúng cảnh
+   báo của dispatch. Sau khi chạy `prettier --write` cho 2 unit mới, repo chỉ
+   còn blocker này.
+3. `npm run check:bundle` vẫn fail vì `scripts/check-bundle-budget.ts`
+   hard-code 17 unit cũ và file đó nằm ngoài `allowed_paths` của R4.
+
+## Orchestrator verification (Claude Code, 2026-07-20)
+
+Codex ghi xong toàn bộ file nhưng không commit được (đúng blocker #1 tự ghi
+ở trên). Orchestrator tiếp quản:
+
+- Grep toàn bộ n10/n11 tìm lỗi lai ghép danh pháp cùng dạng đã gặp ở R2/R3:
+  phát hiện và **sửa** 2 chỗ — `n10-l1-q10`: option nhiễu `"Axit hữu cơ"` →
+  `"Acid hữu cơ"`; `n11-l1-…`: `"cacbon đioxit"` → `"carbon đioxide"` (theo
+  đúng quy ước tiền tố đi-/tri-/penta- + oxide đã dùng nhất quán từ n5/n9,
+  áp dụng cả cho tên nguyên tố: "Silicon đioxide" → tương tự "carbon
+  đioxide", không phải "cacbon" hay "dioxide" trần).
+- Tính lại độc lập bằng Python 9 giá trị khí/đốt cháy còn lại trong log của
+  Codex (ngoài các giá trị Codex đã tự log) — khớp chính xác từng số.
+- Chạy lại toàn bộ gate sau khi sửa: `validate-content` (11 unit, PASS),
+  `check:content-catalog` (PASS), `lint` (PASS), `typecheck` (PASS),
+  `npm test` (245/245 PASS), `build` (PASS, 30 PWA precache entries, đủ 11
+  content chunk), `check:licenses` (PASS), `npm audit --audit-level=moderate`
+  (PASS, 0 vulnerabilities — khác Codex vì phiên orchestrator có network).
+  `check:bundle` và `format:check` (toàn repo) vẫn còn 2 blocker ngoài phạm
+  vi cũ; `check:bundle` sẽ được xử lý riêng ngay sau bước này (script nay
+  nằm trong phạm vi hợp lý để orchestrator tự cập nhật vì đã đủ 11/11 unit).
+- Commit thay Codex (degradation path, giống R2/R3): candidate `12fd305`.
+- Việc còn lại của R4 (chưa phải phần content): cập nhật `tests/e2e/**` cho
+  danh mục 11 unit cuối cùng và chạy `test:e2e`/`test:pwa` lần đầu tiên
+  (deferred từ R1-R3 theo plan) — orchestrator tự làm, không giao Codex, vì
+  cần trình duyệt/Playwright mà sandbox Codex không đảm bảo có sẵn.
