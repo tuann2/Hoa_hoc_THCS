@@ -7,10 +7,11 @@ Tài liệu này gộp handoff của nhiều vòng; mục Status ở đây phả
 `## R4 (content)` bên dưới — R1 không có tiêu đề `## R1` riêng (là phần đầu
 tài liệu, trước `## R2`).
 
-- Remediation state: VALIDATED — R1-R4 xong toàn bộ: 11/11 unit + migration
-  tiến độ + E2E, gate xanh (trừ 1 blocker ngoài phạm vi), Independent Review
-  đã đóng cho cả 4 vòng. Chờ Release Assessor. Xem "## R4 (content)" /
-  "## R4 (E2E)" / "Independent verification" phía dưới.
+- Remediation state: RELEASE_READY — R1-R4 xong toàn bộ: 11/11 unit +
+  migration tiến độ + E2E, 14/15 gate xanh (1 blocker ngoài phạm vi), 7
+  lượt Independent Review đã đóng. Chờ: (a) review chuyên môn giáo viên
+  (theo plan, việc của con người), (b) phê duyệt cuối + cấp phép push của
+  nt0. Xem mục "Release Assessment" ở cuối tài liệu.
 - Risk tier / categories / escalation rationale: CRITICAL — thay đổi giá trị
   số giáo dục trên toàn bộ nội dung (22,4→24,79 L/mol); soạn lại danh mục và
   thẻ lý thuyết; reset/migration tiến độ người học (local + Supabase sync);
@@ -755,3 +756,105 @@ Codex ghi xong toàn bộ file nhưng không commit được (đúng blocker #1 
 - Candidate cuối cùng của R4 (nội dung + E2E + check:bundle fix): `ab822ea`
   (không cần thêm commit sửa nào — cả hai lượt review đều không tạo
   finding cần remediation nội dung/mã).
+
+# Release Assessment (Release Assessor: Claude Code, phiên orchestrator, 2026-07-20)
+
+Theo `docs/roles/release-assessor.md` — chỉ đánh giá, không tự phê duyệt
+cuối; con người (nt0) giữ quyền phê duyệt cuối cùng.
+
+## Candidate
+
+- Base: `770e091` (origin/main) — Candidate: `4b754f1`
+  (`4b754f112953ed1ceee4139e7088a5d50e9abfb8`), nhánh `feature/FEATURE-015`.
+- `git diff --stat` base→candidate: 48 files changed, 13326 insertions(+),
+  703 deletions(-).
+- Exact-snapshot binding: `npm run evidence -- --changed-from=770e091` ghi
+  `validated_snapshot.id = e73e0d08134fbe633f94f916c2f546b3aa23e709`
+  (kind `git-tree`, fallback vì 1 file untracked ngoài phạm vi khiến cây
+  làm việc không "sạch tuyệt đối" theo evidence.ts — xem "Blocker duy nhất"
+  bên dưới). `base_sha` do evidence.ts ghi lại khớp chính xác candidate SHA
+  thật (`4b754f112953ed1ceee4139e7088a5d50e9abfb8`).
+- Chưa push (`permissions.push=false` xuyên suốt cả 4 vòng theo envelope).
+
+## Gate profile "full" (`scripts/gates-manifest.ts`) — chạy trên candidate `4b754f1`
+
+| Gate               | Kết quả                  | Ghi chú                                                                                                                                                                                                                                                             |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| git-diff-check     | PASS                     |                                                                                                                                                                                                                                                                     |
+| format-check       | **FAIL (ngoài phạm vi)** | Chỉ vấp `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md`, file untracked có từ trước phiên làm việc FEATURE-015, không thuộc `allowed_paths`. `prettier --check` scoped theo từng commit của FEATURE-015 đều sạch (đã xác nhận nhiều lần qua R1-R4). |
+| content-catalog    | PASS                     | `check:content-catalog` khớp `content/units/*.json`                                                                                                                                                                                                                 |
+| content-validation | PASS                     | 11/11 unit, không lỗi schema/nội dung                                                                                                                                                                                                                               |
+| lint               | PASS                     |                                                                                                                                                                                                                                                                     |
+| typecheck          | PASS                     |                                                                                                                                                                                                                                                                     |
+| unit-tests         | PASS                     | 245/245, 28 test file                                                                                                                                                                                                                                               |
+| dependency-audit   | PASS                     | `npm audit --audit-level=moderate`: 0 vulnerabilities                                                                                                                                                                                                               |
+| license-check      | PASS                     | 673 package                                                                                                                                                                                                                                                         |
+| production-build   | PASS                     | 11 content chunk riêng, PWA precache 30 entries                                                                                                                                                                                                                     |
+| bundle-check       | PASS                     | Sửa ở candidate `ab43b39` (R4); trước đó FAIL từ R1-R3 do script hard-code danh mục cũ                                                                                                                                                                              |
+| e2e                | PASS                     | 10/10, xác nhận lặp lại ổn định 3 lần liên tiếp                                                                                                                                                                                                                     |
+| pwa                | PASS                     | 6/6, xác nhận lặp lại ổn định 3 lần liên tiếp                                                                                                                                                                                                                       |
+| pwa-subpath        | PASS                     | 1/1                                                                                                                                                                                                                                                                 |
+| docs-check         | PASS                     | 81 file Markdown; chỉ có warning URL ngoài chưa xác minh (pre-existing, không liên quan FEATURE-015)                                                                                                                                                                |
+
+**14/15 gate PASS. 1 gate (`format-check`) chỉ FAIL vì lý do ngoài phạm vi
+FEATURE-015** (xem "Blocker duy nhất" bên dưới) — không phải lỗi của nội
+dung hay mã đã thay đổi trong feature này.
+
+## Acceptance criteria (theo `docs/plans/FEATURE-015.md`)
+
+| Tiêu chí                                                                                         | Trạng thái                                                                                                     |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| Danh mục đúng Phụ lục A (11 unit, mỗi bài ≤25 thẻ), qua validate-content + check:content-catalog | ĐẠT — 11/11 unit, xem bảng gate                                                                                |
+| Không còn "đktc"/"22,4"/danh pháp cũ ngoài chú thích đối chiếu                                   | ĐẠT — quét lại toàn bộ 11 unit lần cuối (2026-07-20), sạch hoàn toàn                                           |
+| Mọi bài toán khí dùng 24,79 L/mol (đkc)                                                          | ĐẠT — giải lại độc lập nhiều lượt (orchestrator + 2 lượt Independent Review), không có sai lệch                |
+| Snapshot cũ được backup; XP/streak/lịch sử thi giữ nguyên sau migration                          | ĐẠT — test unit + tích hợp + review độc lập xác nhận logic `migrateProgressState`/`mergeProgress` đúng         |
+| Toàn bộ gate profile xanh trên đúng candidate                                                    | GẦN ĐẠT — 14/15, 1 gate bị chặn bởi lý do ngoài phạm vi (xem trên)                                             |
+| Vòng review chuyên môn của giáo viên                                                             | **CHƯA** — theo đúng kế hoạch, đây là bước con người thực hiện sau khi đủ 11 unit, chưa xảy ra trong phiên này |
+
+## Independent review coverage (tier CRITICAL — yêu cầu soát mọi dòng thay đổi)
+
+7 lượt Independent Review độc lập qua 4 vòng (không nhận transcript
+Implementer):
+
+- R1 (n1, n2, migration tiến độ): Opus 4.6 — APPROVE.
+- R2 phần 1 (n3-n5): Opus 4.6 → Sonnet 4.6 (quota) → Gemini 3.1 Pro High —
+  APPROVE_WITH_NOTES, 5 finding (4 áp dụng, 1 bỏ qua có chủ đích).
+- R2 phần 2 (n6-n7): Gemini 3.1 Pro High — REMEDIATION_REQUIRED, 2 finding,
+  cả 2 đã đóng.
+- R3 (n8, n9): Gemini 3.1 Pro High — APPROVE_WITH_NOTES, 1 finding, không
+  áp dụng (reviewer thiếu ngữ cảnh quy ước đã có, xác minh lại đúng).
+- R4 phần 1 (n10, n11): Gemini 3.1 Pro High — APPROVE, không finding.
+- R4 phần 2 (mã E2E + check:bundle): Gemini 3.1 Pro High — APPROVE, 1 báo
+  cáo FAIL không tái hiện được (flaky sandbox, đã điều tra và ghi lại).
+
+Tổng: mọi unit nội dung (11/11) và toàn bộ thay đổi mã liên quan
+(`src/store/progress.ts`, `src/lib/progressSync.ts`,
+`src/lib/contentValidation.ts`, `src/lib/contentLoader.ts`,
+`scripts/check-bundle-budget.ts`, `tests/e2e/**`) đã qua ít nhất một lượt
+review độc lập đúng yêu cầu tier CRITICAL.
+
+## Blocker duy nhất còn lại
+
+`docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` — file
+Markdown untracked, có từ **trước** phiên làm việc FEATURE-015, không nằm
+trong `allowed_paths` của bất kỳ envelope nào đã cấp cho vòng nào (R1-R4).
+File này khiến `npm run format:check` (quét toàn repo) và
+`npm run evidence` (kiểm tra cây làm việc sạch) báo lỗi/fallback, dù không
+liên quan gì đến nội dung hay mã của FEATURE-015. Đã ghi nhận từ R1, không
+đổi qua các vòng. **Không thuộc thẩm quyền Release Assessor xử lý** — cần
+nt0 quyết định: format/commit file đó trên nhánh riêng, hoặc xoá nếu không
+còn cần, hoặc xác nhận bỏ qua khi đánh giá release cho FEATURE-015.
+
+## Release Assessor verdict
+
+**RELEASE_READY**, với 1 ngoại lệ đã ghi rõ (blocker `format:check` ngoài
+phạm vi) và 1 bước con người còn treo theo đúng thiết kế của plan (review
+chuyên môn giáo viên — không phải điều kiện chặn kỹ thuật, là bước xác nhận
+nội dung trước khi merge mà chỉ con người làm được). Đề xuất nt0:
+
+1. Xác nhận đã sẵn sàng merge về mặt kỹthuật (14/15 gate, 7 lượt review độc
+   lập, không finding nội dung/mã còn mở).
+2. Tự quyết định có cần tự rà nội dung hoá học (hoặc nhờ giáo viên) trước
+   hay sau khi merge — plan không bắt buộc rà trước merge, chỉ khuyến nghị.
+3. Cấp phép push/mở PR khi sẵn sàng (`permissions.push=false` xuyên suốt,
+   chưa có hành động nào hướng tới remote).
