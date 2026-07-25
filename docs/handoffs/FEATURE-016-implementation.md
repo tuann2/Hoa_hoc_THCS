@@ -2,18 +2,20 @@
 
 ## Status
 
-- Remediation state: committed and pushed, code-complete, both required
-  CRITICAL reviews clean and human-accepted, rollback/restore rehearsal
-  DONE (§13, §15). Candidate commit
-  `f9e43aafdaf485bb3093eb9fc9cfe0eca134fff9` (+ docs-only
-  `d7d609fa196390cc1a7176d2522929e486b70e03`) on `feature/FEATURE-016`,
-  pushed. **Still not `RELEASE_READY`**: CI's overall status on this branch
-  is currently failure — every FEATURE-016-relevant step passed, but
-  `npm audit` fails on a pre-existing, out-of-scope devDependency advisory
-  also present on `main` (see criterion 18, §15). Production `0002`
-  rollout additionally requires a separate, explicit human authorization
-  and manual execution — Claude has no Supabase credentials and cannot
-  perform that step regardless of authorization.
+- Remediation state: `RELEASE_READY` (human-approved release, 2026-07-25).
+  All 22 plan §15 acceptance criteria MET (16 and 18 as explicitly
+  human-accepted deviations — Claude substituted for Gemini review;
+  CI accepted with a pre-existing, out-of-scope `npm audit` finding).
+  Candidate commits `f9e43aafdaf485bb3093eb9fc9cfe0eca134fff9`,
+  `d7d609fa196390cc1a7176d2522929e486b70e03`,
+  `f89d72c...` (handoff updates) on `feature/FEATURE-016`, pushed. **This
+  marks the client-side candidate release-ready; it does not itself
+  authorize or perform the production `0002` migration** — that is a
+  separate, explicit rollout action plan §6.6 requires the Human Project
+  Owner to perform manually (Claude has no Supabase credentials and cannot
+  execute it under any authorization). Human has requested guidance to
+  begin that production rollout now — see the production-rollout runbook
+  once prepared, and record its results here as they complete.
 - Risk tier: CRITICAL
 - Risk categories: authentication or authorization logic; trust boundary;
   migration; cross-user data access
@@ -738,20 +740,19 @@ must close before release, listed after the checklist.
    docs-only `d7d609fa196390cc1a7176d2522929e486b70e03`), pushed to
    `feature/FEATURE-016` on human's explicit instruction ("push và release
    luôn đi").
-4. **New: CI is red, but only on a pre-existing, out-of-scope finding.**
-   See criterion 18 above — `npm audit` fails on a `brace-expansion`
-   transitive devDependency advisory that also exists on `main` today
-   (unchanged lockfile). Every FEATURE-016-relevant CI step passed. Human
-   should explicitly decide whether this blocks "CI green" for release
-   purposes or is accepted as pre-existing/out-of-scope like the two
-   `format:check` files.
-5. **Human explicitly declined full production rollout in this session.**
-   When asked to clarify "release" scope, the human confirmed they want
-   the full production `0002` migration, not just a code merge — but
-   Claude has no Supabase credentials and cannot execute that step under
-   any authorization; plan §6.6 requires the Human Project Owner to run
+4. ~~**CI is red, but only on a pre-existing, out-of-scope finding**~~ —
+   **RESOLVED 2026-07-25.** Human Project Owner explicitly accepted this as
+   "đủ xanh" (green enough) for release purposes, on the basis that every
+   FEATURE-016-relevant step passed and the `npm audit` failure is
+   confirmed pre-existing on `main`. Criterion 18 is now MET.
+5. **Human wants full production rollout, now proceeding.** When asked to
+   clarify "release" scope, the human confirmed they want the full
+   production `0002` migration, not just a code merge. Claude has no
+   Supabase credentials and cannot execute that step under any
+   authorization; plan §6.6 requires the Human Project Owner to run
    preflight/backup/apply/smoke-test manually. This remains entirely a
-   human action, to be done using `docs/runbooks/FEATURE-016-supabase-test-rollout.md`
+   human action, using a production-adapted version of
+   `docs/runbooks/FEATURE-016-supabase-test-rollout.md`
    as reference (adapted for production) once item 4 above is resolved and
    the human gives explicit production rollout authorization.
 
