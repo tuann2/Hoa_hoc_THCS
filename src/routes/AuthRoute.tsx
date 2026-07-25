@@ -42,7 +42,7 @@ export function AuthRoute() {
       }
 
       setFeedback(result.message ?? 'Mật khẩu mới đã được lưu.');
-      navigate('/profile');
+      void navigate('/profile');
       return;
     }
 
@@ -57,7 +57,7 @@ export function AuthRoute() {
       setFeedback(result.message ?? 'Tạo tài khoản thành công.');
 
       if (!result.requiresEmailConfirmation) {
-        navigate('/profile');
+        void navigate('/profile');
       }
 
       return;
@@ -83,7 +83,7 @@ export function AuthRoute() {
     }
 
     setFeedback(result.message ?? 'Đăng nhập thành công.');
-    navigate('/profile');
+    void navigate('/profile');
   }
 
   if (session && !isPasswordRecovery) {

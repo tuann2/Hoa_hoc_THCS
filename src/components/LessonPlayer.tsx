@@ -248,14 +248,16 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <button
             className="rounded-full bg-sea px-5 py-3 font-semibold text-white transition hover:bg-ink"
-            onClick={() => navigate(`/learn/${unit.id}/${lesson.id}/theory`)}
+            onClick={() =>
+              void navigate(`/learn/${unit.id}/${lesson.id}/theory`)
+            }
             type="button"
           >
             Ôn phần Lý thuyết
           </button>
           <button
             className="rounded-full border border-ink/10 px-5 py-3 font-semibold text-ink/70 transition hover:border-sea hover:text-sea"
-            onClick={() => navigate('/')}
+            onClick={() => void navigate('/')}
             type="button"
           >
             Về lộ trình
@@ -271,15 +273,15 @@ export function LessonPlayer({ lesson, mode, unit, units }: LessonPlayerProps) {
         accuracy={finalState.accuracy}
         correctCount={correctFirstTry}
         earnedXp={finalState.xp}
-        onBackHome={() => navigate('/')}
+        onBackHome={() => void navigate('/')}
         onNextLesson={
           finalState.showNextLesson && nextLessonId
-            ? () => navigate(`/learn/${unit.id}/${nextLessonId}/${mode}`)
+            ? () => void navigate(`/learn/${unit.id}/${nextLessonId}/${mode}`)
             : undefined
         }
         onSecondaryAction={
           finalState.secondaryActionLabel
-            ? () => navigate(`/learn/${unit.id}/${lesson.id}/${otherMode}`)
+            ? () => void navigate(`/learn/${unit.id}/${lesson.id}/${otherMode}`)
             : undefined
         }
         onReplay={resetLesson}
