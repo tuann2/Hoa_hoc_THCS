@@ -90,6 +90,58 @@ VITE_SUPABASE_ANON_KEY=your-public-anon-key
 Nếu hai env bị thiếu, app tự rơi về chế độ local-only và vẫn học bình
 thường như trước.
 
+### Báo cáo admin và thời gian học (FEATURE-016)
+
+Chỉ Human Project Owner được phép áp
+[`0002_admin_reporting.sql`](supabase/migrations/0002_admin_reporting.sql)
+sau khi candidate đã qua đầy đủ dry-run/rollback trên project test, hai review
+`CRITICAL` và phê duyệt rollout. Không chạy migration, seed hoặc thử SQL vào
+project học sinh thật chỉ để kiểm tra code.
+
+Sau rollout đã được duyệt, cấp admin đầu tiên bằng SQL Editor/quyền vận hành
+(không dùng anon client). Hai người phải đối chiếu UUID với đúng tài khoản và
+email trong Auth dashboard trước khi chạy lệnh; không dùng UUID do người yêu
+cầu tự cung cấp khi chưa xác minh:
+
+```sql
+insert into public.admin_users (user_id)
+values ('UUID-DA-XAC-MINH')
+on conflict (user_id) do nothing;
+```
+
+Ghi ngoài repo: người yêu cầu, người duyệt/thực hiện, UUID, lý do và UTC
+timestamp. Thu hồi quyền thông thường bằng quyền vận hành rồi xác nhận request
+đọc chéo user bị từ chối:
+
+```sql
+delete from public.admin_users
+where user_id = 'UUID-DA-XAC-MINH';
+```
+
+Nếu nghi ngờ tài khoản admin bị chiếm, đồng thời xóa row admin, vô hiệu hóa/đăng
+xuất mọi session của tài khoản trong Supabase Auth, reset/rotate credential có
+liên quan, kiểm tra Auth/database logs và lập incident record. Không chờ cache
+client hết hạn.
+
+Dashboard chỉ đọc `display_name` và snapshot `progress` mà học viên có thể tự
+sửa qua quyền own-write hiện có; đây không phải dữ liệu server-authoritative và
+không được dùng để chấm điểm, kỷ luật hoặc xác minh danh tính. Thời gian học là
+ước lượng wall-clock do RPC dùng database clock ghi giữa heartbeat hợp lệ khi
+app online, foreground/focus và có tương tác gần đây; không có dữ liệu offline,
+hồi tố hay bằng chứng người học thực sự tập trung.
+
+Telemetry chỉ lưu tổng số giây theo ngày GMT+7 (rolling 365 ngày) và mốc
+heartbeat hiện tại, không lưu URL/nội dung/timeline chi tiết. Vì vòng đầu chưa
+có scheduler, owner phải chạy cleanup có kiểm soát ít nhất hằng tháng, lưu UTC
+và row count trước/sau; account deletion/erasure phải bao gồm state/totals qua
+FK cascade. Nếu không vận hành được cleanup, dừng release và sửa plan. Backup,
+CSV hoặc dump chứa dữ liệu học viên phải mã hóa, access-controlled, có owner và
+access audit ngoài repo/log agent; xóa trong 30 ngày sau rollout thành công hoặc
+khi incident/rollback liên quan đóng (mốc nào đến sau), và ghi UTC deletion.
+Vòng đầu không có audit log cho từng lượt xem dashboard; dùng Supabase
+Auth/database logs cùng change record cho grant/revoke, migration/rollback,
+backup access và telemetry cleanup.
+
 ### Nếu gặp lỗi `access_denied&error_code=otp_expired` khi bấm link email
 
 - Nguyên nhân thường gặp nhất: một số email client (Gmail, Outlook Safe
