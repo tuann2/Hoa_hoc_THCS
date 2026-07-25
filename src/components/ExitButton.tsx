@@ -12,7 +12,7 @@ export function ExitButton({ confirmMessage }: ExitButtonProps) {
       className="rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25"
       onClick={() => {
         if (window.confirm(confirmMessage)) {
-          navigate('/');
+          void navigate('/');
         }
       }}
       type="button"

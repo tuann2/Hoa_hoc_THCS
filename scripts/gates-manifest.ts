@@ -80,7 +80,7 @@ export const GATE_DEFINITIONS: Record<GateId, GateDefinition> = {
   },
   'dependency-audit': {
     id: 'dependency-audit',
-    command: ['npm', 'audit', '--audit-level=moderate'],
+    command: ['node', '--import', 'tsx', 'scripts/check-audit.ts'],
     prerequisites: [],
     profiles: ['web', 'full']
   },

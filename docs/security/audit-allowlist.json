@@ -1,0 +1,12 @@
+{
+  "exceptions": [
+    {
+      "advisoryId": "GHSA-qwww-vcr4-c8h2",
+      "package": "react-router",
+      "reason": "RSC Mode CSRF Bypass — advisory ghi rõ chỉ áp dụng khi dùng unstable RSC APIs. App này chỉ dùng react-router declarative mode cổ điển (BrowserRouter/Routes/Route/Link/NavLink/useNavigate/useParams), không dùng RSC. Chưa có version nào của react-router-dom vá được advisory này mà không tái xuất hiện 2 lỗ hổng khác đã vá (open redirect, SSR hydration deserializeErrors).",
+      "approvedBy": "Human Project Owner (tuann2)",
+      "approvedDate": "2026-07-25",
+      "reviewAfter": null
+    }
+  ]
+}

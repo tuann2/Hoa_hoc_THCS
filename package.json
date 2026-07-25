@@ -10,6 +10,7 @@
     "generate:content-catalog": "node --import tsx scripts/generate-content-catalog.ts",
     "check:content-catalog": "node --import tsx scripts/generate-content-catalog.ts --check",
     "check:bundle": "node --import tsx scripts/check-bundle-budget.ts",
+    "check:audit": "node --import tsx scripts/check-audit.ts",
     "check:licenses": "node --import tsx scripts/check-licenses.ts",
     "check:docs": "node --import tsx scripts/check-docs.ts",
     "evidence": "node --import tsx scripts/evidence.ts",
@@ -31,7 +32,7 @@
     "@supabase/supabase-js": "2.57.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.30.4",
+    "react-router-dom": "^7.18.1",
     "zustand": "5.0.8"
   },
   "devDependencies": {
