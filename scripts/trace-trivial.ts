@@ -148,7 +148,7 @@ export function parseTraceYaml(content: string): TrivialTraceRecord {
     request_class: 'change',
     risk_tier: 'TRIVIAL',
     base_sha: required('base_sha'),
-    validated_snapshot: { kind: snapshotKind, id: snapshotId } as SnapshotId,
+    validated_snapshot: { kind: snapshotKind, id: snapshotId },
     changed_paths: changedPaths,
     selected_gates: selectedGates as GateId[],
     result,

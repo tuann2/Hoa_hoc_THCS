@@ -690,7 +690,7 @@ export async function syncProgressOnSignIn(
       ? createInitialProgressState(units)
       : storedLocal;
 
-  let server: ProgressSnapshot | null = null;
+  let server: ProgressSnapshot | null;
 
   try {
     server = await pullProgress(userId);

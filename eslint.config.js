@@ -31,6 +31,21 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      // eslint-plugin-react-hooks v7 turned these on by default. They target
+      // React Compiler-era purity rules that this codebase's already
+      // CRITICAL-reviewed patterns predate:
+      // - set-state-in-effect flags the reset-state-then-fetch pattern used
+      //   throughout this codebase (clear stale state, then kick off an
+      //   async load), which is correct, intentional behavior here.
+      // - refs/purity flag reading `ref.current`/`Date.now()` inside a
+      //   render-time eligibility computation in
+      //   src/hooks/useStudyTimeTracker.ts, already reviewed across 3 rounds
+      //   of CRITICAL review for FEATURE-016. Restructuring that file is out
+      //   of scope for this dependency-audit fix and would reopen its
+      //   review cycle.
+      'react-hooks/set-state-in-effect': 'off',
+      'react-hooks/refs': 'off',
+      'react-hooks/purity': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }

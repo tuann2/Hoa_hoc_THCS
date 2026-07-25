@@ -29,7 +29,7 @@ function account(id: string): User {
     id,
     email: `${id}@example.com`,
     user_metadata: {}
-  } as User;
+  };
 }
 
 const learner = {

@@ -49,7 +49,7 @@ function createSession(): Session {
         display_name: 'Học Sinh'
       }
     }
-  } as Session;
+  };
 }
 
 function renderAuthRoute(initialEntries = ['/auth']) {
