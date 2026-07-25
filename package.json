@@ -10,6 +10,7 @@
     "generate:content-catalog": "node --import tsx scripts/generate-content-catalog.ts",
     "check:content-catalog": "node --import tsx scripts/generate-content-catalog.ts --check",
     "check:bundle": "node --import tsx scripts/check-bundle-budget.ts",
+    "check:audit": "node --import tsx scripts/check-audit.ts",
     "check:licenses": "node --import tsx scripts/check-licenses.ts",
     "check:docs": "node --import tsx scripts/check-docs.ts",
     "evidence": "node --import tsx scripts/evidence.ts",
