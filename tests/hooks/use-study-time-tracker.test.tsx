@@ -29,7 +29,7 @@ function learner(): User {
     id: 'learner-1',
     email: 'learner@example.com',
     user_metadata: {}
-  } as User;
+  };
 }
 
 describe('useStudyTimeTracker', () => {
