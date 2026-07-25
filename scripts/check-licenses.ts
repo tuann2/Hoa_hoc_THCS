@@ -1,6 +1,6 @@
 import { access, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { isExecutedAsScript } from './cli';
 
 type PackageLock = {
   packages?: Record<
@@ -278,8 +278,9 @@ export async function main(
   );
 }
 
-const entryPath = process.argv[1];
-
-if (entryPath && fileURLToPath(import.meta.url) === entryPath) {
-  await main();
+if (isExecutedAsScript(import.meta.url)) {
+  main().catch((error: unknown) => {
+    console.error(error);
+    process.exit(1);
+  });
 }

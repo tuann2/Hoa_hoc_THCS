@@ -163,7 +163,7 @@ export async function installSupabaseMock(
           remote
             ? {
                 data: remote,
-                version: 4,
+                version: 5,
                 updated_at: '2026-07-17T00:00:00.000Z'
               }
             : null

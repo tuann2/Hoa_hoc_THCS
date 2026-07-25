@@ -12,19 +12,19 @@ function reviewSnapshot() {
     lastStudyDate: null,
     lastMutationAt: '2026-07-17T00:00:00.000Z',
     lessonProgress: {},
-    unlockedLessonIds: ['a1-l1'],
+    unlockedLessonIds: ['n1-l1'],
     wrongQuestions: {
-      'a1-nen-tang-hoa-hoc::a1-l1::a1-l1-q1': {
-        unitId: 'a1-nen-tang-hoa-hoc',
-        lessonId: 'a1-l1',
-        questionId: 'a1-l1-q1',
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc::n1-l1::n1-l1-q1': {
+        unitId: 'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc',
+        lessonId: 'n1-l1',
+        questionId: 'n1-l1-q1',
         missCount: 1,
         lastMissedAt: '2026-07-17T00:00:00.000Z'
       },
-      'a1-nen-tang-hoa-hoc::a1-l1::a1-l1-q2': {
-        unitId: 'a1-nen-tang-hoa-hoc',
-        lessonId: 'a1-l1',
-        questionId: 'a1-l1-q2',
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc::n1-l1::n1-l1-q2': {
+        unitId: 'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc',
+        lessonId: 'n1-l1',
+        questionId: 'n1-l1-q2',
         missCount: 1,
         lastMissedAt: '2026-07-16T00:00:00.000Z'
       }
@@ -40,7 +40,7 @@ test('review resolves a correct answer and keeps a wrong answer queued', async (
     if (!localStorage.getItem('hhthcs-progress')) {
       localStorage.setItem(
         'hhthcs-progress',
-        JSON.stringify({ state: snapshot, version: 4 })
+        JSON.stringify({ state: snapshot, version: 5 })
       );
     }
   }, reviewSnapshot());
@@ -68,10 +68,14 @@ test('review resolves a correct answer and keeps a wrong answer queued', async (
     return value.state;
   });
   expect(
-    persisted.wrongQuestions['a1-nen-tang-hoa-hoc::a1-l1::a1-l1-q1'].resolvedAt
+    persisted.wrongQuestions[
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc::n1-l1::n1-l1-q1'
+    ].resolvedAt
   ).toEqual(expect.any(String));
   // App ghi resolvedAt: null cho câu chưa resolve (store/progress.ts:741)
   expect(
-    persisted.wrongQuestions['a1-nen-tang-hoa-hoc::a1-l1::a1-l1-q2'].resolvedAt
+    persisted.wrongQuestions[
+      'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc::n1-l1::n1-l1-q2'
+    ].resolvedAt
   ).toBeFalsy();
 });

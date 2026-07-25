@@ -278,6 +278,52 @@ describe('progress store', () => {
     expect(localStorage.getItem(PROGRESS_STORAGE_KEY)).toBeNull();
   });
 
+  it('hydrate từ snapshot v4 (danh mục cũ): giữ XP/streak/lịch sử thi, reset unlocks về mặc định mới', () => {
+    localStorage.setItem(
+      PROGRESS_STORAGE_KEY,
+      JSON.stringify({
+        version: 4,
+        state: {
+          totalXp: 150,
+          streakCurrent: 3,
+          streakLongest: 5,
+          lastStudyDate: '2026-07-18',
+          lastMutationAt: '2026-07-18T09:00:00.000Z',
+          lessonProgress: {
+            'a1-l1': {
+              theory: { completed: true, accuracy: 90 },
+              practice: { completed: true, accuracy: 85 },
+              completed: true,
+              stars: 3,
+              bestAccuracy: 90,
+              bestXp: 40,
+              completedAt: '2026-07-18T08:00:00.000Z'
+            }
+          },
+          unlockedLessonIds: ['a1-l1', 'a1-l2'],
+          wrongQuestions: {},
+          examHistory: [createExamAttempt(1)]
+        }
+      })
+    );
+
+    const store = createProgressStore(fixtureUnits);
+    const state = store.getState();
+
+    // XP và lịch sử thi tích luỹ trước đó vẫn giữ nguyên sau khi danh mục
+    // được xây lại (FEATURE-015).
+    expect(state.totalXp).toBe(150);
+    expect(state.streakCurrent).toBe(3);
+    expect(state.examHistory).toMatchObject([{ id: createExamAttempt(1).id }]);
+    // Tiến độ theo bài của danh mục cũ không còn ý nghĩa nên bị reset...
+    expect(state.lessonProgress).toEqual({});
+    // ...và unlockedLessonIds không bị để trống mà quay về mặc định của
+    // danh mục mới (bài đầu tiên của unit đầu tiên), nhờ hàm merge tuỳ
+    // biến trong cấu hình persist.
+    expect(state.unlockedLessonIds).toEqual(['u1-l1']);
+    expect(localStorage.getItem('hhthcs-progress-backup-v4')).not.toBeNull();
+  });
+
   it('ghi nhận câu sai và clearWrongAnswer đặt resolvedAt thay vì xoá key', () => {
     const store = createProgressStore(fixtureUnits);
     const firstMissedAt = new Date('2026-07-05T09:00:00.000Z');
@@ -351,7 +397,10 @@ describe('progress store', () => {
     );
   });
 
-  it('migrate từ v1 lên v2 thêm wrongQuestions rỗng', () => {
+  it('migrate từ v1 thêm wrongQuestions rỗng nhưng cũng bị v5 reset tiến độ theo bài', () => {
+    // Từ v5 (FEATURE-015), danh mục bài học được xây lại toàn bộ nên bất kỳ
+    // snapshot nào thấp hơn v5 đều đi qua bước reset lessonProgress/
+    // unlockedLessonIds/wrongQuestions, kể cả khi xuất phát từ v1.
     expect(
       migrateProgressState(
         {
@@ -366,13 +415,13 @@ describe('progress store', () => {
       )
     ).toMatchObject({
       totalXp: 80,
-      unlockedLessonIds: ['u1-l1'],
+      unlockedLessonIds: [],
       wrongQuestions: {},
       lastMutationAt: null
     });
   });
 
-  it('migrate từ v2 lên v3 thêm examHistory rỗng', () => {
+  it('migrate từ v2 thêm examHistory rỗng nhưng cũng bị v5 reset tiến độ theo bài', () => {
     expect(
       migrateProgressState(
         {
@@ -389,11 +438,12 @@ describe('progress store', () => {
       )
     ).toMatchObject({
       wrongQuestions: {},
+      unlockedLessonIds: [],
       examHistory: []
     });
   });
 
-  it('migrate từ v3 lên v4 giữ completion, stars, unlocks và dữ liệu khác', () => {
+  it('migrate từ v3 giữ totalXp/examHistory nhưng v5 reset lessonProgress/unlocks/wrongQuestions', () => {
     const migrated = migrateProgressState(
       {
         totalXp: 80,
@@ -425,28 +475,91 @@ describe('progress store', () => {
       3
     );
 
+    // Danh mục 17 unit cũ đã bị thay thế (FEATURE-015): lessonId/questionId
+    // cũ không còn tồn tại nên tiến độ theo bài phải được reset, trong khi
+    // XP tích luỹ và lịch sử thi vẫn giữ nguyên.
     expect(migrated).toMatchObject({
       totalXp: 80,
-      unlockedLessonIds: ['u1-l1', 'u1-l2'],
-      wrongQuestions: {
-        [getWrongQuestionKey('u1', 'u1-l1', 'q1')]: {
-          questionId: 'q1',
-          missCount: 2
+      unlockedLessonIds: [],
+      wrongQuestions: {},
+      examHistory: [createExamAttempt(1)],
+      lessonProgress: {}
+    });
+  });
+
+  it('migrate từ v4 lên v5 sao lưu snapshot cũ và reset tiến độ theo bài, giữ XP/streak/lịch sử thi', () => {
+    const legacySnapshot = {
+      totalXp: 150,
+      streakCurrent: 3,
+      streakLongest: 5,
+      lastStudyDate: '2026-07-18',
+      lastMutationAt: '2026-07-18T09:00:00.000Z',
+      lessonProgress: {
+        'a1-l1': {
+          theory: { completed: true, accuracy: 90 },
+          practice: { completed: true, accuracy: 85 },
+          completed: true,
+          stars: 3,
+          bestAccuracy: 90,
+          bestXp: 40,
+          completedAt: '2026-07-18T08:00:00.000Z'
         }
       },
-      examHistory: [createExamAttempt(1)],
-      lessonProgress: {
-        'u1-l1': {
-          theory: { completed: true, accuracy: 80 },
-          practice: { completed: true, accuracy: 80 },
-          completed: true,
-          stars: 2,
-          bestAccuracy: 80,
-          bestXp: 80,
-          completedAt: '2026-07-05T09:00:00.000Z'
+      unlockedLessonIds: ['a1-l1', 'a1-l2'],
+      wrongQuestions: {
+        [getWrongQuestionKey('a1-nen-tang-hoa-hoc', 'a1-l1', 'a1-l1-q1')]: {
+          unitId: 'a1-nen-tang-hoa-hoc',
+          lessonId: 'a1-l1',
+          questionId: 'a1-l1-q1',
+          missCount: 1,
+          lastMissedAt: '2026-07-18T07:00:00.000Z'
         }
-      }
+      },
+      examHistory: [createExamAttempt(1)]
+    };
+
+    const migrated = migrateProgressState(legacySnapshot, 4);
+
+    expect(migrated).toMatchObject({
+      totalXp: 150,
+      streakCurrent: 3,
+      streakLongest: 5,
+      lastStudyDate: '2026-07-18',
+      examHistory: [createExamAttempt(1)],
+      lessonProgress: {},
+      unlockedLessonIds: [],
+      wrongQuestions: {}
     });
+
+    const backup = localStorage.getItem('hhthcs-progress-backup-v4');
+    expect(backup).not.toBeNull();
+    expect(JSON.parse(backup as string)).toMatchObject({
+      totalXp: 150,
+      unlockedLessonIds: ['a1-l1', 'a1-l2']
+    });
+  });
+
+  it('migrate v4->v5 không ghi đè bản sao lưu đã tồn tại', () => {
+    localStorage.setItem(
+      'hhthcs-progress-backup-v4',
+      JSON.stringify({ totalXp: 999 })
+    );
+
+    migrateProgressState(
+      {
+        totalXp: 1,
+        streakCurrent: 0,
+        streakLongest: 0,
+        lastStudyDate: null,
+        lessonProgress: {},
+        unlockedLessonIds: []
+      },
+      4
+    );
+
+    expect(
+      JSON.parse(localStorage.getItem('hhthcs-progress-backup-v4') as string)
+    ).toMatchObject({ totalXp: 999 });
   });
 
   it('recordExamAttempt prepend đúng thứ tự và cắt còn tối đa 20 phần tử', () => {

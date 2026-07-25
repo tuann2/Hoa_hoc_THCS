@@ -1,0 +1,893 @@
+{
+  "id": "n9-phi-kim",
+  "part": "inorganic",
+  "code": "N9",
+  "title": "Phi kim",
+  "order": 9,
+  "description": "Đặc điểm và tính chất của phi kim, chlorine, carbon - silicon cùng các hợp chất quan trọng, và sơ lược bảng tuần hoàn.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n9-l1",
+      "title": "Đặc điểm và tính chất hoá học chung của phi kim",
+      "order": 1,
+      "summary": "Đặc điểm vật lí, các phản ứng hoá học chung của phi kim và cách so sánh mức độ hoạt động của một số phi kim quen thuộc.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n9-l1-c1",
+          "heading": "Tính chất vật lí của phi kim",
+          "body": "Phi kim tồn tại ở cả ba thể: rắn (C, S, P, Si...), lỏng (Br2), khí (O2, N2, Cl2, H2...).\nPhần lớn phi kim không dẫn điện, dẫn nhiệt kém, trừ than chì (một dạng thù hình của carbon) có khả năng dẫn điện.\nCùng một nguyên tố có thể có các dạng thù hình với tính chất rất khác nhau do cách sắp xếp nguyên tử khác nhau. Kim cương rất cứng, không dẫn điện; than chì mềm, có cấu trúc lớp và dẫn điện. Vì vậy khi so sánh tính chất vật lí phải nêu rõ dạng thù hình, không chỉ nêu tên nguyên tố."
+        },
+        {
+          "id": "n9-l1-c2",
+          "heading": "Tính chất hoá học của phi kim",
+          "body": "Phi kim tác dụng với kim loại tạo muối hoặc oxide; tác dụng với hiđro tạo hợp chất khí; tác dụng với oxi tạo oxide acid.\nMức độ hoạt động hoá học của phi kim khác nhau: F, O, Cl hoạt động mạnh hơn Br, I, S, P, C, Si.\nCác phản ứng này thường là phản ứng oxi hoá - khử: kim loại nhường electron, còn phi kim nhận electron. Tuy nhiên không thể coi mọi phi kim đều phản ứng dễ dàng trong mọi điều kiện: nhiều phản ứng với H2 hoặc kim loại cần đun nóng, chiếu sáng, chất xúc tác hoặc chất phản ứng dư."
+        },
+        {
+          "id": "n9-l1-c3",
+          "heading": "Mức độ hoạt động của phi kim",
+          "body": "Flo, Oxi, Chlorine là các phi kim hoạt động mạnh; Brom, Iot, Lưu huỳnh, Photpho, Carbon, Silicon hoạt động yếu hơn.\nQuy tắc phi kim mạnh đẩy phi kim yếu ra khỏi hợp chất được dùng điển hình cho halogen trong dung dịch muối halogenua: Cl2 đẩy được Br2 ra khỏi dung dịch muối bromua. Không suy rộng máy móc quy tắc này cho mọi cặp phi kim hay mọi hợp chất."
+        },
+        {
+          "id": "n9-l1-c4",
+          "heading": "Nâng cao: Lớp electron ngoài cùng và tính phi kim",
+          "body": "Đa số nguyên tử phi kim có 4 đến 7 electron ở lớp ngoài cùng; H là trường hợp riêng chỉ có 1 electron. Chúng có xu hướng nhận thêm electron hoặc góp chung electron để đạt cấu hình bền, nên giữa các nguyên tử phi kim thường hình thành liên kết cộng hoá trị, ví dụ Cl2, O2, H2O, CO2.\nTrong một chu kì, từ trái sang phải, lực hút hạt nhân với electron ngoài cùng thường tăng nên tính phi kim tăng. Trong một nhóm, từ trên xuống dưới bán kính nguyên tử tăng, khả năng hút electron giảm; với halogen có thứ tự tính oxi hoá F2 > Cl2 > Br2 > I2. Đây là cơ sở để dự đoán chiều phản ứng thế giữa các halogen."
+        },
+        {
+          "id": "n9-l1-c5",
+          "heading": "Nâng cao: Số oxi hoá và vai trò oxi hoá - khử",
+          "body": "Trong đơn chất, số oxi hoá của phi kim bằng 0. Khi tác dụng với kim loại hoặc H2, phi kim thường có số oxi hoá âm: Cl trong NaCl là -1, O trong MgO là -2. Khi liên kết với O hoặc F, nhiều phi kim lại có số oxi hoá dương, chẳng hạn C trong CO2 là +4, S trong SO2 là +4 và trong SO3 là +6.\nPhi kim nhận electron là chất oxi hoá, ví dụ Cl2 oxi hoá Fe thành FeCl3. Một số phi kim ở số oxi hoá thấp còn có thể nhường electron để làm chất khử: C khử CuO khi đun nóng. Vì thế phải xét sự thay đổi số oxi hoá trong phản ứng cụ thể, không gán cố định phi kim chỉ có một vai trò."
+        },
+        {
+          "id": "n9-l1-c6",
+          "heading": "Nâng cao: Dự đoán sản phẩm theo điều kiện phản ứng",
+          "body": "Cùng một phi kim có thể cho sản phẩm khác nhau khi thay đổi lượng chất phản ứng hoặc điều kiện. C cháy trong O2 dư: C + O2 -> CO2; khi thiếu O2: 2C + O2 -> 2CO. CO tiếp tục cháy trong O2 tạo CO2: 2CO + O2 -> 2CO2.\nLưu huỳnh cháy chủ yếu tạo SO2, không tạo SO3 chỉ bằng cách đốt trực tiếp; photpho cháy trong O2 tạo P2O5 theo phương trình 4P + 5O2 -> 2P2O5. Khi viết phương trình, cần đọc kĩ các từ như dư, thiếu, nung nóng và chiếu sáng vì chúng có thể quyết định sản phẩm."
+        },
+        {
+          "id": "n9-l1-c7",
+          "heading": "Nâng cao: Cân bằng phản ứng oxi hoá - khử bằng electron",
+          "body": "Với phản ứng giữa phi kim và kim loại, có thể kiểm tra hệ số bằng bảo toàn electron. Ví dụ trong 2Fe + 3Cl2 -> 2FeCl3: mỗi Fe từ 0 lên +3, nhường 3e; mỗi phân tử Cl2 nhận 2e để tạo 2Cl-. Hai Fe nhường 6e và ba Cl2 nhận 6e, nên hệ số 2 : 3 : 2 là hợp lí.\nCách làm: xác định số oxi hoá trước và sau phản ứng, tính tổng electron nhường bằng tổng electron nhận, rồi mới cân bằng các nguyên tố còn lại. Kĩ thuật này đặc biệt hữu ích khi sản phẩm có nhiều hoá trị như FeCl2 hoặc FeCl3."
+        },
+        {
+          "id": "n9-l1-c8",
+          "heading": "Nâng cao: Phản ứng thế của halogen trong dung dịch",
+          "body": "Trong dung dịch, halogen mạnh hơn oxi hoá ion halogenua của halogen yếu hơn. Dạng ion rút gọn là X2 + 2Y- -> 2X- + Y2, trong đó X đứng trước Y trong dãy Cl2, Br2, I2. Ví dụ: Cl2 + 2Br- -> 2Cl- + Br2; Br2 + 2I- -> 2Br- + I2.\nKhông có phản ứng thế khi halogen đưa vào yếu hơn halogen có trong muối, chẳng hạn I2 không đẩy được Br2 khỏi Br-. Flo là chất oxi hoá rất mạnh nhưng phản ứng mạnh với nước, nên không dùng mô hình dung dịch nước đơn giản này để suy luận các phản ứng của F2."
+        },
+        {
+          "id": "n9-l1-c9",
+          "heading": "Nâng cao: Carbon vừa là phi kim vừa là chất khử",
+          "body": "Ở nhiệt độ cao, carbon có thể lấy oxi khỏi oxide của một số kim loại, nên đóng vai trò chất khử. Ví dụ: 2CuO + C -> 2Cu + CO2. Trong phản ứng này C từ 0 lên +4, còn Cu từ +2 về 0.\nCarbon không khử được các oxide rất bền của kim loại hoạt động mạnh như K, Na, Ca, Mg, Al trong điều kiện thông thường. Quy tắc HSG cần nhớ: khả năng khử của C phụ thuộc độ bền oxide và nhiệt độ; không chỉ dựa vào việc C là phi kim để kết luận phản ứng có hay không."
+        },
+        {
+          "id": "n9-l1-c10",
+          "heading": "Nâng cao: Oxide của phi kim và các ngoại lệ",
+          "body": "Phần lớn oxide của phi kim là oxide acid: nhiều oxide tan hoặc phản ứng với nước tạo acid và phản ứng với base tạo muối. Ví dụ CO2 + H2O <-> H2CO3; SO2 + 2NaOH -> Na2SO3 + H2O. SiO2 cũng là oxide acid nhưng không tan trong nước và chỉ phản ứng rõ với kiềm mạnh khi đun nóng hoặc nóng chảy.\nKhông phải mọi oxide của phi kim đều là oxide acid. CO và NO là oxide trung tính, hầu như không phản ứng với nước, acid hay base ở điều kiện thường. Khi phân loại oxide, phải xét tính chất phản ứng thay vì chỉ nhìn nguyên tố tạo oxide là phi kim."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n9-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phi kim nào tồn tại ở thể lỏng ở nhiệt độ thường?",
+          "options": ["brom (Br2)", "oxi", "chlorine", "nitơ"],
+          "answer": 0,
+          "explanation": "B1. Đa số phi kim ở thể rắn hoặc khí. B2. Brom là phi kim duy nhất tồn tại ở thể lỏng ở nhiệt độ thường."
+        },
+        {
+          "id": "n9-l1-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Đa số phi kim có khả năng dẫn điện như thế nào?",
+          "options": [
+            "không dẫn điện",
+            "dẫn điện tốt",
+            "dẫn điện như kim loại",
+            "dẫn điện tốt hơn kim loại"
+          ],
+          "answer": 0,
+          "explanation": "B1. Phần lớn phi kim không dẫn điện. B2. Than chì là ngoại lệ, có khả năng dẫn điện tốt."
+        },
+        {
+          "id": "n9-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các phi kim tồn tại ở thể khí ở nhiệt độ thường.",
+          "options": ["O2", "Cl2", "Br2", "C"],
+          "answers": [0, 1],
+          "explanation": "B1. O2 và Cl2 đều là chất khí ở nhiệt độ thường. B2. Br2 là chất lỏng, C (carbon) là chất rắn."
+        },
+        {
+          "id": "n9-l1-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Dạng thù hình nào của carbon có khả năng dẫn điện (ngoại lệ so với đa số phi kim)?",
+          "answer": "than chì",
+          "acceptedAnswers": ["graphit", "carbon (than chì)"],
+          "placeholder": "Nhập tên dạng thù hình",
+          "explanation": "B1. Kim cương không dẫn điện, nhưng than chì có cấu trúc lớp cho phép electron di chuyển. B2. Vì vậy than chì dẫn điện được, khác với đa số phi kim."
+        },
+        {
+          "id": "n9-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phi kim tác dụng với oxi thường tạo ra loại hợp chất gì?",
+          "options": ["oxide acid", "oxide base", "muối", "base"],
+          "answer": 0,
+          "explanation": "B1. Oxide của phi kim thường tương ứng với một acid. B2. Ví dụ: S + O2 -> SO2 (oxide acid)."
+        },
+        {
+          "id": "n9-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 3,2 g lưu huỳnh trong khí oxi dư. Thể tích SO2 sinh ra ở đkc là",
+          "options": ["2,479 lít", "4,958 lít", "1,2395 lít", "3,7185 lít"],
+          "answer": 0,
+          "explanation": "B1. nS = 3,2/32 = 0,1 mol. B2. S + O2 -> SO2 nên nSO2 = 0,1 mol. B3. Ở đkc, V = 0,1 x 24,79 = 2,479 lít."
+        },
+        {
+          "id": "n9-l1-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 3,1 g photpho trong khí oxi dư tạo P2O5. Khối lượng P2O5 tạo thành là",
+          "options": ["7,1 g", "14,2 g", "3,55 g", "10 g"],
+          "answer": 0,
+          "explanation": "B1. nP = 3,1/31 = 0,1 mol. B2. 4P + 5O2 -> 2P2O5 nên nP2O5 = 0,05 mol. B3. mP2O5 = 0,05 x 142 = 7,1 g."
+        },
+        {
+          "id": "n9-l1-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho khí Cl2 dư tác dụng với 0,1 mol Fe nung nóng, tạo FeCl3. Số mol Cl2 cần dùng là bao nhiêu?",
+          "answer": "0,15",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình 2Fe + 3Cl2 -> 2FeCl3 có tỉ lệ Fe : Cl2 = 2 : 3. B2. nCl2 = 0,1 x 3/2 = 0,15 mol."
+        },
+        {
+          "id": "n9-l1-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cho khí Cl2 tác dụng với dung dịch NaBr (Cl hoạt động mạnh hơn Br). Hiện tượng xảy ra là",
+          "options": [
+            "Cl2 đẩy Br2 ra khỏi muối, tạo NaCl",
+            "không xảy ra phản ứng",
+            "tạo kết tủa trắng",
+            "sinh ra khí H2"
+          ],
+          "answer": 0,
+          "explanation": "B1. Cl là phi kim hoạt động mạnh hơn Br. B2. Vì vậy Cl2 đẩy được Br2 ra khỏi dung dịch muối bromua: Cl2 + 2NaBr -> 2NaCl + Br2."
+        },
+        {
+          "id": "n9-l1-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phi kim hoạt động hoá học mạnh.",
+          "options": ["F", "O", "Cl", "C"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. F, O, Cl đều là các phi kim hoạt động mạnh. B2. C (carbon) hoạt động yếu hơn nhiều so với ba phi kim trên."
+        },
+        {
+          "id": "n9-l1-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn hỗn hợp gồm 0,1 mol C và 0,1 mol S trong khí oxi dư, sau đó hấp thụ toàn bộ sản phẩm khí vào nước vôi trong dư. Tổng khối lượng kết tủa (CaCO3 và CaSO3) thu được là",
+          "options": ["22 g", "20 g", "24 g", "18 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. C + O2 -> CO2, sau đó CO2 + Ca(OH)2 -> CaCO3 + H2O, nCaCO3 = 0,1 mol, m = 10 g. B2. S + O2 -> SO2, sau đó SO2 + Ca(OH)2 -> CaSO3 + H2O, nCaSO3 = 0,1 mol, m = 12 g. B3. Tổng khối lượng kết tủa = 10 + 12 = 22 g."
+        },
+        {
+          "id": "n9-l1-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 0,2 mol khí Cl2 tác dụng vừa đủ với kim loại M hoá trị II, tạo muối MCl2. Số mol M đã phản ứng là bao nhiêu?",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình M + Cl2 -> MCl2 có tỉ lệ 1:1. B2. Vậy nM = nCl2 = 0,2 mol."
+        },
+        {
+          "id": "n9-l1-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho lượng dư khí Cl2 tác dụng với 5,6 g Fe nung nóng. Khối lượng muối FeCl3 tạo thành là",
+          "options": ["16,25 g", "11,25 g", "20,3 g", "32,5 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nFe = 5,6/56 = 0,1 mol. B2. 2Fe + 3Cl2 -> 2FeCl3 có tỉ lệ Fe : FeCl3 = 1 : 1 nên nFeCl3 = 0,1 mol. B3. mFeCl3 = 0,1 x 162,5 = 16,25 g."
+        }
+      ]
+    },
+    {
+      "id": "n9-l2",
+      "title": "Chlorine (clo)",
+      "order": 2,
+      "summary": "Tính chất, cách điều chế chlorine, nước Gia-ven và bleaching powder (clorua vôi), cùng các lưu ý về tẩy màu và an toàn.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n9-l2-c1",
+          "heading": "Tính chất của chlorine",
+          "body": "Cl2 là khí màu vàng lục, mùi hắc, độc, tan trong nước.\nTác dụng với kim loại tạo muối clorua, với hiđro tạo khí HCl, với nước tạo nước chlorine (hỗn hợp HCl và HClO):\nCl2 + H2O <-> HCl + HClO"
+        },
+        {
+          "id": "n9-l2-c2",
+          "heading": "Điều chế chlorine",
+          "body": "Trong phòng thí nghiệm: MnO2 + 4HCl đặc (nhiệt độ) -> MnCl2 + Cl2 + 2H2O.\nTrong công nghiệp: điện phân dung dịch NaCl bão hoà có màng ngăn."
+        },
+        {
+          "id": "n9-l2-c3",
+          "heading": "Nước Gia-ven và clorua vôi",
+          "body": "Cl2 tác dụng với dung dịch NaOH tạo nước Gia-ven (hỗn hợp NaCl và NaClO):\nCl2 + 2NaOH -> NaCl + NaClO + H2O\nCl2 tác dụng với vôi tôi tạo clorua vôi: Cl2 + Ca(OH)2 -> CaOCl2 + H2O.\nCả hai đều có tính tẩy màu, khử trùng do chứa gốc hipoclorit có tính oxi hoá mạnh."
+        },
+        {
+          "id": "n9-l2-c4",
+          "heading": "Nâng cao: Chlorine trong nước và sự tẩy màu",
+          "body": "Chlorine không chỉ tan vật lí mà còn phản ứng thuận nghịch với nước: Cl2 + H2O <-> HCl + HClO. Trong phản ứng này, Cl từ số oxi hoá 0 vừa giảm xuống -1 trong HCl, vừa tăng lên +1 trong HClO; đây là phản ứng tự oxi hoá - khử.\nHClO là acid yếu, kém bền nhưng có tính oxi hoá mạnh. Nó oxi hoá các chất màu và chất hữu cơ của vi sinh vật nên nước chlorine tẩy màu, khử trùng. Tác dụng tẩy màu cần có nước: giấy quỳ tím ẩm gặp Cl2 chuyển đỏ do HCl rồi bị mất màu do HClO; giấy quỳ khô hầu như không đổi màu."
+        },
+        {
+          "id": "n9-l2-c5",
+          "heading": "Nâng cao: Chlorine là chất oxi hoá mạnh",
+          "body": "Khi phản ứng với kim loại, H2, ion Br- hoặc I-, chlorine thường nhận electron và bị khử thành Cl-. Ví dụ: 2Fe + 3Cl2 -> 2FeCl3; Cl2 + 2KBr -> 2KCl + Br2; Cl2 + 2KI -> 2KCl + I2. Vì Cl2 mạnh hơn Br2 và I2 về tính oxi hoá nên nó đẩy được brom, iot ra khỏi muối bromua, iotua.\nChlorine cũng oxi hoá được các chất khử như H2S: Cl2 + H2S -> 2HCl + S. Khi giải bài nhận biết hoặc chuỗi phản ứng, cần theo dõi Cl2 chuyển về Cl- để xác định chlorine là chất oxi hoá và dự đoán sản phẩm."
+        },
+        {
+          "id": "n9-l2-c6",
+          "heading": "Nâng cao: Điều chế, làm sạch và thu khí chlorine trong phòng thí nghiệm",
+          "body": "Phản ứng MnO2 + 4HCl đặc (nhiệt độ) -> MnCl2 + Cl2 + 2H2O chỉ xảy ra rõ với HCl đặc và đun nóng; HCl ở đây bị oxi hoá thành Cl2, còn Mn trong MnO2 từ +4 về +2. Khí thoát ra thường lẫn HCl và hơi nước. Có thể dẫn qua dung dịch NaCl bão hoà để giữ bớt HCl mà hạn chế hoà tan Cl2, rồi qua H2SO4 đặc để làm khô.\nKhông thu Cl2 bằng cách đẩy nước vì khí tan và phản ứng với nước; thu bằng cách đẩy không khí, đặt bình thu đứng vì Cl2 nặng hơn không khí. Không dùng dung dịch NaOH để rửa hay chất có tính kiềm để làm khô vì chúng hấp thụ, phản ứng với Cl2."
+        },
+        {
+          "id": "n9-l2-c7",
+          "heading": "Nâng cao: Điện phân nước muối có màng ngăn",
+          "body": "Trong công nghiệp, điện phân dung dịch NaCl bão hoà: tại anot, 2Cl- -> Cl2 + 2e; tại catot, 2H2O + 2e -> H2 + 2OH-. Phương trình tổng quát là 2NaCl + 2H2O -> 2NaOH + H2 + Cl2. Na+ không bị khử mà kết hợp với OH- tạo NaOH trong dung dịch.\nMàng ngăn tách sản phẩm ở hai điện cực. Nếu Cl2 tiếp xúc với NaOH mới tạo thành thì xảy ra Cl2 + 2NaOH -> NaCl + NaClO + H2O, làm hao NaOH và lẫn sản phẩm. Vì vậy, màng ngăn vừa nâng hiệu suất vừa giúp thu riêng Cl2, H2 và NaOH."
+        },
+        {
+          "id": "n9-l2-c8",
+          "heading": "Nâng cao: Sản phẩm của chlorine với NaOH phụ thuộc điều kiện",
+          "body": "Ở điều kiện lạnh, dung dịch NaOH loãng, chlorine tạo clorua và hipoclorit: Cl2 + 2NaOH -> NaCl + NaClO + H2O; đây là cơ sở điều chế nước Gia-ven. Cl trong Cl2 (0) chuyển đồng thời thành Cl- (-1) và ClO- (+1).\nNếu dùng NaOH đặc, nóng, sản phẩm oxi hoá tiếp tục là clorat: 3Cl2 + 6NaOH -> 5NaCl + NaClO3 + 3H2O. Khi làm bài, điều kiện lạnh, loãng hay nóng, đặc quyết định muối chứa ClO- hay ClO3-; không được dùng phương trình nước Gia-ven cho mọi điều kiện."
+        },
+        {
+          "id": "n9-l2-c9",
+          "heading": "Nâng cao: Bản chất và so sánh nước Gia-ven với clorua vôi",
+          "body": "Nước Gia-ven là dung dịch, chứa chủ yếu NaCl và NaClO. Clorua vôi là chất rắn, thường viết theo công thức quy ước CaOCl2; có thể biểu diễn thành phần ion là Ca(OCl)Cl, gồm đồng thời Cl- và ClO-. Cả hai đều có chlorine ở số oxi hoá +1 trong ion ClO-, nên đều có tính oxi hoá, tẩy màu và khử trùng.\nClorua vôi tiện cho vận chuyển và bảo quản hơn dung dịch Gia-ven. Với acid, phần Cl- và ClO- phản ứng tạo Cl2, ví dụ CaOCl2 + 2HCl -> CaCl2 + Cl2 + H2O. Phương trình này cũng cho thấy không được coi CaOCl2 là một muối clorua đơn giản."
+        },
+        {
+          "id": "n9-l2-c10",
+          "heading": "Nâng cao: Độ bền, chlorine hoạt tính và an toàn khi dùng chất tẩy",
+          "body": "Ion ClO- và HClO kém bền, bị ánh sáng, nhiệt độ và tạp chất làm phân hủy nhanh hơn. Vì thế nước Gia-ven nên đựng trong chai kín, sẫm màu, để nơi mát; clorua vôi cần giữ khô, kín. Để lâu, lượng chlorine có khả năng oxi hoá giảm nên hiệu lực tẩy màu, khử trùng cũng giảm.\nKhông trộn nước Gia-ven hoặc clorua vôi với acid hay chất tẩy rửa chứa amoniac. Acid có thể giải phóng Cl2 độc, chẳng hạn NaClO + 2HCl -> NaCl + Cl2 + H2O; amoniac có thể tạo các cloramin gây kích ứng. Khi sử dụng phải pha theo hướng dẫn, thông gió tốt và không ngửi trực tiếp."
+        },
+        {
+          "id": "n9-l2-c11",
+          "heading": "Nâng cao: Chiến lược giải bài tập chlorine ở mức HSG",
+          "body": "Trước hết nhận diện môi trường và điều kiện để chọn đúng phản ứng: MnO2 cần HCl đặc, đun nóng; Cl2 với NaOH lạnh, loãng tạo ClO-; NaOH nóng, đặc tạo ClO3-; Cl2 trong nước tạo đồng thời HCl và HClO. Sau đó kiểm tra số oxi hoá: phản ứng nào Cl từ 0 về -1 thì Cl2 là chất oxi hoá; phản ứng tự oxi hoá - khử phải có một phần Cl bị khử và một phần bị oxi hoá.\nVới bài toán khí ở đkc, dùng V = n x 24,79 lít. Khi khí Cl2 tạo ra từ HCl có lẫn hơi nước hoặc HCl, thể tích thu được chỉ dùng trực tiếp nếu đề nói đã làm sạch, làm khô hoặc giả thiết lượng khí là Cl2 tinh khiết; nếu không phải xét thông tin về quá trình hấp thụ hay làm khô."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n9-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khí chlorine có màu gì?",
+          "options": ["vàng lục", "không màu", "nâu đỏ", "xanh lam"],
+          "answer": 0,
+          "explanation": "B1. Đây là đặc điểm nhận biết của khí Cl2. B2. Chlorine có màu vàng lục, mùi hắc, độc."
+        },
+        {
+          "id": "n9-l2-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong phòng thí nghiệm, khí chlorine thường được điều chế từ MnO2 và chất nào?",
+          "options": [
+            "dung dịch HCl đặc",
+            "dung dịch NaOH",
+            "nước",
+            "dung dịch H2SO4"
+          ],
+          "answer": 0,
+          "explanation": "B1. MnO2 là chất oxi hoá, HCl đặc là chất khử. B2. Phương trình: MnO2 + 4HCl đặc -> MnCl2 + Cl2 + 2H2O."
+        },
+        {
+          "id": "n9-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các ứng dụng của khí chlorine.",
+          "options": [
+            "khử trùng nước sinh hoạt",
+            "sản xuất nước Gia-ven",
+            "sản xuất clorua vôi",
+            "làm phân bón trực tiếp"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Chlorine được dùng để khử trùng nước, sản xuất nước Gia-ven và clorua vôi. B2. Chlorine không phải nguyên liệu trực tiếp sản xuất phân bón."
+        },
+        {
+          "id": "n9-l2-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nước Gia-ven là hỗn hợp của NaCl và chất gì?",
+          "answer": "NaClO",
+          "acceptedAnswers": ["natri hipoclorit"],
+          "placeholder": "Nhập công thức hoặc tên",
+          "explanation": "B1. Cl2 + 2NaOH -> NaCl + NaClO + H2O. B2. Nước Gia-ven là hỗn hợp NaCl và NaClO (natri hipoclorit)."
+        },
+        {
+          "id": "n9-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong công nghiệp, chlorine được điều chế bằng cách nào?",
+          "options": [
+            "điện phân dung dịch NaCl bão hoà có màng ngăn",
+            "nhiệt phân NaCl",
+            "cho Na tác dụng với HCl",
+            "chưng cất nước biển"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đây là phương pháp sản xuất chlorine trong công nghiệp, đồng thời thu được NaOH và H2. B2. Phương trình: 2NaCl + 2H2O -> 2NaOH + H2 + Cl2."
+        },
+        {
+          "id": "n9-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,2 mol MnO2 tác dụng với dung dịch HCl đặc dư. Số mol Cl2 thu được là",
+          "options": ["0,2 mol", "0,4 mol", "0,1 mol", "0,8 mol"],
+          "answer": 0,
+          "explanation": "B1. Phương trình MnO2 + 4HCl -> MnCl2 + Cl2 + 2H2O có tỉ lệ MnO2 : Cl2 = 1 : 1. B2. nCl2 = 0,2 mol."
+        },
+        {
+          "id": "n9-l2-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,1 mol Cl2 tác dụng với dung dịch NaOH dư tạo nước Gia-ven. Số mol NaClO tạo thành là",
+          "options": ["0,1 mol", "0,2 mol", "0,05 mol", "0,15 mol"],
+          "answer": 0,
+          "explanation": "B1. Phương trình Cl2 + 2NaOH -> NaCl + NaClO + H2O có tỉ lệ Cl2 : NaClO = 1 : 1. B2. nNaClO = 0,1 mol."
+        },
+        {
+          "id": "n9-l2-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 7,1 g Cl2 (M = 71) tác dụng với Ca(OH)2 dư tạo clorua vôi CaOCl2. Số mol CaOCl2 tạo thành là bao nhiêu?",
+          "answer": "0,1",
+          "acceptedAnswers": ["0.1"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. nCl2 = 7,1/71 = 0,1 mol. B2. Phương trình Cl2 + Ca(OH)2 -> CaOCl2 + H2O có tỉ lệ 1:1 nên nCaOCl2 = 0,1 mol."
+        },
+        {
+          "id": "n9-l2-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Đốt cháy khí H2 trong khí Cl2 tạo ra khí gì?",
+          "options": ["HCl", "H2O", "Cl2O", "không phản ứng"],
+          "answer": 0,
+          "explanation": "B1. H2 và Cl2 phản ứng trực tiếp khi đốt cháy hoặc chiếu sáng. B2. Phương trình: H2 + Cl2 -> 2HCl."
+        },
+        {
+          "id": "n9-l2-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phản ứng đúng của chlorine.",
+          "options": [
+            "Cl2 + 2NaOH -> NaCl + NaClO + H2O",
+            "Cl2 + Ca(OH)2 -> CaOCl2 + H2O",
+            "Cl2 + H2 -> 2HCl",
+            "Cl2 + O2 -> Cl2O2"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ba phản ứng đầu đều đúng và cân bằng. B2. Cl2 không phản ứng trực tiếp với O2 ở điều kiện thường."
+        },
+        {
+          "id": "n9-l2-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 17,4 g MnO2 tác dụng với dung dịch HCl đặc dư, đun nóng. Thể tích khí Cl2 thu được ở đkc là",
+          "options": ["4,958 lít", "2,479 lít", "6,1975 lít", "7,437 lít"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nMnO2 = 17,4/87 = 0,2 mol. B2. MnO2 + 4HCl -> MnCl2 + Cl2 + 2H2O có tỉ lệ 1:1 nên nCl2 = 0,2 mol. B3. Ở đkc, V = 0,2 x 24,79 = 4,958 lít."
+        },
+        {
+          "id": "n9-l2-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 0,3 mol khí Cl2 tác dụng vừa đủ với dung dịch NaOH tạo nước Gia-ven. Khối lượng NaCl tạo thành là bao nhiêu gam?",
+          "answer": "17,55",
+          "placeholder": "Nhập số gam",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình Cl2 + 2NaOH -> NaCl + NaClO + H2O có tỉ lệ Cl2 : NaCl = 1 : 1. B2. nNaCl = 0,3 mol. B3. mNaCl = 0,3 x 58,5 = 17,55 g."
+        },
+        {
+          "id": "n9-l2-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Dẫn 0,2 mol khí Cl2 vào dung dịch chứa 0,5 mol NaOH. Sau phản ứng, số mol NaOH còn dư là",
+          "options": ["0,1 mol", "0,2 mol", "0,3 mol", "0 mol"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phương trình Cl2 + 2NaOH -> NaCl + NaClO + H2O cần 0,4 mol NaOH cho 0,2 mol Cl2. B2. NaOH dư = 0,5 - 0,4 = 0,1 mol."
+        }
+      ]
+    },
+    {
+      "id": "n9-l3",
+      "title": "Carbon – silicon và các hợp chất",
+      "order": 3,
+      "summary": "Dạng thù hình, oxide và muối của carbon; silicon, silicon dioxide và các ứng dụng tiêu biểu của công nghiệp silicate.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n9-l3-c1",
+          "heading": "Tính chất của carbon",
+          "body": "Carbon có 3 dạng thù hình: kim cương (cứng), than chì (dẫn điện, mềm), carbon vô định hình (than gỗ, than đá...).\nTính chất hoá học: tác dụng với oxi (cháy), khử được oxide kim loại ở nhiệt độ cao (tính khử):\nC + O2 -> CO2; C + 2CuO (nhiệt độ) -> 2Cu + CO2\nSự khác biệt rất lớn về độ cứng và khả năng dẫn điện không do thành phần nguyên tố mà do cách liên kết, sắp xếp các nguyên tử C. Than hoạt tính là carbon có nhiều lỗ xốp, diện tích bề mặt lớn nên hấp phụ tốt chất màu, mùi và một số khí; đây là sự giữ chất trên bề mặt, không phải phản ứng tạo chất mới."
+        },
+        {
+          "id": "n9-l3-c2",
+          "heading": "Các oxide của carbon",
+          "body": "CO là oxide trung tính (không tạo muối), độc, có tính khử mạnh, khử được oxide kim loại: CO + CuO (nhiệt độ) -> Cu + CO2.\nCO2 là oxide acid, không duy trì sự cháy, dùng để dập tắt đám cháy, làm nước đá khô, nước có ga.\nCO2 tan trong nước và một phần rất nhỏ phản ứng thuận nghịch tạo H2CO3: CO2 + H2O <-> H2CO3. Vì H2CO3 là acid yếu và cân bằng nghiêng mạnh về phía CO2 hoà tan, không được hiểu rằng toàn bộ CO2 tan đã biến thành acid."
+        },
+        {
+          "id": "n9-l3-c3",
+          "heading": "Muối cacbonat",
+          "body": "Muối cacbonat (CO3^2-) và muối hiđrocacbonat (HCO3-) tác dụng với acid đều sinh khí CO2.\nMuối cacbonat của kim loại kiềm tan trong nước; đa số muối cacbonat kim loại khác không tan.\nCaCO3 là thành phần chính của đá vôi, đá phấn, đá hoa.\nCần phân biệt muối cacbonat với muối hiđrocacbonat: ion CO3^2- mang điện tích 2-, còn HCO3- mang điện tích 1-. Các muối hiđrocacbonat nhìn chung tan trong nước; chẳng hạn Ca(HCO3)2 chỉ gặp trong dung dịch, còn CaCO3 ít tan và dễ tạo kết tủa."
+        },
+        {
+          "id": "n9-l3-c4",
+          "heading": "Nâng cao: Số oxi hoá của carbon và ngoại lệ khi dập cháy",
+          "body": "Carbon có số oxi hoá 0 trong C, +2 trong CO và +4 trong CO2. Vì thế C và CO còn có thể bị oxi hoá tiếp thành CO2, còn CO2 ở mức +4 không thể bị oxi hoá thêm trong các phản ứng thông thường.\nTuy nhiên CO2 không phải luôn hoàn toàn trơ: Mg đang cháy có thể khử CO2 ở nhiệt độ cao: 2Mg + CO2 -> 2MgO + C. Do đó không dùng bình chữa cháy CO2 cho đám cháy kim loại hoạt động mạnh như Mg; nhận xét “CO2 không duy trì sự cháy” không có nghĩa là nó dập được mọi loại cháy."
+        },
+        {
+          "id": "n9-l3-c5",
+          "heading": "Nâng cao: Chuyển hoá giữa C, CO và CO2",
+          "body": "Lượng oxi và nhiệt độ quyết định sản phẩm oxi hoá của carbon: C cháy trong O2 đủ tạo CO2, còn khi thiếu O2 tạo CO: 2C + O2 -> 2CO. CO tiếp tục cháy trong O2: 2CO + O2 -> 2CO2. Vì vậy sự cháy không hoàn toàn của nhiên liệu là nguồn thường gặp của CO.\nỞ nhiệt độ rất cao, CO2 còn phản ứng với C: CO2 + C -> 2CO. Đây là phản ứng oxi hoá - khử đồng thời: C tự do từ 0 lên +2, còn C trong CO2 từ +4 xuống +2. Phản ứng giải thích vì sao khi cho CO2 đi qua than nung đỏ có thể thu CO."
+        },
+        {
+          "id": "n9-l3-c6",
+          "heading": "Nâng cao: CO là chất khử và chất độc",
+          "body": "Trong CO, C có số oxi hoá +2 nên CO dễ nhận thêm O để thành CO2; nhờ đó CO khử được nhiều oxide kim loại khi đun nóng, ví dụ Fe2O3 + 3CO -> 2Fe + 3CO2. Không suy rộng phản ứng này cho các oxide rất bền của kim loại hoạt động mạnh như Al2O3, MgO.\nCO không màu, không mùi và rất độc vì gắn bền với hemoglobin, làm máu giảm khả năng vận chuyển oxi. Khi dùng than hoặc bếp đốt nhiên liệu trong không gian kín phải thông gió; không thể nhận biết CO bằng mùi và không dùng CO2 để suy đoán trực tiếp có hay không có CO."
+        },
+        {
+          "id": "n9-l3-c7",
+          "heading": "Nâng cao: CO2 tác dụng với kiềm theo tỉ lệ mol",
+          "body": "Với dung dịch NaOH, đặt T = nNaOH/nCO2. Một mol CO2 cần 1 mol NaOH để tạo hiđrocacbonat: CO2 + NaOH -> NaHCO3; cần thêm 1 mol NaOH để chuyển thành cacbonat, nên phương trình tổng quát là CO2 + 2NaOH -> Na2CO3 + H2O. Vì vậy phải dựa vào T thay vì chỉ nhìn cụm từ “dẫn CO2 vào NaOH”.\nNếu T >= 2 thì chỉ tạo Na2CO3, NaOH có thể dư; nếu 1 < T < 2 thì tạo hỗn hợp Na2CO3 và NaHCO3; nếu T <= 1 thì chỉ tạo NaHCO3, CO2 có thể dư. Chiều tỉ lệ này cho thấy T càng lớn thì lượng NaOH tương đối càng nhiều và sản phẩm chuyển về muối trung hoà."
+        },
+        {
+          "id": "n9-l3-c8",
+          "heading": "Nâng cao: Nhiệt phân cacbonat và hiđrocacbonat",
+          "body": "Khi nung, nhiều muối cacbonat của kim loại không hoạt động phân huỷ thành oxide và CO2, ví dụ CaCO3 -> CaO + CO2, MgCO3 -> MgO + CO2. Na2CO3 và K2CO3 bền với nhiệt trong điều kiện thí nghiệm phổ thông; vì vậy không được áp dụng một phương trình nhiệt phân cho mọi muối cacbonat.\nHiđrocacbonat thường kém bền hơn cacbonat tương ứng. Ví dụ 2NaHCO3 -> Na2CO3 + CO2 + H2O. Việc nung NaHCO3 làm giảm khối lượng do đồng thời thoát CO2 và hơi nước, còn nung CaCO3 chỉ làm giảm khối lượng do CO2 thoát ra."
+        },
+        {
+          "id": "n9-l3-c9",
+          "heading": "Nâng cao: Chu trình đá vôi, nước cứng tạm thời và cặn ấm nước",
+          "body": "CO2 trong nước có thể làm CaCO3 ít tan chuyển thành Ca(HCO3)2 tan: CaCO3 + CO2 + H2O -> Ca(HCO3)2. Đây là chiều hoà tan đá vôi khi nước chứa CO2 đi qua các lớp đá.\nKhi đun nóng dung dịch Ca(HCO3)2, phản ứng đảo chiều thuận lợi: Ca(HCO3)2 -> CaCO3 + CO2 + H2O. CaCO3 kết tủa tạo cặn trong ấm đun; loại nước cứng do hiđrocacbonat Ca hoặc Mg gây ra được gọi là nước cứng tạm thời vì có thể làm mềm bằng cách đun sôi."
+        },
+        {
+          "id": "n9-l3-c10",
+          "heading": "Nâng cao: Ion HCO3- vừa có tính acid vừa có tính bazơ",
+          "body": "HCO3- là ion trung gian giữa H2CO3 và CO3^2-, nên có thể nhận hoặc nhường H+. Gặp acid, nó nhận H+ rồi phân huỷ: HCO3- + H+ -> CO2 + H2O. Gặp kiềm mạnh, nó nhường H+: HCO3- + OH- -> CO3^2- + H2O.\nDo đó NaHCO3 vừa phản ứng với HCl vừa phản ứng với NaOH. Tên “muối acid” chỉ cho biết trong gốc acid còn H có thể thay thế, không tự động quyết định dung dịch phải có môi trường acid; dung dịch NaHCO3 thực tế có tính kiềm yếu."
+        },
+        {
+          "id": "n9-l3-c11",
+          "heading": "Nâng cao: Bảo toàn nhanh trong bài toán carbon và cacbonat",
+          "body": "Khi nhiệt phân hoàn toàn MCO3 thành MO và CO2, mỗi mol MCO3 tạo 1 mol CO2; nếu CO2 là chất duy nhất bay ra thì độ giảm khối lượng đúng bằng khối lượng CO2. Với 2NaHCO3 -> Na2CO3 + CO2 + H2O, độ giảm khối lượng phải tính cả CO2 lẫn H2O.\nKhi CO khử oxide và toàn bộ CO2 sinh ra được hấp thụ, số mol CO2 bằng số mol nguyên tử O bị tách khỏi oxide. Vì thế có thể tính khối lượng kim loại bằng khối lượng oxide ban đầu trừ khối lượng oxi bị lấy đi. Khi cho cacbonat hoặc hiđrocacbonat vào acid dư, mỗi mol anion CO3^2- hoặc HCO3- cuối cùng cho 1 mol CO2; muốn tách riêng từng chất trong hỗn hợp cần thêm một dữ kiện độc lập."
+        },
+        {
+          "id": "n9-l3-c12",
+          "heading": "Silicon (Si)",
+          "body": "Silicon là phi kim, có 2 dạng: silicon tinh thể (dùng làm chất bán dẫn) và silicon vô định hình.\nTrong tự nhiên, Si không tồn tại ở dạng đơn chất mà chủ yếu ở dạng SiO2 (cát, thạch anh).\nSilicon tinh khiết có mạng tinh thể tương tự kim cương, bền và dẫn điện kém ở nhiệt độ thấp. Khi pha một lượng rất nhỏ nguyên tố thích hợp, số hạt mang điện thay đổi rõ rệt; đó là cơ sở tạo vật liệu bán dẫn cho điôt, transistor, chip và pin mặt trời."
+        },
+        {
+          "id": "n9-l3-c13",
+          "heading": "Silicon đioxide SiO2",
+          "body": "SiO2 là oxide acid (tương ứng acid H2SiO3 rất yếu, không tan).\nTác dụng với kiềm nóng chảy hoặc dung dịch kiềm đặc, tác dụng với oxide base ở nhiệt độ cao tạo silicate:\nSiO2 + 2NaOH (nhiệt độ) -> Na2SiO3 + H2O\nNgoài ra, SiO2 phản ứng với oxide base khi nung: SiO2 + CaO (nhiệt độ cao) -> CaSiO3. Vì SiO2 không tan trong nước và phản ứng chậm với nhiều thuốc thử, khi giải bài phải chú ý điều kiện đun nóng, nóng chảy hoặc kiềm đặc."
+        },
+        {
+          "id": "n9-l3-c14",
+          "heading": "Công nghiệp silicate",
+          "body": "Sản xuất đồ gốm sứ (từ đất sét, thạch anh, fenspat), sản xuất xi măng (từ đất sét, đá vôi, nung ở nhiệt độ cao), sản xuất thuỷ tinh (từ cát, đá vôi, sođa Na2CO3 nung chảy).\nĐiểm chung là xử lí các nguyên liệu chứa silicate hoặc SiO2 ở nhiệt độ cao để tạo vật liệu có cấu trúc và tính chất mới. Tuy nhiên, gốm sứ là vật liệu được tạo hình rồi nung; thủy tinh là khối silicate nóng chảy được làm nguội không kết tinh; xi măng là chất kết dính thủy lực, rắn lại khi phản ứng với nước."
+        },
+        {
+          "id": "n9-l3-c15",
+          "heading": "Nâng cao: Cấu trúc mạng và độ bền của SiO2",
+          "body": "Trong SiO2, mỗi nguyên tử Si liên kết với 4 nguyên tử O theo dạng tứ diện; mỗi O lại được dùng chung giữa hai tứ diện. Vì vậy công thức đơn giản SiO2 biểu diễn tỉ lệ nguyên tử, còn chất thực là một mạng không gian khổng lồ chứ không gồm các phân tử SiO2 riêng rẽ.\nMuốn làm nóng chảy, hòa tan hoặc cho SiO2 phản ứng phải phá vỡ rất nhiều liên kết Si-O bền. Đây là nguyên nhân của độ cứng, nhiệt độ nóng chảy cao, tính không tan trong nước và sự khác biệt với CO2 là chất khí gồm các phân tử nhỏ. Không được suy luận tính chất chỉ từ việc hai chất cùng có công thức dạng EO2."
+        },
+        {
+          "id": "n9-l3-c16",
+          "heading": "Nâng cao: Tính chất hóa học và điều chế silicon",
+          "body": "Silicon bị oxi hóa khi đun nóng: Si + O2 -> SiO2; cũng phản ứng với chlorine: Si + 2Cl2 -> SiCl4. Với kiềm mạnh có nước, silicon thể hiện tính khử, tạo silicate và giải phóng H2: Si + 2NaOH + H2O -> Na2SiO3 + 2H2.\nTrong công nghiệp, silicon thô được khử từ silica bằng than cốc trong lò điện ở nhiệt độ rất cao: SiO2 + 2C -> Si + 2CO. Silicon nhận được chưa đủ tinh khiết để làm linh kiện điện tử; ứng dụng bán dẫn đòi hỏi các bước tinh chế sâu tiếp theo. Vì thế không đồng nhất silicon luyện kim với silicon dùng làm chip."
+        },
+        {
+          "id": "n9-l3-c17",
+          "heading": "Nâng cao: Ngoại lệ HF và sự ăn mòn thủy tinh",
+          "body": "SiO2 bền với đa số acid thông thường, nhưng phản ứng với HF: SiO2 + 4HF -> SiF4 + 2H2O. SiF4 có thể tiếp tục tạo các hợp chất flo của silicon trong môi trường có HF dư. Đây là ngoại lệ quan trọng khi nhận xét về tính bền acid của SiO2.\nThủy tinh chứa mạng silicate nên HF có thể làm mờ hoặc khắc bề mặt thủy tinh. Không dùng chai, bình hay dụng cụ bằng thủy tinh để chứa HF; HF là hóa chất độc và ăn mòn mạnh, chỉ được xét trong bài học như một ngoại lệ hóa học, không tự thực hiện thí nghiệm."
+        },
+        {
+          "id": "n9-l3-c18",
+          "heading": "Nâng cao: Silicate tan, acid silicic và keo silica",
+          "body": "Natri silicate Na2SiO3 là silicate tan, thường gọi là thủy tinh lỏng. Khi acid hóa dung dịch này, thu được acid silicic rất yếu dưới dạng kết tủa keo: Na2SiO3 + 2HCl -> H2SiO3 + 2NaCl. Khi đun nóng, H2SiO3 mất nước tạo SiO2: H2SiO3 (nhiệt độ) -> SiO2 + H2O.\nKết tủa H2SiO3 thường có dạng gel, không nên hình dung như các tinh thể lớn, sắc cạnh. Chuỗi SiO2 -> Na2SiO3 -> H2SiO3 -> SiO2 là một chuỗi chuyển hóa HSG điển hình: dùng kiềm mạnh để phá mạng silica, rồi dùng acid để tạo lại silica ngậm nước."
+        },
+        {
+          "id": "n9-l3-c19",
+          "heading": "Nâng cao: Bản chất hóa học của thủy tinh thường",
+          "body": "Thủy tinh cửa sổ thông dụng là hỗn hợp silicate vô định hình, chủ yếu có SiO2 cùng oxide Na2O và CaO. Khi nung phối liệu, có thể biểu diễn các chuyển hóa đơn giản: SiO2 + Na2CO3 -> Na2SiO3 + CO2; SiO2 + CaCO3 -> CaSiO3 + CO2. Các phương trình này chỉ mô tả các đơn vị silicate, không có nghĩa thủy tinh là hỗn hợp cơ học của hai muối tinh khiết.\nSiO2 tạo mạng chính; Na2O từ sođa làm hạ nhiệt độ nóng chảy để dễ gia công; CaO từ đá vôi làm thủy tinh bền nước và bền hóa học hơn. Thủy tinh được làm nguội nhanh đến trạng thái rắn vô định hình nên không có nhiệt độ nóng chảy sắc nét như một chất tinh thể tinh khiết."
+        },
+        {
+          "id": "n9-l3-c20",
+          "heading": "Nâng cao: Clinker, sự đóng rắn và vai trò của thạch cao",
+          "body": "Nung đá vôi với đất sét tạo clinker, trong đó các canxi silicate là thành phần quan trọng; hai chất thường gặp là 3CaO.SiO2 và 2CaO.SiO2. Nghiền clinker với một lượng nhỏ thạch cao tạo xi măng Portland. Khi thêm nước, các canxi silicate thủy hóa dần, tạo sản phẩm ngậm nước liên kết các hạt cát, đá và làm khối vật liệu cứng lên.\nThạch cao không phải để tăng ngay độ cứng mà chủ yếu điều chỉnh thời gian đông kết, tránh xi măng đóng rắn quá nhanh. Cần phân biệt xi măng với bê tông: xi măng là chất kết dính; bê tông là hỗn hợp xi măng, nước và cốt liệu như cát, sỏi hoặc đá dăm. Giữ ẩm thích hợp sau khi đổ giúp phản ứng thủy hóa tiếp tục và tăng độ bền."
+        },
+        {
+          "id": "n9-l3-c21",
+          "heading": "Nâng cao: Gốm sứ, nung kết và men phủ",
+          "body": "Đất sét chứa chủ yếu các aluminosilicat ngậm nước; thạch anh giúp ổn định hình dạng, còn fenspat dễ nóng chảy hơn nên đóng vai trò chất chảy. Sau khi nhào trộn và tạo hình, vật liệu được sấy để bớt nước tự do rồi nung. Khi nung, nước liên kết bị tách và các hạt dần nung kết, làm sản phẩm cứng, ít thấm nước hơn.\nMen gốm là một lớp silicate nóng chảy phủ trên bề mặt rồi nguội thành lớp thủy tinh mỏng. Men làm bề mặt nhẵn, giảm thấm nước và có thể tạo màu nhờ oxide kim loại. Vì quá trình nung làm thay đổi cấu trúc gần như không thể đảo ngược, đồ gốm sau nung không thể chỉ thêm nước để trở lại đất sét ban đầu."
+        },
+        {
+          "id": "n9-l3-c22",
+          "heading": "Nâng cao: Chiến lược bảo toàn trong bài toán silicate",
+          "body": "Với phản ứng SiO2 + 2NaOH -> Na2SiO3 + H2O, 1 mol SiO2 tạo 1 mol Na2SiO3; vì thế có thể suy số mol silica trực tiếp từ lượng muối silicate, nhưng chỉ khi NaOH đủ và phản ứng hoàn toàn. Với SiO2 + Na2CO3 -> Na2SiO3 + CO2, số mol CO2 thoát ra cũng bằng số mol SiO2 đã phản ứng và bằng số mol Na2CO3 đã phản ứng.\nTrong bài toán nung phối liệu thủy tinh, cần tính cả khí CO2 mất đi từ Na2CO3 hoặc CaCO3. Nếu chỉ hai chất đầu chứa C là hai muối cacbonat nói trên và CO2 là sản phẩm khí duy nhất, nCO2 bằng tổng số mol cacbonat đã phản ứng. Luôn kiểm tra xem đề có cho SiO2 dư, cacbonat dư hay hiệu suất trước khi áp dụng tỉ lệ 1 : 1."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n9-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Kim cương và than chì là hai dạng thù hình của nguyên tố nào?",
+          "options": ["carbon", "silicon", "lưu huỳnh", "photpho"],
+          "answer": 0,
+          "explanation": "B1. Kim cương và than chì có cùng thành phần nguyên tố nhưng cấu trúc tinh thể khác nhau. B2. Cả hai đều là dạng thù hình của carbon."
+        },
+        {
+          "id": "n9-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "CO là loại oxide gì?",
+          "options": [
+            "oxide trung tính",
+            "oxide acid",
+            "oxide base",
+            "oxide lưỡng tính"
+          ],
+          "answer": 0,
+          "explanation": "B1. CO không tác dụng với acid, base hay nước để tạo muối ở điều kiện thường. B2. Vì vậy CO là oxide trung tính (oxide không tạo muối)."
+        },
+        {
+          "id": "n9-l3-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Muối nào là thành phần chính của đá vôi?",
+          "answer": "CaCO3",
+          "acceptedAnswers": ["canxi cacbonat"],
+          "placeholder": "Nhập công thức hoặc tên muối",
+          "explanation": "B1. Đá vôi, đá phấn, đá hoa đều có thành phần chính giống nhau. B2. Đó là CaCO3 (canxi cacbonat)."
+        },
+        {
+          "id": "n9-l3-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "SiO2 thuộc loại oxide nào?",
+          "options": [
+            "oxide acid",
+            "oxide base",
+            "oxide trung tính",
+            "oxide lưỡng tính"
+          ],
+          "answer": 0,
+          "explanation": "B1. SiO2 tương ứng với acid H2SiO3 (acid silixic). B2. Vì vậy SiO2 là oxide acid."
+        },
+        {
+          "id": "n9-l3-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Đồ gốm sứ được sản xuất chủ yếu từ nguyên liệu nào?",
+          "options": [
+            "đất sét, thạch anh, fenspat",
+            "sắt và than",
+            "muối ăn và đường",
+            "dầu mỏ"
+          ],
+          "answer": 0,
+          "explanation": "B1. Đất sét, thạch anh và fenspat là nguyên liệu chính của công nghiệp gốm sứ. B2. Chúng được nhào trộn, tạo hình rồi nung ở nhiệt độ cao."
+        },
+        {
+          "id": "n9-l3-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Dẫn khí CO dư qua 8 g CuO nung nóng. Khối lượng Cu thu được là",
+          "options": ["6,4 g", "8 g", "4 g", "12,8 g"],
+          "answer": 0,
+          "explanation": "B1. nCuO = 8/80 = 0,1 mol. B2. CO + CuO -> Cu + CO2 nên nCu = 0,1 mol. B3. mCu = 0,1 x 64 = 6,4 g."
+        },
+        {
+          "id": "n9-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 25 g CaCO3 tác dụng với dung dịch HCl dư. Thể tích khí CO2 sinh ra ở đkc là",
+          "options": ["6,1975 lít", "4,958 lít", "2,479 lít", "7,437 lít"],
+          "answer": 0,
+          "explanation": "B1. nCaCO3 = 25/100 = 0,25 mol. B2. CaCO3 + 2HCl -> CaCl2 + H2O + CO2 nên nCO2 = 0,25 mol. B3. Ở đkc, V = 0,25 x 24,79 = 6,1975 lít."
+        },
+        {
+          "id": "n9-l3-q8",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Dẫn khí CO2 dư vào dung dịch nước vôi trong. Muối tạo thành cuối cùng là",
+          "options": ["Ca(HCO3)2", "CaCO3", "Ca(OH)2", "không tạo muối"],
+          "answer": 0,
+          "explanation": "B1. Khi CO2 dư, kết tủa CaCO3 ban đầu bị hoà tan tiếp: CaCO3 + CO2 + H2O -> Ca(HCO3)2. B2. Muối cuối cùng là Ca(HCO3)2 tan trong nước."
+        },
+        {
+          "id": "n9-l3-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cho SiO2 tác dụng với NaOH nóng chảy dư. Sản phẩm muối là",
+          "options": ["Na2SiO3", "NaSiO3", "Na2Si2O3", "NaSiO2"],
+          "answer": 0,
+          "explanation": "B1. Phương trình SiO2 + 2NaOH -> Na2SiO3 + H2O. B2. Muối tạo thành là natri silicate Na2SiO3."
+        },
+        {
+          "id": "n9-l3-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "SiO2 không phản ứng được với chất nào sau đây ở điều kiện thường?",
+          "options": [
+            "nước",
+            "dung dịch NaOH đặc nóng",
+            "NaOH nóng chảy",
+            "CaO ở nhiệt độ cao"
+          ],
+          "answer": 0,
+          "explanation": "B1. Khác với CO2, SO2, SiO2 không tan và không phản ứng với nước ở điều kiện thường. B2. SiO2 chỉ phản ứng với kiềm đặc/nóng chảy hoặc oxide base ở nhiệt độ cao."
+        },
+        {
+          "id": "n9-l3-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Dẫn khí CO dư qua 20 g hỗn hợp CuO và Fe2O3 nung nóng, thu được hỗn hợp kim loại và khí CO2. Dẫn khí CO2 sinh ra vào nước vôi trong dư, thu được 15 g kết tủa CaCO3. Khối lượng kim loại thu được là",
+          "options": ["17,6 g", "16,4 g", "18,8 g", "15,2 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCaCO3 = 15/100 = 0,15 mol, bằng số mol CO2 sinh ra, cũng bằng số mol O bị lấy khỏi oxide. B2. mO = 0,15 x 16 = 2,4 g. B3. Khối lượng kim loại = 20 - 2,4 = 17,6 g."
+        },
+        {
+          "id": "n9-l3-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Nung 30 g hỗn hợp SiO2 và CaCO3 với NaOH dư (chỉ SiO2 phản ứng với NaOH, CaCO3 không phản ứng), thu được 0,2 mol Na2SiO3. Phần trăm khối lượng SiO2 trong hỗn hợp là",
+          "options": ["40%", "60%", "50%", "30%"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nSiO2 = nNa2SiO3 = 0,2 mol (tỉ lệ 1:1). B2. mSiO2 = 0,2 x 60 = 12 g. B3. %SiO2 = 12/30 x 100% = 40%."
+        },
+        {
+          "id": "n9-l3-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Nung m gam hỗn hợp CaCO3 và MgCO3 đến khối lượng không đổi, thu được 4,958 lít khí CO2 (đkc) và 10,8 g hỗn hợp oxide CaO, MgO. Giá trị của m là",
+          "options": ["19,6 g", "18,8 g", "20,4 g", "21,2 g"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCO2 = 4,958/24,79 = 0,2 mol. B2. Theo bảo toàn khối lượng: m(hỗn hợp muối) = m(hỗn hợp oxide) + mCO2. B3. m = 10,8 + 0,2 x 44 = 19,6 g."
+        }
+      ]
+    },
+    {
+      "id": "n9-l4",
+      "title": "Sơ lược bảng tuần hoàn: cấu tạo và sự biến đổi tuần hoàn tính chất",
+      "order": 4,
+      "summary": "Nguyên tắc sắp xếp, ô nguyên tố, chu kì, nhóm và quy luật biến đổi tính kim loại - phi kim trong bảng tuần hoàn.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n9-l4-c1",
+          "heading": "Nguyên tố hoá học và kí hiệu",
+          "body": "Nguyên tố hoá học là tập hợp các nguyên tử có cùng số proton (số hiệu nguyên tử). Mỗi nguyên tố có một kí hiệu hoá học gồm 1 hoặc 2 chữ cái, chữ cái đầu viết hoa.\nVí dụ: H (hiđro, có 1 proton), O (oxi, có 8 proton), Na (natri, có 11 proton)."
+        },
+        {
+          "id": "n9-l4-c2",
+          "heading": "Nguyên tử khối",
+          "body": "Nguyên tử khối là khối lượng của nguyên tử tính theo đơn vị cacbon (đvC), có trị số xấp xỉ bằng số proton cộng số nơtron.\nMột số nguyên tử khối cần nhớ: H = 1, C = 12, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56, Cu = 64, Zn = 65."
+        },
+        {
+          "id": "n9-l4-c3",
+          "heading": "Sơ lược bảng tuần hoàn",
+          "body": "Các nguyên tố được sắp xếp trong bảng tuần hoàn theo chiều tăng dần số hiệu nguyên tử. Mỗi ô nguyên tố cho biết số hiệu nguyên tử, kí hiệu hoá học, tên nguyên tố và nguyên tử khối. Mỗi hàng ngang là một chu kì; mỗi cột dọc là một nhóm.\nSố thứ tự chu kì bằng số lớp electron; với các nguyên tố nhóm A, số thứ tự nhóm bằng số electron lớp ngoài cùng."
+        },
+        {
+          "id": "n9-l4-c4",
+          "heading": "Nâng cao: Phân biệt nguyên tố, nguyên tử và kí hiệu",
+          "body": "Nguyên tố hoá học là khái niệm chỉ tập hợp các nguyên tử cùng số proton, không phải một nguyên tử riêng lẻ; bản thân tên nguyên tố không cho biết có bao nhiêu nguyên tử hay khối lượng cụ thể. Nguyên tử là một hạt cụ thể của nguyên tố đó, đếm được số lượng trong công thức. Ví dụ Na2O: phân tử có 2 nguyên tử Na và 1 nguyên tử O, được tạo bởi 2 nguyên tố là natri và oxi.\nDấu hiệu chắc chắn để nhận ra một nguyên tố là số proton (số hiệu nguyên tử), không phải số nơtron hay khối lượng — hai nguyên tử cùng số proton nhưng khác số nơtron vẫn là cùng một nguyên tố (đồng vị).\nKí hiệu hoá học (ví dụ O, H) chỉ một nguyên tử của nguyên tố; công thức hoá học (ví dụ O2, H2O) chỉ một phân tử, có thể gồm nhiều nguyên tử của một hay nhiều nguyên tố. Không nên nhầm kí hiệu nguyên tố với công thức của đơn chất tương ứng."
+        },
+        {
+          "id": "n9-l4-c5",
+          "heading": "Nâng cao: Tìm nguyên tử khối từ công thức và phân tử khối",
+          "body": "Phân tử khối bằng tổng nguyên tử khối của tất cả nguyên tử trong công thức: lấy nguyên tử khối mỗi nguyên tố nhân với chỉ số của nó rồi cộng lại (chỉ số là số nguyên tử trong công thức, khác với hệ số đứng trước công thức khi viết phương trình). Với công thức dạng RxOy, phân tử khối M = x.R + 16y (vì O = 16). Nếu biết M và công thức, lập phương trình để tìm nguyên tử khối chưa biết, rồi đối chiếu bảng nguyên tử khối quen thuộc để suy ra tên nguyên tố.\nCách làm nhanh: B1. Viết đúng biểu thức phân tử khối theo công thức. B2. Thay các nguyên tử khối đã biết. B3. Chuyển vế để tìm nguyên tử khối của nguyên tố chưa biết. B4. Đối chiếu bảng nguyên tử khối quen thuộc.\nKiểm tra chéo bằng hoá trị: với oxide RxOy, hoá trị của R suy ra được từ chỉ số theo quy tắc hoá trị (hoá trị R × x = II × y), phải hợp lí với nguyên tố vừa tìm được. \"Oxide cao nhất\" của một nguyên tố nhóm A là oxide trong đó nguyên tố có hoá trị cao nhất với oxi, hoá trị này bằng đúng số thứ tự nhóm A của nguyên tố — đây là một cách kiểm tra thêm, không chỉ là dữ kiện tính toán."
+        },
+        {
+          "id": "n9-l4-c6",
+          "heading": "Nâng cao: Sự biến đổi tuần hoàn tính chất",
+          "body": "Trong một chu kì, từ trái sang phải, số electron lớp ngoài cùng tăng dần, tính kim loại giảm dần và tính phi kim tăng dần. Trong một nhóm A, từ trên xuống dưới, số lớp electron tăng, tính kim loại tăng dần và tính phi kim giảm dần.\nCác quy luật này giúp giải thích vì sao kim loại thường tập trung ở bên trái - giữa bảng tuần hoàn, còn nhiều phi kim nằm về phía trên bên phải."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n9-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Kí hiệu hoá học của nguyên tố oxi là",
+          "options": ["O", "Ox", "Oxi", "O2"],
+          "answer": 0,
+          "explanation": "B1. Mỗi nguyên tố có kí hiệu hoá học riêng, thường 1-2 chữ cái. B2. Nguyên tố oxi có kí hiệu là O."
+        },
+        {
+          "id": "n9-l4-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nguyên tử khối của cacbon là",
+          "options": ["12", "14", "16", "6"],
+          "answer": 0,
+          "explanation": "B1. Đây là giá trị cần nhớ trong bảng nguyên tử khối. B2. Nguyên tử khối của cacbon (C) là 12."
+        },
+        {
+          "id": "n9-l4-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các kí hiệu hoá học viết đúng quy tắc (chữ cái đầu viết hoa).",
+          "options": ["Na", "Ca", "cl", "fe"],
+          "answers": [0, 1],
+          "explanation": "B1. Na (natri) và Ca (canxi) viết đúng quy tắc, chữ cái đầu viết hoa. B2. Kí hiệu đúng của chlorine là Cl và của sắt là Fe, không phải \"cl\" hay \"fe\"."
+        },
+        {
+          "id": "n9-l4-q4",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Số hiệu nguyên tử của một nguyên tố bằng số hạt nào trong nguyên tử?",
+          "answer": "proton",
+          "acceptedAnswers": ["số proton", "p"],
+          "placeholder": "Nhập tên hạt",
+          "explanation": "B1. Số hiệu nguyên tử chính là số proton trong hạt nhân. B2. Mỗi nguyên tố có số hiệu nguyên tử (số proton) khác nhau và duy nhất."
+        },
+        {
+          "id": "n9-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong bảng tuần hoàn, các nguyên tố được sắp xếp theo chiều tăng dần của đại lượng nào?",
+          "options": [
+            "số hiệu nguyên tử",
+            "nguyên tử khối",
+            "số nơtron",
+            "số lớp electron"
+          ],
+          "answer": 0,
+          "explanation": "B1. Bảng tuần hoàn hiện đại sắp xếp nguyên tố theo chiều tăng dần điện tích hạt nhân, tức số hiệu nguyên tử. B2. Đây là căn cứ sắp xếp chính, khác với cách sắp theo nguyên tử khối ban đầu của Mendeleev."
+        },
+        {
+          "id": "n9-l4-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của khí oxi O2 là",
+          "options": ["32", "16", "8", "64"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối của O là 16. B2. Phân tử O2 gồm 2 nguyên tử O nên phân tử khối = 2 x 16 = 32."
+        },
+        {
+          "id": "n9-l4-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của CaCO3 là",
+          "options": ["100", "116", "84", "60"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối: Ca = 40, C = 12, O = 16. B2. Phân tử khối CaCO3 = 40 + 12 + 3 x 16 = 40 + 12 + 48 = 100."
+        },
+        {
+          "id": "n9-l4-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các nguyên tố có nguyên tử khối lớn hơn 30.",
+          "options": ["Na", "S", "Cl", "Mg"],
+          "answers": [1, 2],
+          "explanation": "B1. Nguyên tử khối: Na = 23, S = 32, Cl = 35,5, Mg = 24. B2. Chỉ có S (32) và Cl (35,5) lớn hơn 30."
+        },
+        {
+          "id": "n9-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Phân tử khối của khí cacbonic CO2 là bao nhiêu?",
+          "answer": "44",
+          "placeholder": "Nhập giá trị",
+          "explanation": "B1. Nguyên tử khối: C = 12, O = 16. B2. Phân tử khối CO2 = 12 + 2 x 16 = 44."
+        },
+        {
+          "id": "n9-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Nguyên tử X có nguyên tử khối gấp 2 lần nguyên tử khối của cacbon. Nguyên tử khối của X là",
+          "options": ["24", "12", "32", "16"],
+          "answer": 0,
+          "explanation": "B1. Nguyên tử khối cacbon là 12. B2. X = 2 x 12 = 24, ứng với magie (Mg)."
+        },
+        {
+          "id": "n9-l4-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hợp chất A có công thức R2O, phân tử khối bằng 62. Nguyên tử khối của R là",
+          "options": ["23", "24", "39", "7"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối R2O = 2R + 16 = 62. B2. Giải ra 2R = 46 nên R = 23, ứng với natri (Na), khớp Na2O."
+        },
+        {
+          "id": "n9-l4-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Hợp chất B có công thức RO2 với phân tử khối 44. Nguyên tử khối của R là bao nhiêu?",
+          "answer": "12",
+          "placeholder": "Nhập giá trị",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối RO2 = R + 2 x 16 = 44. B2. Giải ra R = 44 - 32 = 12, ứng với cacbon (C), khớp CO2."
+        },
+        {
+          "id": "n9-l4-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Một nguyên tố X tạo oxide cao nhất có công thức XO3, biết phân tử khối của oxide này là 80. Nguyên tử khối của X là",
+          "options": ["32", "16", "64", "48"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Phân tử khối XO3 = X + 3 x 16 = 80. B2. Giải ra X = 80 - 48 = 32, ứng với lưu huỳnh (S), khớp SO3."
+        }
+      ]
+    }
+  ]
+}

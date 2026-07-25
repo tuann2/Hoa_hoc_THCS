@@ -2,32 +2,28 @@ import type { Lesson, Question, UnitContent } from '../types/content';
 
 type UnitModule = { default: unknown };
 
+// FEATURE-015: danh mục đang được xây lại theo 11 unit n1-n11 (xem
+// docs/plans/FEATURE-015.md, Phụ lục A). Registry này phải khớp đúng các
+// unit đã hoàn thành ở vòng hiện tại; mở rộng dần qua từng vòng R2-R4 cho
+// đến khi đủ n1-n11, sau đó xoá ghi chú này.
 const loaders: Record<string, () => Promise<UnitModule>> = {
-  'a1-nen-tang-hoa-hoc': () =>
-    import('../../content/units/a1-nen-tang-hoa-hoc.json'),
-  'a2-oxi-khong-khi': () => import('../../content/units/a2-oxi-khong-khi.json'),
-  'a3-hidro-nuoc': () => import('../../content/units/a3-hidro-nuoc.json'),
-  'a4-dung-dich': () => import('../../content/units/a4-dung-dich.json'),
-  'a5-oxit': () => import('../../content/units/a5-oxit.json'),
-  'a6-axit': () => import('../../content/units/a6-axit.json'),
-  'a7-bazo': () => import('../../content/units/a7-bazo.json'),
-  'a8-muoi-phan-bon': () => import('../../content/units/a8-muoi-phan-bon.json'),
-  'a9-moi-quan-he-hop-chat-vo-co': () =>
-    import('../../content/units/a9-moi-quan-he-hop-chat-vo-co.json'),
-  'a10-kim-loai': () => import('../../content/units/a10-kim-loai.json'),
-  'a11-phi-kim': () => import('../../content/units/a11-phi-kim.json'),
-  'a12-tong-hop-vo-co': () =>
-    import('../../content/units/a12-tong-hop-vo-co.json'),
-  'b1-dai-cuong-huu-co': () =>
-    import('../../content/units/b1-dai-cuong-huu-co.json'),
-  'b2-hidrocacbon-nhien-lieu': () =>
-    import('../../content/units/b2-hidrocacbon-nhien-lieu.json'),
-  'b3-dan-xuat-chua-oxi': () =>
-    import('../../content/units/b3-dan-xuat-chua-oxi.json'),
-  'b4-gluxit-protein-polime': () =>
-    import('../../content/units/b4-gluxit-protein-polime.json'),
-  'b5-tong-hop-huu-co': () =>
-    import('../../content/units/b5-tong-hop-huu-co.json')
+  'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc': () =>
+    import('../../content/units/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc.json'),
+  'n2-phan-ung-hoa-hoc': () =>
+    import('../../content/units/n2-phan-ung-hoa-hoc.json'),
+  'n3-acid': () => import('../../content/units/n3-acid.json'),
+  'n4-base': () => import('../../content/units/n4-base.json'),
+  'n5-oxide': () => import('../../content/units/n5-oxide.json'),
+  'n6-muoi-va-phan-bon-hoa-hoc': () =>
+    import('../../content/units/n6-muoi-va-phan-bon-hoa-hoc.json'),
+  'n7-moi-quan-he-giua-cac-hop-chat-vo-co': () =>
+    import('../../content/units/n7-moi-quan-he-giua-cac-hop-chat-vo-co.json'),
+  'n8-kim-loai': () => import('../../content/units/n8-kim-loai.json'),
+  'n9-phi-kim': () => import('../../content/units/n9-phi-kim.json'),
+  'n10-hidrocacbon-va-nhien-lieu': () =>
+    import('../../content/units/n10-hidrocacbon-va-nhien-lieu.json'),
+  'n11-dan-xuat-hidrocacbon-va-polime': () =>
+    import('../../content/units/n11-dan-xuat-hidrocacbon-va-polime.json')
 };
 
 const unitCache = new Map<string, Promise<UnitContent>>();

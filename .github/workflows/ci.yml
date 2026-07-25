@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches:
+      - main
       - feature/**
   pull_request:
 
@@ -26,42 +27,84 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Format check
-        run: npm run format:check
-
-      - name: Content catalog check
-        run: npm run check:content-catalog
-
-      - name: Content validation
-        run: npm run validate-content
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Typecheck
-        run: npm run typecheck
-
-      - name: Test
-        run: npm test
-
-      - name: Bundle
+      - name: Run web gates profile
         env:
           VITE_SUPABASE_URL: https://example.supabase.co
           VITE_SUPABASE_ANON_KEY: public-anon-key-for-ci-build
-        run: npm run build && npm run check:bundle
+        run: npm run gates -- --profile=web
 
-      - name: Audit
-        run: npm audit --audit-level=moderate
+      - name: Run docs gates profile
+        run: npm run gates -- --profile=docs
 
-      - name: License check
-        run: npm run check:licenses
+      - name: Upload browser test artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-dist
+          path: dist
+          if-no-files-found: error
+
+      - name: Build production artifact
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: npm run build:app -- --outDir dist-prod
 
       - name: Upload production artifact
         uses: actions/upload-artifact@v4
         with:
           name: production-dist
-          path: dist
+          path: dist-prod
           if-no-files-found: error
+
+  # Anti-cheating control for the TRIVIAL tier (WORKFLOW-004C): when a PR
+  # declares itself TRIVIAL by adding a docs/trace/trivial/*.yaml file for its
+  # HEAD commit, the machine verdict is recomputed from the actual diff and a
+  # false claim fails this job.
+  trivial-verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Reject a false TRIVIAL claim
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          # Trace history is append-only: touching an existing trace record
+          # (modify/delete/rename/copy/type-change) fails regardless of the
+          # rest of the diff.
+          TAMPERED=$(git diff --name-only --diff-filter=MDRTC "$BASE_SHA" HEAD -- 'docs/trace/trivial/')
+          if [ -n "$TAMPERED" ]; then
+            echo "Trace records are append-only; this PR touches: $TAMPERED" >&2
+            exit 1
+          fi
+          FILES=$(git diff --name-only --diff-filter=A "$BASE_SHA" HEAD -- 'docs/trace/trivial/*.yaml')
+          if [ -z "$FILES" ]; then
+            echo "No TRIVIAL trace claim in this PR; nothing to verify."
+            exit 0
+          fi
+          COUNT=$(printf '%s\n' "$FILES" | wc -l)
+          if [ "$COUNT" -ne 1 ]; then
+            echo "A TRIVIAL PR must add exactly one trace file; found $COUNT." >&2
+            exit 1
+          fi
+          node --import tsx scripts/trace-trivial.ts \
+            --verify="$FILES" \
+            --changed-from="$BASE_SHA"
 
   browser:
     needs: web
@@ -80,15 +123,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Download production artifact
+      - name: Download browser test artifact
         uses: actions/download-artifact@v4
         with:
-          name: production-dist
+          name: test-dist
           path: dist
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      # CI execution layer for browser gates: e2e, pwa, pwa-subpath.
       - name: Run Playwright E2E
         env:
           PLAYWRIGHT_SKIP_BUILD: '1'
@@ -118,3 +162,36 @@ jobs:
             playwright-report
             test-results
           if-no-files-found: ignore
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs:
+      - web
+      - browser
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download production artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-dist
+          path: dist
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

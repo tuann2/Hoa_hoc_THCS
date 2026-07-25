@@ -6,24 +6,22 @@ import type {
 } from '../types/content';
 import { isBalancedEquation, validateLessonLevels } from './chemistry';
 
+// FEATURE-015: danh mục đang được xây lại theo 11 unit n1-n11 (xem
+// docs/plans/FEATURE-015.md, Phụ lục A). Danh sách này phải khớp đúng các
+// unit đã hoàn thành ở vòng hiện tại; mở rộng dần qua từng vòng R2-R4 cho
+// đến khi đủ n1-n11, sau đó xoá ghi chú này.
 const EXPECTED_UNIT_IDS = [
-  'a1-nen-tang-hoa-hoc',
-  'a2-oxi-khong-khi',
-  'a3-hidro-nuoc',
-  'a4-dung-dich',
-  'a5-oxit',
-  'a6-axit',
-  'a7-bazo',
-  'a8-muoi-phan-bon',
-  'a9-moi-quan-he-hop-chat-vo-co',
-  'a10-kim-loai',
-  'a11-phi-kim',
-  'a12-tong-hop-vo-co',
-  'b1-dai-cuong-huu-co',
-  'b2-hidrocacbon-nhien-lieu',
-  'b3-dan-xuat-chua-oxi',
-  'b4-gluxit-protein-polime',
-  'b5-tong-hop-huu-co'
+  'n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc',
+  'n2-phan-ung-hoa-hoc',
+  'n3-acid',
+  'n4-base',
+  'n5-oxide',
+  'n6-muoi-va-phan-bon-hoa-hoc',
+  'n7-moi-quan-he-giua-cac-hop-chat-vo-co',
+  'n8-kim-loai',
+  'n9-phi-kim',
+  'n10-hidrocacbon-va-nhien-lieu',
+  'n11-dan-xuat-hidrocacbon-va-polime'
 ];
 
 const QUESTION_CATEGORIES: QuestionCategory[] = ['theory', 'calculation'];

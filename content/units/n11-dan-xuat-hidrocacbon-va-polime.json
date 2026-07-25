@@ -1,0 +1,1693 @@
+{
+  "id": "n11-dan-xuat-hidrocacbon-va-polime",
+  "part": "organic",
+  "code": "N11",
+  "title": "Dẫn xuất hiđrocacbon và polime",
+  "order": 11,
+  "description": "Ethylic alcohol, acetic acid, ester - chất béo, carbohydrate, protein, polymer và các bài toán chuỗi chuyển hoá - hiệu suất hữu cơ.",
+  "status": "available",
+  "lessons": [
+    {
+      "id": "n11-l1",
+      "title": "Ethylic alcohol (rượu etylic)",
+      "order": 1,
+      "summary": "Cấu tạo, tính chất, độ rượu và các phản ứng cơ bản của ethylic alcohol; liên hệ với lên men và chuỗi chuyển hoá hữu cơ.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l1-c1",
+          "heading": "Cấu tạo phân tử ethylic alcohol",
+          "body": "Ethylic alcohol (rượu etylic) có công thức phân tử C2H6O, thường viết dưới dạng C2H5OH hoặc CH3-CH2-OH.\nTrong phân tử có nhóm -OH gắn với gốc etyl C2H5-, nên ethylic alcohol thuộc loại alcohol.\nNhóm -OH là phần quyết định nhiều tính chất đặc trưng của ethylic alcohol.\nỞ mức cấu tạo, nguyên tử O tạo hai liên kết đơn C-O và O-H; hai liên kết này phân cực mạnh. Giữa các phân tử ethylic alcohol, cũng như giữa rượu và nước, có thể hình thành liên kết hiđro. Điều đó góp phần giải thích ethylic alcohol tan vô hạn trong nước và có nhiệt độ sôi cao hơn hiđrocacbon có khối lượng mol gần tương đương."
+        },
+        {
+          "id": "n11-l1-c2",
+          "heading": "Tính chất hoá học tiêu biểu",
+          "body": "Ethylic alcohol tác dụng với natri giải phóng khí hiđro: 2C2H5OH + 2Na -> 2C2H5ONa + H2.\nEthylic alcohol cháy trong oxi tạo khí cacbonic và hơi nước: C2H5OH + 3O2 -> 2CO2 + 3H2O.\nNgoài ra, ethylic alcohol là chất lỏng không màu, tan vô hạn trong nước và nhẹ hơn nước.\nKhi phản ứng với Na, chỉ H trong nhóm -OH bị thay thế, không phải mọi nguyên tử H của phân tử đều cho H2. Ethylic alcohol có tính acid rất yếu: không làm đổi màu quỳ tím và không giải phóng CO2 từ muối cacbonat trong điều kiện thông thường."
+        },
+        {
+          "id": "n11-l1-c3",
+          "heading": "Độ rượu và cách tính",
+          "body": "Độ rượu cho biết số ml ethylic alcohol nguyên chất có trong 100 ml dung dịch rượu.\nCông thức tính nhanh: Vruou nguyen chat = do ruou x Vdung dich / 100.\nNếu cần đổi sang khối lượng, phải dùng khối lượng riêng của ethylic alcohol; phổ biến là D = 0,789 g/ml hoặc lấy gần đúng D = 0,8 g/ml khi đề bài cho phép.\nĐộ rượu là phần trăm thể tích, không phải phần trăm khối lượng. Khi pha loãng chỉ lượng ethylic alcohol được bảo toàn; phải dùng thể tích dung dịch sau pha để tính độ rượu mới. Chỉ khi đề cho hoặc ngầm quy ước thể tích cộng được mới lấy V sau pha bằng tổng các thể tích ban đầu."
+        },
+        {
+          "id": "n11-l1-c4",
+          "heading": "Nâng cao: C2H6O không chỉ có một công thức cấu tạo",
+          "body": "Cùng công thức phân tử C2H6O còn có đimetyl ete CH3-O-CH3. C2H5OH và CH3-O-CH3 là đồng phân cấu tạo: cùng số nguyên tử mỗi loại nhưng cách liên kết khác nhau.\nMuốn khẳng định là ethylic alcohol, cần thấy nhóm -OH gắn trực tiếp với C. Đimetyl ete không có liên kết O-H nên không có phản ứng đặc trưng giải phóng H2 với Na như ethylic alcohol. Vì vậy trong bài biện luận, công thức phân tử C2H6O một mình chưa đủ để kết luận chất là ethylic alcohol."
+        },
+        {
+          "id": "n11-l1-c5",
+          "heading": "Nâng cao: Hệ thức mol trong phản ứng với natri",
+          "body": "Từ 2C2H5OH + 2Na -> 2C2H5ONa + H2 suy ra n(Na phản ứng) = n(C2H5OH phản ứng) và n(H2) = 1/2 n(C2H5OH phản ứng).\nNếu cả Na và rượu đều được cho, phải xác định chất giới hạn trước khi tính H2. Có thể so sánh trực tiếp số mol vì hệ số của C2H5OH và Na đều là 2.\nVới ethylic alcohol tinh khiết, n(C2H5OH) = m/46 hoặc n = D x V/46, trong đó D tính bằng g/ml và V tính bằng ml. Ở đkc, V(H2) = 24,79 x n(H2) lít."
+        },
+        {
+          "id": "n11-l1-c6",
+          "heading": "Nâng cao: Oxi hoá ethylic alcohol bằng CuO",
+          "body": "Đun nóng ethylic alcohol với đồng(II) oxide, rượu bị oxi hoá thành anđehit axetic (etanal): C2H5OH + CuO -> CH3CHO + Cu + H2O.\nDấu hiệu quan sát là CuO màu đen chuyển dần thành Cu màu đỏ. Trong phản ứng này, CuO là chất oxi hoá và bị khử; ethylic alcohol là chất khử.\nEthylic alcohol thuộc alcohol bậc một nên sản phẩm oxi hoá đầu tiên là anđehit. Nếu tiếp tục bị oxi hoá trong những điều kiện phù hợp, anđehit axetic có thể chuyển thành acetic acid."
+        },
+        {
+          "id": "n11-l1-c7",
+          "heading": "Nâng cao: Tách nước tạo etilen",
+          "body": "Khi đun ethylic alcohol với H2SO4 đặc ở khoảng 170 độ C, xảy ra phản ứng tách nước: C2H5OH -> C2H4 + H2O. H2SO4 đặc vừa tạo môi trường acid vừa hút nước.\nC2H4 sinh ra là etilen, có liên kết đôi nên làm mất màu dung dịch brom. Không được nhầm hiện tượng này với ethylic alcohol ban đầu: ethylic alcohol không làm mất màu dung dịch brom trong điều kiện thường.\nPhản ứng cho thấy có thể liên hệ qua lại giữa alcohol và hiđrocacbon không no, đồng thời là cách kiểm tra bảo toàn nguyên tố C, H, O khi cân bằng phương trình hữu cơ."
+        },
+        {
+          "id": "n11-l1-c8",
+          "heading": "Nâng cao: Hệ thức nhanh khi đốt cháy ethylic alcohol",
+          "body": "Từ C2H5OH + 3O2 -> 2CO2 + 3H2O, với 1 mol ethylic alcohol cháy hoàn toàn cần 3 mol O2, tạo 2 mol CO2 và 3 mol H2O. Vì thế n(C2H5OH) = n(CO2)/2 = n(H2O)/3.\nNếu biết lượng CO2 thì m(C2H5OH) = 23 x n(CO2); nếu biết lượng H2O thì m(C2H5OH) = 46 x n(H2O)/3. Đây là các hệ thức hữu ích khi đề cho sản phẩm cháy thay vì cho trực tiếp lượng rượu.\nTỉ lệ thể tích CO2 : H2O bằng 2 : 3 chỉ dùng khi cả hai đều ở thể khí và được đo ở cùng nhiệt độ, áp suất. Ở đkc, nước không được xem là hơi nên không thể tùy tiện coi thể tích hơi nước là 3 phần."
+        },
+        {
+          "id": "n11-l1-c9",
+          "heading": "Nâng cao: Độ rượu trong bài toán khối lượng và pha loãng",
+          "body": "Với V ml rượu a do, thể tích ethylic alcohol là a x V/100 ml; do đó m(C2H5OH) = a x V x D/100 và n(C2H5OH) = a x V x D/4600. Các biểu thức này chỉ đúng khi D là khối lượng riêng của ethylic alcohol nguyên chất theo đơn vị g/ml.\nKhi thêm nước, khối lượng và số mol ethylic alcohol không đổi. Độ rượu sau pha phải tính theo a mới = 100 x V(ethylic alcohol)/V(dung dịch sau pha).\nNếu đề yêu cầu phần trăm khối lượng hoặc khối lượng nước, phải có thêm khối lượng riêng của dung dịch rượu hoặc dữ kiện tương đương. Không được lấy phần thể tích còn lại rồi mặc định bằng khối lượng nước nếu đề chưa cho phép."
+        },
+        {
+          "id": "n11-l1-c10",
+          "heading": "Nâng cao: Lên men glucose và hiệu suất tạo rượu",
+          "body": "Ethylic alcohol có thể điều chế bằng lên men glucose nhờ men rượu: C6H12O6 -> 2C2H5OH + 2CO2. Theo phương trình, 1 mol glucose đã phản ứng tạo số mol C2H5OH bằng số mol CO2.\nVề lí thuyết, 180 g glucose tạo 92 g ethylic alcohol, nên m(C2H5OH lí thuyết) = 92 x m(glucose)/180. Nếu glucose chỉ chiếm w phần trăm khối lượng dung dịch ban đầu, trước hết phải tính m(glucose) = w x m(dung dịch)/100.\nHiệu suất lên men H phần trăm được tính bằng m(rượu thực tế) x 100 / m(rượu lí thuyết), hoặc bằng số mol thực tế chia số mol lí thuyết rồi nhân 100 khi cùng một chất."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l1-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong phân tử ethylic alcohol, nhóm chức đặc trưng là",
+          "options": ["-COOH", "-OH", "-CHO", "-NH2"],
+          "answer": 1,
+          "explanation": "B1. Ethylic alcohol có công thức C2H5OH. B2. Phần đặc trưng của alcohol là nhóm -OH. B3. Vì vậy đáp án đúng là -OH."
+        },
+        {
+          "id": "n11-l1-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Viết công thức cấu tạo thu gọn của ethylic alcohol: ___.",
+          "answer": "CH3-CH2-OH",
+          "acceptedAnswers": ["C2H5OH", "CH3CH2OH"],
+          "placeholder": "Nhập công thức",
+          "explanation": "B1. Ethylic alcohol có 2 nguyên tử C và 1 nhóm -OH. B2. Công thức cấu tạo thu gọn thường viết là CH3-CH2-OH, cũng có thể viết là C2H5OH."
+        },
+        {
+          "id": "n11-l1-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các nhận xét đúng về ethylic alcohol.",
+          "options": [
+            "Trong phân tử có nhóm -OH.",
+            "Ethylic alcohol cháy tạo CO2 và H2O.",
+            "Ethylic alcohol tác dụng với Na giải phóng H2.",
+            "Ethylic alcohol làm quỳ tím hoá đỏ."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Ethylic alcohol chứa nhóm -OH nên mệnh đề 1 đúng. B2. Khi cháy hoàn toàn, ethylic alcohol tạo CO2 và H2O nên mệnh đề 2 đúng. B3. Ethylic alcohol phản ứng với Na giải phóng H2 nên mệnh đề 3 đúng. B4. Ethylic alcohol không phải acid nên không làm quỳ tím hoá đỏ, mệnh đề 4 sai."
+        },
+        {
+          "id": "n11-l1-q4",
+          "type": "balance",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng của ethylic alcohol với natri: C2H5OH + Na -> C2H5ONa + H2.",
+          "left": ["C2H5OH", "Na"],
+          "right": ["C2H5ONa", "H2"],
+          "answer": [2, 2, 2, 1],
+          "explanation": "B1. Đặt 2 trước C2H5OH để có số H chẵn thuận lợi tạo H2. B2. Khi đó cần 2Na và tạo 2C2H5ONa. B3. Số H còn lại ghép thành 1 phân tử H2. B4. Hệ số tối giản là 2 : 2 : 2 : 1."
+        },
+        {
+          "id": "n11-l1-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Rượu 40 độ nghĩa là",
+          "options": [
+            "Có 40 g C2H5OH trong 100 g dung dịch",
+            "Có 40 ml C2H5OH nguyên chất trong 100 ml dung dịch",
+            "Có 40 mol C2H5OH trong 1 lít dung dịch",
+            "Có 40 ml nước trong 100 ml dung dịch"
+          ],
+          "answer": 1,
+          "explanation": "B1. Độ rượu được định nghĩa theo phần trăm thể tích. B2. Rượu 40 độ nghĩa là trong 100 ml dung dịch có 40 ml ethylic alcohol nguyên chất. B3. Vì vậy đáp án 2 đúng."
+        },
+        {
+          "id": "n11-l1-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Một chai rượu 250 ml, 40 độ chứa thể tích ethylic alcohol nguyên chất là",
+          "options": ["80 ml", "90 ml", "100 ml", "120 ml"],
+          "answer": 2,
+          "explanation": "B1. Dùng công thức V rượu nguyên chất = độ rượu x V dung dịch / 100. B2. Ta có V = 40 x 250 / 100 = 100 ml. B3. Vậy chai rượu chứa 100 ml ethylic alcohol nguyên chất."
+        },
+        {
+          "id": "n11-l1-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "500 ml rượu 12 độ chứa ___ ml ethylic alcohol nguyên chất.",
+          "answer": "60",
+          "placeholder": "Nhập thể tích",
+          "explanation": "B1. V rượu nguyên chất = 12 x 500 / 100. B2. Tính được V = 60 ml. B3. Vậy đáp án là 60."
+        },
+        {
+          "id": "n11-l1-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Xét 200 ml rượu 46 độ. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "options": [
+            "Thể tích ethylic alcohol nguyên chất là 92 ml.",
+            "Khối lượng ethylic alcohol nguyên chất là 73,6 g.",
+            "Dung dịch trên chứa 108 ml nước và chất tan khác.",
+            "Độ rượu của dung dịch là 54 độ."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Thể tích rượu nguyên chất là 46 x 200 / 100 = 92 ml. B2. Khối lượng ethylic alcohol là 92 x 0,8 = 73,6 g. B3. Phần còn lại của 200 ml dung dịch là 200 - 92 = 108 ml. B4. Vì dung dịch đã cho là 46 độ nên mệnh đề 4 sai."
+        },
+        {
+          "id": "n11-l1-q9",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng cháy: C2H5OH + O2 -> CO2 + H2O.",
+          "left": ["C2H5OH", "O2"],
+          "right": ["CO2", "H2O"],
+          "answer": [1, 3, 2, 3],
+          "explanation": "B1. Có 2 nguyên tử C trong C2H5OH nên đặt 2 trước CO2. B2. Có 6 nguyên tử H nên đặt 3 trước H2O. B3. Khi đó tổng số O ở vế phải là 4 + 3 = 7; phía rượu đã có 1 O nên cần thêm 6 O từ 3O2. B4. Hệ số là 1 : 3 : 2 : 3."
+        },
+        {
+          "id": "n11-l1-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 9,2 g ethylic alcohol tác dụng hết với Na. Thể tích H2 thu được ở đkc là",
+          "options": ["1,2395 lít", "2,479 lít", "3,7185 lít", "4,958 lít"],
+          "answer": 1,
+          "explanation": "B1. nC2H5OH = 9,2/46 = 0,2 mol. B2. Theo phương trình 2C2H5OH + 2Na -> 2C2H5ONa + H2, nH2 = 0,2/2 = 0,1 mol. B3. Ở đkc, V(H2) = 0,1 x 24,79 = 2,479 lít."
+        },
+        {
+          "id": "n11-l1-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Một bình chứa 250 ml rượu 92 độ. Lấy D(C2H5OH) = 0,789 g/ml. Khối lượng ethylic alcohol nguyên chất là ___ g.",
+          "answer": "181,47",
+          "acceptedAnswers": ["181.47"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng",
+          "explanation": "B1. Thể tích ethylic alcohol nguyên chất là 92 x 250 / 100 = 230 ml. B2. Khối lượng ethylic alcohol là m = D x V = 0,789 x 230 = 181,47 g. B3. Vậy đáp án là 181,47 g."
+        },
+        {
+          "id": "n11-l1-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Đốt cháy hoàn toàn 4,6 g ethylic alcohol. Thể tích CO2 thu được ở đkc là",
+          "options": ["2,479 lít", "3,7185 lít", "4,958 lít", "6,1975 lít"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nC2H5OH = 4,6/46 = 0,1 mol. B2. Theo phương trình cháy, 1 mol C2H5OH tạo 2 mol CO2 nên nCO2 = 0,2 mol. B3. Ở đkc, V(CO2) = 0,2 x 24,79 = 4,958 lít."
+        },
+        {
+          "id": "n11-l1-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Pha 300 ml rượu 40 độ với 200 ml nước. Nếu lấy D(C2H5OH) = 0,8 g/ml, chọn các kết luận đúng.",
+          "options": [
+            "Thể tích ethylic alcohol nguyên chất ban đầu là 120 ml.",
+            "Độ rượu của dung dịch sau khi pha là 24 độ.",
+            "Khối lượng ethylic alcohol có trong dung dịch sau pha là 96 g.",
+            "Thể tích nước thêm vào là 200 ml."
+          ],
+          "answers": [0, 1, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Trong 300 ml rượu 40 độ có 300 x 40 / 100 = 120 ml ethylic alcohol nguyên chất. B2. Sau khi pha thêm 200 ml nước, tổng thể tích là 500 ml nên độ rượu mới là 120 x 100 / 500 = 24 độ. B3. Khối lượng ethylic alcohol không đổi, bằng 120 x 0,8 = 96 g. B4. Dữ kiện cũng cho biết đã thêm đúng 200 ml nước. Vì vậy cả 4 nhận xét đều đúng."
+        }
+      ]
+    },
+    {
+      "id": "n11-l2",
+      "title": "Acetic acid (axit axetic) và acid no đơn chức",
+      "order": 2,
+      "summary": "Nhóm -COOH, tính chất acid, phản ứng ester hóa và đặc điểm chung của dãy acid no đơn chức mạch hở.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l2-c1",
+          "heading": "Cấu tạo và nhóm chức",
+          "body": "Acetic acid (axit axetic) có công thức phân tử C2H4O2, thường viết là CH3COOH hoặc CH3-COOH.\nTrong phân tử có nhóm -COOH gọi là nhóm cacboxyl, quyết định tính acid của chất.\nAcetic acid là acid hữu cơ đơn giản, có trong giấm ăn."
+        },
+        {
+          "id": "n11-l2-c2",
+          "heading": "Tính chất hoá học của acetic acid",
+          "body": "Acetic acid là acid yếu nhưng vẫn làm quỳ tím hoá đỏ.\nNó tác dụng với kim loại Na, base NaOH và muối cacbonat như Na2CO3; ví dụ: 2CH3COOH + Na2CO3 -> 2CH3COONa + CO2 + H2O.\nCác phản ứng đó cho thấy acetic acid có đầy đủ tính chất chung của acid."
+        },
+        {
+          "id": "n11-l2-c3",
+          "heading": "Phản ứng este hoá",
+          "body": "Acetic acid tác dụng với ethylic alcohol tạo ethyl acetate và nước: CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O.\nPhản ứng này là phản ứng thuận nghịch, thường cần H2SO4 đặc làm xúc tác và phải đun nóng.\nEthyl acetate có mùi thơm, là este đơn giản được học ở THCS."
+        },
+        {
+          "id": "n11-l2-c4",
+          "heading": "Nâng cao: Dãy đồng đẳng acid cacboxylic no, đơn chức",
+          "body": "Acetic acid thuộc dãy đồng đẳng acid cacboxylic no, đơn chức, mạch hở, công thức chung CnH2n+1COOH (n từ 0 trở lên), hay viết theo công thức phân tử là CmH2mO2 (m từ 1 trở lên). Mỗi chất trong dãy hơn kém nhau một nhóm CH2 và có tính chất hoá học tương tự nhau.\nChất đơn giản nhất của dãy là formic acid HCOOH (ứng với n = 0), tiếp theo là acetic acid CH3COOH (n = 1).\nĐiểm cần lưu ý khi làm bài phân biệt hai acid này: HCOOH có cấu tạo đặc biệt H-COOH, trong đó ẩn chứa nhóm -CHO của anđehit, nên ngoài tính acid thông thường, HCOOH còn có phản ứng tráng gương với dung dịch AgNO3 trong NH3 giống anđehit axetic. Acetic acid CH3COOH không có phản ứng tráng gương này vì không còn liên kết C-H gắn trực tiếp vào nhóm cacboxyl."
+        },
+        {
+          "id": "n11-l2-c5",
+          "heading": "Nâng cao: So sánh lực acid và phạm vi phản ứng với muối",
+          "body": "Trong các acid thường gặp ở THCS, lực acid giảm dần theo thứ tự: acid vô cơ mạnh như HCl, H2SO4, HNO3 mạnh hơn acetic acid (một acid hữu cơ), và acetic acid lại mạnh hơn acid cacbonic H2CO3.\nMột acid chỉ đẩy được acid yếu hơn nó ra khỏi muối. Vì CH3COOH mạnh hơn H2CO3 nên phản ứng được với muối cacbonat, hiđrocacbonat như Na2CO3, NaHCO3, CaCO3 và giải phóng khí CO2; nhưng CH3COOH yếu hơn HCl, H2SO4 nên không thể đẩy các acid này ra khỏi muối clorua hay muối sunfat.\nAcetic acid có đầy đủ tính chất chung của một acid (tác dụng với kim loại đứng trước hiđro, oxide base, base, một số muối) nhưng mức độ phản ứng yếu hơn acid vô cơ mạnh ở cùng nồng độ, do trong dung dịch acetic acid chỉ phân li một phần thành ion."
+        },
+        {
+          "id": "n11-l2-c6",
+          "heading": "Nâng cao: Đốt cháy acetic acid",
+          "body": "Phương trình đốt cháy acetic acid: CH3COOH + 2O2 -> 2CO2 + 2H2O.\nVì acetic acid là hợp chất no, đơn chức nên khi đốt cháy hoàn toàn, số mol CO2 sinh ra bằng số mol H2O: n(CO2) = n(H2O). Đây là dấu hiệu quen thuộc để nhận ra một hợp chất hữu cơ no, đơn chức khi đề bài chỉ cho biết sản phẩm cháy.\nTừ số mol CO2 hoặc H2O, có thể suy ra số mol acetic acid đã đốt: n(CH3COOH) = n(CO2)/2 = n(H2O)/2, từ đó tính khối lượng theo m = 60 x n. Cần phân biệt với đốt cháy ethylic alcohol (nCO2 khác nH2O) để không áp nhầm hệ thức khi đề cho hỗn hợp nhiều chất hữu cơ."
+        },
+        {
+          "id": "n11-l2-c7",
+          "heading": "Nâng cao: Yếu tố ảnh hưởng hiệu suất phản ứng este hoá",
+          "body": "Phản ứng este hoá CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O là phản ứng thuận nghịch nên không bao giờ đạt hiệu suất 100% nếu để phản ứng tự do; đây chính là lí do các bài toán luôn cho hiệu suất H% nhỏ hơn 100%.\nTrong thực tế, để tăng lượng este thu được, người ta thường dùng dư một trong hai chất (acetic acid hoặc ethylic alcohol), dùng H2SO4 đặc vừa làm xúc tác vừa hút bớt nước sinh ra, hoặc chưng cất tách este ra khỏi hỗn hợp ngay khi nó hình thành. Cả ba cách đều làm cân bằng chuyển dịch theo chiều tạo thêm este.\nKhi giải bài toán, nếu acid và rượu được cho với số mol không bằng nhau, phải xác định chất phản ứng hết trước dựa theo tỉ lệ mol 1:1 của phản ứng, sau đó mới nhân khối lượng este lí thuyết với hiệu suất để được khối lượng este thực tế."
+        },
+        {
+          "id": "n11-l2-c8",
+          "heading": "Nâng cao: Bài toán hỗn hợp chứa acetic acid",
+          "body": "Với hỗn hợp gồm acetic acid và ethylic alcohol (chưa phản ứng este hoá với nhau) tác dụng với Na dư, cả hai chất đều giải phóng H2 theo cùng tỉ lệ mol 2:1 (chất : H2), vì nguyên tử H linh động chỉ nằm ở nhóm -COOH và -OH: 2CH3COOH + 2Na -> 2CH3COONa + H2 và 2C2H5OH + 2Na -> 2C2H5ONa + H2.\nKhi đề chỉ cho tổng khối lượng hỗn hợp và tổng thể tích H2, cần đặt ẩn số mol từng chất (dùng khối lượng mol 60 và 46), rồi lập hệ hai phương trình: một phương trình về khối lượng, một phương trình suy từ số mol H2 (bằng nửa tổng số mol hai chất), để giải ra số mol từng thành phần.\nVới hỗn hợp acetic acid và formic acid, có thể tách riêng đóng góp của từng chất nhờ phản ứng tráng gương: chỉ HCOOH phản ứng với AgNO3 trong NH3, từ đó tính được số mol HCOOH; số mol CH3COOH còn lại suy ra từ khối lượng hỗn hợp hoặc từ số mol NaOH dùng để trung hoà toàn bộ hỗn hợp."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l2-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nhóm chức đặc trưng của acetic acid là",
+          "options": ["-OH", "-COOH", "-CHO", "-Cl"],
+          "answer": 1,
+          "explanation": "B1. Acetic acid có công thức CH3COOH. B2. Nhóm chức của các acid hữu cơ là -COOH. B3. Vì vậy đáp án đúng là -COOH."
+        },
+        {
+          "id": "n11-l2-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Viết công thức thu gọn của acetic acid: ___.",
+          "answer": "CH3COOH",
+          "acceptedAnswers": ["CH3-COOH"],
+          "placeholder": "Nhập công thức",
+          "explanation": "B1. Acetic acid gồm gốc CH3- gắn với nhóm -COOH. B2. Vì vậy công thức thu gọn là CH3COOH hoặc CH3-COOH."
+        },
+        {
+          "id": "n11-l2-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các tính chất đúng của acetic acid.",
+          "options": [
+            "Làm quỳ tím hoá đỏ.",
+            "Tác dụng với NaOH.",
+            "Tác dụng với Na2CO3 giải phóng CO2.",
+            "Làm phenolphtalein hoá hồng."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Acetic acid là acid yếu nên vẫn làm quỳ tím hoá đỏ. B2. Nó phản ứng với NaOH theo phản ứng trung hoà. B3. Nó phản ứng với Na2CO3 tạo muối, CO2 và H2O. B4. Phenolphtalein chỉ hồng trong môi trường base nên mệnh đề 4 sai."
+        },
+        {
+          "id": "n11-l2-q4",
+          "type": "balance",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: CH3COOH + Na2CO3 -> CH3COONa + CO2 + H2O.",
+          "left": ["CH3COOH", "Na2CO3"],
+          "right": ["CH3COONa", "CO2", "H2O"],
+          "answer": [2, 1, 2, 1, 1],
+          "explanation": "B1. Na2CO3 có 2 Na nên cần tạo 2CH3COONa. B2. Khi đó phải đặt 2 trước CH3COOH để đủ 2 gốc CH3COO-. B3. Phần CO3 kết hợp với H tạo 1CO2 và 1H2O. B4. Hệ số tối giản là 2 : 1 : 2 : 1 : 1."
+        },
+        {
+          "id": "n11-l2-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Sản phẩm este tạo ra khi cho CH3COOH tác dụng với C2H5OH là",
+          "options": ["CH3OH", "CH3COOC2H5", "C2H5COOH", "CH3COONa"],
+          "answer": 1,
+          "explanation": "B1. Phản ứng este hoá giữa acetic acid và ethylic alcohol tạo ethyl acetate. B2. Công thức của ethyl acetate là CH3COOC2H5. B3. Vì vậy đáp án đúng là CH3COOC2H5."
+        },
+        {
+          "id": "n11-l2-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Để trung hoà hoàn toàn 0,20 mol CH3COOH cần khối lượng NaOH là",
+          "options": ["4 g", "6 g", "8 g", "10 g"],
+          "answer": 2,
+          "explanation": "B1. Phương trình: CH3COOH + NaOH -> CH3COONa + H2O. B2. Tỉ lệ mol là 1 : 1 nên cần 0,20 mol NaOH. B3. mNaOH = 0,20 x 40 = 8 g."
+        },
+        {
+          "id": "n11-l2-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "12 g CH3COOH tương ứng với ___ mol.",
+          "answer": "0,2",
+          "acceptedAnswers": ["0.2"],
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. M(CH3COOH) = 60 g/mol. B2. Số mol là n = 12 / 60 = 0,2 mol. B3. Vậy đáp án là 0,2 mol."
+        },
+        {
+          "id": "n11-l2-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 6 g CH3COOH tác dụng vừa đủ với Na2CO3. Chọn các kết luận đúng.",
+          "options": [
+            "Số mol CH3COOH là 0,1 mol.",
+            "Khối lượng Na2CO3 cần dùng là 5,3 g.",
+            "Thể tích CO2 thu được ở đkc là 1,2395 lít.",
+            "Số mol Na2CO3 phản ứng là 0,1 mol."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. nCH3COOH = 6/60 = 0,1 mol. B2. Theo phương trình 2CH3COOH + Na2CO3 -> 2CH3COONa + CO2 + H2O, nNa2CO3 = 0,05 mol. B3. mNa2CO3 = 0,05 x 106 = 5,3 g. B4. nCO2 = 0,05 mol nên ở đkc V(CO2) = 0,05 x 24,79 = 1,2395 lít. B5. Vì vậy mệnh đề 4 sai."
+        },
+        {
+          "id": "n11-l2-q9",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.",
+          "left": ["CH3COOH", "C2H5OH"],
+          "right": ["CH3COOC2H5", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Phản ứng este hoá giữa acetic acid và ethylic alcohol có tỉ lệ mol 1 : 1 : 1 : 1. B2. Kiểm tra số nguyên tử C, H, O ở hai vế đều bằng nhau. B3. Vì vậy hệ số tối giản là 1 : 1 : 1 : 1."
+        },
+        {
+          "id": "n11-l2-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,15 mol CH3COOH phản ứng với lượng dư C2H5OH. Khối lượng este thu được theo lí thuyết là",
+          "options": ["8,8 g", "11,0 g", "13,2 g", "17,6 g"],
+          "answer": 2,
+          "explanation": "B1. Theo phương trình, 1 mol CH3COOH tạo 1 mol CH3COOC2H5. B2. Vậy 0,15 mol acid tạo 0,15 mol este. B3. M(CH3COOC2H5) = 88 g/mol. B4. mEste = 0,15 x 88 = 13,2 g."
+        },
+        {
+          "id": "n11-l2-q11",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 6 g CH3COOH tác dụng với lượng dư C2H5OH. Hiệu suất phản ứng este hoá là 75%. Khối lượng este thu được là ___ g.",
+          "answer": "6,6",
+          "acceptedAnswers": ["6.6"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng este",
+          "explanation": "B1. nCH3COOH = 6 / 60 = 0,1 mol. B2. Theo lí thuyết, nEste = 0,1 mol nên mEste li thuyet = 0,1 x 88 = 8,8 g. B3. Khối lượng thực tế là 8,8 x 75 / 100 = 6,6 g. B4. Vậy đáp án là 6,6 g."
+        },
+        {
+          "id": "n11-l2-q12",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 6 g CH3COOH tác dụng hết với Na. Thể tích H2 thu được ở đkc là",
+          "options": ["0,61975 lít", "1,2395 lít", "2,479 lít", "4,958 lít"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCH3COOH = 6/60 = 0,1 mol. B2. Theo phương trình 2CH3COOH + 2Na -> 2CH3COONa + H2, nH2 = 0,05 mol. B3. Ở đkc, V(H2) = 0,05 x 24,79 = 1,2395 lít."
+        },
+        {
+          "id": "n11-l2-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 12 g CH3COOH phản ứng với 9,2 g C2H5OH trong điều kiện thích hợp, hiệu suất este hoá 80%. Chọn các kết luận đúng.",
+          "options": [
+            "Ban đầu mỗi chất đều có số mol bằng 0,2 mol.",
+            "Khối lượng este thu được theo lí thuyết là 17,6 g.",
+            "Khối lượng este thực tế là 14,08 g.",
+            "Khối lượng nước thực tế tạo thành là 2,88 g."
+          ],
+          "answers": [0, 1, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nCH3COOH = 12 / 60 = 0,2 mol và nC2H5OH = 9,2 / 46 = 0,2 mol. B2. Tỉ lệ phản ứng là 1 : 1 nên theo lí thuyết tạo 0,2 mol este, tức 0,2 x 88 = 17,6 g. B3. Với hiệu suất 80%, khối lượng este thực tế là 17,6 x 80 / 100 = 14,08 g. B4. Số mol nước thực tế cũng là 0,2 x 80 / 100 = 0,16 mol, nên mH2O = 0,16 x 18 = 2,88 g. B5. Do đó cả 4 nhận xét đều đúng."
+        }
+      ]
+    },
+    {
+      "id": "n11-l3",
+      "title": "Ester và chất béo",
+      "order": 3,
+      "summary": "Phản ứng ester hóa, thuỷ phân este, công thức chung của chất béo và phản ứng xà phòng hoá tạo xà phòng, glycerol.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l3-c1",
+          "heading": "Ester và phản ứng ester hóa",
+          "body": "Acetic acid tác dụng với ethylic alcohol tạo ethyl acetate và nước: CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O.\nPhản ứng này là phản ứng thuận nghịch, thường cần H2SO4 đặc làm xúc tác và phải đun nóng.\nEthyl acetate có mùi thơm, là este đơn giản được học ở THCS."
+        },
+        {
+          "id": "n11-l3-c2",
+          "heading": "Nâng cao: Yếu tố ảnh hưởng hiệu suất phản ứng este hoá",
+          "body": "Phản ứng este hoá CH3COOH + C2H5OH <-> CH3COOC2H5 + H2O là phản ứng thuận nghịch nên không bao giờ đạt hiệu suất 100% nếu để phản ứng tự do; đây chính là lí do các bài toán luôn cho hiệu suất H% nhỏ hơn 100%.\nTrong thực tế, để tăng lượng este thu được, người ta thường dùng dư một trong hai chất (acetic acid hoặc ethylic alcohol), dùng H2SO4 đặc vừa làm xúc tác vừa hút bớt nước sinh ra, hoặc chưng cất tách este ra khỏi hỗn hợp ngay khi nó hình thành. Cả ba cách đều làm cân bằng chuyển dịch theo chiều tạo thêm este.\nKhi giải bài toán, nếu acid và rượu được cho với số mol không bằng nhau, phải xác định chất phản ứng hết trước dựa theo tỉ lệ mol 1:1 của phản ứng, sau đó mới nhân khối lượng este lí thuyết với hiệu suất để được khối lượng este thực tế."
+        },
+        {
+          "id": "n11-l3-c3",
+          "heading": "Chất béo là gì",
+          "body": "Chất béo là este của glycerol với các acid béo.\nMột số acid béo thường gặp là stearic acid C17H35COOH, oleic acid C17H33COOH và palmitic acid C15H31COOH.\nVì có nguồn gốc từ glycerol và acid béo nên chất béo còn được gọi là triglixerit."
+        },
+        {
+          "id": "n11-l3-c4",
+          "heading": "Tính chất cơ bản của chất béo",
+          "body": "Chất béo không tan trong nước và nhẹ hơn nước nên thường nổi trên mặt nước.\nChất béo cháy được và cũng có thể bị thuỷ phân.\nĐặc điểm này vừa quan trọng trong đời sống vừa là cơ sở của phản ứng xà phòng hoá."
+        },
+        {
+          "id": "n11-l3-c5",
+          "heading": "Phản ứng xà phòng hoá",
+          "body": "Khi đun chất béo với dung dịch kiềm như NaOH, chất béo bị thuỷ phân tạo muối natri của acid béo và glycerol.\nPhương trình tổng quát: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3.\nMuối RCOONa là thành phần chính của xà phòng, còn C3H5(OH)3 là glycerol."
+        },
+        {
+          "id": "n11-l3-c6",
+          "heading": "Nâng cao: Thuỷ phân chất béo trong môi trường acid",
+          "body": "Ngoài phản ứng với dung dịch kiềm (xà phòng hoá), chất béo còn có thể bị thuỷ phân khi đun nóng với nước có xúc tác acid.\nPhương trình tổng quát: (RCOO)3C3H5 + 3H2O <-> 3RCOOH + C3H5(OH)3; đây là phản ứng thuận nghịch nên thường không xảy ra hoàn toàn.\nSản phẩm ở đây là acid béo tự do RCOOH chứ không phải muối RCOONa, do đó thuỷ phân bằng acid KHÔNG trực tiếp tạo ra xà phòng - chỉ phản ứng với kiềm (NaOH, KOH) một chiều mới gọi đúng là phản ứng xà phòng hoá và mới thu được xà phòng."
+        },
+        {
+          "id": "n11-l3-c7",
+          "heading": "Nâng cao: Bảo toàn khối lượng trong phản ứng xà phòng hoá",
+          "body": "Vì phản ứng xà phòng hoá không sinh ra hay mất đi nguyên tử nào, có thể áp dụng định luật bảo toàn khối lượng: khối lượng chất béo + khối lượng NaOH phản ứng = khối lượng muối (xà phòng) + khối lượng glycerol.\nNhờ vậy, khi biết khối lượng chất béo và số mol NaOH đã dùng, có thể tính nhanh khối lượng xà phòng thu được mà không cần biết cụ thể gốc R.\nVí dụ: xà phòng hoá hoàn toàn 17,8 gam một chất béo (RCOO)3C3H5 bằng vừa đủ 0,06 mol NaOH. Vì tỉ lệ chất béo : NaOH : glycerol là 1 : 3 : 1 nên n(chất béo) = n(glycerol) = 0,06/3 = 0,02 mol, suy ra m(glycerol) = 0,02 x 92 = 1,84 gam; m(NaOH) = 0,06 x 40 = 2,4 gam. Theo bảo toàn khối lượng, m(muối) = 17,8 + 2,4 - 1,84 = 18,36 gam."
+        },
+        {
+          "id": "n11-l3-c8",
+          "heading": "Nâng cao: Dầu thực vật, mỡ động vật và phản ứng hiđro hoá",
+          "body": "Chất béo tồn tại ở thể lỏng (dầu thực vật) hay thể rắn (mỡ động vật) tuỳ vào gốc acid béo tạo nên nó: mỡ động vật chứa nhiều gốc acid béo no (như stearic acid C17H35COOH, palmitic acid C15H31COOH, mạch cacbon chỉ có liên kết đơn) nên đông đặc ở nhiệt độ thường; dầu thực vật chứa nhiều gốc acid béo không no (như oleic acid C17H33COOH, có một liên kết đôi C=C trong mạch) nên ở thể lỏng.\nVì có liên kết đôi C=C, dầu thực vật có thể tham gia phản ứng cộng H2 (xúc tác Ni, đun nóng) để no hoá gốc acid béo, chuyển dầu lỏng thành chất béo rắn - đây là nguyên lí sản xuất bơ thực vật (margarine) trong công nghiệp thực phẩm.\nLưu ý phân biệt: dầu ăn (chất béo, có nhóm este) khác hẳn dầu nhớt bôi trơn máy hay dầu hoả (hỗn hợp hiđrocacbon, không có nhóm este) - dầu nhớt không bị xà phòng hoá và không phản ứng với dung dịch kiềm."
+        },
+        {
+          "id": "n11-l3-c9",
+          "heading": "Nâng cao: Vì sao xà phòng tẩy rửa được vết dầu mỡ",
+          "body": "Phân tử xà phòng RCOONa có hai phần trái tính chất: đầu -COONa ưa nước (tan tốt trong nước), còn đuôi gốc hiđrocacbon R dài thì kị nước nhưng lại dễ hoà lẫn vào dầu mỡ.\nKhi giặt rửa, đuôi kị nước của nhiều phân tử xà phòng chui vào bên trong hạt dầu mỡ bám trên vải hay da, còn đầu ưa nước quay ra ngoài tiếp xúc với nước, tạo thành những hạt hình cầu nhỏ (mixen) lơ lửng, phân tán đều trong nước thay vì bám dính trên bề mặt.\nNhờ đó vết bẩn dầu mỡ bị tách rời khỏi vải, da và bị cuốn trôi theo nước khi xả - đó chính là cơ chế làm sạch của xà phòng."
+        },
+        {
+          "id": "n11-l3-c10",
+          "heading": "Nâng cao: Xác định acid béo từ số liệu phản ứng xà phòng hoá",
+          "body": "Một số bài toán cho khối lượng chất béo và số mol NaOH phản ứng vừa đủ, yêu cầu suy ngược ra loại acid béo đã tạo nên chất béo đó.\nCách làm: từ n(NaOH) suy ra n(chất béo) theo tỉ lệ 1 : 3, rồi tính M(chất béo) = m(chất béo)/n(chất béo). Vì chất béo (RCOO)3C3H5 được tạo từ glycerol C3H5(OH)3 (M = 92) và 3 phân tử acid béo RCOOH (mất đi 3 phân tử H2O khi este hoá) nên M(chất béo) = 3.M(RCOOH) + 92 - 3.18 = 3.M(RCOOH) + 38, từ đó suy ra M(RCOOH).\nVí dụ: xà phòng hoá hoàn toàn 8,84 gam một chất béo (RCOO)3C3H5 cần vừa đủ 0,03 mol NaOH. Ta có n(chất béo) = 0,03/3 = 0,01 mol nên M(chất béo) = 8,84/0,01 = 884 g/mol. Suy ra M(RCOOH) = (884 - 38)/3 = 282 g/mol, đúng bằng khối lượng mol của oleic acid C17H33COOH - vậy chất béo này là este của glycerol với oleic acid (một acid béo không no)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l3-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Sản phẩm este tạo ra khi cho CH3COOH tác dụng với C2H5OH là",
+          "options": ["CH3OH", "CH3COOC2H5", "C2H5COOH", "CH3COONa"],
+          "answer": 1,
+          "explanation": "B1. Phản ứng este hoá giữa acetic acid và ethylic alcohol tạo ethyl acetate. B2. Công thức của ethyl acetate là CH3COOC2H5. B3. Vì vậy đáp án đúng là CH3COOC2H5."
+        },
+        {
+          "id": "n11-l3-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chất béo là",
+          "options": [
+            "alcohol đơn chức",
+            "este của glycerol và acid béo",
+            "acid hữu cơ đơn chức",
+            "muối natri của acid béo"
+          ],
+          "answer": 1,
+          "explanation": "B1. Theo định nghĩa, chất béo là este của glycerol với các acid béo. B2. Muối natri của acid béo là xà phòng, không phải chất béo ban đầu."
+        },
+        {
+          "id": "n11-l3-q3",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Phần alcohol tạo nên chất béo là ___.",
+          "answer": "glycerol",
+          "acceptedAnswers": ["glycerol"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Chất béo được tạo bởi glycerol và acid béo. B2. Vì vậy phần alcohol tham gia tạo chất béo là glycerol."
+        },
+        {
+          "id": "n11-l3-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các nhận xét đúng về chất béo.",
+          "options": [
+            "Không tan trong nước.",
+            "Nhẹ hơn nước.",
+            "Có thể bị thuỷ phân.",
+            "Làm quỳ tím hoá đỏ."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Chất béo không tan trong nước nên mệnh đề 1 đúng. B2. Chất béo nhẹ hơn nước nên thường nổi lên trên, mệnh đề 2 đúng. B3. Chất béo có thể bị thuỷ phân nên mệnh đề 3 đúng. B4. Chất béo không phải acid nên không làm quỳ tím hoá đỏ."
+        },
+        {
+          "id": "n11-l3-q5",
+          "type": "balance",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng xà phòng hoá tổng quát: (RCOO)3C3H5 + NaOH -> RCOONa + C3H5(OH)3.",
+          "left": ["(RCOO)3C3H5", "NaOH"],
+          "right": ["RCOONa", "C3H5(OH)3"],
+          "answer": [1, 3, 3, 1],
+          "explanation": "B1. Trong một phân tử chất béo có 3 gốc acid nên khi thuỷ phân kiềm sẽ tạo 3 phân tử muối RCOONa. B2. Vì tạo 3 muối nên cần 3NaOH. B3. Glycerol chỉ tạo 1 phân tử C3H5(OH)3. B4. Hệ số cân bằng là 1 : 3 : 3 : 1."
+        },
+        {
+          "id": "n11-l3-q6",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức nào dưới đây là công thức của một acid béo thường gặp?",
+          "options": ["C17H35COOH", "C2H5OH", "CH3COOH", "C6H12O6"],
+          "answer": 0,
+          "explanation": "B1. Stearic acid có công thức C17H35COOH và là một acid béo điển hình. B2. Các công thức còn lại lần lượt là ethylic alcohol, acetic acid và glucose."
+        },
+        {
+          "id": "n11-l3-q7",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Khi đun chất béo với dung dịch NaOH, sản phẩm thu được là",
+          "options": [
+            "ethylic alcohol và CO2",
+            "muối natri của acid béo và glycerol",
+            "acetic acid và nước",
+            "glucose và glycerol"
+          ],
+          "answer": 1,
+          "explanation": "B1. Phản ứng giữa chất béo và NaOH là phản ứng xà phòng hoá. B2. Sản phẩm gồm muối natri của acid béo và glycerol."
+        },
+        {
+          "id": "n11-l3-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Trong phương trình tổng quát xà phòng hoá, hệ số của NaOH là ___.",
+          "answer": "3",
+          "placeholder": "Nhập hệ số",
+          "explanation": "B1. Một phân tử chất béo có 3 liên kết este. B2. Vì vậy cần 3 phân tử NaOH để thuỷ phân hết, nên hệ số của NaOH là 3."
+        },
+        {
+          "id": "n11-l3-q9",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các nhận xét đúng về quá trình làm xà phòng từ chất béo.",
+          "options": [
+            "Đó là phản ứng thuỷ phân trong môi trường kiềm.",
+            "Có thể dùng NaOH để thực hiện phản ứng.",
+            "Sản phẩm tạo thành có glycerol.",
+            "Phản ứng cần dùng HCl làm thuốc thử chính."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Xà phòng hoá là thuỷ phân este trong môi trường kiềm nên mệnh đề 1 đúng. B2. Có thể dùng NaOH để tạo xà phòng natri nên mệnh đề 2 đúng. B3. Sản phẩm có glycerol nên mệnh đề 3 đúng. B4. HCl không phải thuốc thử chính của phản ứng xà phòng hoá nên mệnh đề 4 sai."
+        },
+        {
+          "id": "n11-l3-q10",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng: (C17H35COO)3C3H5 + NaOH -> C17H35COONa + C3H5(OH)3.",
+          "left": ["(C17H35COO)3C3H5", "NaOH"],
+          "right": ["C17H35COONa", "C3H5(OH)3"],
+          "answer": [1, 3, 3, 1],
+          "explanation": "B1. Chất béo này có 3 gốc stearat nên khi xà phòng hoá tạo 3 phân tử C17H35COONa. B2. Do đó cần 3NaOH để cắt 3 liên kết este. B3. Phần glycerol chỉ tạo 1 phân tử C3H5(OH)3. B4. Hệ số là 1 : 3 : 3 : 1."
+        },
+        {
+          "id": "n11-l3-q11",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Trong phản ứng xà phòng hoá, chất nào dưới đây là glycerol?",
+          "options": ["C3H5(OH)3", "C2H5OH", "CH3COOH", "NaCl"],
+          "answer": 0,
+          "explanation": "B1. Công thức của glycerol là C3H5(OH)3. B2. Đây là sản phẩm đồng thời với xà phòng trong phản ứng xà phòng hoá."
+        },
+        {
+          "id": "n11-l3-q12",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 12 g CH3COOH phản ứng với lượng dư C2H5OH. Hiệu suất este hoá là 60%. Khối lượng este thu được là",
+          "options": ["8,80 g", "10,56 g", "13,20 g", "17,60 g"],
+          "answer": 1,
+          "explanation": "B1. nCH3COOH = 12 / 60 = 0,2 mol. B2. Theo lí thuyết tạo 0,2 mol este nên meste li thuyet = 0,2 x 88 = 17,6 g. B3. Với hiệu suất 60%, meste thuc = 17,6 x 60 / 100 = 10,56 g."
+        },
+        {
+          "id": "n11-l3-q13",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Nếu xà phòng hoá hoàn toàn 1 mol chất béo tổng quát (RCOO)3C3H5 thì thu được ___ mol glycerol.",
+          "answer": "1",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập số mol",
+          "explanation": "B1. Phương trình tổng quát cho thấy 1 mol chất béo tạo 1 mol glycerol. B2. Vì vậy số mol glycerol thu được là 1 mol."
+        },
+        {
+          "id": "n11-l3-q14",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Xà phòng hoá hoàn toàn 0,20 mol chất béo tổng quát (RCOO)3C3H5 bằng lượng dư NaOH. Số mol muối RCOONa thu được là",
+          "options": ["0,20 mol", "0,30 mol", "0,40 mol", "0,60 mol"],
+          "answer": 3,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo phương trình, 1 mol chất béo tạo 3 mol muối RCOONa. B2. Vậy 0,20 mol chất béo tạo 0,20 x 3 = 0,60 mol muối."
+        },
+        {
+          "id": "n11-l3-q15",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 27,6 g C2H5OH phản ứng với 36 g CH3COOH. Hiệu suất este hoá là 75%. Khối lượng CH3COOC2H5 thu được là",
+          "options": ["26,4 g", "35,2 g", "39,6 g", "52,8 g"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. nC2H5OH = 27,6 / 46 = 0,6 mol và nCH3COOH = 36 / 60 = 0,6 mol. B2. Hai chất phản ứng vừa đủ theo tỉ lệ 1 : 1 nên theo lí thuyết tạo 0,6 mol este. B3. mEste li thuyet = 0,6 x 88 = 52,8 g. B4. Với hiệu suất 75%, khối lượng este thực tế là 52,8 x 75 / 100 = 39,6 g."
+        }
+      ]
+    },
+    {
+      "id": "n11-l4",
+      "title": "Carbohydrate: glucose, saccharose, starch (tinh bột), cellulose",
+      "order": 4,
+      "summary": "Tính chất tiêu biểu của glucose, saccharose, starch và cellulose; phản ứng tráng gương, thuỷ phân và ứng dụng của các carbohydrate quen thuộc.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l4-c1",
+          "heading": "Công thức và đặc điểm chung",
+          "body": "Glucose (glucozơ) có công thức phân tử C6H12O6. Đây là một loại carbohydrate đơn giản, tan tốt trong nước và có nhiều trong quả chín, mật ong.\nTrong chương trình THCS, glucose được nhấn mạnh ở hai tính chất đặc trưng là phản ứng tráng gương và phản ứng lên men rượu.\nNâng cao: mạch hở của glucose có cấu tạo CH2OH-CHOH-CHOH-CHOH-CHOH-CHO, gồm 5 nhóm hiđroxyl (-OH) và 1 nhóm chức anđehit (-CHO) ở đầu mạch. Chính nhóm -CHO tạo nên tính khử (phản ứng tráng gương), còn dãy nhiều nhóm -OH kề nhau tạo nên tính chất tương tự alcohol đa chức."
+        },
+        {
+          "id": "n11-l4-c2",
+          "heading": "Phản ứng tráng gương",
+          "body": "Glucose phản ứng với thuốc thử bạc trong môi trường amoniac, tạo lớp bạc sáng bám trên thành ống nghiệm.\nCó thể viết dạng đơn giản: C6H12O6 + Ag2O -> C6H12O7 + 2Ag.\nDấu hiệu nhận biết là xuất hiện bạc kim loại màu trắng sáng.\nNâng cao: ngoài thuốc thử bạc, nhóm -CHO của glucose còn bị nước brom oxi hoá, làm nhạt màu dung dịch brom — một cách nhận biết khác hay gặp trong đề nâng cao. Dạng đơn giản: C6H12O6 + Br2 + H2O -> C6H12O7 + 2HBr."
+        },
+        {
+          "id": "n11-l4-c3",
+          "heading": "Phản ứng lên men",
+          "body": "Khi có enzim men rượu, glucose lên men tạo ethylic alcohol và khí carbon đioxide: C6H12O6 -> 2C2H5OH + 2CO2.\nTừ 1 mol glucose thu được 2 mol ethylic alcohol và 2 mol CO2.\nĐây là cơ sở của nhiều bài toán tính khối lượng glucose cần dùng hoặc lượng rượu, CO2 tạo thành."
+        },
+        {
+          "id": "n11-l4-c4",
+          "heading": "Nâng cao: Phản ứng của glucose với Cu(OH)2",
+          "body": "Nhờ có nhiều nhóm -OH kề nhau, ở nhiệt độ thường glucose hoà tan Cu(OH)2 tạo thành dung dịch có màu xanh lam đặc trưng, tương tự tính chất nhận biết của các alcohol đa chức như glycerol hay etylen glicol.\nKhi đun nóng trong môi trường kiềm, nhóm chức anđehit (-CHO) của glucose lại bị Cu(OH)2 oxi hoá, tạo kết tủa đỏ gạch Cu2O. Dạng đơn giản: C6H12O6 + 2Cu(OH)2 -> C6H12O7 + Cu2O + 2H2O (đun nóng).\nNhư vậy chỉ với một thuốc thử Cu(OH)2, glucose vừa thể hiện tính chất alcohol đa chức (ở nhiệt độ thường) vừa thể hiện tính khử của nhóm anđehit (khi đun nóng) — đây là điểm hay được khai thác trong các câu hỏi nhận biết, phân biệt ở đề thi HSG."
+        },
+        {
+          "id": "n11-l4-c5",
+          "heading": "Nâng cao: CO2 sinh ra từ lên men tác dụng với dung dịch kiềm",
+          "body": "Khí CO2 thoát ra từ phản ứng lên men glucose thường được dẫn tiếp vào dung dịch kiềm (Ca(OH)2, Ba(OH)2 hoặc NaOH) trong các bài toán tổng hợp, đòi hỏi biện luận sản phẩm theo tỉ lệ số mol.\nVới Ca(OH)2: nếu n CO2 nhỏ hơn hoặc bằng n Ca(OH)2 thì chỉ tạo CaCO3; nếu n CO2 lớn hơn hoặc bằng 2 lần n Ca(OH)2 thì chỉ tạo Ca(HCO3)2 (CO2 dư); nếu n CO2 nằm giữa hai giá trị đó thì tạo đồng thời cả hai muối, với n CaCO3 = 2 n Ca(OH)2 - n CO2.\nVí dụ: lên men hoàn toàn 45 g glucose thu được 0,50 mol CO2, dẫn vào 300 ml dung dịch Ca(OH)2 1M (0,30 mol). Vì 0,30 < 0,50 < 0,60 nên tạo hỗn hợp hai muối: n CaCO3 = 2 x 0,30 - 0,50 = 0,10 mol, tương ứng 10 g kết tủa; lượng Ca còn lại (0,20 mol) nằm trong dung dịch dưới dạng Ca(HCO3)2."
+        },
+        {
+          "id": "n11-l4-c6",
+          "heading": "Nâng cao: Hiệu suất phản ứng và độ tinh khiết nguyên liệu",
+          "body": "Đề bài nâng cao thường phân biệt hai đại lượng dễ nhầm: hiệu suất phản ứng (tỉ lệ sản phẩm thực tế so với lí thuyết) và độ tinh khiết của nguyên liệu (tỉ lệ khối lượng glucose nguyên chất trong tổng khối lượng nguyên liệu, phần còn lại là tạp chất trơ không phản ứng).\nCách xử lí: tính khối lượng glucose nguyên chất cần dùng theo lí thuyết trước (dựa vào hiệu suất phản ứng), sau đó suy ra khối lượng nguyên liệu ban đầu bằng cách chia cho độ tinh khiết.\nVí dụ: nguyên liệu chứa 90% glucose (còn lại là tạp chất trơ), lên men với hiệu suất phản ứng 80%, thu được 18,4 g ethylic alcohol. Ta có n ethylic alcohol thực tế = 18,4/46 = 0,40 mol; vì hiệu suất 80% nên n ethylic alcohol lí thuyết = 0,40/0,8 = 0,50 mol; suy ra n glucose nguyên chất cần dùng = 0,50/2 = 0,25 mol, tức 45 g. Vì nguyên liệu chỉ chứa 90% glucose nên khối lượng nguyên liệu ban đầu là 45/0,9 = 50 g."
+        },
+        {
+          "id": "n11-l4-c7",
+          "heading": "Nâng cao: Nồng độ dung dịch glucose trong bài toán lên men",
+          "body": "Một số bài toán cho dữ kiện dung dịch glucose qua nồng độ phần trăm C% và khối lượng riêng D (thường tính bằng g/ml) thay vì cho trực tiếp khối lượng hoặc số mol. Khi đó cần tính khối lượng dung dịch trước: m dung dịch = V x D, rồi suy ra khối lượng chất tan: m glucose = m dung dịch x C%.\nVí dụ: lấy 250 ml dung dịch glucose 20%, khối lượng riêng D = 1,08 g/ml, đem lên men hoàn toàn. Khối lượng dung dịch là 250 x 1,08 = 270 g, khối lượng glucose là 270 x 20% = 54 g, tương ứng n glucose = 54/180 = 0,30 mol. Theo phương trình lên men, khối lượng ethylic alcohol thu được là 0,30 x 2 x 46 = 27,6 g."
+        },
+        {
+          "id": "n11-l4-c8",
+          "heading": "Công thức và nguồn gốc",
+          "body": "Saccharose (saccarozơ) có công thức phân tử C12H22O11. Đây là loại đường quen thuộc có trong mía, củ cải đường và nhiều loại quả.\nỞ điều kiện thường, saccharose dễ tan trong nước và có vị ngọt."
+        },
+        {
+          "id": "n11-l4-c9",
+          "heading": "Tính chất đáng chú ý",
+          "body": "Saccharose không trực tiếp tham gia phản ứng tráng gương như glucose.\nVì vậy nếu chỉ cho saccharose tác dụng với thuốc thử bạc trong amoniac thì không xuất hiện lớp bạc sáng.\nNâng cao: sở dĩ saccharose không tráng gương và cũng không tạo kết tủa đỏ gạch với Cu(OH)2 khi đun nóng là vì trong phân tử không còn nhóm chức anđehit (-CHO) tự do — gốc glucose và gốc fructozơ đã liên kết với nhau đúng tại hai vị trí nhóm chức khử của chúng (liên kết glicozit), khiến saccharose trở thành một đisaccarit không có tính khử."
+        },
+        {
+          "id": "n11-l4-c10",
+          "heading": "Phản ứng thuỷ phân",
+          "body": "Khi đun nóng với acid loãng hoặc dưới tác dụng của enzim, saccharose bị thuỷ phân:\nC12H22O11 + H2O -> C6H12O6 + C6H12O6.\nHai monosaccarit thu được là glucose và fructozơ. Sau thuỷ phân, hỗn hợp mới có khả năng tham gia phản ứng tráng gương.\nNâng cao: phản ứng thuỷ phân có thể xảy ra nhờ acid vô cơ loãng (H2SO4, HCl) đun nóng hoặc nhờ enzim invertaza có sẵn trong cơ thể người và nhiều vi sinh vật — đó là lí do đường mía vẫn được tiêu hoá dù dạ dày không dùng acid mạnh đun nóng. Vì nước cũng tham gia phản ứng, khối lượng saccharose đem thuỷ phân cộng khối lượng nước phản ứng luôn bằng tổng khối lượng hai monosaccarit tạo thành (bảo toàn khối lượng): ví dụ 342 g saccharose (1 mol) phản ứng vừa đủ với 18 g nước (1 mol) tạo ra đúng 360 g hỗn hợp glucose và fructozơ (mỗi chất 1 mol, tức 180 g)."
+        },
+        {
+          "id": "n11-l4-c11",
+          "heading": "Nâng cao: Saccharose tác dụng với Cu(OH)2",
+          "body": "Dù không có nhóm -CHO, saccharose vẫn có nhiều nhóm -OH liền kề trong phân tử (giống glucose, glycerol) nên ở nhiệt độ thường vẫn hoà tan được Cu(OH)2, tạo dung dịch phức đồng-saccarat màu xanh lam trong suốt.\nTuy nhiên nếu đun nóng hỗn hợp này thì không xuất hiện kết tủa đỏ gạch Cu2O như glucose, vì saccharose không có nhóm chức khử để bị oxi hoá.\nĐây là cách phân biệt nhanh: cả glucose và saccharose đều hoà tan Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam, nhưng chỉ glucose mới cho kết tủa đỏ gạch khi đun nóng."
+        },
+        {
+          "id": "n11-l4-c12",
+          "heading": "Nâng cao: Đường nghịch chuyển sau khi thuỷ phân",
+          "body": "Hỗn hợp glucose và fructozơ thu được sau khi thuỷ phân saccharose được gọi là 'đường nghịch chuyển' (invert sugar) — tên gọi gắn với hiện tượng chiều quay ánh sáng phân cực của dung dịch đổi ngược so với dung dịch saccharose ban đầu, do đóng góp của fructozơ.\nVề vị giác, hỗn hợp đường nghịch chuyển ngọt hơn saccharose ban đầu vì fructozơ là loại đường có độ ngọt cao nhất trong các carbohydrate thường gặp; nhờ vậy đường nghịch chuyển được dùng trong công nghiệp bánh kẹo, làm mật ong nhân tạo và mứt để tăng độ ngọt, chống kết tinh đường."
+        },
+        {
+          "id": "n11-l4-c13",
+          "heading": "Nâng cao: Mantozơ — đồng phân của saccharose",
+          "body": "Mantozơ (đường mạch nha) có cùng công thức phân tử C12H22O11 với saccharose nên là đồng phân của nhau, nhưng cấu tạo và tính chất hoá học lại khác nhau rõ rệt.\nMantozơ được tạo từ hai gốc glucose liên kết với nhau, trong đó chỉ một gốc dùng nhóm chức khử để liên kết, gốc còn lại vẫn giữ nguyên nhóm chức khử tự do. Vì vậy, khác với saccharose, mantozơ vẫn tham gia được phản ứng tráng gương và tạo kết tủa đỏ gạch Cu2O với Cu(OH)2 khi đun nóng, tương tự glucose.\nMuốn phân biệt saccharose với mantozơ (cùng công thức phân tử C12H22O11), người ta dùng chính phản ứng tráng gương: mantozơ cho kết quả dương tính, còn saccharose thì không."
+        },
+        {
+          "id": "n11-l4-c14",
+          "heading": "Nâng cao: Nồng độ dung dịch và khối lượng riêng trong bài toán thuỷ phân",
+          "body": "Một dạng bài hay gặp là cho dữ kiện dung dịch saccharose qua nồng độ phần trăm C% và khối lượng riêng D (g/ml) thay vì cho trực tiếp khối lượng saccharose. Khi đó cần tính khối lượng dung dịch trước: m dung dịch = V x D, rồi suy khối lượng saccharose: m saccharose = m dung dịch x C%.\nVí dụ: lấy 200 ml dung dịch saccharose 15%, khối lượng riêng D = 1,14 g/ml, đem thuỷ phân hoàn toàn. Khối lượng dung dịch là 200 x 1,14 = 228 g, khối lượng saccharose là 228 x 15% = 34,2 g, tương ứng n saccharose = 34,2/342 = 0,10 mol. Theo phương trình thuỷ phân, khối lượng glucose riêng tạo thành là 0,10 x 180 = 18 g."
+        },
+        {
+          "id": "n11-l4-c15",
+          "heading": "Nâng cao: Hiệu suất phản ứng thuỷ phân",
+          "body": "Trong thực tế, phản ứng thuỷ phân saccharose bằng acid loãng hoặc enzim không phải lúc nào cũng đạt 100%, nên đề bài thường cho thêm hiệu suất phản ứng H%. Khi đó khối lượng (hay số mol) sản phẩm thực tế chỉ bằng H% so với lượng tính theo lí thuyết (giả sử phản ứng hoàn toàn).\nVí dụ: thuỷ phân 34,2 g saccharose (0,10 mol) với hiệu suất phản ứng 80%. Nếu phản ứng hoàn toàn sẽ thu được 0,10 mol glucose; vì hiệu suất chỉ đạt 80% nên số mol glucose thực tế là 0,10 x 0,8 = 0,08 mol, tức khối lượng thực tế là 0,08 x 180 = 14,4 g."
+        },
+        {
+          "id": "n11-l4-c16",
+          "heading": "Starch (tinh bột) và cellulose",
+          "body": "Starch (tinh bột) và cellulose đều là polisaccarit, có công thức dạng chung (C6H10O5)n.\nCả hai đều có nguồn gốc từ thực vật và khi thuỷ phân hoàn toàn đều tạo glucose.\nNâng cao: hệ số n không cố định mà thay đổi tuỳ nguồn nguyên liệu và điều kiện sinh trưởng của cây, nên tinh bột và cellulose thực chất là hỗn hợp các phân tử có mạch dài ngắn khác nhau; n của cellulose thường lớn hơn nhiều so với n của tinh bột, đây là một lí do khiến mạch cellulose bền và dai hơn. Phân tử khối trung bình tính gần đúng theo công thức M = 162n, từ đó có thể ước lượng n khi biết M."
+        },
+        {
+          "id": "n11-l4-c17",
+          "heading": "Tinh bột",
+          "body": "Tinh bột có nhiều trong gạo, ngô, khoai, sắn. Hồ tinh bột tác dụng với iot cho màu xanh tím, đây là phản ứng nhận biết đặc trưng.\nTinh bột bị thuỷ phân dưới tác dụng của acid hoặc enzim để tạo glucose.\nNâng cao: tinh bột thực chất gồm hai loại mạch xen lẫn nhau là amilozơ (mạch không phân nhánh, cuộn xoắn như lò xo, chiếm khoảng 20-30%) và amilopectin (mạch phân nhánh, chiếm phần còn lại). Mạch xoắn của amilozơ tạo ra các khoang rỗng vừa khít để giữ phân tử iot bên trong, sinh ra phức chất màu xanh tím; khi đun nóng mạch xoắn duỗi ra nên màu nhạt dần hoặc mất, để nguội màu lại xuất hiện. Trong tự nhiên, tinh bột được cây xanh tổng hợp từ khí cacbonic và nước nhờ quang hợp: 6nCO2 + 5nH2O -> (C6H10O5)n + 6nO2 (ánh sáng, chất diệp lục) — đây là nguồn gốc giải thích vì sao tinh bột luôn có ở thực vật."
+        },
+        {
+          "id": "n11-l4-c18",
+          "heading": "Cellulose",
+          "body": "Cellulose là thành phần chính của sợi bông, gỗ, tre nứa và nhiều loại sợi thực vật. Cấu trúc của cellulose bền hơn tinh bột nên không cho màu xanh tím với iot.\nCellulose được dùng để sản xuất giấy, vải sợi và cũng có thể thuỷ phân tạo glucose.\nNâng cao: khác tinh bột, cellulose chỉ có mạch thẳng, không phân nhánh, xếp song song và liên kết chặt với nhau bằng nhiều liên kết hiđro giữa các nhóm -OH của các mạch kề nhau; cấu trúc bó sợi này khiến cellulose không tan trong nước, không tạo khoang xoắn giữ iot (nên không đổi màu với I2) và rất bền cơ học, bền hoá học so với tinh bột. Mỗi mắt xích C6H10O5 còn 3 nhóm -OH tự do (ở các vị trí 2, 3, 6 của vòng glucose) nên công thức đầy đủ hay viết là [C6H7O2(OH)3]n; ba nhóm -OH này chính là vị trí xảy ra các phản ứng este hoá, ete hoá tạo dẫn xuất của cellulose."
+        },
+        {
+          "id": "n11-l4-c19",
+          "heading": "Nâng cao: Cellulose phản ứng với nitric acid",
+          "body": "Nhờ 3 nhóm -OH tự do trong mỗi mắt xích, cellulose phản ứng este hoá được với nitric acid đặc (xúc tác acid sunfuric đặc, đun nóng nhẹ):\n[C6H7O2(OH)3]n + 3nHNO3 (đặc) -> [C6H7O2(ONO2)3]n + 3nH2O.\nSản phẩm cellulose trinitrat rất dễ cháy và nổ mạnh khi gặp tia lửa, được dùng làm thuốc súng không khói. Nếu chỉ một phần nhóm -OH bị este hoá thì sản phẩm là cellulose đinitrat hoặc mononitrat, có độ nổ yếu hơn nhiều.\nNgoài ra, cho cellulose phản ứng với anhiđrit axetic thu được cellulose axetat — nguyên liệu để sản xuất tơ axetat (tơ nhân tạo) và phim ảnh không cháy."
+        },
+        {
+          "id": "n11-l4-c20",
+          "heading": "Nâng cao: Sản xuất rượu từ tinh bột qua hai giai đoạn",
+          "body": "Trong công nghiệp, ethylic alcohol thường được sản xuất từ tinh bột (gạo, ngô, sắn) qua hai giai đoạn nối tiếp: (1) thuỷ phân tinh bột thành glucose nhờ acid hoặc enzim, (2) lên men glucose thành ethylic alcohol. Khi mỗi giai đoạn có hiệu suất riêng H1% và H2%, hiệu suất chung của cả quá trình bằng tích hai hiệu suất thành phần: H = H1 x H2.\nVí dụ: từ 162 kg tinh bột tính theo mắt xích C6H10O5 (tương ứng 1 kmol), hiệu suất thuỷ phân là 90% và hiệu suất lên men là 80%. Bước 1: n glucose thực tế = 1 x 0,9 = 0,9 kmol. Bước 2: nếu lên men hoàn toàn 0,9 kmol glucose sẽ tạo 1,8 kmol ethylic alcohol (lí thuyết), thực tế chỉ đạt 1,8 x 0,8 = 1,44 kmol. Khối lượng ethylic alcohol thu được là 1,44 x 46 = 66,24 kg."
+        },
+        {
+          "id": "n11-l4-c21",
+          "heading": "Nâng cao: Phối hợp thuốc thử để phân biệt các carbohydrate",
+          "body": "Khi đề bài yêu cầu phân biệt đồng thời nhiều dung dịch/hỗn hợp carbohydrate quen thuộc (glucose, saccharose, hồ tinh bột), nên phối hợp thuốc thử theo thứ tự hợp lí: dùng dung dịch I2 trước để nhận ra hồ tinh bột — chất duy nhất trong nhóm này cho màu xanh tím; sau đó dùng dung dịch AgNO3 trong NH3 (đun nhẹ) để nhận ra glucose — chất duy nhất còn lại có nhóm -CHO tự do nên tạo lớp Ag sáng; saccharose là chất còn lại, không phản ứng với cả hai thuốc thử trên.\nNếu cần phân biệt sâu hơn, có thể dùng thêm Cu(OH)2: glucose và saccharose đều hoà tan Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam (do có nhiều nhóm -OH kề nhau), nhưng chỉ glucose mới tạo thêm kết tủa đỏ gạch Cu2O khi đun nóng, còn saccharose thì không."
+        },
+        {
+          "id": "n11-l4-c22",
+          "heading": "Nâng cao: Tiêu hoá tinh bột và cellulose trong cơ thể",
+          "body": "Trong cơ thể người, tinh bột được tiêu hoá nhờ hệ enzim amilaza (bắt đầu từ nước bọt, tiếp tục ở ruột non), thuỷ phân dần mạch tinh bột để tạo glucose — về bản chất đây là phản ứng thuỷ phân tương tự C6H10O5 + H2O -> C6H12O6, nhưng xảy ra êm dịu ở nhiệt độ cơ thể nhờ xúc tác sinh học. Glucose tạo thành được hấp thụ vào máu để cung cấp năng lượng, phần dư được gan và cơ dự trữ dưới dạng glicogen.\nNgược lại, cơ thể người không có enzim phân giải cellulose (enzim xenlulaza) nên cellulose đi qua hệ tiêu hoá mà không bị hấp thụ, đóng vai trò chất xơ hỗ trợ nhu động ruột. Một số động vật ăn cỏ như trâu, bò tiêu hoá được cellulose nhờ hệ vi sinh vật cộng sinh trong dạ dày có khả năng tiết enzim xenlulaza."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l4-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức phân tử của glucose là",
+          "options": ["C6H12O6", "C12H22O11", "C2H5OH", "(C6H10O5)n"],
+          "answer": 0,
+          "explanation": "B1. Glucose là đường đơn quen thuộc trong chương carbohydrate. B2. Công thức phân tử của glucose là C6H12O6."
+        },
+        {
+          "id": "n11-l4-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong phản ứng tráng gương của glucose, kim loại tạo thành bám trên thành ống nghiệm là ___.",
+          "answer": "Ag",
+          "acceptedAnswers": ["bạc", "ag"],
+          "placeholder": "Nhập tên hoặc kí hiệu kim loại",
+          "explanation": "B1. Phản ứng tráng gương tạo ra bạc kim loại. B2. Vì vậy đáp án là Ag hoặc bạc."
+        },
+        {
+          "id": "n11-l4-q3",
+          "type": "balance",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng lên men glucose: C6H12O6 -> C2H5OH + CO2.",
+          "left": ["C6H12O6"],
+          "right": ["C2H5OH", "CO2"],
+          "answer": [1, 2, 2],
+          "explanation": "B1. Cân bằng C: vế trái có 6C nên cần 2C2H5OH và 2CO2 để có 4 + 2 = 6C. B2. Kiểm tra H: 2C2H5OH cho 12H, đúng với 12H của glucose. B3. Kiểm tra O: vế phải có 2O trong 2C2H5OH và 4O trong 2CO2, tổng 6O. B4. Hệ số tối giản là 1 : 2 : 2."
+        },
+        {
+          "id": "n11-l4-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Công thức phân tử của saccharose là",
+          "options": ["C6H12O6", "C12H22O11", "C2H5OH", "(C6H10O5)n"],
+          "answer": 1,
+          "explanation": "B1. Saccharose là đường mía quen thuộc. B2. Công thức phân tử của nó là C12H22O11."
+        },
+        {
+          "id": "n11-l4-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nhận xét nào đúng về phản ứng tráng gương của saccharose?",
+          "options": [
+            "Saccharose trực tiếp tạo bạc ngay.",
+            "Saccharose chỉ tráng gương sau khi thuỷ phân.",
+            "Saccharose làm xanh tím hồ tinh bột.",
+            "Saccharose không chứa oxi."
+          ],
+          "answer": 1,
+          "explanation": "B1. Saccharose không trực tiếp tham gia phản ứng tráng gương. B2. Sau khi thuỷ phân thành glucose và fructozơ thì hỗn hợp mới có thể tráng gương."
+        },
+        {
+          "id": "n11-l4-q6",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Thuỷ phân saccharose, ngoài glucose còn thu được ___.",
+          "answer": "fructozơ",
+          "acceptedAnswers": ["fructose", "fructozo"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Phản ứng thuỷ phân saccharose tạo ra hai monosaccarit. B2. Đó là glucose và fructozơ."
+        },
+        {
+          "id": "n11-l4-q7",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Thuốc thử dùng để nhận biết hồ tinh bột là",
+          "options": [
+            "Dung dịch HCl",
+            "Dung dịch I2",
+            "Dung dịch NaOH",
+            "Dung dịch AgNO3"
+          ],
+          "answer": 1,
+          "explanation": "B1. Hồ tinh bột tác dụng với iot cho màu xanh tím đặc trưng. B2. Vì vậy dùng dung dịch I2 để nhận biết tinh bột."
+        },
+        {
+          "id": "n11-l4-q8",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Thành phần chính của sợi bông, gỗ và nhiều sợi thực vật là ___.",
+          "answer": "cellulose",
+          "acceptedAnswers": ["xenlulozo", "cellulose"],
+          "placeholder": "Nhập tên chất",
+          "explanation": "B1. Cellulose là polisaccarit cấu tạo nên thành tế bào thực vật. B2. Vì thế bông, gỗ và nhiều sợi thực vật chứa chủ yếu cellulose."
+        },
+        {
+          "id": "n11-l4-q9",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Lên men hoàn toàn 18 g glucose thu được ___ g ethylic alcohol.",
+          "answer": "9,2",
+          "acceptedAnswers": ["9.2"],
+          "placeholder": "Nhập khối lượng ethylic alcohol",
+          "explanation": "B1. n glucose = 18/180 = 0,10 mol. B2. Theo phương trình, 1 mol glucose tạo 2 mol ethylic alcohol nên 0,10 mol glucose tạo 0,20 mol ethylic alcohol. B3. m ethylic alcohol = 0,20 x 46 = 9,2 g."
+        },
+        {
+          "id": "n11-l4-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 0,50 mol glucose lên men hoàn toàn. Số mol CO2 tạo ra là",
+          "options": ["0,25 mol", "0,50 mol", "1,00 mol", "1,50 mol"],
+          "answer": 2,
+          "explanation": "B1. Theo phương trình lên men, 1 mol glucose tạo 2 mol CO2. B2. Vậy 0,50 mol glucose tạo 0,50 x 2 = 1,00 mol CO2."
+        },
+        {
+          "id": "n11-l4-q11",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 34,2 g saccharose. Khối lượng glucose riêng tạo thành là",
+          "options": ["9 g", "18 g", "36 g", "54 g"],
+          "answer": 1,
+          "explanation": "B1. n saccharose = 34,2/342 = 0,10 mol. B2. Theo phương trình, 1 mol saccharose tạo 1 mol glucose nên tạo 0,10 mol glucose. B3. m glucose = 0,10 x 180 = 18 g."
+        },
+        {
+          "id": "n11-l4-q12",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 171 g saccharose thu được tổng cộng ___ g hai monosaccarit có công thức C6H12O6.",
+          "answer": "180",
+          "placeholder": "Nhập khối lượng sản phẩm",
+          "explanation": "B1. n saccharose = 171/342 = 0,50 mol. B2. Theo phương trình, 1 mol saccharose tạo 2 mol monosaccarit C6H12O6 nên thu được 1,00 mol các chất này. B3. Khối lượng sản phẩm là 1,00 x 180 = 180 g."
+        },
+        {
+          "id": "n11-l4-q13",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 162 g tinh bột tính theo một mắt xích C6H10O5 thu được khối lượng glucose là",
+          "options": ["90 g", "162 g", "180 g", "324 g"],
+          "answer": 2,
+          "explanation": "B1. 162 g C6H10O5 tương ứng 1 mol mắt xích. B2. Theo phương trình C6H10O5 + H2O -> C6H12O6, 1 mol mắt xích tạo 1 mol glucose. B3. Khối lượng glucose là 1 x 180 = 180 g."
+        },
+        {
+          "id": "n11-l4-q14",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 32,4 g tinh bột tính theo mắt xích C6H10O5 thu được ___ g glucose.",
+          "answer": "36",
+          "placeholder": "Nhập khối lượng glucose",
+          "explanation": "B1. n C6H10O5 = 32,4/162 = 0,20 mol. B2. Theo phương trình, tạo 0,20 mol glucose. B3. m glucose = 0,20 x 180 = 36 g."
+        },
+        {
+          "id": "n11-l4-q15",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Cho 0,10 mol glucose tham gia phản ứng tráng gương viết gọn C6H12O6 + Ag2O -> C6H12O7 + 2Ag. Khối lượng Ag thu được là",
+          "options": ["10,8 g", "21,6 g", "32,4 g", "43,2 g"],
+          "answer": 1,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Theo phương trình, 1 mol glucose tạo 2 mol Ag. B2. Vậy 0,10 mol glucose tạo 0,20 mol Ag. B3. m Ag = 0,20 x 108 = 21,6 g."
+        },
+        {
+          "id": "n11-l4-q16",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 34,2 g saccharose. Biết 1 mol mỗi monosaccarit thu được phản ứng tráng gương tạo 2 mol Ag. Khối lượng Ag tối đa thu được là ___ g.",
+          "answer": "43,2",
+          "acceptedAnswers": ["43.2"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng Ag",
+          "explanation": "B1. n saccharose = 34,2/342 = 0,10 mol. B2. Sau thuỷ phân có 0,20 mol monosaccarit. B3. Mỗi mol monosaccarit tạo 2 mol Ag nên n Ag = 0,20 x 2 = 0,40 mol. B4. m Ag = 0,40 x 108 = 43,2 g."
+        },
+        {
+          "id": "n11-l4-q17",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 16,2 g tinh bột tính theo mắt xích C6H10O5 rồi lên men hết lượng glucose tạo ra. Khối lượng ethylic alcohol thu được là ___ g.",
+          "answer": "9,2",
+          "acceptedAnswers": ["9.2"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng ethylic alcohol",
+          "explanation": "B1. n C6H10O5 = 16,2/162 = 0,10 mol. B2. Thuỷ phân tạo 0,10 mol glucose. B3. Lên men 0,10 mol glucose tạo 0,20 mol ethylic alcohol. B4. m ethylic alcohol = 0,20 x 46 = 9,2 g."
+        },
+        {
+          "id": "n11-l4-q18",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Thuỷ phân hoàn toàn 32,4 g cellulose tính theo mắt xích C6H10O5, rồi cho toàn bộ glucose tạo thành tham gia phản ứng tráng gương viết gọn C6H12O6 + Ag2O -> C6H12O7 + 2Ag. Khối lượng Ag thu được là",
+          "options": ["21,6 g", "32,4 g", "43,2 g", "64,8 g"],
+          "answer": 2,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. n C6H10O5 = 32,4/162 = 0,20 mol nên tạo 0,20 mol glucose. B2. Theo phản ứng tráng gương viết gọn, 1 mol glucose tạo 2 mol Ag. B3. Vậy n Ag = 0,20 x 2 = 0,40 mol. B4. m Ag = 0,40 x 108 = 43,2 g."
+        },
+        {
+          "id": "n11-l4-q19",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Chọn các kết luận đúng khi so sánh tinh bột và cellulose.",
+          "options": [
+            "Cả hai đều có thể thuỷ phân tạo glucose.",
+            "Hồ tinh bột cho màu xanh tím với I2, cellulose thì không.",
+            "Cellulose tan tốt trong nước như đường.",
+            "Hai chất có cùng công thức dạng chung nhưng tính chất khác nhau do cấu trúc khác nhau."
+          ],
+          "answers": [0, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Cả tinh bột và cellulose đều cho glucose khi thuỷ phân hoàn toàn. B2. Phản ứng màu xanh tím với I2 chỉ đặc trưng cho hồ tinh bột. B3. Cellulose không tan tốt trong nước. B4. Dù có cùng công thức dạng chung, cấu trúc của chúng khác nhau nên tính chất khác nhau."
+        }
+      ]
+    },
+    {
+      "id": "n11-l5",
+      "title": "Protein",
+      "order": 5,
+      "summary": "Thành phần, đơn vị cấu tạo, tính đông tụ - biến tính, thuỷ phân và vai trò của protein trong cơ thể và thực phẩm.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l5-c1",
+          "heading": "Thành phần và cấu tạo",
+          "body": "Protein là hợp chất hữu cơ phức tạp, thường chứa các nguyên tố C, H, O, N; nhiều protein còn chứa thêm S hoặc P.\nĐơn vị cấu tạo cơ bản của protein là các amino acid liên kết với nhau thành chuỗi dài.\nNâng cao: Các amino acid nối với nhau bằng liên kết peptit -CO-NH- (nhóm -COOH của amino acid này phản ứng với nhóm -NH2 của amino acid kế tiếp, tách ra một phân tử nước). Rất nhiều liên kết peptit lặp lại liên tiếp tạo thành mạch polipeptit dài — đó chính là bộ khung của phân tử protein."
+        },
+        {
+          "id": "n11-l5-c2",
+          "heading": "Tính chất hoá học cơ bản",
+          "body": "Protein bị đông tụ hoặc biến tính khi đun nóng, gặp acid mạnh hoặc cồn. Đây là hiện tượng thường gặp khi luộc trứng hoặc khi sữa gặp acid.\nProtein còn bị thuỷ phân tạo thành các amino acid. Trong bài học này chỉ cần biết phản ứng màu biure là một phản ứng nhận biết protein.\nNâng cao: Trong phản ứng màu biure, Cu(OH)2 (tạo ra từ CuSO4 và NaOH hoặc KOH) tác dụng với các liên kết peptit trong mạch protein, tạo phức chất có màu tím đặc trưng. Phản ứng chỉ xảy ra với hợp chất có nhiều liên kết peptit trở lên, nên không dùng để nhận biết một amino acid đơn lẻ."
+        },
+        {
+          "id": "n11-l5-c3",
+          "heading": "Vai trò và nguồn thực phẩm",
+          "body": "Protein là chất dinh dưỡng rất quan trọng, tham gia xây dựng tế bào, mô, enzim và nhiều chất sinh học khác.\nNguồn protein quen thuộc trong thực phẩm là thịt, cá, trứng, sữa, tôm, cua, đậu nành."
+        },
+        {
+          "id": "n11-l5-c4",
+          "heading": "Nâng cao: Biến tính và thuỷ phân — hai hiện tượng dễ nhầm",
+          "body": "Mạch polipeptit của protein không nằm thẳng mà còn cuộn xoắn, gấp lại theo những cách sắp xếp không gian riêng để tạo nên hình dạng hoạt động của phân tử. Khi đun nóng, gặp acid mạnh hoặc cồn, các cách sắp xếp không gian này bị phá vỡ khiến protein đông tụ, mất hoạt tính sinh học — đó là hiện tượng biến tính; tuy nhiên mạch polipeptit (các liên kết peptit) vẫn còn nguyên vẹn.\nNgược lại, khi thuỷ phân (nhờ acid, kiềm hoặc enzim ở nhiệt độ thích hợp), chính các liên kết peptit bị cắt đứt, mạch bị bẻ nhỏ dần cho đến khi thu được các amino acid riêng lẻ. Vì vậy biến tính chỉ làm thay đổi hình dạng phân tử, còn thuỷ phân mới thực sự phá vỡ mạch protein."
+        },
+        {
+          "id": "n11-l5-c5",
+          "heading": "Nâng cao: Nhận biết tơ protein bằng phản ứng đốt cháy",
+          "body": "Một cách nhận biết định tính hay gặp trong đề thi là dùng phản ứng đốt cháy để phân biệt tơ có nguồn gốc protein (tơ tằm, len) với tơ tổng hợp. Do protein chứa N (và thường có thêm S), khi đốt sợi tơ tằm hoặc sợi len sẽ cháy chậm, xoăn lại và toả ra mùi khét đặc trưng giống mùi tóc cháy.\nTrong khi đó, các loại tơ tổng hợp như tơ nilon hay tơ capron có bản chất là polymer tổng hợp (không phải protein) nên khi đốt không cho mùi khét kiểu tóc cháy, sợi tơ thường bị chảy vón cục ở đầu ngọn lửa. Đây là cách phân biệt không cần thuốc thử hoá học."
+        },
+        {
+          "id": "n11-l5-c6",
+          "heading": "Nâng cao: Enzim — protein làm nhiệm vụ xúc tác sinh học",
+          "body": "Đa số enzim trong cơ thể sống có bản chất là protein. Enzim xúc tác rất chọn lọc: mỗi loại enzim thường chỉ xúc tác cho một phản ứng hoặc một nhóm phản ứng nhất định, ví dụ enzim amilaza trong nước bọt xúc tác thuỷ phân tinh bột thành đường mantozơ.\nVì bản chất là protein nên hoạt tính của enzim rất nhạy với nhiệt độ và độ pH: đun nóng quá mức hoặc gặp môi trường acid, kiềm mạnh sẽ làm enzim bị biến tính, mất khả năng xúc tác. Đây là lí do các loại men tiêu hoá, men rượu... chỉ hoạt động tốt trong một khoảng nhiệt độ và pH nhất định."
+        },
+        {
+          "id": "n11-l5-c7",
+          "heading": "Nâng cao: Ước lượng hàm lượng protein qua hàm lượng nitơ",
+          "body": "Vì nitơ hầu như chỉ có mặt trong protein (rất ít trong carbohydrate, lipit), người ta có thể xác định gián tiếp hàm lượng protein trong một mẫu thực phẩm bằng cách đo hàm lượng nitơ rồi nhân với một hệ số quy đổi.\nTrung bình protein chứa khoảng 16% N về khối lượng, nên hệ số quy đổi thường dùng là 100 : 16 ≈ 6,25. Ví dụ: nếu phân tích một mẫu bột đậu nành thấy chứa 3,2% N về khối lượng thì hàm lượng protein ước tính trong mẫu là 3,2% × 6,25 = 20%. Đây là nguyên tắc cơ bản của phương pháp Kjeldahl, được dùng phổ biến trong kiểm nghiệm thực phẩm."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l5-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Nguyên tố đặc trưng luôn có mặt trong protein là",
+          "options": ["Na", "N", "Cl", "Ag"],
+          "answer": 1,
+          "explanation": "B1. Protein luôn chứa C, H, O, N. B2. Vì vậy nguyên tố đặc trưng cần chọn là N."
+        },
+        {
+          "id": "n11-l5-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Đơn vị cấu tạo cơ bản của protein là các ___.",
+          "answer": "amino acid",
+          "acceptedAnswers": ["amino acid", "amino acid", "amino acid"],
+          "placeholder": "Nhập tên đơn vị cấu tạo",
+          "explanation": "B1. Protein được tạo nên từ các mắt xích nhỏ là amino acid. B2. Vì vậy đáp án là amino acid."
+        },
+        {
+          "id": "n11-l5-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các phát biểu đúng về protein.",
+          "options": [
+            "Protein thường chứa C, H, O, N.",
+            "Nhiều protein còn có thể chứa S hoặc P.",
+            "Protein bị thuỷ phân tạo ra amino acid.",
+            "Protein không liên quan đến dinh dưỡng."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Protein là hợp chất hữu cơ chứa chủ yếu C, H, O, N. B2. Một số protein còn chứa S hoặc P. B3. Protein bị thuỷ phân tạo ra amino acid. B4. Protein có vai trò dinh dưỡng rất quan trọng nên mệnh đề cuối sai."
+        },
+        {
+          "id": "n11-l5-q4",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi đun nóng lòng trắng trứng, hiện tượng chính xảy ra là",
+          "options": [
+            "Protein bị đông tụ",
+            "Protein biến thành glucose",
+            "Protein tan hoàn toàn hơn",
+            "Không có thay đổi nào"
+          ],
+          "answer": 0,
+          "explanation": "B1. Lòng trắng trứng chứa nhiều protein. B2. Khi đun nóng, protein bị đông tụ nên trứng chín và rắn lại."
+        },
+        {
+          "id": "n11-l5-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Khi đun nóng, protein thường bị ___.",
+          "answer": "đông tụ",
+          "acceptedAnswers": ["bien tinh", "biến tính", "dong tu"],
+          "placeholder": "Nhập hiện tượng",
+          "explanation": "B1. Nhiệt độ cao làm cấu trúc protein thay đổi. B2. Hiện tượng quen thuộc được mô tả ở THCS là protein bị đông tụ."
+        },
+        {
+          "id": "n11-l5-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Thực phẩm nào sau đây giàu protein nhất?",
+          "options": ["Đường kính", "Dầu ăn", "Thịt nạc", "Muối ăn"],
+          "answer": 2,
+          "explanation": "B1. Thịt nạc là nguồn thực phẩm giàu protein. B2. Đường kính chủ yếu là saccharose, dầu ăn là chất béo, muối ăn là NaCl."
+        },
+        {
+          "id": "n11-l5-q7",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Những hiện tượng nào dưới đây liên quan đến sự đông tụ hoặc biến tính của protein?",
+          "options": [
+            "Luộc trứng thấy lòng trắng đặc lại",
+            "Nhỏ chanh vào sữa thấy vón cục",
+            "Ngâm thực phẩm giàu protein trong cồn làm protein biến tính",
+            "Hoà tan muối ăn vào nước"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Nhiệt, acid và cồn đều có thể làm protein biến tính hoặc đông tụ. B2. Hoà tan muối ăn vào nước chỉ là quá trình hoà tan thông thường, không liên quan đến protein."
+        },
+        {
+          "id": "n11-l5-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Sản phẩm cuối cùng khi thuỷ phân hoàn toàn protein là các ___.",
+          "answer": "amino acid",
+          "acceptedAnswers": ["amino acid", "amino acid", "amino acid"],
+          "placeholder": "Nhập tên sản phẩm",
+          "explanation": "B1. Protein là chuỗi dài gồm nhiều amino acid. B2. Khi thuỷ phân hoàn toàn, chuỗi bị cắt thành các amino acid."
+        },
+        {
+          "id": "n11-l5-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Mẫu thực phẩm nào sau đây thường được dùng làm nguồn bổ sung protein thực vật?",
+          "options": ["Đậu nành", "Đường mía", "Dầu hỏa", "Muối biển"],
+          "answer": 0,
+          "explanation": "B1. Đậu nành giàu protein thực vật. B2. Các chất còn lại không phải nguồn bổ sung protein."
+        },
+        {
+          "id": "n11-l5-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các vai trò đúng của protein trong cơ thể.",
+          "options": [
+            "Tham gia xây dựng tế bào và mô",
+            "Là thành phần của nhiều enzim, hoocmon",
+            "Có thể cung cấp năng lượng khi cần",
+            "Là thành phần chính của nhựa PE"
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Protein tham gia cấu tạo tế bào và mô. B2. Nhiều enzim, hoocmon có bản chất là protein. B3. Khi cần, protein vẫn có thể cung cấp năng lượng. B4. PE là polymer tổng hợp, không phải protein."
+        },
+        {
+          "id": "n11-l5-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Chất X chứa C, H, O, N; bị đông tụ khi đun nóng và thuỷ phân cho amino acid. X là",
+          "options": ["Protein", "Tinh bột", "Polyethylene", "Saccharose"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Dấu hiệu chứa N, bị đông tụ bởi nhiệt và thuỷ phân cho amino acid là đặc trưng của protein. B2. Vì vậy X là protein."
+        },
+        {
+          "id": "n11-l5-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Trong phản ứng màu biure thường nhắc ở mức giới thiệu, protein cho màu ___.",
+          "answer": "tím",
+          "acceptedAnswers": ["màu tím", "tim"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập màu sắc",
+          "explanation": "B1. Phản ứng màu biure là phản ứng nhận biết protein ở mức giới thiệu. B2. Dấu hiệu thường nhắc đến là xuất hiện màu tím."
+        },
+        {
+          "id": "n11-l5-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Chọn các phát biểu đúng về protein.",
+          "options": [
+            "Mọi protein đều chứa nguyên tố nitơ.",
+            "Protein luôn bị phân huỷ hoàn toàn thành CO2 và H2O ngay ở điều kiện thường.",
+            "Nhiệt, acid và cồn đều có thể làm protein biến tính hoặc đông tụ.",
+            "Tơ tằm là một dạng protein thiên nhiên."
+          ],
+          "answers": [0, 2, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Nitơ là nguyên tố luôn có mặt trong protein. B2. Ở điều kiện thường protein không tự phân huỷ hoàn toàn thành CO2 và H2O. B3. Nhiệt, acid và cồn đều có thể làm protein biến tính hoặc đông tụ. B4. Tơ tằm có bản chất là protein thiên nhiên nên mệnh đề 4 đúng."
+        }
+      ]
+    },
+    {
+      "id": "n11-l6",
+      "title": "Polymer; chất dẻo – tơ – cao su",
+      "order": 6,
+      "summary": "Khái niệm polymer, monome, mắt xích và các vật liệu polymer quen thuộc: chất dẻo, tơ, cao su.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l6-c1",
+          "heading": "Khái niệm polymer",
+          "body": "Polymer là những phân tử khổng lồ do nhiều mắt xích nhỏ liên kết lặp đi lặp lại tạo nên.\nCó polymer thiên nhiên như tinh bột, cellulose, protein, cao su thiên nhiên và polymer tổng hợp như PE, PVC, nilon.\nNâng cao: Có hai kiểu phản ứng chính tạo ra polymer. Trùng hợp là quá trình nhiều phân tử monome có liên kết đôi (như etilen, vinyl chloride) mở liên kết đôi rồi nối liên tiếp với nhau thành mạch dài, không tách ra phân tử nhỏ nào. Trùng ngưng là quá trình các monome có nhiều nhóm chức (ví dụ -NH2, -COOH) phản ứng liên tiếp với nhau, mỗi lần tạo liên kết mới thường tách ra một phân tử nhỏ (thường là nước); ví dụ tơ nilon-6,6 được tạo thành từ phản ứng trùng ngưng giữa hexametylenđiamin H2N-(CH2)6-NH2 và acid ađipic HOOC-(CH2)4-COOH. Số mắt xích monome có trong một phân tử polymer gọi là hệ số trùng hợp (kí hiệu n); nếu biết phân tử khối trung bình của polymer (M) và phân tử khối của một mắt xích (M0) thì n = M : M0. Chẳng hạn một mẫu PE có phân tử khối trung bình khoảng 420000, mắt xích -CH2-CH2- có phân tử khối 28, vậy hệ số trùng hợp n = 420000 : 28 = 15000."
+        },
+        {
+          "id": "n11-l6-c2",
+          "heading": "Chất dẻo thông dụng",
+          "body": "PE được điều chế từ etilen bằng phản ứng trùng hợp và dùng làm túi, chai lọ, màng bọc.\nPVC được điều chế từ vinyl chloride CH2=CHCl, dùng làm ống dẫn, vỏ bọc dây điện và nhiều đồ gia dụng.\nNâng cao: Theo khả năng chịu nhiệt khi gia công, chất dẻo được chia thành hai loại. Chất dẻo nhiệt dẻo (như PE, PVC) khi đun nóng sẽ hoá mềm, nóng chảy và có thể tạo hình lại nhiều lần. Chất dẻo nhiệt rắn (ví dụ nhựa bakelit — nhựa phenol-fomanđehit, dùng làm vỏ ổ cắm điện, tay cầm nồi) sau khi đã định hình lần đầu thì rắn chắc vĩnh viễn, đun nóng quá mức chỉ bị cháy hoặc phân huỷ chứ không chảy mềm trở lại. Có thể phân biệt nhanh PE và PVC bằng cách đốt: PE cháy được, chảy thành giọt như nến, sản phẩm cháy không có mùi xốc đặc biệt; còn PVC khi đốt sinh ra khí hiđro clorua (HCl) có mùi xốc, làm giấy quỳ tím ẩm chuyển sang màu đỏ do PVC có chứa nguyên tố clo trong mắt xích."
+        },
+        {
+          "id": "n11-l6-c3",
+          "heading": "Tơ và cao su",
+          "body": "Tơ tằm là tơ thiên nhiên, còn nilon là tơ tổng hợp thường được điều chế từ caprolactam.\nCao su thiên nhiên liên quan đến monome isopren C5H8. Khi lưu hoá, cao su trở nên bền, đàn hồi và chịu mài mòn tốt hơn.\nNâng cao: Xét theo nguồn gốc, tơ được chia thành ba nhóm: tơ thiên nhiên có sẵn trong tự nhiên (tơ tằm, bông, len); tơ nhân tạo (tơ bán tổng hợp) được chế biến bằng phương pháp hoá học từ polymer thiên nhiên, ví dụ tơ visco, tơ axetat chế từ cellulose; và tơ tổng hợp được tổng hợp hoàn toàn từ các chất hoá học, ví dụ nilon. Về cơ chế lưu hoá: cao su thiên nhiên gồm các mạch mắt xích isopren riêng lẻ, dễ trượt lên nhau nên độ bền và độ đàn hồi còn hạn chế; khi đun nóng cao su với một lượng nhỏ lưu huỳnh, các nguyên tử S tạo thành những cầu nối -S-S- giữa các mạch cao su ở gần nhau, hình thành mạng lưới không gian giữ cho các mạch khó trượt tự do lên nhau. Nhờ vậy cao su lưu hoá bền hơn, đàn hồi tốt hơn, chịu nhiệt và chịu mài mòn tốt hơn cao su sống (cao su chưa lưu hoá)."
+        },
+        {
+          "id": "n11-l6-c4",
+          "heading": "Nâng cao: Cao su tổng hợp (cao su buna)",
+          "body": "Ngoài cao su thiên nhiên, con người còn tổng hợp được cao su nhân tạo, phổ biến nhất là cao su buna. Monome dùng để trùng hợp cao su buna là buta-1,3-đien, công thức CH2=CH-CH=CH2 (thường gọi tắt là butađien), được điều chế từ các nguồn hiđrocacbon trong công nghiệp dầu khí.\nKhi đồng trùng hợp buta-1,3-đien với stiren (C6H5-CH=CH2) thu được cao su buna-S có độ bền cơ học cao hơn, thường dùng làm lốp xe; khi đồng trùng hợp với acrilonitrin (CH2=CH-CN) thu được cao su buna-N có khả năng chịu dầu mỡ tốt, dùng làm các chi tiết cao su tiếp xúc với xăng dầu. Cao su buna và các loại cao su tổng hợp khác cũng có thể được lưu hoá bằng lưu huỳnh giống như cao su thiên nhiên để tăng độ bền."
+        },
+        {
+          "id": "n11-l6-c5",
+          "heading": "Nâng cao: Ô nhiễm trắng và vi nhựa",
+          "body": "Ưu điểm bền, nhẹ, khó bị ăn mòn của chất dẻo cũng chính là nguyên nhân gây ra vấn đề môi trường nghiêm trọng. Đa số chất dẻo tổng hợp như PE, PVC rất khó bị vi sinh vật phân huỷ trong tự nhiên, có thể tồn tại hàng trăm năm ngoài môi trường; rác thải nhựa chất đống ở bãi rác, sông, biển gây ra hiện tượng thường được gọi là \"ô nhiễm trắng\".\nDưới tác động của ánh sáng, nhiệt độ và va đập cơ học, rác thải nhựa dần vỡ vụn thành những mảnh rất nhỏ (thường có kích thước dưới 5 mm) gọi là vi nhựa (microplastic). Vi nhựa có thể phát tán vào đất, nguồn nước, thậm chí đi vào chuỗi thức ăn của sinh vật. Một số biện pháp giảm thiểu thường được nhắc tới là phân loại và tái chế rác thải nhựa, hạn chế dùng đồ nhựa dùng một lần, ưu tiên vật liệu dễ phân huỷ sinh học."
+        },
+        {
+          "id": "n11-l6-c6",
+          "heading": "Nâng cao: Vật liệu compozit",
+          "body": "Nhiều vật liệu polymer hiện đại thực chất là compozit: gồm một polymer đóng vai trò chất nền (matrix) kết hợp với một hoặc nhiều loại chất độn (sợi thuỷ tinh, sợi cacbon, bột đá...) để tăng cường tính chất cơ học. Ví dụ quen thuộc là nhựa composite (sợi thuỷ tinh + nhựa polieste) dùng làm vỏ ca nô, thùng chứa hoá chất, mũ bảo hiểm — nhẹ hơn kim loại nhưng vẫn đảm bảo độ cứng và độ bền cần thiết.\nSo với polymer nguyên chất, vật liệu compozit thường có độ bền cơ học, khả năng chịu lực và chịu va đập cao hơn hẳn, trong khi vẫn giữ được đặc tính nhẹ và khó bị ăn mòn hoá học của polymer nền."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l6-q1",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Polymer là phân tử khổng lồ gồm nhiều ___ lặp đi lặp lại.",
+          "answer": "mắt xích",
+          "acceptedAnswers": ["mat xich"],
+          "placeholder": "Nhập cụm từ thích hợp",
+          "explanation": "B1. Cấu tạo cơ bản của polymer là nhiều đơn vị lặp lại. B2. Các đơn vị đó được gọi là mắt xích."
+        },
+        {
+          "id": "n11-l6-q2",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Polyethylene (PE) được điều chế từ monome nào?",
+          "options": ["Metan", "Etilen", "Axetilen", "Benzen"],
+          "answer": 1,
+          "explanation": "B1. PE được tạo thành do trùng hợp etilen. B2. Vì vậy monome của PE là etilen."
+        },
+        {
+          "id": "n11-l6-q3",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Monome dùng để điều chế PVC là",
+          "options": ["CH2=CH2", "CH2=CHCl", "C6H6", "C2H5OH"],
+          "answer": 1,
+          "explanation": "B1. PVC là polivinyl chloride. B2. Monome tạo PVC là vinyl chloride có công thức CH2=CHCl."
+        },
+        {
+          "id": "n11-l6-q4",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các nhận xét đúng.",
+          "options": [
+            "Tơ tằm là tơ thiên nhiên.",
+            "Nilon là tơ tổng hợp.",
+            "PE là một chất dẻo.",
+            "Cao su lưu hoá kém bền hơn cao su thiên nhiên."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Tơ tằm là tơ thiên nhiên. B2. Nilon là tơ tổng hợp. B3. PE là chất dẻo rất thông dụng. B4. Cao su lưu hoá bền hơn cao su thiên nhiên nên mệnh đề cuối sai."
+        },
+        {
+          "id": "n11-l6-q5",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Monome của cao su thiên nhiên thường được nhắc đến là ___.",
+          "answer": "isopren",
+          "acceptedAnswers": ["c5h8", "isoprn"],
+          "placeholder": "Nhập tên hoặc công thức",
+          "explanation": "B1. Cao su thiên nhiên liên quan đến monome isopren. B2. Công thức phân tử của isopren là C5H8."
+        },
+        {
+          "id": "n11-l6-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Vật liệu nào sau đây thường được làm từ PE?",
+          "options": ["Túi đựng hàng mỏng", "Gạch xây", "Thạch cao", "Muối ăn"],
+          "answer": 0,
+          "explanation": "B1. PE là chất dẻo dùng rộng rãi để làm túi, màng bọc, chai lọ. B2. Vì vậy túi đựng hàng mỏng thường làm từ PE."
+        },
+        {
+          "id": "n11-l6-q7",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các phát biểu đúng về vật liệu polymer.",
+          "options": [
+            "PVC được dùng làm ống dẫn và vỏ bọc dây điện.",
+            "Cao su lưu hoá bền hơn cao su thiên nhiên.",
+            "Nilon trong phạm vi bài học được xem là tơ tổng hợp từ caprolactam.",
+            "Mọi polymer đều tan tốt trong nước."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. PVC là chất dẻo thông dụng trong ống dẫn và vỏ bọc điện. B2. Quá trình lưu hoá giúp cao su bền và đàn hồi hơn. B3. Nilon là tơ tổng hợp, trong bài học gắn với nguyên liệu caprolactam. B4. Không phải mọi polymer đều tan tốt trong nước."
+        },
+        {
+          "id": "n11-l6-q8",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Loại tơ thiên nhiên quen thuộc lấy từ kén tằm là ___.",
+          "answer": "tơ tằm",
+          "acceptedAnswers": ["to tam"],
+          "placeholder": "Nhập tên tơ",
+          "explanation": "B1. Tơ tằm là loại tơ thiên nhiên quen thuộc nhất trong chương trình THCS. B2. Nó được lấy từ kén tằm."
+        },
+        {
+          "id": "n11-l6-q9",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Cặp vật liệu nào gồm một tơ thiên nhiên và một tơ tổng hợp?",
+          "options": [
+            "Tơ tằm và nilon",
+            "PE và PVC",
+            "Cao su thiên nhiên và cao su lưu hoá",
+            "Tinh bột và cellulose"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tơ tằm là tơ thiên nhiên. B2. Nilon là tơ tổng hợp. B3. Vì vậy đây là cặp gồm một tơ thiên nhiên và một tơ tổng hợp."
+        },
+        {
+          "id": "n11-l6-q10",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Chọn các chất thuộc loại polymer.",
+          "options": ["PE", "PVC", "Tinh bột", "NaCl"],
+          "answers": [0, 1, 2],
+          "explanation": "B1. PE và PVC là polymer tổng hợp. B2. Tinh bột là polymer thiên nhiên. B3. NaCl là muối vô cơ, không phải polymer."
+        },
+        {
+          "id": "n11-l6-q11",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Vật liệu thích hợp hơn để làm lốp xe nhờ độ bền và đàn hồi tốt là",
+          "options": ["Cao su lưu hoá", "Đường mía", "Tơ tằm", "Tinh bột"],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Quá trình lưu hoá làm cao su bền hơn, chịu mài mòn và đàn hồi tốt hơn. B2. Vì vậy cao su lưu hoá thích hợp hơn để làm lốp xe."
+        },
+        {
+          "id": "n11-l6-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Loại tơ tổng hợp thường gắn với caprolactam trong chương trình THCS là ___.",
+          "answer": "nilon",
+          "acceptedAnswers": ["nilon-6", "nylon"],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập tên tơ",
+          "explanation": "B1. Trong phạm vi bài học, nilon là tơ tổng hợp được nêu gắn với nguyên liệu caprolactam. B2. Vì vậy đáp án là nilon."
+        },
+        {
+          "id": "n11-l6-q13",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Chọn các kết luận đúng về polymer, chất dẻo, tơ và cao su.",
+          "options": [
+            "PE được điều chế từ etilen bằng phản ứng trùng hợp.",
+            "PVC có mắt xích chứa nguyên tố clo.",
+            "Tơ tằm và nilon đều là tơ tổng hợp.",
+            "Cao su thiên nhiên liên quan đến monome isopren C5H8."
+          ],
+          "answers": [0, 1, 3],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. PE là sản phẩm trùng hợp etilen. B2. PVC được tạo từ vinyl chloride nên mắt xích có chứa clo. B3. Tơ tằm là tơ thiên nhiên, chỉ nilon là tơ tổng hợp. B4. Cao su thiên nhiên liên quan đến monome isopren C5H8."
+        }
+      ]
+    },
+    {
+      "id": "n11-l7",
+      "title": "Nâng cao: chuỗi chuyển hoá – nhận biết hữu cơ; bài toán lên men, ester hoá",
+      "order": 7,
+      "summary": "Chuỗi chuyển hoá hữu cơ quen thuộc, chọn thuốc thử nhận biết và giải các bài toán hiệu suất lên men, ester hóa nhiều giai đoạn.",
+      "status": "available",
+      "cards": [
+        {
+          "id": "n11-l7-c1",
+          "heading": "Chuỗi CH4 đến este ethyl acetate",
+          "body": "Một chuỗi rất quen thuộc là CH4 -> C2H2 -> C2H4 -> C2H5OH -> CH3COOH -> CH3COOC2H5, nối từ hydrocarbon đến ethylic alcohol, acetic acid và ester.\nÝ nghĩa của chuỗi là nối liền hiđrocacbon, rượu, acid và este trong một mạch kiến thức.\nKhi làm bài cần viết đúng chất trung gian và đúng hướng chuyển hoá từng bước.\nNâng cao: chất đầu chuỗi C2H2 không nhất thiết phải đi từ CH4, trong công nghiệp nó thường được điều chế từ đá vôi và than đá qua hai bước: nung đá vôi CaCO3 -> CaO + CO2, sau đó nung CaO với than cốc ở nhiệt độ rất cao tạo canxi cacbua CaO + 3C -> CaC2 + CO; cuối cùng CaC2 tác dụng với nước CaC2 + 2H2O -> C2H2 + Ca(OH)2. Nhớ nguồn gốc này giúp nối phần chuỗi hữu cơ với nguyên liệu vô cơ khi đề yêu cầu viết sơ đồ đầy đủ từ đá vôi, than đá."
+        },
+        {
+          "id": "n11-l7-c2",
+          "heading": "Chuỗi tinh bột đến acetic acid",
+          "body": "Tinh bột thuỷ phân tạo glucose: (C6H10O5)n + nH2O -> nC6H12O6.\nGlucose lên men tạo ethylic alcohol: C6H12O6 -> 2C2H5OH + 2CO2.\nEthylic alcohol tiếp tục bị oxi hoá tạo acetic acid: C2H5OH + O2 -> CH3COOH + H2O.\nNâng cao: trên thực tế mỗi giai đoạn của chuỗi này (thuỷ phân, lên men rượu, oxi hoá thành acid) thường không đạt hiệu suất 100%. Muốn tính khối lượng sản phẩm cuối theo lượng nguyên liệu ban đầu, phải nhân liên tiếp hiệu suất của từng giai đoạn với nhau, không được cộng hiệu suất hay chỉ dùng hiệu suất của riêng một giai đoạn."
+        },
+        {
+          "id": "n11-l7-c3",
+          "heading": "Nhận biết bằng thuốc thử",
+          "body": "Dung dịch brom nhận ra C2H4 và C2H2 vì bị mất màu do phản ứng cộng.\nDung dịch AgNO3/NH3 nhận ra C2H2 bằng kết tủa bạc axetylua, còn glucose cho phản ứng tráng gương khi đun nóng.\nDung dịch iot nhận ra tinh bột nhờ màu xanh tím; quỳ tím nhận ra CH3COOH do làm đỏ quỳ.\nNâng cao: khi đề chỉ cho phép dùng ít thuốc thử để phân biệt nhiều chất cùng lúc, nên chọn thứ tự từ tổng quát đến riêng biệt — dùng quỳ tím trước để tách nhóm có tính acid, dùng dung dịch brom để tách tiếp nhóm không no, rồi mới dùng AgNO3/NH3 hoặc dung dịch iot để phân biệt các chất còn lại trong từng nhóm nhỏ hơn."
+        },
+        {
+          "id": "n11-l7-c4",
+          "heading": "Nâng cao: Thuỷ phân ngược este trong hai môi trường",
+          "body": "Phản ứng este hoá CH3COOH + C2H5OH -> CH3COOC2H5 + H2O là phản ứng thuận nghịch, có thể xảy ra theo chiều ngược lại khi có acid làm xúc tác: CH3COOC2H5 + H2O -> CH3COOH + C2H5OH (thuỷ phân trong môi trường acid).\nNếu thuỷ phân este bằng cách đun với dung dịch NaOH thì phản ứng chỉ xảy ra theo một chiều, không thuận nghịch: CH3COOC2H5 + NaOH -> CH3COONa + C2H5OH.\nPhân biệt hai kiểu thuỷ phân này giúp viết đúng chuỗi khi đề yêu cầu tái tạo lại nguyên liệu ban đầu từ este, tránh nhầm sản phẩm là CH3COOH khi thực chất phản ứng dùng NaOH."
+        },
+        {
+          "id": "n11-l7-c5",
+          "heading": "Nâng cao: Từ C2H2 tới polymer PE và PVC",
+          "body": "Axetilen là điểm khởi đầu của một chuỗi phân nhánh quan trọng. Một nhánh: C2H2 cộng H2 (xúc tác thích hợp) tạo C2H4, rồi C2H4 trùng hợp ở nhiệt độ, áp suất và xúc tác thích hợp tạo polyethylene (-CH2-CH2-)n, viết tắt PE, dùng làm màng mỏng, túi nhựa.\nNhánh khác: C2H2 cộng HCl (xúc tác HgCl2, đun nóng) tạo vinyl chloride CH2=CHCl, sau đó vinyl chloride trùng hợp tạo poly(vinyl chloride) (-CH2-CHCl-)n, viết tắt PVC, dùng làm ống nhựa, vỏ dây điện.\nKhi gặp sơ đồ có mũi tên tới PE hoặc PVC, cần nhận ra hai bước bắt buộc là phản ứng cộng để tạo monome rồi phản ứng trùng hợp để tạo polymer, không được viết gộp thành một bước duy nhất."
+        },
+        {
+          "id": "n11-l7-c6",
+          "heading": "Nâng cao: Xà phòng hoá chất béo",
+          "body": "Chất béo có công thức chung dạng (RCOO)3C3H5, trong đó R là gốc hiđrocacbon của acid béo. Khi đun chất béo với dung dịch NaOH, xảy ra phản ứng xà phòng hoá: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3.\nSản phẩm RCOONa là thành phần chính của xà phòng, còn C3H5(OH)3 là glycerol, một rượu đa chức.\nPhản ứng này nối chất béo với nhóm muối của acid hữu cơ và với rượu trong cùng một sơ đồ chuyển hoá, thường gặp ở dạng câu hỏi ghép chuỗi giữa chất béo, acid béo và glycerol."
+        },
+        {
+          "id": "n11-l7-c7",
+          "heading": "Nâng cao: Kỹ thuật biện luận chất ẩn trong sơ đồ",
+          "body": "Nhiều đề HSG không cho tên chất mà chỉ mô tả bằng kí hiệu (A, B, C...) kèm một vài tính chất đặc trưng, yêu cầu suy ra công thức đúng.\nCách làm hiệu quả là gạch chân các dấu hiệu đặc trưng trong đề, ví dụ: chất khí làm mất màu dung dịch brom gợi ý là hiđrocacbon không no; chất tạo kết tủa với AgNO3/NH3 gợi ý có liên kết ba đầu mạch như C2H2; dung dịch làm quỳ tím hoá đỏ gợi ý là acid hữu cơ như CH3COOH; dung dịch cho phản ứng tráng gương khi đun nóng gợi ý là glucose.\nSau khi nhận diện được chất dễ nhận biết nhất, ráp các chất còn lại vào đúng vị trí mũi tên theo chiều phản ứng mà đề mô tả, suy xuôi hoặc suy ngược tuỳ dữ kiện đã có."
+        },
+        {
+          "id": "n11-l7-c8",
+          "heading": "Hiệu suất phản ứng este hoá",
+          "body": "Phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.\nKhối lượng este thực tế được tính theo công thức meste thuc = meste li thuyet x h / 100.\nKhi tính, cần tìm số mol chất giới hạn trước rồi mới suy ra khối lượng lí thuyết của este."
+        },
+        {
+          "id": "n11-l7-c9",
+          "heading": "Hiệu suất lên men và bài toán nhiều giai đoạn",
+          "body": "Lên men glucose: C6H12O6 -> 2C2H5OH + 2CO2, trong đó M(C6H12O6) = 180 và M(C2H5OH) = 46.\nNếu hiệu suất lên men là h%, lượng rượu thực tế bằng lượng lí thuyết nhân h/100.\nỞ bài toán nhiều giai đoạn như lên men rồi este hoá, cần tính lần lượt từng bước và có thể gộp thành hiệu suất chung bằng tích các hiệu suất thành phần."
+        },
+        {
+          "id": "n11-l7-c10",
+          "heading": "Nâng cao: Xác định hiệu suất lên men qua khí CO2 hấp thụ vào dung dịch kiềm",
+          "body": "Phản ứng lên men rượu C6H12O6 -> 2C2H5OH + 2CO2 sinh ra CO2 với số mol đúng bằng số mol ethylic alcohol tạo thành; đây là điểm mấu chốt để xác định hiệu suất khi đề bài không cho trực tiếp khối lượng rượu mà cho dữ kiện về khí CO2.\nNếu dẫn toàn bộ khí CO2 sinh ra vào dung dịch nước vôi trong hoặc dung dịch kiềm dư, số mol CO2 thực tế được suy ra từ số mol kết tủa CaCO3 hoặc từ khối lượng muối cacbonat thu được, theo bảo toàn nguyên tố cacbon.\nTừ n(CO2 thực tế) suy ra n(C2H5OH thực tế) bằng đúng số mol đó, rồi so với n(C2H5OH lí thuyết) tính theo n(glucose) ban đầu để có hiệu suất lên men - cách làm này tránh phải cân đo trực tiếp lượng rượu, phù hợp với các đề kết hợp kiến thức vô cơ đã học."
+        },
+        {
+          "id": "n11-l7-c11",
+          "heading": "Nâng cao: Lượng chất dư sau phản ứng este hoá khi hiệu suất nhỏ hơn 100%",
+          "body": "Khi hiệu suất phản ứng nhỏ hơn 100%, số mol chất đã thực sự phản ứng chỉ bằng H/100 lần số mol chất giới hạn, không phải toàn bộ số mol chất giới hạn ban đầu.\nCụ thể, với phản ứng tỉ lệ mol 1:1 giữa acid và rượu: nếu chất giới hạn (số mol nhỏ hơn) là n(gh), thì số mol đã phản ứng là n(gh) x H/100; chất giới hạn còn dư lại n(gh) x (1 - H/100) mol, còn chất lấy dư ban đầu (số mol n(dư)) chỉ mất đi đúng n(gh) x H/100 mol nên còn lại n(dư) - n(gh) x H/100 mol.\nĐây là điểm học sinh dễ nhầm nhất: không được lấy số mol chất giới hạn trừ thẳng cho số mol sản phẩm để suy ra chất dư, mà phải nhân thêm hệ số H/100 vào lượng đã phản ứng trước khi trừ."
+        },
+        {
+          "id": "n11-l7-c12",
+          "heading": "Cách tính hiệu suất nhiều giai đoạn",
+          "body": "Nếu quá trình có nhiều bước liên tiếp thì phải nhân lần lượt từng hiệu suất, không được cộng hiệu suất.\nVí dụ khối lượng ethylic alcohol thực tế = khối lượng ethylic alcohol lí thuyết x h1 x h2 khi gồm hai bước thuỷ phân và lên men.\nNgược lại, nếu đề đã cho hiệu suất chung của toàn bộ quá trình và hiệu suất của một số giai đoạn, có thể tìm hiệu suất giai đoạn còn lại bằng phép chia: hiệu suất còn thiếu = hiệu suất chung : (tích các hiệu suất đã biết). Ví dụ hiệu suất chung của hai giai đoạn thuỷ phân và lên men là 60%, biết hiệu suất thuỷ phân là 75% thì hiệu suất lên men là 60% : 75% = 80%."
+        },
+        {
+          "id": "n11-l7-c13",
+          "heading": "Nâng cao: Bảo toàn nguyên tố cacbon trong chuỗi chuyển hoá nhiều giai đoạn",
+          "body": "Các phản ứng thuỷ phân, lên men và oxi hoá ethylic alcohol trong chuỗi này không làm mất nguyên tử cacbon ra ngoài chuỗi (kể cả khí CO2 sinh ra vẫn được tính), nên có thể dùng bảo toàn nguyên tố C để kiểm tra nhanh kết quả thay vì tính riêng từng chất qua từng phương trình. Mỗi mắt xích C6H10O5 mang 6 nguyên tử C; khi 1 mol mắt xích phản ứng hết theo chuỗi tinh bột -> glucose -> ethylic alcohol sẽ cho 2 mol C2H5OH (4 nguyên tử C) cùng 2 mol CO2 (2 nguyên tử C) thoát ra lúc lên men, tổng đúng bằng 4 + 2 = 6 nguyên tử C.\nKhi bài toán có hiệu suất, chỉ phần mắt xích đã thực sự phản ứng hết chuỗi mới tuân theo bảo toàn C này; phần nguyên liệu chưa phản ứng do hao hụt hiệu suất không được tính vào. Đối chiếu tổng mol C trong ethylic alcohol và CO2 thu được với 6 lần số mol mắt xích đã phản ứng là một cách kiểm tra chéo hữu ích trước khi kết luận đáp số."
+        },
+        {
+          "id": "n11-l7-c14",
+          "heading": "Nâng cao: Lên men giấm không hoàn toàn — hỗn hợp sau phản ứng còn ethylic alcohol dư",
+          "body": "Phản ứng oxi hoá ethylic alcohol thành acetic acid (lên men giấm) trong thực tế thường không xảy ra hoàn toàn: chỉ một phần ethylic alcohol chuyển hoá thành acetic acid, phần còn lại vẫn còn nguyên trong hỗn hợp sau phản ứng. Khi tính bài toán loại này, cần cộng cả khối lượng acetic acid sinh ra lẫn khối lượng ethylic alcohol dư chưa phản ứng, không được coi toàn bộ ethylic alcohol ban đầu đã biến thành acid.\nVí dụ: có 46 g ethylic alcohol (1 mol), chỉ 60% lượng ethylic alcohol phản ứng oxi hoá thành acetic acid. Số mol ethylic alcohol phản ứng là 1 x 0,6 = 0,6 mol, tạo ra 0,6 mol acetic acid tương ứng 0,6 x 60 = 36 g; số mol ethylic alcohol còn dư là 1 - 0,6 = 0,4 mol, tương ứng 0,4 x 46 = 18,4 g. Hỗn hợp lỏng sau phản ứng gồm cả acetic acid lẫn ethylic alcohol dư (chưa kể nước)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "n11-l7-q1",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Thuốc thử thường dùng để nhận biết tinh bột là",
+          "options": [
+            "Dung dịch iot",
+            "Dung dịch brom",
+            "Quỳ tím",
+            "Dung dịch NaCl"
+          ],
+          "answer": 0,
+          "explanation": "B1. Tinh bột tạo màu xanh tím đặc trưng với dung dịch iot. B2. Vì vậy dùng dung dịch iot để nhận biết tinh bột."
+        },
+        {
+          "id": "n11-l7-q2",
+          "type": "fill-blank",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Trong chuỗi CH4 -> C2H2 -> C2H4, chất trung gian nằm giữa CH4 và C2H4 là ___.",
+          "answer": "C2H2",
+          "acceptedAnswers": ["c2h2"],
+          "placeholder": "Nhập công thức chất",
+          "explanation": "B1. Theo chuỗi chuyển hoá đã học, metan được chuyển thành axetilen trước. B2. Từ axetilen mới cộng hiđro để tạo etilen. B3. Vì vậy chất trung gian là C2H2."
+        },
+        {
+          "id": "n11-l7-q3",
+          "type": "multi-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chọn các chất làm mất màu dung dịch brom ở điều kiện thường.",
+          "options": ["C2H4", "C2H2", "C2H5OH", "CH3COOH"],
+          "answers": [0, 1],
+          "explanation": "B1. C2H4 và C2H2 đều là hiđrocacbon không no nên tham gia phản ứng cộng với brom và làm mất màu dung dịch brom. B2. C2H5OH và CH3COOH không có tính chất này trong chương trình THCS."
+        },
+        {
+          "id": "n11-l7-q4",
+          "type": "balance",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng hiđrat hoá etilen: C2H4 + H2O -> C2H6O.",
+          "left": ["C2H4", "H2O"],
+          "right": ["C2H6O"],
+          "answer": [1, 1, 1],
+          "explanation": "B1. Vế phải có 2C, 6H và 1O. B2. Dùng 1C2H4 và 1H2O ở vế trái cung cấp đúng số nguyên tử đó. B3. Phương trình cân bằng theo tỉ lệ 1 : 1 : 1."
+        },
+        {
+          "id": "n11-l7-q5",
+          "type": "single-choice",
+          "level": "basic",
+          "category": "theory",
+          "prompt": "Chất nào sau đây làm quỳ tím hoá đỏ?",
+          "options": ["C2H5OH", "CH3COOH", "C6H12O6", "C2H4"],
+          "answer": 1,
+          "explanation": "B1. CH3COOH là acetic acid nên có tính acid. B2. Dung dịch acid làm quỳ tím chuyển sang màu đỏ."
+        },
+        {
+          "id": "n11-l7-q6",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Trong chuỗi CH4 -> C2H2 -> C2H4 -> C2H5OH -> CH3COOH -> CH3COOC2H5, chất tạo thành khi CH3COOH tác dụng với C2H5OH là",
+          "options": ["C2H4", "C2H2", "CH3COOC2H5", "C6H12O6"],
+          "answer": 2,
+          "explanation": "B1. Acetic acid tác dụng với ethylic alcohol tạo este ethyl acetate và nước. B2. Sản phẩm hữu cơ của bước này là CH3COOC2H5."
+        },
+        {
+          "id": "n11-l7-q7",
+          "type": "fill-blank",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Lên men hoàn toàn 180 g glucose rồi oxi hoá hoàn toàn lượng ethylic alcohol thu được thành acetic acid. Khối lượng CH3COOH thu được là ___ g.",
+          "answer": "120",
+          "placeholder": "Nhập khối lượng acid",
+          "explanation": "B1. n glucose = 180/180 = 1 mol. B2. Theo phản ứng lên men, 1 mol glucose tạo 2 mol C2H5OH. B3. Theo phản ứng oxi hoá, 1 mol C2H5OH tạo 1 mol CH3COOH nên thu được 2 mol CH3COOH. B4. mCH3COOH = 2 x 60 = 120 g."
+        },
+        {
+          "id": "n11-l7-q8",
+          "type": "multi-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Có bốn mẫu riêng biệt: glucose, tinh bột, acetic acid và ethylic alcohol. Chọn các nhận xét đúng về cách nhận biết chúng.",
+          "options": [
+            "Dùng quỳ tím có thể nhận ra ngay acetic acid.",
+            "Dùng dung dịch iot có thể nhận ra tinh bột.",
+            "Dùng AgNO3/NH3 và đun nóng có thể nhận ra glucose.",
+            "Ethylic alcohol làm quỳ tím hoá đỏ nên nhận ra bằng quỳ tím."
+          ],
+          "answers": [0, 1, 2],
+          "explanation": "B1. Acetic acid làm quỳ tím hoá đỏ nên nhận ra bằng quỳ tím. B2. Tinh bột cho màu xanh tím với dung dịch iot. B3. Glucose tham gia phản ứng tráng gương với AgNO3/NH3 khi đun nóng. B4. Ethylic alcohol không làm đổi màu quỳ tím nên mệnh đề cuối sai."
+        },
+        {
+          "id": "n11-l7-q9",
+          "type": "balance",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Điền hệ số tối giản cho phản ứng este hoá: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.",
+          "left": ["CH3COOH", "C2H5OH"],
+          "right": ["CH3COOC2H5", "H2O"],
+          "answer": [1, 1, 1, 1],
+          "explanation": "B1. Đếm nguyên tử ở hai vế đều có 4C, 10H và 3O khi đặt hệ số 1 cho mỗi chất. B2. Vì vậy phương trình este hoá này đã cân bằng với hệ số 1 : 1 : 1 : 1."
+        },
+        {
+          "id": "n11-l7-q10",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "theory",
+          "prompt": "Có bốn chất lỏng mất nhãn: CH3COOH, C2H5OH, dung dịch glucose và hồ tinh bột. Cách làm nào sau đây giúp nhận biết đúng cả bốn chất?",
+          "options": [
+            "Dùng quỳ tím để tìm CH3COOH, dùng iot để tìm hồ tinh bột, dùng AgNO3/NH3 đun nóng để tìm glucose, chất còn lại là C2H5OH.",
+            "Chỉ dùng dung dịch brom là đủ để phân biệt cả bốn chất.",
+            "Chỉ dùng quỳ tím là đủ để phân biệt cả bốn chất.",
+            "Dùng AgNO3/NH3 để nhận ra ngay cả bốn chất."
+          ],
+          "answer": 0,
+          "explanation": "B1. Quỳ tím giúp tách ra CH3COOH vì chỉ mẫu này làm đỏ quỳ. B2. Dung dịch iot nhận ra hồ tinh bột nhờ màu xanh tím. B3. Dùng AgNO3/NH3 và đun nóng nhận ra glucose bằng phản ứng tráng gương. B4. Mẫu còn lại không phản ứng trong các phép thử trên là C2H5OH."
+        },
+        {
+          "id": "n11-l7-q11",
+          "type": "single-choice",
+          "level": "applied",
+          "category": "calculation",
+          "prompt": "Cho 12 g CH3COOH phản ứng với lượng dư C2H5OH. Hiệu suất este hoá là 60%. Khối lượng este thu được là",
+          "options": ["8,80 g", "10,56 g", "13,20 g", "17,60 g"],
+          "answer": 1,
+          "explanation": "B1. nCH3COOH = 12 / 60 = 0,2 mol. B2. Theo lí thuyết tạo 0,2 mol este nên meste li thuyet = 0,2 x 88 = 17,6 g. B3. Với hiệu suất 60%, meste thuc = 17,6 x 60 / 100 = 10,56 g."
+        },
+        {
+          "id": "n11-l7-q12",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Từ 324 g tinh bột, nếu thuỷ phân hoàn toàn rồi lên men hoàn toàn thì khối lượng ethylic alcohol thu được là ___ g.",
+          "answer": "184",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng ethylic alcohol",
+          "explanation": "B1. Một mắt xích tinh bột C6H10O5 có khối lượng mol 162 g/mol. B2. n mắt xích tinh bột = 324/162 = 2 mol. B3. Thuỷ phân cho 2 mol glucose, mỗi mol glucose lên men tạo 2 mol ethylic alcohol nên thu được 4 mol ethylic alcohol. B4. mC2H5OH = 4 x 46 = 184 g."
+        },
+        {
+          "id": "n11-l7-q13",
+          "type": "single-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Tập thuốc thử nào dưới đây đủ để phân biệt 5 mẫu riêng biệt: C2H2, C2H4, C2H5OH, CH3COOH, hồ tinh bột?",
+          "options": [
+            "Dung dịch brom, AgNO3/NH3, quỳ tím, dung dịch iot",
+            "Chỉ dung dịch brom và quỳ tím",
+            "Chỉ AgNO3/NH3 và dung dịch iot",
+            "Chỉ dung dịch iot"
+          ],
+          "answer": 0,
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. Quỳ tím nhận ra CH3COOH. B2. Dung dịch iot nhận ra hồ tinh bột. B3. Dung dịch brom tách ra nhóm chất không no gồm C2H2 và C2H4 vì đều làm mất màu brom. B4. Dùng tiếp AgNO3/NH3 sẽ nhận ra C2H2 do tạo kết tủa, mẫu còn lại là C2H4. B5. C2H5OH là mẫu không phản ứng trong các phép thử trên."
+        },
+        {
+          "id": "n11-l7-q14",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "theory",
+          "prompt": "Chọn các nhận xét đúng về nhận biết các chất hữu cơ thường gặp.",
+          "options": [
+            "C2H2 và C2H4 đều làm mất màu dung dịch brom.",
+            "AgNO3/NH3 có thể nhận ra C2H2 nhờ tạo kết tủa bạc axetylua.",
+            "CH3COOH làm quỳ tím hoá đỏ.",
+            "C2H4 cho phản ứng tráng gương với AgNO3/NH3."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. C2H2 và C2H4 đều là chất không no nên làm mất màu dung dịch brom. B2. C2H2 còn phản ứng với AgNO3/NH3 tạo kết tủa bạc axetylua, còn C2H4 thì không. B3. CH3COOH có tính acid nên làm quỳ tím hoá đỏ. B4. Phản ứng tráng gương là tính chất của glucose, không phải của C2H4."
+        },
+        {
+          "id": "n11-l7-q15",
+          "type": "fill-blank",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Muốn điều chế 230 ml rượu 40 độ từ glucose bằng phản ứng lên men có hiệu suất 80%, lấy D(C2H5OH) = 0,8 g/ml. Khối lượng glucose cần dùng là ___ g.",
+          "answer": "180",
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "placeholder": "Nhập khối lượng glucose",
+          "explanation": "B1. Thể tích rượu nguyên chất cần có là 230 x 40 / 100 = 92 ml. B2. Khối lượng rượu thực tế cần thu là 92 x 0,8 = 73,6 g, tương ứng nC2H5OH thuc te = 73,6 / 46 = 1,6 mol. B3. Hiệu suất lên men 80% nên số mol rượu theo lí thuyết phải là 1,6 / 0,8 = 2,0 mol. B4. Theo phương trình, 1 mol glucose tạo 2 mol rượu nên cần 1 mol glucose. B5. mGlucozo = 1 x 180 = 180 g."
+        },
+        {
+          "id": "n11-l7-q16",
+          "type": "multi-choice",
+          "level": "hsg",
+          "category": "calculation",
+          "prompt": "Lên men 180 g glucose tạo rượu với hiệu suất 90%, rồi dùng toàn bộ rượu đó este hoá với lượng dư CH3COOH, hiệu suất este hoá 80%. Chọn các kết luận đúng.",
+          "options": [
+            "Số mol ethylic alcohol thực tế sau giai đoạn lên men là 1,8 mol.",
+            "Khối lượng este thu được cuối cùng là 126,72 g.",
+            "Hiệu suất chung của cả hai giai đoạn là 72%.",
+            "Khối lượng CO2 tạo ra ở giai đoạn lên men là 39,6 g."
+          ],
+          "answers": [0, 1, 2],
+          "source": "Tự biên soạn theo dạng bài quen thuộc trong đề thi HSG Hoá 9 cấp huyện/tỉnh",
+          "explanation": "B1. 180 g glucose ứng với 1 mol. B2. Theo lí thuyết lên men tạo 2 mol rượu; với hiệu suất 90% thì số mol rượu thực tế là 2 x 0,9 = 1,8 mol. B3. Este hoá lượng rượu này với hiệu suất 80% cho số mol este là 1,8 x 0,8 = 1,44 mol, nên m = 1,44 x 88 = 126,72 g. B4. Hiệu suất chung của chuỗi là 90% x 80% = 72%. B5. CO2 ở giai đoạn lên men tạo cùng số mol với rượu, nên nCO2 = 1,8 mol và mCO2 = 1,8 x 44 = 79,2 g; vì vậy mệnh đề 4 sai."
+        }
+      ]
+    }
+  ]
+}

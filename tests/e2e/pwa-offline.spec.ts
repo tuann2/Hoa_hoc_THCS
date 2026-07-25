@@ -118,7 +118,7 @@ test.describe('@pwa', () => {
     const offlineRoutes = [
       { path: '/', heading: /Lộ trình ôn Hoá học/ },
       {
-        path: '/learn/a1-nen-tang-hoa-hoc/a1-l1/theory',
+        path: '/learn/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc/n1-l1/theory',
         heading: /Chất – hỗn hợp/
       },
       { path: '/review', heading: /Ôn lại câu sai|Không có câu nào cần ôn/ },
@@ -155,7 +155,7 @@ test.describe('@pwa', () => {
 
     try {
       await page.goto(
-        `${server.baseUrl}/learn/a1-nen-tang-hoa-hoc/a1-l1/theory`
+        `${server.baseUrl}/learn/n1-nguyen-tu-nguyen-to-cong-thuc-hoa-hoc/n1-l1/theory`
       );
       await expect(
         page.getByRole('heading', { name: /Chất – hỗn hợp/ })

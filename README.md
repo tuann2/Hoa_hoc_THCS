@@ -8,59 +8,16 @@ XP/streak/sao, trang hồ sơ, đăng nhập email + mật khẩu và đồng b�
 (`/review`), và chế độ thi thử có đếm giờ theo phạm vi tự chọn
 (`/exam`).
 
-## AI Tools Used: OpenAI Codex & GPT-5.6
+## Current AI tooling
 
-This project is built end-to-end under a documented, multi-agent AI
-engineering workflow (`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`),
-where **every feature in this codebase was implemented by OpenAI Codex
-running on GPT-5.6**, orchestrated by Claude Code as the planning/review
-layer and independently checked by Gemini for high-risk changes.
+This repository uses a governed, role-based AI workflow. The approved workflow
+architecture, role contracts, context policy, and snapshot-bound handoffs are
+the source of truth; current provider adapters are documented separately in
+[`docs/runbooks/providers/`](docs/runbooks/providers/). Tooling may change
+without changing governance policy.
 
-**Role split:**
-
-| Agent                | Model            | Responsibility                                                                                           |
-| -------------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
-| Claude Code          | Claude Sonnet 5  | Architect — turns requirements into risk-tiered plans, runs release gates, orchestrates the other agents |
-| **OpenAI Codex**     | **GPT-5.6**      | **Engineering engine — writes and validates every line of application code, tests, and CI changes**      |
-| Gemini (Antigravity) | Gemini 3.5 Flash | Independent reviewer — fresh, context-free adversarial review required for high-risk (`CRITICAL`) work   |
-
-**What Codex/GPT-5.6 actually built in this repo**, feature by feature:
-
-- **FEATURE-001** — the entire MVP: unit map, lesson player, the four
-  quiz types (single-choice, multi-choice, fill-in-the-blank, and
-  chemical **equation balancing** with real coefficient grading), the
-  XP/streak/star progression engine, and the profile screen.
-- **FEATURE-002 to FEATURE-005** — authored and schema-validated all 17
-  units / 81 lessons of Vietnamese THCS Chemistry curriculum content
-  (inorganic chapters A1–A12, organic chapters B1–B5).
-- **FEATURE-006** — Supabase email/password authentication and
-  cross-device progress sync (pull/merge/push reconciliation logic).
-- **FEATURE-007** — the "review missed questions" (`/review`) loop.
-- **FEATURE-008** — the timed mock-exam mode (`/exam`) with configurable
-  scope and countdown grading.
-- **FEATURE-009 / FEATURE-011** — reworked the theory/practice split and
-  the `theory` vs. `calculation` question taxonomy across the entire
-  question bank.
-- **FEATURE-012** — deepened advanced-theory content across every
-  lesson.
-- **FEATURE-013** — a full dependency security remediation: patched a
-  critical Vitest advisory, a high-severity React Router XSS advisory,
-  and Vite/PostCSS advisories down to **zero known vulnerabilities**;
-  designed and implemented a from-scratch license-allowlist CI gate
-  (`scripts/check-licenses.ts`) with fail-closed handling for tampered
-  lockfiles; added `npm audit` and `format:check` gates to CI.
-
-Beyond writing the code, **GPT-5.6 was also used as a second, independent
-adversarial reviewer** on the highest-risk changes — a fresh Codex
-session with no memory of the implementation is deliberately re-invoked
-to challenge the diff for security and design flaws before release. On
-FEATURE-013 this caught two real defects in code Codex itself had
-written minutes earlier (a lockfile path-traversal gap and a fail-open
-license check for platform-specific packages), both of which were then
-fixed and re-verified before merge. Every implementation is captured in
-a snapshot-bound handoff document under `docs/handoffs/`, so the exact
-scope, validation evidence, and review findings for each Codex
-contribution are traceable and auditable.
+Historical feature plans and handoffs retain the execution details applicable
+when they were created. They are audit records, not current role assignments.
 
 ## Stack
 
@@ -196,18 +153,9 @@ backup access và telemetry cleanup.
 - Nếu vẫn lặp lại, thử tạo tài khoản test bằng email cá nhân (Gmail cá
   nhân thường không bật link-scanning mạnh như email công ty).
 
-Các lệnh kiểm tra chính:
-
-```bash
-npm run format
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm run check:bundle
-npm run check:licenses
-npm audit --audit-level=moderate
-```
+Danh sách gate, lệnh chính xác và profile chạy nằm duy nhất trong
+`scripts/gates-manifest.ts`; runner và CI dùng cùng nguồn này. `npm run build`
+vẫn là lệnh gộp thuận tiện cho phát triển cục bộ.
 
 ## Cấu trúc quan trọng
 
@@ -229,13 +177,18 @@ src/store/progress.ts         # XP, streak, sao, mở khoá, câu sai (wrongQues
                                # lịch sử thi (examHistory), snapshot sync
 tests/                        # unit test và component test
 tests/e2e/                    # Playwright E2E trên production preview
-.github/workflows/ci.yml      # lint + typecheck + test + build
+scripts/gates-manifest.ts     # nguồn chuẩn gate ID/lệnh/profile (WORKFLOW-004A)
+scripts/gates.ts              # runner chạy gates theo profile hoặc classifier
+scripts/evidence.ts           # sinh evidence gắn snapshot chính xác
+.github/workflows/ci.yml      # web (gates runner) + browser (E2E/PWA) + deploy (chỉ main)
+.github/workflows/deploy.yml  # deploy manual dự phòng, có guard candidate_sha
+docs/runbooks/DEPLOYMENT.md   # quy trình deploy chính / dự phòng / rollback
 ```
 
 ## Quy ước nội dung
 
 - Mỗi unit là một file JSON trong `content/units/`.
-- Lesson `available` phải có tối đa 5 thẻ lý thuyết.
+- Lesson `available` phải có 1–25 thẻ lý thuyết.
 - Mỗi lesson khả dụng phải có đủ 3 mức câu hỏi:
   `basic` 5–8, `applied` 5–8, `hsg` 3–5.
 - 100% câu hỏi phải có `explanation`.
@@ -254,10 +207,15 @@ tests/e2e/                    # Playwright E2E trên production preview
 
 Đọc theo thứ tự:
 
-1. `AI_WORKFLOW.md`
-2. `AGENTS.md`
-3. `docs/plans/<FEATURE-ID>.md`
-4. `docs/handoffs/<FEATURE-ID>-implementation.md`
+1. `AGENTS.md` (shim)
+2. Execution envelope
+3. `docs/roles/<assigned_role>.md`
+4. Approved plan: `docs/plans/<FEATURE-ID>.md` (khi task thuộc một feature
+   có plan; read-only/TRIVIAL không cần plan)
+5. `docs/CONTEXT_RULES.md`
+
+`AI_WORKFLOW.md` là chỉ mục pipeline; sau các bước trên, đọc plan/handoff áp
+dụng cho task khi Context Rules yêu cầu.
 
 ## Quyền riêng tư
 
