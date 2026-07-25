@@ -715,3 +715,20 @@ architecture, this assessment is not final approval — only the human may
 approve release, and production `0002` migration additionally requires the
 human's explicit, separate rollout authorization per plan §6.6, which in
 turn requires open item 2 above to be closed first.
+
+## 16. Committed candidate
+
+- Candidate commit SHA: **`f9e43aafdaf485bb3093eb9fc9cfe0eca134fff9`**
+  (branch `feature/FEATURE-016`), committed by Claude Code with explicit
+  human authorization ("ok tôi chấp nhận commit", 2026-07-25). This is the
+  same content as evidence anchor `43327ac5308784ad13a5f4b6b4037fa9d29696ac`
+  reviewed in §7 round 3 — the commit only adds the already-reviewed files
+  listed in §2/§3, nothing further changed between the last dirty-worktree
+  evidence and this commit.
+- Excluded from this commit (pre-existing, unrelated to FEATURE-016, left
+  as-is in the worktree): `.codex/config.toml`, `docs/plans/_TEMPLATE.md`,
+  `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md`.
+- Not pushed. Push was not authorized in this session; CI has not run yet.
+- This commit SHA is now the evidence anchor going forward per the
+  architecture's Evidence Binding rules ("once a candidate commit exists
+  and the worktree is clean, that commit SHA is the evidence anchor").
