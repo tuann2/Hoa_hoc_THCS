@@ -778,3 +778,84 @@ turn requires open item 2 above to be closed first.
 - This commit SHA is now the evidence anchor going forward per the
   architecture's Evidence Binding rules ("once a candidate commit exists
   and the worktree is clean, that commit SHA is the evidence anchor").
+
+## 17. Merge, production rollout and deploy — CLOSED (2026-07-25)
+
+FEATURE-016 is fully shipped: merged to `main`, database migration `0002`
+applied to production, frontend deployed, and smoke-tested live by the
+Human Project Owner. Sequence, in order:
+
+1. **PR #19** (`feature/FEATURE-016` → `main`, commit `f9e43aa` +
+   handoff-only commits) merged by human ("push và release luôn đi",
+   "Cả áp migration 0002 lên production luôn"). Production `0002` rollout
+   itself was performed manually by the Human Project Owner per
+   `docs/runbooks/FEATURE-016-production-rollout.md` (preflight, recovery
+   point, transactional apply, seed admin) — Claude has no Supabase
+   credentials and did not and cannot perform that step.
+2. Merging PR #19 surfaced that `main`'s CI was not actually green:
+   `tests/lib/admin-reports.test.ts` broke because `PROGRESS_VERSION` had
+   been bumped to 5 by FEATURE-015 (merged earlier, unrelated to
+   FEATURE-016) with an intentional lesson-progress-wipe migration for
+   `version < 5` rows; the test's `version: 4` fixture was stale, not a
+   defect in `adminReports.ts`. Fixed in **PR #20**
+   (`fix/FEATURE-016-progress-version-drift`, commit `d38e3e6`) — updated
+   the fixture to use `PROGRESS_VERSION` and corrected the migration-path
+   assertions to match the real (correct) wipe behavior.
+3. `main`'s `web` CI job was still failing on a pre-existing
+   `npm audit --audit-level=moderate` finding unrelated to either
+   candidate (`brace-expansion` transitive advisory, lockfile unchanged by
+   FEATURE-016). Human directed a real fix rather than accepting
+   indefinitely. **PR #21** (`fix/audit-brace-expansion`, commit
+   `2d7e28d`) fixed `fast-uri` (non-breaking) and `brace-expansion`
+   (upgraded `eslint` 9→10 and related dev tooling; added an `overrides`
+   entry for the `vite-plugin-pwa`→`workbox-build` transitive chain).
+   eslint-plugin-react-hooks v7's new default rules
+   (`set-state-in-effect`, `refs`, `purity`) flagged several already-
+   reviewed, correct patterns (including in `useStudyTimeTracker.ts`,
+   CRITICAL) as errors; human directed disabling those three rules in
+   `eslint.config.js` with an explanatory comment rather than
+   restructuring reviewed CRITICAL code for an unrelated dependency bump.
+4. This left exactly one remaining audit finding: `react-router` (moderate
+   — open redirect + SSR-hydration advisories, both real for this app).
+   Human directed a real fix. **PR #22**
+   (`fix/react-router-audit`, commits `d1748c9` + `254ba11`) upgraded
+   `react-router-dom` 6.30.4 → 7.18.1, fixing the applicable open-redirect
+   advisory (GHSA-wrjc-x8rr-h8h6); fixed 9 lint errors from
+   `NavigateFunction`'s new `void | Promise<void>` return type
+   (`void navigate(...)`, no logic change). This revealed a NEW advisory
+   for react-router (`GHSA-qwww-vcr4-c8h2`, "RSC Mode CSRF Bypass") with no
+   patched version available — confirmed not applicable (advisory text:
+   "This only affects your application if you are using the unstable RSC
+   APIs"; this app uses only classic declarative-mode APIs — `BrowserRouter`,
+   `Routes`, `Route`, `Link`, `NavLink`, `useNavigate`, `useParams` — and
+   `ReactDOM.createRoot`, never SSR/RSC). Since the `dependency-audit` gate
+   had no exception mechanism and would otherwise stay red indefinitely,
+   human approved adding one (ELEVATED, since it changes shared CI/quality-
+   gate infrastructure): `docs/security/audit-allowlist.json` (declared
+   exception with reason/approver/date) plus `scripts/check-audit.ts`
+   (replaces the raw `npm audit` gate command; fail-closed for any
+   vulnerability not explicitly allowlisted by advisory ID, including
+   correctly resolving packages npm audit reports as only transitively
+   affected via a string reference rather than a direct advisory — a real
+   bug found and fixed during this same PR). Verified the gate still fails
+   on an unlisted/incorrect advisory ID before restoring the correct one
+   and committing.
+5. Merging PR #22 produced `main`'s first fully green CI run since before
+   this session (`web` ✓, `browser` ✓ including full Playwright E2E/PWA
+   suites, `deploy` ✓) — the embedded `deploy` job in `ci.yml` requires
+   `web` and `browser` both green in the same run, so no prior merge in
+   this sequence had actually deployed anything.
+6. **Production smoke test — PASS**, performed live by the Human Project
+   Owner on `https://tuann2.github.io/Hoa_hoc_THCS/` after deploy
+   completed: regular student account behavior unchanged (own progress/XP
+   correct, no admin CTA visible); admin account sees the learner list and
+   cross-user detail correctly; unauthenticated direct navigation to
+   `/admin/learners` is blocked. Human confirmed all items ("ok hết rồi").
+
+**Final state:** FEATURE-016 is deployed to production and verified live.
+No further action is required for this feature. The three follow-up PRs
+(#20, #21, #22) also permanently fixed pre-existing issues on `main`
+unrelated to FEATURE-016 itself (stale test fixture from FEATURE-015,
+dependency vulnerabilities, and the CI audit-gate's lack of an exception
+mechanism) — these fixes benefit the whole repository going forward, not
+just this feature.
