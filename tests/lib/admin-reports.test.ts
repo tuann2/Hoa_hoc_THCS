@@ -10,6 +10,7 @@ import {
   type AdminProgressRow
 } from '../../src/lib/adminReports';
 import { getAllUnits } from '../../src/lib/content';
+import { PROGRESS_VERSION } from '../../src/store/progress';
 
 const units = getAllUnits();
 const availableLesson = units
@@ -27,7 +28,10 @@ const profile: AdminProfileRow = {
   display_name: 'Mai An'
 };
 
-function progressRow(data: unknown, version = 4): AdminProgressRow {
+function progressRow(
+  data: unknown,
+  version = PROGRESS_VERSION
+): AdminProgressRow {
   return {
     user_id: profile.id,
     data,
@@ -136,8 +140,9 @@ describe('admin reports', () => {
       units
     );
 
-    expect(migrated.completedLessons).toBe(1);
-    expect(migrated.accuracy.bestAccuracy).toBe(100);
+    expect(migrated.completedLessons).toBe(0);
+    expect(migrated.totalXp).toBe(120);
+    expect(migrated.accuracy.bestAccuracy).toBe(0);
     expect(damaged.totalXp).toBe(0);
     expect(damaged.dailyStudyTime).toEqual([
       { date: '2026-07-20', activeSeconds: 0 }
