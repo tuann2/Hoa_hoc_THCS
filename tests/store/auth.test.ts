@@ -29,6 +29,7 @@ const {
   updateUser,
   getSession,
   profileMaybeSingle,
+  adminMaybeSingle,
   getAuthListener,
   resetAuthListener,
   mockSupabase
@@ -41,6 +42,7 @@ const {
   const updateUser = vi.fn();
   const getSession = vi.fn();
   const profileMaybeSingle = vi.fn();
+  const adminMaybeSingle = vi.fn();
 
   return {
     signUp,
@@ -50,6 +52,7 @@ const {
     updateUser,
     getSession,
     profileMaybeSingle,
+    adminMaybeSingle,
     getAuthListener: () => authListener,
     resetAuthListener: () => {
       authListener = null;
@@ -74,6 +77,16 @@ const {
         updateUser
       },
       from: vi.fn((table: string) => {
+        if (table === 'admin_users') {
+          return {
+            select: vi.fn(() => ({
+              eq: vi.fn(() => ({
+                maybeSingle: adminMaybeSingle
+              }))
+            }))
+          };
+        }
+
         if (table !== 'profiles') {
           throw new Error(`Unexpected table: ${table}`);
         }
@@ -132,6 +145,7 @@ describe('auth store', () => {
     updateUser.mockReset();
     getSession.mockReset();
     profileMaybeSingle.mockReset();
+    adminMaybeSingle.mockReset();
     resetAuthStoreForTests();
   });
 
@@ -146,6 +160,7 @@ describe('auth store', () => {
       data: { display_name: 'Tên trên profile' },
       error: null
     });
+    adminMaybeSingle.mockResolvedValue({ data: null, error: null });
 
     await getAuthStore().getState().initialize();
 
@@ -163,6 +178,7 @@ describe('auth store', () => {
       error: null
     });
     profileMaybeSingle.mockResolvedValue({ data: null, error: null });
+    adminMaybeSingle.mockResolvedValue({ data: null, error: null });
 
     await getAuthStore().getState().initialize();
     vi.mocked(cancelScheduledProgressPush).mockClear();
@@ -243,6 +259,7 @@ describe('auth store', () => {
       data: { display_name: 'Minh' },
       error: null
     });
+    adminMaybeSingle.mockResolvedValue({ data: null, error: null });
     signOut.mockResolvedValue({
       data: null,
       error: null
@@ -305,6 +322,7 @@ describe('auth store', () => {
       data: { display_name: 'Lan Anh Mới' },
       error: null
     });
+    adminMaybeSingle.mockResolvedValue({ data: null, error: null });
 
     const result = await getAuthStore().getState().updatePassword('12345678');
 
@@ -317,5 +335,83 @@ describe('auth store', () => {
     });
     expect(getAuthStore().getState().isPasswordRecovery).toBe(false);
     expect(getAuthStore().getState().displayName).toBe('Lan Anh Mới');
+  });
+
+  it('resolve isAdmin sau initialize và fail-closed khi query role lỗi', async () => {
+    getSession.mockResolvedValue({
+      data: { session: createSession() },
+      error: null
+    });
+    profileMaybeSingle.mockResolvedValue({ data: null, error: null });
+    adminMaybeSingle.mockResolvedValue({
+      data: { user_id: 'user-1' },
+      error: null
+    });
+
+    await getAuthStore().getState().initialize();
+    expect(getAuthStore().getState().isAdmin).toBe(true);
+
+    adminMaybeSingle.mockResolvedValueOnce({
+      data: null,
+      error: new Error('network')
+    });
+    await getAuthListener()?.('SIGNED_IN', createSession());
+    await Promise.resolve();
+    expect(getAuthStore().getState().isAdmin).toBe(false);
+  });
+
+  it('resolve isAdmin fail-closed khi query role timeout', async () => {
+    vi.useFakeTimers();
+    try {
+      getSession.mockResolvedValue({
+        data: { session: createSession() },
+        error: null
+      });
+      profileMaybeSingle.mockResolvedValue({ data: null, error: null });
+      adminMaybeSingle.mockImplementation(() => new Promise(() => undefined));
+
+      const initializing = getAuthStore().getState().initialize();
+      await vi.advanceTimersByTimeAsync(8_000);
+      await initializing;
+
+      expect(getAuthStore().getState().isAdmin).toBe(false);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('bỏ response role admin cũ sau khi session đổi sang học viên', async () => {
+    let resolveOldRole:
+      | ((value: { data: { user_id: string } | null; error: null }) => void)
+      | undefined;
+    getSession.mockResolvedValue({
+      data: { session: createSession('Admin A') },
+      error: null
+    });
+    profileMaybeSingle.mockResolvedValue({ data: null, error: null });
+    adminMaybeSingle.mockImplementationOnce(
+      () =>
+        new Promise((resolve) => {
+          resolveOldRole = resolve;
+        })
+    );
+
+    const initializing = getAuthStore().getState().initialize();
+    await Promise.resolve();
+    await getAuthListener()?.('SIGNED_IN', {
+      ...createSession('Student B'),
+      user: {
+        ...createSession('Student B').user,
+        id: 'user-2',
+        email: 'student@example.com'
+      }
+    });
+    adminMaybeSingle.mockResolvedValueOnce({ data: null, error: null });
+    await Promise.resolve();
+    resolveOldRole?.({ data: { user_id: 'user-1' }, error: null });
+    await initializing;
+
+    expect(getAuthStore().getState().user?.id).toBe('user-2');
+    expect(getAuthStore().getState().isAdmin).toBe(false);
   });
 });

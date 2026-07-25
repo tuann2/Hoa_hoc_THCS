@@ -75,6 +75,7 @@ export function ProfileRoute() {
   const authStore = getAuthStore();
   const user = authStore((state) => state.user);
   const displayName = authStore((state) => state.displayName);
+  const isAdmin = authStore((state) => state.isAdmin);
   const isConfigured = authStore((state) => state.isConfigured);
   const signOut = authStore((state) => state.signOut);
   const totalXp = progressStore((state) => state.totalXp);
@@ -118,6 +119,14 @@ export function ProfileRoute() {
               >
                 Đăng xuất
               </button>
+              {isAdmin ? (
+                <Link
+                  className="rounded-full bg-sea px-4 py-2 font-semibold text-white"
+                  to="/admin/learners"
+                >
+                  Xem học viên
+                </Link>
+              ) : null}
             </>
           ) : (
             <Link

@@ -13,6 +13,10 @@ interface AuthState {
   session: Session | null;
   user: User | null;
   displayName: string | null;
+  /** Effective permission only: unresolved/error states are always false. */
+  isAdmin: boolean;
+  /** Increments before every async user/profile/role resolution. */
+  authGeneration: number;
   isPasswordRecovery: boolean;
   isReady: boolean;
   isLoading: boolean;
@@ -94,28 +98,145 @@ async function resolveDisplayName(user: User): Promise<string | null> {
     return fallback ?? null;
   }
 
-  const { data, error } = await supabase
-    .from('profiles')
-    .select('display_name')
-    .eq('id', user.id)
-    .maybeSingle();
+  try {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('display_name')
+      .eq('id', user.id)
+      .maybeSingle();
 
-  if (!isRecord(data) || typeof data.display_name !== 'string' || error) {
+    if (!isRecord(data) || typeof data.display_name !== 'string' || error) {
+      return fallback ?? null;
+    }
+
+    return cleanDisplayName(data.display_name);
+  } catch {
     return fallback ?? null;
   }
+}
 
-  return cleanDisplayName(data.display_name);
+const ADMIN_LOOKUP_TIMEOUT_MS = 8_000;
+
+async function resolveIsAdmin(user: User): Promise<boolean> {
+  if (!supabase) {
+    return false;
+  }
+
+  let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+  try {
+    const timeout = new Promise<null>((resolve) => {
+      timeoutId = setTimeout(() => resolve(null), ADMIN_LOOKUP_TIMEOUT_MS);
+    });
+    const request = Promise.resolve(
+      supabase
+        .from('admin_users')
+        .select('user_id')
+        .eq('user_id', user.id)
+        .maybeSingle()
+    ).catch(() => null);
+    const result = await Promise.race([request, timeout]);
+
+    return Boolean(
+      result &&
+        !result.error &&
+        isRecord(result.data) &&
+        typeof result.data.user_id === 'string' &&
+        result.data.user_id === user.id
+    );
+  } catch {
+    return false;
+  } finally {
+    if (timeoutId !== null) {
+      clearTimeout(timeoutId);
+    }
+  }
 }
 
 let initializePromise: Promise<void> | null = null;
 let unsubscribeAuth: {
   unsubscribe: () => void;
 } | null = null;
+let authGeneration = 0;
+
+async function applySession(
+  set: (partial: Partial<AuthState>) => void,
+  session: Session | null,
+  event: string
+): Promise<void> {
+  const user = session?.user ?? null;
+  const generation = ++authGeneration;
+
+  // Reset before awaiting either request. This makes the effective permission
+  // fail closed during startup, refresh, logout and account switches.
+  set({
+    session,
+    user,
+    displayName: null,
+    isAdmin: false,
+    authGeneration: generation,
+    isPasswordRecovery: event === 'PASSWORD_RECOVERY',
+    isReady: true
+  });
+
+  if (!user) {
+    return;
+  }
+
+  const [displayName, isAdmin] = await Promise.all([
+    resolveDisplayName(user),
+    resolveIsAdmin(user)
+  ]);
+
+  // A profile/role result must never revive an older account after an auth
+  // event has moved the session forward.
+  const current = useAuthStore.getState();
+  if (current.authGeneration !== generation || current.user?.id !== user.id) {
+    return;
+  }
+
+  set({ displayName, isAdmin });
+}
+
+function invalidateAdminState(set: (partial: Partial<AuthState>) => void) {
+  const generation = ++authGeneration;
+  set({ isAdmin: false, authGeneration: generation });
+}
+
+async function applyUserUpdate(
+  set: (partial: Partial<AuthState>) => void,
+  user: User | null
+): Promise<void> {
+  const generation = ++authGeneration;
+  set({
+    user,
+    displayName: null,
+    isAdmin: false,
+    authGeneration: generation,
+    isPasswordRecovery: false
+  });
+
+  if (!user) {
+    return;
+  }
+
+  const [displayName, isAdmin] = await Promise.all([
+    resolveDisplayName(user),
+    resolveIsAdmin(user)
+  ]);
+  const current = useAuthStore.getState();
+  if (current.authGeneration !== generation || current.user?.id !== user.id) {
+    return;
+  }
+  set({ displayName, isAdmin });
+}
 
 export const useAuthStore = create<AuthState>()((set) => ({
   session: null,
   user: null,
   displayName: null,
+  isAdmin: false,
+  authGeneration: 0,
   isPasswordRecovery: detectPasswordRecoveryFromUrl(),
   isReady: false,
   isLoading: false,
@@ -127,56 +248,34 @@ export const useAuthStore = create<AuthState>()((set) => ({
 
     initializePromise = (async () => {
       if (!supabase) {
+        invalidateAdminState(set);
         set({ isReady: true });
         return;
       }
 
       if (!unsubscribeAuth) {
-        const { data } = supabase.auth.onAuthStateChange(
-          async (event, session) => {
-            if (event === 'SIGNED_OUT') {
-              // Sign-out từ tab khác/session bị thu hồi cũng phải huỷ timer
-              // push đang chờ, nếu không snapshot cũ vẫn được đẩy sau logout.
-              cancelScheduledProgressPush();
-            }
-
-            const user = session?.user ?? null;
-            const displayName = user ? await resolveDisplayName(user) : null;
-
-            set((state) => ({
-              ...state,
-              session,
-              user,
-              displayName,
-              isPasswordRecovery:
-                event === 'PASSWORD_RECOVERY'
-                  ? true
-                  : event === 'SIGNED_OUT' || event === 'USER_UPDATED'
-                    ? false
-                    : state.isPasswordRecovery
-            }));
+        const { data } = supabase.auth.onAuthStateChange((event, session) => {
+          if (event === 'SIGNED_OUT') {
+            // Sign-out từ tab khác/session bị thu hồi cũng phải huỷ timer
+            // push đang chờ, nếu không snapshot cũ vẫn được đẩy sau logout.
+            cancelScheduledProgressPush();
           }
-        );
+
+          void applySession(set, session, event);
+        });
 
         unsubscribeAuth = data.subscription;
       }
 
       const { data, error } = await supabase.auth.getSession();
-      const user = data.session?.user ?? null;
-      const displayName = user ? await resolveDisplayName(user) : null;
-
-      set({
-        session: data.session,
-        user,
-        displayName,
-        isPasswordRecovery: detectPasswordRecoveryFromUrl(),
-        isReady: true
-      });
+      await applySession(set, data.session, 'INITIAL_SESSION');
+      set({ isPasswordRecovery: detectPasswordRecoveryFromUrl() });
 
       if (error) {
         throw error;
       }
     })().catch(() => {
+      invalidateAdminState(set);
       set({ isReady: true });
     });
 
@@ -220,16 +319,8 @@ export const useAuthStore = create<AuthState>()((set) => ({
       return { error: translateAuthError(error.message) };
     }
 
-    const user = data.session?.user ?? data.user;
-    const nextDisplayName = user ? await resolveDisplayName(user) : trimmedName;
-
-    if (data.session && user) {
-      set({
-        session: data.session,
-        user,
-        displayName: nextDisplayName,
-        isPasswordRecovery: false
-      });
+    if (data.session) {
+      await applySession(set, data.session, 'SIGNED_IN');
     }
 
     return {
@@ -261,15 +352,7 @@ export const useAuthStore = create<AuthState>()((set) => ({
       return { error: translateAuthError(error.message) };
     }
 
-    const user = data.session?.user ?? data.user;
-    const displayName = user ? await resolveDisplayName(user) : null;
-
-    set({
-      session: data.session,
-      user,
-      displayName,
-      isPasswordRecovery: false
-    });
+    await applySession(set, data.session, 'SIGNED_IN');
 
     return {
       error: null,
@@ -279,10 +362,12 @@ export const useAuthStore = create<AuthState>()((set) => ({
   async signOut() {
     if (!supabase) {
       cancelScheduledProgressPush();
+      invalidateAdminState(set);
       set({
         session: null,
         user: null,
         displayName: null,
+        isAdmin: false,
         isPasswordRecovery: false
       });
 
@@ -292,6 +377,7 @@ export const useAuthStore = create<AuthState>()((set) => ({
     // Huỷ timer TRƯỚC khi await: mạng chậm quá 2 giây sẽ để timer kịp
     // push snapshot giữa lúc đang đăng xuất.
     cancelScheduledProgressPush();
+    invalidateAdminState(set);
     set({ isLoading: true });
     const { error } = await supabase.auth.signOut();
     set({ isLoading: false });
@@ -300,12 +386,7 @@ export const useAuthStore = create<AuthState>()((set) => ({
       return { error: translateAuthError(error.message) };
     }
 
-    set({
-      session: null,
-      user: null,
-      displayName: null,
-      isPasswordRecovery: false
-    });
+    await applySession(set, null, 'SIGNED_OUT');
 
     return { error: null, message: 'Đã đăng xuất.' };
   },
@@ -348,20 +429,19 @@ export const useAuthStore = create<AuthState>()((set) => ({
     const { data, error } = await supabase.auth.updateUser({
       password: newPassword
     });
-    const user = data.user ?? null;
-    const displayName = user ? await resolveDisplayName(user) : null;
     set({ isLoading: false });
 
     if (error) {
       return { error: translateAuthError(error.message) };
     }
 
-    set((state) => ({
-      ...state,
-      user,
-      displayName,
-      isPasswordRecovery: false
-    }));
+    const user = data.user ?? null;
+    const session = getAuthStore().getState().session;
+    if (user && session) {
+      await applySession(set, { ...session, user }, 'USER_UPDATED');
+    } else {
+      await applyUserUpdate(set, user);
+    }
 
     return {
       error: null,
@@ -372,12 +452,15 @@ export const useAuthStore = create<AuthState>()((set) => ({
 
 export function resetAuthStoreForTests() {
   initializePromise = null;
+  authGeneration = 0;
   unsubscribeAuth?.unsubscribe();
   unsubscribeAuth = null;
   useAuthStore.setState({
     session: null,
     user: null,
     displayName: null,
+    isAdmin: false,
+    authGeneration: 0,
     isPasswordRecovery: false,
     isReady: false,
     isLoading: false,

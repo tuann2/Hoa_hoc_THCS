@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { LessonPlayer } from '../components/LessonPlayer';
 import { ContentLoadError } from '../components/ContentLoadError';
 import { ContentLoading } from '../components/ContentLoading';
+import { useStudyTimeTracker } from '../hooks/useStudyTimeTracker';
 import {
   findLesson as findLessonSummary,
   findUnit as findUnitSummary,
@@ -26,6 +27,13 @@ export function LessonRoute({ mode }: LessonRouteProps) {
   const unlockedLessonIds = getProgressStore(units)(
     (state) => state.unlockedLessonIds
   );
+  const lessonIsAvailable =
+    Boolean(unit && lesson) &&
+    unit?.status === 'available' &&
+    lesson?.status === 'available' &&
+    unlockedLessonIds.includes(lesson?.id ?? '');
+
+  useStudyTimeTracker({ scopeActive: lessonIsAvailable && Boolean(content) });
 
   useEffect(() => {
     if (

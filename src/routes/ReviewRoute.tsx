@@ -8,6 +8,7 @@ import {
 import { isQuestionCorrect } from '../lib/chemistry';
 import { ContentLoadError } from '../components/ContentLoadError';
 import { ContentLoading } from '../components/ContentLoading';
+import { useStudyTimeTracker } from '../hooks/useStudyTimeTracker';
 import {
   findLesson as findLessonSummary,
   findUnit as findUnitSummary,
@@ -85,6 +86,14 @@ export function ReviewRoute() {
     null
   );
   const [correctCount, setCorrectCount] = useState(0);
+
+  useStudyTimeTracker({
+    scopeActive:
+      !isLoading &&
+      !loadError &&
+      queue.length > 0 &&
+      questionIndex < queue.length
+  });
 
   useEffect(() => {
     let active = true;

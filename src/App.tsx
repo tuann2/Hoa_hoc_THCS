@@ -40,6 +40,16 @@ const ReviewRoute = lazy(() =>
     default: module.ReviewRoute
   }))
 );
+const AdminLearnersRoute = lazy(() =>
+  import('./routes/AdminLearnersRoute').then((module) => ({
+    default: module.AdminLearnersRoute
+  }))
+);
+const AdminLearnerDetailRoute = lazy(() =>
+  import('./routes/AdminLearnerDetailRoute').then((module) => ({
+    default: module.AdminLearnerDetailRoute
+  }))
+);
 
 interface RouteErrorBoundaryProps {
   children: ReactNode;
@@ -80,6 +90,7 @@ export default function App() {
   const isReady = authStore((state) => state.isReady);
   const user = authStore((state) => state.user);
   const displayName = authStore((state) => state.displayName);
+  const isAdmin = authStore((state) => state.isAdmin);
   const reviewCount = progressStore(
     (state) =>
       Object.values(state.wrongQuestions).filter(isWrongQuestionPending).length
@@ -90,6 +101,9 @@ export default function App() {
     { to: '/review', label: 'Ôn lại', badge: reviewCount },
     { to: '/profile', label: 'Hồ sơ' }
   ];
+  if (isAdmin) {
+    navItems.push({ to: '/admin/learners', label: 'Học viên' });
+  }
 
   useEffect(() => {
     void initialize();
@@ -175,6 +189,14 @@ export default function App() {
                 />
                 <Route path="/review" element={<ReviewRoute />} />
                 <Route path="/profile" element={<ProfileRoute />} />
+                <Route
+                  path="/admin/learners"
+                  element={<AdminLearnersRoute />}
+                />
+                <Route
+                  path="/admin/learners/:userId"
+                  element={<AdminLearnerDetailRoute />}
+                />
               </Routes>
             </Suspense>
           </RouteErrorBoundary>
