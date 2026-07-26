@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: DRAFT
+- Status: APPROVED
 - Owner: Claude Code
-- Approved by / date: pending
+- Approved by / date: tuann2, 2026-07-26
 - Risk tier: ELEVATED
 - Risk categories and escalation rationale: script + CI mới quyết định
   cảnh báo/chặn dựa trên logic phức tạp (so sánh nội dung/tuổi nhánh) —
