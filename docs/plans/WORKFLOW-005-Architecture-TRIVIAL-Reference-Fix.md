@@ -68,6 +68,25 @@ này (bao gồm bảng trên) cũng là xác nhận cho việc bắt đầu vai 
 ngay trong phiên này, theo yêu cầu "duyệt và thực thi" của người dùng
 2026-07-26.
 
+### Post-implementation model-usage correction (2026-07-26)
+
+- The table above records the _approved_ engine assignment (`gpt-5.4` for
+  Implementer, `gpt-5.5` for Reviewer 2). The owner (tuann2) subsequently
+  reported, via an Azure AI Foundry Monitor screenshot for the `gpt-5.6-terra`
+  deployment (date range 7/19/2026–7/26/2026: 350 requests, ~21.54M total
+  tokens — 21.36M input / 180.78K output, ~$8.44 estimated cost), that
+  execution for this feature in fact ran entirely on `gpt-5.6-terra` rather
+  than the planned `gpt-5.4`/`gpt-5.5`.
+- This is a user-reported observation from an external provider dashboard, not
+  independently re-verified against Codex CLI session logs by an agent in this
+  repository; it is recorded here for measurement accuracy, not as a
+  substantive scope or governance change. The approved table above is left
+  unmodified as the historical record of what was planned/authorized.
+- Effect: none on outcome (docs-only wording fix, already validated and
+  merged); this note exists solely so future token/cost measurement work
+  (e.g. `docs/measurements/`) attributes WORKFLOW-005 usage to the correct
+  model.
+
 1. Implementation: apply the wording fix (see exact before/after in this
    plan's scope) via a fresh implementer execution under a CRITICAL envelope,
    `allowed_paths: ["docs/architecture/AI_WORKFLOW_ARCHITECTURE.md",

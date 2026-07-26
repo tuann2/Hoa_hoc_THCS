@@ -189,3 +189,30 @@ clean:
   substantive checks on the document content itself (amendment formatting,
   preserved v2.1–v2.4 text, TRIVIAL-policy text/code alignment, Migration
   History formatting) all passed with no findings.
+
+## Post-implementation model-usage correction (2026-07-26)
+
+- The plan's execution-assignment table recorded the approved engines as
+  Codex `gpt-5.4` (Implementer) and Codex `gpt-5.5` (Reviewer 2, adversarial).
+  The owner (tuann2) reported afterward, via an Azure AI Foundry Monitor
+  screenshot for the `gpt-5.6-terra` deployment (range 7/19/2026–7/26/2026:
+  350 requests, ~21.54M total tokens — 21.36M input / 180.78K output, ~$8.44
+  estimated cost), that execution for this feature ran entirely on
+  `gpt-5.6-terra` instead.
+- This is a user-reported dashboard observation, not re-verified against
+  Codex CLI session logs by an agent in this repository. It does not change
+  the validated outcome above (docs-only wording fix, gates/evidence pass,
+  both independent CRITICAL reviews approved); it is recorded here so
+  WORKFLOW-005 is attributed to the correct model in any future token/cost
+  measurement work. See the matching note in
+  `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md`.
+- Validation of this correction itself (docs-only, `npm run gates --
+--tier=trivial` ESCALATEs on `docs/plans/**` and `docs/handoffs/**`
+  denylist entries, so the NORMAL docs profile applies): `npm run gates --
+--changed-from=aeeae965ed8bca472bc01bfad3a52997c581addc`: exit 0,
+  `"result": "pass"` (`git-diff-check`, `format-check`, `docs-check --all`);
+  `npm run evidence -- --changed-from=aeeae965ed8bca472bc01bfad3a52997c581addc`:
+  exit 0, `"result": "pass"`, git-tree snapshot
+  `c0f66a9a948b43d2f6f200fb5f53deac5e1f7eb8`, lockfile sha256
+  `fcb9e26c85ffd1a43eec0a56a0cd2cb9b0a6d3a543e68f941989f03416f9c656`,
+  `node_version: v24.16.0`, `npm_version: 11.13.0`.
