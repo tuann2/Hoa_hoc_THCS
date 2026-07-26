@@ -10,6 +10,30 @@ envelope in the request. Delegated subagent requests put `--cwd /absolute/path`
 first, include `--write` only for authorized repository changes, and include
 the requested action-safety scope. `--background` and `--wait` are optional.
 
+## Model and effort selection
+
+### Selection criteria
+
+Use higher reasoning effort for difficult work: large features, refactors,
+schema changes, and adversarial review. Use lower effort for small, mechanical
+work. Select the model tier according to the task's reasoning needs, separately
+from these effort criteria.
+
+`.codex/config.toml` applies only to an interactive Codex CLI session. It does
+not apply to delegation through a subagent; pass that subagent's model and
+effort for the individual task with `--model` and `--effort`.
+
+### Model IDs
+
+| Use                           | Model ID        | Verification status                                                         |
+| ----------------------------- | --------------- | --------------------------------------------------------------------------- |
+| Interactive Codex CLI session | `gpt-5.6-terra` | Recorded in `.codex/config.toml`; not independently verified on 2026-07-26. |
+| Delegated subagent task       | pass per task   | No default. Choose per task and pass it with `--model`.                     |
+
+Codex model names have died before: `gpt-5.4` returned 404 and WORKFLOW-005
+records the migration to `gpt-5.6-terra`. Check `/status` inside Codex before
+relying on any name here, and update this table with the date you checked.
+
 ## Execution profiles
 
 | Profile               | Adapter      | Effective capabilities                                                                                                                                                | Known restrictions                                                                                                                                                                                                           |
