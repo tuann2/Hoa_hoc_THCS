@@ -1,17 +1,19 @@
 # AI Workflow Architecture
 
-- Version: 2.4
-- Status: APPROVED (v2.4 amendment approved by tuann2, 2026-07-19)
+- Version: 2.5
+- Status: APPROVED (v2.5 amendment approved by tuann2, 2026-07-26)
 - Owner: Human Project Owner
 - Reviewers: role-qualified independent executions, conditional by risk tier
-- Amendment history: v2.4 (WORKFLOW-004B) — makes governance
-  provider-neutral through role contracts and execution envelopes; adds Context
-  Policy and the policy-only TRIVIAL tier. v2.3 (WORKFLOW-004A) — superseded
-  the manual evidence ritual with machine-generated exact-snapshot IDs, made
-  `scripts/gates-manifest.ts` the canonical command source, and added the
-  Deployment Invariant. v2.2 (WORKFLOW-003) — scoped documentation-only
-  remediation and codified the batch-content reviewer-applies-fixes exception.
-  v2.1 (WORKFLOW-002) — initial approved architecture.
+- Amendment history: v2.5 (WORKFLOW-005) — closes the stale WORKFLOW-004C
+  forward-reference now that TRIVIAL enforcement exists. v2.4 (WORKFLOW-004B)
+  — makes governance provider-neutral through role contracts and execution
+  envelopes; adds Context Policy and the policy-only TRIVIAL tier. v2.3
+  (WORKFLOW-004A) — superseded the manual evidence ritual with
+  machine-generated exact-snapshot IDs, made `scripts/gates-manifest.ts` the
+  canonical command source, and added the Deployment Invariant. v2.2
+  (WORKFLOW-003) — scoped documentation-only remediation and codified the
+  batch-content reviewer-applies-fixes exception. v2.1 (WORKFLOW-002) —
+  initial approved architecture.
 
 ---
 
@@ -155,12 +157,13 @@ Classification rules:
 
 ### TRIVIAL policy
 
-TRIVIAL is policy only; automated enforcement and its micro-trace schema are
-deferred to WORKFLOW-004C. Its narrow allowlist is non-governance prose
+TRIVIAL is policy only; enforcement exists: scripts/trivial-policy.ts is the
+policy-text SSOT, npm run gates applies its checks, and CI runs the
+trivial-verify job. Its narrow allowlist is non-governance prose
 documentation and typo/format fixes that do not change commands, paths,
 policy, examples, technical behavior, or educational meaning. Content units
-remain NORMAL initially. TRIVIAL has no full plan or handoff, but must have a
-snapshot-bound micro-trace once enforcement exists.
+remain NORMAL initially. TRIVIAL has no full plan or handoff, but npm run
+trace:trivial records a snapshot-bound micro-trace.
 
 TRIVIAL is denied for `AGENTS.md`, `CLAUDE.md`, `AI_WORKFLOW.md`, workflow
 shims, architecture, `docs/architecture.md`, `docs/adr/**`, role contracts,
@@ -325,6 +328,8 @@ work, no more than two sessions, and zero validation reruns.
   and deployment invariant.
 - v2.4 (WORKFLOW-004B, 2026-07-19): provider-neutral roles/envelope/context
   policy and policy-only TRIVIAL tier; approved by tuann2.
+- v2.5 (WORKFLOW-005, 2026-07-26): closes the stale WORKFLOW-004C
+  forward-reference now that TRIVIAL enforcement exists; approved by tuann2.
 
 ## Design Principles
 
