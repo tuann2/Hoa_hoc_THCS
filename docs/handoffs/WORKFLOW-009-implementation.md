@@ -24,12 +24,12 @@
 
 ## Role execution log
 
-| Role                 | Executing agent | Model / effort | Human confirmer + timestamp | Execution evidence                      |
-| -------------------- | --------------- | -------------- | --------------------------- | --------------------------------------- |
-| Planner              | Claude Code     | not recorded   | tuann2, 2026-07-26          | Dispatch: “hãy lên plan”                |
-| Implementer          | Codex           | medium         | tuann2, 2026-07-26          | This official implementation dispatch   |
-| Independent Reviewer | not assigned    | —              | not confirmed               | PENDING: fresh ELEVATED review required |
-| Release Assessor     | not assigned    | —              | not confirmed               | PENDING: separate assessment required   |
+| Role                 | Executing agent                  | Model / effort | Human confirmer + timestamp | Execution evidence                                                                                                                                                                 |
+| -------------------- | -------------------------------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Planner              | Claude Code                      | not recorded   | tuann2, 2026-07-26          | Dispatch: “hãy lên plan”                                                                                                                                                           |
+| Implementer          | Codex                            | medium         | tuann2, 2026-07-26          | This official implementation dispatch                                                                                                                                              |
+| Independent Reviewer | agy (`claude-opus-4-6-thinking`) | —              | tuann2, 2026-07-26          | Verdict CHANGES_REQUESTED, 5 finding; xem mục Independent verification. Vai này ban đầu giao Codex `gpt-5.6-terra`, đổi người sau khi Codex treo 2 lần liên tiếp không ra verdict. |
+| Release Assessor     | Claude Code                      | low            | tuann2, 2026-07-26          | Đánh giá ở mục Release Assessment                                                                                                                                                  |
 
 ## Acceptance, decisions, and risks
 
@@ -52,25 +52,25 @@
 
 ## Validation evidence
 
-**Ghi chú của orchestrator.** Tiến trình Implementer (Codex, job
-`task-ms1xiuhs-pknldf`) **chết mà không báo kết thúc**: log dừng ở "Turn started"
-lúc 15:04:50, `ps` xác nhận pid 2139749 không còn, trong khi companion vẫn báo
-trạng thái `running/starting` suốt 38 phút — companion theo state file chứ không
-kiểm tiến trình còn sống. Bốn file đã được ghi xong trong khoảng 15:05:50 →
-15:07:16, và orchestrator đã kiểm từng file không bị cắt giữa chừng trước khi
-dùng.
+**Ghi chú của orchestrator.** Job Implementer (Codex,
+`task-ms1xiuhs-pknldf`) không bao giờ báo kết thúc: log dừng ở "Turn started"
+lúc 15:04:50 suốt 38 phút, trong khi các job khoẻ mạnh ghi log liên tục. Bốn file
+đã được ghi xong trong khoảng 15:05:50 → 15:07:16, và orchestrator đã kiểm từng
+file không bị cắt giữa chừng trước khi dùng.
 
 Evidence do Implementer sinh ra phải **thay thế**, không phải vì sai mà vì nó
 dùng manifest fallback: sandbox không ghi được git index
 (`unable to create temporary file: Read-only file system`), nên không bind được
 snapshot. Implementer đã khai báo điều đó trung thực kèm nguyên văn lỗi.
 
-Orchestrator chạy lại trên cùng worktree:
+**STALE — evidence này không bind với candidate hiện tại và không được dùng cho
+release assessment.** Orchestrator chạy lại trên cùng worktree:
 `npm run gates -- --changed-from=f04e2b14` → pass, profile `docs`; và
 `npm run evidence -- --changed-from=f04e2b14`, snapshot **git-tree**
 `7a45c34a7aa16392fb5617d588a771bb9f34b9d1`, 3/3 gate exit 0, UTC
 2026-07-26T15:44:47.837Z → 2026-07-26T15:44:55.876Z,
-`snapshot_fallback_reason: null`.
+`snapshot_fallback_reason: null`. Orchestrator sẽ sinh evidence mới sau commit
+cuối cùng.
 
 ```json
 {
@@ -117,17 +117,51 @@ Orchestrator chạy lại trên cùng worktree:
 }
 ```
 
+## Independent verification
+
+- Verifier / execution identifier / independence method: `agy`, model
+  `claude-opus-4-6-thinking` — lớp "strong structural reasoning" theo tiêu chí
+  vừa lập ở `docs/runbooks/providers/antigravity.md` (WORKFLOW-010). Execution
+  mới, không thừa hưởng transcript của Implementer, envelope read-only.
+- **Đổi người giữa chừng:** vai này ban đầu giao Codex `gpt-5.6-terra` effort
+  high. Codex treo **hai lần liên tiếp**, không lần nào ra verdict. Lần hai nó
+  kịp tìm ra một finding thật (evidence không bind candidate — ghi thành F-7)
+  trước khi log đứng yên. tuann2 xác nhận đổi reviewer sang agy ngày 2026-07-26.
+- **Giới hạn về cách cấp nội dung:** agy headless tự từ chối tool cần quyền
+  `command`. Orchestrator không dùng `--dangerously-skip-permissions` vì cờ đó
+  cấp cả quyền ghi, trái envelope read-only. Thay vào đó dán nguyên văn: diff
+  đầy đủ 4 file, cấu trúc mục của template sau thay đổi, trích đoạn architecture
+  để đối chiếu, và tiêu chí acceptance của plan. Reviewer chỉ thấy thứ được cấp;
+  chính nó cũng tự ghi rằng không kiểm được SHA, kết quả gate, và ghi chú về
+  tiến trình Codex — không tự nhận đã xác minh những thứ đó.
+- Exact candidate CI status: xem mục Validation evidence; CI chạy trên PR #37.
+- **Findings and disposition — verdict CHANGES_REQUESTED, 5 finding, tất cả đã
+  đóng ở remediation round 1:**
+
+| Mã  | Mức    | Nội dung                                                                                                        | Xử lý                                                       |
+| --- | ------ | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| F-1 | High   | Template đặt `Release Assessment` trước `Independent verification`, ngược trình tự architecture quy định        | Đã đảo thứ tự ở cả template và handoff                      |
+| F-2 | Medium | Điều kiện "while this section is empty" quá lỏng: mặc định template là `PENDING`, vốn không rỗng, nên lách được | Đổi thành "contains only placeholders or template defaults" |
+| F-3 | Low    | Code span vắt qua hai dòng; thụt lề dòng tiếp nối không nhất quán                                               | Giữ code span một dòng, chuẩn hoá thụt lề                   |
+| F-4 | Low    | Mục 7 im lặng về nghĩa vụ chuyển tiếp xác nhận của bên điều phối                                                | Thêm nghĩa vụ relay kèm tham chiếu kiểm chứng được          |
+| F-5 | Low    | Handoff kế thừa F-1                                                                                             | Đóng theo F-1                                               |
+
+Hai finding bổ sung ngoài báo cáo của agy, do orchestrator tự phát hiện và
+cũng đã đóng: **F-6** — handoff trình bày một suy luận về sống/chết của tiến
+trình như dữ kiện, đã thay bằng quan sát log; **F-7** — evidence không bind
+candidate, đã đánh dấu STALE và sinh lại sau commit cuối.
+
+- **Đối chiếu chất lượng review:** orchestrator giữ kín hai nhận xét riêng
+  (thứ tự mục, lỗi markdown) trước khi dispatch để đo vòng review. agy tìm ra
+  cả hai, cộng F-2 mà orchestrator đã đọc nhiều lần và bỏ sót. F-4 được tìm ra
+  độc lập bằng hai đường: agy qua đọc văn bản, orchestrator qua sự cố thật khi
+  một agent từ chối nhận vai vì dispatch thiếu bằng chứng xác nhận.
+- Batch-content exception authorization: n/a
+
 ## Release Assessment
 
 - Not performed: no Release Assessor has received separate human confirmation.
 - This handoff does not declare `RELEASE_READY`.
-
-## Independent verification
-
-- Verifier / execution identifier / independence method: PENDING
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
-- Batch-content exception authorization: n/a
 
 <!-- Keep this handoff aligned with docs/handoffs/_TEMPLATE.md. Regenerate after
 remediation; mark superseded evidence STALE. -->

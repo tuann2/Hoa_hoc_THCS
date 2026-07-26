@@ -32,7 +32,10 @@ ELEVATED/CRITICAL work, when the envelope requires it, or when a conflict arises
    to “merge this PR and do the next step” confirms scope, not who accepts each
    role. An agent accepting two or more roles must state every role and why
    when seeking confirmation, so the human can knowingly accept reduced
-   independence.
+   independence. When a coordinator already has human confirmation, it must
+   relay verifiable evidence (who, date, and original-dispatch content), and
+   the receiving agent may rely on that relay to satisfy its obligation to
+   obtain confirmation.
 
 While the architecture is DRAFT, previously approved governance remains
 authoritative; the new shim and roles are only a superset that cannot weaken

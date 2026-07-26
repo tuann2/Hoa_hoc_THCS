@@ -47,19 +47,17 @@ validation snapshot, UTC interval, tool/lockfile versions, and gate results.
 {}
 ```
 
-## Release Assessment
-
-- Assessment and evidence basis: PENDING
-- A handoff created on or after 2026-07-26 must not declare `Remediation state:
-RELEASE_READY` while this section is empty. Handoffs created before that date
-  are grandfathered and must not be rewritten.
-
 ## Independent verification
 
 - Verifier / execution identifier / independence method: PENDING
 - Exact candidate CI status: PENDING
 - Findings and disposition: PENDING
 - Batch-content exception authorization: n/a
+
+## Release Assessment
+
+- Assessment and evidence basis: PENDING
+- A handoff created on or after 2026-07-26 must not declare `Remediation state: RELEASE_READY` while this section contains only placeholders or template defaults. Handoffs created before that date are grandfathered and must not be rewritten.
 
 <!-- Keep this template at 65 content lines or fewer. Regenerate after
 remediation; mark superseded evidence STALE. -->
