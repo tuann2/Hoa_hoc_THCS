@@ -26,6 +26,16 @@ ELEVATED/CRITICAL work, when the envelope requires it, or when a conflict arises
    deviation, and no envelope can grant that authority. Commit, push, merge,
    deploy, open a PR, or take any other delivery action toward a shared remote
    only when the envelope grants it and the required human authorization exists.
+7. Before accepting any role, state that role to the human and obtain separate
+   confirmation for it; record the confirmation in the handoff role execution
+   log. Scope confirmation is not role confirmation: for example, a dispatch
+   to “merge this PR and do the next step” confirms scope, not who accepts each
+   role. An agent accepting two or more roles must state every role and why
+   when seeking confirmation, so the human can knowingly accept reduced
+   independence. When a coordinator already has human confirmation, it must
+   relay verifiable evidence (who, date, and original-dispatch content), and
+   the receiving agent may rely on that relay to satisfy its obligation to
+   obtain confirmation.
 
 While the architecture is DRAFT, previously approved governance remains
 authoritative; the new shim and roles are only a superset that cannot weaken
