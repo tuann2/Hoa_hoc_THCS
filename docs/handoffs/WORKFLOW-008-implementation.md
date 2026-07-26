@@ -374,14 +374,20 @@ UTC 2026-07-26T10:56:21.962Z → 2026-07-26T10:58:43.872Z.
 
 ### Status
 
-- Remediation state: VALIDATED
+- Remediation state: VALIDATED — chờ Independent Reviewer (plan yêu cầu cho
+  PR3) rồi mới chuyển RELEASE_READY.
 - Risk tier / categories / escalation rationale: NORMAL — small refactoring giữ
   nguyên hành vi. Chỉ đổi đường import và tên gọi; không đổi logic, không đổi
   API của `contentCatalog`, không đụng auth, dependency, migration hay CI/deploy.
 - Base SHA / candidate SHA: `16b3edef94e4d6d040eb6ebb33f163a21b37a800` (đỉnh
-  nhánh PR2) / UNCOMMITTED khi chạy evidence; candidate ghi bổ sung sau khi push.
+  nhánh PR2) / `5ae3769ee0ae113a4f912167815a83f66129bbb9` (nhánh
+  `refactor/drop-content-facade`, PR #31).
 - Worktree state and dirty paths: sạch ngoài phạm vi PR3.
-- CI reference for exact candidate (when required/available): PENDING
+- CI reference for exact candidate (when required/available): run
+  [30199547218](https://github.com/tuann2/Hoa_hoc_THCS/actions/runs/30199547218)
+  trên `5ae3769` — `web`, `browser`, `trivial-verify`, `branch-context-drift`
+  đều pass. Job `browser` là nơi ba gate `e2e`/`pwa`/`pwa-subpath` chạy, bù cho
+  việc profile `web` cục bộ không bao gồm chúng.
 
 ### Summary and scope
 
@@ -521,6 +527,6 @@ chạy ở job `browser` của CI trên đúng candidate.
 - Verifier / execution identifier / independence method: PENDING — plan yêu cầu
   một Independent Reviewer với context tươi cho PR3 vì nó đụng `src/`; vai này
   cần tuann2 xác nhận riêng (đề xuất trong plan: Codex, effort medium).
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Exact candidate CI status: PASS trên `5ae3769` (run 30199547218).
+- Findings and disposition: PENDING — chờ Independent Reviewer.
 - Batch-content exception authorization: n/a
