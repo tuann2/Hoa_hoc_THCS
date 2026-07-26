@@ -74,18 +74,39 @@ ngay trong phiên này, theo yêu cầu "duyệt và thực thi" của người 
   Implementer, `gpt-5.5` for Reviewer 2). The owner (tuann2) subsequently
   reported, via an Azure AI Foundry Monitor screenshot for the `gpt-5.6-terra`
   deployment (date range 7/19/2026–7/26/2026: 350 requests, ~21.54M total
-  tokens — 21.36M input / 180.78K output, ~$8.44 estimated cost), that
-  execution for this feature in fact ran entirely on `gpt-5.6-terra` rather
-  than the planned `gpt-5.4`/`gpt-5.5`.
+  tokens — 21.36M input / 180.78K output), that execution for this feature in
+  fact ran entirely on `gpt-5.6-terra` rather than the planned
+  `gpt-5.4`/`gpt-5.5`. (Azure's cost column is deliberately not cited here —
+  see the measurement note below.)
 - This is a user-reported observation from an external provider dashboard, not
   independently re-verified against Codex CLI session logs by an agent in this
   repository; it is recorded here for measurement accuracy, not as a
   substantive scope or governance change. The approved table above is left
   unmodified as the historical record of what was planned/authorized.
 - Effect: none on outcome (docs-only wording fix, already validated and
-  merged); this note exists solely so future token/cost measurement work
-  (e.g. `docs/measurements/`) attributes WORKFLOW-005 usage to the correct
-  model.
+  merged); this note exists solely so future token measurement work (e.g.
+  `docs/measurements/`) attributes WORKFLOW-005 usage to the correct model.
+
+### Measurement note added after FEATURE-016 baseline (2026-07-26)
+
+- `docs/measurements/WORKFLOW-005-token-cost.md` (added once
+  `docs/measurements/FEATURE-016-token-cost.md` existed as a comparison
+  baseline) cross-checks the 350-request / 21.54M-token total above — a
+  7-day window aggregate (7/19–7/26), not a number isolated to WORKFLOW-005
+  — against `FEATURE-016-token-cost.md` §1: FEATURE-016's `gpt-5.6-terra`
+  ("Terra") usage alone, for dates fully inside that same window, was 283
+  requests / 18.76M input tokens. **On token counts alone the two readings
+  are consistent** (18.76M ≤ 21.36M, 283 ≤ 350), leaving an upper bound of
+  ~67 requests / ~2.60M input tokens for everything else on `gpt-5.6-terra`
+  in that window, including WORKFLOW-005.
+- An earlier version of this note compared dollar costs instead and found an
+  apparent contradiction ($29.49 for FEATURE-016 alone exceeding the $8.44
+  window total). Per owner direction, dollar figures are dropped from this
+  repo's token measurements going forward: Azure Monitor's cost column is
+  itself labeled an estimate and its per-token conversion is not stable
+  across projects/reads, so it is not a reliable comparison metric. Token
+  counts are the metric to track for reduction work. See
+  `docs/measurements/WORKFLOW-005-token-cost.md` for the full reconciliation.
 
 1. Implementation: apply the wording fix (see exact before/after in this
    plan's scope) via a fresh implementer execution under a CRITICAL envelope,
