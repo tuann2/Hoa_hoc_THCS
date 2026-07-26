@@ -232,7 +232,29 @@ mở về việc này trong handoff WORKFLOW-008.
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Verifier / execution identifier / independence method: `agy`, model
+  `gemini-3.6-flash-high`, execution mới không thừa hưởng transcript của
+  Implementer. Envelope `request_class: independent-review`, mọi quyền ghi =
+  false. Vai này do tuann2 xác nhận ngày 2026-07-26. Chọn lớp model nhanh theo
+  đúng tiêu chí vừa viết trong `antigravity.md` cho việc review tài liệu — lần
+  dùng thực tế đầu tiên của chính hướng dẫn này.
+- **Giới hạn về cách cấp nội dung, ghi để người đọc sau đánh giá đúng mức độ
+  độc lập:** `agy` ở chế độ headless tự từ chối tool cần quyền `command`, nên
+  reviewer không tự duyệt được repo. Orchestrator KHÔNG dùng
+  `--dangerously-skip-permissions` vì cờ đó cấp luôn quyền ghi, mâu thuẫn với
+  envelope read-only. Thay vào đó dán nguyên văn toàn bộ diff của cả 4 file cùng
+  handoff vào prompt, sau khi đã kiểm `git diff --name-only 8628f84 HEAD` xác
+  nhận đúng 4 file đó thay đổi và không file nào khác. Reviewer vì vậy chỉ thấy
+  những gì orchestrator cấp; phạm vi cấp là toàn bộ thay đổi, không cắt xén.
+- Exact candidate CI status: PASS trên `6ee4092` (run 30205306609) — `web`,
+  `browser`, `trivial-verify`, `branch-context-drift`.
+- Findings and disposition: **APPROVE, không có finding.** Reviewer xác nhận:
+  toàn bộ 11 model ID trong `antigravity.md` khớp nguyên văn output `agy models`
+  ở handoff, không ID nào bị bịa; `codex.md` đặt tiêu đề `Model IDs` chứ không
+  phải `Verified model IDs` và ghi rõ `not independently verified`, tức không
+  khai khống; tầng tiêu chí chọn ở cả hai runbook không lẫn tên model cụ thể;
+  chú thích trong `.codex/config.toml` đồng bộ với runbook.
+- Reviewer tự nêu hai điều không kiểm được: (1) không tự chạy `agy models` nên
+  chỉ đối chiếu được với output đã dán; (2) không kiểm được `/status` của Codex.
+  Cả hai đã được ghi là chưa xác minh trong runbook, không phải phát hiện mới.
 - Batch-content exception authorization: n/a
