@@ -3,4 +3,7 @@
 # gpt-5.4 deployment retired (404); global ~/.codex/config.toml records the
 # migration gpt-5.4 -> gpt-5.6-terra. Track that mapping here too.
 model = "gpt-5.6-terra"
-model_reasoning_effort = "high"
+# Applies to the interactive Codex CLI session only. Delegation through a
+# subagent passes its own model/effort per task (see
+# docs/runbooks/providers/codex.md).
+model_reasoning_effort = "medium"
