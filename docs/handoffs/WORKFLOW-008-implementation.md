@@ -191,7 +191,8 @@ viết sau đó nên không nằm trong snapshot.
 
 ### Status
 
-- Remediation state: RELEASE_READY (chờ người duyệt merge PR #30)
+- Remediation state: RELEASE_READY — đã merge vào `main` qua PR #30
+  (merge commit `d98e37e`), tuann2 duyệt ngày 2026-07-26.
 - Risk tier / categories / escalation rationale: NORMAL — documentation. Xoá nội
   dung tham chiếu đã hết vai trò; không đụng mã ứng dụng, nội dung đang phát cho
   học viên, auth, dependency, migration hay CI/deploy.
@@ -374,8 +375,8 @@ UTC 2026-07-26T10:56:21.962Z → 2026-07-26T10:58:43.872Z.
 
 ### Status
 
-- Remediation state: VALIDATED — chờ Independent Reviewer (plan yêu cầu cho
-  PR3) rồi mới chuyển RELEASE_READY.
+- Remediation state: RELEASE_READY — vòng Independent Review đã đóng; tuann2
+  chấp nhận disposition của finding Medium và cấp phép merge ngày 2026-07-26.
 - Risk tier / categories / escalation rationale: NORMAL — small refactoring giữ
   nguyên hành vi. Chỉ đổi đường import và tên gọi; không đổi logic, không đổi
   API của `contentCatalog`, không đụng auth, dependency, migration hay CI/deploy.
@@ -562,7 +563,11 @@ lockfile) giống nhau từng byte. Reviewer kết luận: không cần sửa m�
    ràng buộc chính xác thật sự. Risk Model tier NORMAL chấp nhận "CI validates
    the exact candidate commit" làm đường verification, và ở đây nó có sẵn.
 
-**Còn lại cần con người quyết:** mục 2 áp cho cả PR1 và PR2 của plan này và cho
+**Human disposition (tuann2, 2026-07-26):** chấp nhận disposition trên, không
+yêu cầu re-review, cấp phép merge PR #31. Finding đóng ở trạng thái
+accepted-with-documentation, không có thay đổi mã kèm theo.
+
+**Còn lại, ngoài phạm vi plan này:** mục 2 áp cho cả PR1 và PR2 của plan này và cho
 mọi handoff trước đó trong repo. Nếu muốn đóng triệt để thì phải đổi thiết kế
 evidence (ví dụ tách bản ghi evidence ra ngoài cây mã, hoặc bind theo commit SHA
 thay vì tree hash) — đó là thay đổi `scripts/evidence.ts` + kiến trúc, phải là
