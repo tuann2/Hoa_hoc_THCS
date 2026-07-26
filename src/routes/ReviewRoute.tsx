@@ -10,10 +10,10 @@ import { ContentLoadError } from '../components/ContentLoadError';
 import { ContentLoading } from '../components/ContentLoading';
 import { useStudyTimeTracker } from '../hooks/useStudyTimeTracker';
 import {
-  findLesson as findLessonSummary,
-  findUnit as findUnitSummary,
-  getAllUnits as getUnitCatalog
-} from '../lib/content';
+  findLessonSummary,
+  findUnitSummary,
+  getUnitCatalog
+} from '../lib/contentCatalog';
 import { loadUnits } from '../lib/contentLoader';
 import {
   getProgressStore,

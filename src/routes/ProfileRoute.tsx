@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import {
-  getAllUnits,
   getAvailableLessonCount,
+  getUnitCatalog,
   getUnitsByPart,
   partLabels
-} from '../lib/content';
+} from '../lib/contentCatalog';
 import { getAuthStore } from '../store/auth';
 import {
   getProgressStore,
@@ -34,7 +34,7 @@ function partCompletion(part: PartId, lessonProgress: LessonProgressMap) {
 }
 
 function formatExamScope(attempt: ExamAttempt) {
-  const units = getAllUnits();
+  const units = getUnitCatalog();
 
   if (attempt.scope.mode === 'all') {
     return 'Toàn bộ chương trình';
@@ -70,7 +70,7 @@ function formatExamTimestamp(value: string) {
 }
 
 export function ProfileRoute() {
-  const units = getAllUnits();
+  const units = getUnitCatalog();
   const progressStore = getProgressStore(units);
   const authStore = getAuthStore();
   const user = authStore((state) => state.user);

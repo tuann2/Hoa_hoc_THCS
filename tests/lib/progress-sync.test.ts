@@ -53,8 +53,8 @@ vi.mock('../../src/lib/supabase', () => ({
   supabase: mockSupabase
 }));
 
-vi.mock('../../src/lib/content', () => ({
-  getAllUnits: () => [
+vi.mock('../../src/lib/contentCatalog', () => ({
+  getUnitCatalog: () => [
     {
       id: 'u1',
       part: 'inorganic',

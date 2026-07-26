@@ -8,7 +8,8 @@ mục nào.
 
 ### Status
 
-- Remediation state: RELEASE_READY (chờ người duyệt merge PR #29)
+- Remediation state: RELEASE_READY — đã merge vào `main` qua PR #29
+  (merge commit `1180941`), tuann2 duyệt ngày 2026-07-26.
 - Risk tier / categories / escalation rationale: NORMAL — documentation +
   xoá file placeholder không có consumer. Không đụng auth, dependency,
   migration, CI/deploy, architecture hay giá trị số trong nội dung học.
@@ -361,6 +362,161 @@ UTC 2026-07-26T10:56:21.962Z → 2026-07-26T10:58:43.872Z.
 
 - Verifier / execution identifier / independence method: tier NORMAL — CI trên
   đúng candidate commit thay cho reviewer độc lập, theo plan §Delivery plan.
+- Exact candidate CI status: PENDING
+- Findings and disposition: PENDING
+- Batch-content exception authorization: n/a
+
+## PR3 — gỡ facade `src/lib/content.ts`
+
+### Status
+
+- Remediation state: VALIDATED
+- Risk tier / categories / escalation rationale: NORMAL — small refactoring giữ
+  nguyên hành vi. Chỉ đổi đường import và tên gọi; không đổi logic, không đổi
+  API của `contentCatalog`, không đụng auth, dependency, migration hay CI/deploy.
+- Base SHA / candidate SHA: `16b3edef94e4d6d040eb6ebb33f163a21b37a800` (đỉnh
+  nhánh PR2) / UNCOMMITTED khi chạy evidence; candidate ghi bổ sung sau khi push.
+- Worktree state and dirty paths: sạch ngoài phạm vi PR3.
+- CI reference for exact candidate (when required/available): PENDING
+
+### Summary and scope
+
+- Requested scope and outcome: bước 3 của plan — xoá facade `src/lib/content.ts`
+  và cho mọi consumer import thẳng `src/lib/contentCatalog.ts`. Hoàn thành đủ.
+- Files changed: 14 file — xoá `src/lib/content.ts`; đổi import ở 8 file nguồn
+  (`App.tsx`, `HomeRoute`, `LessonRoute`, `ReviewRoute`, `ProfileRoute`,
+  `ExamRoute`, `adminReports.ts`, `progressSync.ts`) và 5 file test (1 import
+  trực tiếp trong `admin-reports.test.ts`, 4 khối `vi.mock` trong
+  `exam-route`, `lesson-route`, `review-route`, `progress-sync`).
+- `git diff --stat`: 14 files changed, 45 insertions(+), 50 deletions(-).
+
+### Acceptance, decisions, and risks
+
+| Plan acceptance criterion                | Evidence / status                           |
+| ---------------------------------------- | ------------------------------------------- |
+| `src/lib/content.ts` đã xoá              | có trong `git diff --stat` ở trên           |
+| `grep -rn "lib/content'" src tests` rỗng | chạy sau khi sửa: không còn kết quả         |
+| profile web pass                         | 11/11 gate exit 0 — xem Validation evidence |
+
+- Design decisions: ba tên cũ được ánh xạ về tên chuẩn của `contentCatalog` —
+  `getAllUnits` → `getUnitCatalog`, `findUnit` → `findUnitSummary`,
+  `findLesson` → `findLessonSummary`. Bốn module trước đây import tên cũ rồi
+  alias ngược về đúng tên chuẩn (`getAllUnits as getUnitCatalog`); nay import
+  thẳng nên khối import ngắn lại. Không thêm/bớt export nào của `contentCatalog`.
+- Deviations: PR3 xếp chồng trên nhánh PR2 thay vì chờ PR2 merge (xem deviation
+  (2) ở mục PR2). Base của PR là `chore/drop-feature-015-legacy-units`; sau khi
+  PR2 merge, GitHub tự trỏ base về `main`.
+- Blockers: không.
+- Remaining risks / follow-up: 4 khối `vi.mock` nay mock thẳng
+  `src/lib/contentCatalog`. Vì `contentLoader` không đi qua module này nên phạm
+  vi mock không đổi so với trước; đã xác nhận bằng bộ test route pass đầy đủ.
+
+### Validation evidence
+
+`npm run evidence -- --changed-from=16b3edef94e4d6d040eb6ebb33f163a21b37a800`,
+snapshot git-tree `8576426c53d8a6894d92cc7a7a1d0f9410af2f04`, profile `web`,
+11/11 gate exit 0, UTC 2026-07-26T11:05:19.069Z → 2026-07-26T11:06:17.281Z.
+Ba gate browser (`e2e`, `pwa`, `pwa-subpath`) không nằm trong profile `web` nên
+chạy ở job `browser` của CI trên đúng candidate.
+
+```json
+{
+  "base_sha": "16b3edef94e4d6d040eb6ebb33f163a21b37a800",
+  "build_inputs": [
+    {
+      "path": ".env.example",
+      "sha256": "6fda9c2a4670086a9b4784c5f146ae59df4ecb2f00410b89973483837bd16198"
+    }
+  ],
+  "candidate_sha": "UNCOMMITTED",
+  "finished_at": "2026-07-26T11:06:17.281Z",
+  "gate_results": [
+    {
+      "id": "git-diff-check",
+      "command": ["git", "diff", "--check"],
+      "durationMs": 8,
+      "exitCode": 0
+    },
+    {
+      "id": "format-check",
+      "command": ["npm", "run", "format:check"],
+      "durationMs": 6812,
+      "exitCode": 0
+    },
+    {
+      "id": "content-catalog",
+      "command": ["npm", "run", "check:content-catalog"],
+      "durationMs": 361,
+      "exitCode": 0
+    },
+    {
+      "id": "content-validation",
+      "command": ["npm", "run", "validate-content"],
+      "durationMs": 366,
+      "exitCode": 0
+    },
+    {
+      "id": "lint",
+      "command": ["npm", "run", "lint"],
+      "durationMs": 13524,
+      "exitCode": 0
+    },
+    {
+      "id": "typecheck",
+      "command": ["npm", "run", "typecheck"],
+      "durationMs": 6230,
+      "exitCode": 0
+    },
+    {
+      "id": "unit-tests",
+      "command": ["npm", "test"],
+      "durationMs": 23196,
+      "exitCode": 0
+    },
+    {
+      "id": "production-build",
+      "command": ["npm", "run", "build:app"],
+      "durationMs": 5495,
+      "exitCode": 0
+    },
+    {
+      "id": "bundle-check",
+      "command": ["npm", "run", "check:bundle"],
+      "durationMs": 362,
+      "exitCode": 0
+    },
+    {
+      "id": "dependency-audit",
+      "command": ["node", "--import", "tsx", "scripts/check-audit.ts"],
+      "durationMs": 1149,
+      "exitCode": 0
+    },
+    {
+      "id": "license-check",
+      "command": ["npm", "run", "check:licenses"],
+      "durationMs": 567,
+      "exitCode": 0
+    }
+  ],
+  "lockfile_sha256": "fcb9e26c85ffd1a43eec0a56a0cd2cb9b0a6d3a543e68f941989f03416f9c656",
+  "node_version": "v24.16.0",
+  "npm_version": "11.13.0",
+  "result": "pass",
+  "snapshot_fallback_reason": null,
+  "schema_version": 1,
+  "started_at": "2026-07-26T11:05:19.069Z",
+  "validated_snapshot": {
+    "id": "8576426c53d8a6894d92cc7a7a1d0f9410af2f04",
+    "kind": "git-tree"
+  }
+}
+```
+
+### Independent verification
+
+- Verifier / execution identifier / independence method: PENDING — plan yêu cầu
+  một Independent Reviewer với context tươi cho PR3 vì nó đụng `src/`; vai này
+  cần tuann2 xác nhận riêng (đề xuất trong plan: Codex, effort medium).
 - Exact candidate CI status: PENDING
 - Findings and disposition: PENDING
 - Batch-content exception authorization: n/a

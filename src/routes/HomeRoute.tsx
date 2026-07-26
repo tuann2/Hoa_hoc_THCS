@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { LessonMap } from '../components/LessonMap';
-import { getAllUnits, getUnitsByPart, partLabels } from '../lib/content';
+import {
+  getUnitCatalog,
+  getUnitsByPart,
+  partLabels
+} from '../lib/contentCatalog';
 import { getProgressStore } from '../store/progress';
 import type { PartId } from '../types/content';
 
 export function HomeRoute() {
   const [activePart, setActivePart] = useState<PartId>('inorganic');
   const [activeMode, setActiveMode] = useState<'theory' | 'practice'>('theory');
-  const units = getAllUnits();
+  const units = getUnitCatalog();
   const progressStore = getProgressStore(units);
   const unlockedLessonIds = progressStore((state) => state.unlockedLessonIds);
   const totalXp = progressStore((state) => state.totalXp);

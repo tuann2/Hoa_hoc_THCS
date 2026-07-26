@@ -56,8 +56,8 @@ const { fixtureUnits } = vi.hoisted(() => ({
   ] satisfies UnitContent[]
 }));
 
-vi.mock('../../src/lib/content', () => ({
-  getAllUnits: () => fixtureUnits,
+vi.mock('../../src/lib/contentCatalog', () => ({
+  getUnitCatalog: () => fixtureUnits,
   partLabels: {
     inorganic: 'Vô cơ',
     organic: 'Hữu cơ'

@@ -9,10 +9,10 @@ import {
   type AdminProfileRow,
   type AdminProgressRow
 } from '../../src/lib/adminReports';
-import { getAllUnits } from '../../src/lib/content';
+import { getUnitCatalog } from '../../src/lib/contentCatalog';
 import { PROGRESS_VERSION } from '../../src/store/progress';
 
-const units = getAllUnits();
+const units = getUnitCatalog();
 const availableLesson = units
   .flatMap((unit) => unit.lessons)
   .find((lesson) => lesson.status === 'available');
