@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-07-26)
-- Approved by / date:
+- Approved by / date: tuann2, 2026-07-26 (duyệt nội dung plan trong PR #33)
 - Risk tier: ELEVATED
 - Risk categories and escalation rationale: governance policy điều khiển cách
   mọi execution sau này nhận vai và tự khai trạng thái phát hành. Không thuộc
@@ -76,7 +76,7 @@ cho đến khi có xác nhận thật:
 | Vai trò              | Agent đề xuất                | Model / effort | Lý do                                                                                                                                                                              | Đã xác nhận                                  |
 | -------------------- | ---------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | Planner              | Claude Code                  | high           | Đã khảo sát 24 handoff và định vị nguyên nhân cấu trúc; bản DRAFT này là kết quả.                                                                                                  | tuann2, 2026-07-26 (dispatch "hãy lên plan") |
-| Implementer          | Codex (`codex:codex-rescue`) | medium         | **Không tự nhận.** Văn bản sửa đổi ràng buộc chính hành vi của Claude Code; để Claude tự viết luật cho mình là xung đột lợi ích, độc lập với chuyện nó có "substantial" hay không. | chưa                                         |
+| Implementer          | Codex (`codex:codex-rescue`) | medium         | **Không tự nhận.** Văn bản sửa đổi ràng buộc chính hành vi của Claude Code; để Claude tự viết luật cho mình là xung đột lợi ích, độc lập với chuyện nó có "substantial" hay không. | tuann2, 2026-07-26                           |
 | Independent Reviewer | Codex fresh (`--fresh`)      | high           | ELEVATED cần một reviewer tươi đọc từng dòng đổi; phải là execution khác với Implementer.                                                                                          | chưa                                         |
 | Release Assessor     | Claude Code                  | low            | Bắt buộc khác Implementer. Claude nhận vai này được vì không phải người viết diff.                                                                                                 | chưa                                         |
 
