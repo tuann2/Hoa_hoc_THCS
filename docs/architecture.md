@@ -3,8 +3,9 @@
 Living record of the technology stack and the rationale behind each
 significant choice. Updated by Claude Code whenever a new plan
 introduces a new dependency, service, or infra component — only after
-the human has explicitly approved that choice (see `CLAUDE.md` §"New
-technology adoption").
+the human has explicitly approved that choice. Introducing one is an
+architecture change classified CRITICAL; see the Risk Model in
+`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`.
 
 For the full context, alternatives, and trade-offs behind a decision,
 see the linked ADR in `docs/adr/`.
