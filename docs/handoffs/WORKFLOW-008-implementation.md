@@ -524,9 +524,46 @@ chạy ở job `browser` của CI trên đúng candidate.
 
 ### Independent verification
 
-- Verifier / execution identifier / independence method: PENDING — plan yêu cầu
-  một Independent Reviewer với context tươi cho PR3 vì nó đụng `src/`; vai này
-  cần tuann2 xác nhận riêng (đề xuất trong plan: Codex, effort medium).
+- Verifier / execution identifier / independence method: Codex, execution
+  `ae5bdf3c20d643303`, effort medium — thread mới (`--fresh`), envelope
+  `request_class: independent-review`, mọi quyền ghi = false, không nhận
+  transcript của implementer. Đúng vai đề xuất trong plan, tuann2 xác nhận
+  ngày 2026-07-26.
 - Exact candidate CI status: PASS trên `5ae3769` (run 30199547218).
-- Findings and disposition: PENDING — chờ Independent Reviewer.
+- Findings and disposition: verdict CHANGES_REQUESTED, **1 finding Medium**, xem
+  vòng remediation dưới đây. Reviewer xác nhận không có finding nào về mã:
+  ánh xạ ba tên là alias đúng của facade đã xoá, `contentCatalog.ts` không đổi;
+  không còn import/dynamic import/require nào tới `lib/content`; bốn khối
+  `vi.mock` giữ nguyên phạm vi cũ vì `contentLoader` không import
+  `contentCatalog`, nên không consumer nào bị mock ngoài ý định.
 - Batch-content exception authorization: n/a
+
+### Remediation round 1 — snapshot binding
+
+**Finding (Medium).** Evidence không bind vào đúng cây của candidate.
+Handoff ghi evidence tree `8576426c53d8a6894d92cc7a7a1d0f9410af2f04`, trong khi
+candidate `5ae3769` có tree `c6bee4d958cf5a6150bdc41a3297d3fbd6eeb548`.
+
+**Xác minh lại (orchestrator, độc lập với báo cáo).**
+`git diff --stat 8576426… 5ae3769^{tree}` → đúng 1 file khác nhau:
+`docs/handoffs/WORKFLOW-008-implementation.md`, 157 insertions(+), 1 deletion(-).
+Mọi đường dẫn thuộc bề mặt rủi ro (`src/`, `tests/`, `content/`, file cấu hình,
+lockfile) giống nhau từng byte. Reviewer kết luận: không cần sửa mã.
+
+**Disposition: chấp nhận có điều kiện, không chạy lại evidence.**
+
+1. Không rerun evidence: mã không đổi, và role contract của Independent Reviewer
+   cấm chạy lại validation đã pass chỉ để tạo lại log.
+2. Nguyên nhân là tính chất hệ thống, không phải sai sót của PR này: handoff nằm
+   trong chính cây mã, nên ghi hash của cây vào handoff sẽ làm đổi hash đó. Không
+   một handoff in-tree nào tự bind chính xác vào cây chứa nó được.
+3. Điều đóng khoảng trống này là **CI trên đúng commit** — run 30199547218 trên
+   `5ae3769`, và run tiếp theo trên `ea59ce2`. CI bind theo SHA commit nên là
+   ràng buộc chính xác thật sự. Risk Model tier NORMAL chấp nhận "CI validates
+   the exact candidate commit" làm đường verification, và ở đây nó có sẵn.
+
+**Còn lại cần con người quyết:** mục 2 áp cho cả PR1 và PR2 của plan này và cho
+mọi handoff trước đó trong repo. Nếu muốn đóng triệt để thì phải đổi thiết kế
+evidence (ví dụ tách bản ghi evidence ra ngoài cây mã, hoặc bind theo commit SHA
+thay vì tree hash) — đó là thay đổi `scripts/evidence.ts` + kiến trúc, phải là
+plan riêng, không nằm trong phạm vi WORKFLOW-008.
