@@ -572,3 +572,60 @@ mọi handoff trước đó trong repo. Nếu muốn đóng triệt để thì p
 evidence (ví dụ tách bản ghi evidence ra ngoài cây mã, hoặc bind theo commit SHA
 thay vì tree hash) — đó là thay đổi `scripts/evidence.ts` + kiến trúc, phải là
 plan riêng, không nằm trong phạm vi WORKFLOW-008.
+
+## Release Assessment
+
+Đánh giá phát hành cho toàn bộ WORKFLOW-008, thực hiện sau khi cả 3 PR đã merge.
+Vai Release Assessor theo plan: Claude Code, effort low.
+
+**Verdict: RELEASED, có 4 deviation ghi nhận dưới đây.**
+
+### Đối chiếu acceptance criteria của plan
+
+| Tiêu chí                                                                                                            | Kết quả kiểm trên `main`                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| PR1 — 4 `.gitkeep` + `docs/api/` xoá, `docs/architecture.md` hết tham chiếu chết, `docs/trace/trivial/.gitkeep` còn | `git ls-files` cho 4 đường dẫn → rỗng; `grep -c 'New technology adoption' docs/architecture.md` → 0; `docs/trace/trivial/.gitkeep` còn |
+| PR2 — 17 file `legacy-units/` xoá, `check:docs --all` pass, giảm ~1,4 MB                                            | `git ls-files docs/content-reserve/feature-015` → rỗng; `du -sh docs/content-reserve` → 84 KB (từ 1,5 MB)                              |
+| PR3 — facade xoá, không còn import qua `lib/content`, profile web pass                                              | `git ls-files src/lib/content.ts` → rỗng; `grep -rn "lib/content'" src tests` → 0 kết quả; evidence §PR3 11/11 gate                    |
+| Mỗi PR có handoff với SHA + evidence                                                                                | Tài liệu này có 3 mục `### Validation evidence` (§PR1/§PR2/§PR3), mỗi mục kèm base/candidate SHA và CI reference                       |
+
+Kết quả tổng: file tracked 251 → 231; CI trên `main` tại `3df0466` pass toàn bộ
+gồm cả job `deploy`.
+
+### Deviation
+
+1. **`CHANGELOG.md` §Removed thêm ở PR2** — ngoài phạm vi "xoá 17 file" của plan;
+   lý do và cơ sở ghi ở §PR2 mục Deviations.
+2. **PR3 xếp chồng trên nhánh PR2** thay vì chờ PR2 merge, theo dispatch của
+   tuann2; ghi ở §PR2 và §PR3.
+3. **Snapshot binding** — finding Medium của Independent Review, đóng ở trạng
+   thái accepted-with-documentation; xem §PR3 Remediation round 1.
+4. **Planner cũng đóng vai Implementer.** Bảng Execution assignment giao cả
+   Planner, Implementer và Release Assessor cho Claude Code. Điều này đi ngược
+   Responsibility Matrix trong `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`,
+   dòng 51: Planner **must not** "implement substantial features". Tiền lệ
+   WORKFLOW-007 coi "script + CI wiring" là substantial và bắt delegate; PR3 sửa
+   14 file và đụng 8 module `src/` nên ít nhất là tương đương. PR1/PR2 (xoá file
+   không consumer) thì nằm trong ranh giới Claude sửa trực tiếp được.
+   - Phát hiện bởi: tuann2, sau khi cả 3 PR đã merge.
+   - Giảm thiểu thực tế: PR3 — phần duy nhất vượt ranh giới — đã qua Independent
+     Review bằng execution Codex riêng biệt, read-only, không thừa hưởng
+     transcript của implementer, và reviewer soi đúng các bề mặt mà một
+     implementer tự đánh giá dễ thiên vị (ánh xạ tên, phạm vi `vi.mock`,
+     consumer bỏ sót, chữ ký export) — không có finding nào về mã.
+   - Nguyên nhân gốc: ranh giới "việc gì Claude sửa trực tiếp / việc gì phải
+     delegate" từng nằm ở `CLAUDE.md` §"What Claude may edit directly", bị gỡ ở
+     commit `5e4edcb` (WORKFLOW-004B) và không được chuyển sang tài liệu
+     governance nào. Hiện chỉ còn một ô trong Responsibility Matrix.
+   - Disposition: tuann2 quyết định không làm lại PR3; ghi nhận deviation và
+     dừng ở đây (dispatch ngày 2026-07-26).
+
+### Follow-up còn mở, ngoài phạm vi WORKFLOW-008
+
+1. Đưa ranh giới delegate/sửa-trực-tiếp trở lại governance hiện hành — cần plan
+   riêng; sửa `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` là CRITICAL.
+2. Evidence bind theo tree hash nên handoff in-tree không tự bind được vào cây
+   chứa nó (xem §PR3 Remediation round 1) — cần đổi thiết kế `scripts/evidence.ts`.
+3. `PATH_GATE_RULES` không phủ file ở thư mục gốc (`CHANGELOG.md`, `.gitkeep`)
+   nên mọi sửa nhỏ ở đó kéo cả profile `full`. Sửa là nới phạm vi gate ⇒ cần
+   phê duyệt riêng kèm deviation theo `AGENTS.md` mục 6.

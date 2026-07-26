@@ -80,13 +80,15 @@ handoff theo `docs/handoffs/_TEMPLATE.md` ghi base/candidate SHA. PR2 chỉ bắ
 
 ## Acceptance and recovery
 
-- [ ] PR1: 4 `.gitkeep` và `docs/api/` đã xoá; `docs/architecture.md` không còn
-      trỏ mục đã mất; gate pass; `docs/trace/trivial/.gitkeep` còn nguyên.
-- [ ] PR2: 17 file `legacy-units/` đã xoá; `npm run check:docs -- --all` pass;
-      repo giảm ~1.4 MB.
-- [ ] PR3: `src/lib/content.ts` đã xoá; không còn kết quả cho
-      `grep -rn "lib/content'" src tests`; profile web pass.
-- [ ] Mỗi PR có handoff riêng với base/candidate SHA và evidence tương ứng.
+- [x] PR1 (#29, merge `1180941`): 4 `.gitkeep` và `docs/api/` đã xoá;
+      `docs/architecture.md` không còn trỏ mục đã mất; 15/15 gate pass;
+      `docs/trace/trivial/.gitkeep` còn nguyên.
+- [x] PR2 (#30, merge `d98e37e`): 17 file `legacy-units/` đã xoá;
+      `check:docs --all` pass; `docs/content-reserve/` 1,5 MB → 84 KB.
+- [x] PR3 (#31, merge `3df0466`): `src/lib/content.ts` đã xoá;
+      `grep -rn "lib/content'" src tests` không còn kết quả; profile web 11/11 pass.
+- [x] Mỗi PR có mục handoff riêng với base/candidate SHA và evidence tương ứng
+      trong `docs/handoffs/WORKFLOW-008-implementation.md` (§PR1/§PR2/§PR3).
 - Security considerations: không đụng auth, RLS, secret, dependency, CI/deploy.
 - API/database impact: không.
 - Test strategy: gate do classifier chọn cho từng PR; PR3 rà thêm thủ công 5
