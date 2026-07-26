@@ -2,8 +2,8 @@
 
 ## Status
 
-- Remediation state: REVIEWING — remediation round 1 đã đóng 5 finding; chờ
-  re-review xác nhận hoặc quyết định của Human Approver, xem Release Assessment.
+- Remediation state: RELEASE_READY — remediation round 1 đóng 7 finding,
+  re-review vòng 2 APPROVE. Chờ Human Approval để merge.
 - Risk tier / categories / escalation rationale: ELEVATED; governance policy
   governing role acceptance and release-assessment recording. The approved plan
   classifies uncertain governance impact at the higher plausible tier.
@@ -160,6 +160,33 @@ candidate, đã đánh dấu STALE và sinh lại sau commit cuối.
   cả hai, cộng F-2 mà orchestrator đã đọc nhiều lần và bỏ sót. F-4 được tìm ra
   độc lập bằng hai đường: agy qua đọc văn bản, orchestrator qua sự cố thật khi
   một agent từ chối nhận vai vì dispatch thiếu bằng chứng xác nhận.
+- **Re-review vòng 2 (xác nhận đóng finding) — verdict APPROVE.** Cùng model
+  `claude-opus-4-6-thinking`, execution mới, trên candidate remediation
+  `26d9f3d`+. tuann2 xác nhận riêng vòng này ngày 2026-07-26. Kết luận: **7/7
+  finding ĐÓNG ĐÚNG, không có finding mới.**
+- Reviewer vòng 2 không đóng dấu cho qua mà nêu hai **rủi ro tồn dư** có ý thức,
+  và tự lập luận vì sao không nâng thành finding:
+  - **F-2 còn một lối lách lý thuyết:** agent ghi một câu tối thiểu không phải
+    placeholder (ví dụ "Assessed. No issues.") sẽ thoát điều kiện "only
+    placeholders or template defaults". Reviewer phân loại đây là **gian lận chủ
+    động**, khác bản chất với lối lách cũ vốn chỉ cần _không làm gì_. Không rule
+    cú pháp nào chặn được gian lận có chủ đích; phòng tuyến đúng là vòng review
+    độc lập, vốn đã bắt buộc ở tier này. Cải thiện vẫn có ý nghĩa: từ bypass
+    không tốn công thành bypass phải chủ động bịa nội dung, dễ lộ khi review.
+  - **F-4 dựa trên tin cậy:** agent nhận không có kênh độc lập để xác minh ba
+    trường (who, date, original-dispatch content) mà bên điều phối chuyển tiếp.
+    Reviewer ghi nhận đây là trade-off có ý thức: trước fix thì không mở rộng
+    được vì mọi agent phải hỏi thẳng con người; lời văn dùng "**may** rely" nên
+    agent vẫn giữ quyền từ chối bản chuyển tiếp và hỏi lại. Việc bịa sẽ lộ khi
+    đọc role execution log.
+- Reviewer vòng 2 cũng kiểm chính mục Release Assessment xem có tự bào chữa
+  không, và kết luận là không: assessor tự khai xung đột lợi ích bất lợi cho
+  mình, tự bác điều khoản docs-only mà lẽ ra có thể viện dẫn để cho qua, và
+  không tự nâng state.
+- **Giới hạn của cả hai vòng review:** agy không chạy được tool nên không tự
+  kiểm được SHA, tree hash, hay exit code của gate. Nó tự ghi rõ điều đó. Những
+  hạng mục ấy do orchestrator kiểm bằng lệnh và do CI trên PR #37 xác nhận, chứ
+  không phải do reviewer xác nhận.
 - Batch-content exception authorization: n/a
 
 ## Release Assessment
@@ -168,8 +195,7 @@ Thực hiện bởi Claude Code (vai do tuann2 xác nhận riêng ngày 2026-07-
 khi vòng Independent Review đóng. Vai này khác Implementer (Codex), đúng ràng
 buộc tách vai.
 
-**Kết luận: CHƯA release-ready. Cần một trong hai điều kiện dưới đây trước khi
-merge.**
+**Kết luận: RELEASE_READY (đây là đánh giá, không phải Human Approval).**
 
 ### Đã kiểm và đạt
 
@@ -182,32 +208,31 @@ merge.**
 | Vòng review theo tier          | Đã có, verdict CHANGES_REQUESTED, 5 finding, tất cả đã đóng                     |
 | `git diff --stat`              | 4 file, thay đổi giới hạn trong phạm vi đã duyệt                                |
 
-### Vì sao vẫn chưa release-ready
+### Điều kiện còn thiếu ở lần đánh giá đầu, nay đã thoả
 
-Reviewer đọc candidate `e601297`. Bản remediation `26d9f3d` **chưa execution độc
-lập nào đọc**. Mà nội dung sửa không vụn vặt: F-2 thay đổi chính điều kiện kích
-hoạt của quy tắc trung tâm, F-4 thêm nghĩa vụ mới vào `AGENTS.md`. Tier ELEVATED
-đòi một reviewer tươi đọc từng dòng thay đổi.
+Lần đánh giá đầu tôi kết luận CHƯA release-ready vì reviewer mới chỉ đọc
+candidate `e601297`, còn bản remediation `26d9f3d` chưa execution độc lập nào
+đọc — mà F-2 sửa chính điều kiện kích hoạt của quy tắc trung tâm và F-4 thêm
+nghĩa vụ mới vào `AGENTS.md`.
 
-Architecture có điều khoản "documentation-only change does not invalidate
-completed tier reviews", và thay đổi này đúng là docs-only. Nhưng viện dẫn nó ở
-đây sẽ là lạm dụng: điều khoản đó dành cho sửa tài liệu _sau khi_ mã đã được
-validate, không dành cho trường hợp bản thân văn bản quản trị là đối tượng review
-và vừa bị sửa ở đúng chỗ trọng yếu.
+tuann2 chọn đường re-review thay vì chấp nhận deviation. Vòng 2 đã chạy và ra
+APPROVE với 7/7 finding đóng đúng. Điều kiện thiếu nay đã thoả, nên đánh giá
+chuyển sang RELEASE_READY.
 
-Assessor cũng không độc lập với remediation: chính tôi soạn danh sách 7 điểm sửa
-và giao cho Implementer. Tôi tự xác nhận công việc do mình chỉ đạo thì không phải
-kiểm tra độc lập — đó đúng là kiểu tự cấp phép mà plan này sinh ra để chặn.
+Tôi giữ nguyên ghi nhận rằng assessor không độc lập với remediation (chính tôi
+soạn danh sách điểm sửa). Điều bù lại là kết luận release-ready **không dựa vào
+phán đoán của tôi** mà dựa vào một vòng review độc lập trên đúng bản remediation.
 
-### Hai đường đi hợp lệ
+### Rủi ro tồn dư, chấp nhận có ghi chép
 
-1. **Re-review xác nhận** trên `26d9f3d` — chỉ cần kiểm 6 điểm sửa có đóng đúng
-   finding không, phạm vi hẹp hơn vòng đầu nhiều.
-2. **Human Approver chấp nhận deviation có ghi chép**, dựa trên lý do: remediation
-   là docs-only, từng điểm sửa bám sát finding, và gate đã xanh. Nếu chọn đường
-   này thì phải ghi thành deviation ở mục trên, không phải bỏ qua im lặng.
+Hai rủi ro reviewer nêu ở mục Independent verification (lối lách lý thuyết của
+F-2, và tin cậy dựa trên chuyển tiếp của F-4) không được đóng bằng thay đổi này.
+Cả hai đều thuộc loại chỉ chặn được bằng vòng review độc lập chứ không bằng câu
+chữ, và cả hai đã ở trạng thái tốt hơn trước thay đổi. Ghi nhận để lần sau ai
+siết tiếp thì biết chỗ.
 
-Quyền quyết định thuộc tuann2. Assessor không tự nâng state lên `RELEASE_READY`.
+Quyền quyết định merge và phê duyệt phát hành vẫn thuộc tuann2. RELEASE_READY ở
+đây là đánh giá của assessor, không thay thế Human Approval.
 
 <!-- Keep this handoff aligned with docs/handoffs/_TEMPLATE.md. Regenerate after
 remediation; mark superseded evidence STALE. -->
