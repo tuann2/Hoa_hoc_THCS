@@ -2,7 +2,8 @@
 
 ## Status
 
-- Remediation state: REVIEWING
+- Remediation state: REVIEWING — remediation round 1 đã đóng 5 finding; chờ
+  re-review xác nhận hoặc quyết định của Human Approver, xem Release Assessment.
 - Risk tier / categories / escalation rationale: ELEVATED; governance policy
   governing role acceptance and release-assessment recording. The approved plan
   classifies uncertain governance impact at the higher plausible tier.
@@ -52,54 +53,57 @@
 
 ## Validation evidence
 
-**Ghi chú của orchestrator.** Job Implementer (Codex,
+**Ghi chú của orchestrator.** Job Implementer vòng 1 (Codex,
 `task-ms1xiuhs-pknldf`) không bao giờ báo kết thúc: log dừng ở "Turn started"
-lúc 15:04:50 suốt 38 phút, trong khi các job khoẻ mạnh ghi log liên tục. Bốn file
-đã được ghi xong trong khoảng 15:05:50 → 15:07:16, và orchestrator đã kiểm từng
-file không bị cắt giữa chừng trước khi dùng.
+lúc 15:04:50 suốt 38 phút, trong khi các job khoẻ mạnh ghi log liên tục. Bốn
+file đã ghi xong trong khoảng 15:05:50 → 15:07:16 và orchestrator kiểm từng file
+không bị cắt giữa chừng trước khi dùng. Remediation round 1 do một job Codex
+khác thực hiện và kết thúc bình thường trong 88 giây.
 
-Evidence do Implementer sinh ra phải **thay thế**, không phải vì sai mà vì nó
-dùng manifest fallback: sandbox không ghi được git index
-(`unable to create temporary file: Read-only file system`), nên không bind được
-snapshot. Implementer đã khai báo điều đó trung thực kèm nguyên văn lỗi.
+Evidence của Implementer phải thay vì sandbox không ghi được git index nên nó
+dùng manifest fallback (đã khai báo trung thực kèm nguyên văn lỗi). Bản evidence
+thứ hai của orchestrator cũng bị bỏ: nó được đo **trước** khi handoff sửa xong
+rồi commit, nên không bind vào candidate — chính là finding F-7.
 
-**STALE — evidence này không bind với candidate hiện tại và không được dùng cho
-release assessment.** Orchestrator chạy lại trên cùng worktree:
-`npm run gates -- --changed-from=f04e2b14` → pass, profile `docs`; và
-`npm run evidence -- --changed-from=f04e2b14`, snapshot **git-tree**
-`7a45c34a7aa16392fb5617d588a771bb9f34b9d1`, 3/3 gate exit 0, UTC
-2026-07-26T15:44:47.837Z → 2026-07-26T15:44:55.876Z,
-`snapshot_fallback_reason: null`. Orchestrator sẽ sinh evidence mới sau commit
-cuối cùng.
+**Bản dưới đây bind chính xác.** Đo trên worktree sạch ngay sau commit
+`26d9f3df48ff4b43086f266262bd3eb0b6686123`:
+`npm run evidence -- --changed-from=f04e2b14`, 3/3 gate exit 0, profile `docs`,
+`snapshot_fallback_reason: null`, snapshot git-tree
+`43a4a2f9d09edcc20c7d69554871dd911e5bf922` — **bằng đúng tree của commit
+`26d9f3d`** (`git rev-parse 26d9f3d^{tree}` cho cùng giá trị).
+
+Độ lệch còn lại là chính khối JSON này, được thêm ở commit kế tiếp. Evidence
+bind vào `26d9f3d` chứ không bind vào commit chứa nó — giới hạn cố hữu của
+handoff nằm trong cây mã, đã ghi thành follow-up mở ở handoff WORKFLOW-008.
 
 ```json
 {
-  "base_sha": "f04e2b14d28a0974bd8f61814c5194eedbea5768",
+  "base_sha": "26d9f3df48ff4b43086f266262bd3eb0b6686123",
   "build_inputs": [
     {
       "path": ".env.example",
       "sha256": "6fda9c2a4670086a9b4784c5f146ae59df4ecb2f00410b89973483837bd16198"
     }
   ],
-  "candidate_sha": "UNCOMMITTED",
-  "finished_at": "2026-07-26T15:44:55.876Z",
+  "candidate_sha": "26d9f3df48ff4b43086f266262bd3eb0b6686123",
+  "finished_at": "2026-07-26T22:57:36.889Z",
   "gate_results": [
     {
       "id": "git-diff-check",
       "command": ["git", "diff", "--check"],
-      "durationMs": 9,
+      "durationMs": 5,
       "exitCode": 0
     },
     {
       "id": "format-check",
       "command": ["npm", "run", "format:check"],
-      "durationMs": 7455,
+      "durationMs": 7087,
       "exitCode": 0
     },
     {
       "id": "docs-check",
       "command": ["npm", "run", "check:docs", "--", "--all"],
-      "durationMs": 419,
+      "durationMs": 410,
       "exitCode": 0
     }
   ],
@@ -109,9 +113,9 @@ cuối cùng.
   "result": "pass",
   "snapshot_fallback_reason": null,
   "schema_version": 1,
-  "started_at": "2026-07-26T15:44:47.837Z",
+  "started_at": "2026-07-26T22:57:29.260Z",
   "validated_snapshot": {
-    "id": "7a45c34a7aa16392fb5617d588a771bb9f34b9d1",
+    "id": "43a4a2f9d09edcc20c7d69554871dd911e5bf922",
     "kind": "git-tree"
   }
 }
@@ -160,8 +164,50 @@ candidate, đã đánh dấu STALE và sinh lại sau commit cuối.
 
 ## Release Assessment
 
-- Not performed: no Release Assessor has received separate human confirmation.
-- This handoff does not declare `RELEASE_READY`.
+Thực hiện bởi Claude Code (vai do tuann2 xác nhận riêng ngày 2026-07-26), sau
+khi vòng Independent Review đóng. Vai này khác Implementer (Codex), đúng ràng
+buộc tách vai.
+
+**Kết luận: CHƯA release-ready. Cần một trong hai điều kiện dưới đây trước khi
+merge.**
+
+### Đã kiểm và đạt
+
+| Hạng mục                       | Kết quả                                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------- |
+| Phạm vi khớp plan              | 4 file, không file nào ngoài `allowed_paths`                                    |
+| 5 tiêu chí acceptance của plan | Đạt cả 5; tiêu chí "handoff dùng chính template mới" là phép thử thật và đã đạt |
+| Evidence bind snapshot         | Bind chính xác: snapshot `43a4a2f9` = tree của commit `26d9f3d`                 |
+| Gate                           | 3/3 exit 0, profile `docs`                                                      |
+| Vòng review theo tier          | Đã có, verdict CHANGES_REQUESTED, 5 finding, tất cả đã đóng                     |
+| `git diff --stat`              | 4 file, thay đổi giới hạn trong phạm vi đã duyệt                                |
+
+### Vì sao vẫn chưa release-ready
+
+Reviewer đọc candidate `e601297`. Bản remediation `26d9f3d` **chưa execution độc
+lập nào đọc**. Mà nội dung sửa không vụn vặt: F-2 thay đổi chính điều kiện kích
+hoạt của quy tắc trung tâm, F-4 thêm nghĩa vụ mới vào `AGENTS.md`. Tier ELEVATED
+đòi một reviewer tươi đọc từng dòng thay đổi.
+
+Architecture có điều khoản "documentation-only change does not invalidate
+completed tier reviews", và thay đổi này đúng là docs-only. Nhưng viện dẫn nó ở
+đây sẽ là lạm dụng: điều khoản đó dành cho sửa tài liệu _sau khi_ mã đã được
+validate, không dành cho trường hợp bản thân văn bản quản trị là đối tượng review
+và vừa bị sửa ở đúng chỗ trọng yếu.
+
+Assessor cũng không độc lập với remediation: chính tôi soạn danh sách 7 điểm sửa
+và giao cho Implementer. Tôi tự xác nhận công việc do mình chỉ đạo thì không phải
+kiểm tra độc lập — đó đúng là kiểu tự cấp phép mà plan này sinh ra để chặn.
+
+### Hai đường đi hợp lệ
+
+1. **Re-review xác nhận** trên `26d9f3d` — chỉ cần kiểm 6 điểm sửa có đóng đúng
+   finding không, phạm vi hẹp hơn vòng đầu nhiều.
+2. **Human Approver chấp nhận deviation có ghi chép**, dựa trên lý do: remediation
+   là docs-only, từng điểm sửa bám sát finding, và gate đã xanh. Nếu chọn đường
+   này thì phải ghi thành deviation ở mục trên, không phải bỏ qua im lặng.
+
+Quyền quyết định thuộc tuann2. Assessor không tự nâng state lên `RELEASE_READY`.
 
 <!-- Keep this handoff aligned with docs/handoffs/_TEMPLATE.md. Regenerate after
 remediation; mark superseded evidence STALE. -->
