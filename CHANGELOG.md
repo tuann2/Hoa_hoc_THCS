@@ -35,6 +35,10 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `WORKFLOW-006` rà soát nguyên nhân input token cao và dọn drift giữa các nhánh (2026-07-26).
 - `WORKFLOW-007` thêm gate CI `branch-context-drift` cảnh báo khi context bắt buộc của nhánh đã lệch so với base (warn-only, không chặn PR) (2026-07-26).
 
+### Removed
+
+- `WORKFLOW-008` xoá 17 file nội dung danh mục A/B cũ dưới `docs/content-reserve/feature-015/legacy-units/` (1,4 MB) — đây là nguồn tham chiếu cho các vòng R2–R4 của FEATURE-015, đã hết vai trò khi danh mục `n1`–`n11` hoàn tất. Nội dung vẫn truy hồi được từ git history (2026-07-26).
+
 ### Fixed
 
 - `FEATURE-010` sửa lỗi 404 khi bấm liên kết xác nhận email / đặt lại mật khẩu do Supabase gửi: cả hai luồng nay vào đúng màn hình `/auth` trên bản deploy GitHub Pages lẫn dev cục bộ (2026-07-10).
