@@ -24,6 +24,11 @@ grants them. An implementer never self-certifies release readiness.
   exact-snapshot evidence, and create the implementation handoff from its
   template. Regenerate the handoff after remediation and mark old evidence
   `STALE`.
+- Before fixing a remediation finding, enumerate every code path the finding
+  applies to and record that list in the handoff; fix all of them in the same
+  round. A fix that covers only the path the reviewer happened to point at,
+  leaving a structurally identical path untouched, causes an avoidable extra
+  remediation round.
 - Report rather than improvise when the plan conflicts with the repository or
   the effective risk tier rises.
 

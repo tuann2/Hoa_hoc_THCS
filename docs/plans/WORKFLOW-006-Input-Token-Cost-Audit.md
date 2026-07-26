@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: DRAFT
+- Status: APPROVED
 - Owner: Claude Code
-- Approved by / date: pending
+- Approved by / date: tuann2, 2026-07-26
 - Risk tier: NORMAL
 - Risk categories and escalation rationale: chỉ đụng `docs/**` +
   `.codex/config.toml` (config, không phải architecture/policy —
@@ -51,19 +51,10 @@
     số liệu billing tương lai, để đóng gap 1–3 đã ghi trong
     `docs/measurements/FEATURE-016-token-cost.md` §4.
   - Phase D — Dọn trực tiếp (trong "What Claude may edit directly"):
-    - D.1: cập nhật tên model trong `.codex/config.toml` — hiện là
-      `gpt-5.4`, chính comment đầu file đã tự ghi "model names deprecate
-      fast, check `/status`/docs trước khi khoá". Đây thuần là config
-      correction: `AGENTS.md` (SSOT hành vi agent sau 004B) chủ động
-      provider-neutral, không nêu tên model nào, nên việc này không đổi
-      policy. **Không** merge/hoà giải theo nhánh
-      `chore/model-routing-config` — nhánh đó là một commit `chore` lẻ
-      (`00d1224`), chưa từng qua plan/approval nào, không phải nguồn sự
-      thật đã duyệt; dùng nó làm tham khảo, không sao chép mù.
-    - D.2: dọn 2 file đang bẩn (`docs/plans/_TEMPLATE.md`,
-      `docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md`)
-      — cùng 2 file đã làm hỏng `format:check` cả 3 vòng validation của
-      FEATURE-016 (đã ghi trong `FEATURE-016-token-cost.md` §6.2).
+    - D.1, D.2: **đã hoàn tất trước khi thực thi plan này** — xem "Kiểm
+      tra tiền-thực-thi (2026-07-26)" ngay dưới. Không còn việc gì để
+      làm ở hai mục này; giữ lại trong hồ sơ để không mất audit trail,
+      không phải phần Implementer cần chạy.
     - D.3: thêm trường "execution profile + degradation path" bắt buộc
       vào `docs/plans/_TEMPLATE.md`.
     - D.4: thêm dòng bắt remediation liệt kê đủ code path của finding
@@ -73,6 +64,32 @@
       `git-metadata-write` đã ghi.
   - Phase E — Báo cáo cuối: cập nhật
     `docs/measurements/FEATURE-016-token-cost.md` với số liệu Phase A.
+
+### Kiểm tra tiền-thực-thi (2026-07-26) — D.1, D.2 đã xong từ trước
+
+Trước khi bắt đầu Implementer, kiểm tra lại hai mục D.1/D.2 thì thấy cả
+hai đã ở trạng thái mong muốn, không rõ từ commit nào (không phải do
+plan này làm):
+
+- **D.1** — `.codex/config.toml` trên `main` hiện tại (đã commit ở
+  `8fb5b0e`, trước cả khi plan này được viết) là:
+  ```
+  model = "gpt-5.6-terra"
+  model_reasoning_effort = "high"
+  ```
+  kèm comment ghi rõ "gpt-5.4 deployment retired (404); migration
+  gpt-5.4 -> gpt-5.6-terra" — tức đúng việc D.1 yêu cầu đã được làm.
+  Câu "hiện là `gpt-5.4`" ở mục D.1 gốc phía trên đã lỗi thời ngay từ
+  lúc soạn plan, có thể do soạn dựa trên bản cũ hơn.
+- **D.2** — `npx prettier --check docs/plans/_TEMPLATE.md
+docs/plans/WORKFLOW-005-Architecture-TRIVIAL-Reference-Fix.md` (chạy
+  2026-07-26): "All matched files use Prettier code style!" — cả hai
+  file đã sạch, không còn gì để dọn.
+
+Hệ quả: scope thực thi của Implementer chỉ còn D.3, D.4, D.5 (xem D.1,
+D.2 đã sửa lại ở trên) cộng Phase A/B/E. Không sửa `.codex/config.toml`
+trong lần thực thi này.
+
 - Out of scope (đề xuất, không làm trong plan này):
   - Script/CI dò branch-context-drift tự động — chuyển sang
     `WORKFLOW-007` (ELEVATED, governance-enforcement tooling, khác lớp
@@ -125,9 +142,8 @@ Execution assignment:
    hiện tại bằng `git cat-file`; với nhánh lệch, tìm điểm rẽ nhánh bằng
    `git merge-base --is-ancestor 7d9a0fb <branch>`. Ghi bảng đầy đủ vào
    handoff.
-2. **Phase D (Claude trực tiếp), theo thứ tự D.2 trước:** dọn 2 file
-   bẩn trước (để không nhiễu prettier/docs-check của các bước sau); rồi
-   D.1 (model string), D.3, D.4, D.5. Mỗi bước chạy
+2. **Phase D (Claude trực tiếp):** D.1, D.2 đã xong (xem "Kiểm tra
+   tiền-thực-thi"); chạy D.3, D.4, D.5. Mỗi bước chạy
    `npx prettier --check` + `npm run check:docs`.
 3. **Phase B (Claude, thiết kế + ghi, không code nếu không cần):** viết
    một mục ngắn vào `docs/measurements/` mô tả cách gắn phase-tag cho
@@ -142,21 +158,21 @@ Execution assignment:
 
 ## Risks and controls
 
-| Risk                                                                                                   | Impact                           | Mitigation                                                                                  |
-| ------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| D.1 vô tình khoá lại một model tên sai/đã ngừng                                                        | Codex fail ngay lần chạy kế tiếp | Xác minh tên model hiện hành qua `/status`/tài liệu chính thức trước khi ghi, không đoán    |
-| Phase A không tìm hết nhánh bị lệch (nhánh đã xoá cục bộ nhưng còn remote, hoặc PR đang mở không sync) | Kết luận phạm vi sự cố thiếu     | Quét cả `git branch -r`; ghi rõ giới hạn "chỉ xét nhánh còn tồn tại tại thời điểm điều tra" |
-| Kết luận Phase A/E bị đọc nhầm thành lý do nới lỏng Independent Verification                           | Vi phạm Trust Model              | Plan này không đổi bất kỳ yêu cầu review nào; ghi rõ trong Out of scope                     |
+| Risk                                                                                                   | Impact                       | Mitigation                                                                                  |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------- |
+| Phase A không tìm hết nhánh bị lệch (nhánh đã xoá cục bộ nhưng còn remote, hoặc PR đang mở không sync) | Kết luận phạm vi sự cố thiếu | Quét cả `git branch -r`; ghi rõ giới hạn "chỉ xét nhánh còn tồn tại tại thời điểm điều tra" |
+| Kết luận Phase A/E bị đọc nhầm thành lý do nới lỏng Independent Verification                           | Vi phạm Trust Model          | Plan này không đổi bất kỳ yêu cầu review nào; ghi rõ trong Out of scope                     |
 
 ## Acceptance and recovery
 
 - [ ] Bảng đầy đủ mọi nhánh còn mở, phân loại lệch/không lệch, điểm rẽ
       nhánh, có trong handoff (Phase A).
-- [ ] `.codex/config.toml` dùng tên model hiện hành, đã xác minh
-      (D.1) — không sao chép từ nhánh chưa duyệt.
-- [ ] Hai file bẩn trước đó pass `prettier --check`; template có trường
-      profile+degradation; role contract có dòng remediation-scope;
-      runbook Codex ghi hạn chế `tsx` IPC (D.2–D.5).
+- [x] `.codex/config.toml` dùng tên model hiện hành (D.1) — đã xác nhận
+      xong trước khi thực thi, xem "Kiểm tra tiền-thực-thi".
+- [x] Hai file bẩn trước đó pass `prettier --check` (D.2) — đã xác nhận
+      xong trước khi thực thi.
+- [ ] Template có trường profile+degradation; role contract có dòng
+      remediation-scope; runbook Codex ghi hạn chế `tsx` IPC (D.3–D.5).
 - [ ] `docs/measurements/FEATURE-016-token-cost.md` cập nhật kết quả
       Phase A, không còn dựa trên giả định đã sai (Phase E).
 - [ ] CI xanh trên candidate commit.

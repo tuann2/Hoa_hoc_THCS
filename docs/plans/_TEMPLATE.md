@@ -21,6 +21,9 @@
 - Proposed design:
 - New technology (if any): rationale, alternatives, trade-offs, and required
   human approval before implementation.
+- Execution profile + degradation path: the Implementer's profile (see
+  `docs/runbooks/providers/codex.md` or the equivalent runbook), and the
+  safe degradation path for any capability that profile is known to lack.
 
 ## Delivery plan
 

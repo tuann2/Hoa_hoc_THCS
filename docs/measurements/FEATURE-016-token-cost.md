@@ -143,6 +143,20 @@ phạm vi + dọn trực tiếp); cơ chế tự động ngăn nhánh dài ngày
 `docs/plans/WORKFLOW-007-Branch-Context-Drift-Gate.md` (ELEVATED —
 script/CI, phụ thuộc kết quả điều tra của 006).
 
+**Cập nhật (2026-07-26, WORKFLOW-006 Phase A hoàn tất):** kết quả quét
+đầy đủ mọi nhánh cục bộ + remote còn mở (không dừng ở mẫu thủ công) nằm
+tại `docs/handoffs/WORKFLOW-006-implementation.md` §"Phase A". Xác nhận:
+sự cố là cục bộ ở nhánh sống lâu bị tạo lệch thời điểm 004B merge, không
+lặp lại có hệ thống trên mọi nhánh — đúng kết luận sơ bộ ở trên. Thêm một
+phát hiện mới: `origin/codex/feature-015-chuan-hoa-noi-dung-hoc` (nhánh
+WIP, chưa có billing data) cũng lệch, cùng kiểu với
+`chore/model-routing-config`. Đồng thời sửa lại một điểm: đoạn "đối chiếu
+rộng hơn" phía trên liệt kê `feature/FEATURE-014` như một nhánh lệch còn
+mở — nhưng nhánh đó nay đã **merge vào `main`**, nên không còn là rủi ro
+hiện hành; chỉ hai nhánh còn mở (`chore/model-routing-config`,
+`origin/codex/feature-015-chuan-hoa-noi-dung-hoc`) là phát hiện còn giá
+trị hành động ngay bây giờ.
+
 ### 5.2 Chi phí thật nằm ở model routing, không ở context routing
 
 Sol chiếm **10,4 % request và 9,9 % token nhưng 58,2 % chi phí**. Một
