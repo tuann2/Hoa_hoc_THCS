@@ -2,14 +2,19 @@
 
 ## Status
 
-- Remediation state: VALIDATED
+- Remediation state: RELEASE_READY (chờ người duyệt merge PR #29)
 - Risk tier / categories / escalation rationale: NORMAL — documentation +
   xoá file placeholder không có consumer. Không đụng auth, dependency,
   migration, CI/deploy, architecture hay giá trị số trong nội dung học.
-- Base SHA / candidate SHA: `7548bc8` / UNCOMMITTED khi chạy evidence; candidate
-  commit được ghi bổ sung sau khi push (xem mục Independent verification).
+- Base SHA / candidate SHA: `7548bc8cf27c8e0951fad7ec64bae49648ef9939` /
+  `2193429173e8335a136b50ed042834568707e51a` (nhánh `chore/cleanup-placeholders`,
+  PR #29). Evidence chạy trên worktree trước khi commit — nội dung mã của
+  snapshot và của candidate là một; file handoff này thêm sau nên nằm ngoài.
 - Worktree state and dirty paths: sạch ngoài phạm vi PR1; chỉ 5 file dưới đây.
-- CI reference for exact candidate (when required/available): PENDING
+- CI reference for exact candidate (when required/available): run
+  [30198813843](https://github.com/tuann2/Hoa_hoc_THCS/actions/runs/30198813843)
+  trên `2193429` — `web`, `browser`, `trivial-verify`, `branch-context-drift`
+  đều pass; `deploy` skip đúng thiết kế (chỉ chạy khi push vào `main`).
 
 ## Summary and scope
 
@@ -171,6 +176,6 @@ viết sau đó nên không nằm trong snapshot.
 - Verifier / execution identifier / independence method: tier NORMAL —
   `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` cho phép CI trên đúng candidate
   commit thay cho một reviewer độc lập; plan §Delivery plan chọn đường CI cho PR1.
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Exact candidate CI status: PASS trên `2193429` (run 30198813843).
+- Findings and disposition: không có finding; không cần vòng remediation.
 - Batch-content exception authorization: n/a
