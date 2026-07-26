@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-07-26)
-- Approved by / date:
+- Approved by / date: tuann2, 2026-07-26 (duyệt nội dung plan trong PR #34)
 - Risk tier: NORMAL
 - Risk categories and escalation rationale: documentation (runbook) + config nhỏ
   của công cụ agent. Không đụng mã ứng dụng, gate, CI/deploy, architecture hay
@@ -59,9 +59,9 @@ trong repo ghi dạng `"Claude Opus 4.6 (Thinking)"`, `"Gemini 3.5 Flash (High)"
 Implementer phải chạy `agy models` và kiểm model Codex tại thời điểm thực thi,
 dán kết quả vào handoff — không chép tên từ plan này hay từ nhánh cũ.
 
-**Cần tuann2 quyết khi duyệt plan:** `.codex/config.toml` trên main đang để
-`model_reasoning_effort = "high"`; nhánh cũ đề xuất `"medium"`. Chọn giữ `high`
-hay đổi `medium` cho phiên CLI tương tác.
+**Quyết định của tuann2 (2026-07-26):** `.codex/config.toml` đổi
+`model_reasoning_effort` từ `"high"` xuống `"medium"`. Chỉ áp cho phiên CLI
+tương tác; delegation qua subagent truyền effort riêng theo từng việc.
 
 - New technology: không có.
 - Execution profile + degradation path: Implementer cần repo-rw + shell để chạy
@@ -75,7 +75,7 @@ Execution assignment — mỗi dòng cần xác nhận riêng khi đến lượt
 | Vai trò              | Agent đề xuất                | Model / effort | Lý do                                                                                                                               | Đã xác nhận                                      |
 | -------------------- | ---------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Planner              | Claude Code                  | high           | Đã đối chiếu nhánh cũ với main và chạy `agy models` để phát hiện độ lệch tên.                                                       | tuann2, 2026-07-26 (dispatch "làm việc 1 trước") |
-| Implementer          | Codex (`codex:codex-rescue`) | medium         | Không tự nhận: runbook này quy định chính việc tôi dispatch ai. Codex chạy được `agy models` để lấy ID thật.                        | chưa                                             |
+| Implementer          | Codex (`codex:codex-rescue`) | medium         | Không tự nhận: runbook này quy định chính việc tôi dispatch ai. Codex chạy được `agy models` để lấy ID thật.                        | tuann2, 2026-07-26                               |
 | Independent Reviewer | agy                          | xem ghi chú    | NORMAL không bắt buộc reviewer, nhưng đây là tài liệu về **chính agy** — nó tự liệt kê được model của mình, kiểm ID rẻ và đáng tin. | chưa                                             |
 | Release Assessor     | Claude Code                  | low            | Khác Implementer, đúng yêu cầu tách vai.                                                                                            | chưa                                             |
 
