@@ -8,7 +8,8 @@ mục nào.
 
 ### Status
 
-- Remediation state: RELEASE_READY (chờ người duyệt merge PR #29)
+- Remediation state: RELEASE_READY — đã merge vào `main` qua PR #29
+  (merge commit `1180941`), tuann2 duyệt ngày 2026-07-26.
 - Risk tier / categories / escalation rationale: NORMAL — documentation +
   xoá file placeholder không có consumer. Không đụng auth, dependency,
   migration, CI/deploy, architecture hay giá trị số trong nội dung học.
@@ -190,7 +191,8 @@ viết sau đó nên không nằm trong snapshot.
 
 ### Status
 
-- Remediation state: RELEASE_READY (chờ người duyệt merge PR #30)
+- Remediation state: RELEASE_READY — đã merge vào `main` qua PR #30
+  (merge commit `d98e37e`), tuann2 duyệt ngày 2026-07-26.
 - Risk tier / categories / escalation rationale: NORMAL — documentation. Xoá nội
   dung tham chiếu đã hết vai trò; không đụng mã ứng dụng, nội dung đang phát cho
   học viên, auth, dependency, migration hay CI/deploy.
@@ -368,3 +370,205 @@ UTC 2026-07-26T10:56:21.962Z → 2026-07-26T10:58:43.872Z.
 - Exact candidate CI status: PASS trên `16b3ede` (run 30199388510).
 - Findings and disposition: không có finding; không cần vòng remediation.
 - Batch-content exception authorization: n/a
+
+## PR3 — gỡ facade `src/lib/content.ts`
+
+### Status
+
+- Remediation state: RELEASE_READY — vòng Independent Review đã đóng; tuann2
+  chấp nhận disposition của finding Medium và cấp phép merge ngày 2026-07-26.
+- Risk tier / categories / escalation rationale: NORMAL — small refactoring giữ
+  nguyên hành vi. Chỉ đổi đường import và tên gọi; không đổi logic, không đổi
+  API của `contentCatalog`, không đụng auth, dependency, migration hay CI/deploy.
+- Base SHA / candidate SHA: `16b3edef94e4d6d040eb6ebb33f163a21b37a800` (đỉnh
+  nhánh PR2) / `5ae3769ee0ae113a4f912167815a83f66129bbb9` (nhánh
+  `refactor/drop-content-facade`, PR #31).
+- Worktree state and dirty paths: sạch ngoài phạm vi PR3.
+- CI reference for exact candidate (when required/available): run
+  [30199547218](https://github.com/tuann2/Hoa_hoc_THCS/actions/runs/30199547218)
+  trên `5ae3769` — `web`, `browser`, `trivial-verify`, `branch-context-drift`
+  đều pass. Job `browser` là nơi ba gate `e2e`/`pwa`/`pwa-subpath` chạy, bù cho
+  việc profile `web` cục bộ không bao gồm chúng.
+
+### Summary and scope
+
+- Requested scope and outcome: bước 3 của plan — xoá facade `src/lib/content.ts`
+  và cho mọi consumer import thẳng `src/lib/contentCatalog.ts`. Hoàn thành đủ.
+- Files changed: 14 file — xoá `src/lib/content.ts`; đổi import ở 8 file nguồn
+  (`App.tsx`, `HomeRoute`, `LessonRoute`, `ReviewRoute`, `ProfileRoute`,
+  `ExamRoute`, `adminReports.ts`, `progressSync.ts`) và 5 file test (1 import
+  trực tiếp trong `admin-reports.test.ts`, 4 khối `vi.mock` trong
+  `exam-route`, `lesson-route`, `review-route`, `progress-sync`).
+- `git diff --stat`: 14 files changed, 45 insertions(+), 50 deletions(-).
+
+### Acceptance, decisions, and risks
+
+| Plan acceptance criterion                | Evidence / status                           |
+| ---------------------------------------- | ------------------------------------------- |
+| `src/lib/content.ts` đã xoá              | có trong `git diff --stat` ở trên           |
+| `grep -rn "lib/content'" src tests` rỗng | chạy sau khi sửa: không còn kết quả         |
+| profile web pass                         | 11/11 gate exit 0 — xem Validation evidence |
+
+- Design decisions: ba tên cũ được ánh xạ về tên chuẩn của `contentCatalog` —
+  `getAllUnits` → `getUnitCatalog`, `findUnit` → `findUnitSummary`,
+  `findLesson` → `findLessonSummary`. Bốn module trước đây import tên cũ rồi
+  alias ngược về đúng tên chuẩn (`getAllUnits as getUnitCatalog`); nay import
+  thẳng nên khối import ngắn lại. Không thêm/bớt export nào của `contentCatalog`.
+- Deviations: PR3 xếp chồng trên nhánh PR2 thay vì chờ PR2 merge (xem deviation
+  (2) ở mục PR2). Base của PR là `chore/drop-feature-015-legacy-units`; sau khi
+  PR2 merge, GitHub tự trỏ base về `main`.
+- Blockers: không.
+- Remaining risks / follow-up: 4 khối `vi.mock` nay mock thẳng
+  `src/lib/contentCatalog`. Vì `contentLoader` không đi qua module này nên phạm
+  vi mock không đổi so với trước; đã xác nhận bằng bộ test route pass đầy đủ.
+
+### Validation evidence
+
+`npm run evidence -- --changed-from=16b3edef94e4d6d040eb6ebb33f163a21b37a800`,
+snapshot git-tree `8576426c53d8a6894d92cc7a7a1d0f9410af2f04`, profile `web`,
+11/11 gate exit 0, UTC 2026-07-26T11:05:19.069Z → 2026-07-26T11:06:17.281Z.
+Ba gate browser (`e2e`, `pwa`, `pwa-subpath`) không nằm trong profile `web` nên
+chạy ở job `browser` của CI trên đúng candidate.
+
+```json
+{
+  "base_sha": "16b3edef94e4d6d040eb6ebb33f163a21b37a800",
+  "build_inputs": [
+    {
+      "path": ".env.example",
+      "sha256": "6fda9c2a4670086a9b4784c5f146ae59df4ecb2f00410b89973483837bd16198"
+    }
+  ],
+  "candidate_sha": "UNCOMMITTED",
+  "finished_at": "2026-07-26T11:06:17.281Z",
+  "gate_results": [
+    {
+      "id": "git-diff-check",
+      "command": ["git", "diff", "--check"],
+      "durationMs": 8,
+      "exitCode": 0
+    },
+    {
+      "id": "format-check",
+      "command": ["npm", "run", "format:check"],
+      "durationMs": 6812,
+      "exitCode": 0
+    },
+    {
+      "id": "content-catalog",
+      "command": ["npm", "run", "check:content-catalog"],
+      "durationMs": 361,
+      "exitCode": 0
+    },
+    {
+      "id": "content-validation",
+      "command": ["npm", "run", "validate-content"],
+      "durationMs": 366,
+      "exitCode": 0
+    },
+    {
+      "id": "lint",
+      "command": ["npm", "run", "lint"],
+      "durationMs": 13524,
+      "exitCode": 0
+    },
+    {
+      "id": "typecheck",
+      "command": ["npm", "run", "typecheck"],
+      "durationMs": 6230,
+      "exitCode": 0
+    },
+    {
+      "id": "unit-tests",
+      "command": ["npm", "test"],
+      "durationMs": 23196,
+      "exitCode": 0
+    },
+    {
+      "id": "production-build",
+      "command": ["npm", "run", "build:app"],
+      "durationMs": 5495,
+      "exitCode": 0
+    },
+    {
+      "id": "bundle-check",
+      "command": ["npm", "run", "check:bundle"],
+      "durationMs": 362,
+      "exitCode": 0
+    },
+    {
+      "id": "dependency-audit",
+      "command": ["node", "--import", "tsx", "scripts/check-audit.ts"],
+      "durationMs": 1149,
+      "exitCode": 0
+    },
+    {
+      "id": "license-check",
+      "command": ["npm", "run", "check:licenses"],
+      "durationMs": 567,
+      "exitCode": 0
+    }
+  ],
+  "lockfile_sha256": "fcb9e26c85ffd1a43eec0a56a0cd2cb9b0a6d3a543e68f941989f03416f9c656",
+  "node_version": "v24.16.0",
+  "npm_version": "11.13.0",
+  "result": "pass",
+  "snapshot_fallback_reason": null,
+  "schema_version": 1,
+  "started_at": "2026-07-26T11:05:19.069Z",
+  "validated_snapshot": {
+    "id": "8576426c53d8a6894d92cc7a7a1d0f9410af2f04",
+    "kind": "git-tree"
+  }
+}
+```
+
+### Independent verification
+
+- Verifier / execution identifier / independence method: Codex, execution
+  `ae5bdf3c20d643303`, effort medium — thread mới (`--fresh`), envelope
+  `request_class: independent-review`, mọi quyền ghi = false, không nhận
+  transcript của implementer. Đúng vai đề xuất trong plan, tuann2 xác nhận
+  ngày 2026-07-26.
+- Exact candidate CI status: PASS trên `5ae3769` (run 30199547218).
+- Findings and disposition: verdict CHANGES_REQUESTED, **1 finding Medium**, xem
+  vòng remediation dưới đây. Reviewer xác nhận không có finding nào về mã:
+  ánh xạ ba tên là alias đúng của facade đã xoá, `contentCatalog.ts` không đổi;
+  không còn import/dynamic import/require nào tới `lib/content`; bốn khối
+  `vi.mock` giữ nguyên phạm vi cũ vì `contentLoader` không import
+  `contentCatalog`, nên không consumer nào bị mock ngoài ý định.
+- Batch-content exception authorization: n/a
+
+### Remediation round 1 — snapshot binding
+
+**Finding (Medium).** Evidence không bind vào đúng cây của candidate.
+Handoff ghi evidence tree `8576426c53d8a6894d92cc7a7a1d0f9410af2f04`, trong khi
+candidate `5ae3769` có tree `c6bee4d958cf5a6150bdc41a3297d3fbd6eeb548`.
+
+**Xác minh lại (orchestrator, độc lập với báo cáo).**
+`git diff --stat 8576426… 5ae3769^{tree}` → đúng 1 file khác nhau:
+`docs/handoffs/WORKFLOW-008-implementation.md`, 157 insertions(+), 1 deletion(-).
+Mọi đường dẫn thuộc bề mặt rủi ro (`src/`, `tests/`, `content/`, file cấu hình,
+lockfile) giống nhau từng byte. Reviewer kết luận: không cần sửa mã.
+
+**Disposition: chấp nhận có điều kiện, không chạy lại evidence.**
+
+1. Không rerun evidence: mã không đổi, và role contract của Independent Reviewer
+   cấm chạy lại validation đã pass chỉ để tạo lại log.
+2. Nguyên nhân là tính chất hệ thống, không phải sai sót của PR này: handoff nằm
+   trong chính cây mã, nên ghi hash của cây vào handoff sẽ làm đổi hash đó. Không
+   một handoff in-tree nào tự bind chính xác vào cây chứa nó được.
+3. Điều đóng khoảng trống này là **CI trên đúng commit** — run 30199547218 trên
+   `5ae3769`, và run tiếp theo trên `ea59ce2`. CI bind theo SHA commit nên là
+   ràng buộc chính xác thật sự. Risk Model tier NORMAL chấp nhận "CI validates
+   the exact candidate commit" làm đường verification, và ở đây nó có sẵn.
+
+**Human disposition (tuann2, 2026-07-26):** chấp nhận disposition trên, không
+yêu cầu re-review, cấp phép merge PR #31. Finding đóng ở trạng thái
+accepted-with-documentation, không có thay đổi mã kèm theo.
+
+**Còn lại, ngoài phạm vi plan này:** mục 2 áp cho cả PR1 và PR2 của plan này và cho
+mọi handoff trước đó trong repo. Nếu muốn đóng triệt để thì phải đổi thiết kế
+evidence (ví dụ tách bản ghi evidence ra ngoài cây mã, hoặc bind theo commit SHA
+thay vì tree hash) — đó là thay đổi `scripts/evidence.ts` + kiến trúc, phải là
+plan riêng, không nằm trong phạm vi WORKFLOW-008.

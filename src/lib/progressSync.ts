@@ -1,4 +1,4 @@
-import { getAllUnits as getUnitCatalog } from './content';
+import { getUnitCatalog } from './contentCatalog';
 import type { ExamBreakdown, ExamScope } from './exam';
 import { supabase } from './supabase';
 import { getAuthStore } from '../store/auth';

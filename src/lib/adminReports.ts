@@ -1,4 +1,8 @@
-import { getAllUnits, getAvailableLessonCount, partLabels } from './content';
+import {
+  getAvailableLessonCount,
+  getUnitCatalog,
+  partLabels
+} from './contentCatalog';
 import { supabase } from './supabase';
 import {
   isWrongQuestionPending,
@@ -437,7 +441,7 @@ export function createAdminLearnerDetail(
   totals: StudyDailyTotalRow[],
   range: DateRange,
   now = new Date(),
-  units = getAllUnits()
+  units = getUnitCatalog()
 ): AdminLearnerDetail {
   const rangeError = validateDateRange(range);
   if (rangeError) {
@@ -545,7 +549,7 @@ export async function fetchAdminLearners(
         progressByUser.get(profile.id),
         totalsByUser.get(profile.id) ?? [],
         now,
-        getAllUnits()
+        getUnitCatalog()
       )
     )
     .sort((left, right) =>

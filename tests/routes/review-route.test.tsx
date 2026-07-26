@@ -55,10 +55,11 @@ const { fixtureUnits } = vi.hoisted(() => ({
   ] satisfies UnitContent[]
 }));
 
-vi.mock('../../src/lib/content', () => ({
-  getAllUnits: () => fixtureUnits,
-  findUnit: (unitId: string) => fixtureUnits.find((unit) => unit.id === unitId),
-  findLesson: (unitId: string, lessonId: string) =>
+vi.mock('../../src/lib/contentCatalog', () => ({
+  getUnitCatalog: () => fixtureUnits,
+  findUnitSummary: (unitId: string) =>
+    fixtureUnits.find((unit) => unit.id === unitId),
+  findLessonSummary: (unitId: string, lessonId: string) =>
     fixtureUnits
       .find((unit) => unit.id === unitId)
       ?.lessons.find((lesson) => lesson.id === lessonId),

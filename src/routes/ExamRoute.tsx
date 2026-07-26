@@ -15,7 +15,7 @@ import {
   type ExamScope
 } from '../lib/exam';
 import { isQuestionCorrect } from '../lib/chemistry';
-import { getAllUnits as getUnitCatalog, partLabels } from '../lib/content';
+import { getUnitCatalog, partLabels } from '../lib/contentCatalog';
 import { loadUnits } from '../lib/contentLoader';
 import { setPwaSessionActive } from '../lib/pwa';
 import { useStudyTimeTracker } from '../hooks/useStudyTimeTracker';

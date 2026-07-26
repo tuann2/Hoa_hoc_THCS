@@ -7,7 +7,7 @@ import {
   type ReactNode
 } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
-import { getAllUnits } from './lib/content';
+import { getUnitCatalog } from './lib/contentCatalog';
 import {
   subscribeProgressPush,
   syncProgressOnSignIn
@@ -82,7 +82,7 @@ class RouteErrorBoundary extends Component<
 }
 
 export default function App() {
-  const units = useMemo(() => getAllUnits(), []);
+  const units = useMemo(() => getUnitCatalog(), []);
   const progressStore = getProgressStore(units);
   const authStore = getAuthStore();
   const initialize = authStore((state) => state.initialize);
