@@ -191,14 +191,18 @@ viết sau đó nên không nằm trong snapshot.
 
 ### Status
 
-- Remediation state: VALIDATED
+- Remediation state: RELEASE_READY (chờ người duyệt merge PR #30)
 - Risk tier / categories / escalation rationale: NORMAL — documentation. Xoá nội
   dung tham chiếu đã hết vai trò; không đụng mã ứng dụng, nội dung đang phát cho
   học viên, auth, dependency, migration hay CI/deploy.
 - Base SHA / candidate SHA: `1180941b5bdf9421d4946ab7d5a605b79cf3e258` /
-  UNCOMMITTED khi chạy evidence; candidate commit ghi bổ sung sau khi push.
+  `16b3edef94e4d6d040eb6ebb33f163a21b37a800` (nhánh
+  `chore/drop-feature-015-legacy-units`, PR #30).
 - Worktree state and dirty paths: sạch ngoài phạm vi PR2.
-- CI reference for exact candidate (when required/available): PENDING
+- CI reference for exact candidate (when required/available): run
+  [30199388510](https://github.com/tuann2/Hoa_hoc_THCS/actions/runs/30199388510)
+  trên `16b3ede` — `web`, `browser`, `trivial-verify`, `branch-context-drift`
+  đều pass.
 
 ### Summary and scope
 
@@ -362,8 +366,8 @@ UTC 2026-07-26T10:56:21.962Z → 2026-07-26T10:58:43.872Z.
 
 - Verifier / execution identifier / independence method: tier NORMAL — CI trên
   đúng candidate commit thay cho reviewer độc lập, theo plan §Delivery plan.
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Exact candidate CI status: PASS trên `16b3ede` (run 30199388510).
+- Findings and disposition: không có finding; không cần vòng remediation.
 - Batch-content exception authorization: n/a
 
 ## PR3 — gỡ facade `src/lib/content.ts`
