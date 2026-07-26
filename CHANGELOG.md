@@ -17,3 +17,29 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `FEATURE-006` thêm đăng ký/đăng nhập email + mật khẩu, reset mật khẩu, hiển thị tên người học, đồng bộ tiến độ localStorage ↔ Supabase bằng merge offline-first, migration SQL + workflow env + test auth/sync (2026-07-05).
 - `FEATURE-007` thêm danh sách câu sai cần ôn (`wrongQuestions`), route `/review`, badge số câu cần ôn ở header/hồ sơ, đồng bộ Supabase cho câu sai và test merge/review route tương ứng (2026-07-06).
 - `FEATURE-008` thêm chế độ thi thử `/exam`: tạo đề theo phạm vi Vô cơ/Hữu cơ/chuyên đề, rút câu có seed theo tỉ lệ mục tiêu 40/40/20, đếm ngược tự nộp khi hết giờ, lưu `examHistory` đồng bộ với Supabase, hiển thị kết quả theo mức độ và lịch sử thi gần nhất trong hồ sơ (2026-07-06).
+- `FEATURE-009` tách mỗi bài học thành hai chế độ chọn ngay từ trang chủ — "Lý thuyết" (chỉ đọc thẻ) và "Giải bài tập" (chỉ làm quiz) — thay cho luồng tuần tự bắt buộc; thêm nút Thoát phiên có xác nhận ở màn hình học, thi thử và ôn câu sai (2026-07-10).
+- `FEATURE-011` định nghĩa lại hai chế độ theo **bản chất câu hỏi** thay vì theo loại nội dung: gắn trường `category` (`theory` / `calculation`) cho 1053 câu hỏi, "Lý thuyết" = thẻ + câu định tính, "Bài tập" = câu tính toán; tiến độ ghi nhận riêng cho từng phần (2026-07-10).
+- `FEATURE-012` đào sâu nội dung lý thuyết nâng cao cho toàn bộ bài học A1–B5: nâng trần số thẻ mỗi bài từ 5 lên 25 (linh hoạt), quy trình hai phase — Phase A soạn mở rộng, Phase B fact-check độc lập rồi sửa theo review; nội dung ứng viên chưa dùng lưu vào `docs/content-reserve/` (2026-07-10 → 2026-07-12).
+- `FEATURE-014` tối ưu tải và offline: code splitting theo unit, PWA cài đặt được với precache hashed + cập nhật theo prompt (`vite-plugin-pwa@1.3.0` + Workbox, Supabase giữ network-only), bộ E2E Playwright gồm kịch bản offline và deploy subpath; qua 4 candidate và 3 vòng independent/adversarial review (2026-07-17).
+- `FEATURE-015` xây lại toàn bộ danh mục theo tài liệu chuẩn hoá và danh pháp GDPT 2018 (Mức 2): 11 unit `n1`–`n11`, 52 bài học, 708 câu hỏi; quy đổi thể tích mol khí 22,4 L/mol (đktc) → 24,79 L/mol (đkc, 25 °C, 1 bar) trên toàn bộ nội dung; migration tiến độ người học lên `PROGRESS_VERSION=5` (localStorage + Supabase); nội dung danh mục A/B cũ chuyển vào `docs/content-reserve/feature-015/legacy-units/` (2026-07-19 → 2026-07-20).
+- `FEATURE-016` thêm khu vực admin xem tiến độ, chất lượng và thời gian học của từng học viên: migration `0002` + RLS + RPC `security definer` (kèm script rollback), quyền `isAdmin` fail-closed gắn với phiên đăng nhập, heartbeat đo thời gian học, các route báo cáo chỉ đọc; đã áp migration production và smoke test PASS (2026-07-25).
+
+### Changed
+
+- `WORKFLOW-002` chuyển quy trình AI sang `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` v2.1 làm nguồn chuẩn (2026-07-11).
+- `WORKFLOW-003` sửa đổi kiến trúc v2.1 → v2.2 sau rà soát toàn bộ corpus (hiệu chỉnh phần chi phí token) (2026-07-13).
+- `WORKFLOW-004A` cơ giới hoá quality gate: `scripts/gates-manifest.ts`, classifier theo đường dẫn thay đổi, `check-docs`, gates runner và evidence gắn đúng snapshot; CI chuyển sang chạy gate theo profile, deploy chỉ nhận candidate SHA đã pass CI; kiến trúc v2.3 (2026-07-19).
+- `WORKFLOW-004B` chuyển governance sang provider-neutral: role contract trong `docs/roles/`, execution envelope bắt buộc, context policy `docs/CONTEXT_RULES.md`; kiến trúc v2.4 (2026-07-19).
+- `WORKFLOW-004C` cưỡng chế tier TRIVIAL bằng máy: `classify-trivial` / `trivial-policy` / `npm run trace:trivial`, trace append-only và job CI `trivial-verify` bác bỏ khai báo TRIVIAL sai; kèm baseline đo token 8 kịch bản (2026-07-19).
+- `WORKFLOW-005` kiến trúc v2.5 — đóng self-reference cũ còn trỏ tới WORKFLOW-004C (2026-07-26).
+- `WORKFLOW-006` rà soát nguyên nhân input token cao và dọn drift giữa các nhánh (2026-07-26).
+- `WORKFLOW-007` thêm gate CI `branch-context-drift` cảnh báo khi context bắt buộc của nhánh đã lệch so với base (warn-only, không chặn PR) (2026-07-26).
+
+### Fixed
+
+- `FEATURE-010` sửa lỗi 404 khi bấm liên kết xác nhận email / đặt lại mật khẩu do Supabase gửi: cả hai luồng nay vào đúng màn hình `/auth` trên bản deploy GitHub Pages lẫn dev cục bộ (2026-07-10).
+
+### Security
+
+- `FEATURE-013` vá các advisory dependency (bao gồm nâng Vite lên 6.4.3) và bổ sung gate `npm audit`, `check:licenses`, `format:check` vào CI (2026-07-14).
+- Vá `fast-uri` và `brace-expansion` (qua `eslint` / `vite-plugin-pwa`), nâng `react-router-dom` lên 7.18.1 để đóng lỗ hổng open redirect; thêm cơ chế allowlist có thời hạn cho gate `dependency-audit` (2026-07-25).
