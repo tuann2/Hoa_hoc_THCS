@@ -2,9 +2,10 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-07-26)
-- Approved by / date:
+- Approved by / date: tuann2, 2026-07-26 (duyệt nội dung plan trong PR #28;
+  các vai trò ở bảng Execution assignment vẫn cần xác nhận riêng từng vai)
 - Risk tier: NORMAL
 - Risk categories and escalation rationale: documentation + small refactoring
   theo bảng phân loại của Risk Model. Không đụng auth/authorization,
