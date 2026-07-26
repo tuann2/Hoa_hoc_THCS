@@ -66,44 +66,47 @@ thứ hai của orchestrator cũng bị bỏ: nó được đo **trước** khi 
 rồi commit, nên không bind vào candidate — chính là finding F-7.
 
 **Bản dưới đây bind chính xác.** Đo trên worktree sạch ngay sau commit
-`26d9f3df48ff4b43086f266262bd3eb0b6686123`:
+`3a42d174def312b5b415327b3742274f6e0afa83`:
 `npm run evidence -- --changed-from=f04e2b14`, 3/3 gate exit 0, profile `docs`,
-`snapshot_fallback_reason: null`, snapshot git-tree
-`43a4a2f9d09edcc20c7d69554871dd911e5bf922` — **bằng đúng tree của commit
-`26d9f3d`** (`git rev-parse 26d9f3d^{tree}` cho cùng giá trị).
+`snapshot_fallback_reason: null`. Vì worktree sạch nên evidence ghi thẳng
+`candidate_sha: 3a42d174...` thay vì `UNCOMMITTED`, và snapshot git-tree
+`f408b674c85fb2dda6a5303f2aaa6f39e6d794cf` **bằng đúng tree của commit đó**
+(`git rev-parse 3a42d17^{tree}` cho cùng giá trị).
 
-Độ lệch còn lại là chính khối JSON này, được thêm ở commit kế tiếp. Evidence
-bind vào `26d9f3d` chứ không bind vào commit chứa nó — giới hạn cố hữu của
-handoff nằm trong cây mã, đã ghi thành follow-up mở ở handoff WORKFLOW-008.
+Độ lệch còn lại là chính khối JSON này, thêm ở commit kế tiếp. Evidence bind vào
+`3a42d17` chứ không bind vào commit chứa nó — giới hạn cố hữu của handoff nằm
+trong cây mã, đã ghi thành follow-up mở ở handoff WORKFLOW-008. Cách giảm thiểu
+đã áp dụng: commit toàn bộ nội dung trước, đo trên worktree sạch, rồi mới ghi.
+Hai bản evidence bị bỏ trước đó chính vì làm ngược thứ tự này.
 
 ```json
 {
-  "base_sha": "26d9f3df48ff4b43086f266262bd3eb0b6686123",
+  "base_sha": "3a42d174def312b5b415327b3742274f6e0afa83",
   "build_inputs": [
     {
       "path": ".env.example",
       "sha256": "6fda9c2a4670086a9b4784c5f146ae59df4ecb2f00410b89973483837bd16198"
     }
   ],
-  "candidate_sha": "26d9f3df48ff4b43086f266262bd3eb0b6686123",
-  "finished_at": "2026-07-26T22:57:36.889Z",
+  "candidate_sha": "3a42d174def312b5b415327b3742274f6e0afa83",
+  "finished_at": "2026-07-26T23:11:07.536Z",
   "gate_results": [
     {
       "id": "git-diff-check",
       "command": ["git", "diff", "--check"],
-      "durationMs": 5,
+      "durationMs": 6,
       "exitCode": 0
     },
     {
       "id": "format-check",
       "command": ["npm", "run", "format:check"],
-      "durationMs": 7087,
+      "durationMs": 6839,
       "exitCode": 0
     },
     {
       "id": "docs-check",
       "command": ["npm", "run", "check:docs", "--", "--all"],
-      "durationMs": 410,
+      "durationMs": 378,
       "exitCode": 0
     }
   ],
@@ -113,9 +116,9 @@ handoff nằm trong cây mã, đã ghi thành follow-up mở ở handoff WORKFLO
   "result": "pass",
   "snapshot_fallback_reason": null,
   "schema_version": 1,
-  "started_at": "2026-07-26T22:57:29.260Z",
+  "started_at": "2026-07-26T23:11:00.185Z",
   "validated_snapshot": {
-    "id": "43a4a2f9d09edcc20c7d69554871dd911e5bf922",
+    "id": "f408b674c85fb2dda6a5303f2aaa6f39e6d794cf",
     "kind": "git-tree"
   }
 }
