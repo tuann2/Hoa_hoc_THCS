@@ -82,3 +82,14 @@ verdict itself resolves in ~30 ms, which is why a wrong TRIVIAL attempt
   on legacy rows reflect target comparison only.
 - Scenario 8's post-escalation NORMAL-path cost is not double-counted
   here; it equals scenario 2's NORMAL "after" row by construction.
+
+## Related measurements
+
+- `FEATURE-016-token-cost.md` — first real provider-billing measurement
+  of a full feature (CRITICAL tier, 425 requests, 24.62M input tokens,
+  $80.79). It puts this baseline in proportion: the mandatory shim chain
+  measured here (~507 tokens) is ~0.9% of the ~57.9k input tokens an
+  actual request consumed, so the routing work of 004B/004C accounts for
+  an estimated ~7.5% of that feature's cost. The two documents measure
+  different things and neither replaces the other — this one is the
+  automatable, fail-closed metric; that one is the real bill.

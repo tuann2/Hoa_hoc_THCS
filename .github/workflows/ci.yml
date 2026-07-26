@@ -106,6 +106,35 @@ jobs:
             --verify="$FILES" \
             --changed-from="$BASE_SHA"
 
+  # WORKFLOW-007 starts as an observation-only control. The script always
+  # exits zero after printing a drift warning, so this job cannot block a PR.
+  branch-context-drift:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Warn when mandatory context has drifted from the PR base
+        env:
+          BASE_REF: origin/${{ github.event.pull_request.base.ref }}
+        run: |
+          node --import tsx scripts/check-branch-context-drift.ts \
+            --base="$BASE_REF" \
+            --branch=HEAD
+
   browser:
     needs: web
     runs-on: ubuntu-latest
