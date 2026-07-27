@@ -118,14 +118,12 @@ describe('classify-change', () => {
 
   it('fails closed to full for unrecognized paths', () => {
     const result = classifyChangedPaths({
-      changedPaths: ['supabase/migrations/20260718_add_table.sql']
+      changedPaths: ['unclassified/example.bin']
     });
 
     expect(result.minimumProfile).toBe('full');
     expect(result.fallbackToFull).toBe(true);
-    expect(result.unknownPaths).toEqual([
-      'supabase/migrations/20260718_add_table.sql'
-    ]);
+    expect(result.unknownPaths).toEqual(['unclassified/example.bin']);
     expect(result.requiredGates).toContain('docs-check');
   });
 
