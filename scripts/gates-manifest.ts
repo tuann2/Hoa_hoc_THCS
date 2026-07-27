@@ -252,6 +252,23 @@ export const PATH_GATE_RULES: readonly PathGateRule[] = [
     gates: PROFILE_GATE_IDS.full,
     reason:
       'validation infrastructure or toolchain changes require the full local gate union'
+  },
+  {
+    pattern:
+      /^(?:supabase\/(?:migrations|rollbacks)\/.*|docs\/security\/audit-allowlist\.json|scripts\/(?:cli|check-audit|check-branch-context-drift)\.ts|(?:postcss|tailwind)\.config\.js|\.prettierrc\.json|\.env\.example|\.gitignore|\.codex\/config\.toml|docs\/trace\/trivial\/\.gitkeep|tests\/security\/.*|CLAUDE\.md|\.claude\/skills\/feature-delivery\/SKILL\.md)$/u,
+    gates: PROFILE_GATE_IDS.full,
+    reason: 'explicit elevated-risk and toolchain paths retain the full profile'
+  },
+  {
+    pattern: /^tests\/(?:hooks\/.*|fixtures\/check-licenses\/.*)$/u,
+    gates: WEB_CLASSIFIER_GATES,
+    reason:
+      'application and supporting-script test fixtures require web validation'
+  },
+  {
+    pattern: /^(?:CHANGELOG|PROJECT_STORY)\.md$/u,
+    gates: ['docs-check'],
+    reason: 'approved historical records require documentation validation'
   }
 ] as const;
 

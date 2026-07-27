@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { describe, expect, it } from 'vitest';
 import {
   PATH_GATE_RULES,
@@ -5,6 +6,10 @@ import {
   getGateCommand,
   getGateDefinition
 } from '../../scripts/gates-manifest';
+
+function getFirstMatchingRule(path: string) {
+  return PATH_GATE_RULES.find((rule) => rule.pattern.test(path));
+}
 
 describe('gates-manifest', () => {
   it('maps TRIVIAL enforcement scripts and tests to the full profile', () => {
@@ -64,6 +69,89 @@ describe('gates-manifest', () => {
         (gateId) => gateId !== 'git-diff-check' && gateId !== 'format-check'
       )
     );
+  });
+
+  it('classifies every tracked file with an explicit PATH_GATE_RULES rule', () => {
+    const trackedFiles = execFileSync('git', ['ls-files', '-z'], {
+      encoding: 'buffer'
+    })
+      .toString('utf8')
+      .split('\0')
+      .filter(Boolean);
+    const unmatchedFiles = trackedFiles.filter(
+      (path) => !getFirstMatchingRule(path)
+    );
+
+    expect(
+      unmatchedFiles,
+      `Tracked files without PATH_GATE_RULES classification; write an explicit PATH_GATE_RULES rule for:\n${unmatchedFiles.join('\n')}`
+    ).toEqual([]);
+  });
+
+  it('maps explicit full-profile paths to the full profile', () => {
+    const samples = [
+      'supabase/migrations/20260727000000_example.sql',
+      'docs/security/audit-allowlist.json',
+      'scripts/cli.ts',
+      'tests/security/admin-migration.test.ts',
+      'CLAUDE.md',
+      '.claude/skills/feature-delivery/SKILL.md'
+    ];
+
+    for (const sample of samples) {
+      expect(getFirstMatchingRule(sample)?.gates, sample).toEqual(
+        PROFILE_GATE_IDS.full
+      );
+    }
+  });
+
+  it('maps explicit application test paths to the web profile', () => {
+    for (const sample of [
+      'tests/hooks/use-example.test.ts',
+      'tests/fixtures/check-licenses/example.json'
+    ]) {
+      expect(getFirstMatchingRule(sample)?.gates, sample).toEqual(
+        PROFILE_GATE_IDS.web.filter(
+          (gateId) => gateId !== 'git-diff-check' && gateId !== 'format-check'
+        )
+      );
+    }
+  });
+
+  it('maps approved historical records to the docs profile', () => {
+    for (const sample of ['CHANGELOG.md', 'PROJECT_STORY.md']) {
+      expect(getFirstMatchingRule(sample)?.gates, sample).toEqual([
+        'docs-check'
+      ]);
+    }
+  });
+
+  it('uses the first matching rule for every explicit coverage regex', () => {
+    const expectedRules = [
+      {
+        path: 'scripts/cli.ts',
+        reason:
+          'explicit elevated-risk and toolchain paths retain the full profile'
+      },
+      {
+        path: 'tests/hooks/use-example.test.ts',
+        reason:
+          'application and supporting-script test fixtures require web validation'
+      },
+      {
+        path: 'CHANGELOG.md',
+        reason: 'approved historical records require documentation validation'
+      }
+    ];
+
+    for (const { path, reason } of expectedRules) {
+      const firstMatch = getFirstMatchingRule(path);
+
+      expect(firstMatch?.reason, path).toBe(reason);
+      expect(PATH_GATE_RULES.filter((rule) => rule.pattern.test(path))[0]).toBe(
+        firstMatch
+      );
+    }
   });
 
   it('keeps the browser profile aligned with CI browser job order', () => {
