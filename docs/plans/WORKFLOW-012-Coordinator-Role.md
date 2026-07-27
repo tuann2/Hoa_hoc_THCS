@@ -1,150 +1,176 @@
-# WORKFLOW-012: Dựng lại vai điều phối và bắt buộc thẩm định kế hoạch theo mức rủi ro
+# WORKFLOW-012: Làm hợp đồng vai được đọc đúng lúc, và gỡ mâu thuẫn của mục 7
 
 ## Status
 
 - Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-07-27)
+- **Revision 1 (2026-07-27) — viết lại toàn bộ theo thẩm định kế hoạch vòng 1.**
+  Vòng 1 ra CHANGES_REQUESTED với 4 lỗi chặn. Bản đầu đề xuất dựng một vai
+  "điều phối" mới dựa trên tiền đề **sai**; xem mục "Tiền đề sai của bản đầu".
+  Bản này bỏ hẳn vai mới, thu phạm vi về đúng khoảng trống đã kiểm chứng.
 - Approved by / date:
 - Risk tier: ELEVATED
-- Risk categories and escalation rationale: governance policy điều khiển cách mọi
-  execution sau này nhận vai và cách kế hoạch được thẩm định. Không sửa
-  `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`, không đụng CI/deploy/auth nên
-  không CRITICAL. Theo rule 7, phân loại còn dao động giữa NORMAL và ELEVATED thì
-  lấy tier cao hơn — cùng lớp với WORKFLOW-009.
-- **Thẩm định kế hoạch: BẮT BUỘC** theo chính quy tắc mà plan này đặt ra
-  (ELEVATED trở lên). Plan này là ca đầu tiên áp dụng quy tắc của chính nó.
+- Risk categories and escalation rationale: governance shim. Thay đổi này
+  **siết** `AGENTS.md` cho khớp kiến trúc chứ không đổi mô hình trách nhiệm hay
+  quyền hạn — nó gỡ bỏ một điều khoản đang cho phép nhiều hơn kiến trúc cho
+  phép. Thẩm định vòng 1 lập luận rằng "ảnh hưởng tới kiến trúc" là CRITICAL kể
+  cả khi không sửa file đó; lập luận ấy đúng với bản đầu (bản đầu **mở rộng**
+  quyền, thêm vai mới). Bản này đi ngược chiều: không thêm quyền, không thêm
+  vai, chỉ bỏ phần vượt quyền và sửa điều kiện kích hoạt của một câu lệnh đọc.
+  Theo Risk Model rule 7, vẫn lấy tier cao hơn giữa NORMAL và ELEVATED.
+  **Điểm này cần thẩm định vòng 2 phản biện trực tiếp.**
+- Thẩm định kế hoạch: BẮT BUỘC (ELEVATED). Vòng 1 đã chạy — CHANGES_REQUESTED.
+  Bản revision 1 này cần vòng 2.
 - Change type and required gate profile: docs (governance); profile do
   `scripts/gates-manifest.ts` chọn.
 
+## Tiền đề sai của bản đầu, ghi lại để không lặp
+
+Bản đầu khẳng định ranh giới "việc nào tự làm, việc nào giao đi" đã bị commit
+`5e4edcb` xoá và **không chuyển đi đâu**. Sai. Thẩm định vòng 1 chỉ ra, và
+Planner đã kiểm chứng:
+
+- `docs/roles/planner.md:40` — "Do not implement substantial features..."
+- Responsibility Matrix, dòng Planner, cột Must not — "implement substantial
+  features or give final approval"
+
+Bản đầu còn mô tả sai nội dung cũ. Nguyên văn `CLAUDE.md` trước khi xoá là
+"Substantial implementation (new features, new components, schema changes) must
+be delegated to Codex" — tức một quy tắc về **loại việc**, không phải danh sách
+trắng kiểu "ngoài danh sách thì phải giao".
+
+Luật đã được chuyển đúng chỗ khi bỏ tên nhà cung cấp cụ thể. **Không có luật nào
+bị mất.** Vì vậy bản đầu đi dựng lại một thứ vẫn đang tồn tại, và tệ hơn, đề
+xuất một vai mới nằm ngoài danh sách 4 vai của phong bì thực thi.
+
 ## Objective and scope
 
-- Objective: đóng lỗ hổng gốc còn lại sau WORKFLOW-008 — ranh giới "việc nào
-  trợ lý tự làm, việc nào phải giao đi" đã bị xoá và không được chuyển đi đâu;
-  đồng thời đặt điều kiện thẩm định kế hoạch theo mức rủi ro để lỗi thiết kế bị
-  bắt ở giai đoạn rẻ.
-- In scope: `AGENTS.md` (thêm đúng một mục), `docs/roles/coordinator.md` (file
-  mới), `docs/plans/_TEMPLATE.md` (thêm một trường), và handoff của chính plan
-  này.
-- Out of scope: sửa `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md` — Risk Model
-  và Responsibility Matrix đã đủ, vấn đề là chưa ai cưỡng chế; đổi bốn hợp đồng
-  vai hiện có; ba việc treo còn lại (bằng chứng gắn theo mã băm cây, cảnh báo
-  Node 20, câu kiểm thử tautology).
+- Objective: đóng hai khoảng trống đã kiểm chứng, cả hai đều là **lệch giữa
+  `AGENTS.md` và kiến trúc**, không phải thiếu luật.
+- In scope: `AGENTS.md` — sửa mục 2 và mục 7. Handoff của plan này.
+- Out of scope: tạo vai mới; sửa `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md`;
+  sửa bốn hợp đồng vai; cổng thẩm định kế hoạch theo mức rủi ro (xem Follow-up).
 
 ## Current analysis and design
 
-### Vì sao ranh giới cũ mất hiệu lực
+### Khoảng trống 1 — hợp đồng vai được đọc quá muộn
 
-`CLAUDE.md` từng có mục "What Claude may edit directly" liệt kê rõ những gì trợ
-lý được sửa trực tiếp — ngầm hiểu mọi thứ ngoài danh sách phải giao đi. Commit
-`5e4edcb` (WORKFLOW-004B) xoá mục đó và **không chuyển sang tài liệu nào**. Thứ
-duy nhất còn lại là một ô trong Responsibility Matrix ghi Planner không được
-"implement substantial features" — quá mờ để nhớ lúc soạn bảng phân vai.
+`AGENTS.md:12` hiện là:
 
-Hậu quả đã xảy ra thật ở WORKFLOW-008: một execution tự nhận cả ba vai Planner,
-Implementer, Release Assessor rồi bỏ luôn vai cuối; con người phát hiện, không
-phải quy trình.
+> `2. Read the contract for assigned_role in docs/roles/<role>.md.`
 
-### Bẫy bootstrap quyết định chỗ ghi
+Điều kiện kích hoạt là **đã có `assigned_role`**, tức sau khi vai được giao. Nhưng
+hành vi cần được ràng buộc lại xảy ra **trước** đó: khi một execution soạn bảng
+phân vai trong kế hoạch, hoặc nhận một dispatch của con người rồi tự hiểu mình
+đang ở vai nào.
 
-`AGENTS.md:12` chỉ yêu cầu đọc `docs/roles/<role>.md` **khi có vai được giao qua
-phong bì**. Nhưng vai điều phối là thứ execution mang **trước khi** có phong bì —
-ngay lúc mở phiên. Nên một hợp đồng đặt hoàn toàn trong `docs/roles/coordinator.md`
-sẽ không bao giờ được nạp: rẻ tuyệt đối và vô hiệu vì cùng một lý do.
+Sự cố WORKFLOW-008 chính là ca đó: execution soạn bảng phân vai và tự điền mình
+vào ba dòng mà **chưa từng đọc `planner.md`** — nơi có sẵn câu cấm. Luật có, chỉ
+là chưa tới mắt người đọc vào lúc nó có tác dụng.
 
-Vì vậy chia đôi:
+Sửa: đổi điều kiện kích hoạt từ "sau khi được giao vai" sang "trước khi hành động
+trong một vai, kể cả khi vai đến từ dispatch của con người chứ không phải phong
+bì hình thức; và trước khi đề xuất phân vai cho bất kỳ ai".
 
-| Chỗ                                    | Nội dung                                                                                                                                     | Chi phí                                                  |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| `AGENTS.md` — thêm 1 mục (~40 từ)      | Tuyên bố vai mặc định, ba việc vai đó làm, hai việc vai đó **không** làm, và lệnh đọc hợp đồng chi tiết                                      | Nạp mọi phiên; tăng ~10% chi phí cố định của file 380 từ |
-| `docs/roles/coordinator.md` — file mới | Chi tiết: chuyển tiếp xác nhận vai, xử lý khi agent bị chặn quyền, chạy cổng kiểm tra thay agent, ghi sai lệch, điều kiện thẩm định kế hoạch | Chỉ nạp khi thật sự điều phối                            |
+### Khoảng trống 2 — mục 7 đang cho phép nhiều hơn kiến trúc
 
-Cách này khớp mẫu sẵn có của bốn vai kia (một dòng trỏ + hợp đồng riêng); khác
-duy nhất là dòng trỏ phải **vô điều kiện**, không phụ thuộc phong bì.
+`AGENTS.md` mục 7, merge ngày 2026-07-27, có câu:
 
-### Vai điều phối gồm gì
+> "An agent accepting two or more roles must state every role and why when
+> seeking confirmation, so the human can knowingly accept reduced independence."
 
-Theo quyết định của tuann2 ngày 2026-07-27:
+Câu này ngụ ý **một execution được giữ từ hai vai trở lên** nếu có công bố.
+Kiến trúc dòng 45 nói ngược lại:
 
-1. Đọc kế hoạch đã duyệt và giao từng vai trong đó cho đúng agent.
-2. Tổng hợp kết quả các agent và thực hiện đánh giá phát hành sau cùng.
-3. **Được phép tự lập kế hoạch** — vì lập kế hoạch là việc ngốn ngữ cảnh nhất,
-   giao cho agent khởi động lạnh thường đắt hơn và cho kết quả nông hơn.
-4. **Không** tự viết mã ứng dụng và **không** tự thẩm định độc lập.
+> "One provider may perform different roles only in separate executions."
 
-Vì mục 3 giữ lại chồng lấn Planner + Release Assessor, hợp đồng phải bắt buộc
-hai điều bù lại:
+Và chính `AGENTS.md` đoạn cuối tự ràng buộc:
 
-- Bản đánh giá phát hành **phải tự công bố** rằng người đánh giá chính là người
-  đã lập kế hoạch và điều phối. Công bố không xoá được xung đột lợi ích, nhưng
-  làm nó hiện ra thay vì ẩn đi.
-- Kế hoạch từ ELEVATED trở lên **phải qua thẩm định trước khi duyệt**.
+> "the new shim and roles are only a superset that cannot weaken it"
 
-### Vì sao bắt buộc thẩm định kế hoạch từ ELEVATED
+Nên mục 7 đang làm yếu kiến trúc — đúng thứ nó tự tuyên bố không được làm. Đây
+là khiếm khuyết trong công việc vừa giao hôm nay, phát hiện gián tiếp qua thẩm
+định vòng 1.
 
-Bằng chứng từ chính phiên 2026-07-26/27:
+Sửa: bỏ phần cho phép kiêm nhiệm; thay bằng phát biểu khớp dòng 45 — vai khác
+nhau phải ở execution khác nhau; nếu tình huống thật buộc phải gộp thì đó là sai
+lệch so với kiến trúc, cần con người chấp thuận ở mức CRITICAL và ghi chép, chứ
+không phải một câu công bố là xong. Giữ nguyên hai phần còn lại của mục 7 (phân
+biệt xác nhận phạm vi với xác nhận vai; nghĩa vụ chuyển tiếp xác nhận), vì cả
+hai không mâu thuẫn kiến trúc và đều đã chứng minh có tác dụng.
 
-| Kế hoạch     | Có thẩm định kế hoạch | Kết quả                                                                                                                                    |
-| ------------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| WORKFLOW-011 | Có                    | Bắt 2 lỗi chặn + 2 lỗi nặng **trước khi** viết mã, gồm việc xếp nhầm `tests/security/**` — một security control — xuống nhóm gate thấp hơn |
-| WORKFLOW-009 | Không                 | Lỗi thiết kế cấp kế hoạch lọt tới vòng thẩm định mã: điều kiện `"empty"` quá lỏng, phải sửa chữa rồi thẩm định lại                         |
+### Vì sao không tạo vai điều phối
 
-Cùng loại lỗi; bắt ở giai đoạn kế hoạch rẻ hơn hẳn bắt ở giai đoạn mã.
+Việc mà tuann2 mô tả — đọc kế hoạch, giao vai cho đúng agent, tổng hợp — **đã
+thuộc Planner**: Responsibility Matrix ghi Planner sở hữu "requirements, plans,
+risk classification, delegation, scope checks, review orchestration". Phần đánh
+giá phát hành đã thuộc Release Assessor. Không thiếu vai nào; thêm vai thứ năm
+sẽ phải sửa danh sách `assigned_role` trong phong bì, tức sửa kiến trúc, tức
+CRITICAL — trả giá lớn cho thứ đã có sẵn.
 
-Quy tắc đề xuất: **TRIVIAL** không có kế hoạch nên không áp dụng; **NORMAL**
-khuyến khích, không bắt buộc; **ELEVATED và CRITICAL** bắt buộc một execution
-khác thẩm định kế hoạch trước khi con người duyệt. Ghi điều kiện này vào
-`docs/roles/coordinator.md` và thêm một trường vào `docs/plans/_TEMPLATE.md` để
-mỗi kế hoạch tự khai đã thẩm định hay chưa.
+Hệ quả trực tiếp: một execution **không** được vừa lập kế hoạch vừa đánh giá
+phát hành. Đó chính là điều Planner đã làm ở WORKFLOW-011 và bản đầu của plan
+này định hợp thức hoá.
 
 - New technology: không có.
-- Execution profile + degradation path: Implementer cần repo-rw + shell chạy gate
-  docs. Nếu sandbox chặn, báo blocked và để orchestrator chạy — không tự khai
-  gate pass.
+- Execution profile + degradation path: Implementer cần repo-rw + shell chạy
+  gate docs. Sandbox chặn thì báo blocked, không tự khai gate pass.
 
 ## Delivery plan
 
-Execution assignment — mỗi dòng cần xác nhận riêng khi đến lượt vai đó:
+Execution assignment — mỗi dòng cần xác nhận riêng khi đến lượt vai đó. Theo
+kiến trúc dòng 45, mỗi vai phải là một execution khác nhau:
 
-| Vai trò              | Agent đề xuất                    | Model / effort | Lý do                                                                                                                       | Đã xác nhận        |
-| -------------------- | -------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Planner              | Claude Code (điều phối)          | high           | Theo quyết định của tuann2: điều phối được tự lập kế hoạch. Bù lại bằng thẩm định kế hoạch bắt buộc ở dòng dưới.            | tuann2, 2026-07-27 |
-| Thẩm định kế hoạch   | Codex (`codex:codex-rescue`)     | high           | ELEVATED nên bắt buộc. Codex đã bắt được lỗi phân loại bảo mật ở kế hoạch WORKFLOW-011, đúng loại lỗi cần bắt sớm.          | chưa               |
-| Implementer          | Codex (`codex:codex-rescue`)     | medium         | Không tự nhận: `AGENTS.md` là văn bản ràng buộc chính hành vi Claude Code; để nó tự viết luật cho mình là xung đột lợi ích. | chưa               |
-| Independent Reviewer | agy (`claude-opus-4-6-thinking`) | —              | ELEVATED cần một reviewer tươi đọc từng dòng, và phải khác Implementer.                                                     | chưa               |
-| Release Assessor     | Claude Code (điều phối)          | low            | Khác Implementer. Bắt buộc công bố kiêm nhiệm Planner theo đúng quy tắc plan này đặt ra.                                    | chưa               |
+| Vai trò              | Agent đề xuất                    | Model / effort | Lý do                                                                                                                                                                             | Đã xác nhận        |
+| -------------------- | -------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| Planner              | Claude Code                      | high           | Đã soạn bản đầu, nhận thẩm định, kiểm chứng từng finding và viết lại.                                                                                                             | tuann2, 2026-07-27 |
+| Thẩm định kế hoạch   | Codex `gpt-5.6-sol`              | high           | Vòng 1 đã bắt được tiền đề sai và mâu thuẫn với dòng 45 — đúng loại lỗi cần bắt trước khi thành cam kết.                                                                          | tuann2, 2026-07-27 |
+| Implementer          | Codex (`codex:codex-rescue`)     | medium         | Không tự nhận: `AGENTS.md` ràng buộc chính hành vi Claude Code.                                                                                                                   | chưa               |
+| Independent Reviewer | agy (`claude-opus-4-6-thinking`) | —              | ELEVATED cần reviewer tươi đọc từng dòng, khác Implementer.                                                                                                                       | chưa               |
+| Release Assessor     | **execution riêng, chưa chọn**   | —              | Theo dòng 45 không được là execution đang giữ vai Planner. Cần tuann2 chỉ định một execution khác — đây là ràng buộc mới mà chính plan này đặt ra, nên plan phải tuân trước tiên. | chưa               |
 
-1. Thẩm định kế hoạch này trước khi tuann2 duyệt — plan là ca đầu áp dụng quy
-   tắc của chính nó.
-2. `AGENTS.md`: thêm đúng một mục cho vai điều phối, viết bằng tiếng Anh cho
-   đồng bộ, không viết lại các mục cũ.
-3. `docs/roles/coordinator.md`: hợp đồng vai theo đúng cấu trúc bốn file hiện có
-   (Capabilities required / Permissions / Responsibilities / Restrictions).
-4. `docs/plans/_TEMPLATE.md`: thêm trường khai trạng thái thẩm định kế hoạch.
-5. Gate, bằng chứng, handoff. Handoff của chính plan này phải điền đủ
-   `Role execution log` và `Release Assessment` theo template hiện hành.
+1. `AGENTS.md` mục 2: sửa điều kiện kích hoạt việc đọc hợp đồng vai.
+2. `AGENTS.md` mục 7: bỏ phần cho phép kiêm nhiệm, thay bằng phát biểu khớp
+   kiến trúc dòng 45. Giữ nguyên phần phân biệt phạm vi/vai và phần chuyển tiếp.
+3. Gate, bằng chứng, handoff.
 
 ## Risks and controls
 
-| Risk                                                    | Impact                                 | Mitigation                                                                                                                                               |
-| ------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Thêm chữ vào `AGENTS.md` làm tốn token mọi phiên        | Chi phí cố định tăng vĩnh viễn         | Giới hạn đúng một mục ~40 từ; mọi chi tiết đẩy sang file chỉ nạp khi cần.                                                                                |
-| Điều phối vẫn kiêm Planner và Release Assessor          | Tự chấm điểm việc mình chỉ đạo         | Bắt buộc công bố kiêm nhiệm trong bản đánh giá; bắt buộc thẩm định kế hoạch từ ELEVATED; con người vẫn duyệt cuối.                                       |
-| Thẩm định kế hoạch thành thủ tục hình thức              | Tốn lượt dispatch mà không bắt được gì | Hợp đồng yêu cầu thẩm định phải nêu rõ đã kiểm gì và **không kiểm được gì**; verdict phải là APPROVE hoặc CHANGES_REQUESTED, không có trạng thái mập mờ. |
-| Quy tắc mới mâu thuẫn ngầm với bốn hợp đồng vai hiện có | Agent nhận chỉ thị trái nhau           | Thẩm định kế hoạch phải đối chiếu file mới với cả bốn hợp đồng cũ và Responsibility Matrix.                                                              |
+| Risk                                                         | Impact                      | Mitigation                                                                                                 |
+| ------------------------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Siết mục 7 làm nhiều việc thường ngày bị chặn                | Người dùng bỏ qua quy tắc   | Ràng buộc chỉ áp cho **vai**, không áp cho thao tác thường. Việc không có kế hoạch/handoff không đụng tới. |
+| Sửa mục 2 làm mọi phiên phải đọc thêm file                   | Tốn token                   | Chỉ đọc hợp đồng của vai sắp hành động, đúng một file ~180–380 từ, và chỉ khi thật sự nhận vai.            |
+| Bản viết lại vẫn còn tiền đề sai chưa lộ                     | Lặp lại thất bại của vòng 1 | Bắt buộc thẩm định vòng 2; plan tự nêu điểm yếu nhất (lập luận về tier) để reviewer công kích trực tiếp.   |
+| Ràng buộc "execution riêng" khiến không ai làm được đánh giá | Việc tắc                    | Nếu không tạo được execution độc lập thì trạng thái là BLOCKED và con người quyết, **không** tự miễn trừ.  |
 
 ## Acceptance and recovery
 
-- [ ] `AGENTS.md` có đúng một mục mới cho vai điều phối, nêu cả việc vai đó
-      **không** được làm, và lệnh đọc `docs/roles/coordinator.md` là vô điều kiện.
-- [ ] `docs/roles/coordinator.md` tồn tại, theo đúng cấu trúc bốn hợp đồng vai
-      hiện có, và ghi rõ hai ràng buộc bù: công bố kiêm nhiệm, và thẩm định kế
-      hoạch bắt buộc từ ELEVATED trở lên.
-- [ ] `docs/plans/_TEMPLATE.md` có trường khai trạng thái thẩm định kế hoạch.
-- [ ] Không mâu thuẫn với `docs/roles/{planner,implementer,independent-reviewer,release-assessor}.md`
-      và Responsibility Matrix — thẩm định kế hoạch xác nhận điều này.
-- [ ] Handoff của plan này điền đủ `Role execution log` và `Release Assessment`.
+- [ ] `AGENTS.md` mục 2 kích hoạt trước khi hành động trong một vai và trước khi
+      đề xuất phân vai, không phụ thuộc việc đã có phong bì hình thức hay chưa.
+- [ ] `AGENTS.md` mục 7 không còn câu cho phép một execution giữ nhiều vai; có
+      phát biểu khớp kiến trúc dòng 45; giữ nguyên phần phân biệt phạm vi/vai và
+      phần nghĩa vụ chuyển tiếp.
+- [ ] Không thêm vai mới, không sửa file kiến trúc, không sửa hợp đồng vai nào.
+- [ ] `AGENTS.md` sau sửa không mâu thuẫn với bất kỳ dòng nào trong Responsibility
+      Matrix và Execution envelope — thẩm định vòng 2 và Independent Reviewer
+      cùng xác nhận.
+- [ ] Release Assessor của chính plan này là execution khác với Planner.
 - Security considerations: không đụng auth, secret, dependency, CI/deploy.
 - API/database impact: không.
-- Test strategy: gate docs; không có mã nên không có kiểm thử tự động. Phép thử
-  thật là tiêu chí 4 — quy tắc mới phải sống chung được với luật cũ.
-- Rollback plan: docs-only, `git revert <sha>`; file mới xoá bằng một commit.
+- Test strategy: gate docs. Phép thử thật là tiêu chí 4 — quy tắc mới phải sống
+  chung được với luật cũ mà không cần diễn giải.
+- Rollback plan: docs-only, `git revert <sha>`.
+
+## Follow-up tách riêng, không làm trong plan này
+
+Cổng thẩm định kế hoạch theo mức rủi ro. Thẩm định vòng 1 kết luận ngưỡng
+ELEVATED hợp lý về chính sách nhưng chưa có cơ chế khả thi: chưa có vai
+`plan-reviewer` trong danh sách `assigned_role` của phong bì; hợp đồng
+Independent Reviewer hiện chỉ nhận "approved plan", không hợp để thẩm định bản
+DRAFT; verdict chưa gắn với mã băm của kế hoạch nên sửa sau khi duyệt là thoát;
+và người lập kế hoạch tự phân mức NORMAL là né được chính cổng đó. Thêm một vai
+vào phong bì là sửa kiến trúc ⇒ CRITICAL. Cần plan riêng.
+
+Ghi chú: hai vòng thẩm định kế hoạch đã chạy trong thực tế (WORKFLOW-011 và
+plan này) đều bắt được lỗi chặn, nên giá trị của cổng này đã được chứng minh —
+chỉ là cần dựng cho đúng luật.
