@@ -24,8 +24,9 @@
 | Release Assessor     |                 |                |                             |                    |
 
 Before accepting any role, record its separate human confirmation here. Scope
-confirmation is not role confirmation; an agent holding multiple roles must
-identify each role and why when requesting confirmation.
+confirmation is not role confirmation. Each row must name a different execution;
+one execution holding two roles is an architecture deviation requiring recorded
+CRITICAL-level human approval.
 
 ## Acceptance, decisions, and risks
 
