@@ -2,7 +2,7 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-07-26)
 - Revision 1 (2026-07-27): sửa theo review vòng 1 của Codex — 2 blocking,
   2 major, 2 minor. `tests/security/**`, `CLAUDE.md` và
@@ -21,7 +21,13 @@
 - Reviewer nêu giới hạn: chưa có implementation diff, test, handoff hay evidence
   nên chưa xác nhận được regex, thứ tự rule và thông báo lỗi thực tế. Những thứ
   đó thuộc vòng review sau khi implement.
-- Approved by / date:
+- Approved by / date: tuann2, 2026-07-27 — duyệt nội dung plan (revision 1) qua
+  PR #36.
+- **Phê duyệt đích danh theo `AGENTS.md` mục 6 (ghi tách bạch, không suy ra từ
+  việc duyệt plan):** tuann2, 2026-07-27, chấp thuận thu hẹp phạm vi gate từ
+  `full` xuống `docs` cho **đúng hai đường dẫn**: `CHANGELOG.md` và
+  `PROJECT_STORY.md`. Không đường dẫn nào khác được hạ gate dưới plan này.
+  Deviation tương ứng phải được ghi lại trong handoff khi thực thi.
 - Risk tier: ELEVATED
 - Risk categories and escalation rationale: governance-enforcement tooling —
   sửa `scripts/gates-manifest.ts` là sửa logic quyết định gate nào chạy cho
@@ -139,7 +145,7 @@ Execution assignment — mỗi dòng cần xác nhận riêng khi đến lượt
 | Vai trò              | Agent đề xuất                | Model / effort | Lý do                                                                                                             | Đã xác nhận                                |
 | -------------------- | ---------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | Planner              | Claude Code                  | high           | Đã đo tập không-khớp bằng chính `PATH_GATE_RULES` và phân nhóm theo rủi ro.                                       | tuann2, 2026-07-26 (dispatch "ok soạn đi") |
-| Implementer          | Codex (`codex:codex-rescue`) | high           | Không tự nhận: đây là `scripts/**` + test, đúng loại "substantial" mà Responsibility Matrix cấm Planner tự làm.   | chưa                                       |
+| Implementer          | Codex (`codex:codex-rescue`) | high           | Không tự nhận: đây là `scripts/**` + test, đúng loại "substantial" mà Responsibility Matrix cấm Planner tự làm.   | tuann2, 2026-07-27                         |
 | Independent Reviewer | Codex fresh (`--fresh`)      | high           | ELEVATED cần một reviewer tươi đọc từng dòng; cần đọc được logic regex + chạy test, nên ưu tiên profile có shell. | chưa                                       |
 | Release Assessor     | Claude Code                  | low            | Khác Implementer.                                                                                                 | chưa                                       |
 
