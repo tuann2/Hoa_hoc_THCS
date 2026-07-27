@@ -2,13 +2,27 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-07-27)
 - **Revision 1 (2026-07-27) — viết lại toàn bộ theo thẩm định kế hoạch vòng 1.**
   Vòng 1 ra CHANGES_REQUESTED với 4 lỗi chặn. Bản đầu đề xuất dựng một vai
   "điều phối" mới dựa trên tiền đề **sai**; xem mục "Tiền đề sai của bản đầu".
   Bản này bỏ hẳn vai mới, thu phạm vi về đúng khoảng trống đã kiểm chứng.
-- Approved by / date:
+- Approved by / date: tuann2, 2026-07-27 — **duyệt trực tiếp nguyên văn ba
+  thay đổi câu chữ** sau khi đọc bản before/after đầy đủ, thay vì chạy các vòng
+  thẩm định mà plan tự đặt ra. Xem hai sai lệch dưới đây.
+- **Sai lệch 1 — bỏ qua yêu cầu thẩm định của chính plan.** Plan tự xếp CRITICAL
+  và đòi hai independent reviewer trong đó một adversarial. tuann2 chọn duyệt
+  trực tiếp. Hợp lệ vì Human Approver là quyền cao nhất và đã đọc nguyên văn
+  diff — nhưng đây là bỏ qua yêu cầu do chính plan đặt ra, ghi lại chứ không để
+  trôi. Lý do chấp nhận được: thay đổi cuối cùng là 3 câu trên 2 file, đọc hết
+  trong một phút, không có bề mặt kỹ thuật nào để một vòng thẩm định agent phát
+  hiện thêm.
+- **Sai lệch 2 — Implementer là Claude Code, không phải Codex như plan đề xuất.**
+  Lý do plan đề xuất Codex là xung đột lợi ích: `AGENTS.md` ràng buộc chính
+  Claude Code. Ở đây rủi ro đó không hiện thực: (a) thay đổi đi theo chiều
+  **siết** quyền của chính Claude Code, không nới; (b) nội dung là chép lại
+  nguyên văn câu chữ con người đã đọc và duyệt, không có khoảng trống diễn giải.
 - Risk tier: **CRITICAL** (nâng từ ELEVATED ở revision 2)
 - Risk categories and escalation rationale: revision 1 lập luận giữ ELEVATED vì
   thay đổi chỉ **siết** shim cho khớp kiến trúc chứ không mở rộng quyền. Thẩm
