@@ -9,6 +9,18 @@
   `.claude/skills/feature-delivery/SKILL.md` chuyển từ nhóm bị hạ gate về
   Nhóm A giữ `full`; thiết kế test chống mọc lại bỏ allowlist tự do; cập nhật
   mẫu số 233 → 235. Chi tiết ở từng mục dưới.
+- Review vòng 2 (2026-07-27, Codex, effort high, execution mới): **APPROVE**,
+  6/6 finding vòng 1 đóng đúng, không finding mới. Reviewer tự đo lại tập
+  không-khớp và ra đúng 24/235 khớp revision 1. Nó cũng kiểm ba câu hỏi về hệ
+  quả của chính bản sửa: Nhóm A phình to có mục nào thừa `full` không (không),
+  lý do giữ Nhóm C ở `docs` có vững không (có — không script nào đọc hai file
+  đó, và `full` cũng không kiểm được tính chính xác tường thuật của chúng), và
+  assert-rỗng có gây ma sát phản tác dụng không (không — đường dẫn mới trước
+  đây vẫn bị fail-closed sang `full`; test chỉ buộc ghi rõ quyết định thay vì
+  để nợ tích luỹ).
+- Reviewer nêu giới hạn: chưa có implementation diff, test, handoff hay evidence
+  nên chưa xác nhận được regex, thứ tự rule và thông báo lỗi thực tế. Những thứ
+  đó thuộc vòng review sau khi implement.
 - Approved by / date:
 - Risk tier: ELEVATED
 - Risk categories and escalation rationale: governance-enforcement tooling —
