@@ -23,6 +23,18 @@
   đó thuộc vòng review sau khi implement.
 - Approved by / date: tuann2, 2026-07-27 — duyệt nội dung plan (revision 1) qua
   PR #36.
+- **Revision 2 (2026-07-27) — mở rộng phạm vi, tuann2 duyệt riêng.** Thêm
+  `tests/scripts/classify-change.test.ts` vào In scope. Lý do: test
+  "fails closed to full for unrecognized paths" dùng
+  `supabase/migrations/20260718_add_table.sql` làm ví dụ đường dẫn chưa nhận
+  diện; sau khi plan này viết rule cho `supabase/(migrations|rollbacks)/**` thì
+  đường dẫn đó không còn unrecognized, `fallbackToFull` thành `false` và test
+  đỏ. Fixture hết hạn chứ không phải logic sai — chỉ cần đổi sang một đường dẫn
+  tổng hợp thật sự chưa phân loại, không đụng `classify-change.ts`.
+  Thiếu sót này thuộc về Planner: file đó chắc chắn phải sửa mà bản đầu không
+  liệt kê. Implementer phát hiện khi chạy test và dừng đúng envelope thay vì tự
+  sửa file ngoài phạm vi. Rủi ro không tăng: vẫn ELEVATED, vẫn `scripts/**` +
+  test, fail-closed giữ nguyên.
 - **Phê duyệt đích danh theo `AGENTS.md` mục 6 (ghi tách bạch, không suy ra từ
   việc duyệt plan):** tuann2, 2026-07-27, chấp thuận thu hẹp phạm vi gate từ
   `full` xuống `docs` cho **đúng hai đường dẫn**: `CHANGELOG.md` và
@@ -53,6 +65,7 @@
   `'unrecognized path; fail closed to full'`. Phân loại chúng có chủ đích, và
   thêm test để khoảng trống này không âm thầm mọc lại.
 - In scope: `scripts/gates-manifest.ts`, `tests/scripts/gates-manifest.test.ts`,
+  `tests/scripts/classify-change.test.ts`,
   `docs/handoffs/WORKFLOW-011-implementation.md`.
 - Out of scope: đổi định nghĩa profile (`WEB_/DOCS_/BROWSER_/FULL_PROFILE_GATE_IDS`);
   đụng `classify-change.ts` hay cơ chế fail-closed — fail-closed **phải giữ
