@@ -2,7 +2,7 @@
 
 ## Status
 
-- Remediation state: VALIDATING
+- Remediation state: RELEASE_READY — review ELEVATED APPROVE, không finding chặn. Chờ Human Approval để merge.
 - Risk tier / categories / escalation rationale: ELEVATED — governance-enforcement tooling; path-to-gate classification controls required validation.
 - Base SHA / candidate SHA: 2c8ad38e584fdb3b9c0d058772b57ac71c9597a2 / UNCOMMITTED
 - Worktree state and dirty paths: DIRTY — tests/scripts/classify-change.test.ts, docs/handoffs/WORKFLOW-011-implementation.md
@@ -16,12 +16,12 @@
 
 ## Role execution log
 
-| Role                 | Executing agent | Model / effort | Human confirmer + timestamp | Execution evidence        |
-| -------------------- | --------------- | -------------- | --------------------------- | ------------------------- |
-| Planner              | Claude Code     | high           | tuann2, 2026-07-26          | confirmed by tuann2       |
-| Implementer          | Codex           | high           | tuann2, 2026-07-27          | relayed role confirmation |
-| Independent Reviewer | not confirmed   | n/a            | not confirmed               | PENDING                   |
-| Release Assessor     | not confirmed   | n/a            | not confirmed               | PENDING                   |
+| Role                 | Executing agent                  | Model / effort | Human confirmer + timestamp | Execution evidence                                                |
+| -------------------- | -------------------------------- | -------------- | --------------------------- | ----------------------------------------------------------------- |
+| Planner              | Claude Code                      | high           | tuann2, 2026-07-26          | confirmed by tuann2                                               |
+| Implementer          | Codex                            | high           | tuann2, 2026-07-27          | relayed role confirmation                                         |
+| Independent Reviewer | agy (`claude-opus-4-6-thinking`) | —              | tuann2, 2026-07-27          | Verdict APPROVE, không finding chặn; xem Independent verification |
+| Release Assessor     | Claude Code                      | low            | tuann2, 2026-07-27          | Đánh giá ở mục Release Assessment                                 |
 
 ## Acceptance, decisions, and risks
 
@@ -184,11 +184,88 @@ của handoff nằm trong cây mã, đã ghi thành follow-up mở ở handoff W
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Verifier / execution identifier / independence method: `agy`, model
+  `claude-opus-4-6-thinking` — lớp "strong structural reasoning" theo tiêu chí ở
+  `docs/runbooks/providers/antigravity.md`, đúng loại việc (review logic regex và
+  test). Execution mới, không thừa hưởng transcript của Implementer (Codex),
+  envelope read-only. Vai do tuann2 xác nhận riêng ngày 2026-07-27.
+- Giới hạn về cách cấp nội dung: agy headless tự từ chối tool cần quyền
+  `command`; orchestrator không dùng `--dangerously-skip-permissions` vì cờ đó
+  cấp cả quyền ghi, trái envelope read-only. Thay vào đó dán nguyên văn: diff
+  thực thi, **toàn bộ** `PATH_GATE_RULES` sau thay đổi theo đúng thứ tự, định
+  nghĩa các profile, cơ chế fail-closed trong `classify-change.ts`, và tiêu chí
+  acceptance của plan. Reviewer tự ghi những gì nó không kiểm được.
+- Exact candidate CI status: PR #38, 4/4 job pass trên candidate.
+- **Findings and disposition — verdict APPROVE, không finding chặn.** Sáu trọng
+  tâm đều đạt:
+  - Regex neo `^...$` đầy đủ, mọi dấu chấm literal đã escape; alternation tên
+    script kèm `\.ts` nên `cli-other.ts` không lọt; `(?:postcss|tailwind)\.config\.js`
+    không khớp `postcss.config.jsx` hay `foo-postcss.config.js`.
+  - Rule Nhóm C khớp **đúng hai** file `CHANGELOG.md` và `PROJECT_STORY.md`,
+    không hơn — tôn trọng đúng ranh giới phê duyệt của con người.
+  - Thứ tự rule: reviewer dựng bảng đối chiếu từng đường dẫn mới với **mọi** rule
+    đứng trước và kết luận không rule nào bị che; các rule mới cũng không che
+    nhau. Không đường dẫn nào từ profile cao rơi xuống profile thấp do chèn rule.
+  - Nhóm B mất 4 gate so với `full` (`e2e`, `pwa`, `pwa-subpath`, `docs-check`);
+    reviewer đối chiếu từng gate và kết luận không gate nào liên quan tới
+    `tests/hooks/**` hay `tests/fixtures/check-licenses/**`.
+  - Test chống mọc lại dùng `git ls-files -z` với `encoding: 'buffer'`, tách theo
+    `\0`, assert tập không-khớp bằng `[]` — **không thể xanh rỗng tuếch**.
+  - `classify-change.ts` **không có thay đổi nào**; fail-closed còn nguyên.
+- **Một ghi nhận informational, không chặn:** trong test "first matching rule",
+  assertion `PATH_GATE_RULES.filter(...)[0]).toBe(firstMatch)` là **tautology** —
+  `.find()` và `.filter()[0]` cho cùng kết quả trên cùng mảng khi regex không có
+  cờ `/g`. Assertion theo `reason` ngay trước đó mới là cái mang ý nghĩa thật.
+  Reviewer đề xuất thay bằng phép đếm số rule khớp, để bắt được trường hợp một
+  đường dẫn vô tình khớp nhiều rule. **Disposition: chấp nhận, ghi thành
+  follow-up.** Không chặn phát hành vì assertion thừa không làm test yếu đi,
+  và phần bảo vệ thật (assert theo `reason` + assert tập rỗng) vẫn nguyên. Nếu
+  làm tiếp, đó là một sửa test nhỏ nên gộp vào lần chạm `gates-manifest` kế tiếp.
+- Reviewer tự nêu không kiểm được: số file tracked thực tế, giá trị runtime của
+  `WEB_CLASSIFIER_GATES`, danh sách 24 đường dẫn cũ, và trạng thái CI — vì không
+  chạy được lệnh. Những hạng mục đó do orchestrator đo và do CI xác nhận.
 - Batch-content exception authorization: n/a
 
 ## Release Assessment
 
-- Assessment and evidence basis: Not performed; no Release Assessor has been confirmed. This handoff does not declare release readiness.
+Thực hiện bởi Claude Code, vai do tuann2 xác nhận riêng ngày 2026-07-27, khác
+Implementer (Codex) đúng ràng buộc tách vai. **Công bố kiêm nhiệm theo `AGENTS.md`
+mục 7:** cùng execution này giữ cả vai Planner của WORKFLOW-011. Không vi phạm
+Responsibility Matrix — điều bị cấm là Planner _implement_, và việc đó do Codex
+làm. Nhưng người đọc cần biết assessor không độc lập với thiết kế đang được đánh
+giá; điều bù lại là kết luận dựa trên một vòng review độc lập thật, không dựa
+trên phán đoán của assessor.
+
+**Kết luận: RELEASE_READY** — đây là đánh giá, không phải Human Approval.
+
+| Hạng mục                 | Kết quả                                                                                     |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| Phạm vi khớp plan        | Đúng 4 file trong In scope sau revision 2; không file nào ngoài                             |
+| Thu hẹp gate             | Đúng 2 đường dẫn được phê duyệt đích danh; reviewer xác nhận regex không khớp rộng hơn      |
+| Mục tiêu chính           | 24/235 → **0/237** đường dẫn chưa phân loại; orchestrator đo độc lập bằng `git ls-files -z` |
+| Nhóm A không đổi hành vi | Vẫn ra `full`, có test khẳng định                                                           |
+| Fail-closed              | `classify-change.ts` không có thay đổi nào; reviewer xác nhận                               |
+| Test                     | 282/282 pass trong môi trường không hạn chế                                                 |
+| Gate                     | 15/15 exit 0, profile `full`                                                                |
+| Evidence                 | Bind chính xác: `candidate_sha 148111e`, snapshot `1ff3e947` = tree của commit đó           |
+| Review theo tier         | ELEVATED cần 1 reviewer tươi đọc từng dòng — đã có, verdict APPROVE                         |
+
+### Deviation ghi nhận
+
+1. **Thu hẹp phạm vi gate** cho `CHANGELOG.md` và `PROJECT_STORY.md`, theo
+   `AGENTS.md` mục 6, approver tuann2 ngày 2026-07-27, duyệt đích danh tách rời
+   khỏi việc duyệt plan.
+2. **Mở rộng phạm vi giữa chừng** (revision 2): thêm
+   `tests/scripts/classify-change.test.ts`. Nguyên nhân là thiếu sót của Planner
+   khi soạn plan, phát hiện bởi Implementer lúc chạy test. Implementer dừng đúng
+   envelope thay vì tự sửa file ngoài phạm vi. tuann2 duyệt riêng.
+3. **Orchestrator chạy gate/evidence thay Implementer** theo degradation path đã
+   ghi trong `docs/runbooks/providers/codex.md`: sandbox chặn cả tsx IPC pipe lẫn
+   Vitest spawn `git`.
+
+### Rủi ro tồn dư
+
+Assertion tautology trong test "first matching rule" (xem Independent
+verification). Không làm yếu phần bảo vệ thật, đã ghi thành follow-up.
+
+Quyền merge và phê duyệt phát hành thuộc tuann2.
