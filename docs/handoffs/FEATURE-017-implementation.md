@@ -4,12 +4,12 @@
 
 - Remediation state: IMPLEMENTED (remediation round 2; pending independent review)
 - Risk tier / categories / escalation rationale: NORMAL; educational numeric data, UI/React, and PWA route allowlist.
-- Base SHA / candidate SHA: d79ba1fe8fc99375554e918e16ece7231ff0d1b8 / UNCOMMITTED
-- Worktree state and dirty paths: uncommitted remediation at base `d79ba1f` on
-  branch `feature/017-reference-tables`; changed paths are
-  `src/lib/referenceValidation.ts`, `tests/lib/reference-validation.test.ts`,
-  and this handoff. Not pushed; no commit was made because this envelope
-  forbids commit, push, merge, and deploy.
+- Base SHA / candidate SHA: fd0758700abc2d91878c62a5fe390215a559f9a9 / 4b2dbfa259f75b317925ae98265a18a91390591a
+- Worktree state and dirty paths: clean at candidate `4b2dbfa` on branch
+  `feature/017-reference-tables`. The implementer left remediation 2
+  uncommitted as its envelope required; the coordinator committed it as
+  `4b2dbfa` under tuann2's standing "commit, do not push" decision of
+  2026-08-08. Not pushed; no PR open.
 - CI reference for exact candidate (when required/available): not available —
   branch is intentionally unpushed, so gates were run locally by the
   orchestrator against the exact candidate.
@@ -94,3 +94,45 @@ in this remediation round.
 ## Release Assessment
 
 - Assessment and evidence basis: PENDING
+
+## Orchestrator validation on candidate `4b2dbfa`
+
+Authoritative run by the coordinator (Claude Code), not the implementer:
+
+- `npm run gates -- --changed-from=fd07587`, profile `full`: 9/10 PASS —
+  git-diff-check, format-check, content-catalog, content-validation, lint,
+  typecheck, unit-tests (316/316), production-build, bundle-check.
+  `dependency-audit` FAIL.
+- `npm run evidence -- --changed-from=fd07587`: candidate
+  `4b2dbfa259f75b317925ae98265a18a91390591a`, validated snapshot
+  `8259cb3d2bfe10f16e063e221a97718e765792f2` (git-tree), `result: fail`
+  attributable solely to `dependency-audit`.
+- `npm run test:pwa` 6/6 and `npm run test:pwa:subpath` 1/1, run by the
+  coordinator under the plan's documented degradation path because the Codex
+  sandbox rejects the Playwright preview listener with EPERM. Re-run after
+  remediation 2 specifically because `referenceLoader` calls
+  `assertValidReferenceData` at runtime, so stricter validation could have
+  broken `/tra-cuu` in a browser while unit tests stayed green. It did not.
+
+`dependency-audit` fails on 4 advisories pre-existing on `main` before this
+branch (`brace-expansion`, `fast-uri`, `nanoid` high; `postcss` moderate).
+tuann2 decided on 2026-08-08 to defer patching them. **The gate was not
+modified, disabled, or allowlisted.** A merge still requires a deviation
+argued on its own merits: the waiver used for PR #40/#41 rested on those PRs
+being Markdown-only, which does not transfer to this code change on the full
+gate profile.
+
+### Remediation 2 verification by the coordinator
+
+The independent reviewer found that the validator inspected only top-level
+structure. The coordinator confirmed it by mutation probe before dispatching
+the fix, and re-probed afterwards:
+
+- The 12 probes shown to the implementer: 0/12 caught before, 12/12 after.
+- A further 21 probes **never shown to the implementer**: 21/21 caught. These
+  covered rules the dispatch never mentioned — `NaN`/`Infinity`, non-integer
+  atomic numbers, duplicate cations, missing legend keys, whitespace-only
+  strings, and empty tables in every dataset — so the fix generalised rather
+  than special-casing the reported sample.
+- `npm run validate-content` still PASS against the real datasets, so the new
+  rules produce no false positives on correct data.
