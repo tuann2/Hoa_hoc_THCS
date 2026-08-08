@@ -40,6 +40,11 @@ const ReviewRoute = lazy(() =>
     default: module.ReviewRoute
   }))
 );
+const ReferenceRoute = lazy(() =>
+  import('./routes/ReferenceRoute').then((module) => ({
+    default: module.ReferenceRoute
+  }))
+);
 const AdminLearnersRoute = lazy(() =>
   import('./routes/AdminLearnersRoute').then((module) => ({
     default: module.AdminLearnersRoute
@@ -99,6 +104,7 @@ export default function App() {
     { to: '/', label: 'Lộ trình' },
     { to: '/exam', label: 'Thi thử' },
     { to: '/review', label: 'Ôn lại', badge: reviewCount },
+    { to: '/tra-cuu', label: 'Tra cứu' },
     { to: '/profile', label: 'Hồ sơ' }
   ];
   if (isAdmin) {
@@ -188,6 +194,7 @@ export default function App() {
                   element={<LessonRoute mode="practice" />}
                 />
                 <Route path="/review" element={<ReviewRoute />} />
+                <Route path="/tra-cuu" element={<ReferenceRoute />} />
                 <Route path="/profile" element={<ProfileRoute />} />
                 <Route
                   path="/admin/learners"

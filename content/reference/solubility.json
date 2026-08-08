@@ -1,0 +1,107 @@
+{
+  "source": "Bộ Giáo dục và Đào tạo, SGK Khoa học tự nhiên 8, GDPT 2018; bảng tính tan dùng trong bài tập THCS.",
+  "version": "GDPT 2018",
+  "conditions": "Dung dịch nước gần nhiệt độ phòng; kết quả có thể thay đổi theo nhiệt độ, nồng độ và môi trường.",
+  "legend": {
+    "T": "Tan",
+    "K": "Ít tan",
+    "I": "Không tan",
+    "B": "Bị phân huỷ / không xét muối bền trong nước",
+    "-": "Không có dữ liệu trong phạm vi bảng"
+  },
+  "cations": [
+    "Na+",
+    "K+",
+    "NH4+",
+    "Ca2+",
+    "Ba2+",
+    "Mg2+",
+    "Al3+",
+    "Fe2+",
+    "Fe3+",
+    "Cu2+",
+    "Ag+",
+    "Pb2+"
+  ],
+  "anions": ["NO3-", "Cl-", "SO4^2-", "CO3^2-", "OH-"],
+  "matrix": {
+    "Na+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "T",
+      "OH-": "T"
+    },
+    "K+": { "NO3-": "T", "Cl-": "T", "SO4^2-": "T", "CO3^2-": "T", "OH-": "T" },
+    "NH4+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "T",
+      "OH-": "T"
+    },
+    "Ca2+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "K",
+      "CO3^2-": "I",
+      "OH-": "K"
+    },
+    "Ba2+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "I",
+      "CO3^2-": "I",
+      "OH-": "T"
+    },
+    "Mg2+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "I",
+      "OH-": "I"
+    },
+    "Al3+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "B",
+      "OH-": "I"
+    },
+    "Fe2+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "I",
+      "OH-": "I"
+    },
+    "Fe3+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "B",
+      "OH-": "I"
+    },
+    "Cu2+": {
+      "NO3-": "T",
+      "Cl-": "T",
+      "SO4^2-": "T",
+      "CO3^2-": "I",
+      "OH-": "I"
+    },
+    "Ag+": {
+      "NO3-": "T",
+      "Cl-": "I",
+      "SO4^2-": "K",
+      "CO3^2-": "I",
+      "OH-": "I"
+    },
+    "Pb2+": {
+      "NO3-": "T",
+      "Cl-": "K",
+      "SO4^2-": "I",
+      "CO3^2-": "I",
+      "OH-": "I"
+    }
+  }
+}

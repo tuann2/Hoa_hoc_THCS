@@ -124,7 +124,8 @@ test.describe('@pwa', () => {
       { path: '/review', heading: /Ôn lại câu sai|Không có câu nào cần ôn/ },
       { path: '/exam', heading: /Tạo đề luyện tập theo phạm vi em muốn/ },
       { path: '/profile', heading: /Tiến độ của em/ },
-      { path: '/auth', heading: /^Đăng nhập$/ }
+      { path: '/auth', heading: /^Đăng nhập$/ },
+      { path: '/tra-cuu', heading: /Bảng tuần hoàn, tính tan và hằng số/ }
     ];
 
     for (const route of offlineRoutes) {

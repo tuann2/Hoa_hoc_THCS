@@ -1,0 +1,21 @@
+{
+  "source": "Bộ Giáo dục và Đào tạo, SGK Khoa học tự nhiên 9, GDPT 2018.",
+  "version": "GDPT 2018",
+  "conditions": "Dãy hoạt động hoá học trong dung dịch nước; phản ứng thực tế còn phụ thuộc điều kiện và lớp oxide bề mặt.",
+  "series": [
+    "K",
+    "Na",
+    "Ca",
+    "Mg",
+    "Al",
+    "Zn",
+    "Fe",
+    "Pb",
+    "(H)",
+    "Cu",
+    "Hg",
+    "Ag",
+    "Au"
+  ],
+  "note": "Kim loại đứng trước H thường đẩy được H2 khỏi acid loãng; kim loại đứng trước thường đẩy kim loại đứng sau ra khỏi dung dịch muối phù hợp."
+}

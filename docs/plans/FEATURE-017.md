@@ -70,6 +70,10 @@
   `scripts/`, `vite.config.ts`). Profile `codex-claude-subagent` từng gặp
   `EPERM` với `validate-content`/`build`/`test:pwa` (FEATURE-016) → dùng
   direct-terminal, hoặc để orchestrator/CI chạy các gate đó.
+  Chốt ngày 2026-08-08 (tuann2): chạy Codex qua **subagent**, theo nhánh
+  degradation thứ hai — orchestrator (Claude Code) chạy `validate-content`,
+  `build`, `test:pwa`; Codex chạy lint/typecheck/unit và báo EPERM thay vì
+  tự lách sandbox.
 
 ## Delivery plan
 
@@ -79,9 +83,9 @@ duyệt plan không đồng nghĩa duyệt việc nhận vai kế tiếp:
 | Vai trò              | Agent đề xuất           | Model / effort         | Lý do                                            | Đã xác nhận        |
 | -------------------- | ----------------------- | ---------------------- | ------------------------------------------------ | ------------------ |
 | Planner              | Claude Code             | Sonnet 5 / medium      | Khảo sát + viết plan                             | tuann2, 2026-08-07 |
-| Implementer          | Codex (direct-terminal) | `gpt-5.6-terra` / high | 6 dataset + route + validator + cấu hình PWA     | chưa               |
+| Implementer          | Codex (subagent)        | `gpt-5.6-terra` / high | 6 dataset + route + validator + cấu hình PWA     | tuann2, 2026-08-08 |
 | Fact-checker         | agy                     | medium                 | Kiểm số liệu hoá học theo nguồn, không chạy gate | chưa               |
-| Independent Reviewer | Codex (execution khác)  | `gpt-5.6-sol` / high   | Cần shell + chạy test, đúng role contract        | chưa               |
+| Independent Reviewer | Codex (execution khác)  | `gpt-5.6-sol` / high   | Cần shell + chạy test, đúng role contract        | tuann2, 2026-08-08 |
 | Release Assessor     | Claude Code (phiên mới) | Sonnet 5 / medium      | Execution mới, không phải phiên Planner này      | chưa               |
 
 1. Implementation — 6 dataset, `src/types/reference.ts`,
