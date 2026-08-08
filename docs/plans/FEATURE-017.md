@@ -2,9 +2,16 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-08-07)
-- Approved by / date:
+- Approved by / date: tuann2, 2026-08-08 (duyệt nội dung plan trong PR #40)
+- Deviation (ghi theo AGENTS.md mục 6): PR này được merge trong khi gate
+  `dependency-audit` đang FAIL. Nguyên nhân là 4 advisory mới chưa duyệt
+  (`brace-expansion`, `fast-uri`, `nanoid` — high; `postcss` — moderate) đã
+  có sẵn trên `main` từ trước PR; thay đổi ở đây chỉ là Markdown nên không
+  thể là nguyên nhân. Phê duyệt bỏ qua: tuann2, 2026-08-08. Gate **không bị
+  sửa hay tắt**. Follow-up bắt buộc: vá 4 advisory này trong một thay đổi
+  riêng trước khi bất kỳ code nào của FEATURE-017 được merge.
 - Risk tier: NORMAL
 - Risk categories and escalation rationale: nội dung giáo dục (giá trị số) +
   UI/React + một dòng cấu hình PWA. Không auth/RLS/schema/dependency. Dữ liệu
