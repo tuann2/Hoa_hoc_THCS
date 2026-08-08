@@ -9,9 +9,22 @@ import type {
 } from '../types/reference';
 
 const SOLUBILITY_VALUES = new Set(['T', 'K', 'I', 'B', '-']);
+const SOLUBILITY_KEYS = ['T', 'K', 'I', 'B', '-'] as const;
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && Boolean(value.trim());
+}
+
+function isNonEmptyStringArray(value: unknown): value is string[] {
+  return (
+    Array.isArray(value) &&
+    value.length > 0 &&
+    value.every((entry) => isNonEmptyString(entry))
+  );
 }
 
 function validateMetadata(
@@ -24,7 +37,7 @@ function validateMetadata(
     return false;
   }
   for (const key of ['source', 'version', 'conditions'] as const) {
-    if (typeof value[key] !== 'string' || !value[key].trim()) {
+    if (!isNonEmptyString(value[key])) {
       errors.push(`${name}: thiếu ${key}.`);
     }
   }
@@ -39,16 +52,22 @@ function validateElements(value: unknown, errors: string[]): void {
       errors.push('elements: thiếu mảng elements.');
     return;
   }
+  if (value.elements.length === 0) {
+    errors.push('elements: mảng elements không được rỗng.');
+    return;
+  }
   const symbols = new Set<string>();
+  const atomicNumbers = new Set<number>();
   for (const element of value.elements) {
     if (
       !isRecord(element) ||
-      typeof element.symbol !== 'string' ||
-      typeof element.name !== 'string' ||
+      !isNonEmptyString(element.symbol) ||
+      !isNonEmptyString(element.name) ||
       typeof element.atomicNumber !== 'number' ||
       typeof element.atomicMass !== 'number' ||
       typeof element.period !== 'number' ||
-      typeof element.group !== 'number'
+      typeof element.group !== 'number' ||
+      !isNonEmptyString(element.category)
     ) {
       errors.push('elements: schema phần tử không hợp lệ.');
       continue;
@@ -56,37 +75,80 @@ function validateElements(value: unknown, errors: string[]): void {
     if (symbols.has(element.symbol))
       errors.push(`elements: trùng ký hiệu ${element.symbol}.`);
     symbols.add(element.symbol);
-    if (element.atomicMass < 1 || element.atomicMass > 300)
+    if (atomicNumbers.has(element.atomicNumber))
+      errors.push(`elements: trùng số hiệu nguyên tử ${element.atomicNumber}.`);
+    atomicNumbers.add(element.atomicNumber);
+    if (
+      !Number.isFinite(element.atomicMass) ||
+      element.atomicMass < 1 ||
+      element.atomicMass > 300
+    )
       errors.push(
         `elements: nguyên tử khối ${element.symbol} ngoài khoảng hợp lí.`
       );
+    for (const [field, min, max] of [
+      ['atomicNumber', 1, 118],
+      ['period', 1, 7],
+      ['group', 1, 18]
+    ] as const) {
+      const fieldValue = element[field];
+      if (
+        typeof fieldValue !== 'number' ||
+        !Number.isFinite(fieldValue) ||
+        !Number.isInteger(fieldValue) ||
+        fieldValue < min ||
+        fieldValue > max
+      )
+        errors.push(
+          `elements: ${field} ${element.symbol} ngoài khoảng ${min}–${max}.`
+        );
+    }
   }
 }
 
 function validateSolubility(value: unknown, errors: string[]): void {
   const hasMetadata = validateMetadata(value, 'solubility', errors);
   if (!isRecord(value)) return;
+  const legend = value.legend;
+  const matrix = value.matrix;
   if (
     !hasMetadata ||
     !Array.isArray(value.cations) ||
     !Array.isArray(value.anions) ||
-    !isRecord(value.matrix)
+    !isRecord(legend) ||
+    !isRecord(matrix)
   ) {
     errors.push('solubility: schema ma trận không hợp lệ.');
     return;
   }
-  const matrix = value.matrix;
+  if (!isNonEmptyStringArray(value.cations))
+    errors.push('solubility: cations phải là mảng chuỗi không rỗng.');
+  if (!isNonEmptyStringArray(value.anions))
+    errors.push('solubility: anions phải là mảng chuỗi không rỗng.');
+  for (const key of SOLUBILITY_KEYS) {
+    if (!isNonEmptyString(legend[key]))
+      errors.push(`solubility: thiếu chú giải ${key}.`);
+  }
+  if (
+    !isNonEmptyStringArray(value.cations) ||
+    !isNonEmptyStringArray(value.anions)
+  )
+    return;
+  const cations = new Set<string>();
+  const anions = new Set<string>();
+  for (const anion of value.anions) {
+    if (anions.has(anion)) errors.push(`solubility: trùng anion ${anion}.`);
+    anions.add(anion);
+  }
   for (const cation of value.cations) {
-    const row = typeof cation === 'string' ? matrix[cation] : undefined;
-    if (typeof cation !== 'string' || !isRecord(row)) {
+    if (cations.has(cation)) errors.push(`solubility: trùng cation ${cation}.`);
+    cations.add(cation);
+    const row = matrix[cation];
+    if (!isRecord(row)) {
       errors.push(`solubility: thiếu hàng ${String(cation)}.`);
       continue;
     }
     for (const anion of value.anions) {
-      if (typeof anion !== 'string') {
-        errors.push('solubility: anion không hợp lệ.');
-        continue;
-      }
       const cell = row[anion];
       if (cell === undefined)
         errors.push(`solubility: thiếu ô ${cation}/${String(anion)}.`);
@@ -98,16 +160,76 @@ function validateSolubility(value: unknown, errors: string[]): void {
   }
 }
 
-function validateSimpleDataset(
-  value: unknown,
-  name: string,
-  field: string,
-  errors: string[]
-): void {
-  const hasMetadata = validateMetadata(value, name, errors);
+function validateValences(value: unknown, errors: string[]): void {
+  const hasMetadata = validateMetadata(value, 'valences', errors);
   if (!isRecord(value) || !hasMetadata) return;
-  if (!Array.isArray(value[field]))
-    errors.push(`${name}: thiếu mảng ${field}.`);
+  if (!Array.isArray(value.entries)) {
+    errors.push('valences: thiếu mảng entries.');
+    return;
+  }
+  if (value.entries.length === 0)
+    errors.push('valences: mảng entries không được rỗng.');
+  for (const entry of value.entries) {
+    if (
+      !isRecord(entry) ||
+      !isNonEmptyString(entry.formula) ||
+      !isNonEmptyString(entry.name) ||
+      !isNonEmptyStringArray(entry.valences)
+    )
+      errors.push('valences: schema phần tử không hợp lệ.');
+  }
+}
+
+function validateActivitySeries(value: unknown, errors: string[]): void {
+  const hasMetadata = validateMetadata(value, 'activity-series', errors);
+  if (!isRecord(value) || !hasMetadata) return;
+  if (!isNonEmptyStringArray(value.series))
+    errors.push('activity-series: series phải là mảng chuỗi không rỗng.');
+  if (!isNonEmptyString(value.note))
+    errors.push('activity-series: thiếu note.');
+}
+
+function validateConstants(value: unknown, errors: string[]): void {
+  const hasMetadata = validateMetadata(value, 'constants', errors);
+  if (!isRecord(value) || !hasMetadata) return;
+  if (!Array.isArray(value.constants)) {
+    errors.push('constants: thiếu mảng constants.');
+    return;
+  }
+  if (value.constants.length === 0)
+    errors.push('constants: mảng constants không được rỗng.');
+  for (const constant of value.constants) {
+    if (
+      !isRecord(constant) ||
+      !isNonEmptyString(constant.id) ||
+      !isNonEmptyString(constant.name) ||
+      typeof constant.value !== 'number' ||
+      !Number.isFinite(constant.value) ||
+      !isNonEmptyString(constant.unit)
+    )
+      errors.push('constants: schema phần tử không hợp lệ.');
+  }
+}
+
+function validatePrecipitates(value: unknown, errors: string[]): void {
+  const hasMetadata = validateMetadata(value, 'precipitates', errors);
+  if (!isRecord(value) || !hasMetadata) return;
+  if (!Array.isArray(value.entries)) {
+    errors.push('precipitates: thiếu mảng entries.');
+    return;
+  }
+  if (value.entries.length === 0)
+    errors.push('precipitates: mảng entries không được rỗng.');
+  for (const entry of value.entries) {
+    if (
+      !isRecord(entry) ||
+      !isNonEmptyString(entry.formula) ||
+      !isNonEmptyString(entry.name) ||
+      !isNonEmptyString(entry.color) ||
+      !isNonEmptyString(entry.note)
+    )
+      errors.push('precipitates: schema phần tử không hợp lệ.');
+  }
 }
 
 export function validateReferenceData(value: unknown): string[] {
@@ -115,15 +237,10 @@ export function validateReferenceData(value: unknown): string[] {
   if (!isRecord(value)) return ['reference: schema gốc không hợp lệ.'];
   validateElements(value.elements, errors);
   validateSolubility(value.solubility, errors);
-  validateSimpleDataset(value.valences, 'valences', 'entries', errors);
-  validateSimpleDataset(
-    value.activitySeries,
-    'activity-series',
-    'series',
-    errors
-  );
-  validateSimpleDataset(value.constants, 'constants', 'constants', errors);
-  validateSimpleDataset(value.precipitates, 'precipitates', 'entries', errors);
+  validateValences(value.valences, errors);
+  validateActivitySeries(value.activitySeries, errors);
+  validateConstants(value.constants, errors);
+  validatePrecipitates(value.precipitates, errors);
   return errors;
 }
 
