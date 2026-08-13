@@ -95,6 +95,7 @@ export interface ProgressState {
     date?: Date
   ) => void;
   recordExamAttempt: (attempt: ExamAttempt) => void;
+  markReviewStudyDay: (date?: Date) => void;
   reset: () => void;
 }
 
@@ -161,6 +162,44 @@ function yesterday(dateKey: string): string {
   const date = new Date(`${dateKey}T00:00:00.000Z`);
   date.setUTCDate(date.getUTCDate() - 1);
   return toDateKey(date);
+}
+
+/** Returns the currently valid streak for a progress snapshot at `now`. */
+export function deriveStreak(
+  snapshot: Pick<ProgressSnapshot, 'lastStudyDate' | 'streakCurrent'>,
+  now = new Date()
+): number {
+  if (!snapshot.lastStudyDate) {
+    return 0;
+  }
+
+  const today = toDateKey(now);
+  return snapshot.lastStudyDate === today ||
+    snapshot.lastStudyDate === yesterday(today)
+    ? snapshot.streakCurrent
+    : 0;
+}
+
+function markStudyDay(
+  state: Pick<
+    ProgressState,
+    'lastStudyDate' | 'streakCurrent' | 'streakLongest'
+  >,
+  at: Date
+) {
+  const studyDate = toDateKey(at);
+  let streakCurrent = state.streakCurrent;
+
+  if (state.lastStudyDate !== studyDate) {
+    streakCurrent =
+      state.lastStudyDate === yesterday(studyDate) ? streakCurrent + 1 : 1;
+  }
+
+  return {
+    lastStudyDate: studyDate,
+    streakCurrent,
+    streakLongest: Math.max(state.streakLongest, streakCurrent)
+  };
 }
 
 function deriveUnlockedLessons(units: UnitSummary[]): string[] {
@@ -715,26 +754,10 @@ export const createProgressStore = (units: UnitSummary[]) =>
                 : nextEntry.completedAt
             };
             const xpDelta = finalizedEntry.bestXp - (current?.bestXp ?? 0);
-            const studyDate = toDateKey(date);
-            let streakCurrent = state.streakCurrent;
-
-            if (state.lastStudyDate !== studyDate) {
-              if (state.lastStudyDate === yesterday(studyDate)) {
-                streakCurrent += 1;
-              } else {
-                streakCurrent = 1;
-              }
-            }
-
-            const streakLongest = Math.max(state.streakLongest, streakCurrent);
-            const lastStudyDate = studyDate;
-
             return {
               ...state,
               totalXp: state.totalXp + xpDelta,
-              streakCurrent,
-              streakLongest,
-              lastStudyDate,
+              ...markStudyDay(state, date),
               lastMutationAt: date.toISOString(),
               lessonProgress: {
                 ...state.lessonProgress,
@@ -808,10 +831,17 @@ export const createProgressStore = (units: UnitSummary[]) =>
 
             return {
               ...state,
+              ...markStudyDay(state, new Date(attempt.finishedAt)),
               lastMutationAt: attempt.finishedAt,
               examHistory: mergeExamHistory([attempt, ...state.examHistory])
             };
           }),
+        markReviewStudyDay: (date = new Date()) =>
+          set((state) => ({
+            ...state,
+            ...markStudyDay(state, date),
+            lastMutationAt: date.toISOString()
+          })),
         reset: () => {
           lastMutationSource = 'reset';
           set({
