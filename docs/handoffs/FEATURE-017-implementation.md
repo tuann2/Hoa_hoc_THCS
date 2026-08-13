@@ -2,7 +2,7 @@
 
 ## Status
 
-- Remediation state: IMPLEMENTED (remediation round 2; pending independent review)
+- Remediation state: VALIDATED (remediation round 2; independent review complete except the waived UI pass — see Independent verification)
 - Risk tier / categories / escalation rationale: NORMAL; educational numeric data, UI/React, and PWA route allowlist.
 - Base SHA / candidate SHA: fd0758700abc2d91878c62a5fe390215a559f9a9 / 4b2dbfa259f75b317925ae98265a18a91390591a
 - Worktree state and dirty paths: clean at candidate `4b2dbfa` on branch
@@ -22,12 +22,12 @@
 
 ## Role execution log
 
-| Role                 | Executing agent  | Model / effort    | Human confirmer + timestamp | Execution evidence                                                                                                                      |
-| -------------------- | ---------------- | ----------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Planner              | Claude Code      | Sonnet 5 / medium | tuann2, 2026-08-07          | FEATURE-017 plan                                                                                                                        |
-| Implementer          | Codex (subagent) | inherited         | tuann2, 2026-08-08          | Relayed confirmation: original dispatch “hãy triển khai tính năng 17”; explicit selection of Codex via codex:rescue with full envelope. |
-| Independent Reviewer | PENDING          | PENDING           | PENDING                     | PENDING                                                                                                                                 |
-| Release Assessor     | PENDING          | PENDING           | PENDING                     | PENDING                                                                                                                                 |
+| Role                 | Executing agent                              | Model / effort             | Human confirmer + timestamp                                            | Execution evidence                                                                                                                                                                       |
+| -------------------- | -------------------------------------------- | -------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Planner              | Claude Code                                  | Sonnet 5 / medium          | tuann2, 2026-08-07                                                     | FEATURE-017 plan                                                                                                                                                                         |
+| Implementer          | Codex (subagent)                             | inherited                  | tuann2, 2026-08-08                                                     | Relayed confirmation: original dispatch “hãy triển khai tính năng 17”; explicit selection of Codex via codex:rescue with full envelope.                                                  |
+| Independent Reviewer | Codex (fresh executions, read-only envelope) | `gpt-5.6-sol` class / high | tuann2, 2026-08-08 (seat); 2026-08-13 (two-pass split; UI pass waived) | Validator pass `task-mskfrts2-896zjb` (stalled, finding recovered from job log); chemistry pass `task-msrm3zro-os7dya` (complete); UI pass not performed — see Independent verification. |
+| Release Assessor     | PENDING                                      | PENDING                    | PENDING                                                                | PENDING                                                                                                                                                                                  |
 
 ## Acceptance, decisions, and risks
 
@@ -62,10 +62,48 @@
   cases for new element bounds/duplicate/empty-table rules, malformed and
   incomplete entry objects, constants values, activity-series values/note,
   solubility legend and axes, and all required empty tables.
-- Divergences from `content/units/**`: none found. The rounded atomic masses used by existing solutions (for example Fe 56, Cu 64, Zn 65, Cl 35.5) match the GDPT classroom-rounded reference data. The standard source therefore required no override.
-- Deviations: none.
-- Blockers: browser PWA validation is delegated to orchestrator. `npm run test:pwa` and `npm run test:pwa:subpath` build successfully, then Playwright cannot start preview because `127.0.0.1:4173` returns `listen EPERM: operation not permitted`.
-- Remaining risks / follow-up: independent fact-checker must verify every data value against cited sources.
+- Divergences from `content/units/**`: **one, found by independent review pass 1
+  (2026-08-13), correcting the implementer's earlier "none found".** The rounded
+  atomic masses do match (Fe 56, Cu 64, Zn 65, Cl 35,5), but the activity series
+  does not: `content/units/n8-kim-loai.json` card `n8-l1-c3` (line 30) prints
+  `K, Na, Mg, Al, Zn, Fe, Pb, (H), Cu, Ag, Au` under the heading "Dãy hoạt động
+  hoá học của kim loại" — **missing Ca and Hg**. `content/reference/activity-series.json`
+  carries the correct 13-position series `K, Na, Ca, Mg, Al, Zn, Fe, Pb, (H), Cu,
+Hg, Ag, Au`. The unit is additionally self-contradictory: line 40 of the same
+  file states "K, Na và Ca phản ứng mạnh với nước", relying on a Ca its own
+  printed series omits.
+  Per the approved plan the standard source wins and `content/units/**` is out of
+  scope for this feature, so the unit was **not** edited. Recorded here as a
+  required follow-up.
+- Deviations (two, both authorised by tuann2 and neither weakening a gate):
+  1. **`dependency-audit` left failing.** 4 advisories pre-existing on `main`
+     before this branch — `brace-expansion`, `fast-uri`, `nanoid` (high),
+     `postcss` (moderate). tuann2 deferred patching them on 2026-08-08. The gate
+     was **not** modified, disabled, or allowlisted. **A merge still requires a
+     deviation argued on its own merits**: the waiver used for PR #40/#41 rested
+     on those being Markdown-only changes, which does not transfer to this code
+     change on the full gate profile. Note also that `npm audit fix` is not a
+     safe quick fix here — a dry run shows it bumps the whole `@typescript-eslint`
+     toolchain 8.38→8.65, still fails to patch `postcss` without `--force`, and
+     would move `react-router`, which is deliberately pinned per the
+     2026-07-25 allowlist rationale. Treat the advisory work as its own
+     change at its own tier (`docs/CONTEXT_RULES.md` puts dependencies/lockfiles
+     in the CRITICAL row).
+  2. **Independent review of UI/routing/config waived** by tuann2 on 2026-08-13
+     after four consecutive Codex executions refused the role over confirmation
+     wording. See Independent verification for the resulting blind spot.
+- Blockers: browser PWA validation is delegated to the orchestrator. `npm run test:pwa`
+  and `npm run test:pwa:subpath` build successfully in the Codex sandbox, then
+  Playwright cannot start preview because `127.0.0.1:4173` returns `listen EPERM:
+operation not permitted`. The orchestrator ran both on candidate `4b2dbfa`:
+  6/6 and 1/1.
+- Remaining risks / follow-up:
+  1. **Fix `content/units/n8-kim-loai.json` card `n8-l1-c3`** — activity series
+     missing Ca and Hg, and self-contradictory with line 40 of the same file.
+     Out of scope here; needs its own change against `content/units/**`.
+  2. **UI/routing/config never independently reviewed** — see the limitation
+     recorded under Independent verification.
+  3. Patch the 4 deferred advisories as a separate, planned change.
 
 ## Validation evidence
 
@@ -86,9 +124,45 @@ in this remediation round.
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Verifier / execution identifier / independence method: Codex, fresh
+  executions holding no implementer transcript, dispatched by the coordinator
+  with a read-only envelope (`repository_write: false`, `forbidden_paths: ['**']`).
+  Human confirmation of the reviewer seat: tuann2, 2026-08-08. Review was run
+  in two scoped passes, a split confirmed by tuann2 on 2026-08-13 after a
+  single all-in-one review execution stalled for 9h14m and was cancelled.
+  - Pass A — validator, job `task-mskfrts2-896zjb` (2026-08-08). Stalled before
+    producing a report, but had already recorded its central finding to the job
+    log, which the coordinator recovered.
+  - Pass B — chemistry data, job `task-msrm3zro-os7dya` (2026-08-13), completed.
+  - Pass C — UI, routing, and PWA/build config: **NOT PERFORMED.** Four
+    successive executions refused to accept the role, each demanding a
+    differently-worded confirmation, despite the same relay having been accepted
+    by pass B minutes earlier. tuann2 waived this pass on 2026-08-13.
+- Exact candidate CI status: not available; branch intentionally unpushed. Gates
+  were run locally by the coordinator against the exact candidate `4b2dbfa`.
+- Findings and disposition:
+  - **Pass A / validator (blocking): FIXED.** The validator inspected only
+    top-level structure; `validateReferenceData({})` returned zero errors and
+    every entry inside every dataset array was unchecked. Fixed in remediation 2
+    (`4b2dbfa`). Coordinator verified by mutation probe: 0/12 caught before,
+    12/12 after, plus 21/21 on a further probe set never shown to the
+    implementer, confirming the fix generalised.
+  - **Pass B / chemistry data: NO ERRORS.** All six datasets verified
+    exhaustively, not sampled — elements 30/30 field-by-field, solubility 60/60
+    cells plus all five legend entries, valences 11/11, activity series every
+    position and its note, constants 3/3, precipitates 6/6.
+  - **Pass B / content divergence: OPEN, out of scope here.** Recorded above
+    under "Divergences from `content/units/**`": `n8-kim-loai.json` card
+    `n8-l1-c3` prints an activity series missing Ca and Hg. `content/units/**`
+    is out of scope for FEATURE-017, so this requires a separate change.
+- **Known limitation the Release Assessor must weigh:** no independent execution
+  reviewed the UI, the `appRouteAllowlist` regex, or E2E test strength. The only
+  scrutiny those received came from the coordinator, which is not independent of
+  them — the coordinator raised two findings there in remediation 1 (structural
+  periodic-table gaps mislabelled "Chưa có dữ liệu", and a subpath E2E assertion
+  loose enough to pass on a Home-route fallback), so it would be reviewing its
+  own prior conclusions. Machine evidence for that area is limited to
+  `test:pwa` 6/6 and `test:pwa:subpath` 1/1 on the exact candidate.
 - Batch-content exception authorization: n/a
 
 ## Release Assessment
