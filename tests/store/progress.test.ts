@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
   createProgressStore,
+  deriveStreak,
   getWrongQuestionKey,
   isWrongQuestionPending,
   migrateProgressState,
@@ -243,6 +244,66 @@ describe('progress store', () => {
 
     expect(store.getState().streakCurrent).toBe(3);
     expect(store.getState().streakLongest).toBe(3);
+  });
+
+  it('deriveStreak xử lý biên ngày UTC với now được tiêm', () => {
+    const snapshot = {
+      lastStudyDate: '2026-07-05',
+      streakCurrent: 4
+    };
+
+    expect(deriveStreak(snapshot, new Date('2026-07-05T23:59:59.000Z'))).toBe(
+      4
+    );
+    expect(deriveStreak(snapshot, new Date('2026-07-06T00:00:00.000Z'))).toBe(
+      4
+    );
+    expect(deriveStreak(snapshot, new Date('2026-07-07T00:00:00.000Z'))).toBe(
+      0
+    );
+    expect(deriveStreak(snapshot, new Date('2026-07-06T00:00:01.000Z'))).toBe(
+      4
+    );
+  });
+
+  it('mỗi trigger học tập chỉ cập nhật streak một lần và các mutation câu sai không đánh dấu ngày học', () => {
+    const store = createProgressStore(fixtureUnits);
+    const day = new Date('2026-07-06T10:00:00.000Z');
+
+    store.getState().recordWrongAnswer('u1', 'u1-l1', 'u1-l1-q1', day);
+    store.getState().clearWrongAnswer('u1', 'u1-l1', 'u1-l1-q1', day);
+    expect(store.getState().streakCurrent).toBe(0);
+
+    store
+      .getState()
+      .completeLessonPart(
+        fixtureUnits[0].lessons[0],
+        'theory',
+        100,
+        10,
+        'u1-l2',
+        day
+      );
+    store.getState().recordWrongAnswer('u1', 'u1-l1', 'u1-l1-q1', day);
+    expect(store.getState().streakCurrent).toBe(1);
+
+    const examStore = createProgressStore(fixtureUnits);
+    examStore.getState().recordExamAttempt(createExamAttempt(1));
+    expect(examStore.getState()).toMatchObject({
+      streakCurrent: 1,
+      streakLongest: 1,
+      lastStudyDate: '2026-07-06'
+    });
+    examStore.getState().recordWrongAnswer('u1', 'u1-l1', 'u1-l1-q1', day);
+    expect(examStore.getState().streakCurrent).toBe(1);
+
+    store.getState().markReviewStudyDay(day);
+    store.getState().markReviewStudyDay(day);
+    expect(store.getState()).toMatchObject({
+      streakCurrent: 1,
+      streakLongest: 1,
+      lastStudyDate: '2026-07-06'
+    });
   });
 
   it('bài không có phần bài tập tự completed qua theory', () => {

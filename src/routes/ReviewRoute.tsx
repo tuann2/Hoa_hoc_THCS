@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExitButton } from '../components/ExitButton';
 import {
@@ -75,6 +75,8 @@ export function ReviewRoute() {
   const wrongQuestions = progressStore((state) => state.wrongQuestions);
   const clearWrongAnswer = progressStore((state) => state.clearWrongAnswer);
   const recordWrongAnswer = progressStore((state) => state.recordWrongAnswer);
+  const markReviewStudyDay = progressStore((state) => state.markReviewStudyDay);
+  const hasAnsweredInSession = useRef(false);
   const [pendingQueue] = useState(() =>
     resolveReviewQueue(units, wrongQuestions)
   );
@@ -197,6 +199,10 @@ export function ReviewRoute() {
   const currentItem = queue[questionIndex];
 
   function handleSubmit(response: string | number[] | number) {
+    if (!hasAnsweredInSession.current) {
+      markReviewStudyDay();
+      hasAnsweredInSession.current = true;
+    }
     setCurrentResult({
       correct: isQuestionCorrect(currentItem.question, response),
       response

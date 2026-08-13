@@ -5,7 +5,7 @@ import {
   getUnitsByPart,
   partLabels
 } from '../lib/contentCatalog';
-import { getProgressStore } from '../store/progress';
+import { deriveStreak, getProgressStore } from '../store/progress';
 import type { PartId } from '../types/content';
 
 export function HomeRoute() {
@@ -15,7 +15,8 @@ export function HomeRoute() {
   const progressStore = getProgressStore(units);
   const unlockedLessonIds = progressStore((state) => state.unlockedLessonIds);
   const totalXp = progressStore((state) => state.totalXp);
-  const streakCurrent = progressStore((state) => state.streakCurrent);
+  const streakCurrent = progressStore((state) => deriveStreak(state));
+  const lastStudyDate = progressStore((state) => state.lastStudyDate);
   const lessonProgress = progressStore((state) => state.lessonProgress);
   const partUnits = getUnitsByPart(activePart);
   const lessonStars = Object.fromEntries(
@@ -27,6 +28,11 @@ export function HomeRoute() {
   const completedLessons = Object.values(lessonProgress).filter(
     (progress) => progress.completed
   ).length;
+  const hasStudiedToday =
+    lastStudyDate === new Date().toISOString().slice(0, 10);
+  const milestone = [3, 7, 14, 30, 100].find(
+    (dayCount) => dayCount === streakCurrent
+  );
 
   return (
     <div className="space-y-6">
@@ -51,12 +57,22 @@ export function HomeRoute() {
           <article className="rounded-3xl bg-white/10 p-4 backdrop-blur">
             <p className="text-sm text-white/70">Streak hiện tại</p>
             <p className="mt-2 text-3xl font-bold">{streakCurrent} ngày</p>
+            {milestone ? (
+              <p className="mt-2 text-sm font-semibold text-lime">
+                Chúc mừng streak {milestone} ngày!
+              </p>
+            ) : null}
           </article>
           <article className="rounded-3xl bg-white/10 p-4 backdrop-blur">
             <p className="text-sm text-white/70">Bài đã hoàn thành</p>
             <p className="mt-2 text-3xl font-bold">{completedLessons}</p>
           </article>
         </div>
+        {!hasStudiedToday && streakCurrent > 0 ? (
+          <p className="mt-4 text-sm font-semibold text-lime">
+            Học một chút hôm nay để giữ streak nhé!
+          </p>
+        ) : null}
       </section>
 
       <section className="rounded-[2rem] bg-white/85 p-4 shadow-card backdrop-blur">

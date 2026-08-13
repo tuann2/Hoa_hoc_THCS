@@ -215,4 +215,39 @@ describe('ReviewRoute', () => {
       await screen.findByText('Không có câu nào cần ôn')
     ).toBeInTheDocument();
   });
+
+  it('chỉ đánh dấu ngày học khi nộp câu trả lời đầu tiên của phiên ôn', async () => {
+    const user = userEvent.setup();
+    const store = getProgressStore(fixtureUnits);
+
+    store.setState((state) => ({
+      ...state,
+      wrongQuestions: {
+        [firstQuestionKey]: {
+          unitId: 'u1',
+          lessonId: 'u1-l1',
+          questionId: 'q1',
+          missCount: 1,
+          lastMissedAt: '2026-07-05T09:00:00.000Z'
+        }
+      }
+    }));
+
+    render(
+      <MemoryRouter>
+        <ReviewRoute />
+      </MemoryRouter>
+    );
+
+    expect(await screen.findByText('Chọn đáp án đúng')).toBeInTheDocument();
+    expect(store.getState().streakCurrent).toBe(0);
+
+    await user.click(screen.getByRole('button', { name: 'Đúng' }));
+    await user.click(screen.getByRole('button', { name: 'Kiểm tra' }));
+
+    expect(store.getState()).toMatchObject({
+      streakCurrent: 1,
+      streakLongest: 1
+    });
+  });
 });

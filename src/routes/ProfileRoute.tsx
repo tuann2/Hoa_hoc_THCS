@@ -8,6 +8,7 @@ import {
 import { getAuthStore } from '../store/auth';
 import {
   getProgressStore,
+  deriveStreak,
   isWrongQuestionPending,
   type ExamAttempt,
   type LessonProgress
@@ -79,7 +80,7 @@ export function ProfileRoute() {
   const isConfigured = authStore((state) => state.isConfigured);
   const signOut = authStore((state) => state.signOut);
   const totalXp = progressStore((state) => state.totalXp);
-  const streakCurrent = progressStore((state) => state.streakCurrent);
+  const streakCurrent = progressStore((state) => deriveStreak(state));
   const streakLongest = progressStore((state) => state.streakLongest);
   const lessonProgress = progressStore((state) => state.lessonProgress);
   const wrongQuestionCount = progressStore(

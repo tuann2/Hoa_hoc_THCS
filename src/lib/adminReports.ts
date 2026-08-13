@@ -7,6 +7,7 @@ import { supabase } from './supabase';
 import {
   isWrongQuestionPending,
   migrateProgressState,
+  deriveStreak,
   type ExamAttempt,
   type LessonProgress,
   type ProgressSnapshot
@@ -352,7 +353,7 @@ function buildSummary(
     pendingReviewCount: Object.values(snapshot.wrongQuestions).filter(
       isWrongQuestionPending
     ).length,
-    streakCurrent: snapshot.streakCurrent,
+    streakCurrent: deriveStreak(snapshot, now),
     lastStudyDate: snapshot.lastStudyDate,
     lastSyncedAt: progress?.updated_at ?? null,
     studySecondsToday,
