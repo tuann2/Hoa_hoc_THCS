@@ -97,8 +97,8 @@ export function ReferenceRoute() {
         ) : null}
         <div className="mt-6 hidden overflow-x-auto lg:block">
           <p className="mb-2 text-sm text-ink/70">
-            Lưới chỉ hiển thị từ màn hình lớn; ô “Chưa có dữ liệu” là ngoài tập
-            tra cứu, không phải dữ liệu bị thiếu.
+            Lưới chỉ hiển thị từ màn hình lớn; ô “Ngoài tập tra cứu” là nguyên
+            tố chưa có trong bảng này, không phải dữ liệu bị thiếu.
           </p>
           <div className="grid min-w-[920px] grid-cols-[4rem_repeat(18,minmax(3rem,1fr))] gap-1 text-center text-xs">
             <div className="sticky left-0 z-10 bg-white p-2" />
