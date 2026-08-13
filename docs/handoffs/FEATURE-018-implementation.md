@@ -47,10 +47,46 @@ Focused tests passed: 26 tests across `tests/store/progress.test.ts`, `tests/rou
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING
-- Exact candidate CI status: PENDING
-- Findings and disposition: PENDING
+- Verifier / execution identifier / independence method: **CI on the exact
+  candidate commit.** `docs/architecture/AI_WORKFLOW_ARCHITECTURE.md:116` makes
+  this the primary limb for NORMAL — "CI validates the exact candidate commit
+  when available; **otherwise** one fresh read-only reviewer…". CI became
+  available again on 2026-08-13 when WORKFLOW-013 unblocked `dependency-audit`;
+  it had been failing on `main` since 2026-08-08, which is why FEATURE-017 had
+  to fall back to the reviewer limb. tuann2 chose the CI limb for this feature
+  on 2026-08-13. **This is not a deviation** — it is the tier's first-listed
+  option, now genuinely available.
+- Exact candidate CI status: see below.
+- Findings and disposition: no separate reviewer execution was dispatched, so
+  no reviewer findings exist. Coordinator checks are recorded below and are
+  **not** a substitute for independent review — CI is.
 - Batch-content exception authorization: n/a
+
+### Coordinator verification (not independent review)
+
+- Scope: 7 files, all inside `allowed_paths`. **`src/lib/progressSync.ts`
+  untouched**, no migration, no new stored field, no `PROGRESS_VERSION` change
+  — these are the facts the plan's NORMAL classification rests on, so they were
+  checked explicitly rather than assumed.
+- Trigger correctness: `markReviewStudyDay` is a dedicated store action called
+  from `ReviewRoute.handleSubmit`, guarded by a ref so it fires once per
+  session. It is **not** hooked into `recordWrongAnswer` / `clearWrongAnswer`,
+  which the plan singles out as the easy mistake — those are also called from
+  the lesson and exam flows, so hooking them would double-count and would mark
+  a study day for activity that is not a review session.
+- Date boundaries: the coordinator ran an independent 14-case probe against
+  `deriveStreak` — same day, 1 day, 2 days, three weeks, never studied, month
+  boundary either side, year boundary, 29 Feb in a leap year and the
+  non-leap equivalent, both sides of UTC midnight, and a future
+  `lastStudyDate` from a skewed clock. **14/14 correct.**
+- Gates: `npm run gates -- --changed-from=43d5fd2` → profile `full`,
+  **`result: pass`, 15/15**. Evidence bound to candidate
+  `3eef879a56fa77c4aaa734ed42286a2ae2f08c1f`, snapshot
+  `dafb7eecac5feef4fdd11040d67a6e22d635641a`, `result: pass`.
+- Plan/reality divergence: the plan predicted the **web** classifier profile;
+  the classifier resolved **full**. The divergence is in the safe direction —
+  more gates ran, not fewer — but the plan's prediction was wrong and is
+  recorded here rather than quietly matched.
 
 ## Release Assessment
 
