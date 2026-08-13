@@ -2,22 +2,26 @@
 
 ## Status
 
-- Status: DRAFT <!-- DRAFT | APPROVED | SUPERSEDED -->
+- Status: APPROVED <!-- DRAFT | APPROVED | SUPERSEDED -->
 - Owner: Claude Code (Planner; dispatch của tuann2 ngày 2026-08-13, vai Planner
   được tuann2 xác nhận riêng cùng ngày)
-- Approved by / date:
-- Risk tier: **CRITICAL**
+- Approved by / date: tuann2, 2026-08-13 ("Duyệt nội dung và ELEVATED rồi
+  thực thi")
+- Risk tier: **ELEVATED** (người duyệt chốt; Planner đề xuất CRITICAL)
 - Risk categories and escalation rationale: thay đổi `package.json` +
-  `package-lock.json`. `docs/CONTEXT_RULES.md` xếp dependencies/lockfile vào
-  hàng "CI/deploy/scripts/dependencies — control changes are CRITICAL", và
-  `postcss` tham gia trực tiếp vào build sản phẩm nên bump sai có thể đổi CSS
-  được phát hành.
-  **Lập luận ngược, để người duyệt cân nhắc hạ xuống ELEVATED:** không hề thêm
-  dependency mới (Risk Model rule 3 không áp), không đụng auth/RLS/schema/dữ
-  liệu production, cả 4 gói đều nằm nhánh `[dev]` trong lockfile và
-  `npm ls --omit=dev` không thấy gói nào trong cây production. Đây là bump
-  patch trong cùng major, không nâng major nào. Planner đề xuất CRITICAL vì
-  CONTEXT_RULES nói thẳng về lockfile; quyết định cuối là của người duyệt.
+  `package-lock.json`, và `postcss` tham gia trực tiếp vào build sản phẩm nên
+  bump sai có thể đổi CSS được phát hành.
+  Planner đề xuất CRITICAL vì `docs/CONTEXT_RULES.md` xếp dependencies/lockfile
+  vào hàng "CI/deploy/scripts/dependencies — control changes are CRITICAL".
+  **tuann2 chốt ELEVATED ngày 2026-08-13**, dựa trên các dữ kiện Planner đã nêu
+  làm lập luận ngược: không thêm dependency mới nên Risk Model rule 3 không áp;
+  không đụng auth/RLS/schema/dữ liệu production; cả 4 gói đều nằm nhánh `[dev]`
+  trong lockfile và `npm ls --omit=dev` không thấy gói nào trong cây production;
+  toàn bộ là bump patch trong cùng major.
+  Hệ quả kiểm chứng: ELEVATED cần **một** reviewer độc lập soi từng dòng thay
+  đổi + CI kiểm đúng candidate trước khi phát hành
+  (`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md:117`) — không cần reviewer
+  thứ hai hay adversarial review như CRITICAL.
 - Change type and required gate profile: **full** — `package.json` và
   `package-lock.json` thuộc profile full (`scripts/gates-manifest.ts:251`).
   Chốt bằng `npm run gates -- --changed-from=<base_sha>`.
@@ -76,19 +80,23 @@
 Execution assignment — mỗi vai cần con người xác nhận riêng khi đến lượt;
 duyệt plan không đồng nghĩa duyệt việc nhận vai kế tiếp:
 
-| Vai trò                | Agent đề xuất           | Model / effort         | Lý do                                                        | Đã xác nhận        |
-| ---------------------- | ----------------------- | ---------------------- | ------------------------------------------------------------ | ------------------ |
-| Planner                | Claude Code             | Opus 5 / high          | Khảo sát cây phụ thuộc + viết plan                           | tuann2, 2026-08-13 |
-| Implementer            | Codex (subagent)        | `gpt-5.6-terra` / high | Sửa `overrides` + tạo lại lockfile                           | chưa               |
-| Independent Reviewer 1 | Codex (execution khác)  | `gpt-5.6-sol` / high   | CRITICAL cần 2 reviewer tách biệt, soi từng dòng             | chưa               |
-| Independent Reviewer 2 | Claude Code (phiên mới) | Opus 5 / high          | Reviewer thứ hai, **adversarial** theo yêu cầu tier CRITICAL | chưa               |
-| Release Assessor       | Claude Code (phiên mới) | Opus 5 / high          | Execution mới, không phải phiên Planner này                  | chưa               |
+| Vai trò              | Agent đề xuất           | Model / effort         | Lý do                                                   | Đã xác nhận        |
+| -------------------- | ----------------------- | ---------------------- | ------------------------------------------------------- | ------------------ |
+| Planner              | Claude Code             | Opus 5 / high          | Khảo sát cây phụ thuộc + viết plan                      | tuann2, 2026-08-13 |
+| Implementer          | Codex (subagent)        | `gpt-5.6-terra` / high | Sửa `overrides` + tạo lại lockfile                      | tuann2, 2026-08-13 |
+| Independent Reviewer | Codex (execution khác)  | `gpt-5.6-sol` / high   | ELEVATED cần 1 reviewer soi **từng dòng** lockfile diff | chưa               |
+| Release Assessor     | Claude Code (phiên mới) | Opus 5 / high          | Execution mới, không phải phiên Planner này             | chưa               |
+
+Ghi chú vai Implementer: tuann2 nói "Duyệt nội dung và ELEVATED rồi thực thi"
+ngày 2026-08-13. Bảng phân vai trong plan lúc đó chỉ đề xuất đúng một ứng viên
+Implementer là Codex, nên lệnh "thực thi" được ghi nhận là xác nhận vai đó.
+Nếu tuann2 không có ý này, dừng và hỏi lại trước khi ghi bất cứ thứ gì.
 
 1. Implementation — sửa `overrides`, chạy `npm install` để tạo lại lockfile,
    commit cả `package.json` lẫn `package-lock.json`.
 2. Validation — `npm run gates -- --changed-from=<base_sha>` (profile full),
    `npm run evidence`, bind đúng candidate SHA. Push để CI chạy trên `npm ci`.
-3. Review — 2 reviewer độc lập, một trong đó adversarial; rồi Release Assessment.
+3. Review — 1 reviewer độc lập soi từng dòng; rồi Release Assessment.
 
 ## Risks and controls
 
@@ -109,7 +117,7 @@ duyệt plan không đồng nghĩa duyệt việc nhận vai kế tiếp:
 - [ ] `npm run gates -- --changed-from=<base_sha>` PASS **đủ cả 15 gate** —
       không dừng sớm. Đây là điểm mà FEATURE-017 từng bị báo cáo nhầm.
 - [ ] **CI xanh trên đúng candidate commit**, gồm job `browser`
-      (`e2e`/`pwa`/`pwa-subpath`) — tier CRITICAL bắt buộc, và đây cũng là thứ
+      (`e2e`/`pwa`/`pwa-subpath`) — tier ELEVATED bắt buộc CI trên đúng candidate, và đây cũng là thứ
       lấp lỗ hổng review UI còn treo của FEATURE-017.
 - [ ] `deploy` chạy được trở lại.
 - Security considerations: đây là thay đổi _tăng_ mức an toàn. Cả 4 gói chỉ
