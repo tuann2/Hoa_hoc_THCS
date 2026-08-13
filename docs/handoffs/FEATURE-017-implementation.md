@@ -27,7 +27,7 @@
 | Planner              | Claude Code                                  | Sonnet 5 / medium          | tuann2, 2026-08-07                                                     | FEATURE-017 plan                                                                                                                                                                         |
 | Implementer          | Codex (subagent)                             | inherited                  | tuann2, 2026-08-08                                                     | Relayed confirmation: original dispatch “hãy triển khai tính năng 17”; explicit selection of Codex via codex:rescue with full envelope.                                                  |
 | Independent Reviewer | Codex (fresh executions, read-only envelope) | `gpt-5.6-sol` class / high | tuann2, 2026-08-08 (seat); 2026-08-13 (two-pass split; UI pass waived) | Validator pass `task-mskfrts2-896zjb` (stalled, finding recovered from job log); chemistry pass `task-msrm3zro-os7dya` (complete); UI pass not performed — see Independent verification. |
-| Release Assessor     | PENDING                                      | PENDING                    | PENDING                                                                | PENDING                                                                                                                                                                                  |
+| Release Assessor     | Claude Code (fresh execution, read-only)     | Opus 5 / high              | tuann2, 2026-08-13 ("Ok xác nhận vai")                                 | Verdict **READY WITH CONDITIONS**. The coordinating execution declined this seat to avoid holding two roles. See Release Assessment below.                                               |
 
 ## Acceptance, decisions, and risks
 
@@ -104,6 +104,15 @@ operation not permitted`. The orchestrator ran both on candidate `4b2dbfa`:
   2. **UI/routing/config never independently reviewed** — see the limitation
      recorded under Independent verification.
   3. Patch the 4 deferred advisories as a separate, planned change.
+  4. **Fix `src/routes/ReferenceRoute.tsx:100`** — the grid legend still refers
+     to a cell label "Chưa có dữ liệu" that remediation 1 renamed to
+     "Ngoài tập tra cứu" (line 141). Found by the Release Assessor, 2026-08-13.
+- **Third deviation, previously unrecorded:** the plan assigns a distinct
+  **Fact-checker (agy)** seat as the primary control on the top risk. That seat
+  was never filled; the chemistry fact-check was folded into independent review
+  pass B instead. The control was still satisfied — a fresh execution verified
+  all six datasets exhaustively — but the deviation list above says "two" when
+  there are three.
 
 ## Validation evidence
 
@@ -167,7 +176,68 @@ in this remediation round.
 
 ## Release Assessment
 
-- Assessment and evidence basis: PENDING
+**Verdict: READY WITH CONDITIONS.** Assessed 2026-08-13 by a fresh read-only
+Claude Code execution; the coordinating execution declined the seat rather than
+hold two roles (AGENTS.md §7).
+
+Evidence basis — the assessor re-ran rather than accepting the coordinator's
+summary: full-profile gates, evidence generation, `test:e2e` (10/10),
+`test:pwa` (6/6), `test:pwa:subpath` (1/1), `check:licenses` (654 packages),
+`check:docs --all` (106 files), 29 independently-designed validator mutation
+probes (28 caught), precache inspection of `dist/sw.js` confirming all six
+dataset chunks present and zero raw `.json` shipped, and a bundle-budget check
+(110,372 / 250,000 gzip).
+
+Acceptance criteria 1, 2, 3 (symbol set) and 5 are evidence-backed. Criterion 4
+(readable at 640/768/desktop) is **assertion-only**: Playwright covers 390px and
+1280px, and the 640/768 claim rests on reading Tailwind breakpoints.
+
+**Conditions for release:**
+
+1. **Patch the 4 advisories in a separate change first**, per the binding text
+   the human already approved at `docs/plans/FEATURE-017.md:13-14` — or obtain an
+   explicit human amendment to that clause. The assessor's finding here corrects
+   the coordinator: this was **not** an open question awaiting a fresh
+   deviation argument. The approved plan already answers it.
+2. **Fix `src/routes/ReferenceRoute.tsx:100`** (legend/label mismatch).
+3. **Push and let CI validate the exact candidate**, confirming all 15 required
+   gates — including `e2e`/`pwa`/`pwa-subpath` on lockfile dependencies, which
+   also closes the stale-`node_modules` gap.
+4. **Correct the handoff's gate reporting and deviation count** — done, above.
+
+**Assessor's finding on the waived UI review pass:** a NORMAL-tier candidate
+should not proceed with it open, because
+`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md:116` requires _either_ CI on the
+exact candidate _or_ one fresh reviewer inspecting the targeted diff — and
+neither limb is currently satisfied. The remedy is not a fifth review execution:
+pushing for CI satisfies the primary limb and covers exactly the UI/routing area
+that lacks scrutiny. Condition 1 unblocks CI, so conditions 1 and 3 together
+close the review gap architecturally.
+
+**Stronger justification than the coordinator recorded, for the
+`dependency-audit` deviation:** all four advisories resolve solely through
+devDependencies (eslint, typescript-eslint, vite-plugin-pwa/workbox,
+postcss/tailwind/vite). `npm ls --omit=dev` places none of them in the
+production tree, so nothing reaches a student's browser. The assessor also
+disproved a plausible hypothesis: the advisories are _not_ an artifact of the
+stale `node_modules` — `npm audit --package-lock-only` reproduces all four, as
+does CI under `npm ci`. They are real, genuinely pre-existing, and genuinely
+unrelated to this branch. Still merge-blocking, but for the reasons in
+condition 1, not runtime exposure.
+
+**Practical note:** `main`'s CI has failed at `dependency-audit` since
+2026-08-08, and the `deploy` job depends on `web` + `browser`. GitHub Pages has
+not deployed since 2026-07-27. Merging FEATURE-017 before the advisories are
+patched would ship it to no one.
+
+**Not verified by the assessor, taken on report:** the human confirmations and
+the 2026-08-13 waiver; that review passes A and B were fresh read-only
+executions holding no implementer transcript; that four executions refused the
+UI role; the coordinator's own 12- and 21-probe mutation runs (not reproduced,
+though 29 independent probes reached the same conclusion); prior remediation
+history.
+
+The assessor recommends; it does not approve. The release decision is tuann2's.
 
 ## Orchestrator validation on candidate `4b2dbfa`
 
@@ -210,3 +280,50 @@ the fix, and re-probed afterwards:
   than special-casing the reported sample.
 - `npm run validate-content` still PASS against the real datasets, so the new
   rules produce no false positives on correct data.
+
+## Correction to the orchestrator's gate reporting (2026-08-13)
+
+The section "Orchestrator validation on candidate `4b2dbfa`" above reports
+"9/10 PASS". **That framing was wrong and is corrected here.** The Release
+Assessor caught it.
+
+`npx tsx scripts/classify-change.ts --changed-from=fd07587` shows this change
+requires **15** gates, not 10:
+
+```
+git-diff-check, format-check, content-catalog, content-validation, lint,
+typecheck, unit-tests, production-build, bundle-check, dependency-audit,
+license-check, e2e, pwa, pwa-subpath, docs-check
+```
+
+`runSelectedGates` (`scripts/gates.ts:186`) returns on the first non-zero exit,
+so the run **aborted at `dependency-audit`, gate #10**, and gates 11-15 never
+executed. "9/10" described the gates that happened to run before the runner
+stopped, not the required set. Five required gates had produced no result at
+all; `pwa` and `pwa-subpath` had manual substitutes, but `license-check`,
+`e2e`, and `docs-check` had no evidence whatsoever.
+
+Those three have since been run directly by the orchestrator on this candidate:
+
+- `npm run check:licenses` — PASS, allowlist check over 654 packages.
+- `npm run check:docs -- --all` — PASS over 106 files (warnings only, all of
+  them unverifiable external GitHub Actions URLs in an unrelated WORKFLOW-008
+  handoff).
+- `npm run test:e2e` — **10/10 PASS**, desktop and mobile.
+
+**Corrected position: all 15 required gates pass except `dependency-audit`.**
+
+### Local gates did not exercise the release dependency set
+
+Also raised by the Release Assessor and confirmed: `node_modules` is stale
+relative to `package-lock.json` — installed `react-router-dom@6.30.4`,
+`eslint@9.32.0`, `typescript-eslint@8.38.0` against lockfile `7.18.1`,
+`10.8.0`, `8.65.0`. CI uses `npm ci`. Every local gate on this candidate,
+including the e2e/pwa runs above, therefore exercised **react-router 6 on a
+routing change**, while release would run react-router 7.
+
+Exposure is bounded — `src/App.tsx` uses only `BrowserRouter`, `Routes`,
+`Route` and `NavLink`, which are compatible across both majors, and the bundle
+has 56% budget headroom so any v7 size delta cannot breach it — but it means
+"the orchestrator ran the gates locally" is **not** equivalent to CI here. CI
+on the pushed candidate remains the authoritative check.
