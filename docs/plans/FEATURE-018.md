@@ -81,7 +81,7 @@ duyệt plan không đồng nghĩa duyệt việc nhận vai kế tiếp:
 | Vai trò              | Agent đề xuất           | Model / effort         | Lý do                                       | Đã xác nhận        |
 | -------------------- | ----------------------- | ---------------------- | ------------------------------------------- | ------------------ |
 | Planner              | Claude Code             | Sonnet 5 / medium      | Khảo sát + viết plan                        | tuann2, 2026-08-07 |
-| Implementer          | Codex (direct-terminal) | `gpt-5.6-terra` / high | Đụng store; logic biên ngày dễ sai ngầm     | chưa               |
+| Implementer          | Codex (subagent)        | `gpt-5.6-terra` / high | Đụng store; logic biên ngày dễ sai ngầm     | tuann2, 2026-08-13 |
 | Independent Reviewer | Codex (execution khác)  | `gpt-5.6-sol` / high   | Cần shell + chạy test theo role contract    | chưa               |
 | Release Assessor     | Claude Code (phiên mới) | Sonnet 5 / medium      | Execution mới, không phải phiên Planner này | chưa               |
 
