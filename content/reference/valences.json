@@ -1,0 +1,18 @@
+{
+  "source": "Bộ Giáo dục và Đào tạo, SGK Khoa học tự nhiên 8, GDPT 2018.",
+  "version": "GDPT 2018",
+  "conditions": "Hoá trị thường gặp trong các hợp chất vô cơ ở bậc THCS; một nguyên tố có thể có nhiều hoá trị.",
+  "entries": [
+    { "formula": "H", "name": "Hiđro", "valences": ["I"] },
+    { "formula": "O", "name": "Oxi", "valences": ["II"] },
+    { "formula": "Na", "name": "Natri", "valences": ["I"] },
+    { "formula": "Mg", "name": "Magiê", "valences": ["II"] },
+    { "formula": "Al", "name": "Nhôm", "valences": ["III"] },
+    { "formula": "Fe", "name": "Sắt", "valences": ["II", "III"] },
+    { "formula": "Cu", "name": "Đồng", "valences": ["I", "II"] },
+    { "formula": "Cl", "name": "Clo", "valences": ["I", "III", "V", "VII"] },
+    { "formula": "SO4", "name": "Gốc sunfat", "valences": ["II"] },
+    { "formula": "NO3", "name": "Gốc nitrat", "valences": ["I"] },
+    { "formula": "CO3", "name": "Gốc cacbonat", "valences": ["II"] }
+  ]
+}

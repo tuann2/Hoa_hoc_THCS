@@ -1,0 +1,277 @@
+{
+  "source": "IUPAC Commission on Isotopic Abundances and Atomic Weights, Standard Atomic Weights 2023; values rounded for GDPT 2018 exercises.",
+  "version": "2023 / GDPT 2018 classroom rounding",
+  "conditions": "Relative atomic masses; rounded values are for lower-secondary calculations, not isotope-resolved measurements.",
+  "elements": [
+    {
+      "symbol": "H",
+      "name": "Hiđro",
+      "atomicNumber": 1,
+      "atomicMass": 1,
+      "period": 1,
+      "group": 1,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "He",
+      "name": "Heli",
+      "atomicNumber": 2,
+      "atomicMass": 4,
+      "period": 1,
+      "group": 18,
+      "category": "Khí hiếm"
+    },
+    {
+      "symbol": "Li",
+      "name": "Liti",
+      "atomicNumber": 3,
+      "atomicMass": 7,
+      "period": 2,
+      "group": 1,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Be",
+      "name": "Beri",
+      "atomicNumber": 4,
+      "atomicMass": 9,
+      "period": 2,
+      "group": 2,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "B",
+      "name": "Bo",
+      "atomicNumber": 5,
+      "atomicMass": 11,
+      "period": 2,
+      "group": 13,
+      "category": "Á kim"
+    },
+    {
+      "symbol": "C",
+      "name": "Cacbon",
+      "atomicNumber": 6,
+      "atomicMass": 12,
+      "period": 2,
+      "group": 14,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "N",
+      "name": "Nitơ",
+      "atomicNumber": 7,
+      "atomicMass": 14,
+      "period": 2,
+      "group": 15,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "O",
+      "name": "Oxi",
+      "atomicNumber": 8,
+      "atomicMass": 16,
+      "period": 2,
+      "group": 16,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "F",
+      "name": "Flo",
+      "atomicNumber": 9,
+      "atomicMass": 19,
+      "period": 2,
+      "group": 17,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "Ne",
+      "name": "Neon",
+      "atomicNumber": 10,
+      "atomicMass": 20,
+      "period": 2,
+      "group": 18,
+      "category": "Khí hiếm"
+    },
+    {
+      "symbol": "Na",
+      "name": "Natri",
+      "atomicNumber": 11,
+      "atomicMass": 23,
+      "period": 3,
+      "group": 1,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Mg",
+      "name": "Magiê",
+      "atomicNumber": 12,
+      "atomicMass": 24,
+      "period": 3,
+      "group": 2,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Al",
+      "name": "Nhôm",
+      "atomicNumber": 13,
+      "atomicMass": 27,
+      "period": 3,
+      "group": 13,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Si",
+      "name": "Silic",
+      "atomicNumber": 14,
+      "atomicMass": 28,
+      "period": 3,
+      "group": 14,
+      "category": "Á kim"
+    },
+    {
+      "symbol": "P",
+      "name": "Photpho",
+      "atomicNumber": 15,
+      "atomicMass": 31,
+      "period": 3,
+      "group": 15,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "S",
+      "name": "Lưu huỳnh",
+      "atomicNumber": 16,
+      "atomicMass": 32,
+      "period": 3,
+      "group": 16,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "Cl",
+      "name": "Clo",
+      "atomicNumber": 17,
+      "atomicMass": 35.5,
+      "period": 3,
+      "group": 17,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "Ar",
+      "name": "Argon",
+      "atomicNumber": 18,
+      "atomicMass": 40,
+      "period": 3,
+      "group": 18,
+      "category": "Khí hiếm"
+    },
+    {
+      "symbol": "K",
+      "name": "Kali",
+      "atomicNumber": 19,
+      "atomicMass": 39,
+      "period": 4,
+      "group": 1,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Ca",
+      "name": "Canxi",
+      "atomicNumber": 20,
+      "atomicMass": 40,
+      "period": 4,
+      "group": 2,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Mn",
+      "name": "Mangan",
+      "atomicNumber": 25,
+      "atomicMass": 55,
+      "period": 4,
+      "group": 7,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Fe",
+      "name": "Sắt",
+      "atomicNumber": 26,
+      "atomicMass": 56,
+      "period": 4,
+      "group": 8,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Cu",
+      "name": "Đồng",
+      "atomicNumber": 29,
+      "atomicMass": 64,
+      "period": 4,
+      "group": 11,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Zn",
+      "name": "Kẽm",
+      "atomicNumber": 30,
+      "atomicMass": 65,
+      "period": 4,
+      "group": 12,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Br",
+      "name": "Brom",
+      "atomicNumber": 35,
+      "atomicMass": 80,
+      "period": 4,
+      "group": 17,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "Ag",
+      "name": "Bạc",
+      "atomicNumber": 47,
+      "atomicMass": 108,
+      "period": 5,
+      "group": 11,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "I",
+      "name": "Iot",
+      "atomicNumber": 53,
+      "atomicMass": 127,
+      "period": 5,
+      "group": 17,
+      "category": "Phi kim"
+    },
+    {
+      "symbol": "Ba",
+      "name": "Bari",
+      "atomicNumber": 56,
+      "atomicMass": 137,
+      "period": 6,
+      "group": 2,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Pb",
+      "name": "Chì",
+      "atomicNumber": 82,
+      "atomicMass": 207,
+      "period": 6,
+      "group": 14,
+      "category": "Kim loại"
+    },
+    {
+      "symbol": "Au",
+      "name": "Vàng",
+      "atomicNumber": 79,
+      "atomicMass": 197,
+      "period": 6,
+      "group": 11,
+      "category": "Kim loại"
+    }
+  ]
+}

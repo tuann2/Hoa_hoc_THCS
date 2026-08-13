@@ -1,0 +1,43 @@
+{
+  "source": "Bộ Giáo dục và Đào tạo, SGK Khoa học tự nhiên 8–9, GDPT 2018.",
+  "version": "GDPT 2018",
+  "conditions": "Màu quan sát trong dung dịch nước ở nhiệt độ phòng; tạp chất và nồng độ có thể làm thay đổi sắc độ.",
+  "entries": [
+    {
+      "formula": "AgCl",
+      "name": "Bạc clorua",
+      "color": "Trắng",
+      "note": "Kết tủa trắng"
+    },
+    {
+      "formula": "BaSO4",
+      "name": "Bari sunfat",
+      "color": "Trắng",
+      "note": "Kết tủa trắng"
+    },
+    {
+      "formula": "Cu(OH)2",
+      "name": "Đồng(II) hiđroxit",
+      "color": "Xanh lam",
+      "note": "Kết tủa xanh lam"
+    },
+    {
+      "formula": "Fe(OH)2",
+      "name": "Sắt(II) hiđroxit",
+      "color": "Trắng xanh",
+      "note": "Để lâu ngoài không khí chuyển nâu đỏ"
+    },
+    {
+      "formula": "Fe(OH)3",
+      "name": "Sắt(III) hiđroxit",
+      "color": "Nâu đỏ",
+      "note": "Kết tủa nâu đỏ"
+    },
+    {
+      "formula": "CaCO3",
+      "name": "Canxi cacbonat",
+      "color": "Trắng",
+      "note": "Kết tủa trắng"
+    }
+  ]
+}

@@ -2,7 +2,9 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateUnits } from '../src/lib/contentValidation';
+import { validateReferenceData } from '../src/lib/referenceValidation';
 import type { UnitContent } from '../src/types/content';
+import type { ReferenceData } from '../src/types/reference';
 
 async function main() {
   const rootDir = path.resolve(
@@ -20,6 +22,24 @@ async function main() {
     })
   );
   const errors = validateUnits(units);
+  const referenceDirectory = path.join(rootDir, 'content', 'reference');
+  const referenceFiles: Record<keyof ReferenceData, string> = {
+    elements: 'elements.json',
+    solubility: 'solubility.json',
+    valences: 'valences.json',
+    activitySeries: 'activity-series.json',
+    constants: 'constants.json',
+    precipitates: 'precipitates.json'
+  };
+  const referenceEntries = await Promise.all(
+    Object.entries(referenceFiles).map(async ([key, file]) => [
+      key,
+      JSON.parse(
+        await readFile(path.join(referenceDirectory, file), 'utf8')
+      ) as unknown
+    ])
+  );
+  errors.push(...validateReferenceData(Object.fromEntries(referenceEntries)));
 
   if (errors.length > 0) {
     console.error('Phát hiện lỗi nội dung:');
@@ -32,7 +52,7 @@ async function main() {
   }
 
   console.log(
-    `Đã kiểm tra ${units.length} unit, không phát hiện lỗi schema/nội dung.`
+    `Đã kiểm tra ${units.length} unit và 6 bảng tra cứu, không phát hiện lỗi schema/nội dung.`
   );
 }
 

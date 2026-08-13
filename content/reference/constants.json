@@ -1,0 +1,25 @@
+{
+  "source": "Bộ Giáo dục và Đào tạo, SGK Khoa học tự nhiên 8, GDPT 2018.",
+  "version": "GDPT 2018",
+  "conditions": "đkc theo GDPT 2018: 25 °C và 1 bar; đktc cổ điển: 0 °C và 1 atm.",
+  "constants": [
+    {
+      "id": "molar-volume-dkc",
+      "name": "Thể tích mol khí ở đkc",
+      "value": 24.79,
+      "unit": "L/mol (25 °C, 1 bar)"
+    },
+    {
+      "id": "molar-volume-dktc",
+      "name": "Thể tích mol khí ở đktc",
+      "value": 22.4,
+      "unit": "L/mol (0 °C, 1 atm)"
+    },
+    {
+      "id": "avogadro",
+      "name": "Hằng số Avogadro",
+      "value": 6.022e23,
+      "unit": "mol⁻¹"
+    }
+  ]
+}
