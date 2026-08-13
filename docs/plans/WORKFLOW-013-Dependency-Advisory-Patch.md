@@ -57,10 +57,23 @@
   "overrides": {
     "brace-expansion": "^5.0.9",
     "fast-uri": "^3.1.5",
-    "nanoid": "^3.3.17",
-    "postcss": "^8.5.26"
+    "nanoid": "^3.3.17"
   }
   ```
+
+  và **riêng `postcss` bump thẳng ở `devDependencies`**: `"postcss": "8.5.26"`
+  (đang ghim cứng `8.5.19`, không caret).
+
+  **Đính chính thiết kế, Planner ghi ngày 2026-08-13.** Bản plan duyệt lần đầu
+  xếp cả 4 gói vào `overrides`. Sai: `postcss` là **devDependency trực tiếp**,
+  không phải transitive thuần như 3 gói kia. npm từ chối `overrides` mâu thuẫn
+  với spec trực tiếp và dừng bằng `EOVERRIDE`, nên `npm install` không chạy
+  được. Implementer (Codex) phát hiện và escalate đúng thay vì tự ý sửa
+  `devDependencies` ngoài thiết kế đã duyệt.
+  Đính chính này **không** đổi mục tiêu, phạm vi file (vẫn chỉ `package.json` +
+  `package-lock.json`), tier, hay tiêu chí nghiệm thu — chỉ đổi cơ chế áp bản vá
+  cho đúng một gói. Cách mới còn đơn giản hơn: bump trực tiếp minh bạch hơn là
+  ghim đè một gói mình vốn đã khai trực tiếp.
 
   Rồi tạo lại lockfile. **Không** chạy `npm audit fix`: thử khô cho thấy nó kéo
   `@typescript-eslint` 8.38→8.65, thêm `zod`/`hermes-parser`/`cookie`, vẫn
