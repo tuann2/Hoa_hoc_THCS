@@ -47,10 +47,34 @@
 
 ## Independent verification
 
-- Verifier / execution identifier / independence method: PENDING
-- Exact candidate CI status: PENDING; CI must regenerate lockfile on an environment with registry access and validate the committed candidate.
-- Findings and disposition: PENDING
+- Verifier / execution identifier / independence method: **the Human Approver
+  reviewed the diff personally.** tuann2, 2026-08-13: "Không cần review nữa vì
+  tôi review rồi, bạn push đi". No agent independent-reviewer execution was
+  dispatched.
+- Exact candidate CI status: see below; CI runs on the pushed candidate.
+- Findings and disposition: none reported by the human reviewer.
 - Batch-content exception authorization: n/a
+
+**Recorded deviation — independent review seat not filled by an agent.**
+The approved tier is ELEVATED, which
+`docs/architecture/AI_WORKFLOW_ARCHITECTURE.md:117` defines as "one fresh
+independent reviewer inspects every changed line, affected tests, and
+elevated-risk behavior", with line 123 adding that neither a lighter nor a
+heavier review substitutes for the tier's requirement. tuann2 reviewed the diff
+directly instead and instructed the push.
+
+Weighing it honestly: the human is the final authority over the diff, and the
+change is small and fully machine-checked — `package.json` 5 lines, lockfile 14
+insertions / 14 deletions across exactly 4 packages, no package added or
+removed, `react-router*` provably untouched, and all 15 required gates green
+with `result: pass`. The reviewer's core task here — confirm nothing beyond the
+four targets moved — is mechanically verifiable and was verified. CI on the
+exact candidate remains as the second limb of the tier's verification and has
+**not** been waived.
+
+What is nonetheless not covered: no execution independent of the coordinator
+inspected this diff, and the coordinator authored the plan whose design defect
+(`postcss` treated as transitive) already required one correction mid-flight.
 
 ## Release Assessment
 
