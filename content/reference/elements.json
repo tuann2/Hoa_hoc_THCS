@@ -1,7 +1,7 @@
 {
   "source": "IUPAC Commission on Isotopic Abundances and Atomic Weights, Standard Atomic Weights 2023; values rounded for GDPT 2018 exercises.",
   "version": "2023 / GDPT 2018 classroom rounding",
-  "conditions": "Relative atomic masses; rounded values are for lower-secondary calculations, not isotope-resolved measurements.",
+  "conditions": "Relative atomic masses; rounded values are for lower-secondary calculations, not isotope-resolved measurements. Trường category theo cách phân loại của chương trình THCS Việt Nam, KHÔNG theo phân loại á kim/metalloid hiện đại: Si xếp là phi kim để khớp chương Phi kim mà học sinh đang học (quyết định tuann2, 2026-08-14). B giữ á kim vì không nằm trong chương trình THCS. Nguồn IUPAC nêu trên chỉ chi phối atomicMass.",
   "elements": [
     {
       "symbol": "H",
@@ -127,7 +127,7 @@
       "atomicMass": 28,
       "period": 3,
       "group": 14,
-      "category": "Á kim"
+      "category": "Phi kim"
     },
     {
       "symbol": "P",
