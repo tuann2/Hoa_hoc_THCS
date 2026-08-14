@@ -27,7 +27,7 @@
         {
           "id": "n8-l1-c3",
           "heading": "Dãy hoạt động hoá học của kim loại",
-          "body": "K, Na, Mg, Al, Zn, Fe, Pb, (H), Cu, Ag, Au — mức độ hoạt động giảm dần từ trái sang phải.\nKim loại đứng trước đẩy được kim loại đứng sau ra khỏi dung dịch muối; kim loại đứng trước Mg phản ứng với nước ở nhiệt độ thường; kim loại đứng trước H phản ứng với acid (HCl, H2SO4 loãng) giải phóng H2.\n\nH chỉ là mốc so sánh, không phải kim loại. Dãy cho biết khả năng phản ứng trong những điều kiện thông dụng; khi đề nêu acid đặc, chất oxi hoá, màng oxide hoặc nhiệt độ, phải xét thêm điều kiện đó, không áp dụng máy móc một quy tắc của dãy."
+          "body": "K, Na, Ca, Mg, Al, Zn, Fe, Pb, (H), Cu, Hg, Ag, Au — mức độ hoạt động giảm dần từ trái sang phải.\nKim loại đứng trước đẩy được kim loại đứng sau ra khỏi dung dịch muối; kim loại đứng trước Mg phản ứng với nước ở nhiệt độ thường; kim loại đứng trước H phản ứng với acid (HCl, H2SO4 loãng) giải phóng H2.\n\nH chỉ là mốc so sánh, không phải kim loại. Dãy cho biết khả năng phản ứng trong những điều kiện thông dụng; khi đề nêu acid đặc, chất oxi hoá, màng oxide hoặc nhiệt độ, phải xét thêm điều kiện đó, không áp dụng máy móc một quy tắc của dãy."
         },
         {
           "id": "n8-l1-c4",
@@ -125,7 +125,7 @@
           "prompt": "Trong các kim loại sau, kim loại nào hoạt động mạnh nhất?",
           "options": ["K", "Fe", "Cu", "Ag"],
           "answer": 0,
-          "explanation": "B1. Theo dãy hoạt động hoá học K, Na, Mg, Al, Zn, Fe, Pb, (H), Cu, Ag, Au. B2. K đứng đầu tiên nên hoạt động mạnh nhất trong 4 kim loại đã cho."
+          "explanation": "B1. Theo dãy hoạt động hoá học K, Na, Ca, Mg, Al, Zn, Fe, Pb, (H), Cu, Hg, Ag, Au. B2. K đứng đầu tiên nên hoạt động mạnh nhất trong 4 kim loại đã cho."
         },
         {
           "id": "n8-l1-q6",
